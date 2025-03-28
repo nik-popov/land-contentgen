@@ -443,27 +443,27 @@ const TopNav = () => {
               </>
             ) : (
               <Flex flexDir="column" gap={2}>
-                <Button
-                  as={RouterLink}
-                  to="/signup"
-                  colorScheme="orange"
-                  variant="solid"
-                  size="sm"
-                  onClick={onClose}
-                >
-                  Start Free Trial
-                </Button>
-                <Button
-                  as={RouterLink}
-                  to="/login"
-                  variant="outline"
-                  colorScheme="orange"
-                  size="sm"
-                  onClick={onClose}
-                >
-                  Login
-                </Button>
-              </Flex>
+              <Button
+                as={RouterLink}
+                to="https://dashboard.thedataproxy.com/signup"
+                colorScheme="orange"
+                variant="solid"
+                size="sm"
+                onClick={onClose}
+              >
+                Start Free Trial
+              </Button>
+              <Button
+                as={RouterLink}
+                to="https://dashboard.thedataproxy.com/login"
+                variant="outline"
+                colorScheme="orange"
+                size="sm"
+                onClick={onClose}
+              >
+                Login
+              </Button>
+            </Flex>
             )}
           </Flex>
         </Box>
