@@ -120,11 +120,7 @@ function NetworkStatusPage() {
                   <StatLabel color="gray.500" fontSize="sm">{metric.metric}</StatLabel>
                   <Flex width="100%" justify="space-between" align="flex-end">
                     <StatNumber color="blue.600">{metric.value}</StatNumber>
-                    <Flex align="center">
-                      <Text fontSize="sm" fontWeight="medium" color={metric.trend === "increase" && metric.metric !== "Average Response Time" ? "green.500" : "blue.500"}>
-                        {metric.trendValue}
-                      </Text>
-                    </Flex>
+       
                   </Flex>
                   <StatHelpText fontSize="xs" color="gray.500">{metric.period}</StatHelpText>
                 </Stat>
