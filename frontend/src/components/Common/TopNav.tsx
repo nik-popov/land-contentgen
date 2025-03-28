@@ -197,7 +197,6 @@ const navStructure: NavItem[] = [
 const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
   const queryClient = useQueryClient();
   const textColor = "gray.800";
-  const disabledColor = "gray.300";
   const hoverColor = "blue.600";
   const bgActive = "blue.100";
   const activeTextColor = "blue.800";
@@ -209,69 +208,80 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
     finalNavStructure.push({ title: "Admin", icon: FiUsers, path: "/admin" });
   }
 
+  const handleMenuToggle = (index: number) => {
+    setActiveMenuIndex(activeMenuIndex === index ? null : index);
+  };
+
   const renderNavItems = (items: NavItem[]) =>
     items.map(({ icon, title, path, subItems, description }, index) => {
+      const isActive = activeMenuIndex === index;
+
       if (subItems) {
         return (
-          <Menu 
-            key={title} 
-            placement={isMobile ? "bottom" : "bottom-start"}
-            isLazy
-            onOpen={() => setActiveMenuIndex(index)}
-          >
-            <MenuButton
+          <Box key={title} position="relative">
+            <Flex
+              as="button"
               px={4}
               py={2}
               color={textColor}
               _hover={{ color: hoverColor }}
               _active={{ bg: bgActive, color: activeTextColor }}
-              role="group"
+              align="center"
+              onClick={() => handleMenuToggle(index)}
             >
-              <Flex align="center">
-                {icon && <Icon as={icon} mr={2} />}
-                <Text>{title}</Text>
-                <Icon as={FiChevronDown} ml={1} />
-              </Flex>
-            </MenuButton>
-            <Portal>
-              <MenuList
-                zIndex={10}
-                minW="300px"
+              {icon && <Icon as={icon} mr={2} />}
+              <Text>{title}</Text>
+              <Icon as={FiChevronDown} ml={1} />
+            </Flex>
+            {isActive && (
+              <Box
+                zIndex={20}
+                w="100vw"
+                maxW="1200px"
+                bg="white"
                 borderRadius="md"
-                position="absolute"
-                mt="2px"
+                boxShadow="md"
+                position="fixed"
+                left="50%"
+                transform="translateX(-50%)"
+                top={{ base: "94px", md: "90px" }}
               >
                 {description && (
-                  <>
-                    <Box px={3} py={2}>
-                      <Text fontSize="sm" color="gray.600">{description}</Text>
-                    </Box>
-                    <MenuDivider />
-                  </>
+                  <Box px={3} py={2} borderBottom="1px" borderColor="gray.200">
+                    <Text fontSize="sm" color="gray.600">{description}</Text>
+                  </Box>
                 )}
-                {subItems.map((subItem) => (
-                  <MenuItem
-                    key={subItem.title}
-                    as={RouterLink}
-                    to={subItem.path}
-                    color={textColor}
-                    _hover={{ color: hoverColor, bg: "gray.100" }}
-                    onClick={onClose}
-                  >
-                    <Flex align="center">
-                      {subItem.icon && <Icon as={subItem.icon} mr={2} boxSize={5} />}
-                      <Box>
-                        <Text fontWeight="medium">{subItem.title}</Text>
-                        {subItem.description && (
-                          <Text fontSize="xs" color="gray.500" mt={1}>{subItem.description}</Text>
-                        )}
-                      </Box>
-                    </Flex>
-                  </MenuItem>
-                ))}
-              </MenuList>
-            </Portal>
-          </Menu>
+                <Flex wrap="wrap" direction={{ base: "column", md: "row" }} p={2}>
+                  {subItems.map((subItem) => (
+                    <Box
+                      key={subItem.title}
+                      as={RouterLink}
+                      to={subItem.path}
+                      color={textColor}
+                      _hover={{ color: hoverColor, bg: "gray.100" }}
+                      onClick={() => {
+                        onClose?.();
+                        setActiveMenuIndex(null);
+                      }}
+                      flex={{ base: "1 0 100%", md: "1 0 25%" }}
+                      minW={0}
+                      p={2}
+                    >
+                      <Flex align="center">
+                        {subItem.icon && <Icon as={subItem.icon} mr={2} boxSize={5} />}
+                        <Box>
+                          <Text fontWeight="medium">{subItem.title}</Text>
+                          {subItem.description && (
+                            <Text fontSize="xs" color="gray.500" mt={1}>{subItem.description}</Text>
+                          )}
+                        </Box>
+                      </Flex>
+                    </Box>
+                  ))}
+                </Flex>
+              </Box>
+            )}
+          </Box>
         );
       }
 
@@ -315,7 +325,6 @@ const TopNav = () => {
   const currentUser = queryClient.getQueryData<UserPublic>(["currentUser"]);
   const textColor = "gray.800";
   const hoverColor = "blue.600";
-  const navRef = useRef<HTMLDivElement>(null);
 
   const handleLogout = async () => {
     logout();
@@ -333,7 +342,7 @@ const TopNav = () => {
       boxShadow="sm"
       w="100%"
     >
-      <Container maxW="1200px" px={0}>
+      <Container maxW="1200px" px={0} position="relative">
         <Flex 
           align="center" 
           justify="space-between" 
@@ -368,24 +377,38 @@ const TopNav = () => {
             display={{ base: "none", md: "flex" }}
           >
             {currentUser ? (
-              <Menu>
-                <MenuButton
+              <Box position="relative">
+                <Flex
+                  as="button"
                   px={4}
                   py={2}
                   color={textColor}
                   _hover={{ color: hoverColor }}
+                  onClick={onOpen}
                 >
-                  <Flex align="center">
-                    <Icon as={FiUser} mr={2} />
-                    <Text maxW="200px" isTruncated>{currentUser.email}</Text>
-                    <Icon as={FiChevronDown} ml={1} />
-                  </Flex>
-                </MenuButton>
-                <MenuList>
-                  <MenuItem as={RouterLink} to="/settings">Settings</MenuItem>
-                  <MenuItem onClick={handleLogout}>Log out</MenuItem>
-                </MenuList>
-              </Menu>
+                  <Icon as={FiUser} mr={2} />
+                  <Text maxW="200px" isTruncated>{currentUser.email}</Text>
+                  <Icon as={FiChevronDown} ml={1} />
+                </Flex>
+                {isOpen && (
+                  <Box
+                    position="absolute"
+                    right={0}
+                    top="100%"
+                    bg="white"
+                    boxShadow="md"
+                    borderRadius="md"
+                    zIndex={20}
+                  >
+                    <Box as={RouterLink} to="/settings" p={2} display="block" _hover={{ bg: "gray.100" }}>
+                      Settings
+                    </Box>
+                    <Box as="button" p={2} display="block" _hover={{ bg: "gray.100" }} onClick={handleLogout}>
+                      Log out
+                    </Box>
+                  </Box>
+                )}
+              </Box>
             ) : (
               <Flex gap={2}>
                 <Button as={RouterLink} to="https://dashboard.thedataproxy.com/signup" colorScheme="blue" variant="solid" size="sm">
@@ -443,27 +466,27 @@ const TopNav = () => {
               </>
             ) : (
               <Flex flexDir="column" gap={2}>
-              <Button
-                as={RouterLink}
-                to="https://dashboard.thedataproxy.com/signup"
-                colorScheme="blue"
-                variant="solid"
-                size="sm"
-                onClick={onClose}
-              >
-                Start Free Trial
-              </Button>
-              <Button
-                as={RouterLink}
-                to="https://dashboard.thedataproxy.com/login"
-                variant="outline"
-                colorScheme="blue"
-                size="sm"
-                onClick={onClose}
-              >
-                Login
-              </Button>
-            </Flex>
+                <Button
+                  as={RouterLink}
+                  to="https://dashboard.thedataproxy.com/signup"
+                  colorScheme="blue"
+                  variant="solid"
+                  size="sm"
+                  onClick={onClose}
+                >
+                  Start Free Trial
+                </Button>
+                <Button
+                  as={RouterLink}
+                  to="https://dashboard.thedataproxy.com/login"
+                  variant="outline"
+                  colorScheme="blue"
+                  size="sm"
+                  onClick={onClose}
+                >
+                  Login
+                </Button>
+              </Flex>
             )}
           </Flex>
         </Box>
