@@ -54,6 +54,7 @@ const Footer = () => {
               <Link href="/solutions/content-aggregation" color="gray.300" _hover={{ color: "orange.400" }}>Content Aggregation</Link>
               <Link href="/solutions/lead-generation" color="gray.300" _hover={{ color: "orange.400" }}>Lead Generation</Link>
               <Link href="/solutions/seo-monitoring" color="gray.300" _hover={{ color: "orange.400" }}>SEO Monitoring</Link>
+              <Link href="/solutions/enterprise" color="gray.300" _hover={{ color: "orange.400" }}>Enterprise</Link>
             </VStack>
           </Box>
 

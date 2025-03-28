@@ -22,7 +22,9 @@ import { Route as LayoutComplianceImport } from './routes/_layout/compliance'
 import { Route as LayoutSolutionsTrainingAiImport } from './routes/_layout/solutions/training-ai'
 import { Route as LayoutSolutionsPriceMonitoringImport } from './routes/_layout/solutions/price-monitoring'
 import { Route as LayoutSolutionsMarketResearchImport } from './routes/_layout/solutions/market-research'
+import { Route as LayoutSolutionsEnterpriseImport } from './routes/_layout/solutions/enterprise'
 import { Route as LayoutSolutionsDemoRequestImport } from './routes/_layout/solutions/demo-request'
+import { Route as LayoutSolutionsContentAggregationImport } from './routes/_layout/solutions/content-aggregation'
 
 // Create/Update Routes
 
@@ -93,6 +95,12 @@ const LayoutSolutionsMarketResearchRoute =
     getParentRoute: () => LayoutRoute,
   } as any)
 
+const LayoutSolutionsEnterpriseRoute = LayoutSolutionsEnterpriseImport.update({
+  id: '/solutions/enterprise',
+  path: '/solutions/enterprise',
+  getParentRoute: () => LayoutRoute,
+} as any)
+
 const LayoutSolutionsDemoRequestRoute = LayoutSolutionsDemoRequestImport.update(
   {
     id: '/solutions/demo-request',
@@ -100,6 +108,13 @@ const LayoutSolutionsDemoRequestRoute = LayoutSolutionsDemoRequestImport.update(
     getParentRoute: () => LayoutRoute,
   } as any,
 )
+
+const LayoutSolutionsContentAggregationRoute =
+  LayoutSolutionsContentAggregationImport.update({
+    id: '/solutions/content-aggregation',
+    path: '/solutions/content-aggregation',
+    getParentRoute: () => LayoutRoute,
+  } as any)
 
 // Populate the FileRoutesByPath interface
 
@@ -161,11 +176,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LayoutIndexImport
       parentRoute: typeof LayoutImport
     }
+    '/_layout/solutions/content-aggregation': {
+      id: '/_layout/solutions/content-aggregation'
+      path: '/solutions/content-aggregation'
+      fullPath: '/solutions/content-aggregation'
+      preLoaderRoute: typeof LayoutSolutionsContentAggregationImport
+      parentRoute: typeof LayoutImport
+    }
     '/_layout/solutions/demo-request': {
       id: '/_layout/solutions/demo-request'
       path: '/solutions/demo-request'
       fullPath: '/solutions/demo-request'
       preLoaderRoute: typeof LayoutSolutionsDemoRequestImport
+      parentRoute: typeof LayoutImport
+    }
+    '/_layout/solutions/enterprise': {
+      id: '/_layout/solutions/enterprise'
+      path: '/solutions/enterprise'
+      fullPath: '/solutions/enterprise'
+      preLoaderRoute: typeof LayoutSolutionsEnterpriseImport
       parentRoute: typeof LayoutImport
     }
     '/_layout/solutions/market-research': {
@@ -202,7 +231,9 @@ interface LayoutRouteChildren {
   LayoutReportRoute: typeof LayoutReportRoute
   LayoutTermsRoute: typeof LayoutTermsRoute
   LayoutIndexRoute: typeof LayoutIndexRoute
+  LayoutSolutionsContentAggregationRoute: typeof LayoutSolutionsContentAggregationRoute
   LayoutSolutionsDemoRequestRoute: typeof LayoutSolutionsDemoRequestRoute
+  LayoutSolutionsEnterpriseRoute: typeof LayoutSolutionsEnterpriseRoute
   LayoutSolutionsMarketResearchRoute: typeof LayoutSolutionsMarketResearchRoute
   LayoutSolutionsPriceMonitoringRoute: typeof LayoutSolutionsPriceMonitoringRoute
   LayoutSolutionsTrainingAiRoute: typeof LayoutSolutionsTrainingAiRoute
@@ -216,7 +247,10 @@ const LayoutRouteChildren: LayoutRouteChildren = {
   LayoutReportRoute: LayoutReportRoute,
   LayoutTermsRoute: LayoutTermsRoute,
   LayoutIndexRoute: LayoutIndexRoute,
+  LayoutSolutionsContentAggregationRoute:
+    LayoutSolutionsContentAggregationRoute,
   LayoutSolutionsDemoRequestRoute: LayoutSolutionsDemoRequestRoute,
+  LayoutSolutionsEnterpriseRoute: LayoutSolutionsEnterpriseRoute,
   LayoutSolutionsMarketResearchRoute: LayoutSolutionsMarketResearchRoute,
   LayoutSolutionsPriceMonitoringRoute: LayoutSolutionsPriceMonitoringRoute,
   LayoutSolutionsTrainingAiRoute: LayoutSolutionsTrainingAiRoute,
@@ -234,7 +268,9 @@ export interface FileRoutesByFullPath {
   '/report': typeof LayoutReportRoute
   '/terms': typeof LayoutTermsRoute
   '/': typeof LayoutIndexRoute
+  '/solutions/content-aggregation': typeof LayoutSolutionsContentAggregationRoute
   '/solutions/demo-request': typeof LayoutSolutionsDemoRequestRoute
+  '/solutions/enterprise': typeof LayoutSolutionsEnterpriseRoute
   '/solutions/market-research': typeof LayoutSolutionsMarketResearchRoute
   '/solutions/price-monitoring': typeof LayoutSolutionsPriceMonitoringRoute
   '/solutions/training-ai': typeof LayoutSolutionsTrainingAiRoute
@@ -248,7 +284,9 @@ export interface FileRoutesByTo {
   '/report': typeof LayoutReportRoute
   '/terms': typeof LayoutTermsRoute
   '/': typeof LayoutIndexRoute
+  '/solutions/content-aggregation': typeof LayoutSolutionsContentAggregationRoute
   '/solutions/demo-request': typeof LayoutSolutionsDemoRequestRoute
+  '/solutions/enterprise': typeof LayoutSolutionsEnterpriseRoute
   '/solutions/market-research': typeof LayoutSolutionsMarketResearchRoute
   '/solutions/price-monitoring': typeof LayoutSolutionsPriceMonitoringRoute
   '/solutions/training-ai': typeof LayoutSolutionsTrainingAiRoute
@@ -264,7 +302,9 @@ export interface FileRoutesById {
   '/_layout/report': typeof LayoutReportRoute
   '/_layout/terms': typeof LayoutTermsRoute
   '/_layout/': typeof LayoutIndexRoute
+  '/_layout/solutions/content-aggregation': typeof LayoutSolutionsContentAggregationRoute
   '/_layout/solutions/demo-request': typeof LayoutSolutionsDemoRequestRoute
+  '/_layout/solutions/enterprise': typeof LayoutSolutionsEnterpriseRoute
   '/_layout/solutions/market-research': typeof LayoutSolutionsMarketResearchRoute
   '/_layout/solutions/price-monitoring': typeof LayoutSolutionsPriceMonitoringRoute
   '/_layout/solutions/training-ai': typeof LayoutSolutionsTrainingAiRoute
@@ -281,7 +321,9 @@ export interface FileRouteTypes {
     | '/report'
     | '/terms'
     | '/'
+    | '/solutions/content-aggregation'
     | '/solutions/demo-request'
+    | '/solutions/enterprise'
     | '/solutions/market-research'
     | '/solutions/price-monitoring'
     | '/solutions/training-ai'
@@ -294,7 +336,9 @@ export interface FileRouteTypes {
     | '/report'
     | '/terms'
     | '/'
+    | '/solutions/content-aggregation'
     | '/solutions/demo-request'
+    | '/solutions/enterprise'
     | '/solutions/market-research'
     | '/solutions/price-monitoring'
     | '/solutions/training-ai'
@@ -308,7 +352,9 @@ export interface FileRouteTypes {
     | '/_layout/report'
     | '/_layout/terms'
     | '/_layout/'
+    | '/_layout/solutions/content-aggregation'
     | '/_layout/solutions/demo-request'
+    | '/_layout/solutions/enterprise'
     | '/_layout/solutions/market-research'
     | '/_layout/solutions/price-monitoring'
     | '/_layout/solutions/training-ai'
@@ -346,7 +392,9 @@ export const routeTree = rootRoute
         "/_layout/report",
         "/_layout/terms",
         "/_layout/",
+        "/_layout/solutions/content-aggregation",
         "/_layout/solutions/demo-request",
+        "/_layout/solutions/enterprise",
         "/_layout/solutions/market-research",
         "/_layout/solutions/price-monitoring",
         "/_layout/solutions/training-ai"
@@ -380,8 +428,16 @@ export const routeTree = rootRoute
       "filePath": "_layout/index.tsx",
       "parent": "/_layout"
     },
+    "/_layout/solutions/content-aggregation": {
+      "filePath": "_layout/solutions/content-aggregation.tsx",
+      "parent": "/_layout"
+    },
     "/_layout/solutions/demo-request": {
       "filePath": "_layout/solutions/demo-request.tsx",
+      "parent": "/_layout"
+    },
+    "/_layout/solutions/enterprise": {
+      "filePath": "_layout/solutions/enterprise.tsx",
       "parent": "/_layout"
     },
     "/_layout/solutions/market-research": {

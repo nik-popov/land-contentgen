@@ -13,7 +13,7 @@ function LandingPage() {
     <Box>
       <HeroSection />
     {/* Section 3: Proxy Network Coverage for Web Scraping */}
-    <Box py={16} bg="gray.50" color="gray.800">
+    <Box py={16} bg="blue.50" color="gray.800">
         <Heading as="h2" size="2xl" textAlign="center" mb={10} fontWeight="medium">
           Global Web Scraping Proxy Network
         </Heading>
@@ -41,7 +41,7 @@ function LandingPage() {
         </Flex>
       </Box>
         {/* Cloud Provider Links */}
-        <Box py={10} bg="grey.50">
+        <Box py={10} bg="blue.50">
         <Flex justify="center" gap={8} flexWrap="wrap">
           <Link href="https://aws.amazon.com" isExternal>
             <Image
@@ -139,64 +139,105 @@ function LandingPage() {
         </Grid>
       </Box>
 
+{/* Section 1: Web Scraping Infrastructure - Centered */}
+{/* Section 1: Web Scraping Infrastructure - Centered */}
+<Box py={16} bg="blue.50" maxW="1200px" mx="auto" px={4}>
+  <VStack spacing={8} textAlign="center">
+    <Heading as="h2" size="2xl" color="gray.800" fontWeight="medium">
+      Web Scraping Infrastructure
+    </Heading>
     
+    <Text fontSize="lg" color="gray.600" maxW="800px">
+      Our enterprise-grade proxy infrastructure enables seamless web data extraction at scale. We leverage a powerful stack of technologies including JavaScript, Python, Selenium, and Puppeteer to deliver reliable results across diverse target websites.
+    </Text>
+    
+    <Text fontSize="lg" color="gray.600" maxW="800px">
+      With tools like Playwright for browser automation, BeautifulSoup for HTML parsing, Scrapy for crawling frameworks, and both Requests and AIOHTTP for HTTP handling, we ensure comprehensive coverage of all web scraping needs while respecting website terms of service.
+    </Text>
+  
+    
+    <Flex justify="center" gap={6} flexWrap="wrap" maxW="900px">
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/javascript.png" alt="JavaScript" boxSize="50px" />
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/python.png" alt="Python" boxSize="50px" />
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/selenium.png" alt="Selenium" boxSize="50px" />
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/http.png" alt="HTTP" boxSize="50px" />
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/puppeteer.png" alt="Puppeteer" boxSize="50px" />
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/playwright.png" alt="Playwright" boxSize="50px" />
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/beautiful_soup.png" alt="Beautiful Soup" boxSize="50px" />
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/scrapy.png" alt="Scrapy" boxSize="50px" />
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/requests.png" alt="Requests" boxSize="50px" />
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/aiohttp.png" alt="AIOHTTP" boxSize="50px" />
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/websocket.png" alt="WebSocket" boxSize="50px" />
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/rest.png" alt="REST API" boxSize="50px" />
+    </Flex>
+    
+    <Text fontSize="lg" color="gray.600" maxW="800px">
+      Once data is collected, our data processing pipeline employs Pandas for structured data manipulation, NumPy for numerical operations, and Dask for scaling beyond memory limitations. For larger workloads, we utilize Apache Spark distributed computing, while integrating with data stores like MongoDB, PostgreSQL, Elasticsearch, and Redis for efficient storage and retrieval.
+    </Text>
+    
+    <Flex justify="center" gap={6} flexWrap="wrap" maxW="900px">
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/pandas.png" alt="Pandas" boxSize="50px" />
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/numpy.png" alt="NumPy" boxSize="50px" />
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/dask.png" alt="Dask" boxSize="50px" />
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/spark.png" alt="Apache Spark" boxSize="50px" />
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/tensorflow.png" alt="TensorFlow" boxSize="50px" />
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/graphql.png" alt="GraphQL" boxSize="50px" />
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/kafka.png" alt="Apache Kafka" boxSize="50px" />
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/rabbitmq.png" alt="RabbitMQ" boxSize="50px" />
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/elasticsearch.png" alt="Elasticsearch" boxSize="50px" />
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/redis.png" alt="Redis" boxSize="50px" />
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/mongodb.png" alt="MongoDB" boxSize="50px" />
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/postgresql.png" alt="PostgreSQL" boxSize="50px" />
+    </Flex>
 
-      {/* Section 1: Web Scraping Infrastructure - Centered */}
-
-      <Box py={16} bg="gray.50" maxW="1200px" mx="auto" px={4}>
-      <VStack spacing={8} textAlign="center">
-        <Heading as="h2" size="2xl" color="gray.800" fontWeight="medium">
-          Web Scraping Infrastructure
-        </Heading>
-      
-       
-        <Text fontSize="lg" color="gray.600" maxW="800px">
-          Our enterprise-grade proxy infrastructure enables seamless web data extraction at scale. Built for businesses that require high-volume, accurate data collection, our platform delivers consistent results across diverse target websites while intelligently managing access patterns to ensure continuous operational capability.
-        </Text>
-        
-        <Text fontSize="lg" color="gray.600" maxW="800px">
-          With a distributed network spanning multiple geographic regions, we ensure consistent uptime and redundancy. Our system intelligently routes requests through optimal pathways, avoiding detection patterns while respecting website terms of service and industry best practices.
-        </Text>
-        
-        <Flex justify="center" gap={6} flexWrap="wrap">
-          <Image
-            src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/javascript.png"
-            alt="JavaScript Logo"
-            boxSize="40px"
-          />
-          <Image
-            src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/http.png"
-            alt="HTTP Logo"
-            boxSize="40px"
-          />
-          <Image
-            src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/selenium.png"
-            alt="Selenium Logo"
-            boxSize="40px"
-          />
-          <Image
-            src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/python.png"
-            alt="Python Logo"
-            boxSize="40px"
-          />
-          <Image
-            src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/rest.png"
-            alt="REST Logo"
-            boxSize="40px"
-          />
-        </Flex>
-        
-        <Text fontSize="lg" color="gray.600" maxW="800px">
-          Our reliable proxy network delivers effective data collection capabilities for organizations requiring web scraping solutions. Specifically designed for data extraction, competitor monitoring, price comparison, and machine learning data acquisition, our infrastructure helps overcome access limitations while maintaining reliable performance and regulatory compliance.
-        </Text>
-        
-        <Text fontSize="lg" color="gray.600" maxW="800px">
-          Advanced features include custom request fingerprinting, automatic CAPTCHA resolution, dynamic session management, and intelligent rate limiting to prevent server overloads. Our comprehensive dashboard provides real-time analytics on data collection performance, success rates, and system health, empowering you with full visibility into your web scraping operations.
-        </Text>
-      </VStack>
-    </Box>
-
-
+    
+    <Text fontSize="lg" color="gray.600" maxW="800px">
+      Our infrastructure is fully cloud-native, with Docker containerization and Kubernetes orchestration ensuring consistent performance across all environments. We deploy seamlessly to AWS, Google Cloud Platform, and Microsoft Azure, using infrastructure-as-code tools like Terraform and Ansible for reproducible environments and S3 for cost-effective storage.
+    </Text>
+  
+    
+    <Flex justify="center" gap={6} flexWrap="wrap" maxW="900px">
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/docker.png" alt="Docker" boxSize="50px" />
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/kubernetes.png" alt="Kubernetes" boxSize="50px" />
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/aws.png" alt="AWS" boxSize="50px" />
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/gcp.png" alt="Google Cloud Platform" boxSize="50px" />
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/microsoft_azure.png" alt="Microsoft Azure" boxSize="50px" />
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/terraform.png" alt="Terraform" boxSize="50px" />
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/ansible.png" alt="Ansible" boxSize="50px" />
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/s3.png" alt="Amazon S3" boxSize="50px" />
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/prometheus.png" alt="Prometheus" boxSize="50px" />
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/grafana.png" alt="Grafana" boxSize="50px" />
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/kibana.png" alt="Kibana" boxSize="50px" />
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/datadog.png" alt="Datadog" boxSize="50px" />
+    </Flex>
+    
+    <Text fontSize="lg" color="gray.600" maxW="800px">
+      Our development workflow integrates Git version control through GitHub and GitLab, with CI/CD pipelines via Jenkins and CircleCI. Our teams collaborate efficiently using Jira for project management and Slack for communication, while developers leverage VSCode, Postman for API testing, and package managers like NPM and PyPI to maintain dependencies.
+    </Text>
+  
+    
+    <Flex justify="center" gap={6} flexWrap="wrap" maxW="900px">
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/git.png" alt="Git" boxSize="50px" />
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/github.png" alt="GitHub" boxSize="50px" />
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/gitlab.png" alt="GitLab" boxSize="50px" />
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/jenkins.png" alt="Jenkins" boxSize="50px" />
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/circleci.png" alt="CircleCI" boxSize="50px" />
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/jira.png" alt="Jira" boxSize="50px" />
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/vscode.png" alt="VSCode" boxSize="50px" />
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/postman.png" alt="Postman" boxSize="50px" />
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/npm.png" alt="NPM" boxSize="50px" />
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/pypi.png" alt="PyPI" boxSize="50px" />
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/slack.png" alt="Slack" boxSize="50px" />
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/typescript.png" alt="TypeScript" boxSize="50px" />
+    </Flex>
+    
+    <Box py={4}></Box>
+    
+    <Text fontSize="lg" color="gray.600" maxW="800px">
+      Advanced monitoring is provided through Prometheus for metrics collection, Grafana for visualization dashboards, Kibana for log analysis, and Datadog for comprehensive application performance monitoring. This full-stack observability ensures your web scraping operations maintain peak performance and availability.
+    </Text>
+  </VStack>
+</Box>
           <Box py={16} bg="white" maxW="1200px" mx="auto" px={4}>
         <Heading as="h2" size="2xl" textAlign="center" mb={10} color="gray.800" fontWeight="medium">
           Web Scraping Business Solutions
@@ -270,7 +311,7 @@ function LandingPage() {
       </Box>
 
 {/* Call to Action Section */}
-<Box py={16} bg="gray.50" textAlign="center" maxW="1200px" mx="auto" px={4}>
+<Box py={16} bg="blue.50" textAlign="center" maxW="1200px" mx="auto" px={4}>
   <Heading as="h2" size="2xl" color="gray.800" mb={6} fontWeight="medium">
     Ready to Get Started?
   </Heading>

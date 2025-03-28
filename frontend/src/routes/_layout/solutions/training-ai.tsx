@@ -46,7 +46,7 @@ function TrainingAIPage() {
       <Box py={16} bg="blue.50" color="gray.800">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h1" size="2xl" textAlign="center" mb={8} fontWeight="medium">
-            Enterprise AI Training Solutions
+           AI Training Solutions
           </Heading>
           <Text fontSize="xl" textAlign="center" mb={12} maxW="800px" mx="auto">
             Accelerate your AI initiatives with our high-performance training infrastructure.
@@ -76,7 +76,7 @@ function TrainingAIPage() {
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
-            Key Benefits of Enterprise AI Training
+            Key Benefits of AI Training Pipelines
           </Heading>
           
           <Grid templateColumns={{ base: "1fr", md: "1fr 1fr", lg: "1fr 1fr 1fr" }} gap={10} mt={10}>
