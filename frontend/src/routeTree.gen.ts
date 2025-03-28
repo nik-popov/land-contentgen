@@ -29,6 +29,9 @@ import { Route as LayoutSolutionsPriceMonitoringImport } from './routes/_layout/
 import { Route as LayoutSolutionsMarketResearchImport } from './routes/_layout/solutions/market-research'
 import { Route as LayoutSolutionsEnterpriseImport } from './routes/_layout/solutions/enterprise'
 import { Route as LayoutSolutionsContentAggregationImport } from './routes/_layout/solutions/content-aggregation'
+import { Route as LayoutNetworkStatusImport } from './routes/_layout/network/status'
+import { Route as LayoutNetworkSecurityImport } from './routes/_layout/network/security'
+import { Route as LayoutNetworkLocationsImport } from './routes/_layout/network/locations'
 
 // Create/Update Routes
 
@@ -142,6 +145,24 @@ const LayoutSolutionsContentAggregationRoute =
     getParentRoute: () => LayoutRoute,
   } as any)
 
+const LayoutNetworkStatusRoute = LayoutNetworkStatusImport.update({
+  id: '/network/status',
+  path: '/network/status',
+  getParentRoute: () => LayoutRoute,
+} as any)
+
+const LayoutNetworkSecurityRoute = LayoutNetworkSecurityImport.update({
+  id: '/network/security',
+  path: '/network/security',
+  getParentRoute: () => LayoutRoute,
+} as any)
+
+const LayoutNetworkLocationsRoute = LayoutNetworkLocationsImport.update({
+  id: '/network/locations',
+  path: '/network/locations',
+  getParentRoute: () => LayoutRoute,
+} as any)
+
 // Populate the FileRoutesByPath interface
 
 declare module '@tanstack/react-router' {
@@ -207,6 +228,27 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof LayoutIndexImport
+      parentRoute: typeof LayoutImport
+    }
+    '/_layout/network/locations': {
+      id: '/_layout/network/locations'
+      path: '/network/locations'
+      fullPath: '/network/locations'
+      preLoaderRoute: typeof LayoutNetworkLocationsImport
+      parentRoute: typeof LayoutImport
+    }
+    '/_layout/network/security': {
+      id: '/_layout/network/security'
+      path: '/network/security'
+      fullPath: '/network/security'
+      preLoaderRoute: typeof LayoutNetworkSecurityImport
+      parentRoute: typeof LayoutImport
+    }
+    '/_layout/network/status': {
+      id: '/_layout/network/status'
+      path: '/network/status'
+      fullPath: '/network/status'
+      preLoaderRoute: typeof LayoutNetworkStatusImport
       parentRoute: typeof LayoutImport
     }
     '/_layout/solutions/content-aggregation': {
@@ -286,6 +328,9 @@ interface LayoutRouteChildren {
   LayoutReportRoute: typeof LayoutReportRoute
   LayoutTermsRoute: typeof LayoutTermsRoute
   LayoutIndexRoute: typeof LayoutIndexRoute
+  LayoutNetworkLocationsRoute: typeof LayoutNetworkLocationsRoute
+  LayoutNetworkSecurityRoute: typeof LayoutNetworkSecurityRoute
+  LayoutNetworkStatusRoute: typeof LayoutNetworkStatusRoute
   LayoutSolutionsContentAggregationRoute: typeof LayoutSolutionsContentAggregationRoute
   LayoutSolutionsEnterpriseRoute: typeof LayoutSolutionsEnterpriseRoute
   LayoutSolutionsMarketResearchRoute: typeof LayoutSolutionsMarketResearchRoute
@@ -306,6 +351,9 @@ const LayoutRouteChildren: LayoutRouteChildren = {
   LayoutReportRoute: LayoutReportRoute,
   LayoutTermsRoute: LayoutTermsRoute,
   LayoutIndexRoute: LayoutIndexRoute,
+  LayoutNetworkLocationsRoute: LayoutNetworkLocationsRoute,
+  LayoutNetworkSecurityRoute: LayoutNetworkSecurityRoute,
+  LayoutNetworkStatusRoute: LayoutNetworkStatusRoute,
   LayoutSolutionsContentAggregationRoute:
     LayoutSolutionsContentAggregationRoute,
   LayoutSolutionsEnterpriseRoute: LayoutSolutionsEnterpriseRoute,
@@ -331,6 +379,9 @@ export interface FileRoutesByFullPath {
   '/report': typeof LayoutReportRoute
   '/terms': typeof LayoutTermsRoute
   '/': typeof LayoutIndexRoute
+  '/network/locations': typeof LayoutNetworkLocationsRoute
+  '/network/security': typeof LayoutNetworkSecurityRoute
+  '/network/status': typeof LayoutNetworkStatusRoute
   '/solutions/content-aggregation': typeof LayoutSolutionsContentAggregationRoute
   '/solutions/enterprise': typeof LayoutSolutionsEnterpriseRoute
   '/solutions/market-research': typeof LayoutSolutionsMarketResearchRoute
@@ -351,6 +402,9 @@ export interface FileRoutesByTo {
   '/report': typeof LayoutReportRoute
   '/terms': typeof LayoutTermsRoute
   '/': typeof LayoutIndexRoute
+  '/network/locations': typeof LayoutNetworkLocationsRoute
+  '/network/security': typeof LayoutNetworkSecurityRoute
+  '/network/status': typeof LayoutNetworkStatusRoute
   '/solutions/content-aggregation': typeof LayoutSolutionsContentAggregationRoute
   '/solutions/enterprise': typeof LayoutSolutionsEnterpriseRoute
   '/solutions/market-research': typeof LayoutSolutionsMarketResearchRoute
@@ -373,6 +427,9 @@ export interface FileRoutesById {
   '/_layout/report': typeof LayoutReportRoute
   '/_layout/terms': typeof LayoutTermsRoute
   '/_layout/': typeof LayoutIndexRoute
+  '/_layout/network/locations': typeof LayoutNetworkLocationsRoute
+  '/_layout/network/security': typeof LayoutNetworkSecurityRoute
+  '/_layout/network/status': typeof LayoutNetworkStatusRoute
   '/_layout/solutions/content-aggregation': typeof LayoutSolutionsContentAggregationRoute
   '/_layout/solutions/enterprise': typeof LayoutSolutionsEnterpriseRoute
   '/_layout/solutions/market-research': typeof LayoutSolutionsMarketResearchRoute
@@ -396,6 +453,9 @@ export interface FileRouteTypes {
     | '/report'
     | '/terms'
     | '/'
+    | '/network/locations'
+    | '/network/security'
+    | '/network/status'
     | '/solutions/content-aggregation'
     | '/solutions/enterprise'
     | '/solutions/market-research'
@@ -415,6 +475,9 @@ export interface FileRouteTypes {
     | '/report'
     | '/terms'
     | '/'
+    | '/network/locations'
+    | '/network/security'
+    | '/network/status'
     | '/solutions/content-aggregation'
     | '/solutions/enterprise'
     | '/solutions/market-research'
@@ -435,6 +498,9 @@ export interface FileRouteTypes {
     | '/_layout/report'
     | '/_layout/terms'
     | '/_layout/'
+    | '/_layout/network/locations'
+    | '/_layout/network/security'
+    | '/_layout/network/status'
     | '/_layout/solutions/content-aggregation'
     | '/_layout/solutions/enterprise'
     | '/_layout/solutions/market-research'
@@ -479,6 +545,9 @@ export const routeTree = rootRoute
         "/_layout/report",
         "/_layout/terms",
         "/_layout/",
+        "/_layout/network/locations",
+        "/_layout/network/security",
+        "/_layout/network/status",
         "/_layout/solutions/content-aggregation",
         "/_layout/solutions/enterprise",
         "/_layout/solutions/market-research",
@@ -520,6 +589,18 @@ export const routeTree = rootRoute
     },
     "/_layout/": {
       "filePath": "_layout/index.tsx",
+      "parent": "/_layout"
+    },
+    "/_layout/network/locations": {
+      "filePath": "_layout/network/locations.tsx",
+      "parent": "/_layout"
+    },
+    "/_layout/network/security": {
+      "filePath": "_layout/network/security.tsx",
+      "parent": "/_layout"
+    },
+    "/_layout/network/status": {
+      "filePath": "_layout/network/status.tsx",
       "parent": "/_layout"
     },
     "/_layout/solutions/content-aggregation": {
