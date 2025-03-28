@@ -142,47 +142,60 @@ function LandingPage() {
     
 
       {/* Section 1: Web Scraping Infrastructure - Centered */}
+
       <Box py={16} bg="gray.50" maxW="1200px" mx="auto" px={4}>
-        <VStack spacing={8} textAlign="center">
-          <Heading as="h2" size="2xl" color="gray.800" fontWeight="medium">
-            Web Scraping Infrastructure
-          </Heading>
+      <VStack spacing={8} textAlign="center">
+        <Heading as="h2" size="2xl" color="gray.800" fontWeight="medium">
+          Web Scraping Infrastructure
+        </Heading>
+      
+       
+        <Text fontSize="lg" color="gray.600" maxW="800px">
+          Our enterprise-grade proxy infrastructure enables seamless web data extraction at scale. Built for businesses that require high-volume, accurate data collection, our platform delivers consistent results across diverse target websites while intelligently managing access patterns to ensure continuous operational capability.
+        </Text>
         
-          <Text fontSize="lg" color="gray.600" maxW="800px">
-            Our reliable proxy network delivers effective data collection capabilities for organizations requiring web scraping solutions. Specifically designed for data extraction, competitor monitoring, price comparison, and machine learning data acquisition, our infrastructure helps overcome access limitations while maintaining reliable performance and regulatory compliance.
-          </Text>
-          <Flex justify="center" gap={6} flexWrap="wrap">
-            <Image
-              src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/javascript.png"
-              alt="JavaScript Logo"
-              boxSize="40px"
-            />
-            <Image
-              src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/http.png"
-              alt="HTTP Logo"
-              boxSize="40px"
-            />
-            <Image
-              src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/selenium.png"
-              alt="Selenium Logo"
-              boxSize="40px"
-            />
-            <Image
-              src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/python.png"
-              alt="Python Logo"
-              boxSize="40px"
-            />
-            <Image
-              src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/rest.png"
-              alt="REST Logo"
-              boxSize="40px"
-            />
-          </Flex>
-          <Text fontSize="lg" color="gray.600" maxW="800px">
-            Our reliable proxy network delivers effective data collection capabilities for organizations requiring web scraping solutions. Specifically designed for data extraction, competitor monitoring, price comparison, and machine learning data acquisition, our infrastructure helps overcome access limitations while maintaining reliable performance and regulatory compliance.
-          </Text>
-        </VStack>
-      </Box>
+        <Text fontSize="lg" color="gray.600" maxW="800px">
+          With a distributed network spanning multiple geographic regions, we ensure consistent uptime and redundancy. Our system intelligently routes requests through optimal pathways, avoiding detection patterns while respecting website terms of service and industry best practices.
+        </Text>
+        
+        <Flex justify="center" gap={6} flexWrap="wrap">
+          <Image
+            src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/javascript.png"
+            alt="JavaScript Logo"
+            boxSize="40px"
+          />
+          <Image
+            src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/http.png"
+            alt="HTTP Logo"
+            boxSize="40px"
+          />
+          <Image
+            src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/selenium.png"
+            alt="Selenium Logo"
+            boxSize="40px"
+          />
+          <Image
+            src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/python.png"
+            alt="Python Logo"
+            boxSize="40px"
+          />
+          <Image
+            src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/rest.png"
+            alt="REST Logo"
+            boxSize="40px"
+          />
+        </Flex>
+        
+        <Text fontSize="lg" color="gray.600" maxW="800px">
+          Our reliable proxy network delivers effective data collection capabilities for organizations requiring web scraping solutions. Specifically designed for data extraction, competitor monitoring, price comparison, and machine learning data acquisition, our infrastructure helps overcome access limitations while maintaining reliable performance and regulatory compliance.
+        </Text>
+        
+        <Text fontSize="lg" color="gray.600" maxW="800px">
+          Advanced features include custom request fingerprinting, automatic CAPTCHA resolution, dynamic session management, and intelligent rate limiting to prevent server overloads. Our comprehensive dashboard provides real-time analytics on data collection performance, success rates, and system health, empowering you with full visibility into your web scraping operations.
+        </Text>
+      </VStack>
+    </Box>
+
 
           <Box py={16} bg="white" maxW="1200px" mx="auto" px={4}>
         <Heading as="h2" size="2xl" textAlign="center" mb={10} color="gray.800" fontWeight="medium">
