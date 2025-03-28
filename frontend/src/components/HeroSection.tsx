@@ -48,7 +48,7 @@ function HeroSection() {
           justifyContent={{ base: "flex-start", md: "center" }}
         >
          <Image
-            src="public/assets/images/hero.png"
+            src="/assets/images/hero.png"
             alt="Hero Image"
             maxW="400px"
             objectFit="contain"
