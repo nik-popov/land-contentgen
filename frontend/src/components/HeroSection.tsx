@@ -18,7 +18,7 @@ function HeroSection() {
         gap={8}
       >
         {/* Left Column: Text Content */}
-        <VStack align="flex-start" spacing={6} w={{ base: "100%", md: "60%" }}>
+        <VStack align="flex-start" p={8} spacing={6} w={{ base: "100%", md: "60%" }}>
           <Heading
             as="h1"
             size="2xl"
