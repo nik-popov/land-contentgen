@@ -345,7 +345,7 @@ function HTMLScraperPage() {
               color="orange.400"
               _hover={{ bg: "gray.100" }}
               as="a"
-              href="/tools/demo-request"
+              href="/demo-request"
             >
               Request API Demo
             </Button>

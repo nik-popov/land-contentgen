@@ -346,7 +346,7 @@ function SchedulerPage() {
               color="blue.500"
               _hover={{ bg: "gray.100" }}
               as="a"
-              href="/tools/demo-request"
+              href="/demo-request"
             >
               Request Scheduler Demo
             </Button>

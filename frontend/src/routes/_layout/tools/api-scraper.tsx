@@ -345,7 +345,7 @@ function APIScraper() {
               color="purple.500"
               _hover={{ bg: "gray.100" }}
               as="a"
-              href="/tools/demo-request"
+              href="/demo-request"
             >
               Request API Demo
             </Button>
