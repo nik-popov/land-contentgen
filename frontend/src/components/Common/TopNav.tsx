@@ -446,7 +446,7 @@ const TopNav = () => {
               <Button
                 as={RouterLink}
                 to="https://dashboard.thedataproxy.com/signup"
-                colorScheme="orange"
+                colorScheme="blue"
                 variant="solid"
                 size="sm"
                 onClick={onClose}
@@ -457,7 +457,7 @@ const TopNav = () => {
                 as={RouterLink}
                 to="https://dashboard.thedataproxy.com/login"
                 variant="outline"
-                colorScheme="orange"
+                colorScheme="blue"
                 size="sm"
                 onClick={onClose}
               >
