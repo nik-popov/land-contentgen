@@ -333,7 +333,7 @@ const TopNav = () => {
 
   return (
     <Box
-      bg="white"
+      bg="blue.50"
       px={4}
       py={2}
       position="sticky"

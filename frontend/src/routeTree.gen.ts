@@ -31,6 +31,7 @@ import { Route as LayoutSolutionsEnterpriseImport } from './routes/_layout/solut
 import { Route as LayoutSolutionsContentAggregationImport } from './routes/_layout/solutions/content-aggregation'
 import { Route as LayoutNetworkStatusImport } from './routes/_layout/network/status'
 import { Route as LayoutNetworkSecurityImport } from './routes/_layout/network/security'
+import { Route as LayoutNetworkProxyTypesImport } from './routes/_layout/network/proxy-types'
 import { Route as LayoutNetworkLocationsImport } from './routes/_layout/network/locations'
 
 // Create/Update Routes
@@ -157,6 +158,12 @@ const LayoutNetworkSecurityRoute = LayoutNetworkSecurityImport.update({
   getParentRoute: () => LayoutRoute,
 } as any)
 
+const LayoutNetworkProxyTypesRoute = LayoutNetworkProxyTypesImport.update({
+  id: '/network/proxy-types',
+  path: '/network/proxy-types',
+  getParentRoute: () => LayoutRoute,
+} as any)
+
 const LayoutNetworkLocationsRoute = LayoutNetworkLocationsImport.update({
   id: '/network/locations',
   path: '/network/locations',
@@ -235,6 +242,13 @@ declare module '@tanstack/react-router' {
       path: '/network/locations'
       fullPath: '/network/locations'
       preLoaderRoute: typeof LayoutNetworkLocationsImport
+      parentRoute: typeof LayoutImport
+    }
+    '/_layout/network/proxy-types': {
+      id: '/_layout/network/proxy-types'
+      path: '/network/proxy-types'
+      fullPath: '/network/proxy-types'
+      preLoaderRoute: typeof LayoutNetworkProxyTypesImport
       parentRoute: typeof LayoutImport
     }
     '/_layout/network/security': {
@@ -329,6 +343,7 @@ interface LayoutRouteChildren {
   LayoutTermsRoute: typeof LayoutTermsRoute
   LayoutIndexRoute: typeof LayoutIndexRoute
   LayoutNetworkLocationsRoute: typeof LayoutNetworkLocationsRoute
+  LayoutNetworkProxyTypesRoute: typeof LayoutNetworkProxyTypesRoute
   LayoutNetworkSecurityRoute: typeof LayoutNetworkSecurityRoute
   LayoutNetworkStatusRoute: typeof LayoutNetworkStatusRoute
   LayoutSolutionsContentAggregationRoute: typeof LayoutSolutionsContentAggregationRoute
@@ -352,6 +367,7 @@ const LayoutRouteChildren: LayoutRouteChildren = {
   LayoutTermsRoute: LayoutTermsRoute,
   LayoutIndexRoute: LayoutIndexRoute,
   LayoutNetworkLocationsRoute: LayoutNetworkLocationsRoute,
+  LayoutNetworkProxyTypesRoute: LayoutNetworkProxyTypesRoute,
   LayoutNetworkSecurityRoute: LayoutNetworkSecurityRoute,
   LayoutNetworkStatusRoute: LayoutNetworkStatusRoute,
   LayoutSolutionsContentAggregationRoute:
@@ -380,6 +396,7 @@ export interface FileRoutesByFullPath {
   '/terms': typeof LayoutTermsRoute
   '/': typeof LayoutIndexRoute
   '/network/locations': typeof LayoutNetworkLocationsRoute
+  '/network/proxy-types': typeof LayoutNetworkProxyTypesRoute
   '/network/security': typeof LayoutNetworkSecurityRoute
   '/network/status': typeof LayoutNetworkStatusRoute
   '/solutions/content-aggregation': typeof LayoutSolutionsContentAggregationRoute
@@ -403,6 +420,7 @@ export interface FileRoutesByTo {
   '/terms': typeof LayoutTermsRoute
   '/': typeof LayoutIndexRoute
   '/network/locations': typeof LayoutNetworkLocationsRoute
+  '/network/proxy-types': typeof LayoutNetworkProxyTypesRoute
   '/network/security': typeof LayoutNetworkSecurityRoute
   '/network/status': typeof LayoutNetworkStatusRoute
   '/solutions/content-aggregation': typeof LayoutSolutionsContentAggregationRoute
@@ -428,6 +446,7 @@ export interface FileRoutesById {
   '/_layout/terms': typeof LayoutTermsRoute
   '/_layout/': typeof LayoutIndexRoute
   '/_layout/network/locations': typeof LayoutNetworkLocationsRoute
+  '/_layout/network/proxy-types': typeof LayoutNetworkProxyTypesRoute
   '/_layout/network/security': typeof LayoutNetworkSecurityRoute
   '/_layout/network/status': typeof LayoutNetworkStatusRoute
   '/_layout/solutions/content-aggregation': typeof LayoutSolutionsContentAggregationRoute
@@ -454,6 +473,7 @@ export interface FileRouteTypes {
     | '/terms'
     | '/'
     | '/network/locations'
+    | '/network/proxy-types'
     | '/network/security'
     | '/network/status'
     | '/solutions/content-aggregation'
@@ -476,6 +496,7 @@ export interface FileRouteTypes {
     | '/terms'
     | '/'
     | '/network/locations'
+    | '/network/proxy-types'
     | '/network/security'
     | '/network/status'
     | '/solutions/content-aggregation'
@@ -499,6 +520,7 @@ export interface FileRouteTypes {
     | '/_layout/terms'
     | '/_layout/'
     | '/_layout/network/locations'
+    | '/_layout/network/proxy-types'
     | '/_layout/network/security'
     | '/_layout/network/status'
     | '/_layout/solutions/content-aggregation'
@@ -546,6 +568,7 @@ export const routeTree = rootRoute
         "/_layout/terms",
         "/_layout/",
         "/_layout/network/locations",
+        "/_layout/network/proxy-types",
         "/_layout/network/security",
         "/_layout/network/status",
         "/_layout/solutions/content-aggregation",
@@ -593,6 +616,10 @@ export const routeTree = rootRoute
     },
     "/_layout/network/locations": {
       "filePath": "_layout/network/locations.tsx",
+      "parent": "/_layout"
+    },
+    "/_layout/network/proxy-types": {
+      "filePath": "_layout/network/proxy-types.tsx",
       "parent": "/_layout"
     },
     "/_layout/network/security": {
