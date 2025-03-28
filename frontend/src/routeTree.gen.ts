@@ -19,6 +19,7 @@ import { Route as LayoutPrivacyRequestImport } from './routes/_layout/privacy-re
 import { Route as LayoutPrivacyImport } from './routes/_layout/privacy'
 import { Route as LayoutCookieImport } from './routes/_layout/cookie'
 import { Route as LayoutComplianceImport } from './routes/_layout/compliance'
+import { Route as LayoutSolutionsPriceMonitoringImport } from './routes/_layout/solutions/price-monitoring'
 import { Route as LayoutSolutionsMarketResearchImport } from './routes/_layout/solutions/market-research'
 import { Route as LayoutSolutionsDemoRequestImport } from './routes/_layout/solutions/demo-request'
 
@@ -70,6 +71,13 @@ const LayoutComplianceRoute = LayoutComplianceImport.update({
   path: '/compliance',
   getParentRoute: () => LayoutRoute,
 } as any)
+
+const LayoutSolutionsPriceMonitoringRoute =
+  LayoutSolutionsPriceMonitoringImport.update({
+    id: '/solutions/price-monitoring',
+    path: '/solutions/price-monitoring',
+    getParentRoute: () => LayoutRoute,
+  } as any)
 
 const LayoutSolutionsMarketResearchRoute =
   LayoutSolutionsMarketResearchImport.update({
@@ -160,6 +168,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LayoutSolutionsMarketResearchImport
       parentRoute: typeof LayoutImport
     }
+    '/_layout/solutions/price-monitoring': {
+      id: '/_layout/solutions/price-monitoring'
+      path: '/solutions/price-monitoring'
+      fullPath: '/solutions/price-monitoring'
+      preLoaderRoute: typeof LayoutSolutionsPriceMonitoringImport
+      parentRoute: typeof LayoutImport
+    }
   }
 }
 
@@ -175,6 +190,7 @@ interface LayoutRouteChildren {
   LayoutIndexRoute: typeof LayoutIndexRoute
   LayoutSolutionsDemoRequestRoute: typeof LayoutSolutionsDemoRequestRoute
   LayoutSolutionsMarketResearchRoute: typeof LayoutSolutionsMarketResearchRoute
+  LayoutSolutionsPriceMonitoringRoute: typeof LayoutSolutionsPriceMonitoringRoute
 }
 
 const LayoutRouteChildren: LayoutRouteChildren = {
@@ -187,6 +203,7 @@ const LayoutRouteChildren: LayoutRouteChildren = {
   LayoutIndexRoute: LayoutIndexRoute,
   LayoutSolutionsDemoRequestRoute: LayoutSolutionsDemoRequestRoute,
   LayoutSolutionsMarketResearchRoute: LayoutSolutionsMarketResearchRoute,
+  LayoutSolutionsPriceMonitoringRoute: LayoutSolutionsPriceMonitoringRoute,
 }
 
 const LayoutRouteWithChildren =
@@ -203,6 +220,7 @@ export interface FileRoutesByFullPath {
   '/': typeof LayoutIndexRoute
   '/solutions/demo-request': typeof LayoutSolutionsDemoRequestRoute
   '/solutions/market-research': typeof LayoutSolutionsMarketResearchRoute
+  '/solutions/price-monitoring': typeof LayoutSolutionsPriceMonitoringRoute
 }
 
 export interface FileRoutesByTo {
@@ -215,6 +233,7 @@ export interface FileRoutesByTo {
   '/': typeof LayoutIndexRoute
   '/solutions/demo-request': typeof LayoutSolutionsDemoRequestRoute
   '/solutions/market-research': typeof LayoutSolutionsMarketResearchRoute
+  '/solutions/price-monitoring': typeof LayoutSolutionsPriceMonitoringRoute
 }
 
 export interface FileRoutesById {
@@ -229,6 +248,7 @@ export interface FileRoutesById {
   '/_layout/': typeof LayoutIndexRoute
   '/_layout/solutions/demo-request': typeof LayoutSolutionsDemoRequestRoute
   '/_layout/solutions/market-research': typeof LayoutSolutionsMarketResearchRoute
+  '/_layout/solutions/price-monitoring': typeof LayoutSolutionsPriceMonitoringRoute
 }
 
 export interface FileRouteTypes {
@@ -244,6 +264,7 @@ export interface FileRouteTypes {
     | '/'
     | '/solutions/demo-request'
     | '/solutions/market-research'
+    | '/solutions/price-monitoring'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/compliance'
@@ -255,6 +276,7 @@ export interface FileRouteTypes {
     | '/'
     | '/solutions/demo-request'
     | '/solutions/market-research'
+    | '/solutions/price-monitoring'
   id:
     | '__root__'
     | '/_layout'
@@ -267,6 +289,7 @@ export interface FileRouteTypes {
     | '/_layout/'
     | '/_layout/solutions/demo-request'
     | '/_layout/solutions/market-research'
+    | '/_layout/solutions/price-monitoring'
   fileRoutesById: FileRoutesById
 }
 
@@ -302,7 +325,8 @@ export const routeTree = rootRoute
         "/_layout/terms",
         "/_layout/",
         "/_layout/solutions/demo-request",
-        "/_layout/solutions/market-research"
+        "/_layout/solutions/market-research",
+        "/_layout/solutions/price-monitoring"
       ]
     },
     "/_layout/compliance": {
@@ -339,6 +363,10 @@ export const routeTree = rootRoute
     },
     "/_layout/solutions/market-research": {
       "filePath": "_layout/solutions/market-research.tsx",
+      "parent": "/_layout"
+    },
+    "/_layout/solutions/price-monitoring": {
+      "filePath": "_layout/solutions/price-monitoring.tsx",
       "parent": "/_layout"
     }
   }
