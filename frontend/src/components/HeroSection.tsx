@@ -64,7 +64,7 @@ function HeroSection() {
                   bg="orange.400"
                   size="lg"
                   _hover={{ bg: "white", color: "orange.400" }}
-                  onClick={() => navigate({ to: "/signup" })}
+                  onClick={() => navigate({ to: "https://dashboard.thedataproxy.com/signup" })}
                 >
                   Start Your Free Trial
                 </Button>
