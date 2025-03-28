@@ -46,7 +46,7 @@ function ContentAggregationPage() {
       <Box py={16} bg="blue.50" color="gray.800">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h1" size="2xl" textAlign="center" mb={8} fontWeight="medium">
-            Enterprise Content Aggregation Solutions
+             Content Aggregation Solutions
           </Heading>
           <Text fontSize="xl" textAlign="center" mb={12} maxW="800px" mx="auto">
             Harness the power of comprehensive content aggregation with our scalable web scraping infrastructure.
@@ -201,7 +201,7 @@ function ContentAggregationPage() {
       <Box py={16} bg="blue.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
-            Enterprise Content Aggregation Platform Features
+             Content Aggregation Platform Features
           </Heading>
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>

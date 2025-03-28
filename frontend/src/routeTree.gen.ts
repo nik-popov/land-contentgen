@@ -20,6 +20,10 @@ import { Route as LayoutPrivacyImport } from './routes/_layout/privacy'
 import { Route as LayoutDemoRequestImport } from './routes/_layout/demo-request'
 import { Route as LayoutCookieImport } from './routes/_layout/cookie'
 import { Route as LayoutComplianceImport } from './routes/_layout/compliance'
+import { Route as LayoutToolsSchedulerImport } from './routes/_layout/tools/scheduler'
+import { Route as LayoutToolsProxyDashboardImport } from './routes/_layout/tools/proxy-dashboard'
+import { Route as LayoutToolsHtmlScraperImport } from './routes/_layout/tools/html-scraper'
+import { Route as LayoutToolsApiScraperImport } from './routes/_layout/tools/api-scraper'
 import { Route as LayoutSolutionsTrainingAiImport } from './routes/_layout/solutions/training-ai'
 import { Route as LayoutSolutionsPriceMonitoringImport } from './routes/_layout/solutions/price-monitoring'
 import { Route as LayoutSolutionsMarketResearchImport } from './routes/_layout/solutions/market-research'
@@ -78,6 +82,30 @@ const LayoutCookieRoute = LayoutCookieImport.update({
 const LayoutComplianceRoute = LayoutComplianceImport.update({
   id: '/compliance',
   path: '/compliance',
+  getParentRoute: () => LayoutRoute,
+} as any)
+
+const LayoutToolsSchedulerRoute = LayoutToolsSchedulerImport.update({
+  id: '/tools/scheduler',
+  path: '/tools/scheduler',
+  getParentRoute: () => LayoutRoute,
+} as any)
+
+const LayoutToolsProxyDashboardRoute = LayoutToolsProxyDashboardImport.update({
+  id: '/tools/proxy-dashboard',
+  path: '/tools/proxy-dashboard',
+  getParentRoute: () => LayoutRoute,
+} as any)
+
+const LayoutToolsHtmlScraperRoute = LayoutToolsHtmlScraperImport.update({
+  id: '/tools/html-scraper',
+  path: '/tools/html-scraper',
+  getParentRoute: () => LayoutRoute,
+} as any)
+
+const LayoutToolsApiScraperRoute = LayoutToolsApiScraperImport.update({
+  id: '/tools/api-scraper',
+  path: '/tools/api-scraper',
   getParentRoute: () => LayoutRoute,
 } as any)
 
@@ -216,6 +244,34 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LayoutSolutionsTrainingAiImport
       parentRoute: typeof LayoutImport
     }
+    '/_layout/tools/api-scraper': {
+      id: '/_layout/tools/api-scraper'
+      path: '/tools/api-scraper'
+      fullPath: '/tools/api-scraper'
+      preLoaderRoute: typeof LayoutToolsApiScraperImport
+      parentRoute: typeof LayoutImport
+    }
+    '/_layout/tools/html-scraper': {
+      id: '/_layout/tools/html-scraper'
+      path: '/tools/html-scraper'
+      fullPath: '/tools/html-scraper'
+      preLoaderRoute: typeof LayoutToolsHtmlScraperImport
+      parentRoute: typeof LayoutImport
+    }
+    '/_layout/tools/proxy-dashboard': {
+      id: '/_layout/tools/proxy-dashboard'
+      path: '/tools/proxy-dashboard'
+      fullPath: '/tools/proxy-dashboard'
+      preLoaderRoute: typeof LayoutToolsProxyDashboardImport
+      parentRoute: typeof LayoutImport
+    }
+    '/_layout/tools/scheduler': {
+      id: '/_layout/tools/scheduler'
+      path: '/tools/scheduler'
+      fullPath: '/tools/scheduler'
+      preLoaderRoute: typeof LayoutToolsSchedulerImport
+      parentRoute: typeof LayoutImport
+    }
   }
 }
 
@@ -235,6 +291,10 @@ interface LayoutRouteChildren {
   LayoutSolutionsMarketResearchRoute: typeof LayoutSolutionsMarketResearchRoute
   LayoutSolutionsPriceMonitoringRoute: typeof LayoutSolutionsPriceMonitoringRoute
   LayoutSolutionsTrainingAiRoute: typeof LayoutSolutionsTrainingAiRoute
+  LayoutToolsApiScraperRoute: typeof LayoutToolsApiScraperRoute
+  LayoutToolsHtmlScraperRoute: typeof LayoutToolsHtmlScraperRoute
+  LayoutToolsProxyDashboardRoute: typeof LayoutToolsProxyDashboardRoute
+  LayoutToolsSchedulerRoute: typeof LayoutToolsSchedulerRoute
 }
 
 const LayoutRouteChildren: LayoutRouteChildren = {
@@ -252,6 +312,10 @@ const LayoutRouteChildren: LayoutRouteChildren = {
   LayoutSolutionsMarketResearchRoute: LayoutSolutionsMarketResearchRoute,
   LayoutSolutionsPriceMonitoringRoute: LayoutSolutionsPriceMonitoringRoute,
   LayoutSolutionsTrainingAiRoute: LayoutSolutionsTrainingAiRoute,
+  LayoutToolsApiScraperRoute: LayoutToolsApiScraperRoute,
+  LayoutToolsHtmlScraperRoute: LayoutToolsHtmlScraperRoute,
+  LayoutToolsProxyDashboardRoute: LayoutToolsProxyDashboardRoute,
+  LayoutToolsSchedulerRoute: LayoutToolsSchedulerRoute,
 }
 
 const LayoutRouteWithChildren =
@@ -272,6 +336,10 @@ export interface FileRoutesByFullPath {
   '/solutions/market-research': typeof LayoutSolutionsMarketResearchRoute
   '/solutions/price-monitoring': typeof LayoutSolutionsPriceMonitoringRoute
   '/solutions/training-ai': typeof LayoutSolutionsTrainingAiRoute
+  '/tools/api-scraper': typeof LayoutToolsApiScraperRoute
+  '/tools/html-scraper': typeof LayoutToolsHtmlScraperRoute
+  '/tools/proxy-dashboard': typeof LayoutToolsProxyDashboardRoute
+  '/tools/scheduler': typeof LayoutToolsSchedulerRoute
 }
 
 export interface FileRoutesByTo {
@@ -288,6 +356,10 @@ export interface FileRoutesByTo {
   '/solutions/market-research': typeof LayoutSolutionsMarketResearchRoute
   '/solutions/price-monitoring': typeof LayoutSolutionsPriceMonitoringRoute
   '/solutions/training-ai': typeof LayoutSolutionsTrainingAiRoute
+  '/tools/api-scraper': typeof LayoutToolsApiScraperRoute
+  '/tools/html-scraper': typeof LayoutToolsHtmlScraperRoute
+  '/tools/proxy-dashboard': typeof LayoutToolsProxyDashboardRoute
+  '/tools/scheduler': typeof LayoutToolsSchedulerRoute
 }
 
 export interface FileRoutesById {
@@ -306,6 +378,10 @@ export interface FileRoutesById {
   '/_layout/solutions/market-research': typeof LayoutSolutionsMarketResearchRoute
   '/_layout/solutions/price-monitoring': typeof LayoutSolutionsPriceMonitoringRoute
   '/_layout/solutions/training-ai': typeof LayoutSolutionsTrainingAiRoute
+  '/_layout/tools/api-scraper': typeof LayoutToolsApiScraperRoute
+  '/_layout/tools/html-scraper': typeof LayoutToolsHtmlScraperRoute
+  '/_layout/tools/proxy-dashboard': typeof LayoutToolsProxyDashboardRoute
+  '/_layout/tools/scheduler': typeof LayoutToolsSchedulerRoute
 }
 
 export interface FileRouteTypes {
@@ -325,6 +401,10 @@ export interface FileRouteTypes {
     | '/solutions/market-research'
     | '/solutions/price-monitoring'
     | '/solutions/training-ai'
+    | '/tools/api-scraper'
+    | '/tools/html-scraper'
+    | '/tools/proxy-dashboard'
+    | '/tools/scheduler'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/compliance'
@@ -340,6 +420,10 @@ export interface FileRouteTypes {
     | '/solutions/market-research'
     | '/solutions/price-monitoring'
     | '/solutions/training-ai'
+    | '/tools/api-scraper'
+    | '/tools/html-scraper'
+    | '/tools/proxy-dashboard'
+    | '/tools/scheduler'
   id:
     | '__root__'
     | '/_layout'
@@ -356,6 +440,10 @@ export interface FileRouteTypes {
     | '/_layout/solutions/market-research'
     | '/_layout/solutions/price-monitoring'
     | '/_layout/solutions/training-ai'
+    | '/_layout/tools/api-scraper'
+    | '/_layout/tools/html-scraper'
+    | '/_layout/tools/proxy-dashboard'
+    | '/_layout/tools/scheduler'
   fileRoutesById: FileRoutesById
 }
 
@@ -395,7 +483,11 @@ export const routeTree = rootRoute
         "/_layout/solutions/enterprise",
         "/_layout/solutions/market-research",
         "/_layout/solutions/price-monitoring",
-        "/_layout/solutions/training-ai"
+        "/_layout/solutions/training-ai",
+        "/_layout/tools/api-scraper",
+        "/_layout/tools/html-scraper",
+        "/_layout/tools/proxy-dashboard",
+        "/_layout/tools/scheduler"
       ]
     },
     "/_layout/compliance": {
@@ -448,6 +540,22 @@ export const routeTree = rootRoute
     },
     "/_layout/solutions/training-ai": {
       "filePath": "_layout/solutions/training-ai.tsx",
+      "parent": "/_layout"
+    },
+    "/_layout/tools/api-scraper": {
+      "filePath": "_layout/tools/api-scraper.tsx",
+      "parent": "/_layout"
+    },
+    "/_layout/tools/html-scraper": {
+      "filePath": "_layout/tools/html-scraper.tsx",
+      "parent": "/_layout"
+    },
+    "/_layout/tools/proxy-dashboard": {
+      "filePath": "_layout/tools/proxy-dashboard.tsx",
+      "parent": "/_layout"
+    },
+    "/_layout/tools/scheduler": {
+      "filePath": "_layout/tools/scheduler.tsx",
       "parent": "/_layout"
     }
   }

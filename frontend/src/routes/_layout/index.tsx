@@ -139,12 +139,10 @@ function LandingPage() {
         </Grid>
       </Box>
 
-{/* Section 1: Web Scraping Infrastructure - Centered */}
-{/* Section 1: Web Scraping Infrastructure - Centered */}
-<Box py={16} bg="blue.50" maxW="1200px" mx="auto" px={4}>
+      <Box py={16} bg="blue.50" maxW="1200px" mx="auto" px={4}>
   <VStack spacing={8} textAlign="center">
     <Heading as="h2" size="2xl" color="gray.800" fontWeight="medium">
-      Web Scraping Infrastructure
+      Web Scraping Technology Stack
     </Heading>
     
     <Text fontSize="lg" color="gray.600" maxW="800px">
@@ -155,7 +153,6 @@ function LandingPage() {
       With tools like Playwright for browser automation, BeautifulSoup for HTML parsing, Scrapy for crawling frameworks, and both Requests and AIOHTTP for HTTP handling, we ensure comprehensive coverage of all web scraping needs while respecting website terms of service.
     </Text>
   
-    
     <Flex justify="center" gap={6} flexWrap="wrap" maxW="900px">
       <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/javascript.png" alt="JavaScript" boxSize="50px" />
       <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/python.png" alt="Python" boxSize="50px" />
@@ -184,19 +181,23 @@ function LandingPage() {
       <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/mongodb.png" alt="MongoDB" boxSize="50px" />
       <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/postgresql.png" alt="PostgreSQL" boxSize="50px" />
     </Flex>
+  </VStack>
+</Box>
 
+{/* Section 1B: Infrastructure & Development */}
+<Box py={16} bg="white" maxW="1200px" mx="auto" px={4}>
+  <VStack spacing={8} textAlign="center">
+    <Heading as="h2" size="2xl" color="gray.800" fontWeight="medium">
+      Cloud Infrastructure & Development
+    </Heading>
     
     <Text fontSize="lg" color="gray.600" maxW="800px">
       Our infrastructure is fully cloud-native, with Docker containerization and Kubernetes orchestration ensuring consistent performance across all environments. We deploy seamlessly to AWS, Google Cloud Platform, and Microsoft Azure, using infrastructure-as-code tools like Terraform and Ansible for reproducible environments and S3 for cost-effective storage.
     </Text>
-  
-    
+      
     <Flex justify="center" gap={6} flexWrap="wrap" maxW="900px">
       <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/docker.png" alt="Docker" boxSize="50px" />
       <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/kubernetes.png" alt="Kubernetes" boxSize="50px" />
-      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/aws.png" alt="AWS" boxSize="50px" />
-      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/gcp.png" alt="Google Cloud Platform" boxSize="50px" />
-      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/microsoft_azure.png" alt="Microsoft Azure" boxSize="50px" />
       <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/terraform.png" alt="Terraform" boxSize="50px" />
       <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/ansible.png" alt="Ansible" boxSize="50px" />
       <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Amazon-S3-Logo.svg/1712px-Amazon-S3-Logo.svg.png" alt="Amazon S3" boxSize="50px" />
@@ -209,8 +210,7 @@ function LandingPage() {
     <Text fontSize="lg" color="gray.600" maxW="800px">
       Our development workflow integrates Git version control through GitHub and GitLab, with CI/CD pipelines via Jenkins. Our teams collaborate efficiently using Jira for project management and Slack for communication, while developers leverage VSCode, Postman for API testing, and package managers like NPM and PyPI to maintain dependencies.
     </Text>
-  
-    
+      
     <Flex justify="center" gap={6} flexWrap="wrap" maxW="900px">
       <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/git.png" alt="Git" boxSize="50px" />
       <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/github.png" alt="GitHub" boxSize="50px" />
@@ -230,7 +230,8 @@ function LandingPage() {
     </Text>
   </VStack>
 </Box>
-          <Box py={16} bg="white" maxW="1200px" mx="auto" px={4}>
+
+          <Box py={16} bg="blue.50" maxW="1200px" mx="auto" px={4}>
         <Heading as="h2" size="2xl" textAlign="center" mb={10} color="gray.800" fontWeight="medium">
           Web Scraping Business Solutions
         </Heading>
@@ -303,7 +304,7 @@ function LandingPage() {
       </Box>
 
 {/* Call to Action Section */}
-<Box py={16} bg="blue.50" textAlign="center" maxW="1200px" mx="auto" px={4}>
+<Box py={16} bg="white" textAlign="center" maxW="1200px" mx="auto" px={4}>
   <Heading as="h2" size="2xl" color="gray.800" mb={6} fontWeight="medium">
     Ready to Get Started?
   </Heading>
