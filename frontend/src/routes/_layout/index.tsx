@@ -145,7 +145,7 @@ function LandingPage() {
       <Box py={16} bg="gray.50" maxW="1200px" mx="auto" px={4}>
         <VStack spacing={8} textAlign="center">
           <Heading as="h2" size="2xl" color="gray.800" fontWeight="medium">
-            Professional Web Scraping Infrastructure
+            Web Scraping Infrastructure
           </Heading>
           <Text fontSize="lg" color="gray.600" maxW="800px">
             Our reliable proxy network delivers effective data collection capabilities for organizations requiring web scraping solutions. Specifically designed for data extraction, competitor monitoring, price comparison, and machine learning data acquisition, our infrastructure helps overcome access limitations while maintaining reliable performance and regulatory compliance.
