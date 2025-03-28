@@ -20,6 +20,7 @@ import { Route as LayoutPrivacyImport } from './routes/_layout/privacy'
 import { Route as LayoutCookieImport } from './routes/_layout/cookie'
 import { Route as LayoutComplianceImport } from './routes/_layout/compliance'
 import { Route as LayoutSolutionsMarketResearchImport } from './routes/_layout/solutions/market-research'
+import { Route as LayoutSolutionsDemoRequestImport } from './routes/_layout/solutions/demo-request'
 
 // Create/Update Routes
 
@@ -76,6 +77,14 @@ const LayoutSolutionsMarketResearchRoute =
     path: '/solutions/market-research',
     getParentRoute: () => LayoutRoute,
   } as any)
+
+const LayoutSolutionsDemoRequestRoute = LayoutSolutionsDemoRequestImport.update(
+  {
+    id: '/solutions/demo-request',
+    path: '/solutions/demo-request',
+    getParentRoute: () => LayoutRoute,
+  } as any,
+)
 
 // Populate the FileRoutesByPath interface
 
@@ -137,6 +146,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LayoutIndexImport
       parentRoute: typeof LayoutImport
     }
+    '/_layout/solutions/demo-request': {
+      id: '/_layout/solutions/demo-request'
+      path: '/solutions/demo-request'
+      fullPath: '/solutions/demo-request'
+      preLoaderRoute: typeof LayoutSolutionsDemoRequestImport
+      parentRoute: typeof LayoutImport
+    }
     '/_layout/solutions/market-research': {
       id: '/_layout/solutions/market-research'
       path: '/solutions/market-research'
@@ -157,6 +173,7 @@ interface LayoutRouteChildren {
   LayoutReportRoute: typeof LayoutReportRoute
   LayoutTermsRoute: typeof LayoutTermsRoute
   LayoutIndexRoute: typeof LayoutIndexRoute
+  LayoutSolutionsDemoRequestRoute: typeof LayoutSolutionsDemoRequestRoute
   LayoutSolutionsMarketResearchRoute: typeof LayoutSolutionsMarketResearchRoute
 }
 
@@ -168,6 +185,7 @@ const LayoutRouteChildren: LayoutRouteChildren = {
   LayoutReportRoute: LayoutReportRoute,
   LayoutTermsRoute: LayoutTermsRoute,
   LayoutIndexRoute: LayoutIndexRoute,
+  LayoutSolutionsDemoRequestRoute: LayoutSolutionsDemoRequestRoute,
   LayoutSolutionsMarketResearchRoute: LayoutSolutionsMarketResearchRoute,
 }
 
@@ -183,6 +201,7 @@ export interface FileRoutesByFullPath {
   '/report': typeof LayoutReportRoute
   '/terms': typeof LayoutTermsRoute
   '/': typeof LayoutIndexRoute
+  '/solutions/demo-request': typeof LayoutSolutionsDemoRequestRoute
   '/solutions/market-research': typeof LayoutSolutionsMarketResearchRoute
 }
 
@@ -194,6 +213,7 @@ export interface FileRoutesByTo {
   '/report': typeof LayoutReportRoute
   '/terms': typeof LayoutTermsRoute
   '/': typeof LayoutIndexRoute
+  '/solutions/demo-request': typeof LayoutSolutionsDemoRequestRoute
   '/solutions/market-research': typeof LayoutSolutionsMarketResearchRoute
 }
 
@@ -207,6 +227,7 @@ export interface FileRoutesById {
   '/_layout/report': typeof LayoutReportRoute
   '/_layout/terms': typeof LayoutTermsRoute
   '/_layout/': typeof LayoutIndexRoute
+  '/_layout/solutions/demo-request': typeof LayoutSolutionsDemoRequestRoute
   '/_layout/solutions/market-research': typeof LayoutSolutionsMarketResearchRoute
 }
 
@@ -221,6 +242,7 @@ export interface FileRouteTypes {
     | '/report'
     | '/terms'
     | '/'
+    | '/solutions/demo-request'
     | '/solutions/market-research'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -231,6 +253,7 @@ export interface FileRouteTypes {
     | '/report'
     | '/terms'
     | '/'
+    | '/solutions/demo-request'
     | '/solutions/market-research'
   id:
     | '__root__'
@@ -242,6 +265,7 @@ export interface FileRouteTypes {
     | '/_layout/report'
     | '/_layout/terms'
     | '/_layout/'
+    | '/_layout/solutions/demo-request'
     | '/_layout/solutions/market-research'
   fileRoutesById: FileRoutesById
 }
@@ -277,6 +301,7 @@ export const routeTree = rootRoute
         "/_layout/report",
         "/_layout/terms",
         "/_layout/",
+        "/_layout/solutions/demo-request",
         "/_layout/solutions/market-research"
       ]
     },
@@ -306,6 +331,10 @@ export const routeTree = rootRoute
     },
     "/_layout/": {
       "filePath": "_layout/index.tsx",
+      "parent": "/_layout"
+    },
+    "/_layout/solutions/demo-request": {
+      "filePath": "_layout/solutions/demo-request.tsx",
       "parent": "/_layout"
     },
     "/_layout/solutions/market-research": {

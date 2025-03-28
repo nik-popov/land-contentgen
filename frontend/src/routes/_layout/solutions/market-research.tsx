@@ -197,13 +197,23 @@ function MarketResearchPage() {
           <Text fontSize="lg" textAlign="center" mb={12} maxW="700px" mx="auto">
             Our proxy infrastructure integrates seamlessly with leading market research and business intelligence platforms
           </Text>
-          
-          <Flex justify="center" flexWrap="wrap" gap={10} mb={12}>
-            <Image src="https://logos-world.net/wp-content/uploads/2021/10/Tableau-Logo.png" alt="Tableau" height="80px" objectFit="contain" />
-            <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/New_Power_BI_Logo.svg/1200px-New_Power_BI_Logo.svg.png" alt="Power BI" height="80px" objectFit="contain" />
-            <Image src="https://mediag.com/wp-content/uploads/2021/05/logo_google-data-studio_3.png" alt="Google Data Studio" height="80px" objectFit="contain" />
-            <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Looker.svg/1200px-Looker.svg.png" alt="Looker" height="80px" objectFit="contain" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/jupyter_notebook.png" alt="Jupyter Notebooks" boxSize="80px" />
+           
+          <Flex justify="center" flexWrap="wrap" gap={10} mb={12} align="center">
+            <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
+              <Image src="https://logos-world.net/wp-content/uploads/2021/10/Tableau-Logo.png" alt="Tableau" maxHeight="80px" maxWidth="160px" objectFit="contain" />
+            </Box>
+            <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
+              <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/New_Power_BI_Logo.svg/1200px-New_Power_BI_Logo.svg.png" alt="Power BI" maxHeight="80px" maxWidth="160px" objectFit="contain" />
+            </Box>
+            <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
+              <Image src="https://mediag.com/wp-content/uploads/2021/05/logo_google-data-studio_3.png" alt="Google Data Studio" maxHeight="80px" maxWidth="160px" objectFit="contain" />
+            </Box>
+            <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
+              <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Looker.svg/1200px-Looker.svg.png" alt="Looker" maxHeight="80px" maxWidth="160px" objectFit="contain" />
+            </Box>
+            <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
+              <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/jupyter_notebook.png" alt="Jupyter Notebooks" maxHeight="80px" maxWidth="160px" objectFit="contain" />
+            </Box>
           </Flex>
           
           <Box textAlign="center">
@@ -214,7 +224,7 @@ function MarketResearchPage() {
               _hover={{ bg: "orange.500" }}
               mb={4}
               as="a"
-              href="/request-demo"
+              href="/solutions/demo-request"
             >
               Request Research Solution Demo
             </Button>
