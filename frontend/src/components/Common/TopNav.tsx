@@ -202,23 +202,7 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
   const bgActive = "blue.100";
   const activeTextColor = "blue.800";
   const currentUser = queryClient.getQueryData<UserPublic>(["currentUser"]);
-  
-  // State to track the active menu
   const [activeMenuIndex, setActiveMenuIndex] = useState<number | null>(null);
-  
-  const navRef = useRef<HTMLDivElement>(null);
-  const [menuPosition, setMenuPosition] = useState({ left: '0', right: '0' });
-
-  useEffect(() => {
-    // Calculate the position for the dropdown menus
-    if (navRef.current) {
-      const navRect = navRef.current.getBoundingClientRect();
-      setMenuPosition({
-        left: `${navRect.left}px`,
-        right: `${window.innerWidth - navRect.right}px`
-      });
-    }
-  }, []);
 
   const finalNavStructure = [...navStructure];
   if (currentUser?.is_superuser && !finalNavStructure.some(item => item.title === "Admin")) {
@@ -231,8 +215,7 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
         return (
           <Menu 
             key={title} 
-            placement={isMobile ? "right" : "bottom"} 
-            strategy="fixed" 
+            placement={isMobile ? "bottom" : "bottom-start"}
             isLazy
             onOpen={() => setActiveMenuIndex(index)}
           >
@@ -243,7 +226,6 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
               _hover={{ color: hoverColor }}
               _active={{ bg: bgActive, color: activeTextColor }}
               role="group"
-              position="relative"
             >
               <Flex align="center">
                 {icon && <Icon as={icon} mr={2} />}
@@ -252,55 +234,41 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
               </Flex>
             </MenuButton>
             <Portal>
-              <MenuList 
-                zIndex={10} 
-                width="100vw" 
-                maxWidth="100vw"
-                borderRadius={isMobile ? "md" : "none"}
-                borderTop={isMobile ? "1px solid" : "none"}
-                borderColor={isMobile ? "gray.200" : "none"}
-                borderX={isMobile ? "1px solid" : "none"}
-                borderBottom={isMobile ? "1px solid" : "none"}
-                position="fixed"
-                mt={isMobile ? "0" : "2px"}
-                left={isMobile ? "auto" : "0"}
-                right={isMobile ? "auto" : "0"}
+              <MenuList
+                zIndex={10}
+                minW="300px"
+                borderRadius="md"
+                position="absolute"
+                mt="2px"
               >
-                <Box maxW="1200px" mx="auto" px={4} py={3}>
-                  {description && (
-                    <>
-                      <Box px={3} py={2}>
-                        <Text fontSize="sm" color="gray.600">{description}</Text>
+                {description && (
+                  <>
+                    <Box px={3} py={2}>
+                      <Text fontSize="sm" color="gray.600">{description}</Text>
+                    </Box>
+                    <MenuDivider />
+                  </>
+                )}
+                {subItems.map((subItem) => (
+                  <MenuItem
+                    key={subItem.title}
+                    as={RouterLink}
+                    to={subItem.path}
+                    color={textColor}
+                    _hover={{ color: hoverColor, bg: "gray.100" }}
+                    onClick={onClose}
+                  >
+                    <Flex align="center">
+                      {subItem.icon && <Icon as={subItem.icon} mr={2} boxSize={5} />}
+                      <Box>
+                        <Text fontWeight="medium">{subItem.title}</Text>
+                        {subItem.description && (
+                          <Text fontSize="xs" color="gray.500" mt={1}>{subItem.description}</Text>
+                        )}
                       </Box>
-                      <MenuDivider />
-                    </>
-                  )}
-                  <Flex wrap="wrap" gap={6}>
-                    {subItems.map((subItem) => (
-                      <MenuItem
-                        key={subItem.title}
-                        as={RouterLink}
-                        to={subItem.path}
-                        color={textColor}
-                        _hover={{ color: hoverColor, bg: "gray.100" }}
-                        onClick={onClose}
-                        width={isMobile ? "100%" : "auto"}
-                        minW={isMobile ? "auto" : "220px"}
-                        borderRadius="md"
-                      >
-                        <Flex align="center">
-                          {subItem.icon && <Icon as={subItem.icon} mr={2} boxSize={5} />}
-                          <Box>
-                            <Text fontWeight="medium">{subItem.title}</Text>
-                            {subItem.description && (
-                              <Text fontSize="xs" color="gray.500" mt={1}>{subItem.description}</Text>
-                            )}
-                          </Box>
-                        </Flex>
-                      </MenuItem>
-                    ))}
-                  </Flex>
-                </Box>
+                    </Flex>
+                  </MenuItem>
+                ))}
               </MenuList>
             </Portal>
           </Menu>
@@ -333,8 +301,7 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
       align="center" 
       gap={2} 
       flexDir={isMobile ? "column" : "row"}
-      position="static"
-      ref={navRef}
+      justify="center"
     >
       {renderNavItems(finalNavStructure)}
     </Flex>
@@ -348,8 +315,6 @@ const TopNav = () => {
   const currentUser = queryClient.getQueryData<UserPublic>(["currentUser"]);
   const textColor = "gray.800";
   const hoverColor = "blue.600";
-  
-  // Ref for the navbar container
   const navRef = useRef<HTMLDivElement>(null);
 
   const handleLogout = async () => {
@@ -368,153 +333,141 @@ const TopNav = () => {
       boxShadow="sm"
       w="100%"
     >
-      <Flex align="center" justify="space-between" maxW="1200px" mx="auto" ref={navRef}>
-        {/* Logo */}
-        <Link href="/" as={RouterLink}>
-          <Image src={Logo} alt="Web Scraping Proxy Network" h="40px" />
-        </Link>
+      <Container maxW="1200px" px={0}>
+        <Flex 
+          align="center" 
+          justify="space-between" 
+          w="100%"
+        >
+          <Link href="/" as={RouterLink}>
+            <Image src={Logo} alt="Web Scraping Proxy Network" h="40px" />
+          </Link>
 
-        {/* Mobile Menu Button */}
-        <IconButton
-          onClick={onOpen}
-          display={{ base: "flex", md: "none" }}
-          aria-label="Open Menu"
-          fontSize="20px"
-          color="blue.600"
-          icon={<FiMenu />}
-          variant="ghost"
-        />
+          <IconButton
+            onClick={onOpen}
+            display={{ base: "flex", md: "none" }}
+            aria-label="Open Menu"
+            fontSize="20px"
+            color="blue.600"
+            icon={<FiMenu />}
+            variant="ghost"
+          />
 
-        {/* Desktop Navigation */}
-        <Flex align="center" gap={4} display={{ base: "none", md: "flex" }} position="static">
-          <NavItems />
-          
-          {currentUser ? (
-            <Menu>
-              <MenuButton
-                px={4}
-                py={2}
-                color={textColor}
-                _hover={{ color: hoverColor }}
-              >
-                <Flex align="center">
-                  <Icon as={FiUser} mr={2} />
-                  <Text maxW="200px" isTruncated>{currentUser.email}</Text>
-                  <Icon as={FiChevronDown} ml={1} />
-                </Flex>
-              </MenuButton>
-              <MenuList>
-                <MenuItem
-                  as={RouterLink}
-                  to="/settings"
-                  color={textColor}
-                  _hover={{ color: hoverColor, bg: "gray.100" }}
-                >
-                  Settings
-                </MenuItem>
-                <MenuItem
-                  onClick={handleLogout}
-                  color={textColor}
-                  _hover={{ color: hoverColor, bg: "gray.100" }}
-                >
-                  Log out
-                </MenuItem>
-              </MenuList>
-            </Menu>
-          ) : (
-            <Flex gap={2}>
-              <Button
-                as={RouterLink}
-                to="/signup"
-                colorScheme="orange"
-                variant="solid"
-                size="sm"
-              >
-                Start Free Trial
-              </Button>
-              <Button
-                as={RouterLink}
-                to="/login"
-                variant="outline"
-                colorScheme="orange"
-                size="sm"
-              >
-                Login
-              </Button>
-            </Flex>
-          )}
-        </Flex>
-      </Flex>
+          <Flex 
+            align="center" 
+            gap={4} 
+            display={{ base: "none", md: "flex" }}
+            flex={1}
+            justify="center"
+          >
+            <NavItems />
+          </Flex>
 
-      {/* Mobile Menu */}
-      <Box
-        display={{ base: isOpen ? "block" : "none", md: "none" }}
-        position="absolute"
-        top="100%"
-        left={0}
-        right={0}
-        bg="white"
-        boxShadow="md"
-        p={4}
-        zIndex={20}
-      >
-        <Flex flexDir="column" gap={4}>
-          <NavItems onClose={onClose} isMobile={true} />
-          {currentUser ? (
-            <>
-              <Text color={textColor} fontSize="sm">
-                Logged in as: {currentUser.email}
-              </Text>
-              <Flex flexDir="column" gap={2}>
-                <Box
-                  as={RouterLink}
-                  to="/settings"
-                  p={2}
+          <Flex 
+            align="center" 
+            display={{ base: "none", md: "flex" }}
+          >
+            {currentUser ? (
+              <Menu>
+                <MenuButton
+                  px={4}
+                  py={2}
                   color={textColor}
                   _hover={{ color: hoverColor }}
+                >
+                  <Flex align="center">
+                    <Icon as={FiUser} mr={2} />
+                    <Text maxW="200px" isTruncated>{currentUser.email}</Text>
+                    <Icon as={FiChevronDown} ml={1} />
+                  </Flex>
+                </MenuButton>
+                <MenuList>
+                  <MenuItem as={RouterLink} to="/settings">Settings</MenuItem>
+                  <MenuItem onClick={handleLogout}>Log out</MenuItem>
+                </MenuList>
+              </Menu>
+            ) : (
+              <Flex gap={2}>
+                <Button as={RouterLink} to="/signup" colorScheme="orange" variant="solid" size="sm">
+                  Start Free Trial
+                </Button>
+                <Button as={RouterLink} to="/login" variant="outline" colorScheme="orange" size="sm">
+                  Login
+                </Button>
+              </Flex>
+            )}
+          </Flex>
+        </Flex>
+
+        <Box
+          display={{ base: isOpen ? "block" : "none", md: "none" }}
+          position="absolute"
+          top="100%"
+          left={0}
+          right={0}
+          bg="white"
+          boxShadow="md"
+          p={4}
+          zIndex={20}
+        >
+          <Flex flexDir="column" gap={4}>
+            <NavItems onClose={onClose} isMobile={true} />
+            {currentUser ? (
+              <>
+                <Text color={textColor} fontSize="sm">
+                  Logged in as: {currentUser.email}
+                </Text>
+                <Flex flexDir="column" gap={2}>
+                  <Box
+                    as={RouterLink}
+                    to="/settings"
+                    p={2}
+                    color={textColor}
+                    _hover={{ color: hoverColor }}
+                    onClick={onClose}
+                  >
+                    Settings
+                  </Box>
+                  <Flex
+                    as="button"
+                    onClick={handleLogout}
+                    color={hoverColor}
+                    fontWeight="bold"
+                    alignItems="center"
+                    gap={2}
+                  >
+                    <FiLogOut />
+                    <Text>Log out</Text>
+                  </Flex>
+                </Flex>
+              </>
+            ) : (
+              <Flex flexDir="column" gap={2}>
+                <Button
+                  as={RouterLink}
+                  to="/signup"
+                  colorScheme="orange"
+                  variant="solid"
+                  size="sm"
                   onClick={onClose}
                 >
-                  Settings
-                </Box>
-                <Flex
-                  as="button"
-                  onClick={handleLogout}
-                  color={hoverColor}
-                  fontWeight="bold"
-                  alignItems="center"
-                  gap={2}
+                  Start Free Trial
+                </Button>
+                <Button
+                  as={RouterLink}
+                  to="/login"
+                  variant="outline"
+                  colorScheme="orange"
+                  size="sm"
+                  onClick={onClose}
                 >
-                  <FiLogOut />
-                  <Text>Log out</Text>
-                </Flex>
+                  Login
+                </Button>
               </Flex>
-            </>
-          ) : (
-            <Flex flexDir="column" gap={2}>
-              <Button
-                as={RouterLink}
-                to="/signup"
-                colorScheme="orange"
-                variant="solid"
-                size="sm"
-                onClick={onClose}
-              >
-                Start Free Trial
-              </Button>
-              <Button
-                as={RouterLink}
-                to="/login"
-                variant="outline"
-                colorScheme="orange"
-                size="sm"
-                onClick={onClose}
-              >
-                Login
-              </Button>
-            </Flex>
-          )}
-        </Flex>
-      </Box>
+            )}
+          </Flex>
+        </Box>
+      </Container>
     </Box>
   );
 };
