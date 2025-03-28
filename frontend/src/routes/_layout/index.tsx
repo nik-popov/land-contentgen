@@ -163,12 +163,9 @@ function LandingPage() {
       <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/http.png" alt="HTTP" boxSize="50px" />
       <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/puppeteer.png" alt="Puppeteer" boxSize="50px" />
       <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/playwright.png" alt="Playwright" boxSize="50px" />
-      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/beautiful_soup.png" alt="Beautiful Soup" boxSize="50px" />
-      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/scrapy.png" alt="Scrapy" boxSize="50px" />
-      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/requests.png" alt="Requests" boxSize="50px" />
-      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/aiohttp.png" alt="AIOHTTP" boxSize="50px" />
+      <Image src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Requests_Python_Logo.png" alt="Requests" boxSize="50px" />
+      <Image src="https://avatars.githubusercontent.com/u/7049303?v=4" alt="AIOHTTP" boxSize="50px" />
       <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/websocket.png" alt="WebSocket" boxSize="50px" />
-      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/rest.png" alt="REST API" boxSize="50px" />
     </Flex>
     
     <Text fontSize="lg" color="gray.600" maxW="800px">
@@ -178,8 +175,6 @@ function LandingPage() {
     <Flex justify="center" gap={6} flexWrap="wrap" maxW="900px">
       <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/pandas.png" alt="Pandas" boxSize="50px" />
       <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/numpy.png" alt="NumPy" boxSize="50px" />
-      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/dask.png" alt="Dask" boxSize="50px" />
-      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/spark.png" alt="Apache Spark" boxSize="50px" />
       <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/tensorflow.png" alt="TensorFlow" boxSize="50px" />
       <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/graphql.png" alt="GraphQL" boxSize="50px" />
       <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/kafka.png" alt="Apache Kafka" boxSize="50px" />
@@ -204,15 +199,15 @@ function LandingPage() {
       <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/microsoft_azure.png" alt="Microsoft Azure" boxSize="50px" />
       <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/terraform.png" alt="Terraform" boxSize="50px" />
       <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/ansible.png" alt="Ansible" boxSize="50px" />
-      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/s3.png" alt="Amazon S3" boxSize="50px" />
+      <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Amazon-S3-Logo.svg/1712px-Amazon-S3-Logo.svg.png" alt="Amazon S3" boxSize="50px" />
       <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/prometheus.png" alt="Prometheus" boxSize="50px" />
       <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/grafana.png" alt="Grafana" boxSize="50px" />
-      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/kibana.png" alt="Kibana" boxSize="50px" />
-      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/datadog.png" alt="Datadog" boxSize="50px" />
+      <Image src="https://marketplace-assets.digitalocean.com/logos/sharklabs-kibana.svg" alt="Kibana" boxSize="50px" />
+      <Image src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7e/Datadog_logo.svg/1200px-Datadog_logo.svg.png" alt="Datadog" boxSize="50px" />
     </Flex>
     
     <Text fontSize="lg" color="gray.600" maxW="800px">
-      Our development workflow integrates Git version control through GitHub and GitLab, with CI/CD pipelines via Jenkins and CircleCI. Our teams collaborate efficiently using Jira for project management and Slack for communication, while developers leverage VSCode, Postman for API testing, and package managers like NPM and PyPI to maintain dependencies.
+      Our development workflow integrates Git version control through GitHub and GitLab, with CI/CD pipelines via Jenkins. Our teams collaborate efficiently using Jira for project management and Slack for communication, while developers leverage VSCode, Postman for API testing, and package managers like NPM and PyPI to maintain dependencies.
     </Text>
   
     
@@ -221,17 +216,14 @@ function LandingPage() {
       <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/github.png" alt="GitHub" boxSize="50px" />
       <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/gitlab.png" alt="GitLab" boxSize="50px" />
       <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/jenkins.png" alt="Jenkins" boxSize="50px" />
-      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/circleci.png" alt="CircleCI" boxSize="50px" />
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/eclipse.png" alt="Eclipse" boxSize="50px" />
       <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/jira.png" alt="Jira" boxSize="50px" />
-      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/vscode.png" alt="VSCode" boxSize="50px" />
+      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/visual_studio_code.png" alt="VSCode" boxSize="50px" />
       <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/postman.png" alt="Postman" boxSize="50px" />
       <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/npm.png" alt="NPM" boxSize="50px" />
-      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/pypi.png" alt="PyPI" boxSize="50px" />
-      <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/slack.png" alt="Slack" boxSize="50px" />
+      <Image src="https://dashboard.snapcraft.io/site_media/appmedia/2020/04/pypy-512.png" alt="PyPI" boxSize="50px" />
       <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/typescript.png" alt="TypeScript" boxSize="50px" />
     </Flex>
-    
-    <Box py={4}></Box>
     
     <Text fontSize="lg" color="gray.600" maxW="800px">
       Advanced monitoring is provided through Prometheus for metrics collection, Grafana for visualization dashboards, Kibana for log analysis, and Datadog for comprehensive application performance monitoring. This full-stack observability ensures your web scraping operations maintain peak performance and availability.
@@ -326,18 +318,7 @@ function LandingPage() {
       bg="transparent"
       size="lg"
       _hover={{ bg: "orange.400", color: "white" }}
-      onClick={() => navigate({ to: "/technical-assessment" })}
-    >
-      Start Technical Assessment
-    </Button>
-    <Button
-      border="2px solid"
-      borderColor="orange.400"
-      color="orange.400"
-      bg="transparent"
-      size="lg"
-      _hover={{ bg: "orange.400", color: "white" }}
-      onClick={() => navigate({ to: "/consultation" })}
+      onClick={() => navigate({ to: "/demo-request" })}
     >
       Schedule Consultation
     </Button>

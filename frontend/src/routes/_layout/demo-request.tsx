@@ -23,9 +23,9 @@ import {
 } from "@chakra-ui/react";
 import { CheckCircleIcon, InfoIcon } from '@chakra-ui/icons';
 import { useState } from 'react';
-import Footer from '../../../components/Common/Footer';
+import Footer from '../../components/Common/Footer';
 
-export const Route = createFileRoute('/_layout/solutions/demo-request')({
+export const Route = createFileRoute('/_layout/demo-request')({
   component: RequestDemoPage,
 });
 
