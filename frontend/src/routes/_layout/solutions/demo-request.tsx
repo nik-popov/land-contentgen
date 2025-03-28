@@ -224,7 +224,7 @@ function RequestDemoPage() {
                   onChange={(e) => setConsentChecked(e.target.checked)}
                 >
                   I agree to receive communications about The Data Proxy services. I understand that my information will be processed in accordance with the 
-                  <Button variant="link" color="orange.500" mx={1}>Privacy Policy</Button>.
+                  <Button as="a" href="/privacy" variant="link" color="orange.500" mx={1}>Privacy Policy</Button>.
                 </Checkbox>
               </FormControl>
               
