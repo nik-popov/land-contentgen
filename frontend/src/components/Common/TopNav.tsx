@@ -118,7 +118,7 @@ const navStructure: NavItem[] = [
       },
       { 
         title: "AI Training Data", 
-        path: "/solutions/ai-training-data",
+        path: "/solutions/training-ai",
         description: "Build machine learning datasets through web scraping",
         icon: FiDatabase
       },

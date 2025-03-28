@@ -42,7 +42,7 @@ function MarketResearchPage() {
   return (
     <>
       {/* Market Research Hero Section */}
-      <Box py={16} bg="gray.50" color="gray.800">
+      <Box py={16} bg="blue.50" color="gray.800">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h1" size="2xl" textAlign="center" mb={8} fontWeight="medium">
             Data-Driven Market Research
@@ -99,7 +99,7 @@ function MarketResearchPage() {
       </Box>
       
       {/* Research Methodologies Section */}
-      <Box py={16} bg="gray.50">
+      <Box py={16} bg="blue.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={4} fontWeight="medium">
             Advanced Research Methodologies
@@ -135,8 +135,24 @@ function MarketResearchPage() {
         </Box>
       </Box>
       
-      {/* Case Study Section */}
-      <Box py={16}  bg="gray.50" >
+ {/* Cloud Provider Links */}
+ <Box px={16} py={16} bg="white" >
+        <Box maxW="1200px" mx="auto" px={4} textAlign="center">
+          <Heading as="h3" size="lg" mb={8} fontWeight="medium">
+            Cloud Infrastructure Partners
+          </Heading>
+          <Flex justify="center" gap={8} flexWrap="wrap">
+            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/aws.png" alt="AWS Logo" boxSize="60px" />
+            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/gcp.png" alt="GCP Logo" boxSize="60px" />
+            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/microsoft_azure.png" alt="Microsoft Azure Logo" boxSize="60px" />
+            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/ibm_cloud.png" alt="IBM Cloud Logo" boxSize="60px" />
+            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/digital_ocean.png" alt="Digital Ocean Logo" boxSize="60px" />
+          </Flex>
+        </Box>
+      </Box>
+    
+         {/* Case Study Section */}
+         <Box py={16}  bg="blue.50" >
         <Box maxW="1200px" mx="auto" px={4} py={15}>
           <Heading as="h2" size="xl" textAlign="center" mb={12} fontWeight="medium">
             Market Research Success Stories
@@ -170,8 +186,9 @@ function MarketResearchPage() {
             </Box>
           </Grid>
         </Box>
-      {/* Technology Icons */}
-      <Box px={16} py={16} bg="white" >
+        </Box>
+  {/* Technology Icons */}
+  <Box px={16} py={16} bg="white" >
         <Box maxW="1200px" mx="auto" px={4} textAlign="center"  >
           <Heading as="h2" size="xl" mb={8} fontWeight="medium">
             Data Collection Technologies
@@ -180,17 +197,40 @@ function MarketResearchPage() {
             Our web scraping infrastructure is built on industry-leading technologies
           </Text>
           
-          <Flex justify="center" gap={8} flexWrap="wrap" mb={10}>
+          <Flex justify="center" gap={8} flexWrap="wrap">
             <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/python.png" alt="Python" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/javascript.png" alt="JavaScript" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/http.png" alt="HTTP" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/rest.png" alt="REST" boxSize="50px" />
             <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/selenium.png" alt="Selenium" boxSize="50px" />
+            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/aws.png" alt="AWS" boxSize="50px" />
+            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/elasticsearch.png" alt="Elasticsearch" boxSize="50px" />
+            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/grafana.png" alt="Grafana" boxSize="50px" />
+            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/kubernetes.png" alt="Kubernetes" boxSize="50px" />
+            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/redis.png" alt="Redis" boxSize="50px" />
+            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/mongodb.png" alt="MongoDB" boxSize="50px" />
+            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/postgresql.png" alt="PostgreSQL" boxSize="50px" />
+            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/rest.png" alt="REST API" boxSize="50px" />
+            {/* Added more technology icons */}
+            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/graphql.png" alt="GraphQL" boxSize="50px" />
+            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/docker.png" alt="Docker" boxSize="50px" />
+            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/prometheus.png" alt="Prometheus" boxSize="50px" />
+            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/numpy.png" alt="NumPy" boxSize="50px" />
+            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/pandas.png" alt="Pandas" boxSize="50px" />
+            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/websocket.png" alt="WebSocket" boxSize="50px" />
+            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/tensorflow.png" alt="TensorFlow" boxSize="50px" />
+            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/git.png" alt="Git" boxSize="50px" />
+            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/github.png" alt="GitHub" boxSize="50px" />
+            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/javascript.png" alt="JavaScript" boxSize="50px" />
+            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/react.png" alt="React" boxSize="50px" />
+            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/node_js.png" alt="Node.js" boxSize="50px" />
+            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/typescript.png" alt="TypeScript" boxSize="50px" />
+            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/gcp.png" alt="Google Cloud Platform" boxSize="50px" />
+            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/microsoft_azure.png" alt="Microsoft Azure" boxSize="50px" />
           </Flex>
         </Box>
       </Box>
+     
 
-        <Box maxW="1200px" mx="auto" px={4} py={16}>
+
+        <Box bg="blue.50" px={4} py={16}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
             Enterprise-Grade Research Tools
           </Heading>
@@ -234,23 +274,8 @@ function MarketResearchPage() {
           </Box>
         </Box>
               
-      {/* Cloud Provider Links */}
-      <Box px={16} py={16} bg="white" >
-        <Box maxW="1200px" mx="auto" px={4} textAlign="center">
-          <Heading as="h3" size="lg" mb={8} fontWeight="medium">
-            Cloud Infrastructure Partners
-          </Heading>
-          <Flex justify="center" gap={8} flexWrap="wrap">
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/aws.png" alt="AWS Logo" boxSize="60px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/gcp.png" alt="GCP Logo" boxSize="60px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/microsoft_azure.png" alt="Microsoft Azure Logo" boxSize="60px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/ibm_cloud.png" alt="IBM Cloud Logo" boxSize="60px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/digital_ocean.png" alt="Digital Ocean Logo" boxSize="60px" />
-          </Flex>
-        </Box>
-      </Box>
-      </Box>
-      
+
+
       {/* Footer */}
       <Footer />
     </>

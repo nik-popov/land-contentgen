@@ -43,7 +43,7 @@ function PriceMonitoringPage() {
   return (
     <>
       {/* Price Monitoring Hero Section */}
-      <Box py={16} bg="gray.50" color="gray.800">
+      <Box py={16} bg="blue.50" color="gray.800">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h1" size="2xl" textAlign="center" mb={8} fontWeight="medium">
             Enterprise Price Monitoring Solutions
@@ -117,7 +117,7 @@ function PriceMonitoringPage() {
       </Box>
       
       {/* Industry Applications Section */}
-      <Box py={16} bg="gray.50">
+      <Box py={16} bg="blue.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={12} fontWeight="medium">
             Industry-Specific Price Monitoring Applications
@@ -198,7 +198,7 @@ function PriceMonitoringPage() {
       </Box>
       
       {/* Platform Features Section */}
-      <Box py={16} bg="gray.50">
+      <Box py={16} bg="blue.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
             Enterprise Price Monitoring Platform Features
@@ -298,7 +298,7 @@ function PriceMonitoringPage() {
       </Box>
       
       {/* Integration Partners */}
-      <Box py={16} bg="gray.50">
+      <Box py={16} bg="blue.50">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={8} fontWeight="medium">
             Integration Partners
@@ -366,7 +366,7 @@ function PriceMonitoringPage() {
       </Box>
       
       {/* Technology Stack */}
-      <Box py={16} bg="gray.50">
+      <Box py={16} bg="blue.50">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h3" size="lg" mb={8} fontWeight="medium">
             Powered by Advanced Data Technology
