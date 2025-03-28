@@ -1,7 +1,7 @@
 import { Box, Flex, Grid, Heading, Text, VStack, Button, Link, Stat, StatLabel, StatNumber, StatHelpText, StatArrow, SimpleGrid, Image, List, ListItem, ListIcon } from "@chakra-ui/react";
 import { createFileRoute } from "@tanstack/react-router";
 import Footer from '../../../components/Common/Footer';
-import { CheckCircleIcon, ShieldIcon } from '@chakra-ui/icons';
+import { CheckCircleIcon } from '@chakra-ui/icons';
 
 export const Route = createFileRoute("/_layout/network/security")({
   component: SecurityFeaturesPage,
