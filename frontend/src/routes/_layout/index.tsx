@@ -147,6 +147,7 @@ function LandingPage() {
           <Heading as="h2" size="2xl" color="gray.800" fontWeight="medium">
             Web Scraping Infrastructure
           </Heading>
+        
           <Text fontSize="lg" color="gray.600" maxW="800px">
             Our reliable proxy network delivers effective data collection capabilities for organizations requiring web scraping solutions. Specifically designed for data extraction, competitor monitoring, price comparison, and machine learning data acquisition, our infrastructure helps overcome access limitations while maintaining reliable performance and regulatory compliance.
           </Text>
@@ -177,6 +178,9 @@ function LandingPage() {
               boxSize="40px"
             />
           </Flex>
+          <Text fontSize="lg" color="gray.600" maxW="800px">
+            Our reliable proxy network delivers effective data collection capabilities for organizations requiring web scraping solutions. Specifically designed for data extraction, competitor monitoring, price comparison, and machine learning data acquisition, our infrastructure helps overcome access limitations while maintaining reliable performance and regulatory compliance.
+          </Text>
         </VStack>
       </Box>
 

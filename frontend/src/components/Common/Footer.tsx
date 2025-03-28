@@ -22,10 +22,13 @@ const Footer = () => {
               Enterprise-grade proxy infrastructure designed specifically for web scraping, data collection, 
               and market intelligence needs with global coverage across 190+ countries.
             </Text>
+         
+              <Text color="gray.300" mb={4}><strong>Phone:</strong> +1 (855) 440-2242</Text>
             <Flex align="center" gap={4} mb={4}>
               <Link href="mailto:info@thedataproxy.com" color="gray.300" _hover={{ color: "orange.400" }}>
                 info@thedataproxy.com
               </Link>
+              
             </Flex>
             <Flex gap={4}>
               <Link href="https://twitter.com/cobaltdata" isExternal aria-label="Twitter">
@@ -38,6 +41,7 @@ const Footer = () => {
                 <Box as="span" color="gray.300" _hover={{ color: "orange.400" }}>GitHub</Box>
               </Link>
             </Flex>
+            <Text color="gray.300" mb={4} pt={4}><strong>Address:</strong> 99 Wall St Suite 5660, New York, NY 10005, USA</Text>
           </Box>
 
           {/* Solutions */}
@@ -143,7 +147,7 @@ const Footer = () => {
             <Link href="/privacy" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>Privacy Policy</Link>
             <Link href="/terms" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>Terms of Service</Link>
             <Link href="/compliance" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>Compliance</Link>
-            <Link href="/cookies" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>Cookie Policy</Link>
+            <Link href="/cookie" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>Cookie Policy</Link>
           </Flex>
         </Flex>
       </Box>

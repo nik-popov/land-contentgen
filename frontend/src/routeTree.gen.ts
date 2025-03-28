@@ -13,6 +13,12 @@
 import { Route as rootRoute } from './routes/__root'
 import { Route as LayoutImport } from './routes/_layout'
 import { Route as LayoutIndexImport } from './routes/_layout/index'
+import { Route as LayoutTermsImport } from './routes/_layout/terms'
+import { Route as LayoutReportImport } from './routes/_layout/report'
+import { Route as LayoutPrivacyRequestImport } from './routes/_layout/privacy-request'
+import { Route as LayoutPrivacyImport } from './routes/_layout/privacy'
+import { Route as LayoutCookieImport } from './routes/_layout/cookie'
+import { Route as LayoutComplianceImport } from './routes/_layout/compliance'
 
 // Create/Update Routes
 
@@ -27,6 +33,42 @@ const LayoutIndexRoute = LayoutIndexImport.update({
   getParentRoute: () => LayoutRoute,
 } as any)
 
+const LayoutTermsRoute = LayoutTermsImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => LayoutRoute,
+} as any)
+
+const LayoutReportRoute = LayoutReportImport.update({
+  id: '/report',
+  path: '/report',
+  getParentRoute: () => LayoutRoute,
+} as any)
+
+const LayoutPrivacyRequestRoute = LayoutPrivacyRequestImport.update({
+  id: '/privacy-request',
+  path: '/privacy-request',
+  getParentRoute: () => LayoutRoute,
+} as any)
+
+const LayoutPrivacyRoute = LayoutPrivacyImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => LayoutRoute,
+} as any)
+
+const LayoutCookieRoute = LayoutCookieImport.update({
+  id: '/cookie',
+  path: '/cookie',
+  getParentRoute: () => LayoutRoute,
+} as any)
+
+const LayoutComplianceRoute = LayoutComplianceImport.update({
+  id: '/compliance',
+  path: '/compliance',
+  getParentRoute: () => LayoutRoute,
+} as any)
+
 // Populate the FileRoutesByPath interface
 
 declare module '@tanstack/react-router' {
@@ -37,6 +79,48 @@ declare module '@tanstack/react-router' {
       fullPath: ''
       preLoaderRoute: typeof LayoutImport
       parentRoute: typeof rootRoute
+    }
+    '/_layout/compliance': {
+      id: '/_layout/compliance'
+      path: '/compliance'
+      fullPath: '/compliance'
+      preLoaderRoute: typeof LayoutComplianceImport
+      parentRoute: typeof LayoutImport
+    }
+    '/_layout/cookie': {
+      id: '/_layout/cookie'
+      path: '/cookie'
+      fullPath: '/cookie'
+      preLoaderRoute: typeof LayoutCookieImport
+      parentRoute: typeof LayoutImport
+    }
+    '/_layout/privacy': {
+      id: '/_layout/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof LayoutPrivacyImport
+      parentRoute: typeof LayoutImport
+    }
+    '/_layout/privacy-request': {
+      id: '/_layout/privacy-request'
+      path: '/privacy-request'
+      fullPath: '/privacy-request'
+      preLoaderRoute: typeof LayoutPrivacyRequestImport
+      parentRoute: typeof LayoutImport
+    }
+    '/_layout/report': {
+      id: '/_layout/report'
+      path: '/report'
+      fullPath: '/report'
+      preLoaderRoute: typeof LayoutReportImport
+      parentRoute: typeof LayoutImport
+    }
+    '/_layout/terms': {
+      id: '/_layout/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof LayoutTermsImport
+      parentRoute: typeof LayoutImport
     }
     '/_layout/': {
       id: '/_layout/'
@@ -51,10 +135,22 @@ declare module '@tanstack/react-router' {
 // Create and export the route tree
 
 interface LayoutRouteChildren {
+  LayoutComplianceRoute: typeof LayoutComplianceRoute
+  LayoutCookieRoute: typeof LayoutCookieRoute
+  LayoutPrivacyRoute: typeof LayoutPrivacyRoute
+  LayoutPrivacyRequestRoute: typeof LayoutPrivacyRequestRoute
+  LayoutReportRoute: typeof LayoutReportRoute
+  LayoutTermsRoute: typeof LayoutTermsRoute
   LayoutIndexRoute: typeof LayoutIndexRoute
 }
 
 const LayoutRouteChildren: LayoutRouteChildren = {
+  LayoutComplianceRoute: LayoutComplianceRoute,
+  LayoutCookieRoute: LayoutCookieRoute,
+  LayoutPrivacyRoute: LayoutPrivacyRoute,
+  LayoutPrivacyRequestRoute: LayoutPrivacyRequestRoute,
+  LayoutReportRoute: LayoutReportRoute,
+  LayoutTermsRoute: LayoutTermsRoute,
   LayoutIndexRoute: LayoutIndexRoute,
 }
 
@@ -63,25 +159,67 @@ const LayoutRouteWithChildren =
 
 export interface FileRoutesByFullPath {
   '': typeof LayoutRouteWithChildren
+  '/compliance': typeof LayoutComplianceRoute
+  '/cookie': typeof LayoutCookieRoute
+  '/privacy': typeof LayoutPrivacyRoute
+  '/privacy-request': typeof LayoutPrivacyRequestRoute
+  '/report': typeof LayoutReportRoute
+  '/terms': typeof LayoutTermsRoute
   '/': typeof LayoutIndexRoute
 }
 
 export interface FileRoutesByTo {
+  '/compliance': typeof LayoutComplianceRoute
+  '/cookie': typeof LayoutCookieRoute
+  '/privacy': typeof LayoutPrivacyRoute
+  '/privacy-request': typeof LayoutPrivacyRequestRoute
+  '/report': typeof LayoutReportRoute
+  '/terms': typeof LayoutTermsRoute
   '/': typeof LayoutIndexRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/_layout': typeof LayoutRouteWithChildren
+  '/_layout/compliance': typeof LayoutComplianceRoute
+  '/_layout/cookie': typeof LayoutCookieRoute
+  '/_layout/privacy': typeof LayoutPrivacyRoute
+  '/_layout/privacy-request': typeof LayoutPrivacyRequestRoute
+  '/_layout/report': typeof LayoutReportRoute
+  '/_layout/terms': typeof LayoutTermsRoute
   '/_layout/': typeof LayoutIndexRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '' | '/'
+  fullPaths:
+    | ''
+    | '/compliance'
+    | '/cookie'
+    | '/privacy'
+    | '/privacy-request'
+    | '/report'
+    | '/terms'
+    | '/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/_layout' | '/_layout/'
+  to:
+    | '/compliance'
+    | '/cookie'
+    | '/privacy'
+    | '/privacy-request'
+    | '/report'
+    | '/terms'
+    | '/'
+  id:
+    | '__root__'
+    | '/_layout'
+    | '/_layout/compliance'
+    | '/_layout/cookie'
+    | '/_layout/privacy'
+    | '/_layout/privacy-request'
+    | '/_layout/report'
+    | '/_layout/terms'
+    | '/_layout/'
   fileRoutesById: FileRoutesById
 }
 
@@ -109,8 +247,38 @@ export const routeTree = rootRoute
     "/_layout": {
       "filePath": "_layout.tsx",
       "children": [
+        "/_layout/compliance",
+        "/_layout/cookie",
+        "/_layout/privacy",
+        "/_layout/privacy-request",
+        "/_layout/report",
+        "/_layout/terms",
         "/_layout/"
       ]
+    },
+    "/_layout/compliance": {
+      "filePath": "_layout/compliance.tsx",
+      "parent": "/_layout"
+    },
+    "/_layout/cookie": {
+      "filePath": "_layout/cookie.tsx",
+      "parent": "/_layout"
+    },
+    "/_layout/privacy": {
+      "filePath": "_layout/privacy.tsx",
+      "parent": "/_layout"
+    },
+    "/_layout/privacy-request": {
+      "filePath": "_layout/privacy-request.tsx",
+      "parent": "/_layout"
+    },
+    "/_layout/report": {
+      "filePath": "_layout/report.tsx",
+      "parent": "/_layout"
+    },
+    "/_layout/terms": {
+      "filePath": "_layout/terms.tsx",
+      "parent": "/_layout"
     },
     "/_layout/": {
       "filePath": "_layout/index.tsx",
