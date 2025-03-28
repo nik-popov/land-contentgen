@@ -5,7 +5,7 @@ function HeroSection() {
   const navigate = useNavigate();
   return (
     <Box
-      bgGradient="linear(to-bl, blue.900, blue.300)"
+      bgGradient="linear(to-bl, blue.900, blue.400)"
       py={15}
     >
       <Flex
@@ -57,7 +57,7 @@ function HeroSection() {
       </Flex>
           
               
-              <Flex justify="center" gap={4} pt={12}>
+              <Flex justify="center" gap={4} pt={4} pb={20}>
               <Button
              
                   color="white"
