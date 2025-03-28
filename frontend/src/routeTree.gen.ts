@@ -19,6 +19,7 @@ import { Route as LayoutPrivacyRequestImport } from './routes/_layout/privacy-re
 import { Route as LayoutPrivacyImport } from './routes/_layout/privacy'
 import { Route as LayoutCookieImport } from './routes/_layout/cookie'
 import { Route as LayoutComplianceImport } from './routes/_layout/compliance'
+import { Route as LayoutSolutionsMarketResearchImport } from './routes/_layout/solutions/market-research'
 
 // Create/Update Routes
 
@@ -68,6 +69,13 @@ const LayoutComplianceRoute = LayoutComplianceImport.update({
   path: '/compliance',
   getParentRoute: () => LayoutRoute,
 } as any)
+
+const LayoutSolutionsMarketResearchRoute =
+  LayoutSolutionsMarketResearchImport.update({
+    id: '/solutions/market-research',
+    path: '/solutions/market-research',
+    getParentRoute: () => LayoutRoute,
+  } as any)
 
 // Populate the FileRoutesByPath interface
 
@@ -129,6 +137,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LayoutIndexImport
       parentRoute: typeof LayoutImport
     }
+    '/_layout/solutions/market-research': {
+      id: '/_layout/solutions/market-research'
+      path: '/solutions/market-research'
+      fullPath: '/solutions/market-research'
+      preLoaderRoute: typeof LayoutSolutionsMarketResearchImport
+      parentRoute: typeof LayoutImport
+    }
   }
 }
 
@@ -142,6 +157,7 @@ interface LayoutRouteChildren {
   LayoutReportRoute: typeof LayoutReportRoute
   LayoutTermsRoute: typeof LayoutTermsRoute
   LayoutIndexRoute: typeof LayoutIndexRoute
+  LayoutSolutionsMarketResearchRoute: typeof LayoutSolutionsMarketResearchRoute
 }
 
 const LayoutRouteChildren: LayoutRouteChildren = {
@@ -152,6 +168,7 @@ const LayoutRouteChildren: LayoutRouteChildren = {
   LayoutReportRoute: LayoutReportRoute,
   LayoutTermsRoute: LayoutTermsRoute,
   LayoutIndexRoute: LayoutIndexRoute,
+  LayoutSolutionsMarketResearchRoute: LayoutSolutionsMarketResearchRoute,
 }
 
 const LayoutRouteWithChildren =
@@ -166,6 +183,7 @@ export interface FileRoutesByFullPath {
   '/report': typeof LayoutReportRoute
   '/terms': typeof LayoutTermsRoute
   '/': typeof LayoutIndexRoute
+  '/solutions/market-research': typeof LayoutSolutionsMarketResearchRoute
 }
 
 export interface FileRoutesByTo {
@@ -176,6 +194,7 @@ export interface FileRoutesByTo {
   '/report': typeof LayoutReportRoute
   '/terms': typeof LayoutTermsRoute
   '/': typeof LayoutIndexRoute
+  '/solutions/market-research': typeof LayoutSolutionsMarketResearchRoute
 }
 
 export interface FileRoutesById {
@@ -188,6 +207,7 @@ export interface FileRoutesById {
   '/_layout/report': typeof LayoutReportRoute
   '/_layout/terms': typeof LayoutTermsRoute
   '/_layout/': typeof LayoutIndexRoute
+  '/_layout/solutions/market-research': typeof LayoutSolutionsMarketResearchRoute
 }
 
 export interface FileRouteTypes {
@@ -201,6 +221,7 @@ export interface FileRouteTypes {
     | '/report'
     | '/terms'
     | '/'
+    | '/solutions/market-research'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/compliance'
@@ -210,6 +231,7 @@ export interface FileRouteTypes {
     | '/report'
     | '/terms'
     | '/'
+    | '/solutions/market-research'
   id:
     | '__root__'
     | '/_layout'
@@ -220,6 +242,7 @@ export interface FileRouteTypes {
     | '/_layout/report'
     | '/_layout/terms'
     | '/_layout/'
+    | '/_layout/solutions/market-research'
   fileRoutesById: FileRoutesById
 }
 
@@ -253,7 +276,8 @@ export const routeTree = rootRoute
         "/_layout/privacy-request",
         "/_layout/report",
         "/_layout/terms",
-        "/_layout/"
+        "/_layout/",
+        "/_layout/solutions/market-research"
       ]
     },
     "/_layout/compliance": {
@@ -282,6 +306,10 @@ export const routeTree = rootRoute
     },
     "/_layout/": {
       "filePath": "_layout/index.tsx",
+      "parent": "/_layout"
+    },
+    "/_layout/solutions/market-research": {
+      "filePath": "_layout/solutions/market-research.tsx",
       "parent": "/_layout"
     }
   }
