@@ -1,6 +1,7 @@
 import { Box, Flex, Grid, Heading, Image, Text, VStack, Button, Link } from "@chakra-ui/react";
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import HeroSection from '../../components/HeroSection';
+import Footer from '../../components/Common/Footer'; // Import the new Footer component
 
 export const Route = createFileRoute("/_layout/")({
   component: LandingPage,
@@ -299,15 +300,7 @@ function LandingPage() {
 </Box>
 
       {/* Footer */}
-      <Box bg="gray.800" color="white" py={8}>
-        <Flex justify="space-between" align="center" maxW="1200px" mx="auto" px={4} flexWrap="wrap" gap={4}>
-          <Text color="gray.300">© 2025 Web Scraping Proxy Network. All rights reserved.</Text>
-          <Flex gap={6}>
-            <Link href="/privacy" color="gray.300" _hover={{ color: "white" }}>Privacy Policy</Link>
-            <Link href="/terms" color="gray.300" _hover={{ color: "white" }}>Terms of Service</Link>
-          </Flex>
-        </Flex>
-      </Box>
+      <Footer />
     </Box>
   );
 }
