@@ -388,10 +388,10 @@ const TopNav = () => {
               </Menu>
             ) : (
               <Flex gap={2}>
-                <Button as={RouterLink} to="/signup" colorScheme="orange" variant="solid" size="sm">
+                <Button as={RouterLink} to="https://dashboard.thedataproxy.com/signup" colorScheme="blue" variant="solid" size="sm">
                   Start Free Trial
                 </Button>
-                <Button as={RouterLink} to="/login" variant="outline" colorScheme="orange" size="sm">
+                <Button as={RouterLink} to="https://dashboard.thedataproxy.com/login" variant="outline" colorScheme="blue" size="sm">
                   Login
                 </Button>
               </Flex>
