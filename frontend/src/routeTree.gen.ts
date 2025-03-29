@@ -20,6 +20,8 @@ import { Route as LayoutPrivacyImport } from './routes/_layout/privacy'
 import { Route as LayoutPricingImport } from './routes/_layout/pricing'
 import { Route as LayoutDemoRequestImport } from './routes/_layout/demo-request'
 import { Route as LayoutCookieImport } from './routes/_layout/cookie'
+import { Route as LayoutContactSalesImport } from './routes/_layout/contact-sales'
+import { Route as LayoutContactImport } from './routes/_layout/contact'
 import { Route as LayoutComplianceImport } from './routes/_layout/compliance'
 import { Route as LayoutUseCasesTravelFareAggregationImport } from './routes/_layout/use-cases/travel-fare-aggregation'
 import { Route as LayoutUseCasesSocialMediaMonitoringImport } from './routes/_layout/use-cases/social-media-monitoring'
@@ -106,6 +108,18 @@ const LayoutDemoRequestRoute = LayoutDemoRequestImport.update({
 const LayoutCookieRoute = LayoutCookieImport.update({
   id: '/cookie',
   path: '/cookie',
+  getParentRoute: () => LayoutRoute,
+} as any)
+
+const LayoutContactSalesRoute = LayoutContactSalesImport.update({
+  id: '/contact-sales',
+  path: '/contact-sales',
+  getParentRoute: () => LayoutRoute,
+} as any)
+
+const LayoutContactRoute = LayoutContactImport.update({
+  id: '/contact',
+  path: '/contact',
   getParentRoute: () => LayoutRoute,
 } as any)
 
@@ -339,6 +353,20 @@ declare module '@tanstack/react-router' {
       path: '/compliance'
       fullPath: '/compliance'
       preLoaderRoute: typeof LayoutComplianceImport
+      parentRoute: typeof LayoutImport
+    }
+    '/_layout/contact': {
+      id: '/_layout/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof LayoutContactImport
+      parentRoute: typeof LayoutImport
+    }
+    '/_layout/contact-sales': {
+      id: '/_layout/contact-sales'
+      path: '/contact-sales'
+      fullPath: '/contact-sales'
+      preLoaderRoute: typeof LayoutContactSalesImport
       parentRoute: typeof LayoutImport
     }
     '/_layout/cookie': {
@@ -628,6 +656,8 @@ declare module '@tanstack/react-router' {
 
 interface LayoutRouteChildren {
   LayoutComplianceRoute: typeof LayoutComplianceRoute
+  LayoutContactRoute: typeof LayoutContactRoute
+  LayoutContactSalesRoute: typeof LayoutContactSalesRoute
   LayoutCookieRoute: typeof LayoutCookieRoute
   LayoutDemoRequestRoute: typeof LayoutDemoRequestRoute
   LayoutPricingRoute: typeof LayoutPricingRoute
@@ -672,6 +702,8 @@ interface LayoutRouteChildren {
 
 const LayoutRouteChildren: LayoutRouteChildren = {
   LayoutComplianceRoute: LayoutComplianceRoute,
+  LayoutContactRoute: LayoutContactRoute,
+  LayoutContactSalesRoute: LayoutContactSalesRoute,
   LayoutCookieRoute: LayoutCookieRoute,
   LayoutDemoRequestRoute: LayoutDemoRequestRoute,
   LayoutPricingRoute: LayoutPricingRoute,
@@ -727,6 +759,8 @@ const LayoutRouteWithChildren =
 export interface FileRoutesByFullPath {
   '': typeof LayoutRouteWithChildren
   '/compliance': typeof LayoutComplianceRoute
+  '/contact': typeof LayoutContactRoute
+  '/contact-sales': typeof LayoutContactSalesRoute
   '/cookie': typeof LayoutCookieRoute
   '/demo-request': typeof LayoutDemoRequestRoute
   '/pricing': typeof LayoutPricingRoute
@@ -771,6 +805,8 @@ export interface FileRoutesByFullPath {
 
 export interface FileRoutesByTo {
   '/compliance': typeof LayoutComplianceRoute
+  '/contact': typeof LayoutContactRoute
+  '/contact-sales': typeof LayoutContactSalesRoute
   '/cookie': typeof LayoutCookieRoute
   '/demo-request': typeof LayoutDemoRequestRoute
   '/pricing': typeof LayoutPricingRoute
@@ -817,6 +853,8 @@ export interface FileRoutesById {
   __root__: typeof rootRoute
   '/_layout': typeof LayoutRouteWithChildren
   '/_layout/compliance': typeof LayoutComplianceRoute
+  '/_layout/contact': typeof LayoutContactRoute
+  '/_layout/contact-sales': typeof LayoutContactSalesRoute
   '/_layout/cookie': typeof LayoutCookieRoute
   '/_layout/demo-request': typeof LayoutDemoRequestRoute
   '/_layout/pricing': typeof LayoutPricingRoute
@@ -864,6 +902,8 @@ export interface FileRouteTypes {
   fullPaths:
     | ''
     | '/compliance'
+    | '/contact'
+    | '/contact-sales'
     | '/cookie'
     | '/demo-request'
     | '/pricing'
@@ -907,6 +947,8 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/compliance'
+    | '/contact'
+    | '/contact-sales'
     | '/cookie'
     | '/demo-request'
     | '/pricing'
@@ -951,6 +993,8 @@ export interface FileRouteTypes {
     | '__root__'
     | '/_layout'
     | '/_layout/compliance'
+    | '/_layout/contact'
+    | '/_layout/contact-sales'
     | '/_layout/cookie'
     | '/_layout/demo-request'
     | '/_layout/pricing'
@@ -1019,6 +1063,8 @@ export const routeTree = rootRoute
       "filePath": "_layout.tsx",
       "children": [
         "/_layout/compliance",
+        "/_layout/contact",
+        "/_layout/contact-sales",
         "/_layout/cookie",
         "/_layout/demo-request",
         "/_layout/pricing",
@@ -1063,6 +1109,14 @@ export const routeTree = rootRoute
     },
     "/_layout/compliance": {
       "filePath": "_layout/compliance.tsx",
+      "parent": "/_layout"
+    },
+    "/_layout/contact": {
+      "filePath": "_layout/contact.tsx",
+      "parent": "/_layout"
+    },
+    "/_layout/contact-sales": {
+      "filePath": "_layout/contact-sales.tsx",
       "parent": "/_layout"
     },
     "/_layout/cookie": {
