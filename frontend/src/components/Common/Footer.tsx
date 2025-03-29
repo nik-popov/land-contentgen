@@ -68,7 +68,7 @@ const Footer = () => {
             <Link href="/network/status" color="gray.300" _hover={{ color: "orange.400" }}>Status</Link>
                   
             <Link href="/network/security" color="gray.300" _hover={{ color: "orange.400" }}>Security</Link>
-              <Link href="/blog" color="gray.300" _hover={{ color: "orange.400" }}>Blog</Link>
+              <Link href="/resources/blog" color="gray.300" _hover={{ color: "orange.400" }}>Blog</Link>
               {/* <Link href="/documentation" color="gray.300" _hover={{ color: "orange.400" }}>Documentation</Link> */}
               {/* <Link href="/case-studies" color="gray.300" _hover={{ color: "orange.400" }}>Case Studies</Link>
               <Link href="/webinars" color="gray.300" _hover={{ color: "orange.400" }}>Webinars</Link> */}
@@ -83,9 +83,7 @@ const Footer = () => {
           <Box>
             <Heading as="h4" size="md" mb={4} color="white">Company</Heading>
             <VStack align="flex-start" spacing={2}>
-              <Link href="/about" color="gray.300" _hover={{ color: "orange.400" }}>About Us</Link>
               <Link href="/resources/support-center" color="gray.300" _hover={{ color: "orange.400" }}>Contact</Link>
-              <Link href="/careers" color="gray.300" _hover={{ color: "orange.400" }}>Careers</Link>
               <Link href="/pricing" color="gray.300" _hover={{ color: "orange.400" }}>Pricing</Link>
             </VStack>
           </Box>

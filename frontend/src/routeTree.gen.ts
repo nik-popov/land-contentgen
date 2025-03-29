@@ -42,6 +42,7 @@ import { Route as LayoutSolutionsContentAggregationImport } from './routes/_layo
 import { Route as LayoutResourcesWebScrapingGuidesImport } from './routes/_layout/resources/web-scraping-guides'
 import { Route as LayoutResourcesSupportCenterImport } from './routes/_layout/resources/support-center'
 import { Route as LayoutResourcesCodeExamplesImport } from './routes/_layout/resources/code-examples'
+import { Route as LayoutResourcesBlogImport } from './routes/_layout/resources/blog'
 import { Route as LayoutNetworkStatusImport } from './routes/_layout/network/status'
 import { Route as LayoutNetworkSouthAmericaImport } from './routes/_layout/network/south-america'
 import { Route as LayoutNetworkSecurityImport } from './routes/_layout/network/security'
@@ -255,6 +256,12 @@ const LayoutResourcesCodeExamplesRoute =
     getParentRoute: () => LayoutRoute,
   } as any)
 
+const LayoutResourcesBlogRoute = LayoutResourcesBlogImport.update({
+  id: '/resources/blog',
+  path: '/resources/blog',
+  getParentRoute: () => LayoutRoute,
+} as any)
+
 const LayoutNetworkStatusRoute = LayoutNetworkStatusImport.update({
   id: '/network/status',
   path: '/network/status',
@@ -439,6 +446,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LayoutNetworkStatusImport
       parentRoute: typeof LayoutImport
     }
+    '/_layout/resources/blog': {
+      id: '/_layout/resources/blog'
+      path: '/resources/blog'
+      fullPath: '/resources/blog'
+      preLoaderRoute: typeof LayoutResourcesBlogImport
+      parentRoute: typeof LayoutImport
+    }
     '/_layout/resources/code-examples': {
       id: '/_layout/resources/code-examples'
       path: '/resources/code-examples'
@@ -616,6 +630,7 @@ interface LayoutRouteChildren {
   LayoutNetworkSecurityRoute: typeof LayoutNetworkSecurityRoute
   LayoutNetworkSouthAmericaRoute: typeof LayoutNetworkSouthAmericaRoute
   LayoutNetworkStatusRoute: typeof LayoutNetworkStatusRoute
+  LayoutResourcesBlogRoute: typeof LayoutResourcesBlogRoute
   LayoutResourcesCodeExamplesRoute: typeof LayoutResourcesCodeExamplesRoute
   LayoutResourcesSupportCenterRoute: typeof LayoutResourcesSupportCenterRoute
   LayoutResourcesWebScrapingGuidesRoute: typeof LayoutResourcesWebScrapingGuidesRoute
@@ -658,6 +673,7 @@ const LayoutRouteChildren: LayoutRouteChildren = {
   LayoutNetworkSecurityRoute: LayoutNetworkSecurityRoute,
   LayoutNetworkSouthAmericaRoute: LayoutNetworkSouthAmericaRoute,
   LayoutNetworkStatusRoute: LayoutNetworkStatusRoute,
+  LayoutResourcesBlogRoute: LayoutResourcesBlogRoute,
   LayoutResourcesCodeExamplesRoute: LayoutResourcesCodeExamplesRoute,
   LayoutResourcesSupportCenterRoute: LayoutResourcesSupportCenterRoute,
   LayoutResourcesWebScrapingGuidesRoute: LayoutResourcesWebScrapingGuidesRoute,
@@ -711,6 +727,7 @@ export interface FileRoutesByFullPath {
   '/network/security': typeof LayoutNetworkSecurityRoute
   '/network/south-america': typeof LayoutNetworkSouthAmericaRoute
   '/network/status': typeof LayoutNetworkStatusRoute
+  '/resources/blog': typeof LayoutResourcesBlogRoute
   '/resources/code-examples': typeof LayoutResourcesCodeExamplesRoute
   '/resources/support-center': typeof LayoutResourcesSupportCenterRoute
   '/resources/web-scraping-guides': typeof LayoutResourcesWebScrapingGuidesRoute
@@ -753,6 +770,7 @@ export interface FileRoutesByTo {
   '/network/security': typeof LayoutNetworkSecurityRoute
   '/network/south-america': typeof LayoutNetworkSouthAmericaRoute
   '/network/status': typeof LayoutNetworkStatusRoute
+  '/resources/blog': typeof LayoutResourcesBlogRoute
   '/resources/code-examples': typeof LayoutResourcesCodeExamplesRoute
   '/resources/support-center': typeof LayoutResourcesSupportCenterRoute
   '/resources/web-scraping-guides': typeof LayoutResourcesWebScrapingGuidesRoute
@@ -797,6 +815,7 @@ export interface FileRoutesById {
   '/_layout/network/security': typeof LayoutNetworkSecurityRoute
   '/_layout/network/south-america': typeof LayoutNetworkSouthAmericaRoute
   '/_layout/network/status': typeof LayoutNetworkStatusRoute
+  '/_layout/resources/blog': typeof LayoutResourcesBlogRoute
   '/_layout/resources/code-examples': typeof LayoutResourcesCodeExamplesRoute
   '/_layout/resources/support-center': typeof LayoutResourcesSupportCenterRoute
   '/_layout/resources/web-scraping-guides': typeof LayoutResourcesWebScrapingGuidesRoute
@@ -842,6 +861,7 @@ export interface FileRouteTypes {
     | '/network/security'
     | '/network/south-america'
     | '/network/status'
+    | '/resources/blog'
     | '/resources/code-examples'
     | '/resources/support-center'
     | '/resources/web-scraping-guides'
@@ -883,6 +903,7 @@ export interface FileRouteTypes {
     | '/network/security'
     | '/network/south-america'
     | '/network/status'
+    | '/resources/blog'
     | '/resources/code-examples'
     | '/resources/support-center'
     | '/resources/web-scraping-guides'
@@ -925,6 +946,7 @@ export interface FileRouteTypes {
     | '/_layout/network/security'
     | '/_layout/network/south-america'
     | '/_layout/network/status'
+    | '/_layout/resources/blog'
     | '/_layout/resources/code-examples'
     | '/_layout/resources/support-center'
     | '/_layout/resources/web-scraping-guides'
@@ -991,6 +1013,7 @@ export const routeTree = rootRoute
         "/_layout/network/security",
         "/_layout/network/south-america",
         "/_layout/network/status",
+        "/_layout/resources/blog",
         "/_layout/resources/code-examples",
         "/_layout/resources/support-center",
         "/_layout/resources/web-scraping-guides",
@@ -1081,6 +1104,10 @@ export const routeTree = rootRoute
     },
     "/_layout/network/status": {
       "filePath": "_layout/network/status.tsx",
+      "parent": "/_layout"
+    },
+    "/_layout/resources/blog": {
+      "filePath": "_layout/resources/blog.tsx",
       "parent": "/_layout"
     },
     "/_layout/resources/code-examples": {
