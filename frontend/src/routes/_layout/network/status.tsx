@@ -279,7 +279,7 @@ function NetworkStatusPage() {
               <Image src="https://cdn-icons-png.flaticon.com/512/1932/1932655.png" boxSize="50px" mb={2} />
               <Heading as="h3" size="md" fontWeight="medium">Technical Documentation</Heading>
               <Text color="gray.600">Access documentation to understand our infrastructure and troubleshoot common issues.</Text>
-              <Link color="blue.600" href="https://api.thedataproxy.com/redoc" fontWeight="medium">
+              <Link color="blue.600" href="https://apis.thedataproxy.com/redoc" fontWeight="medium">
                 View Documentation →
               </Link>
             </VStack>
@@ -288,7 +288,7 @@ function NetworkStatusPage() {
               <Image src="https://cdn-icons-png.flaticon.com/512/1373/1373397.png" boxSize="50px" mb={2} />
               <Heading as="h3" size="md" fontWeight="medium">Status Page API</Heading>
               <Text color="gray.600">Integrate real-time status information directly into your monitoring systems with our status API.</Text>
-              <Link color="blue.600" href="https://api.thedataproxy.com/redoc" fontWeight="medium">
+              <Link color="blue.600" href="https://apis.thedataproxy.com/redoc" fontWeight="medium">
                 API Documentation →
               </Link>
             </VStack>

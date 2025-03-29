@@ -168,7 +168,7 @@ const navStructure: NavItem[] = [
     subItems: [
       { 
         title: "API Documentation", 
-        path: "https://api.thedataproxy.com/redoc",
+        path: "https://apis.thedataproxy.com/redoc",
         description: "Technical documentation for our scraping APIs",
         icon: FiCode
       },
