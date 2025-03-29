@@ -256,12 +256,13 @@ function NetworkStatusPage() {
             
             <Button
               size="lg"
-              colorScheme="blue"
-              variant="outline"
+              bg="white"
+              color="purple.500"
+              _hover={{ bg: "gray.100" }}
               as="a"
-              href="/network/email-subscribe"
+              href="/contact-sales"
             >
-              Email Notifications
+              Request Demo
             </Button>
           </Flex>
         </Box>
