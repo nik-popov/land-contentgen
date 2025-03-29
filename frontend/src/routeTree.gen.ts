@@ -44,6 +44,7 @@ import { Route as LayoutSolutionsEnterpriseImport } from './routes/_layout/solut
 import { Route as LayoutSolutionsContentAggregationImport } from './routes/_layout/solutions/content-aggregation'
 import { Route as LayoutResourcesWebScrapingGuidesImport } from './routes/_layout/resources/web-scraping-guides'
 import { Route as LayoutResourcesSupportCenterImport } from './routes/_layout/resources/support-center'
+import { Route as LayoutResourcesFaqImport } from './routes/_layout/resources/faq'
 import { Route as LayoutResourcesCodeExamplesImport } from './routes/_layout/resources/code-examples'
 import { Route as LayoutResourcesBlogImport } from './routes/_layout/resources/blog'
 import { Route as LayoutNetworkStatusImport } from './routes/_layout/network/status'
@@ -269,6 +270,12 @@ const LayoutResourcesSupportCenterRoute =
     path: '/resources/support-center',
     getParentRoute: () => LayoutRoute,
   } as any)
+
+const LayoutResourcesFaqRoute = LayoutResourcesFaqImport.update({
+  id: '/resources/faq',
+  path: '/resources/faq',
+  getParentRoute: () => LayoutRoute,
+} as any)
 
 const LayoutResourcesCodeExamplesRoute =
   LayoutResourcesCodeExamplesImport.update({
@@ -502,6 +509,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LayoutResourcesCodeExamplesImport
       parentRoute: typeof LayoutImport
     }
+    '/_layout/resources/faq': {
+      id: '/_layout/resources/faq'
+      path: '/resources/faq'
+      fullPath: '/resources/faq'
+      preLoaderRoute: typeof LayoutResourcesFaqImport
+      parentRoute: typeof LayoutImport
+    }
     '/_layout/resources/support-center': {
       id: '/_layout/resources/support-center'
       path: '/resources/support-center'
@@ -677,6 +691,7 @@ interface LayoutRouteChildren {
   LayoutNetworkStatusRoute: typeof LayoutNetworkStatusRoute
   LayoutResourcesBlogRoute: typeof LayoutResourcesBlogRoute
   LayoutResourcesCodeExamplesRoute: typeof LayoutResourcesCodeExamplesRoute
+  LayoutResourcesFaqRoute: typeof LayoutResourcesFaqRoute
   LayoutResourcesSupportCenterRoute: typeof LayoutResourcesSupportCenterRoute
   LayoutResourcesWebScrapingGuidesRoute: typeof LayoutResourcesWebScrapingGuidesRoute
   LayoutSolutionsContentAggregationRoute: typeof LayoutSolutionsContentAggregationRoute
@@ -723,6 +738,7 @@ const LayoutRouteChildren: LayoutRouteChildren = {
   LayoutNetworkStatusRoute: LayoutNetworkStatusRoute,
   LayoutResourcesBlogRoute: LayoutResourcesBlogRoute,
   LayoutResourcesCodeExamplesRoute: LayoutResourcesCodeExamplesRoute,
+  LayoutResourcesFaqRoute: LayoutResourcesFaqRoute,
   LayoutResourcesSupportCenterRoute: LayoutResourcesSupportCenterRoute,
   LayoutResourcesWebScrapingGuidesRoute: LayoutResourcesWebScrapingGuidesRoute,
   LayoutSolutionsContentAggregationRoute:
@@ -780,6 +796,7 @@ export interface FileRoutesByFullPath {
   '/network/status': typeof LayoutNetworkStatusRoute
   '/resources/blog': typeof LayoutResourcesBlogRoute
   '/resources/code-examples': typeof LayoutResourcesCodeExamplesRoute
+  '/resources/faq': typeof LayoutResourcesFaqRoute
   '/resources/support-center': typeof LayoutResourcesSupportCenterRoute
   '/resources/web-scraping-guides': typeof LayoutResourcesWebScrapingGuidesRoute
   '/solutions/content-aggregation': typeof LayoutSolutionsContentAggregationRoute
@@ -826,6 +843,7 @@ export interface FileRoutesByTo {
   '/network/status': typeof LayoutNetworkStatusRoute
   '/resources/blog': typeof LayoutResourcesBlogRoute
   '/resources/code-examples': typeof LayoutResourcesCodeExamplesRoute
+  '/resources/faq': typeof LayoutResourcesFaqRoute
   '/resources/support-center': typeof LayoutResourcesSupportCenterRoute
   '/resources/web-scraping-guides': typeof LayoutResourcesWebScrapingGuidesRoute
   '/solutions/content-aggregation': typeof LayoutSolutionsContentAggregationRoute
@@ -874,6 +892,7 @@ export interface FileRoutesById {
   '/_layout/network/status': typeof LayoutNetworkStatusRoute
   '/_layout/resources/blog': typeof LayoutResourcesBlogRoute
   '/_layout/resources/code-examples': typeof LayoutResourcesCodeExamplesRoute
+  '/_layout/resources/faq': typeof LayoutResourcesFaqRoute
   '/_layout/resources/support-center': typeof LayoutResourcesSupportCenterRoute
   '/_layout/resources/web-scraping-guides': typeof LayoutResourcesWebScrapingGuidesRoute
   '/_layout/solutions/content-aggregation': typeof LayoutSolutionsContentAggregationRoute
@@ -923,6 +942,7 @@ export interface FileRouteTypes {
     | '/network/status'
     | '/resources/blog'
     | '/resources/code-examples'
+    | '/resources/faq'
     | '/resources/support-center'
     | '/resources/web-scraping-guides'
     | '/solutions/content-aggregation'
@@ -968,6 +988,7 @@ export interface FileRouteTypes {
     | '/network/status'
     | '/resources/blog'
     | '/resources/code-examples'
+    | '/resources/faq'
     | '/resources/support-center'
     | '/resources/web-scraping-guides'
     | '/solutions/content-aggregation'
@@ -1014,6 +1035,7 @@ export interface FileRouteTypes {
     | '/_layout/network/status'
     | '/_layout/resources/blog'
     | '/_layout/resources/code-examples'
+    | '/_layout/resources/faq'
     | '/_layout/resources/support-center'
     | '/_layout/resources/web-scraping-guides'
     | '/_layout/solutions/content-aggregation'
@@ -1084,6 +1106,7 @@ export const routeTree = rootRoute
         "/_layout/network/status",
         "/_layout/resources/blog",
         "/_layout/resources/code-examples",
+        "/_layout/resources/faq",
         "/_layout/resources/support-center",
         "/_layout/resources/web-scraping-guides",
         "/_layout/solutions/content-aggregation",
@@ -1193,6 +1216,10 @@ export const routeTree = rootRoute
     },
     "/_layout/resources/code-examples": {
       "filePath": "_layout/resources/code-examples.tsx",
+      "parent": "/_layout"
+    },
+    "/_layout/resources/faq": {
+      "filePath": "_layout/resources/faq.tsx",
       "parent": "/_layout"
     },
     "/_layout/resources/support-center": {

@@ -311,6 +311,8 @@ function SupportCenterPage() {
             <Button 
               colorScheme="blue" 
               variant="outline" 
+              as="a"
+              href="/resources/faq"
               size="lg"
             >
               View All FAQs
@@ -402,16 +404,28 @@ function SupportCenterPage() {
           </Text>
           
           <Flex justify="center" gap={6} flexWrap="wrap">
-            <Button
+          <Button
               size="lg"
               bg="white"
-              color="blue.600"
+              color="blue.500"
               _hover={{ bg: "gray.100" }}
-              leftIcon={<EmailIcon />}
+              as="a"
+              href="/demo-request"
             >
-              Contact Support
+              Request Demo
             </Button>
             
+            <Button
+              size="lg"
+              variant="outline"
+              borderColor="white"
+              color="white"
+              _hover={{ bg: "blue.700" }}
+              as="a"
+              href="https://dashboard.thedataproxy.com/signup"
+            >
+              Start Free Trial
+            </Button>
             {/* <Button
               size="lg"
               variant="outline"
