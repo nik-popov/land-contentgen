@@ -126,22 +126,19 @@ const Footer = () => {
         <Box borderTop="1px solid" borderColor="gray.700" pt={6} mb={6}>
           <Heading as="h4" size="sm" mb={4} color="gray.400">Global Proxy Coverage</Heading>
           <Flex flexWrap="wrap" gap={4}>
-            <Link href="/regions/north-america" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>
+            <Link href="/network/north-america" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>
               North America Proxies
             </Link>
-            <Link href="/regions/europe" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>
+            <Link href="/network/europe" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>
               Europe Proxies
             </Link>
-            <Link href="/regions/asia-pacific" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>
+            <Link href="/network/asia-pacific" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>
               Asia-Pacific Proxies
             </Link>
-            <Link href="/regions/south-america" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>
+            <Link href="/network/south-america" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>
               South America Proxies
             </Link>
-            <Link href="/regions/africa" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>
-              Africa Proxies
-            </Link>
-            <Link href="/regions/middle-east" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>
+            <Link href="/network/middle-east" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>
               Middle East Proxies
             </Link>
           </Flex>

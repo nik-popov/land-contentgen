@@ -43,9 +43,14 @@ import { Route as LayoutResourcesWebScrapingGuidesImport } from './routes/_layou
 import { Route as LayoutResourcesSupportCenterImport } from './routes/_layout/resources/support-center'
 import { Route as LayoutResourcesCodeExamplesImport } from './routes/_layout/resources/code-examples'
 import { Route as LayoutNetworkStatusImport } from './routes/_layout/network/status'
+import { Route as LayoutNetworkSouthAmericaImport } from './routes/_layout/network/south-america'
 import { Route as LayoutNetworkSecurityImport } from './routes/_layout/network/security'
 import { Route as LayoutNetworkProxyTypesImport } from './routes/_layout/network/proxy-types'
+import { Route as LayoutNetworkNorthAmericaImport } from './routes/_layout/network/north-america'
+import { Route as LayoutNetworkMiddleEastImport } from './routes/_layout/network/middle-east'
 import { Route as LayoutNetworkLocationsImport } from './routes/_layout/network/locations'
+import { Route as LayoutNetworkEuropeImport } from './routes/_layout/network/europe'
+import { Route as LayoutNetworkAsiaPacificImport } from './routes/_layout/network/asia-pacific'
 
 // Create/Update Routes
 
@@ -256,6 +261,12 @@ const LayoutNetworkStatusRoute = LayoutNetworkStatusImport.update({
   getParentRoute: () => LayoutRoute,
 } as any)
 
+const LayoutNetworkSouthAmericaRoute = LayoutNetworkSouthAmericaImport.update({
+  id: '/network/south-america',
+  path: '/network/south-america',
+  getParentRoute: () => LayoutRoute,
+} as any)
+
 const LayoutNetworkSecurityRoute = LayoutNetworkSecurityImport.update({
   id: '/network/security',
   path: '/network/security',
@@ -268,9 +279,33 @@ const LayoutNetworkProxyTypesRoute = LayoutNetworkProxyTypesImport.update({
   getParentRoute: () => LayoutRoute,
 } as any)
 
+const LayoutNetworkNorthAmericaRoute = LayoutNetworkNorthAmericaImport.update({
+  id: '/network/north-america',
+  path: '/network/north-america',
+  getParentRoute: () => LayoutRoute,
+} as any)
+
+const LayoutNetworkMiddleEastRoute = LayoutNetworkMiddleEastImport.update({
+  id: '/network/middle-east',
+  path: '/network/middle-east',
+  getParentRoute: () => LayoutRoute,
+} as any)
+
 const LayoutNetworkLocationsRoute = LayoutNetworkLocationsImport.update({
   id: '/network/locations',
   path: '/network/locations',
+  getParentRoute: () => LayoutRoute,
+} as any)
+
+const LayoutNetworkEuropeRoute = LayoutNetworkEuropeImport.update({
+  id: '/network/europe',
+  path: '/network/europe',
+  getParentRoute: () => LayoutRoute,
+} as any)
+
+const LayoutNetworkAsiaPacificRoute = LayoutNetworkAsiaPacificImport.update({
+  id: '/network/asia-pacific',
+  path: '/network/asia-pacific',
   getParentRoute: () => LayoutRoute,
 } as any)
 
@@ -341,11 +376,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LayoutIndexImport
       parentRoute: typeof LayoutImport
     }
+    '/_layout/network/asia-pacific': {
+      id: '/_layout/network/asia-pacific'
+      path: '/network/asia-pacific'
+      fullPath: '/network/asia-pacific'
+      preLoaderRoute: typeof LayoutNetworkAsiaPacificImport
+      parentRoute: typeof LayoutImport
+    }
+    '/_layout/network/europe': {
+      id: '/_layout/network/europe'
+      path: '/network/europe'
+      fullPath: '/network/europe'
+      preLoaderRoute: typeof LayoutNetworkEuropeImport
+      parentRoute: typeof LayoutImport
+    }
     '/_layout/network/locations': {
       id: '/_layout/network/locations'
       path: '/network/locations'
       fullPath: '/network/locations'
       preLoaderRoute: typeof LayoutNetworkLocationsImport
+      parentRoute: typeof LayoutImport
+    }
+    '/_layout/network/middle-east': {
+      id: '/_layout/network/middle-east'
+      path: '/network/middle-east'
+      fullPath: '/network/middle-east'
+      preLoaderRoute: typeof LayoutNetworkMiddleEastImport
+      parentRoute: typeof LayoutImport
+    }
+    '/_layout/network/north-america': {
+      id: '/_layout/network/north-america'
+      path: '/network/north-america'
+      fullPath: '/network/north-america'
+      preLoaderRoute: typeof LayoutNetworkNorthAmericaImport
       parentRoute: typeof LayoutImport
     }
     '/_layout/network/proxy-types': {
@@ -360,6 +423,13 @@ declare module '@tanstack/react-router' {
       path: '/network/security'
       fullPath: '/network/security'
       preLoaderRoute: typeof LayoutNetworkSecurityImport
+      parentRoute: typeof LayoutImport
+    }
+    '/_layout/network/south-america': {
+      id: '/_layout/network/south-america'
+      path: '/network/south-america'
+      fullPath: '/network/south-america'
+      preLoaderRoute: typeof LayoutNetworkSouthAmericaImport
       parentRoute: typeof LayoutImport
     }
     '/_layout/network/status': {
@@ -537,9 +607,14 @@ interface LayoutRouteChildren {
   LayoutReportRoute: typeof LayoutReportRoute
   LayoutTermsRoute: typeof LayoutTermsRoute
   LayoutIndexRoute: typeof LayoutIndexRoute
+  LayoutNetworkAsiaPacificRoute: typeof LayoutNetworkAsiaPacificRoute
+  LayoutNetworkEuropeRoute: typeof LayoutNetworkEuropeRoute
   LayoutNetworkLocationsRoute: typeof LayoutNetworkLocationsRoute
+  LayoutNetworkMiddleEastRoute: typeof LayoutNetworkMiddleEastRoute
+  LayoutNetworkNorthAmericaRoute: typeof LayoutNetworkNorthAmericaRoute
   LayoutNetworkProxyTypesRoute: typeof LayoutNetworkProxyTypesRoute
   LayoutNetworkSecurityRoute: typeof LayoutNetworkSecurityRoute
+  LayoutNetworkSouthAmericaRoute: typeof LayoutNetworkSouthAmericaRoute
   LayoutNetworkStatusRoute: typeof LayoutNetworkStatusRoute
   LayoutResourcesCodeExamplesRoute: typeof LayoutResourcesCodeExamplesRoute
   LayoutResourcesSupportCenterRoute: typeof LayoutResourcesSupportCenterRoute
@@ -574,9 +649,14 @@ const LayoutRouteChildren: LayoutRouteChildren = {
   LayoutReportRoute: LayoutReportRoute,
   LayoutTermsRoute: LayoutTermsRoute,
   LayoutIndexRoute: LayoutIndexRoute,
+  LayoutNetworkAsiaPacificRoute: LayoutNetworkAsiaPacificRoute,
+  LayoutNetworkEuropeRoute: LayoutNetworkEuropeRoute,
   LayoutNetworkLocationsRoute: LayoutNetworkLocationsRoute,
+  LayoutNetworkMiddleEastRoute: LayoutNetworkMiddleEastRoute,
+  LayoutNetworkNorthAmericaRoute: LayoutNetworkNorthAmericaRoute,
   LayoutNetworkProxyTypesRoute: LayoutNetworkProxyTypesRoute,
   LayoutNetworkSecurityRoute: LayoutNetworkSecurityRoute,
+  LayoutNetworkSouthAmericaRoute: LayoutNetworkSouthAmericaRoute,
   LayoutNetworkStatusRoute: LayoutNetworkStatusRoute,
   LayoutResourcesCodeExamplesRoute: LayoutResourcesCodeExamplesRoute,
   LayoutResourcesSupportCenterRoute: LayoutResourcesSupportCenterRoute,
@@ -622,9 +702,14 @@ export interface FileRoutesByFullPath {
   '/report': typeof LayoutReportRoute
   '/terms': typeof LayoutTermsRoute
   '/': typeof LayoutIndexRoute
+  '/network/asia-pacific': typeof LayoutNetworkAsiaPacificRoute
+  '/network/europe': typeof LayoutNetworkEuropeRoute
   '/network/locations': typeof LayoutNetworkLocationsRoute
+  '/network/middle-east': typeof LayoutNetworkMiddleEastRoute
+  '/network/north-america': typeof LayoutNetworkNorthAmericaRoute
   '/network/proxy-types': typeof LayoutNetworkProxyTypesRoute
   '/network/security': typeof LayoutNetworkSecurityRoute
+  '/network/south-america': typeof LayoutNetworkSouthAmericaRoute
   '/network/status': typeof LayoutNetworkStatusRoute
   '/resources/code-examples': typeof LayoutResourcesCodeExamplesRoute
   '/resources/support-center': typeof LayoutResourcesSupportCenterRoute
@@ -659,9 +744,14 @@ export interface FileRoutesByTo {
   '/report': typeof LayoutReportRoute
   '/terms': typeof LayoutTermsRoute
   '/': typeof LayoutIndexRoute
+  '/network/asia-pacific': typeof LayoutNetworkAsiaPacificRoute
+  '/network/europe': typeof LayoutNetworkEuropeRoute
   '/network/locations': typeof LayoutNetworkLocationsRoute
+  '/network/middle-east': typeof LayoutNetworkMiddleEastRoute
+  '/network/north-america': typeof LayoutNetworkNorthAmericaRoute
   '/network/proxy-types': typeof LayoutNetworkProxyTypesRoute
   '/network/security': typeof LayoutNetworkSecurityRoute
+  '/network/south-america': typeof LayoutNetworkSouthAmericaRoute
   '/network/status': typeof LayoutNetworkStatusRoute
   '/resources/code-examples': typeof LayoutResourcesCodeExamplesRoute
   '/resources/support-center': typeof LayoutResourcesSupportCenterRoute
@@ -698,9 +788,14 @@ export interface FileRoutesById {
   '/_layout/report': typeof LayoutReportRoute
   '/_layout/terms': typeof LayoutTermsRoute
   '/_layout/': typeof LayoutIndexRoute
+  '/_layout/network/asia-pacific': typeof LayoutNetworkAsiaPacificRoute
+  '/_layout/network/europe': typeof LayoutNetworkEuropeRoute
   '/_layout/network/locations': typeof LayoutNetworkLocationsRoute
+  '/_layout/network/middle-east': typeof LayoutNetworkMiddleEastRoute
+  '/_layout/network/north-america': typeof LayoutNetworkNorthAmericaRoute
   '/_layout/network/proxy-types': typeof LayoutNetworkProxyTypesRoute
   '/_layout/network/security': typeof LayoutNetworkSecurityRoute
+  '/_layout/network/south-america': typeof LayoutNetworkSouthAmericaRoute
   '/_layout/network/status': typeof LayoutNetworkStatusRoute
   '/_layout/resources/code-examples': typeof LayoutResourcesCodeExamplesRoute
   '/_layout/resources/support-center': typeof LayoutResourcesSupportCenterRoute
@@ -738,9 +833,14 @@ export interface FileRouteTypes {
     | '/report'
     | '/terms'
     | '/'
+    | '/network/asia-pacific'
+    | '/network/europe'
     | '/network/locations'
+    | '/network/middle-east'
+    | '/network/north-america'
     | '/network/proxy-types'
     | '/network/security'
+    | '/network/south-america'
     | '/network/status'
     | '/resources/code-examples'
     | '/resources/support-center'
@@ -774,9 +874,14 @@ export interface FileRouteTypes {
     | '/report'
     | '/terms'
     | '/'
+    | '/network/asia-pacific'
+    | '/network/europe'
     | '/network/locations'
+    | '/network/middle-east'
+    | '/network/north-america'
     | '/network/proxy-types'
     | '/network/security'
+    | '/network/south-america'
     | '/network/status'
     | '/resources/code-examples'
     | '/resources/support-center'
@@ -811,9 +916,14 @@ export interface FileRouteTypes {
     | '/_layout/report'
     | '/_layout/terms'
     | '/_layout/'
+    | '/_layout/network/asia-pacific'
+    | '/_layout/network/europe'
     | '/_layout/network/locations'
+    | '/_layout/network/middle-east'
+    | '/_layout/network/north-america'
     | '/_layout/network/proxy-types'
     | '/_layout/network/security'
+    | '/_layout/network/south-america'
     | '/_layout/network/status'
     | '/_layout/resources/code-examples'
     | '/_layout/resources/support-center'
@@ -872,9 +982,14 @@ export const routeTree = rootRoute
         "/_layout/report",
         "/_layout/terms",
         "/_layout/",
+        "/_layout/network/asia-pacific",
+        "/_layout/network/europe",
         "/_layout/network/locations",
+        "/_layout/network/middle-east",
+        "/_layout/network/north-america",
         "/_layout/network/proxy-types",
         "/_layout/network/security",
+        "/_layout/network/south-america",
         "/_layout/network/status",
         "/_layout/resources/code-examples",
         "/_layout/resources/support-center",
@@ -932,8 +1047,24 @@ export const routeTree = rootRoute
       "filePath": "_layout/index.tsx",
       "parent": "/_layout"
     },
+    "/_layout/network/asia-pacific": {
+      "filePath": "_layout/network/asia-pacific.tsx",
+      "parent": "/_layout"
+    },
+    "/_layout/network/europe": {
+      "filePath": "_layout/network/europe.tsx",
+      "parent": "/_layout"
+    },
     "/_layout/network/locations": {
       "filePath": "_layout/network/locations.tsx",
+      "parent": "/_layout"
+    },
+    "/_layout/network/middle-east": {
+      "filePath": "_layout/network/middle-east.tsx",
+      "parent": "/_layout"
+    },
+    "/_layout/network/north-america": {
+      "filePath": "_layout/network/north-america.tsx",
       "parent": "/_layout"
     },
     "/_layout/network/proxy-types": {
@@ -942,6 +1073,10 @@ export const routeTree = rootRoute
     },
     "/_layout/network/security": {
       "filePath": "_layout/network/security.tsx",
+      "parent": "/_layout"
+    },
+    "/_layout/network/south-america": {
+      "filePath": "_layout/network/south-america.tsx",
       "parent": "/_layout"
     },
     "/_layout/network/status": {

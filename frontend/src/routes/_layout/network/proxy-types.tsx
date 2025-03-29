@@ -363,17 +363,16 @@ function ProxyTypesPage() {
           </Text>
           
           <Flex justify="center" gap={6} flexWrap="wrap">
-            <Button
-              size="lg"
-              bg="white"
-              color="teal.500"
-              _hover={{ bg: "gray.100" }}
-              as="a"
-              href="/tools/proxy-selector"
-            >
-              Proxy Type Comparison
-            </Button>
-            
+                     <Button
+                         size="lg"
+                         bg="white"
+                         color="blue.500"
+                         _hover={{ bg: "gray.100" }}
+                         as="a"
+                         href="/demo-request"
+                       >
+                         Request Demo
+                       </Button>
             <Button
               size="lg"
               variant="outline"

@@ -243,13 +243,15 @@ function NetworkStatusPage() {
           </Text>
           
           <Flex justify="center" gap={6} flexWrap="wrap">
-            <Button
+          <Button
               size="lg"
-              colorScheme="blue"
+              bg="white"
+              color="blue.500"
+              _hover={{ bg: "gray.100" }}
               as="a"
-              href="/network/connect-slack"
+              href="/demo-request"
             >
-              Connect Slack
+              Request Demo
             </Button>
             
             <Button
