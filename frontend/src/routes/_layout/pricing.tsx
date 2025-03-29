@@ -16,7 +16,7 @@ function PricingPage() {
       name: "Basic",
       description: "For individuals and small projects exploring data collection",
       monthlyPrice: 99,
-      annualPrice: 39,
+      annualPrice: 75,
       features: [
         "10,000 API requests per month",
         "Standard proxy rotation",
@@ -34,7 +34,7 @@ function PricingPage() {
       name: "Pro",
       description: "For professionals and growing businesses with regular data needs",
       monthlyPrice: 399,
-      annualPrice: 119,
+      annualPrice: 285,
       popular: true,
       features: [
         "50,000 API requests per month",
@@ -54,7 +54,7 @@ function PricingPage() {
       name: "Business",
       description: "For teams and businesses with high-volume data requirements",
       monthlyPrice: 749,
-      annualPrice: 279,
+      annualPrice: 495,
       features: [
         "200,000 API requests per month",
         "Premium proxy pool access",
@@ -501,11 +501,14 @@ function PricingPage() {
           </Text>
           
           <Flex justify="center" gap={6} flexWrap="wrap">
-            <Button
+          <Button
               size="lg"
-              bg="white"
-              color="blue.600"
-              _hover={{ bg: "gray.100" }}
+              variant="outline"
+              borderColor="white"
+              color="white"
+              _hover={{ bg: "blue.700" }}
+              as="a"
+              href="https://dashboard.thedataproxy.com/signup"
             >
               Start Free Trial
             </Button>
@@ -516,9 +519,12 @@ function PricingPage() {
               borderColor="white"
               color="white"
               _hover={{ bg: "blue.700" }}
+              as="a"
+              href="/contact"
             >
-              Contact Sales
+          Contact Sales
             </Button>
+           
           </Flex>
         </Box>
       </Box>
