@@ -21,6 +21,7 @@ import { Route as LayoutDemoRequestImport } from './routes/_layout/demo-request'
 import { Route as LayoutCookieImport } from './routes/_layout/cookie'
 import { Route as LayoutComplianceImport } from './routes/_layout/compliance'
 import { Route as LayoutUseCasesEcommercePriceMonitoringImport } from './routes/_layout/use-cases/ecommerce-price-monitoring'
+import { Route as LayoutUseCasesCompetitorAnalysisImport } from './routes/_layout/use-cases/competitor-analysis'
 import { Route as LayoutToolsSchedulerImport } from './routes/_layout/tools/scheduler'
 import { Route as LayoutToolsProxyDashboardImport } from './routes/_layout/tools/proxy-dashboard'
 import { Route as LayoutToolsHtmlScraperImport } from './routes/_layout/tools/html-scraper'
@@ -99,6 +100,13 @@ const LayoutUseCasesEcommercePriceMonitoringRoute =
   LayoutUseCasesEcommercePriceMonitoringImport.update({
     id: '/use-cases/ecommerce-price-monitoring',
     path: '/use-cases/ecommerce-price-monitoring',
+    getParentRoute: () => LayoutRoute,
+  } as any)
+
+const LayoutUseCasesCompetitorAnalysisRoute =
+  LayoutUseCasesCompetitorAnalysisImport.update({
+    id: '/use-cases/competitor-analysis',
+    path: '/use-cases/competitor-analysis',
     getParentRoute: () => LayoutRoute,
   } as any)
 
@@ -411,6 +419,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LayoutToolsSchedulerImport
       parentRoute: typeof LayoutImport
     }
+    '/_layout/use-cases/competitor-analysis': {
+      id: '/_layout/use-cases/competitor-analysis'
+      path: '/use-cases/competitor-analysis'
+      fullPath: '/use-cases/competitor-analysis'
+      preLoaderRoute: typeof LayoutUseCasesCompetitorAnalysisImport
+      parentRoute: typeof LayoutImport
+    }
     '/_layout/use-cases/ecommerce-price-monitoring': {
       id: '/_layout/use-cases/ecommerce-price-monitoring'
       path: '/use-cases/ecommerce-price-monitoring'
@@ -450,6 +465,7 @@ interface LayoutRouteChildren {
   LayoutToolsHtmlScraperRoute: typeof LayoutToolsHtmlScraperRoute
   LayoutToolsProxyDashboardRoute: typeof LayoutToolsProxyDashboardRoute
   LayoutToolsSchedulerRoute: typeof LayoutToolsSchedulerRoute
+  LayoutUseCasesCompetitorAnalysisRoute: typeof LayoutUseCasesCompetitorAnalysisRoute
   LayoutUseCasesEcommercePriceMonitoringRoute: typeof LayoutUseCasesEcommercePriceMonitoringRoute
 }
 
@@ -481,6 +497,7 @@ const LayoutRouteChildren: LayoutRouteChildren = {
   LayoutToolsHtmlScraperRoute: LayoutToolsHtmlScraperRoute,
   LayoutToolsProxyDashboardRoute: LayoutToolsProxyDashboardRoute,
   LayoutToolsSchedulerRoute: LayoutToolsSchedulerRoute,
+  LayoutUseCasesCompetitorAnalysisRoute: LayoutUseCasesCompetitorAnalysisRoute,
   LayoutUseCasesEcommercePriceMonitoringRoute:
     LayoutUseCasesEcommercePriceMonitoringRoute,
 }
@@ -516,6 +533,7 @@ export interface FileRoutesByFullPath {
   '/tools/html-scraper': typeof LayoutToolsHtmlScraperRoute
   '/tools/proxy-dashboard': typeof LayoutToolsProxyDashboardRoute
   '/tools/scheduler': typeof LayoutToolsSchedulerRoute
+  '/use-cases/competitor-analysis': typeof LayoutUseCasesCompetitorAnalysisRoute
   '/use-cases/ecommerce-price-monitoring': typeof LayoutUseCasesEcommercePriceMonitoringRoute
 }
 
@@ -546,6 +564,7 @@ export interface FileRoutesByTo {
   '/tools/html-scraper': typeof LayoutToolsHtmlScraperRoute
   '/tools/proxy-dashboard': typeof LayoutToolsProxyDashboardRoute
   '/tools/scheduler': typeof LayoutToolsSchedulerRoute
+  '/use-cases/competitor-analysis': typeof LayoutUseCasesCompetitorAnalysisRoute
   '/use-cases/ecommerce-price-monitoring': typeof LayoutUseCasesEcommercePriceMonitoringRoute
 }
 
@@ -578,6 +597,7 @@ export interface FileRoutesById {
   '/_layout/tools/html-scraper': typeof LayoutToolsHtmlScraperRoute
   '/_layout/tools/proxy-dashboard': typeof LayoutToolsProxyDashboardRoute
   '/_layout/tools/scheduler': typeof LayoutToolsSchedulerRoute
+  '/_layout/use-cases/competitor-analysis': typeof LayoutUseCasesCompetitorAnalysisRoute
   '/_layout/use-cases/ecommerce-price-monitoring': typeof LayoutUseCasesEcommercePriceMonitoringRoute
 }
 
@@ -611,6 +631,7 @@ export interface FileRouteTypes {
     | '/tools/html-scraper'
     | '/tools/proxy-dashboard'
     | '/tools/scheduler'
+    | '/use-cases/competitor-analysis'
     | '/use-cases/ecommerce-price-monitoring'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -640,6 +661,7 @@ export interface FileRouteTypes {
     | '/tools/html-scraper'
     | '/tools/proxy-dashboard'
     | '/tools/scheduler'
+    | '/use-cases/competitor-analysis'
     | '/use-cases/ecommerce-price-monitoring'
   id:
     | '__root__'
@@ -670,6 +692,7 @@ export interface FileRouteTypes {
     | '/_layout/tools/html-scraper'
     | '/_layout/tools/proxy-dashboard'
     | '/_layout/tools/scheduler'
+    | '/_layout/use-cases/competitor-analysis'
     | '/_layout/use-cases/ecommerce-price-monitoring'
   fileRoutesById: FileRoutesById
 }
@@ -724,6 +747,7 @@ export const routeTree = rootRoute
         "/_layout/tools/html-scraper",
         "/_layout/tools/proxy-dashboard",
         "/_layout/tools/scheduler",
+        "/_layout/use-cases/competitor-analysis",
         "/_layout/use-cases/ecommerce-price-monitoring"
       ]
     },
@@ -829,6 +853,10 @@ export const routeTree = rootRoute
     },
     "/_layout/tools/scheduler": {
       "filePath": "_layout/tools/scheduler.tsx",
+      "parent": "/_layout"
+    },
+    "/_layout/use-cases/competitor-analysis": {
+      "filePath": "_layout/use-cases/competitor-analysis.tsx",
       "parent": "/_layout"
     },
     "/_layout/use-cases/ecommerce-price-monitoring": {
