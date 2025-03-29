@@ -73,7 +73,7 @@ const Footer = () => {
               {/* <Link href="/case-studies" color="gray.300" _hover={{ color: "orange.400" }}>Case Studies</Link>
               <Link href="/webinars" color="gray.300" _hover={{ color: "orange.400" }}>Webinars</Link> */}
                 <Link href="/network/proxy-types" color="gray.300" _hover={{ color: "orange.400" }}>Proxy Types</Link>
-              <Link href="/faq" color="gray.300" _hover={{ color: "orange.400" }}>FAQ</Link>
+              <Link href="/resources/faq" color="gray.300" _hover={{ color: "orange.400" }}>FAQ</Link>
 
               <Link href="https://apis.thedataproxy.com/redoc" color="gray.300" _hover={{ color: "orange.400" }}>API Reference</Link>
             </VStack>
