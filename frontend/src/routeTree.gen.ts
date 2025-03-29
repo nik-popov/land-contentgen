@@ -32,6 +32,7 @@ import { Route as LayoutSolutionsLeadGenerationImport } from './routes/_layout/s
 import { Route as LayoutSolutionsEnterpriseImport } from './routes/_layout/solutions/enterprise'
 import { Route as LayoutSolutionsContentAggregationImport } from './routes/_layout/solutions/content-aggregation'
 import { Route as LayoutResourcesWebScrapingGuidesImport } from './routes/_layout/resources/web-scraping-guides'
+import { Route as LayoutResourcesCodeExamplesImport } from './routes/_layout/resources/code-examples'
 import { Route as LayoutNetworkStatusImport } from './routes/_layout/network/status'
 import { Route as LayoutNetworkSecurityImport } from './routes/_layout/network/security'
 import { Route as LayoutNetworkProxyTypesImport } from './routes/_layout/network/proxy-types'
@@ -170,6 +171,13 @@ const LayoutResourcesWebScrapingGuidesRoute =
     getParentRoute: () => LayoutRoute,
   } as any)
 
+const LayoutResourcesCodeExamplesRoute =
+  LayoutResourcesCodeExamplesImport.update({
+    id: '/resources/code-examples',
+    path: '/resources/code-examples',
+    getParentRoute: () => LayoutRoute,
+  } as any)
+
 const LayoutNetworkStatusRoute = LayoutNetworkStatusImport.update({
   id: '/network/status',
   path: '/network/status',
@@ -289,6 +297,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LayoutNetworkStatusImport
       parentRoute: typeof LayoutImport
     }
+    '/_layout/resources/code-examples': {
+      id: '/_layout/resources/code-examples'
+      path: '/resources/code-examples'
+      fullPath: '/resources/code-examples'
+      preLoaderRoute: typeof LayoutResourcesCodeExamplesImport
+      parentRoute: typeof LayoutImport
+    }
     '/_layout/resources/web-scraping-guides': {
       id: '/_layout/resources/web-scraping-guides'
       path: '/resources/web-scraping-guides'
@@ -391,6 +406,7 @@ interface LayoutRouteChildren {
   LayoutNetworkProxyTypesRoute: typeof LayoutNetworkProxyTypesRoute
   LayoutNetworkSecurityRoute: typeof LayoutNetworkSecurityRoute
   LayoutNetworkStatusRoute: typeof LayoutNetworkStatusRoute
+  LayoutResourcesCodeExamplesRoute: typeof LayoutResourcesCodeExamplesRoute
   LayoutResourcesWebScrapingGuidesRoute: typeof LayoutResourcesWebScrapingGuidesRoute
   LayoutSolutionsContentAggregationRoute: typeof LayoutSolutionsContentAggregationRoute
   LayoutSolutionsEnterpriseRoute: typeof LayoutSolutionsEnterpriseRoute
@@ -418,6 +434,7 @@ const LayoutRouteChildren: LayoutRouteChildren = {
   LayoutNetworkProxyTypesRoute: LayoutNetworkProxyTypesRoute,
   LayoutNetworkSecurityRoute: LayoutNetworkSecurityRoute,
   LayoutNetworkStatusRoute: LayoutNetworkStatusRoute,
+  LayoutResourcesCodeExamplesRoute: LayoutResourcesCodeExamplesRoute,
   LayoutResourcesWebScrapingGuidesRoute: LayoutResourcesWebScrapingGuidesRoute,
   LayoutSolutionsContentAggregationRoute:
     LayoutSolutionsContentAggregationRoute,
@@ -450,6 +467,7 @@ export interface FileRoutesByFullPath {
   '/network/proxy-types': typeof LayoutNetworkProxyTypesRoute
   '/network/security': typeof LayoutNetworkSecurityRoute
   '/network/status': typeof LayoutNetworkStatusRoute
+  '/resources/code-examples': typeof LayoutResourcesCodeExamplesRoute
   '/resources/web-scraping-guides': typeof LayoutResourcesWebScrapingGuidesRoute
   '/solutions/content-aggregation': typeof LayoutSolutionsContentAggregationRoute
   '/solutions/enterprise': typeof LayoutSolutionsEnterpriseRoute
@@ -477,6 +495,7 @@ export interface FileRoutesByTo {
   '/network/proxy-types': typeof LayoutNetworkProxyTypesRoute
   '/network/security': typeof LayoutNetworkSecurityRoute
   '/network/status': typeof LayoutNetworkStatusRoute
+  '/resources/code-examples': typeof LayoutResourcesCodeExamplesRoute
   '/resources/web-scraping-guides': typeof LayoutResourcesWebScrapingGuidesRoute
   '/solutions/content-aggregation': typeof LayoutSolutionsContentAggregationRoute
   '/solutions/enterprise': typeof LayoutSolutionsEnterpriseRoute
@@ -506,6 +525,7 @@ export interface FileRoutesById {
   '/_layout/network/proxy-types': typeof LayoutNetworkProxyTypesRoute
   '/_layout/network/security': typeof LayoutNetworkSecurityRoute
   '/_layout/network/status': typeof LayoutNetworkStatusRoute
+  '/_layout/resources/code-examples': typeof LayoutResourcesCodeExamplesRoute
   '/_layout/resources/web-scraping-guides': typeof LayoutResourcesWebScrapingGuidesRoute
   '/_layout/solutions/content-aggregation': typeof LayoutSolutionsContentAggregationRoute
   '/_layout/solutions/enterprise': typeof LayoutSolutionsEnterpriseRoute
@@ -536,6 +556,7 @@ export interface FileRouteTypes {
     | '/network/proxy-types'
     | '/network/security'
     | '/network/status'
+    | '/resources/code-examples'
     | '/resources/web-scraping-guides'
     | '/solutions/content-aggregation'
     | '/solutions/enterprise'
@@ -562,6 +583,7 @@ export interface FileRouteTypes {
     | '/network/proxy-types'
     | '/network/security'
     | '/network/status'
+    | '/resources/code-examples'
     | '/resources/web-scraping-guides'
     | '/solutions/content-aggregation'
     | '/solutions/enterprise'
@@ -589,6 +611,7 @@ export interface FileRouteTypes {
     | '/_layout/network/proxy-types'
     | '/_layout/network/security'
     | '/_layout/network/status'
+    | '/_layout/resources/code-examples'
     | '/_layout/resources/web-scraping-guides'
     | '/_layout/solutions/content-aggregation'
     | '/_layout/solutions/enterprise'
@@ -640,6 +663,7 @@ export const routeTree = rootRoute
         "/_layout/network/proxy-types",
         "/_layout/network/security",
         "/_layout/network/status",
+        "/_layout/resources/code-examples",
         "/_layout/resources/web-scraping-guides",
         "/_layout/solutions/content-aggregation",
         "/_layout/solutions/enterprise",
@@ -700,6 +724,10 @@ export const routeTree = rootRoute
     },
     "/_layout/network/status": {
       "filePath": "_layout/network/status.tsx",
+      "parent": "/_layout"
+    },
+    "/_layout/resources/code-examples": {
+      "filePath": "_layout/resources/code-examples.tsx",
       "parent": "/_layout"
     },
     "/_layout/resources/web-scraping-guides": {
