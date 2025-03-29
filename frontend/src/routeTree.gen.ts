@@ -31,6 +31,7 @@ import { Route as LayoutSolutionsMarketResearchImport } from './routes/_layout/s
 import { Route as LayoutSolutionsLeadGenerationImport } from './routes/_layout/solutions/lead-generation'
 import { Route as LayoutSolutionsEnterpriseImport } from './routes/_layout/solutions/enterprise'
 import { Route as LayoutSolutionsContentAggregationImport } from './routes/_layout/solutions/content-aggregation'
+import { Route as LayoutResourcesWebScrapingGuidesImport } from './routes/_layout/resources/web-scraping-guides'
 import { Route as LayoutNetworkStatusImport } from './routes/_layout/network/status'
 import { Route as LayoutNetworkSecurityImport } from './routes/_layout/network/security'
 import { Route as LayoutNetworkProxyTypesImport } from './routes/_layout/network/proxy-types'
@@ -162,6 +163,13 @@ const LayoutSolutionsContentAggregationRoute =
     getParentRoute: () => LayoutRoute,
   } as any)
 
+const LayoutResourcesWebScrapingGuidesRoute =
+  LayoutResourcesWebScrapingGuidesImport.update({
+    id: '/resources/web-scraping-guides',
+    path: '/resources/web-scraping-guides',
+    getParentRoute: () => LayoutRoute,
+  } as any)
+
 const LayoutNetworkStatusRoute = LayoutNetworkStatusImport.update({
   id: '/network/status',
   path: '/network/status',
@@ -281,6 +289,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LayoutNetworkStatusImport
       parentRoute: typeof LayoutImport
     }
+    '/_layout/resources/web-scraping-guides': {
+      id: '/_layout/resources/web-scraping-guides'
+      path: '/resources/web-scraping-guides'
+      fullPath: '/resources/web-scraping-guides'
+      preLoaderRoute: typeof LayoutResourcesWebScrapingGuidesImport
+      parentRoute: typeof LayoutImport
+    }
     '/_layout/solutions/content-aggregation': {
       id: '/_layout/solutions/content-aggregation'
       path: '/solutions/content-aggregation'
@@ -376,6 +391,7 @@ interface LayoutRouteChildren {
   LayoutNetworkProxyTypesRoute: typeof LayoutNetworkProxyTypesRoute
   LayoutNetworkSecurityRoute: typeof LayoutNetworkSecurityRoute
   LayoutNetworkStatusRoute: typeof LayoutNetworkStatusRoute
+  LayoutResourcesWebScrapingGuidesRoute: typeof LayoutResourcesWebScrapingGuidesRoute
   LayoutSolutionsContentAggregationRoute: typeof LayoutSolutionsContentAggregationRoute
   LayoutSolutionsEnterpriseRoute: typeof LayoutSolutionsEnterpriseRoute
   LayoutSolutionsLeadGenerationRoute: typeof LayoutSolutionsLeadGenerationRoute
@@ -402,6 +418,7 @@ const LayoutRouteChildren: LayoutRouteChildren = {
   LayoutNetworkProxyTypesRoute: LayoutNetworkProxyTypesRoute,
   LayoutNetworkSecurityRoute: LayoutNetworkSecurityRoute,
   LayoutNetworkStatusRoute: LayoutNetworkStatusRoute,
+  LayoutResourcesWebScrapingGuidesRoute: LayoutResourcesWebScrapingGuidesRoute,
   LayoutSolutionsContentAggregationRoute:
     LayoutSolutionsContentAggregationRoute,
   LayoutSolutionsEnterpriseRoute: LayoutSolutionsEnterpriseRoute,
@@ -433,6 +450,7 @@ export interface FileRoutesByFullPath {
   '/network/proxy-types': typeof LayoutNetworkProxyTypesRoute
   '/network/security': typeof LayoutNetworkSecurityRoute
   '/network/status': typeof LayoutNetworkStatusRoute
+  '/resources/web-scraping-guides': typeof LayoutResourcesWebScrapingGuidesRoute
   '/solutions/content-aggregation': typeof LayoutSolutionsContentAggregationRoute
   '/solutions/enterprise': typeof LayoutSolutionsEnterpriseRoute
   '/solutions/lead-generation': typeof LayoutSolutionsLeadGenerationRoute
@@ -459,6 +477,7 @@ export interface FileRoutesByTo {
   '/network/proxy-types': typeof LayoutNetworkProxyTypesRoute
   '/network/security': typeof LayoutNetworkSecurityRoute
   '/network/status': typeof LayoutNetworkStatusRoute
+  '/resources/web-scraping-guides': typeof LayoutResourcesWebScrapingGuidesRoute
   '/solutions/content-aggregation': typeof LayoutSolutionsContentAggregationRoute
   '/solutions/enterprise': typeof LayoutSolutionsEnterpriseRoute
   '/solutions/lead-generation': typeof LayoutSolutionsLeadGenerationRoute
@@ -487,6 +506,7 @@ export interface FileRoutesById {
   '/_layout/network/proxy-types': typeof LayoutNetworkProxyTypesRoute
   '/_layout/network/security': typeof LayoutNetworkSecurityRoute
   '/_layout/network/status': typeof LayoutNetworkStatusRoute
+  '/_layout/resources/web-scraping-guides': typeof LayoutResourcesWebScrapingGuidesRoute
   '/_layout/solutions/content-aggregation': typeof LayoutSolutionsContentAggregationRoute
   '/_layout/solutions/enterprise': typeof LayoutSolutionsEnterpriseRoute
   '/_layout/solutions/lead-generation': typeof LayoutSolutionsLeadGenerationRoute
@@ -516,6 +536,7 @@ export interface FileRouteTypes {
     | '/network/proxy-types'
     | '/network/security'
     | '/network/status'
+    | '/resources/web-scraping-guides'
     | '/solutions/content-aggregation'
     | '/solutions/enterprise'
     | '/solutions/lead-generation'
@@ -541,6 +562,7 @@ export interface FileRouteTypes {
     | '/network/proxy-types'
     | '/network/security'
     | '/network/status'
+    | '/resources/web-scraping-guides'
     | '/solutions/content-aggregation'
     | '/solutions/enterprise'
     | '/solutions/lead-generation'
@@ -567,6 +589,7 @@ export interface FileRouteTypes {
     | '/_layout/network/proxy-types'
     | '/_layout/network/security'
     | '/_layout/network/status'
+    | '/_layout/resources/web-scraping-guides'
     | '/_layout/solutions/content-aggregation'
     | '/_layout/solutions/enterprise'
     | '/_layout/solutions/lead-generation'
@@ -617,6 +640,7 @@ export const routeTree = rootRoute
         "/_layout/network/proxy-types",
         "/_layout/network/security",
         "/_layout/network/status",
+        "/_layout/resources/web-scraping-guides",
         "/_layout/solutions/content-aggregation",
         "/_layout/solutions/enterprise",
         "/_layout/solutions/lead-generation",
@@ -676,6 +700,10 @@ export const routeTree = rootRoute
     },
     "/_layout/network/status": {
       "filePath": "_layout/network/status.tsx",
+      "parent": "/_layout"
+    },
+    "/_layout/resources/web-scraping-guides": {
+      "filePath": "_layout/resources/web-scraping-guides.tsx",
       "parent": "/_layout"
     },
     "/_layout/solutions/content-aggregation": {

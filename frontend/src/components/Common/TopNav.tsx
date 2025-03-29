@@ -174,7 +174,7 @@ const navStructure: NavItem[] = [
       },
       { 
         title: "Web Scraping Guides", 
-        path: "/resources/guides",
+        path: "/resources/web-scraping-guides",
         description: "Learn how to use our web scraping tools effectively",
         icon: FiBook
       },
