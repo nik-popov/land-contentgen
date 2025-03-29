@@ -186,7 +186,7 @@ const navStructure: NavItem[] = [
       },
       { 
         title: "Support Center", 
-        path: "/resources/support",
+        path: "/resources/support-center",
         description: "Get help with your web scraping projects",
         icon: FiHelpCircle
       }

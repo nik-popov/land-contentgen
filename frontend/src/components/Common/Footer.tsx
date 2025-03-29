@@ -84,7 +84,7 @@ const Footer = () => {
             <Heading as="h4" size="md" mb={4} color="white">Company</Heading>
             <VStack align="flex-start" spacing={2}>
               <Link href="/about" color="gray.300" _hover={{ color: "orange.400" }}>About Us</Link>
-              <Link href="/contact" color="gray.300" _hover={{ color: "orange.400" }}>Contact</Link>
+              <Link href="/resources/support-center" color="gray.300" _hover={{ color: "orange.400" }}>Contact</Link>
               <Link href="/careers" color="gray.300" _hover={{ color: "orange.400" }}>Careers</Link>
               <Link href="/pricing" color="gray.300" _hover={{ color: "orange.400" }}>Pricing</Link>
             </VStack>
@@ -95,7 +95,7 @@ const Footer = () => {
         <Box borderTop="1px solid" borderColor="gray.700" pt={6} mb={6}>
           <Heading as="h4" size="sm" mb={4} color="gray.400">Popular Web Scraping Use Cases</Heading>
           <Flex flexWrap="wrap" gap={4}>
-            <Link href="/use-cases/e-commerce-price-monitoring" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>
+            <Link href="/use-cases/ecommerce-price-monitoring" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>
               E-commerce Price Monitoring
             </Link>
             <Link href="/use-cases/product-data-extraction" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>

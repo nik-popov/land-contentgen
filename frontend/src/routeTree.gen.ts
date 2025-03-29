@@ -20,6 +20,7 @@ import { Route as LayoutPrivacyImport } from './routes/_layout/privacy'
 import { Route as LayoutDemoRequestImport } from './routes/_layout/demo-request'
 import { Route as LayoutCookieImport } from './routes/_layout/cookie'
 import { Route as LayoutComplianceImport } from './routes/_layout/compliance'
+import { Route as LayoutUseCasesEcommercePriceMonitoringImport } from './routes/_layout/use-cases/ecommerce-price-monitoring'
 import { Route as LayoutToolsSchedulerImport } from './routes/_layout/tools/scheduler'
 import { Route as LayoutToolsProxyDashboardImport } from './routes/_layout/tools/proxy-dashboard'
 import { Route as LayoutToolsHtmlScraperImport } from './routes/_layout/tools/html-scraper'
@@ -32,6 +33,7 @@ import { Route as LayoutSolutionsLeadGenerationImport } from './routes/_layout/s
 import { Route as LayoutSolutionsEnterpriseImport } from './routes/_layout/solutions/enterprise'
 import { Route as LayoutSolutionsContentAggregationImport } from './routes/_layout/solutions/content-aggregation'
 import { Route as LayoutResourcesWebScrapingGuidesImport } from './routes/_layout/resources/web-scraping-guides'
+import { Route as LayoutResourcesSupportCenterImport } from './routes/_layout/resources/support-center'
 import { Route as LayoutResourcesCodeExamplesImport } from './routes/_layout/resources/code-examples'
 import { Route as LayoutNetworkStatusImport } from './routes/_layout/network/status'
 import { Route as LayoutNetworkSecurityImport } from './routes/_layout/network/security'
@@ -92,6 +94,13 @@ const LayoutComplianceRoute = LayoutComplianceImport.update({
   path: '/compliance',
   getParentRoute: () => LayoutRoute,
 } as any)
+
+const LayoutUseCasesEcommercePriceMonitoringRoute =
+  LayoutUseCasesEcommercePriceMonitoringImport.update({
+    id: '/use-cases/ecommerce-price-monitoring',
+    path: '/use-cases/ecommerce-price-monitoring',
+    getParentRoute: () => LayoutRoute,
+  } as any)
 
 const LayoutToolsSchedulerRoute = LayoutToolsSchedulerImport.update({
   id: '/tools/scheduler',
@@ -168,6 +177,13 @@ const LayoutResourcesWebScrapingGuidesRoute =
   LayoutResourcesWebScrapingGuidesImport.update({
     id: '/resources/web-scraping-guides',
     path: '/resources/web-scraping-guides',
+    getParentRoute: () => LayoutRoute,
+  } as any)
+
+const LayoutResourcesSupportCenterRoute =
+  LayoutResourcesSupportCenterImport.update({
+    id: '/resources/support-center',
+    path: '/resources/support-center',
     getParentRoute: () => LayoutRoute,
   } as any)
 
@@ -304,6 +320,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LayoutResourcesCodeExamplesImport
       parentRoute: typeof LayoutImport
     }
+    '/_layout/resources/support-center': {
+      id: '/_layout/resources/support-center'
+      path: '/resources/support-center'
+      fullPath: '/resources/support-center'
+      preLoaderRoute: typeof LayoutResourcesSupportCenterImport
+      parentRoute: typeof LayoutImport
+    }
     '/_layout/resources/web-scraping-guides': {
       id: '/_layout/resources/web-scraping-guides'
       path: '/resources/web-scraping-guides'
@@ -388,6 +411,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LayoutToolsSchedulerImport
       parentRoute: typeof LayoutImport
     }
+    '/_layout/use-cases/ecommerce-price-monitoring': {
+      id: '/_layout/use-cases/ecommerce-price-monitoring'
+      path: '/use-cases/ecommerce-price-monitoring'
+      fullPath: '/use-cases/ecommerce-price-monitoring'
+      preLoaderRoute: typeof LayoutUseCasesEcommercePriceMonitoringImport
+      parentRoute: typeof LayoutImport
+    }
   }
 }
 
@@ -407,6 +437,7 @@ interface LayoutRouteChildren {
   LayoutNetworkSecurityRoute: typeof LayoutNetworkSecurityRoute
   LayoutNetworkStatusRoute: typeof LayoutNetworkStatusRoute
   LayoutResourcesCodeExamplesRoute: typeof LayoutResourcesCodeExamplesRoute
+  LayoutResourcesSupportCenterRoute: typeof LayoutResourcesSupportCenterRoute
   LayoutResourcesWebScrapingGuidesRoute: typeof LayoutResourcesWebScrapingGuidesRoute
   LayoutSolutionsContentAggregationRoute: typeof LayoutSolutionsContentAggregationRoute
   LayoutSolutionsEnterpriseRoute: typeof LayoutSolutionsEnterpriseRoute
@@ -419,6 +450,7 @@ interface LayoutRouteChildren {
   LayoutToolsHtmlScraperRoute: typeof LayoutToolsHtmlScraperRoute
   LayoutToolsProxyDashboardRoute: typeof LayoutToolsProxyDashboardRoute
   LayoutToolsSchedulerRoute: typeof LayoutToolsSchedulerRoute
+  LayoutUseCasesEcommercePriceMonitoringRoute: typeof LayoutUseCasesEcommercePriceMonitoringRoute
 }
 
 const LayoutRouteChildren: LayoutRouteChildren = {
@@ -435,6 +467,7 @@ const LayoutRouteChildren: LayoutRouteChildren = {
   LayoutNetworkSecurityRoute: LayoutNetworkSecurityRoute,
   LayoutNetworkStatusRoute: LayoutNetworkStatusRoute,
   LayoutResourcesCodeExamplesRoute: LayoutResourcesCodeExamplesRoute,
+  LayoutResourcesSupportCenterRoute: LayoutResourcesSupportCenterRoute,
   LayoutResourcesWebScrapingGuidesRoute: LayoutResourcesWebScrapingGuidesRoute,
   LayoutSolutionsContentAggregationRoute:
     LayoutSolutionsContentAggregationRoute,
@@ -448,6 +481,8 @@ const LayoutRouteChildren: LayoutRouteChildren = {
   LayoutToolsHtmlScraperRoute: LayoutToolsHtmlScraperRoute,
   LayoutToolsProxyDashboardRoute: LayoutToolsProxyDashboardRoute,
   LayoutToolsSchedulerRoute: LayoutToolsSchedulerRoute,
+  LayoutUseCasesEcommercePriceMonitoringRoute:
+    LayoutUseCasesEcommercePriceMonitoringRoute,
 }
 
 const LayoutRouteWithChildren =
@@ -468,6 +503,7 @@ export interface FileRoutesByFullPath {
   '/network/security': typeof LayoutNetworkSecurityRoute
   '/network/status': typeof LayoutNetworkStatusRoute
   '/resources/code-examples': typeof LayoutResourcesCodeExamplesRoute
+  '/resources/support-center': typeof LayoutResourcesSupportCenterRoute
   '/resources/web-scraping-guides': typeof LayoutResourcesWebScrapingGuidesRoute
   '/solutions/content-aggregation': typeof LayoutSolutionsContentAggregationRoute
   '/solutions/enterprise': typeof LayoutSolutionsEnterpriseRoute
@@ -480,6 +516,7 @@ export interface FileRoutesByFullPath {
   '/tools/html-scraper': typeof LayoutToolsHtmlScraperRoute
   '/tools/proxy-dashboard': typeof LayoutToolsProxyDashboardRoute
   '/tools/scheduler': typeof LayoutToolsSchedulerRoute
+  '/use-cases/ecommerce-price-monitoring': typeof LayoutUseCasesEcommercePriceMonitoringRoute
 }
 
 export interface FileRoutesByTo {
@@ -496,6 +533,7 @@ export interface FileRoutesByTo {
   '/network/security': typeof LayoutNetworkSecurityRoute
   '/network/status': typeof LayoutNetworkStatusRoute
   '/resources/code-examples': typeof LayoutResourcesCodeExamplesRoute
+  '/resources/support-center': typeof LayoutResourcesSupportCenterRoute
   '/resources/web-scraping-guides': typeof LayoutResourcesWebScrapingGuidesRoute
   '/solutions/content-aggregation': typeof LayoutSolutionsContentAggregationRoute
   '/solutions/enterprise': typeof LayoutSolutionsEnterpriseRoute
@@ -508,6 +546,7 @@ export interface FileRoutesByTo {
   '/tools/html-scraper': typeof LayoutToolsHtmlScraperRoute
   '/tools/proxy-dashboard': typeof LayoutToolsProxyDashboardRoute
   '/tools/scheduler': typeof LayoutToolsSchedulerRoute
+  '/use-cases/ecommerce-price-monitoring': typeof LayoutUseCasesEcommercePriceMonitoringRoute
 }
 
 export interface FileRoutesById {
@@ -526,6 +565,7 @@ export interface FileRoutesById {
   '/_layout/network/security': typeof LayoutNetworkSecurityRoute
   '/_layout/network/status': typeof LayoutNetworkStatusRoute
   '/_layout/resources/code-examples': typeof LayoutResourcesCodeExamplesRoute
+  '/_layout/resources/support-center': typeof LayoutResourcesSupportCenterRoute
   '/_layout/resources/web-scraping-guides': typeof LayoutResourcesWebScrapingGuidesRoute
   '/_layout/solutions/content-aggregation': typeof LayoutSolutionsContentAggregationRoute
   '/_layout/solutions/enterprise': typeof LayoutSolutionsEnterpriseRoute
@@ -538,6 +578,7 @@ export interface FileRoutesById {
   '/_layout/tools/html-scraper': typeof LayoutToolsHtmlScraperRoute
   '/_layout/tools/proxy-dashboard': typeof LayoutToolsProxyDashboardRoute
   '/_layout/tools/scheduler': typeof LayoutToolsSchedulerRoute
+  '/_layout/use-cases/ecommerce-price-monitoring': typeof LayoutUseCasesEcommercePriceMonitoringRoute
 }
 
 export interface FileRouteTypes {
@@ -557,6 +598,7 @@ export interface FileRouteTypes {
     | '/network/security'
     | '/network/status'
     | '/resources/code-examples'
+    | '/resources/support-center'
     | '/resources/web-scraping-guides'
     | '/solutions/content-aggregation'
     | '/solutions/enterprise'
@@ -569,6 +611,7 @@ export interface FileRouteTypes {
     | '/tools/html-scraper'
     | '/tools/proxy-dashboard'
     | '/tools/scheduler'
+    | '/use-cases/ecommerce-price-monitoring'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/compliance'
@@ -584,6 +627,7 @@ export interface FileRouteTypes {
     | '/network/security'
     | '/network/status'
     | '/resources/code-examples'
+    | '/resources/support-center'
     | '/resources/web-scraping-guides'
     | '/solutions/content-aggregation'
     | '/solutions/enterprise'
@@ -596,6 +640,7 @@ export interface FileRouteTypes {
     | '/tools/html-scraper'
     | '/tools/proxy-dashboard'
     | '/tools/scheduler'
+    | '/use-cases/ecommerce-price-monitoring'
   id:
     | '__root__'
     | '/_layout'
@@ -612,6 +657,7 @@ export interface FileRouteTypes {
     | '/_layout/network/security'
     | '/_layout/network/status'
     | '/_layout/resources/code-examples'
+    | '/_layout/resources/support-center'
     | '/_layout/resources/web-scraping-guides'
     | '/_layout/solutions/content-aggregation'
     | '/_layout/solutions/enterprise'
@@ -624,6 +670,7 @@ export interface FileRouteTypes {
     | '/_layout/tools/html-scraper'
     | '/_layout/tools/proxy-dashboard'
     | '/_layout/tools/scheduler'
+    | '/_layout/use-cases/ecommerce-price-monitoring'
   fileRoutesById: FileRoutesById
 }
 
@@ -664,6 +711,7 @@ export const routeTree = rootRoute
         "/_layout/network/security",
         "/_layout/network/status",
         "/_layout/resources/code-examples",
+        "/_layout/resources/support-center",
         "/_layout/resources/web-scraping-guides",
         "/_layout/solutions/content-aggregation",
         "/_layout/solutions/enterprise",
@@ -675,7 +723,8 @@ export const routeTree = rootRoute
         "/_layout/tools/api-scraper",
         "/_layout/tools/html-scraper",
         "/_layout/tools/proxy-dashboard",
-        "/_layout/tools/scheduler"
+        "/_layout/tools/scheduler",
+        "/_layout/use-cases/ecommerce-price-monitoring"
       ]
     },
     "/_layout/compliance": {
@@ -730,6 +779,10 @@ export const routeTree = rootRoute
       "filePath": "_layout/resources/code-examples.tsx",
       "parent": "/_layout"
     },
+    "/_layout/resources/support-center": {
+      "filePath": "_layout/resources/support-center.tsx",
+      "parent": "/_layout"
+    },
     "/_layout/resources/web-scraping-guides": {
       "filePath": "_layout/resources/web-scraping-guides.tsx",
       "parent": "/_layout"
@@ -776,6 +829,10 @@ export const routeTree = rootRoute
     },
     "/_layout/tools/scheduler": {
       "filePath": "_layout/tools/scheduler.tsx",
+      "parent": "/_layout"
+    },
+    "/_layout/use-cases/ecommerce-price-monitoring": {
+      "filePath": "_layout/use-cases/ecommerce-price-monitoring.tsx",
       "parent": "/_layout"
     }
   }
