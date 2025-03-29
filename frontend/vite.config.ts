@@ -23,8 +23,8 @@ export default defineConfig({
       name: 'static-seo-files',
       writeBundle() {
         // Define file contents (or read from existing files)
-        const robotsTxt = fs.readFileSync('./src/assets/robots.txt', 'utf-8');
-        const sitemapXml = fs.readFileSync('./src/assets/sitemap.xml', 'utf-8');
+        const robotsTxt = fs.readFileSync('./src/robots.txt', 'utf-8');
+        const sitemapXml = fs.readFileSync('./src/sitemap.xml', 'utf-8');
         
         // Write to the build output directory
         fs.writeFileSync('./dist/robots.txt', robotsTxt);
