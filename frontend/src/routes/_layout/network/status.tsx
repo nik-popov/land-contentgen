@@ -217,7 +217,7 @@ function NetworkStatusPage() {
             ))}
           </Grid>
           
-          <Box textAlign="center" mt={10}>
+          {/* <Box textAlign="center" mt={10}>
             <Button
               size="md"
               colorScheme="blue"
@@ -227,7 +227,7 @@ function NetworkStatusPage() {
             >
               View Full Incident History
             </Button>
-          </Box>
+          </Box> */}
         </Box>
       </Box>
       
@@ -246,7 +246,6 @@ function NetworkStatusPage() {
             <Button
               size="lg"
               colorScheme="blue"
-              leftIcon={<Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Slack_Icon.png/640px-Slack_Icon.png" boxSize="20px" />}
               as="a"
               href="/network/connect-slack"
             >
@@ -257,7 +256,6 @@ function NetworkStatusPage() {
               size="lg"
               colorScheme="blue"
               variant="outline"
-              leftIcon={<Image src="https://cdn-icons-png.flaticon.com/512/561/561127.png" boxSize="20px" />}
               as="a"
               href="/network/email-subscribe"
             >
@@ -278,8 +276,8 @@ function NetworkStatusPage() {
             <VStack align="flex-start" bg="white" p={6} borderRadius="md" boxShadow="sm" spacing={4}>
               <Image src="https://cdn-icons-png.flaticon.com/512/1932/1932655.png" boxSize="50px" mb={2} />
               <Heading as="h3" size="md" fontWeight="medium">Technical Documentation</Heading>
-              <Text color="gray.600">Access comprehensive technical documentation to understand our infrastructure and troubleshoot common issues.</Text>
-              <Link color="blue.600" href="/docs/network" fontWeight="medium">
+              <Text color="gray.600">Access documentation to understand our infrastructure and troubleshoot common issues.</Text>
+              <Link color="blue.600" href="https://api.thedataproxy.com/redoc" fontWeight="medium">
                 View Documentation →
               </Link>
             </VStack>
@@ -288,7 +286,7 @@ function NetworkStatusPage() {
               <Image src="https://cdn-icons-png.flaticon.com/512/1373/1373397.png" boxSize="50px" mb={2} />
               <Heading as="h3" size="md" fontWeight="medium">Status Page API</Heading>
               <Text color="gray.600">Integrate real-time status information directly into your monitoring systems with our status API.</Text>
-              <Link color="blue.600" href="/docs/status-api" fontWeight="medium">
+              <Link color="blue.600" href="https://api.thedataproxy.com/redoc" fontWeight="medium">
                 API Documentation →
               </Link>
             </VStack>
@@ -297,7 +295,7 @@ function NetworkStatusPage() {
               <Image src="https://cdn-icons-png.flaticon.com/512/4677/4677490.png" boxSize="50px" mb={2} />
               <Heading as="h3" size="md" fontWeight="medium">Contact Support</Heading>
               <Text color="gray.600">Need immediate assistance? Our technical support team is available 24/7 to help resolve any issues.</Text>
-              <Link color="blue.600" href="/support" fontWeight="medium">
+              <Link color="blue.600" href="/resources/support-center" fontWeight="medium">
                 Contact Support →
               </Link>
             </VStack>

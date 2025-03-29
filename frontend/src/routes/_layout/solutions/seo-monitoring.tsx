@@ -363,15 +363,15 @@ function SEOMonitoringPage() {
           </Text>
           
           <Flex justify="center" gap={6} flexWrap="wrap">
-            <Button
+          <Button
               size="lg"
               bg="white"
-              color="blue.600"
+              color="blue.500"
               _hover={{ bg: "gray.100" }}
               as="a"
-              href="/tools/site-audit"
+              href="/demo-request"
             >
-              Free Site Audit
+              Request Demo
             </Button>
             
             <Button

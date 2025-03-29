@@ -361,16 +361,15 @@ function CodeExamplesPage() {
           </Text>
           
           <Flex justify="center" gap={6} flexWrap="wrap">
-            <Button
+          <Button
               size="lg"
               bg="white"
-              color="blue.600"
+              color="purple.500"
               _hover={{ bg: "gray.100" }}
               as="a"
-              href="/resources/code-library"
-              leftIcon={<DownloadIcon />}
+              href="/demo-request"
             >
-              Browse Code Library
+              Request Demo
             </Button>
             
             <Button

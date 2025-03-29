@@ -361,16 +361,15 @@ function WebScrapingGuidesPage() {
           </Text>
           
           <Flex justify="center" gap={6} flexWrap="wrap">
-            <Button
+          <Button
               size="lg"
               bg="white"
-              color="blue.600"
+              color="blue.500"
               _hover={{ bg: "gray.100" }}
               as="a"
-              href="/resources/guide-library"
-              leftIcon={<DownloadIcon />}
+              href="/demo-request"
             >
-              Browse All Guides
+              Request Demo
             </Button>
             
             <Button

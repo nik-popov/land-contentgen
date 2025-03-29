@@ -347,7 +347,7 @@ function HTMLScraperPage() {
               as="a"
               href="/demo-request"
             >
-              Request API Demo
+              Request Demo
             </Button>
             
             <Button
@@ -355,7 +355,7 @@ function HTMLScraperPage() {
               variant="outline"
               borderColor="white"
               color="white"
-              _hover={{ bg: "purple.600" }}
+              _hover={{ bg: "blue.600" }}
               as="a"
               href="https://dashboard.thedataproxy.com/api-signup"
             >

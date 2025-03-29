@@ -303,42 +303,44 @@ function LandingPage() {
         </Grid>
       </Box>
 
-{/* Call to Action Section */}
-<Box py={16} bg="white" textAlign="center" maxW="1200px" mx="auto" px={4}>
-  <Heading as="h2" size="2xl" color="gray.800" mb={6} fontWeight="medium">
-    Ready to Get Started?
-  </Heading>
-  <Text fontSize="lg" color="gray.600" mb={8}>
-    Experience our enterprise-grade proxy solutions today
-  </Text>
-  <Flex justify="center" gap={4}>
-    <Button
-      border="2px solid"
-      borderColor="orange.400"
-      color="orange.400"
-      bg="transparent"
-      size="lg"
-      _hover={{ bg: "orange.400", color: "white" }}
-      onClick={() => navigate({ to: "/demo-request" })}
-    >
-      Schedule Consultation
-    </Button>
-    <Button
-      border="2px solid"
-      borderColor="orange.400"
-      color="orange.400"
-      bg="transparent"
-      size="lg"
-      _hover={{ bg: "orange.400", color: "white" }}
-      as="a"
-      href="/proxy-solution-guide.pdf"
-      download
-    >
-      Download Solution Guide
-    </Button>
-  </Flex>
-</Box>
-
+     {/* Call to Action */}
+     <Box py={16} bg="orange.400" color="white">
+        <Box maxW="1200px" mx="auto" px={4} textAlign="center">
+          <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">
+            Ready to Transform Web Data into APIs?
+          </Heading>
+          <Text fontSize="lg" mb={10} maxW="700px" mx="auto" color="white">
+            Get started with our HTML scraper APIs today and harness the power of structured web data
+            for your applications, analysis, and business intelligence
+          </Text>
+          
+          <Flex justify="center" gap={6} flexWrap="wrap">
+            <Button
+              size="lg"
+              bg="white"
+              color="orange.400"
+              _hover={{ bg: "gray.100" }}
+              as="a"
+              href="/demo-request"
+            >
+              Request Demo
+            </Button>
+            
+            <Button
+              size="lg"
+              variant="outline"
+              borderColor="white"
+              color="white"
+              _hover={{ bg: "blue.600" }}
+              as="a"
+              href="https://dashboard.thedataproxy.com/api-signup"
+            >
+              Get API Key
+            </Button>
+          </Flex>
+        </Box>
+      </Box>
+      
       {/* Footer */}
       <Footer />
     </Box>

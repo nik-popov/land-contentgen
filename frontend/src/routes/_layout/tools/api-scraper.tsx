@@ -347,7 +347,7 @@ function APIScraper() {
               as="a"
               href="/demo-request"
             >
-              Request API Demo
+              Request Demo
             </Button>
             
             <Button
