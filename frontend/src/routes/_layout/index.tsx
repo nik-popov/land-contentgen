@@ -333,9 +333,9 @@ function LandingPage() {
               color="white"
               _hover={{ bg: "blue.600" }}
               as="a"
-              href="https://dashboard.thedataproxy.com/api-signup"
+              href="/contact-sales"
             >
-              Get API Key
+            Contact Sales
             </Button>
           </Flex>
         </Box>
