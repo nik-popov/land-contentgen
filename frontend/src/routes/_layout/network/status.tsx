@@ -262,7 +262,7 @@ function NetworkStatusPage() {
               as="a"
               href="/contact-sales"
             >
-              Request Demo
+              Contact Sales
             </Button>
           </Flex>
         </Box>
