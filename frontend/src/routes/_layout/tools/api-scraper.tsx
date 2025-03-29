@@ -365,8 +365,7 @@ function APIScraper() {
         </Box>
       </Box>
       
-      {/* Technology Stack */}
-      <Box py={16} bg="purple.50">
+      <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h3" size="lg" mb={8} fontWeight="medium">
             Powered by Advanced Web Technologies
@@ -397,7 +396,6 @@ function APIScraper() {
           </Flex>
         </Box>
       </Box>
-      
       {/* Footer */}
       <Footer />
     </>

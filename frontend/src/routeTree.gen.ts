@@ -20,7 +20,11 @@ import { Route as LayoutPrivacyImport } from './routes/_layout/privacy'
 import { Route as LayoutDemoRequestImport } from './routes/_layout/demo-request'
 import { Route as LayoutCookieImport } from './routes/_layout/cookie'
 import { Route as LayoutComplianceImport } from './routes/_layout/compliance'
+import { Route as LayoutUseCasesTravelFareAggregationImport } from './routes/_layout/use-cases/travel-fare-aggregation'
+import { Route as LayoutUseCasesSocialMediaMonitoringImport } from './routes/_layout/use-cases/social-media-monitoring'
+import { Route as LayoutUseCasesRealEstateDataScrapingImport } from './routes/_layout/use-cases/real-estate-data-scraping'
 import { Route as LayoutUseCasesProductDataExtractionImport } from './routes/_layout/use-cases/product-data-extraction'
+import { Route as LayoutUseCasesFinancialDataCollectionImport } from './routes/_layout/use-cases/financial-data-collection'
 import { Route as LayoutUseCasesEcommercePriceMonitoringImport } from './routes/_layout/use-cases/ecommerce-price-monitoring'
 import { Route as LayoutUseCasesCompetitorAnalysisImport } from './routes/_layout/use-cases/competitor-analysis'
 import { Route as LayoutToolsSchedulerImport } from './routes/_layout/tools/scheduler'
@@ -97,10 +101,38 @@ const LayoutComplianceRoute = LayoutComplianceImport.update({
   getParentRoute: () => LayoutRoute,
 } as any)
 
+const LayoutUseCasesTravelFareAggregationRoute =
+  LayoutUseCasesTravelFareAggregationImport.update({
+    id: '/use-cases/travel-fare-aggregation',
+    path: '/use-cases/travel-fare-aggregation',
+    getParentRoute: () => LayoutRoute,
+  } as any)
+
+const LayoutUseCasesSocialMediaMonitoringRoute =
+  LayoutUseCasesSocialMediaMonitoringImport.update({
+    id: '/use-cases/social-media-monitoring',
+    path: '/use-cases/social-media-monitoring',
+    getParentRoute: () => LayoutRoute,
+  } as any)
+
+const LayoutUseCasesRealEstateDataScrapingRoute =
+  LayoutUseCasesRealEstateDataScrapingImport.update({
+    id: '/use-cases/real-estate-data-scraping',
+    path: '/use-cases/real-estate-data-scraping',
+    getParentRoute: () => LayoutRoute,
+  } as any)
+
 const LayoutUseCasesProductDataExtractionRoute =
   LayoutUseCasesProductDataExtractionImport.update({
     id: '/use-cases/product-data-extraction',
     path: '/use-cases/product-data-extraction',
+    getParentRoute: () => LayoutRoute,
+  } as any)
+
+const LayoutUseCasesFinancialDataCollectionRoute =
+  LayoutUseCasesFinancialDataCollectionImport.update({
+    id: '/use-cases/financial-data-collection',
+    path: '/use-cases/financial-data-collection',
     getParentRoute: () => LayoutRoute,
   } as any)
 
@@ -441,11 +473,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LayoutUseCasesEcommercePriceMonitoringImport
       parentRoute: typeof LayoutImport
     }
+    '/_layout/use-cases/financial-data-collection': {
+      id: '/_layout/use-cases/financial-data-collection'
+      path: '/use-cases/financial-data-collection'
+      fullPath: '/use-cases/financial-data-collection'
+      preLoaderRoute: typeof LayoutUseCasesFinancialDataCollectionImport
+      parentRoute: typeof LayoutImport
+    }
     '/_layout/use-cases/product-data-extraction': {
       id: '/_layout/use-cases/product-data-extraction'
       path: '/use-cases/product-data-extraction'
       fullPath: '/use-cases/product-data-extraction'
       preLoaderRoute: typeof LayoutUseCasesProductDataExtractionImport
+      parentRoute: typeof LayoutImport
+    }
+    '/_layout/use-cases/real-estate-data-scraping': {
+      id: '/_layout/use-cases/real-estate-data-scraping'
+      path: '/use-cases/real-estate-data-scraping'
+      fullPath: '/use-cases/real-estate-data-scraping'
+      preLoaderRoute: typeof LayoutUseCasesRealEstateDataScrapingImport
+      parentRoute: typeof LayoutImport
+    }
+    '/_layout/use-cases/social-media-monitoring': {
+      id: '/_layout/use-cases/social-media-monitoring'
+      path: '/use-cases/social-media-monitoring'
+      fullPath: '/use-cases/social-media-monitoring'
+      preLoaderRoute: typeof LayoutUseCasesSocialMediaMonitoringImport
+      parentRoute: typeof LayoutImport
+    }
+    '/_layout/use-cases/travel-fare-aggregation': {
+      id: '/_layout/use-cases/travel-fare-aggregation'
+      path: '/use-cases/travel-fare-aggregation'
+      fullPath: '/use-cases/travel-fare-aggregation'
+      preLoaderRoute: typeof LayoutUseCasesTravelFareAggregationImport
       parentRoute: typeof LayoutImport
     }
   }
@@ -482,7 +542,11 @@ interface LayoutRouteChildren {
   LayoutToolsSchedulerRoute: typeof LayoutToolsSchedulerRoute
   LayoutUseCasesCompetitorAnalysisRoute: typeof LayoutUseCasesCompetitorAnalysisRoute
   LayoutUseCasesEcommercePriceMonitoringRoute: typeof LayoutUseCasesEcommercePriceMonitoringRoute
+  LayoutUseCasesFinancialDataCollectionRoute: typeof LayoutUseCasesFinancialDataCollectionRoute
   LayoutUseCasesProductDataExtractionRoute: typeof LayoutUseCasesProductDataExtractionRoute
+  LayoutUseCasesRealEstateDataScrapingRoute: typeof LayoutUseCasesRealEstateDataScrapingRoute
+  LayoutUseCasesSocialMediaMonitoringRoute: typeof LayoutUseCasesSocialMediaMonitoringRoute
+  LayoutUseCasesTravelFareAggregationRoute: typeof LayoutUseCasesTravelFareAggregationRoute
 }
 
 const LayoutRouteChildren: LayoutRouteChildren = {
@@ -516,8 +580,16 @@ const LayoutRouteChildren: LayoutRouteChildren = {
   LayoutUseCasesCompetitorAnalysisRoute: LayoutUseCasesCompetitorAnalysisRoute,
   LayoutUseCasesEcommercePriceMonitoringRoute:
     LayoutUseCasesEcommercePriceMonitoringRoute,
+  LayoutUseCasesFinancialDataCollectionRoute:
+    LayoutUseCasesFinancialDataCollectionRoute,
   LayoutUseCasesProductDataExtractionRoute:
     LayoutUseCasesProductDataExtractionRoute,
+  LayoutUseCasesRealEstateDataScrapingRoute:
+    LayoutUseCasesRealEstateDataScrapingRoute,
+  LayoutUseCasesSocialMediaMonitoringRoute:
+    LayoutUseCasesSocialMediaMonitoringRoute,
+  LayoutUseCasesTravelFareAggregationRoute:
+    LayoutUseCasesTravelFareAggregationRoute,
 }
 
 const LayoutRouteWithChildren =
@@ -553,7 +625,11 @@ export interface FileRoutesByFullPath {
   '/tools/scheduler': typeof LayoutToolsSchedulerRoute
   '/use-cases/competitor-analysis': typeof LayoutUseCasesCompetitorAnalysisRoute
   '/use-cases/ecommerce-price-monitoring': typeof LayoutUseCasesEcommercePriceMonitoringRoute
+  '/use-cases/financial-data-collection': typeof LayoutUseCasesFinancialDataCollectionRoute
   '/use-cases/product-data-extraction': typeof LayoutUseCasesProductDataExtractionRoute
+  '/use-cases/real-estate-data-scraping': typeof LayoutUseCasesRealEstateDataScrapingRoute
+  '/use-cases/social-media-monitoring': typeof LayoutUseCasesSocialMediaMonitoringRoute
+  '/use-cases/travel-fare-aggregation': typeof LayoutUseCasesTravelFareAggregationRoute
 }
 
 export interface FileRoutesByTo {
@@ -585,7 +661,11 @@ export interface FileRoutesByTo {
   '/tools/scheduler': typeof LayoutToolsSchedulerRoute
   '/use-cases/competitor-analysis': typeof LayoutUseCasesCompetitorAnalysisRoute
   '/use-cases/ecommerce-price-monitoring': typeof LayoutUseCasesEcommercePriceMonitoringRoute
+  '/use-cases/financial-data-collection': typeof LayoutUseCasesFinancialDataCollectionRoute
   '/use-cases/product-data-extraction': typeof LayoutUseCasesProductDataExtractionRoute
+  '/use-cases/real-estate-data-scraping': typeof LayoutUseCasesRealEstateDataScrapingRoute
+  '/use-cases/social-media-monitoring': typeof LayoutUseCasesSocialMediaMonitoringRoute
+  '/use-cases/travel-fare-aggregation': typeof LayoutUseCasesTravelFareAggregationRoute
 }
 
 export interface FileRoutesById {
@@ -619,7 +699,11 @@ export interface FileRoutesById {
   '/_layout/tools/scheduler': typeof LayoutToolsSchedulerRoute
   '/_layout/use-cases/competitor-analysis': typeof LayoutUseCasesCompetitorAnalysisRoute
   '/_layout/use-cases/ecommerce-price-monitoring': typeof LayoutUseCasesEcommercePriceMonitoringRoute
+  '/_layout/use-cases/financial-data-collection': typeof LayoutUseCasesFinancialDataCollectionRoute
   '/_layout/use-cases/product-data-extraction': typeof LayoutUseCasesProductDataExtractionRoute
+  '/_layout/use-cases/real-estate-data-scraping': typeof LayoutUseCasesRealEstateDataScrapingRoute
+  '/_layout/use-cases/social-media-monitoring': typeof LayoutUseCasesSocialMediaMonitoringRoute
+  '/_layout/use-cases/travel-fare-aggregation': typeof LayoutUseCasesTravelFareAggregationRoute
 }
 
 export interface FileRouteTypes {
@@ -654,7 +738,11 @@ export interface FileRouteTypes {
     | '/tools/scheduler'
     | '/use-cases/competitor-analysis'
     | '/use-cases/ecommerce-price-monitoring'
+    | '/use-cases/financial-data-collection'
     | '/use-cases/product-data-extraction'
+    | '/use-cases/real-estate-data-scraping'
+    | '/use-cases/social-media-monitoring'
+    | '/use-cases/travel-fare-aggregation'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/compliance'
@@ -685,7 +773,11 @@ export interface FileRouteTypes {
     | '/tools/scheduler'
     | '/use-cases/competitor-analysis'
     | '/use-cases/ecommerce-price-monitoring'
+    | '/use-cases/financial-data-collection'
     | '/use-cases/product-data-extraction'
+    | '/use-cases/real-estate-data-scraping'
+    | '/use-cases/social-media-monitoring'
+    | '/use-cases/travel-fare-aggregation'
   id:
     | '__root__'
     | '/_layout'
@@ -717,7 +809,11 @@ export interface FileRouteTypes {
     | '/_layout/tools/scheduler'
     | '/_layout/use-cases/competitor-analysis'
     | '/_layout/use-cases/ecommerce-price-monitoring'
+    | '/_layout/use-cases/financial-data-collection'
     | '/_layout/use-cases/product-data-extraction'
+    | '/_layout/use-cases/real-estate-data-scraping'
+    | '/_layout/use-cases/social-media-monitoring'
+    | '/_layout/use-cases/travel-fare-aggregation'
   fileRoutesById: FileRoutesById
 }
 
@@ -773,7 +869,11 @@ export const routeTree = rootRoute
         "/_layout/tools/scheduler",
         "/_layout/use-cases/competitor-analysis",
         "/_layout/use-cases/ecommerce-price-monitoring",
-        "/_layout/use-cases/product-data-extraction"
+        "/_layout/use-cases/financial-data-collection",
+        "/_layout/use-cases/product-data-extraction",
+        "/_layout/use-cases/real-estate-data-scraping",
+        "/_layout/use-cases/social-media-monitoring",
+        "/_layout/use-cases/travel-fare-aggregation"
       ]
     },
     "/_layout/compliance": {
@@ -888,8 +988,24 @@ export const routeTree = rootRoute
       "filePath": "_layout/use-cases/ecommerce-price-monitoring.tsx",
       "parent": "/_layout"
     },
+    "/_layout/use-cases/financial-data-collection": {
+      "filePath": "_layout/use-cases/financial-data-collection.tsx",
+      "parent": "/_layout"
+    },
     "/_layout/use-cases/product-data-extraction": {
       "filePath": "_layout/use-cases/product-data-extraction.tsx",
+      "parent": "/_layout"
+    },
+    "/_layout/use-cases/real-estate-data-scraping": {
+      "filePath": "_layout/use-cases/real-estate-data-scraping.tsx",
+      "parent": "/_layout"
+    },
+    "/_layout/use-cases/social-media-monitoring": {
+      "filePath": "_layout/use-cases/social-media-monitoring.tsx",
+      "parent": "/_layout"
+    },
+    "/_layout/use-cases/travel-fare-aggregation": {
+      "filePath": "_layout/use-cases/travel-fare-aggregation.tsx",
       "parent": "/_layout"
     }
   }
