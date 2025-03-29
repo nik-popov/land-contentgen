@@ -168,7 +168,7 @@ const navStructure: NavItem[] = [
     subItems: [
       { 
         title: "API Documentation", 
-        path: "/resources/api-docs",
+        path: "https://api.thedataproxy.com/redoc",
         description: "Technical documentation for our scraping APIs",
         icon: FiCode
       },
@@ -252,32 +252,39 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
                   </Box>
                 )}
                 <Flex wrap="wrap" direction={{ base: "column", md: "row" }} p={2}>
-                  {subItems.map((subItem) => (
-                    <Box
-                      key={subItem.title}
-                      as={RouterLink}
-                      to={subItem.path}
-                      color={textColor}
-                      _hover={{ color: hoverColor, bg: "gray.100" }}
-                      onClick={() => {
-                        onClose?.();
-                        setActiveMenuIndex(null);
-                      }}
-                      flex={{ base: "1 0 100%", md: "1 0 25%" }}
-                      minW={0}
-                      p={2}
-                    >
-                      <Flex align="center">
-                        {subItem.icon && <Icon as={subItem.icon} mr={2} boxSize={5} />}
-                        <Box>
-                          <Text fontWeight="medium">{subItem.title}</Text>
-                          {subItem.description && (
-                            <Text fontSize="xs" color="gray.500" mt={1}>{subItem.description}</Text>
-                          )}
-                        </Box>
-                      </Flex>
-                    </Box>
-                  ))}
+                {subItems.map((subItem) => (
+  <Box
+    key={subItem.title}
+    as={RouterLink}
+    to={subItem.path}
+    color={textColor}
+    _hover={{ color: hoverColor, bg: "gray.100" }}
+    onClick={() => {
+      onClose?.();
+      setActiveMenuIndex(null);
+    }}
+    flex={{ base: "1 0 100%", md: "1 0 25%" }}
+    minW={0}
+    p={2}
+  >
+    <Flex align="flex-start">
+      {subItem.icon && (
+        <Icon 
+          as={subItem.icon} 
+          mr={2} 
+          boxSize={5} 
+          mt="2px" // Small top margin to align with the title text
+        />
+      )}
+      <Box>
+        <Text fontWeight="medium">{subItem.title}</Text>
+        {subItem.description && (
+          <Text fontSize="xs" color="gray.500" mt={1}>{subItem.description}</Text>
+        )}
+      </Box>
+    </Flex>
+  </Box>
+))}
                 </Flex>
               </Box>
             )}
