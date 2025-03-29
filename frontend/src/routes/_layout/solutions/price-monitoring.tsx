@@ -345,7 +345,7 @@ function PriceMonitoringPage() {
               color="blue.500"
               _hover={{ bg: "gray.100" }}
               as="a"
-              href="/solutions/demo-request"
+              href="/demo-request"
             >
               Request Demo
             </Button>

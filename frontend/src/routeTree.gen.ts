@@ -27,6 +27,7 @@ import { Route as LayoutToolsApiScraperImport } from './routes/_layout/tools/api
 import { Route as LayoutSolutionsTrainingAiImport } from './routes/_layout/solutions/training-ai'
 import { Route as LayoutSolutionsPriceMonitoringImport } from './routes/_layout/solutions/price-monitoring'
 import { Route as LayoutSolutionsMarketResearchImport } from './routes/_layout/solutions/market-research'
+import { Route as LayoutSolutionsLeadGenerationImport } from './routes/_layout/solutions/lead-generation'
 import { Route as LayoutSolutionsEnterpriseImport } from './routes/_layout/solutions/enterprise'
 import { Route as LayoutSolutionsContentAggregationImport } from './routes/_layout/solutions/content-aggregation'
 import { Route as LayoutNetworkStatusImport } from './routes/_layout/network/status'
@@ -130,6 +131,13 @@ const LayoutSolutionsMarketResearchRoute =
   LayoutSolutionsMarketResearchImport.update({
     id: '/solutions/market-research',
     path: '/solutions/market-research',
+    getParentRoute: () => LayoutRoute,
+  } as any)
+
+const LayoutSolutionsLeadGenerationRoute =
+  LayoutSolutionsLeadGenerationImport.update({
+    id: '/solutions/lead-generation',
+    path: '/solutions/lead-generation',
     getParentRoute: () => LayoutRoute,
   } as any)
 
@@ -279,6 +287,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LayoutSolutionsEnterpriseImport
       parentRoute: typeof LayoutImport
     }
+    '/_layout/solutions/lead-generation': {
+      id: '/_layout/solutions/lead-generation'
+      path: '/solutions/lead-generation'
+      fullPath: '/solutions/lead-generation'
+      preLoaderRoute: typeof LayoutSolutionsLeadGenerationImport
+      parentRoute: typeof LayoutImport
+    }
     '/_layout/solutions/market-research': {
       id: '/_layout/solutions/market-research'
       path: '/solutions/market-research'
@@ -348,6 +363,7 @@ interface LayoutRouteChildren {
   LayoutNetworkStatusRoute: typeof LayoutNetworkStatusRoute
   LayoutSolutionsContentAggregationRoute: typeof LayoutSolutionsContentAggregationRoute
   LayoutSolutionsEnterpriseRoute: typeof LayoutSolutionsEnterpriseRoute
+  LayoutSolutionsLeadGenerationRoute: typeof LayoutSolutionsLeadGenerationRoute
   LayoutSolutionsMarketResearchRoute: typeof LayoutSolutionsMarketResearchRoute
   LayoutSolutionsPriceMonitoringRoute: typeof LayoutSolutionsPriceMonitoringRoute
   LayoutSolutionsTrainingAiRoute: typeof LayoutSolutionsTrainingAiRoute
@@ -373,6 +389,7 @@ const LayoutRouteChildren: LayoutRouteChildren = {
   LayoutSolutionsContentAggregationRoute:
     LayoutSolutionsContentAggregationRoute,
   LayoutSolutionsEnterpriseRoute: LayoutSolutionsEnterpriseRoute,
+  LayoutSolutionsLeadGenerationRoute: LayoutSolutionsLeadGenerationRoute,
   LayoutSolutionsMarketResearchRoute: LayoutSolutionsMarketResearchRoute,
   LayoutSolutionsPriceMonitoringRoute: LayoutSolutionsPriceMonitoringRoute,
   LayoutSolutionsTrainingAiRoute: LayoutSolutionsTrainingAiRoute,
@@ -401,6 +418,7 @@ export interface FileRoutesByFullPath {
   '/network/status': typeof LayoutNetworkStatusRoute
   '/solutions/content-aggregation': typeof LayoutSolutionsContentAggregationRoute
   '/solutions/enterprise': typeof LayoutSolutionsEnterpriseRoute
+  '/solutions/lead-generation': typeof LayoutSolutionsLeadGenerationRoute
   '/solutions/market-research': typeof LayoutSolutionsMarketResearchRoute
   '/solutions/price-monitoring': typeof LayoutSolutionsPriceMonitoringRoute
   '/solutions/training-ai': typeof LayoutSolutionsTrainingAiRoute
@@ -425,6 +443,7 @@ export interface FileRoutesByTo {
   '/network/status': typeof LayoutNetworkStatusRoute
   '/solutions/content-aggregation': typeof LayoutSolutionsContentAggregationRoute
   '/solutions/enterprise': typeof LayoutSolutionsEnterpriseRoute
+  '/solutions/lead-generation': typeof LayoutSolutionsLeadGenerationRoute
   '/solutions/market-research': typeof LayoutSolutionsMarketResearchRoute
   '/solutions/price-monitoring': typeof LayoutSolutionsPriceMonitoringRoute
   '/solutions/training-ai': typeof LayoutSolutionsTrainingAiRoute
@@ -451,6 +470,7 @@ export interface FileRoutesById {
   '/_layout/network/status': typeof LayoutNetworkStatusRoute
   '/_layout/solutions/content-aggregation': typeof LayoutSolutionsContentAggregationRoute
   '/_layout/solutions/enterprise': typeof LayoutSolutionsEnterpriseRoute
+  '/_layout/solutions/lead-generation': typeof LayoutSolutionsLeadGenerationRoute
   '/_layout/solutions/market-research': typeof LayoutSolutionsMarketResearchRoute
   '/_layout/solutions/price-monitoring': typeof LayoutSolutionsPriceMonitoringRoute
   '/_layout/solutions/training-ai': typeof LayoutSolutionsTrainingAiRoute
@@ -478,6 +498,7 @@ export interface FileRouteTypes {
     | '/network/status'
     | '/solutions/content-aggregation'
     | '/solutions/enterprise'
+    | '/solutions/lead-generation'
     | '/solutions/market-research'
     | '/solutions/price-monitoring'
     | '/solutions/training-ai'
@@ -501,6 +522,7 @@ export interface FileRouteTypes {
     | '/network/status'
     | '/solutions/content-aggregation'
     | '/solutions/enterprise'
+    | '/solutions/lead-generation'
     | '/solutions/market-research'
     | '/solutions/price-monitoring'
     | '/solutions/training-ai'
@@ -525,6 +547,7 @@ export interface FileRouteTypes {
     | '/_layout/network/status'
     | '/_layout/solutions/content-aggregation'
     | '/_layout/solutions/enterprise'
+    | '/_layout/solutions/lead-generation'
     | '/_layout/solutions/market-research'
     | '/_layout/solutions/price-monitoring'
     | '/_layout/solutions/training-ai'
@@ -573,6 +596,7 @@ export const routeTree = rootRoute
         "/_layout/network/status",
         "/_layout/solutions/content-aggregation",
         "/_layout/solutions/enterprise",
+        "/_layout/solutions/lead-generation",
         "/_layout/solutions/market-research",
         "/_layout/solutions/price-monitoring",
         "/_layout/solutions/training-ai",
@@ -636,6 +660,10 @@ export const routeTree = rootRoute
     },
     "/_layout/solutions/enterprise": {
       "filePath": "_layout/solutions/enterprise.tsx",
+      "parent": "/_layout"
+    },
+    "/_layout/solutions/lead-generation": {
+      "filePath": "_layout/solutions/lead-generation.tsx",
       "parent": "/_layout"
     },
     "/_layout/solutions/market-research": {

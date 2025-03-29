@@ -103,7 +103,7 @@ function SolutionsPage() {
               colorScheme="purple"
               rightIcon={<ArrowForwardIcon />}
               as="a"
-              href="/solutions/demo-request"
+              href="/demo-request"
             >
               Request a Consultation
             </Button>
@@ -404,7 +404,7 @@ function SolutionsPage() {
               _hover={{ bg: "gray.100" }}
               width={{ base: "full", md: "auto" }}
               as="a"
-              href="/solutions/demo-request"
+              href="/demo-request"
             >
               Request Consultation
             </Button>

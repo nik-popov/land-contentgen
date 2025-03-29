@@ -346,7 +346,7 @@ function TrainingAIPage() {
         _hover={{ bg: "gray.100" }}
         width={{ base: "full", md: "auto" }}
         as="a"
-        href="/solutions/demo-request"
+        href="/demo-request"
       >
         Request Demo
       </Button>
