@@ -25,6 +25,7 @@ import { Route as LayoutToolsProxyDashboardImport } from './routes/_layout/tools
 import { Route as LayoutToolsHtmlScraperImport } from './routes/_layout/tools/html-scraper'
 import { Route as LayoutToolsApiScraperImport } from './routes/_layout/tools/api-scraper'
 import { Route as LayoutSolutionsTrainingAiImport } from './routes/_layout/solutions/training-ai'
+import { Route as LayoutSolutionsSeoMonitoringImport } from './routes/_layout/solutions/seo-monitoring'
 import { Route as LayoutSolutionsPriceMonitoringImport } from './routes/_layout/solutions/price-monitoring'
 import { Route as LayoutSolutionsMarketResearchImport } from './routes/_layout/solutions/market-research'
 import { Route as LayoutSolutionsLeadGenerationImport } from './routes/_layout/solutions/lead-generation'
@@ -119,6 +120,13 @@ const LayoutSolutionsTrainingAiRoute = LayoutSolutionsTrainingAiImport.update({
   path: '/solutions/training-ai',
   getParentRoute: () => LayoutRoute,
 } as any)
+
+const LayoutSolutionsSeoMonitoringRoute =
+  LayoutSolutionsSeoMonitoringImport.update({
+    id: '/solutions/seo-monitoring',
+    path: '/solutions/seo-monitoring',
+    getParentRoute: () => LayoutRoute,
+  } as any)
 
 const LayoutSolutionsPriceMonitoringRoute =
   LayoutSolutionsPriceMonitoringImport.update({
@@ -308,6 +316,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LayoutSolutionsPriceMonitoringImport
       parentRoute: typeof LayoutImport
     }
+    '/_layout/solutions/seo-monitoring': {
+      id: '/_layout/solutions/seo-monitoring'
+      path: '/solutions/seo-monitoring'
+      fullPath: '/solutions/seo-monitoring'
+      preLoaderRoute: typeof LayoutSolutionsSeoMonitoringImport
+      parentRoute: typeof LayoutImport
+    }
     '/_layout/solutions/training-ai': {
       id: '/_layout/solutions/training-ai'
       path: '/solutions/training-ai'
@@ -366,6 +381,7 @@ interface LayoutRouteChildren {
   LayoutSolutionsLeadGenerationRoute: typeof LayoutSolutionsLeadGenerationRoute
   LayoutSolutionsMarketResearchRoute: typeof LayoutSolutionsMarketResearchRoute
   LayoutSolutionsPriceMonitoringRoute: typeof LayoutSolutionsPriceMonitoringRoute
+  LayoutSolutionsSeoMonitoringRoute: typeof LayoutSolutionsSeoMonitoringRoute
   LayoutSolutionsTrainingAiRoute: typeof LayoutSolutionsTrainingAiRoute
   LayoutToolsApiScraperRoute: typeof LayoutToolsApiScraperRoute
   LayoutToolsHtmlScraperRoute: typeof LayoutToolsHtmlScraperRoute
@@ -392,6 +408,7 @@ const LayoutRouteChildren: LayoutRouteChildren = {
   LayoutSolutionsLeadGenerationRoute: LayoutSolutionsLeadGenerationRoute,
   LayoutSolutionsMarketResearchRoute: LayoutSolutionsMarketResearchRoute,
   LayoutSolutionsPriceMonitoringRoute: LayoutSolutionsPriceMonitoringRoute,
+  LayoutSolutionsSeoMonitoringRoute: LayoutSolutionsSeoMonitoringRoute,
   LayoutSolutionsTrainingAiRoute: LayoutSolutionsTrainingAiRoute,
   LayoutToolsApiScraperRoute: LayoutToolsApiScraperRoute,
   LayoutToolsHtmlScraperRoute: LayoutToolsHtmlScraperRoute,
@@ -421,6 +438,7 @@ export interface FileRoutesByFullPath {
   '/solutions/lead-generation': typeof LayoutSolutionsLeadGenerationRoute
   '/solutions/market-research': typeof LayoutSolutionsMarketResearchRoute
   '/solutions/price-monitoring': typeof LayoutSolutionsPriceMonitoringRoute
+  '/solutions/seo-monitoring': typeof LayoutSolutionsSeoMonitoringRoute
   '/solutions/training-ai': typeof LayoutSolutionsTrainingAiRoute
   '/tools/api-scraper': typeof LayoutToolsApiScraperRoute
   '/tools/html-scraper': typeof LayoutToolsHtmlScraperRoute
@@ -446,6 +464,7 @@ export interface FileRoutesByTo {
   '/solutions/lead-generation': typeof LayoutSolutionsLeadGenerationRoute
   '/solutions/market-research': typeof LayoutSolutionsMarketResearchRoute
   '/solutions/price-monitoring': typeof LayoutSolutionsPriceMonitoringRoute
+  '/solutions/seo-monitoring': typeof LayoutSolutionsSeoMonitoringRoute
   '/solutions/training-ai': typeof LayoutSolutionsTrainingAiRoute
   '/tools/api-scraper': typeof LayoutToolsApiScraperRoute
   '/tools/html-scraper': typeof LayoutToolsHtmlScraperRoute
@@ -473,6 +492,7 @@ export interface FileRoutesById {
   '/_layout/solutions/lead-generation': typeof LayoutSolutionsLeadGenerationRoute
   '/_layout/solutions/market-research': typeof LayoutSolutionsMarketResearchRoute
   '/_layout/solutions/price-monitoring': typeof LayoutSolutionsPriceMonitoringRoute
+  '/_layout/solutions/seo-monitoring': typeof LayoutSolutionsSeoMonitoringRoute
   '/_layout/solutions/training-ai': typeof LayoutSolutionsTrainingAiRoute
   '/_layout/tools/api-scraper': typeof LayoutToolsApiScraperRoute
   '/_layout/tools/html-scraper': typeof LayoutToolsHtmlScraperRoute
@@ -501,6 +521,7 @@ export interface FileRouteTypes {
     | '/solutions/lead-generation'
     | '/solutions/market-research'
     | '/solutions/price-monitoring'
+    | '/solutions/seo-monitoring'
     | '/solutions/training-ai'
     | '/tools/api-scraper'
     | '/tools/html-scraper'
@@ -525,6 +546,7 @@ export interface FileRouteTypes {
     | '/solutions/lead-generation'
     | '/solutions/market-research'
     | '/solutions/price-monitoring'
+    | '/solutions/seo-monitoring'
     | '/solutions/training-ai'
     | '/tools/api-scraper'
     | '/tools/html-scraper'
@@ -550,6 +572,7 @@ export interface FileRouteTypes {
     | '/_layout/solutions/lead-generation'
     | '/_layout/solutions/market-research'
     | '/_layout/solutions/price-monitoring'
+    | '/_layout/solutions/seo-monitoring'
     | '/_layout/solutions/training-ai'
     | '/_layout/tools/api-scraper'
     | '/_layout/tools/html-scraper'
@@ -599,6 +622,7 @@ export const routeTree = rootRoute
         "/_layout/solutions/lead-generation",
         "/_layout/solutions/market-research",
         "/_layout/solutions/price-monitoring",
+        "/_layout/solutions/seo-monitoring",
         "/_layout/solutions/training-ai",
         "/_layout/tools/api-scraper",
         "/_layout/tools/html-scraper",
@@ -672,6 +696,10 @@ export const routeTree = rootRoute
     },
     "/_layout/solutions/price-monitoring": {
       "filePath": "_layout/solutions/price-monitoring.tsx",
+      "parent": "/_layout"
+    },
+    "/_layout/solutions/seo-monitoring": {
+      "filePath": "_layout/solutions/seo-monitoring.tsx",
       "parent": "/_layout"
     },
     "/_layout/solutions/training-ai": {
