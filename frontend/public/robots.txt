@@ -27,16 +27,3 @@ Disallow: /report
 # Sitemap
 Sitemap: https://thedataproxy.com/sitemap.xml
 
-# Crawl delay for high-volume bots
-User-agent: Googlebot
-Crawl-delay: 1
-
-User-agent: bingbot
-Crawl-delay: 5
-
-User-agent: Slurp
-Crawl-delay: 5
-
-# Block specific bots that might be too aggressive
-User-agent: PetalBot
-Disallow: /
