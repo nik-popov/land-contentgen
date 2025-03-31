@@ -15,7 +15,6 @@ export default defineConfig({
       nodePolyfills({
         globals: { Buffer: true, global: true },
       }),
-      // Remove the static-seo-files plugin
     ],
     resolve: {
       alias: { "@": path.resolve(__dirname, "src") },
