@@ -6,43 +6,21 @@ import { nodePolyfills } from "vite-plugin-node-polyfills";
 import fs from 'fs';
 
 export default defineConfig({
-  plugins: [
-    react(),
-    TanStackRouterVite({
-      routesDirectory: "./src/routes",
-      generatedRouteTree: "./src/routeTree.gen.ts",
-    }),
-    nodePolyfills({
-      globals: {
-        Buffer: true,
-        global: true,
-      },
-    }),
-    // Custom plugin to handle robots.txt and sitemap.xml
-    {
-      name: 'static-seo-files',
-      writeBundle() {
-        // Define file contents (or read from existing files)
-        const robotsTxt = fs.readFileSync('./public/robots.txt', 'utf-8');
-        const sitemapXml = fs.readFileSync('./public/sitemap.xml', 'utf-8');
-        // Write to the build output directory
-        fs.writeFileSync('./dist/robots.txt', robotsTxt);
-        fs.writeFileSync('./dist/sitemap.xml', sitemapXml);
-        
-        console.log('✅ Generated robots.txt and sitemap.xml');
-      }
-    }
-  ],
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "src"),
+    plugins: [
+      react(),
+      TanStackRouterVite({
+        routesDirectory: "./src/routes",
+        generatedRouteTree: "./src/routeTree.gen.ts",
+      }),
+      nodePolyfills({
+        globals: { Buffer: true, global: true },
+      }),
+      // Remove the static-seo-files plugin
+    ],
+    resolve: {
+      alias: { "@": path.resolve(__dirname, "src") },
     },
-  },
-  optimizeDeps: {
-    esbuildOptions: {
-      define: {
-        global: "globalThis",
-      },
+    optimizeDeps: {
+      esbuildOptions: { define: { global: "globalThis" } },
     },
-  },
-});
+  });
