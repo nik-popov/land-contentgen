@@ -185,7 +185,7 @@ function LandingPage() {
 </Box> */}
 
 {/* Section 1B: Infrastructure & Development */}
-<Box py={16} bg="blue.50" maxW="1200px" mx="auto" px={4}>
+<Box py={16} bg="white" maxW="1200px" mx="auto" px={4}>
   <VStack spacing={8} textAlign="center">
     <Heading as="h2" size="2xl" color="gray.800" fontWeight="medium">
       Cloud Infrastructure & Development
