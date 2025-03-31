@@ -26,4 +26,3 @@ Disallow: /report
 
 # Sitemap
 Sitemap: https://thedataproxy.com/sitemap.xml
-
