@@ -19,7 +19,7 @@ const Footer = () => {
           <Box>
             <Heading as="h4" size="md" mb={4} color="white">The Data Proxy</Heading>
             <Text color="gray.300" mb={4}>
-              Enterprise-grade proxy infrastructure designed specifically for web scraping, data collection, 
+              Enterprise grade proxy infrastructure designed specifically for web scraping, data collection, 
               and market intelligence needs with global coverage across 190+ countries.
             </Text>
          
