@@ -9,6 +9,8 @@ from app.core.config import settings
 import logging
 from datetime import datetime
 
+import uuid
+
 router = APIRouter(prefix="/utils", tags=["utils"])
 
 logger = logging.getLogger(__name__)
@@ -165,6 +167,8 @@ async def submit_contact_sales(form_data: ContactSalesForm) -> Message:
         )
 
 
+
+
 # Pydantic model for privacy request form
 class PrivacyRequestForm(BaseModel):
     full_name: str
@@ -185,87 +189,128 @@ async def submit_privacy_request(form_data: PrivacyRequestForm) -> Message:
     Submit a data privacy request and send notification emails.
     """
     try:
-        # Prepare email context with all form data
-        current_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        logger.info(f"Processing privacy request from {form_data.email} for {form_data.request_type}")
         
         # Generate request reference ID
-        import uuid
         request_ref = f"PRV-{uuid.uuid4().hex[:8].upper()}"
+        logger.info(f"Generated reference ID: {request_ref}")
         
-        email_context = {
-            "request_ref": request_ref,
-            "submission_date": current_date,
+        # Create a simpler, more reliable implementation
+        
+        # Store basic request details (you can expand this later)
+        request_info = {
+            "ref_id": request_ref,
+            "timestamp": datetime.now().isoformat(),
             "full_name": form_data.full_name,
             "email": form_data.email,
-            "phone_number": form_data.phone_number,
-            "account_id": form_data.account_id,
             "request_type": form_data.request_type,
-            "verification_method": form_data.verification_method,
-            "additional_details": form_data.additional_details
+            "status": "received"
         }
         
-        # Add request specific details
-        if form_data.request_type == "rectification":
-            email_context["correction_details"] = form_data.correction_details
-        elif form_data.request_type == "erasure":
-            email_context["deletion_reason"] = form_data.deletion_reason
-            email_context["deletion_details"] = form_data.deletion_details
+        # Log the request details
+        logger.info(f"Privacy request details: {request_info}")
+        
+        # Send a simple confirmation email to the user
+        try:
+            confirmation_email_sent = send_email(
+                email_to=form_data.email,
+                subject=f"Your Privacy Request #{request_ref} Has Been Received",
+                html_content=f"""
+                <html>
+                <body>
+                    <h1>Privacy Request Confirmation</h1>
+                    <p>Dear {form_data.full_name},</p>
+                    <p>Thank you for submitting your privacy request. We have received your request and will process it in accordance with applicable data protection regulations.</p>
+                    <p>Your request reference number is: <strong>{request_ref}</strong></p>
+                    <p>Please keep this number for future reference.</p>
+                    <p>Our Data Protection team will review your request and may contact you for additional information if needed. We aim to respond to all privacy requests within 30 days.</p>
+                    <p>Best regards,<br>The Data Protection Team<br>The Data Proxy</p>
+                </body>
+                </html>
+                """
+            )
             
-        # Create human-readable request type
-        request_type_readable = {
-            "access": "Access to Personal Data",
-            "rectification": "Correction of Personal Data",
-            "erasure": "Deletion of Personal Data",
-            "restriction": "Restriction of Processing",
-            "portability": "Data Portability",
-            "objection": "Objection to Processing",
-            "consent": "Withdrawal of Consent",
-            "other": "Other Privacy-Related Request"
-        }.get(form_data.request_type, form_data.request_type)
+            if confirmation_email_sent:
+                logger.info(f"Confirmation email sent to {form_data.email}")
+            else:
+                logger.warning(f"Failed to send confirmation email to {form_data.email}")
+        except Exception as email_error:
+            logger.error(f"Error sending confirmation email: {str(email_error)}")
+            # Continue processing even if email fails
         
-        email_context["request_type_readable"] = request_type_readable
-
-        # Render confirmation email to user
-        user_html_content = render_email_template(
-            template_name="privacy_request_confirmation.html",
-            context=email_context
-        )
-
-        # Send confirmation email to user
-        user_email_success = send_email(
-            email_to=form_data.email,
-            subject=f"Your Privacy Request #{request_ref} Has Been Received",
-            html_content=user_html_content
-        )
-        
-        # Render notification email to data protection team
-        team_html_content = render_email_template(
-            template_name="privacy_request_notification.html",
-            context=email_context
-        )
-
-        # Send notification email to data protection team
-        team_email_success = send_email(
-            email_to="privacy@thedataproxy.com",
-            subject=f"New Privacy Request: {request_type_readable} - #{request_ref}",
-            html_content=team_html_content
-        )
-        
-        # If either email failed, log the error but don't fail the request
-        if not user_email_success:
-            logger.error(f"Failed to send confirmation email to user: {form_data.email}")
+        # Send notification to the privacy team (with error handling)
+        try:
+            # Create a readable request type description
+            request_type_readable = {
+                "access": "Access to Personal Data",
+                "rectification": "Correction of Personal Data",
+                "erasure": "Deletion of Personal Data",
+                "restriction": "Restriction of Processing",
+                "portability": "Data Portability",
+                "objection": "Objection to Processing",
+                "consent": "Withdrawal of Consent",
+                "other": "Other Privacy-Related Request"
+            }.get(form_data.request_type, form_data.request_type)
             
-        if not team_email_success:
-            logger.error("Failed to send notification email to privacy team")
-
-        # Store the request in the database
-        # This would typically involve creating a record in your database
-        # Example: await db.privacy_requests.insert_one({...})
+            # Include specific details based on request type
+            specific_details = ""
+            if form_data.request_type == "rectification" and form_data.correction_details:
+                specific_details = f"<h3>Correction Details:</h3><p>{form_data.correction_details}</p>"
+            elif form_data.request_type == "erasure":
+                deletion_reason_text = "Not specified"
+                if form_data.deletion_reason == "1":
+                    deletion_reason_text = "No longer wishes to use services"
+                elif form_data.deletion_reason == "2":
+                    deletion_reason_text = "Concerned about privacy"
+                elif form_data.deletion_reason == "3":
+                    deletion_reason_text = "Did not authorize data collection"
+                elif form_data.deletion_reason == "4":
+                    deletion_reason_text = "Other reason"
+                
+                specific_details = f"<h3>Deletion Reason:</h3><p>{deletion_reason_text}</p>"
+                if form_data.deletion_details:
+                    specific_details += f"<h3>Additional Details:</h3><p>{form_data.deletion_details}</p>"
+            
+            team_notification_sent = send_email(
+                email_to="privacy@thedataproxy.com",
+                subject=f"New Privacy Request: {request_type_readable} - #{request_ref}",
+                html_content=f"""
+                <html>
+                <body>
+                    <h1>New Privacy Request</h1>
+                    <p><strong>{request_type_readable} Request - #{request_ref}</strong></p>
+                    
+                    <h2>Requestor Information</h2>
+                    <p><strong>Name:</strong> {form_data.full_name}</p>
+                    <p><strong>Email:</strong> {form_data.email}</p>
+                    <p><strong>Phone:</strong> {form_data.phone_number or "Not provided"}</p>
+                    <p><strong>Account ID:</strong> {form_data.account_id or "Not provided"}</p>
+                    <p><strong>Verification Method:</strong> {form_data.verification_method}</p>
+                    
+                    <h2>Request Details</h2>
+                    {specific_details}
+                    
+                    <p><strong>Additional Information:</strong> {form_data.additional_details or "None provided"}</p>
+                    
+                    <p>Please process this request according to our privacy request procedures.</p>
+                </body>
+                </html>
+                """
+            )
+            
+            if team_notification_sent:
+                logger.info("Team notification email sent successfully")
+            else:
+                logger.warning("Failed to send team notification email")
+        except Exception as team_email_error:
+            logger.error(f"Error sending team notification email: {str(team_email_error)}")
+            # Continue processing even if email fails
         
+        # Return success response to the user
         return Message(message=f"Privacy request {request_ref} submitted successfully. We will respond within 30 days.")
 
     except Exception as e:
-        logger.error(f"Error processing privacy request: {str(e)}")
+        logger.exception(f"Error processing privacy request: {str(e)}")
         raise HTTPException(
             status_code=500,
             detail="An error occurred while processing your privacy request"
