@@ -140,9 +140,6 @@ function WhistleblowerReportPage() {
                 <Button colorScheme="blue" onClick={() => window.print()}>
                   Print This Information
                 </Button>
-                <Button colorScheme="green" onClick={() => window.location.href = "/report-status"}>
-                  Check Report Status
-                </Button>
               </HStack>
             </AlertDescription>
           </Alert>
@@ -405,13 +402,6 @@ function WhistleblowerReportPage() {
                 >
                   <Icon as={LockIcon} mr={2} />
                   Submit Report
-                </Button>
-                <Button 
-                  variant="outline"
-                  size="lg"
-                  onClick={() => window.location.href="/report-status"}
-                >
-                  Check Existing Report Status
                 </Button>
               </Flex>
             </VStack>
