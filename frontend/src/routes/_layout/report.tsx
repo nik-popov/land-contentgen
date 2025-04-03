@@ -23,7 +23,6 @@ import {
   AlertDescription,
   HStack,
   Icon,
-  Badge,
   Accordion,
   AccordionItem,
   AccordionButton,
@@ -50,22 +49,58 @@ function WhistleblowerReportPage() {
   const [accessKey, setAccessKey] = useState('');
   const toast = useToast();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission with a delay
-    setTimeout(() => {
-      // Generate a random report ID and access key
-      const newReportId = 'REP' + Math.random().toString(36).substring(2, 10).toUpperCase();
-      const newAccessKey = Math.random().toString(36).substring(2, 10) + Math.random().toString(36).substring(2, 10);
-      
-      setReportId(newReportId);
-      setAccessKey(newAccessKey);
-      setIsSubmitting(false);
+
+    const formData = {
+      category: category,
+      details: e.target.details.value,
+      amount_involved: e.target.amountInvolved?.value || null,
+      is_immediate_risk: e.target.isImmediateRisk?.value === 'yes' || false,
+      evidence_description: e.target.evidenceDescription?.value || null,
+      witnesses: e.target.witnesses?.value || null,
+      communication_preference: e.target.communicationPreference.value,
+      anonymous_email: e.target.anonymousEmail?.value || null,
+    };
+
+    try {
+      const response = await fetch('https://apis.thedataproxy.com/api/v1/utils/whistleblower-report/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to submit report');
+      }
+
+      const data = await response.json();
+      setReportId(data.report_id);
+      setAccessKey(data.access_key);
       setFormSubmitted(true);
       window.scrollTo(0, 0);
-    }, 1500);
+      
+      toast({
+        title: "Report Submitted",
+        description: "Your confidential report has been received.",
+        status: "success",
+        duration: 5000,
+        isClosable: true,
+      });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: error.message || "Failed to submit your report",
+        status: "error",
+        duration: 5000,
+        isClosable: true,
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (formSubmitted) {
@@ -91,7 +126,7 @@ function WhistleblowerReportPage() {
               <Box>
                 <AlertTitle fontWeight="bold">Important: Save Your Access Information</AlertTitle>
                 <AlertDescription>
-                  <Text mb={2}>Please save the following information in a secure location. You will need it to check the status of your report and communicate with our investigation team anonymously.</Text>
+                  <Text mb={2}>Please save this information securely to track your report anonymously:</Text>
                   <Text fontWeight="bold">Report ID: {reportId}</Text>
                   <Text fontWeight="bold">Access Key: {accessKey}</Text>
                 </AlertDescription>
@@ -99,10 +134,7 @@ function WhistleblowerReportPage() {
             </Alert>
             <AlertDescription maxWidth="lg">
               <Text mb={4}>
-                Our Ethics &amp; Compliance team has received your report and will begin reviewing it within 1 business day. You can use your Report ID and Access Key to securely check the status of your report and communicate with our team while maintaining your anonymity.
-              </Text>
-              <Text mb={4}>
-                Thank you for bringing this matter to our attention. We take all reports seriously and are committed to conducting a thorough investigation while protecting your confidentiality.
+                Our team will review your report within 1 business day. Use your Report ID and Access Key to check status anonymously.
               </Text>
               <HStack justifyContent="center" mt={4}>
                 <Button colorScheme="blue" onClick={() => window.print()}>
@@ -128,31 +160,24 @@ function WhistleblowerReportPage() {
             <Heading as="h1" size="xl" fontWeight="medium">
               Confidential Reporting Channel
             </Heading>
-            <HStack mt={2}>
-              
-              <Text fontSize="lg" color="gray.600">
-                Safe, secure, and anonymous reporting of ethical concerns
-              </Text>
-            </HStack>
+            <Text fontSize="lg" color="gray.600" mt={2}>
+              Safe, secure, and anonymous reporting of ethical concerns
+            </Text>
           </Box>
-          
-          {/* Introduction & Information Box */}
+
           <Box w="full" border="1px" borderColor="gray.200" p={6} borderRadius="md">
             <VStack align="start" spacing={4}>
               <Heading as="h2" size="md" fontWeight="semibold">
                 About This Reporting Channel
               </Heading>
-              
               <Text>
-                This secure reporting channel allows you to report potential misconduct, ethics violations, or compliance concerns confidentially or anonymously. The Data Proxy is committed to maintaining a culture of integrity, and your reports help us uphold our ethical standards.
+                Report misconduct or ethical concerns confidentially or anonymously. We’re committed to integrity and protecting whistleblowers.
               </Text>
-              
-    
             </VStack>
           </Box>
-          
-          {/* FAQ Accordion */}
+
           <Accordion allowToggle w="full">
+            {/* FAQ items remain the same */}
             <AccordionItem>
               <h2>
                 <AccordionButton py={3}>
@@ -272,20 +297,19 @@ function WhistleblowerReportPage() {
               </AccordionPanel>
             </AccordionItem>
           </Accordion>
-          
+
           <Divider />
-          
-          {/* Report Form */}
+
           <Box w="full" as="form" onSubmit={handleSubmit}>
             <VStack spacing={6} align="start">
               <Heading as="h2" size="md" fontWeight="medium">
                 Submit a Confidential Report
               </Heading>
-              
-              {/* Report Category */}
+
               <FormControl isRequired>
                 <FormLabel>Type of Concern</FormLabel>
                 <Select 
+                  name="category"
                   placeholder="Select category"
                   value={category}
                   onChange={(e) => setCategory(e.target.value)}
@@ -299,96 +323,79 @@ function WhistleblowerReportPage() {
                   <option value="conduct">Code of Conduct Violations</option>
                   <option value="other">Other Compliance Concerns</option>
                 </Select>
-                <FormHelperText>
-                  Select the category that best describes your concern
-                </FormHelperText>
               </FormControl>
-              
-              {/* Report Details */}
+
               <FormControl isRequired>
                 <FormLabel>Details of the Incident or Concern</FormLabel>
                 <Textarea 
-                  placeholder="Please provide a detailed description of your concern, including relevant dates, locations, individuals involved, and any other pertinent information. The more specific details you can provide, the better we can investigate."
+                  name="details"
+                  placeholder="Provide detailed description including dates, locations, and individuals involved."
                   rows={8}
                 />
-                <FormHelperText>
-                  Be as specific as possible, but please avoid including personally identifying information about yourself if you wish to remain anonymous
-                </FormHelperText>
               </FormControl>
-              
-              {/* Additional Questions based on Category */}
+
               {category === 'financial' && (
                 <FormControl>
                   <FormLabel>Approximate Amount Involved (if applicable)</FormLabel>
-                  <Input type="text" placeholder="e.g., $5,000" />
+                  <Input name="amountInvolved" type="text" placeholder="e.g., $5,000" />
                 </FormControl>
               )}
-              
+
               {(category === 'harassment' || category === 'safety') && (
                 <FormControl>
                   <FormLabel>Is this an ongoing situation that poses immediate risk?</FormLabel>
-                  <RadioGroup defaultValue="no">
+                  <RadioGroup name="isImmediateRisk" defaultValue="no">
                     <Stack direction="row" spacing={5}>
                       <Radio value="yes">Yes</Radio>
                       <Radio value="no">No</Radio>
                     </Stack>
                   </RadioGroup>
                   <FormHelperText color="red.500">
-                    If this is an emergency situation that requires immediate attention, please also contact appropriate authorities.
+                    For emergencies, contact appropriate authorities immediately.
                   </FormHelperText>
                 </FormControl>
               )}
-              
-              {/* Evidence Upload Option */}
+
               <FormControl>
                 <FormLabel>Supporting Evidence (Optional)</FormLabel>
-                <Text fontSize="sm" mb={2}>
-                  If you have documents, screenshots, or other evidence that supports your report, please describe them here. 
-                  For security reasons, do not upload files directly. Our team will provide secure upload instructions later if needed.
-                </Text>
-                <Textarea placeholder="Describe any evidence you have (e.g., 'Email exchanges between March 5-10, 2025', 'Financial records showing irregular payments')" rows={3} />
+                <Textarea 
+                  name="evidenceDescription"
+                  placeholder="Describe any evidence (e.g., 'Email exchanges March 5-10, 2025')"
+                  rows={3}
+                />
               </FormControl>
-              
-              {/* Witnesses */}
+
               <FormControl>
                 <FormLabel>Witnesses (Optional)</FormLabel>
-                <Textarea placeholder="If there are others who are aware of or witnessed the situation, you may mention them here. Note: We will maintain your anonymity when we contact these individuals." rows={3} />
+                <Textarea 
+                  name="witnesses"
+                  placeholder="Mention any witnesses aware of the situation."
+                  rows={3}
+                />
               </FormControl>
-              
-              {/* Two-way Communication */}
+
               <FormControl>
                 <FormLabel>Anonymous Communication Preference</FormLabel>
-                <Text fontSize="sm" mb={3}>
-                  We may need to ask follow-up questions or provide updates about your report. You can check the status of your report and communicate with our team while remaining anonymous by using the Report ID and Access Key you'll receive after submission.
-                </Text>
-                <RadioGroup defaultValue="regularly">
+                <RadioGroup name="communicationPreference" defaultValue="regularly">
                   <Stack direction="column" spacing={3}>
-                    <Radio value="regularly">
-                      <Text>I will check for updates regularly (recommended)</Text>
-                    </Radio>
-                    <Radio value="notify">
-                      <Text>I'd like to provide an anonymous email for notifications (optional)</Text>
-                    </Radio>
+                    <Radio value="regularly">I will check for updates regularly</Radio>
+                    <Radio value="notify">Notify me via anonymous email</Radio>
                   </Stack>
                 </RadioGroup>
-                <Input mt={3} placeholder="Anonymous email address (optional)" />
-                <FormHelperText>
-                  If provided, this email will receive notifications when there are updates to your report. Consider using a non-work email that doesn't identify you.
-                </FormHelperText>
+                <Input name="anonymousEmail" mt={3} placeholder="Anonymous email (optional)" />
               </FormControl>
-              
+
               <Alert status="info" borderRadius="md" mb={6}>
                 <AlertIcon />
                 <Box>
-                  <AlertTitle>Important Note on Anonymity</AlertTitle>
+                  <AlertTitle>Important Note</AlertTitle>
                   <AlertDescription fontSize="sm">
-                    While you can submit this report anonymously, please be aware that in some cases, complete anonymity might limit our ability to fully investigate if we cannot gather additional information. However, we respect your choice and will investigate to the best of our ability with the information provided.
+                    Anonymity may limit investigation scope, but we respect your choice and will proceed with available information.
                   </AlertDescription>
                 </Box>
               </Alert>
-              
-              {/* Submit Button */}
-              <Flex w="full" justifyContent="flex-start" direction={{ base: "column", sm: "row" }} gap={6} mt={4}>
+
+              <Flex w="full" direction={{ base: "column", sm: "row" }} gap={6}>
                 <Button 
                   type="submit" 
                   colorScheme="blue" 
@@ -399,7 +406,6 @@ function WhistleblowerReportPage() {
                   <Icon as={LockIcon} mr={2} />
                   Submit Report
                 </Button>
-                
                 <Button 
                   variant="outline"
                   size="lg"
@@ -408,45 +414,28 @@ function WhistleblowerReportPage() {
                   Check Existing Report Status
                 </Button>
               </Flex>
-              
-              <Text fontSize="sm" color="gray.600" mt={2}>
-                <Icon as={InfoIcon} mr={1} />
-                This form is secured with end-to-end encryption. No identifying information such as your IP address or browser information is stored.
-              </Text>
             </VStack>
           </Box>
-          
+
           <Divider />
-          
-          {/* Non-Retaliation Policy */}
+
           <Box w="full" border="1px" borderColor="gray.200" p={6} borderRadius="md">
             <Heading as="h2" size="md" fontWeight="medium" mb={4}>
               Our Non-Retaliation Commitment
             </Heading>
-            
-            <Text fontSize="md" mb={4}>
-              The Data Proxy strictly prohibits retaliation against anyone who reports a concern in good faith or participates in an investigation. Retaliation in any form, including harassment, demotion, termination, or any other adverse action, will not be tolerated.
-            </Text>
-            
             <Text fontSize="md">
-              If you believe you have experienced retaliation as a result of making a report or participating in an investigation, please report it immediately through this channel or directly to the Ethics & Compliance Officer at compliance@thedataproxy.com.
+              We prohibit retaliation against whistleblowers. Report any retaliation to compliance@thedataproxy.com.
             </Text>
           </Box>
-          
-          {/* Alternative Contact */}
+
           <Box w="full">
             <Heading as="h2" size="md" fontWeight="medium" mb={4}>
               Alternative Reporting Methods
             </Heading>
-            
-            <Text fontSize="md" mb={4}>
-              While this online portal is our primary channel for confidential reporting, you may also report concerns through these alternative methods:
-            </Text>
-            
-            <VStack align="start" spacing={2} pl={4} mb={4}>
+            <VStack align="start" spacing={2}>
               <Text><strong>Phone:</strong> +1 (855) 440-2242</Text>
-              <Text><strong>Privacy Team Email:</strong> privacy@thedataproxy.com</Text>
-              <Text><strong>Mail:</strong> Ethics & Compliance Office, The Data Proxy, 99 Wall St Suite 5660, New York, NY 10005, USA</Text>
+              <Text><strong>Email:</strong> privacy@thedataproxy.com</Text>
+              <Text><strong>Mail:</strong> Ethics & Compliance, 99 Wall St Suite 5660, NY 10005</Text>
             </VStack>
           </Box>
         </VStack>

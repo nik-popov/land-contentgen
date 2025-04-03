@@ -315,3 +315,116 @@ async def submit_privacy_request(form_data: PrivacyRequestForm) -> Message:
             status_code=500,
             detail="An error occurred while processing your privacy request"
         )
+
+class WhistleblowerReportForm(BaseModel):
+    category: str
+    details: str
+    amount_involved: Optional[str] = None
+    is_immediate_risk: Optional[bool] = False
+    evidence_description: Optional[str] = None
+    witnesses: Optional[str] = None
+    communication_preference: str
+    anonymous_email: Optional[EmailStr] = None
+
+@router.post("/whistleblower-report/", status_code=201)
+async def submit_whistleblower_report(form_data: WhistleblowerReportForm) -> dict:
+    """
+    Submit a whistleblower report and send notification emails.
+    """
+    try:
+        # Generate unique report ID and access key
+        report_id = f"REP-{uuid.uuid4().hex[:8].upper()}"
+        access_key = uuid.uuid4().hex[:16]
+        
+        # Prepare email context
+        email_context = {
+            "report_id": report_id,
+            "category": form_data.category,
+            "details": form_data.details,
+            "amount_involved": form_data.amount_involved,
+            "is_immediate_risk": form_data.is_immediate_risk,
+            "evidence_description": form_data.evidence_description,
+            "witnesses": form_data.witnesses,
+            "communication_preference": form_data.communication_preference,
+            "anonymous_email": form_data.anonymous_email,
+            "submission_date": datetime.now().isoformat()
+        }
+
+        # Readable category mapping
+        category_map = {
+            "financial": "Financial Fraud or Accounting Irregularities",
+            "corruption": "Corruption, Bribery, or Illegal Activities",
+            "data": "Data Security or Privacy Violations",
+            "ethics": "Ethics Violations or Conflicts of Interest",
+            "harassment": "Harassment or Discrimination",
+            "safety": "Environmental, Health, or Safety Concerns",
+            "conduct": "Code of Conduct Violations",
+            "other": "Other Compliance Concerns"
+        }
+        
+        # Team notification email
+        team_html_content = f"""
+        <html>
+        <body>
+            <h1>New Whistleblower Report #{report_id}</h1>
+            <p><strong>Category:</strong> {category_map.get(form_data.category, form_data.category)}</p>
+            <p><strong>Details:</strong> {form_data.details}</p>
+            {'<p><strong>Amount Involved:</strong> ' + form_data.amount_involved + '</p>' if form_data.amount_involved else ''}
+            <p><strong>Immediate Risk:</strong> {'Yes' if form_data.is_immediate_risk else 'No'}</p>
+            {'<p><strong>Evidence Description:</strong> ' + form_data.evidence_description + '</p>' if form_data.evidence_description else ''}
+            {'<p><strong>Witnesses:</strong> ' + form_data.witnesses + '</p>' if form_data.witnesses else ''}
+            <p><strong>Communication Preference:</strong> {form_data.communication_preference}</p>
+            {'<p><strong>Anonymous Email:</strong> ' + form_data.anonymous_email + '</p>' if form_data.anonymous_email else ''}
+            <p>Please review and initiate investigation within 1 business day.</p>
+        </body>
+        </html>
+        """
+
+        # Send notification to compliance team
+        team_email_success = send_email(
+            email_to="compliance@thedataproxy.com",
+            subject=f"New Whistleblower Report #{report_id}",
+            html_content=team_html_content
+        )
+
+        if not team_email_success:
+            logger.warning("Failed to send team notification email")
+
+        # Send confirmation to user if anonymous email provided
+        if form_data.anonymous_email and form_data.communication_preference == "notify":
+            user_html_content = f"""
+            <html>
+            <body>
+                <h1>Your Report #{report_id} Has Been Received</h1>
+                <p>Your confidential report has been submitted successfully.</p>
+                <p><strong>Report ID:</strong> {report_id}</p>
+                <p><strong>Access Key:</strong> {access_key}</p>
+                <p>Please save this information securely to track your report anonymously.</p>
+                <p>We will review your report within 1 business day.</p>
+            </body>
+            </html>
+            """
+            user_email_success = send_email(
+                email_to=form_data.anonymous_email,
+                subject=f"Your Whistleblower Report #{report_id}",
+                html_content=user_html_content
+            )
+            if not user_email_success:
+                logger.warning(f"Failed to send confirmation email to {form_data.anonymous_email}")
+
+        # Log submission
+        logger.info(f"Whistleblower report submitted: {report_id}")
+
+        # Return report ID and access key to frontend
+        return {
+            "message": "Report submitted successfully",
+            "report_id": report_id,
+            "access_key": access_key
+        }
+
+    except Exception as e:
+        logger.error(f"Error processing whistleblower report: {str(e)}")
+        raise HTTPException(
+            status_code=500,
+            detail="An error occurred while processing your report"
+        )
