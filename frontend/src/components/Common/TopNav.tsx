@@ -252,39 +252,39 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
                   </Box>
                 )}
                 <Flex wrap="wrap" direction={{ base: "column", md: "row" }} p={2}>
-                  {subItems.map((subItem) => (
-                    <Box
-                      key={subItem.title}
-                      as={RouterLink}
-                      to={subItem.path}
-                      color={textColor}
-                      _hover={{ color: hoverColor, bg: "gray.100" }}
-                      onClick={() => {
-                        onClose?.(); // Close the mobile menu
-                        setActiveMenuIndex(null); // Reset active menu
-                      }}
-                      flex={{ base: "1 0 100%", md: "1 0 25%" }}
-                      minW={0}
-                      p={2}
-                    >
-                      <Flex align="flex-start">
-                        {subItem.icon && (
-                          <Icon 
-                            as={subItem.icon} 
-                            mr={2} 
-                            boxSize={5} 
-                            mt="2px"
-                          />
-                        )}
-                        <Box>
-                          <Text fontWeight="medium">{subItem.title}</Text>
-                          {subItem.description && (
-                            <Text fontSize="xs" color="gray.500" mt={1}>{subItem.description}</Text>
-                          )}
-                        </Box>
-                      </Flex>
-                    </Box>
-                  ))}
+                {subItems.map((subItem) => (
+  <Box
+    key={subItem.title}
+    as={RouterLink}
+    to={subItem.path}
+    color={textColor}
+    _hover={{ color: hoverColor, bg: "gray.100" }}
+    onClick={() => {
+      onClose?.();
+      setActiveMenuIndex(null);
+    }}
+    flex={{ base: "1 0 100%", md: "1 0 25%" }}
+    minW={0}
+    p={2}
+  >
+    <Flex align="flex-start">
+      {subItem.icon && (
+        <Icon 
+          as={subItem.icon} 
+          mr={2} 
+          boxSize={5} 
+          mt="2px" // Small top margin to align with the title text
+        />
+      )}
+      <Box>
+        <Text fontWeight="medium">{subItem.title}</Text>
+        {subItem.description && (
+          <Text fontSize="xs" color="gray.500" mt={1}>{subItem.description}</Text>
+        )}
+      </Box>
+    </Flex>
+  </Box>
+))}
                 </Flex>
               </Box>
             )}
@@ -305,7 +305,7 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
             style: { background: bgActive, color: activeTextColor },
           }}
           align="center"
-          onClick={onClose} // Ensure this closes the mobile menu
+          onClick={onClose}
         >
           {icon && <Icon as={icon} mr={2} />}
           <Text>{title}</Text>
@@ -334,8 +334,8 @@ const TopNav = () => {
   const hoverColor = "blue.600";
 
   const handleLogout = async () => {
-    await logout(); // Ensure logout completes
-    onClose(); // Close the menu after logout
+    logout();
+    onClose();
   };
 
   return (
@@ -355,7 +355,7 @@ const TopNav = () => {
           justify="space-between" 
           w="100%"
         >
-          <Link href="/" as={RouterLink} onClick={onClose}>
+          <Link href="/" as={RouterLink}>
             <Image src={Logo} alt="Web Scraping Proxy Network" h="40px" />
           </Link>
 
@@ -407,23 +407,10 @@ const TopNav = () => {
                     borderRadius="md"
                     zIndex={20}
                   >
-                    <Box 
-                      as={RouterLink} 
-                      to="/settings" 
-                      p={2} 
-                      display="block" 
-                      _hover={{ bg: "gray.100" }}
-                      onClick={onClose} // Close on settings click
-                    >
+                    <Box as={RouterLink} to="/settings" p={2} display="block" _hover={{ bg: "gray.100" }}>
                       Settings
                     </Box>
-                    <Box 
-                      as="button" 
-                      p={2} 
-                      display="block" 
-                      _hover={{ bg: "gray.100" }} 
-                      onClick={handleLogout}
-                    >
+                    <Box as="button" p={2} display="block" _hover={{ bg: "gray.100" }} onClick={handleLogout}>
                       Log out
                     </Box>
                   </Box>
@@ -467,13 +454,13 @@ const TopNav = () => {
                     p={2}
                     color={textColor}
                     _hover={{ color: hoverColor }}
-                    onClick={onClose} // Close on settings click
+                    onClick={onClose}
                   >
                     Settings
                   </Box>
                   <Flex
                     as="button"
-                    onClick={handleLogout} // This already calls onClose
+                    onClick={handleLogout}
                     color={hoverColor}
                     fontWeight="bold"
                     alignItems="center"
@@ -492,7 +479,7 @@ const TopNav = () => {
                   colorScheme="blue"
                   variant="solid"
                   size="sm"
-                  onClick={onClose} // Close on signup click
+                  onClick={onClose}
                 >
                   Start Free Trial
                 </Button>
@@ -502,7 +489,7 @@ const TopNav = () => {
                   variant="outline"
                   colorScheme="blue"
                   size="sm"
-                  onClick={onClose} // Close on login click
+                  onClick={onClose}
                 >
                   Login
                 </Button>
