@@ -36,16 +36,57 @@ function RequestDemoPage() {
   const [useCase, setUseCase] = useState('');
   const toast = useToast();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission with a delay
-    setTimeout(() => {
-      setIsSubmitting(false);
+
+    const formData = {
+      first_name: e.target.firstName.value,
+      last_name: e.target.lastName.value,
+      business_email: e.target.businessEmail.value,
+      phone_number: e.target.phoneNumber.value,
+      company_name: e.target.companyName.value,
+      job_title: e.target.jobTitle.value,
+      primary_use_case: useCase,
+      other_use_case: useCase === 'other' ? e.target.otherUseCase?.value : null,
+      additional_requirements: e.target.additionalRequirements.value || null,
+      preferred_demo_datetime: e.target.preferredDemoDateTime.value || null
+    };
+
+    try {
+      const response = await fetch('/utils/demo-request/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to submit demo request');
+      }
+
+      const data = await response.json();
       setFormSubmitted(true);
       window.scrollTo(0, 0);
-    }, 1500);
+      toast({
+        title: "Success",
+        description: data.message,
+        status: "success",
+        duration: 5000,
+        isClosable: true,
+      });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: error.message || "An error occurred while submitting your request",
+        status: "error",
+        duration: 5000,
+        isClosable: true,
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (formSubmitted) {
@@ -91,7 +132,6 @@ function RequestDemoPage() {
             Experience the power of our enterprise-grade web scraping proxy infrastructure. Complete this form to schedule a personalized demo tailored to your market research needs.
           </Text>
 
-          {/* Benefits */}
           <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6} w="full">
             <Box bg="orange.50" p={5} borderRadius="md">
               <Flex align="center" mb={3}>
@@ -134,7 +174,6 @@ function RequestDemoPage() {
             </Box>
           </SimpleGrid>
           
-          {/* Request Form */}
           <Box w="full" as="form" onSubmit={handleSubmit} mt={6} bg="white" p={8} borderRadius="md" boxShadow="sm">
             <VStack spacing={6} align="start">
               <Heading as="h2" size="md" fontWeight="medium">
@@ -144,40 +183,41 @@ function RequestDemoPage() {
               <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6} w="full">
                 <FormControl isRequired>
                   <FormLabel>First Name</FormLabel>
-                  <Input type="text" placeholder="Enter your first name" />
+                  <Input name="firstName" type="text" placeholder="Enter your first name" />
                 </FormControl>
                 
                 <FormControl isRequired>
                   <FormLabel>Last Name</FormLabel>
-                  <Input type="text" placeholder="Enter your last name" />
+                  <Input name="lastName" type="text" placeholder="Enter your last name" />
                 </FormControl>
               </SimpleGrid>
               
               <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6} w="full">
                 <FormControl isRequired>
                   <FormLabel>Business Email</FormLabel>
-                  <Input type="email" placeholder="Enter your business email" />
+                  <Input name="businessEmail" type="email" placeholder="Enter your business email" />
                 </FormControl>
                 
                 <FormControl isRequired>
                   <FormLabel>Phone Number</FormLabel>
-                  <Input type="tel" placeholder="Enter your phone number" />
+                  <Input name="phoneNumber" type="tel" placeholder="Enter your phone number" />
                 </FormControl>
               </SimpleGrid>
               
               <FormControl isRequired>
                 <FormLabel>Company Name</FormLabel>
-                <Input type="text" placeholder="Enter your company name" />
+                <Input name="companyName" type="text" placeholder="Enter your company name" />
               </FormControl>
               
               <FormControl isRequired>
                 <FormLabel>Job Title</FormLabel>
-                <Input type="text" placeholder="Enter your job title" />
+                <Input name="jobTitle" type="text" placeholder="Enter your job title" />
               </FormControl>
               
               <FormControl isRequired>
                 <FormLabel>Primary Use Case</FormLabel>
                 <Select 
+                  name="primaryUseCase"
                   placeholder="Select primary use case" 
                   value={useCase}
                   onChange={(e) => setUseCase(e.target.value)}
@@ -196,13 +236,14 @@ function RequestDemoPage() {
               {useCase === 'other' && (
                 <FormControl>
                   <FormLabel>Please specify your use case</FormLabel>
-                  <Input type="text" placeholder="Describe your use case" />
+                  <Input name="otherUseCase" type="text" placeholder="Describe your use case" />
                 </FormControl>
               )}
               
               <FormControl>
                 <FormLabel>Additional Requirements or Questions</FormLabel>
                 <Textarea 
+                  name="additionalRequirements"
                   placeholder="Please share any specific requirements, questions, or areas of interest for the demo"
                   rows={4}
                 />
@@ -210,7 +251,7 @@ function RequestDemoPage() {
               
               <FormControl>
                 <FormLabel>Preferred Demo Date/Time</FormLabel>
-                <Input type="datetime-local" />
+                <Input name="preferredDemoDateTime" type="datetime-local" />
                 <Text fontSize="sm" color="gray.500" mt={1}>
                   We'll do our best to accommodate your preferred time or suggest alternatives.
                 </Text>
