@@ -190,7 +190,7 @@ function ContactPage() {
                     variant="link" 
                     rightIcon={<EmailIcon />}
                   >
-                    Email Us
+                    Email
                   </Button>
                   <Button 
                     as="a"
@@ -199,7 +199,7 @@ function ContactPage() {
                     variant="link" 
                     rightIcon={<PhoneIcon />}
                   >
-                    Call Us
+                    Call
                   </Button>
                 </HStack>
               </VStack>
