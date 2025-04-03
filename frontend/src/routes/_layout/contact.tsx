@@ -82,7 +82,7 @@ function ContactPage() {
       </Box>
       
       {/* Contact Options Section (Replacing Form) */}
-      <Box py={16} bg="white">
+      {/* <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" p={6} px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={6} fontWeight="medium">
             Get in Touch
@@ -150,7 +150,7 @@ function ContactPage() {
             </VStack>
           </Flex>
         </Box>
-      </Box>
+      </Box> */}
       
       {/* Contact Categories Section */}
       <Box py={16} bg="blue.50">
