@@ -1,11 +1,18 @@
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, HTTPException
+from pydantic import BaseModel  # Add this import
 from pydantic.networks import EmailStr
+from typing import Optional
 
 from app.api.deps import get_current_active_superuser
 from app.models import Message
-from app.utils import generate_test_email, send_email
+from app.utils import generate_test_email, send_email, render_email_template
+from app.core.config import settings
+import logging
 
 router = APIRouter(prefix="/utils", tags=["utils"])
+
+logger = logging.getLogger(__name__)
+
 # Pydantic model for demo request form
 class DemoRequestForm(BaseModel):
     first_name: str
@@ -18,6 +25,7 @@ class DemoRequestForm(BaseModel):
     other_use_case: Optional[str] = None
     additional_requirements: Optional[str] = None
     preferred_demo_datetime: Optional[str] = None
+
 @router.post(
     "/test-email/",
     dependencies=[Depends(get_current_active_superuser)],
@@ -35,10 +43,10 @@ def test_email(email_to: EmailStr) -> Message:
     )
     return Message(message="Test email sent")
 
-
 @router.get("/health-check/")
 async def health_check() -> bool:
     return True
+
 @router.post("/demo-request/", status_code=201)
 async def submit_demo_request(form_data: DemoRequestForm) -> Message:
     """
