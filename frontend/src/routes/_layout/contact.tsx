@@ -1,51 +1,18 @@
-import { Box, Flex, Grid, Heading, Text, VStack, Button, Link, Stat, StatLabel, StatNumber, SimpleGrid, InputGroup, InputLeftElement, Input, Textarea, FormControl, FormLabel, Select, useToast, HStack, Icon, Divider } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text, VStack, Button, Link, SimpleGrid, Icon, HStack } from "@chakra-ui/react";
 import { createFileRoute } from "@tanstack/react-router";
 import Footer from '../../components/Common/Footer';
 import { PhoneIcon, EmailIcon, InfoIcon, CheckIcon, TimeIcon, AtSignIcon, ChatIcon } from '@chakra-ui/icons';
-import { useState } from 'react';
+import { useNavigate } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/_layout/contact")({
   component: ContactPage,
 });
 
 function ContactPage() {
-  const toast = useToast();
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    company: '',
-    inquiryType: '',
-    message: ''
-  });
+  const navigate = useNavigate();
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prevState => ({
-      ...prevState,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Submit form logic would go here
-    toast({
-      title: "Message sent!",
-      description: "We've received your inquiry and will get back to you shortly.",
-      status: "success",
-      duration: 5000,
-      isClosable: true,
-    });
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      company: '',
-      inquiryType: '',
-      message: ''
-    });
+  const handleContactSales = () => {
+    navigate({ to: "/contact-sales" });
   };
 
   const officeLocations = [
@@ -114,112 +81,74 @@ function ContactPage() {
         </Box>
       </Box>
       
-      {/* Contact Form Section */}
+      {/* Contact Options Section (Replacing Form) */}
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" p={6} px={4}>
-          <SimpleGrid columns={{ base: 1, lg: 1 }} spacing={10}>
-            <Box>
-              <Heading as="h2" size="xl" textAlign="center" mb={6} fontWeight="medium">
-                Send Us a Message
+          <Heading as="h2" size="xl" textAlign="center" mb={6} fontWeight="medium">
+            Get in Touch
+          </Heading>
+          <Text fontSize="lg" textAlign="center" mb={8} maxW="700px" mx="auto">
+            Choose how you'd like to connect with our team. We're ready to assist you with any questions or needs.
+          </Text>
+          
+          <Flex justifyContent="center" gap={8} flexWrap="wrap" mt={10}>
+            <VStack 
+              p={8} 
+              bg="blue.50" 
+              borderRadius="md" 
+              boxShadow="sm" 
+              spacing={5} 
+              align="center"
+              minW="300px"
+            >
+              <Box bg="blue.100" p={4} borderRadius="full">
+                <EmailIcon boxSize={8} color="blue.600" />
+              </Box>
+              <Heading as="h3" size="lg" fontWeight="medium">
+                Contact Sales
               </Heading>
-              <Text fontSize="lg" textAlign="center" mb={8}>
-                Fill out the form below and our team will get back to you as soon as possible.
-                We appreciate your interest and look forward to helping you.
+              <Text textAlign="center" fontSize="md">
+                Speak with our sales team about products, pricing, and custom solutions for your business.
               </Text>
-              
-              <form onSubmit={handleSubmit} >
-                <Grid templateColumns={{ base: "1fr", md: "1fr 1fr" }} gap={5} mb={5}>
-                  <FormControl isRequired>
-                    <FormLabel>Full Name</FormLabel>
-                    <Input 
-                      type="text" 
-                      name="name" 
-                      value={formData.name} 
-                      onChange={handleChange} 
-                      placeholder="Your Name"
-                      focusBorderColor="blue.500"
-                    />
-                  </FormControl>
-                  
-                  <FormControl isRequired>
-                    <FormLabel>Email Address</FormLabel>
-                    <Input 
-                      type="email" 
-                      name="email" 
-                      value={formData.email} 
-                      onChange={handleChange} 
-                      placeholder="your.email@example.com"
-                      focusBorderColor="blue.500"
-                    />
-                  </FormControl>
-                </Grid>
-                
-                <Grid templateColumns={{ base: "1fr", md: "1fr 1fr" }} gap={5} mb={5}>
-                  <FormControl>
-                    <FormLabel>Phone Number</FormLabel>
-                    <Input 
-                      type="tel" 
-                      name="phone" 
-                      value={formData.phone} 
-                      onChange={handleChange} 
-                      placeholder="(Optional)"
-                      focusBorderColor="blue.500"
-                    />
-                  </FormControl>
-                  
-                  <FormControl>
-                    <FormLabel>Company</FormLabel>
-                    <Input 
-                      type="text" 
-                      name="company" 
-                      value={formData.company} 
-                      onChange={handleChange} 
-                      placeholder="(Optional)"
-                      focusBorderColor="blue.500"
-                    />
-                  </FormControl>
-                </Grid>
-                
-                <FormControl isRequired mb={5}>
-                  <FormLabel>Inquiry Type</FormLabel>
-                  <Select 
-                    name="inquiryType" 
-                    value={formData.inquiryType} 
-                    onChange={handleChange} 
-                    placeholder="Select an option"
-                    focusBorderColor="blue.500"
-                  >
-                    <option value="sales">Sales Inquiry</option>
-                    <option value="support">Technical Support</option>
-                    <option value="partnership">Partnership Opportunity</option>
-                    <option value="press">Press & Media</option>
-                    <option value="other">Other</option>
-                  </Select>
-                </FormControl>
-                
-                <FormControl isRequired mb={6}>
-                  <FormLabel>Message</FormLabel>
-                  <Textarea 
-                    name="message" 
-                    value={formData.message} 
-                    onChange={handleChange} 
-                    placeholder="Please provide details about your inquiry..."
-                    focusBorderColor="blue.500"
-                    rows={5}
-                  />
-                </FormControl>
-                
-                <Button 
-                  type="submit" 
-                  colorScheme="blue" 
-                  size="lg" 
-                  width={{ base: "full", md: "auto" }}
-                >
-                  Submit Message
-                </Button>
-              </form>
-            </Box>
-          </SimpleGrid>
+              <Button 
+                colorScheme="blue" 
+                size="lg"
+                width="full"
+                onClick={handleContactSales}
+              >
+                Contact Sales
+              </Button>
+            </VStack>
+            
+            <VStack 
+              p={8} 
+              bg="blue.50" 
+              borderRadius="md" 
+              boxShadow="sm" 
+              spacing={5} 
+              align="center"
+              minW="300px"
+            >
+              <Box bg="blue.100" p={4} borderRadius="full">
+                <PhoneIcon boxSize={8} color="blue.600" />
+              </Box>
+              <Heading as="h3" size="lg" fontWeight="medium">
+                Call Us
+              </Heading>
+              <Text textAlign="center" fontSize="md">
+                Speak directly with our support team during business hours for immediate assistance.
+              </Text>
+              <Button 
+                as="a"
+                href="tel:+18554402242"
+                colorScheme="blue" 
+                size="lg"
+                width="full"
+              >
+                Call Now
+              </Button>
+            </VStack>
+          </Flex>
         </Box>
       </Box>
       
@@ -253,13 +182,26 @@ function ContactPage() {
                 <Text color="gray.600">
                   {category.description}
                 </Text>
-                <Button 
-                  colorScheme="blue" 
-                  variant="link" 
-                  rightIcon={<EmailIcon />}
-                >
-                  Contact Us
-                </Button>
+                <HStack spacing={4}>
+                  <Button 
+                    as="a"
+                    href="/contact-sales"
+                    colorScheme="blue" 
+                    variant="link" 
+                    rightIcon={<EmailIcon />}
+                  >
+                    Email Us
+                  </Button>
+                  <Button 
+                    as="a"
+                    href="tel:+18554402242"
+                    colorScheme="blue" 
+                    variant="link" 
+                    rightIcon={<PhoneIcon />}
+                  >
+                    Call Us
+                  </Button>
+                </HStack>
               </VStack>
             ))}
           </SimpleGrid>
@@ -315,19 +257,20 @@ function ContactPage() {
           </Text>
           
           <Flex justify="center" gap={6} flexWrap="wrap">
-          <Button
+            <Button
+              as="a"
+              href="/contact-sales"
               size="lg"
               bg="white"
               color="blue.500"
               _hover={{ bg: "gray.100" }}
-              as="a"
-              href="/contact-sales"
             >
               Contact Sales
             </Button>
             
-            
             <Button
+              as="a"
+              href="tel:+18554402242"
               size="lg"
               variant="outline"
               borderColor="white"
@@ -335,7 +278,7 @@ function ContactPage() {
               _hover={{ bg: "blue.700" }}
               leftIcon={<PhoneIcon />}
             >
-              Schedule a Call
+              Call Now
             </Button>
           </Flex>
         </Box>
