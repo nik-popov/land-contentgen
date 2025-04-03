@@ -291,6 +291,8 @@ function PricingPage() {
                     size="lg" 
                     width="full" 
                     mb={6}
+                    as="a"
+                    href="/contact-sales"
                   >
                     {plan.customPricing ? "Contact Sales" : "Select Plan"}
                   </Button>
