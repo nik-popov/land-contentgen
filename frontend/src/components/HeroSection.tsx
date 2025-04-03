@@ -35,23 +35,20 @@ function HeroSection() {
             SaaS proxy solutions built for large-scale data processing, extraction, LLM training and more.
           </Text>
         </VStack>
-
-        {/* Right Column: Image */}
         <Box
-          w={{ base: "100%", md: "40%" }}
-          display="flex"
-          alignItems="center"
-          justifyContent={{ base: "flex-start", md: "center" }}
-        >
-          <Image
-            src="/assets/images/hero.png"
-            alt="Hero Image"
-            maxW="400px"
-            objectFit="contain"
-          />
-        </Box>
-      </Flex>
-
+  w={{ base: "100%", md: "40%" }}
+  display="flex"
+  alignItems="center"
+  justifyContent={{ base: "flex-start", md: "center" }}
+>
+  <Image
+    src="/assets/images/hero.png"
+    alt="Hero Image"
+    maxW="400px" // Ensures the image doesn't exceed 400px in width
+    w="100%"    // Makes the image responsive within its container
+    objectFit="contain" // Keeps the image's aspect ratio intact
+  />
+</Box>
       <Flex justify="center" gap={4} pt={4} pb={20}>
         <Button
           as="a"
