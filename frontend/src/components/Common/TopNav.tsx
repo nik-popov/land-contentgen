@@ -38,7 +38,6 @@ import Logo from "/assets/images/data-proxy-logo.png";
 import type { UserPublic } from "../../client";
 import useAuth from "../../hooks/useAuth";
 
-// Interfaces and navStructure remain unchanged (lines 62-153 from your original code)
 interface NavItem {
   title: string;
   icon?: any;
@@ -106,7 +105,6 @@ const navStructure: NavItem[] = [
   }
 ];
 
-// Original NavItems component (lines 154-298 from your first snippet)
 const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
   const queryClient = useQueryClient();
   const textColor = "gray.800";
@@ -131,7 +129,7 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
 
       if (subItems) {
         return (
-          <Box key={title} position="relative">
+          <Box key={title}>
             <Flex
               as="button"
               px={4}
@@ -148,23 +146,18 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
             </Flex>
             {isActive && (
               <Box
-                zIndex={20}
-                w="100vw"
-                maxW="1200px"
                 bg="white"
                 borderRadius="md"
                 boxShadow="md"
-                position="fixed"
-                left="50%"
-                transform="translateX(-50%)"
-                top={{ base: "94px", md: "90px" }}
+                w="100%"
+                p={2}
               >
                 {description && (
                   <Box px={3} py={2} borderBottom="1px" borderColor="gray.200">
                     <Text fontSize="sm" color="gray.600">{description}</Text>
                   </Box>
                 )}
-                <Flex wrap="wrap" direction={{ base: "column", md: "row" }} p={2}>
+                <Flex direction="column" p={2}>
                   {subItems.map((subItem) => (
                     <Box
                       key={subItem.title}
@@ -176,8 +169,6 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
                         onClose?.();
                         setActiveMenuIndex(null);
                       }}
-                      flex={{ base: "1 0 100%", md: "1 0 25%" }}
-                      minW={0}
                       p={2}
                     >
                       <Flex align="flex-start">
@@ -354,54 +345,54 @@ const TopNav = () => {
         </Container>
       </Box>
 
-      {/* Mobile Menu - Non-sticky, shifts content */}
+      {/* Mobile Menu - Shifts content down */}
       <Box
         display={{ base: isOpen ? "block" : "none", md: "none" }}
         bg="white"
-        boxShadow="md"
-        p={4}
         w="100%"
       >
         <Container maxW="1200px" px={0}>
-          <Flex flexDir="column" gap={4}>
+          <Flex flexDir="column" gap={2} py={4}>
             <NavItems onClose={onClose} isMobile={true} />
             {currentUser ? (
               <>
-                <Text color={textColor} fontSize="sm">
+                <Text color={textColor} fontSize="sm" px={4}>
                   Logged in as: {currentUser.email}
                 </Text>
-                <Flex flexDir="column" gap={2}>
-                  <Box
-                    as={RouterLink}
-                    to="/settings"
-                    p={2}
-                    color={textColor}
-                    _hover={{ color: hoverColor }}
-                    onClick={onClose}
-                  >
-                    Settings
-                  </Box>
-                  <Flex
-                    as="button"
-                    onClick={handleLogout}
-                    color={hoverColor}
-                    fontWeight="bold"
-                    alignItems="center"
-                    gap={2}
-                  >
-                    <FiLogOut />
-                    <Text>Log out</Text>
-                  </Flex>
+                <Box
+                  as={RouterLink}
+                  to="/settings"
+                  p={2}
+                  px={4}
+                  color={textColor}
+                  _hover={{ color: hoverColor }}
+                  onClick={onClose}
+                >
+                  Settings
+                </Box>
+                <Flex
+                  as="button"
+                  onClick={handleLogout}
+                  color={hoverColor}
+                  fontWeight="bold"
+                  alignItems="center"
+                  gap={2}
+                  px={4}
+                  py={2}
+                >
+                  <FiLogOut />
+                  <Text>Log out</Text>
                 </Flex>
               </>
             ) : (
-              <Flex flexDir="column" gap={2}>
+              <>
                 <Button
                   as={RouterLink}
                   to="https://dashboard.thedataproxy.com/signup"
                   colorScheme="blue"
                   variant="solid"
                   size="sm"
+                  m={4}
                   onClick={onClose}
                 >
                   Start Free Trial
@@ -412,11 +403,12 @@ const TopNav = () => {
                   variant="outline"
                   colorScheme="blue"
                   size="sm"
+                  m={4}
                   onClick={onClose}
                 >
                   Login
                 </Button>
-              </Flex>
+              </>
             )}
           </Flex>
         </Container>
