@@ -136,14 +136,14 @@ function SolutionsPage() {
                   {category.solutions.map((solution, sIndex) => (
                     <ListItem key={sIndex} display="flex" alignItems="baseline">
                       <ListIcon as={ArrowForwardIcon} color="purple.500" />
-                      {/* <Link 
-                        href={solution.path} 
+                      <Link 
+                        href='/contact-sales'
                         color={solution.highlight ? "purple.500" : "gray.700"}
                         fontWeight={solution.highlight ? "bold" : "normal"}
                         _hover={{ color: "purple.600", textDecoration: "underline" }}
                       >
                         {solution.name}
-                      </Link> */}
+                      </Link>
                     </ListItem>
                   ))}
                 </List>
