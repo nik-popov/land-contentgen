@@ -148,48 +148,57 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
             {isActive && (
               <Box
                 bg="white"
-                w={isMobile ? "100%" : "auto"}
-                pl={isMobile ? 6 : 0} // Indent sub-items only on mobile
-                py={isMobile ? 2 : 0}
-                position={isMobile ? "static" : "absolute"} // Static on mobile, absolute on desktop
-                top={isMobile ? "auto" : "100%"} // Position below on desktop
-                left={isMobile ? "auto" : "50%"}
-                transform={isMobile ? "none" : "translateX(-50%)"}
+                w={isMobile ? "100%" : "100vw"} // Full viewport width on desktop
+                pl={isMobile ? 6 : 0}
+                py={isMobile ? 2 : 4}
+                position={isMobile ? "static" : "absolute"}
+                top={isMobile ? "auto" : "100%"}
+                left={isMobile ? "auto" : 0} // Full width from left edge
+                transform={isMobile ? "none" : "translateX(0)"}
                 zIndex={20}
                 boxShadow={isMobile ? "none" : "md"}
-                borderRadius="md"
+                borderRadius={isMobile ? 0 : "md"}
               >
                 {description && isMobile && (
                   <Text px={3} py={1} fontSize="sm" color="gray.600" fontStyle="italic">
                     {description}
                   </Text>
                 )}
-                {subItems.map((subItem) => (
-                  <Box
-                    key={subItem.title}
-                    as={RouterLink}
-                    to={subItem.path}
-                    color={textColor}
-                    _hover={{ color: hoverColor, bg: "gray.100" }}
-                    onClick={() => {
-                      if (isMobile && onClose) onClose();
-                      setActiveMenuIndex(null);
-                    }}
-                    p={2}
-                    px={isMobile ? 3 : 4}
-                    display="block"
-                  >
-                    <Flex align="center">
-                      {subItem.icon && <Icon as={subItem.icon} mr={2} />}
-                      <Box>
-                        <Text fontWeight="medium">{subItem.title}</Text>
-                        {subItem.description && isMobile && (
-                          <Text fontSize="xs" color="gray.500">{subItem.description}</Text>
-                        )}
-                      </Box>
-                    </Flex>
-                  </Box>
-                ))}
+                <Flex
+                  direction={isMobile ? "column" : "row"}
+                  wrap={isMobile ? "nowrap" : "wrap"}
+                  justify={isMobile ? "flex-start" : "center"}
+                  maxW={isMobile ? "100%" : "1200px"} // Match Container maxW on desktop
+                  mx="auto" // Center the grid within full width
+                  p={isMobile ? 0 : 4}
+                >
+                  {subItems.map((subItem) => (
+                    <Box
+                      key={subItem.title}
+                      as={RouterLink}
+                      to={subItem.path}
+                      color={textColor}
+                      _hover={{ color: hoverColor, bg: "gray.100" }}
+                      onClick={() => {
+                        if (isMobile && onClose) onClose();
+                        setActiveMenuIndex(null);
+                      }}
+                      p={2}
+                      flex={isMobile ? "none" : "0 0 25%"} // 4 per row (25% width each)
+                      minW={isMobile ? "auto" : 0}
+                    >
+                      <Flex align="center">
+                        {subItem.icon && <Icon as={subItem.icon} mr={2} />}
+                        <Box>
+                          <Text fontWeight="medium">{subItem.title}</Text>
+                          {subItem.description && isMobile && (
+                            <Text fontSize="xs" color="gray.500">{subItem.description}</Text>
+                          )}
+                        </Box>
+                      </Flex>
+                    </Box>
+                  ))}
+                </Flex>
               </Box>
             )}
           </Box>
@@ -222,7 +231,7 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
       flexDir={isMobile ? "column" : "row"}
       justify="center"
     >
-      {renderNavItems(finalNavStructure)} {/* Fixed typo: finalNnavStructure -> finalNavStructure */}
+      {renderNavItems(finalNavStructure)}
     </Flex>
   );
 };
