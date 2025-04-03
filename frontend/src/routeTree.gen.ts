@@ -31,6 +31,7 @@ import { Route as LayoutUseCasesNewsAggregationImport } from './routes/_layout/u
 import { Route as LayoutUseCasesFinancialDataCollectionImport } from './routes/_layout/use-cases/financial-data-collection'
 import { Route as LayoutUseCasesEcommercePriceMonitoringImport } from './routes/_layout/use-cases/ecommerce-price-monitoring'
 import { Route as LayoutUseCasesCompetitorAnalysisImport } from './routes/_layout/use-cases/competitor-analysis'
+import { Route as LayoutUseCasesAsiaPacificImport } from './routes/_layout/use-cases/asia-pacific'
 import { Route as LayoutToolsSchedulerImport } from './routes/_layout/tools/scheduler'
 import { Route as LayoutToolsProxyDashboardImport } from './routes/_layout/tools/proxy-dashboard'
 import { Route as LayoutToolsHtmlScraperImport } from './routes/_layout/tools/html-scraper'
@@ -185,6 +186,12 @@ const LayoutUseCasesCompetitorAnalysisRoute =
     path: '/use-cases/competitor-analysis',
     getParentRoute: () => LayoutRoute,
   } as any)
+
+const LayoutUseCasesAsiaPacificRoute = LayoutUseCasesAsiaPacificImport.update({
+  id: '/use-cases/asia-pacific',
+  path: '/use-cases/asia-pacific',
+  getParentRoute: () => LayoutRoute,
+} as any)
 
 const LayoutToolsSchedulerRoute = LayoutToolsSchedulerImport.update({
   id: '/tools/scheduler',
@@ -607,6 +614,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LayoutToolsSchedulerImport
       parentRoute: typeof LayoutImport
     }
+    '/_layout/use-cases/asia-pacific': {
+      id: '/_layout/use-cases/asia-pacific'
+      path: '/use-cases/asia-pacific'
+      fullPath: '/use-cases/asia-pacific'
+      preLoaderRoute: typeof LayoutUseCasesAsiaPacificImport
+      parentRoute: typeof LayoutImport
+    }
     '/_layout/use-cases/competitor-analysis': {
       id: '/_layout/use-cases/competitor-analysis'
       path: '/use-cases/competitor-analysis'
@@ -705,6 +719,7 @@ interface LayoutRouteChildren {
   LayoutToolsHtmlScraperRoute: typeof LayoutToolsHtmlScraperRoute
   LayoutToolsProxyDashboardRoute: typeof LayoutToolsProxyDashboardRoute
   LayoutToolsSchedulerRoute: typeof LayoutToolsSchedulerRoute
+  LayoutUseCasesAsiaPacificRoute: typeof LayoutUseCasesAsiaPacificRoute
   LayoutUseCasesCompetitorAnalysisRoute: typeof LayoutUseCasesCompetitorAnalysisRoute
   LayoutUseCasesEcommercePriceMonitoringRoute: typeof LayoutUseCasesEcommercePriceMonitoringRoute
   LayoutUseCasesFinancialDataCollectionRoute: typeof LayoutUseCasesFinancialDataCollectionRoute
@@ -753,6 +768,7 @@ const LayoutRouteChildren: LayoutRouteChildren = {
   LayoutToolsHtmlScraperRoute: LayoutToolsHtmlScraperRoute,
   LayoutToolsProxyDashboardRoute: LayoutToolsProxyDashboardRoute,
   LayoutToolsSchedulerRoute: LayoutToolsSchedulerRoute,
+  LayoutUseCasesAsiaPacificRoute: LayoutUseCasesAsiaPacificRoute,
   LayoutUseCasesCompetitorAnalysisRoute: LayoutUseCasesCompetitorAnalysisRoute,
   LayoutUseCasesEcommercePriceMonitoringRoute:
     LayoutUseCasesEcommercePriceMonitoringRoute,
@@ -810,6 +826,7 @@ export interface FileRoutesByFullPath {
   '/tools/html-scraper': typeof LayoutToolsHtmlScraperRoute
   '/tools/proxy-dashboard': typeof LayoutToolsProxyDashboardRoute
   '/tools/scheduler': typeof LayoutToolsSchedulerRoute
+  '/use-cases/asia-pacific': typeof LayoutUseCasesAsiaPacificRoute
   '/use-cases/competitor-analysis': typeof LayoutUseCasesCompetitorAnalysisRoute
   '/use-cases/ecommerce-price-monitoring': typeof LayoutUseCasesEcommercePriceMonitoringRoute
   '/use-cases/financial-data-collection': typeof LayoutUseCasesFinancialDataCollectionRoute
@@ -857,6 +874,7 @@ export interface FileRoutesByTo {
   '/tools/html-scraper': typeof LayoutToolsHtmlScraperRoute
   '/tools/proxy-dashboard': typeof LayoutToolsProxyDashboardRoute
   '/tools/scheduler': typeof LayoutToolsSchedulerRoute
+  '/use-cases/asia-pacific': typeof LayoutUseCasesAsiaPacificRoute
   '/use-cases/competitor-analysis': typeof LayoutUseCasesCompetitorAnalysisRoute
   '/use-cases/ecommerce-price-monitoring': typeof LayoutUseCasesEcommercePriceMonitoringRoute
   '/use-cases/financial-data-collection': typeof LayoutUseCasesFinancialDataCollectionRoute
@@ -906,6 +924,7 @@ export interface FileRoutesById {
   '/_layout/tools/html-scraper': typeof LayoutToolsHtmlScraperRoute
   '/_layout/tools/proxy-dashboard': typeof LayoutToolsProxyDashboardRoute
   '/_layout/tools/scheduler': typeof LayoutToolsSchedulerRoute
+  '/_layout/use-cases/asia-pacific': typeof LayoutUseCasesAsiaPacificRoute
   '/_layout/use-cases/competitor-analysis': typeof LayoutUseCasesCompetitorAnalysisRoute
   '/_layout/use-cases/ecommerce-price-monitoring': typeof LayoutUseCasesEcommercePriceMonitoringRoute
   '/_layout/use-cases/financial-data-collection': typeof LayoutUseCasesFinancialDataCollectionRoute
@@ -956,6 +975,7 @@ export interface FileRouteTypes {
     | '/tools/html-scraper'
     | '/tools/proxy-dashboard'
     | '/tools/scheduler'
+    | '/use-cases/asia-pacific'
     | '/use-cases/competitor-analysis'
     | '/use-cases/ecommerce-price-monitoring'
     | '/use-cases/financial-data-collection'
@@ -1002,6 +1022,7 @@ export interface FileRouteTypes {
     | '/tools/html-scraper'
     | '/tools/proxy-dashboard'
     | '/tools/scheduler'
+    | '/use-cases/asia-pacific'
     | '/use-cases/competitor-analysis'
     | '/use-cases/ecommerce-price-monitoring'
     | '/use-cases/financial-data-collection'
@@ -1049,6 +1070,7 @@ export interface FileRouteTypes {
     | '/_layout/tools/html-scraper'
     | '/_layout/tools/proxy-dashboard'
     | '/_layout/tools/scheduler'
+    | '/_layout/use-cases/asia-pacific'
     | '/_layout/use-cases/competitor-analysis'
     | '/_layout/use-cases/ecommerce-price-monitoring'
     | '/_layout/use-cases/financial-data-collection'
@@ -1120,6 +1142,7 @@ export const routeTree = rootRoute
         "/_layout/tools/html-scraper",
         "/_layout/tools/proxy-dashboard",
         "/_layout/tools/scheduler",
+        "/_layout/use-cases/asia-pacific",
         "/_layout/use-cases/competitor-analysis",
         "/_layout/use-cases/ecommerce-price-monitoring",
         "/_layout/use-cases/financial-data-collection",
@@ -1272,6 +1295,10 @@ export const routeTree = rootRoute
     },
     "/_layout/tools/scheduler": {
       "filePath": "_layout/tools/scheduler.tsx",
+      "parent": "/_layout"
+    },
+    "/_layout/use-cases/asia-pacific": {
+      "filePath": "_layout/use-cases/asia-pacific.tsx",
       "parent": "/_layout"
     },
     "/_layout/use-cases/competitor-analysis": {

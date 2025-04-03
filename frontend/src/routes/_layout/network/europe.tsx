@@ -379,10 +379,10 @@ function EuropeProxiesPage() {
         </Box>
       </Box>
       
-      <Box py={16} bg="white">
+      {/* <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h3" size="lg" mb={8} fontWeight="medium">
-            Powered by Advanced Web Technologies
+            Powered by Familiar Technologies
           </Heading>
           <Flex justify="center" gap={8} flexWrap="wrap">
             <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/python.png" alt="Python" boxSize="50px" />
@@ -402,7 +402,7 @@ function EuropeProxiesPage() {
             <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/typescript.png" alt="TypeScript" boxSize="50px" />
           </Flex>
         </Box>
-      </Box>
+      </Box> */}
       
       {/* Footer */}
       <Footer />
