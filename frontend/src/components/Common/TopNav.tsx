@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import {
   Box,
   Flex,
@@ -7,17 +7,9 @@ import {
   IconButton,
   Image,
   Link,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuGroup,
-  MenuDivider,
   Button,
-  Tooltip,
   useDisclosure,
   Container,
-  Portal,
 } from "@chakra-ui/react";
 import { useQueryClient } from "@tanstack/react-query";
 import { Link as RouterLink } from "@tanstack/react-router";
@@ -25,7 +17,6 @@ import {
   FiLogOut, 
   FiMenu, 
   FiUsers, 
-  FiSearch, 
   FiChevronDown, 
   FiUser,
   FiDatabase,
@@ -47,6 +38,7 @@ import Logo from "/assets/images/data-proxy-logo.png";
 import type { UserPublic } from "../../client";
 import useAuth from "../../hooks/useAuth";
 
+// Interfaces and navStructure remain unchanged (lines 62-153 from your original code)
 interface NavItem {
   title: string;
   icon?: any;
@@ -73,30 +65,10 @@ const navStructure: NavItem[] = [
     icon: FiTool,
     description: "Professional web scraping tools and proxies for data collection",
     subItems: [
-      { 
-        title: "HTML Scraper", 
-        path: "/tools/html-scraper",
-        description: "Extract data from HTML websites with precision",
-        icon: FiCode
-      },
-      { 
-        title: "API Scraper", 
-        path: "/tools/api-scraper",
-        description: "Collect data from APIs with reliable proxies",
-        icon: FiDatabase
-      },
-      { 
-        title: "Proxy Dashboard", 
-        path: "/tools/proxy-dashboard",
-        description: "Monitor and manage your web scraping proxies",
-        icon: FiMonitor
-      },
-      { 
-        title: "Scheduler", 
-        path: "/tools/scheduler",
-        description: "Automate your web scraping jobs with scheduling",
-        icon: FiTarget
-      }
+      { title: "HTML Scraper", path: "/tools/html-scraper", description: "Extract data from HTML websites with precision", icon: FiCode },
+      { title: "API Scraper", path: "/tools/api-scraper", description: "Collect data from APIs with reliable proxies", icon: FiDatabase },
+      { title: "Proxy Dashboard", path: "/tools/proxy-dashboard", description: "Monitor and manage your web scraping proxies", icon: FiMonitor },
+      { title: "Scheduler", path: "/tools/scheduler", description: "Automate your web scraping jobs with scheduling", icon: FiTarget }
     ]
   },
   {
@@ -104,30 +76,10 @@ const navStructure: NavItem[] = [
     icon: FiDatabase,
     description: "Data extraction and processing solutions for businesses",
     subItems: [
-      { 
-        title: "Market Research", 
-        path: "/solutions/market-research",
-        description: "Collect market data through web scraping",
-        icon: FiPieChart
-      },
-      { 
-        title: "Price Monitoring", 
-        path: "/solutions/price-monitoring",
-        description: "Track competitor pricing across websites",
-        icon: FiTrendingUp
-      },
-      { 
-        title: "AI Training Data", 
-        path: "/solutions/training-ai",
-        description: "Build machine learning datasets through web scraping",
-        icon: FiDatabase
-      },
-      { 
-        title: "Content Aggregation", 
-        path: "/solutions/content-aggregation",
-        description: "Gather content from multiple web sources",
-        icon: FiFileText
-      }
+      { title: "Market Research", path: "/solutions/market-research", description: "Collect market data through web scraping", icon: FiPieChart },
+      { title: "Price Monitoring", path: "/solutions/price-monitoring", description: "Track competitor pricing across websites", icon: FiTrendingUp },
+      { title: "AI Training Data", path: "/solutions/training-ai", description: "Build machine learning datasets through web scraping", icon: FiDatabase },
+      { title: "Content Aggregation", path: "/solutions/content-aggregation", description: "Gather content from multiple web sources", icon: FiFileText }
     ]
   },
   {
@@ -135,30 +87,10 @@ const navStructure: NavItem[] = [
     icon: FiGlobe,
     description: "Worldwide proxy infrastructure for web scraping",
     subItems: [
-      { 
-        title: "Proxy Locations", 
-        path: "/network/locations",
-        description: "Browse our global proxy server locations",
-        icon: FiGlobe
-      },
-      { 
-        title: "Network Status", 
-        path: "/network/status",
-        description: "Check real-time proxy performance and availability",
-        icon: FiMonitor
-      },
-      { 
-        title: "Security Features", 
-        path: "/network/security",
-        description: "Learn about our proxy security protocols",
-        icon: FiShield
-      },
-      { 
-        title: "Proxy Types", 
-        path: "/network/proxy-types",
-        description: "Different proxy types for various scraping needs",
-        icon: FiSettings
-      }
+      { title: "Proxy Locations", path: "/network/locations", description: "Browse our global proxy server locations", icon: FiGlobe },
+      { title: "Network Status", path: "/network/status", description: "Check real-time proxy performance and availability", icon: FiMonitor },
+      { title: "Security Features", path: "/network/security", description: "Learn about our proxy security protocols", icon: FiShield },
+      { title: "Proxy Types", path: "/network/proxy-types", description: "Different proxy types for various scraping needs", icon: FiSettings }
     ]
   },
   {
@@ -166,206 +98,15 @@ const navStructure: NavItem[] = [
     icon: FiBook,
     description: "Documentation and learning resources for web scraping",
     subItems: [
-      { 
-        title: "API Documentation", 
-        path: "https://apis.thedataproxy.com/redoc",
-        description: "Technical documentation for our scraping APIs",
-        icon: FiCode
-      },
-      { 
-        title: "Web Scraping Guides", 
-        path: "/resources/web-scraping-guides",
-        description: "Learn how to use our web scraping tools effectively",
-        icon: FiBook
-      },
-      { 
-        title: "Code Examples", 
-        path: "/resources/code-examples",
-        description: "Sample code for web scraping in multiple languages",
-        icon: FiCode
-      },
-      { 
-        title: "Support Center", 
-        path: "/resources/support-center",
-        description: "Get help with your web scraping projects",
-        icon: FiHelpCircle
-      }
+      { title: "API Documentation", path: "https://apis.thedataproxy.com/redoc", description: "Technical documentation for our scraping APIs", icon: FiCode },
+      { title: "Web Scraping Guides", path: "/resources/web-scraping-guides", description: "Learn how to use our web scraping tools effectively", icon: FiBook },
+      { title: "Code Examples", path: "/resources/code-examples", description: "Sample code for web scraping in multiple languages", icon: FiCode },
+      { title: "Support Center", path: "/resources/support-center", description: "Get help with your web scraping projects", icon: FiHelpCircle }
     ]
   }
 ];
 
-const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
-  const queryClient = useQueryClient();
-  const textColor = "gray.800";
-  const hoverColor = "blue.600";
-  const bgActive = "blue.100";
-  const activeTextColor = "blue.800";
-  const currentUser = queryClient.getQueryData<UserPublic>(["currentUser"]);
-  const [activeMenuIndex, setActiveMenuIndex] = useState<number | null>(null);
-
-  const finalNavStructure = [...navStructure];
-  if (currentUser?.is_superuser && !finalNavStructure.some(item => item.title === "Admin")) {
-    finalNavStructure.push({ title: "Admin", icon: FiUsers, path: "/admin" });
-  }
-
-  const handleMenuToggle = (index: number) => {
-    setActiveMenuIndex(activeMenuIndex === index ? null : index);
-  };
-
-  const renderNavItems = (items: NavItem[]) =>
-    items.map(({ icon, title, path, subItems, description }, index) => {
-      const isActive = activeMenuIndex === index;
-
-      if (subItems) {
-        return (
-          <Box key={title} position="relative">
-            <Flex
-              as="button"
-              px={4}
-              py={2}
-              color={textColor}
-              _hover={{ color: hoverColor }}
-              _active={{ bg: bgActive, color: activeTextColor }}
-              align="center"
-              onClick={() => handleMenuToggle(index)}
-            >
-              {icon && <Icon as={icon} mr={2} />}
-              <Text>{title}</Text>
-              <Icon as={FiChevronDown} ml={1} />
-            </Flex>
-            {isActive && (
-              <Box
-                zIndex={20}
-                w="100vw"
-                maxW="1200px"
-                bg="white"
-                borderRadius="md"
-                boxShadow="md"
-                position="fixed"
-                left="50%"
-                transform="translateX(-50%)"
-                top={{ base: "94px", md: "90px" }}
-              >
-                {description && (
-                  <Box px={3} py={2} borderBottom="1px" borderColor="gray.200">
-                    <Text fontSize="sm" color="gray.600">{description}</Text>
-                  </Box>
-                )}
-                <Flex wrap="wrap" direction={{ base: "column", md: "row" }} p={2}>
-                {subItems.map((subItem) => (
-  <Box
-    key={subItem.title}
-    as={RouterLink}
-    to={subItem.path}
-    color={textColor}
-    _hover={{ color: hoverColor, bg: "gray.100" }}
-    onClick={() => {
-      onClose?.();
-      setActiveMenuIndex(null);
-    }}
-    flex={{ base: "1 0 100%", md: "1 0 25%" }}
-    minW={0}
-    p={2}
-  >
-    <Flex align="flex-start">
-      {subItem.icon && (
-        <Icon 
-          as={subItem.icon} 
-          mr={2} 
-          boxSize={5} 
-          mt="2px" // Small top margin to align with the title text
-        />
-      )}
-      <Box>
-        <Text fontWeight="medium">{subItem.title}</Text>
-        {subItem.description && (
-          <Text fontSize="xs" color="gray.500" mt={1}>{subItem.description}</Text>
-        )}
-      </Box>
-    </Flex>
-  </Box>
-))}
-                </Flex>
-              </Box>
-            )}
-          </Box>
-        );
-      }
-
-      return (
-        <Flex
-          key={title}
-          as={RouterLink}
-          to={path}
-          px={4}
-          py={2}
-          color={textColor}
-          _hover={{ color: hoverColor }}
-          activeProps={{
-            style: { background: bgActive, color: activeTextColor },
-          }}
-          align="center"
-          onClick={onClose}
-        >
-          {icon && <Icon as={icon} mr={2} />}
-          <Text>{title}</Text>
-        </Flex>
-      );
-    });
-
-  return (
-    <Flex 
-      align="center" 
-      gap={2} 
-      flexDir={isMobile ? "column" : "row"}
-      justify="center"
-    >
-      {renderNavItems(finalNavStructure)}
-    </Flex>
-  );
-};
-
-import React from 'react';
-import {
-  Box,
-  Flex,
-  Icon,
-  Text,
-  IconButton,
-  Image,
-  Link,
-  Button,
-  useDisclosure,
-  Container,
-} from "@chakra-ui/react";
-import { useQueryClient } from "@tanstack/react-query";
-import { Link as RouterLink } from "@tanstack/react-router";
-import { 
-  FiLogOut, 
-  FiMenu, 
-  FiUsers, 
-  FiChevronDown, 
-  FiUser,
-  FiDatabase,
-  FiCode,
-  FiTool,
-  FiPieChart,
-  FiTarget,
-  FiMonitor,
-  FiGlobe,
-  FiFileText,
-  FiBook,
-  FiHelpCircle,
-  FiShield,
-  FiTrendingUp,
-  FiSettings
-} from "react-icons/fi";
-
-import Logo from "/assets/images/data-proxy-logo.png";
-import type { UserPublic } from "../../client";
-import useAuth from "../../hooks/useAuth";
-
-// NavItems component remains unchanged, assuming it’s correct from your original code
+// Original NavItems component (lines 154-298 from your first snippet)
 const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
   const queryClient = useQueryClient();
   const textColor = "gray.800";
