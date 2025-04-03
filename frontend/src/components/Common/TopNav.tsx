@@ -334,7 +334,7 @@ const TopNav = () => {
   const hoverColor = "blue.600";
 
   const handleLogout = async () => {
-    await logout(); // Ensure logout completes
+    await logout();
     onClose();
   };
 
@@ -349,167 +349,170 @@ const TopNav = () => {
       boxShadow="sm"
       w="100%"
     >
-      <Container maxW="1200px" px={0} position="relative">
+      <Container maxW="1200px" px={0}>
         <Flex 
-          align="center" 
-          justify="space-between" 
+          direction="column" // Stack header and menu vertically
           w="100%"
         >
-          <Link href="/" as={RouterLink} onClick={onClose}>
-            <Image src={Logo} alt="Web Scraping Proxy Network" h="40px" />
-          </Link>
-
-          <IconButton
-            onClick={isOpen ? onClose : onOpen} // Toggle between open and close
-            display={{ base: "flex", md: "none" }}
-            aria-label={isOpen ? "Close Menu" : "Open Menu"} // Improve accessibility
-            fontSize="20px"
-            color="blue.600"
-            icon={<FiMenu />}
-            variant="ghost"
-          />
-
+          {/* Header Row */}
           <Flex 
             align="center" 
-            gap={4} 
-            display={{ base: "none", md: "flex" }}
-            flex={1}
-            justify="center"
+            justify="space-between" 
+            w="100%"
           >
-            <NavItems />
+            <Link href="/" as={RouterLink} onClick={onClose}>
+              <Image src={Logo} alt="Web Scraping Proxy Network" h="40px" />
+            </Link>
+
+            <IconButton
+              onClick={isOpen ? onClose : onOpen} // Toggle menu
+              display={{ base: "flex", md: "none" }}
+              aria-label={isOpen ? "Close Menu" : "Open Menu"}
+              fontSize="20px"
+              color="blue.600"
+              icon={<FiMenu />}
+              variant="ghost"
+            />
+
+            <Flex 
+              align="center" 
+              gap={4} 
+              display={{ base: "none", md: "flex" }}
+              flex={1}
+              justify="center"
+            >
+              <NavItems />
+            </Flex>
+
+            <Flex 
+              align="center" 
+              display={{ base: "none", md: "flex" }}
+            >
+              {currentUser ? (
+                <Box position="relative">
+                  <Flex
+                    as="button"
+                    px={4}
+                    py={2}
+                    color={textColor}
+                    _hover={{ color: hoverColor }}
+                    onClick={onOpen}
+                  >
+                    <Icon as={FiUser} mr={2} />
+                    <Text maxW="200px" isTruncated>{currentUser.email}</Text>
+                    <Icon as={FiChevronDown} ml={1} />
+                  </Flex>
+                  {isOpen && (
+                    <Box
+                      position="absolute"
+                      right={0}
+                      top="100%"
+                      bg="white"
+                      boxShadow="md"
+                      borderRadius="md"
+                      zIndex={20}
+                    >
+                      <Box 
+                        as={RouterLink} 
+                        to="/settings" 
+                        p={2} 
+                        display="block" 
+                        _hover={{ bg: "gray.100" }}
+                        onClick={onClose}
+                      >
+                        Settings
+                      </Box>
+                      <Box 
+                        as="button" 
+                        p={2} 
+                        display="block" 
+                        _hover={{ bg: "gray.100" }} 
+                        onClick={handleLogout}
+                      >
+                        Log out
+                      </Box>
+                    </Box>
+                  )}
+                </Box>
+              ) : (
+                <Flex gap={2}>
+                  <Button as={RouterLink} to="https://dashboard.thedataproxy.com/signup" colorScheme="blue" variant="solid" size="sm">
+                    Start Free Trial
+                  </Button>
+                  <Button as={RouterLink} to="https://dashboard.thedataproxy.com/login" variant="outline" colorScheme="blue" size="sm">
+                    Login
+                  </Button>
+                </Flex>
+              )}
+            </Flex>
           </Flex>
 
-          <Flex 
-            align="center" 
-            display={{ base: "none", md: "flex" }}
+          {/* Mobile Menu - Shifts content instead of overlapping */}
+          <Box
+            display={{ base: isOpen ? "block" : "none", md: "none" }} // Only visible on mobile when open
+            bg="white"
+            boxShadow="md"
+            p={4}
+            w="100%" // Full width to match container
           >
-            {currentUser ? (
-              <Box position="relative">
-                <Flex
-                  as="button"
-                  px={4}
-                  py={2}
-                  color={textColor}
-                  _hover={{ color: hoverColor }}
-                  onClick={onOpen}
-                >
-                  <Icon as={FiUser} mr={2} />
-                  <Text maxW="200px" isTruncated>{currentUser.email}</Text>
-                  <Icon as={FiChevronDown} ml={1} />
-                </Flex>
-                {isOpen && (
-                  <Box
-                    position="absolute"
-                    right={0}
-                    top="100%"
-                    bg="white"
-                    boxShadow="md"
-                    borderRadius="md"
-                    zIndex={20}
-                  >
-                    <Box 
-                      as={RouterLink} 
-                      to="/settings" 
-                      p={2} 
-                      display="block" 
-                      _hover={{ bg: "gray.100" }}
-                      onClick={onClose} // Close menu on settings click
+            <Flex flexDir="column" gap={4}>
+              <NavItems onClose={onClose} isMobile={true} />
+              {currentUser ? (
+                <>
+                  <Text color={textColor} fontSize="sm">
+                    Logged in as: {currentUser.email}
+                  </Text>
+                  <Flex flexDir="column" gap={2}>
+                    <Box
+                      as={RouterLink}
+                      to="/settings"
+                      p={2}
+                      color={textColor}
+                      _hover={{ color: hoverColor }}
+                      onClick={onClose}
                     >
                       Settings
                     </Box>
-                    <Box 
-                      as="button" 
-                      p={2} 
-                      display="block" 
-                      _hover={{ bg: "gray.100" }} 
+                    <Flex
+                      as="button"
                       onClick={handleLogout}
+                      color={hoverColor}
+                      fontWeight="bold"
+                      alignItems="center"
+                      gap={2}
                     >
-                      Log out
-                    </Box>
-                  </Box>
-                )}
-              </Box>
-            ) : (
-              <Flex gap={2}>
-                <Button as={RouterLink} to="https://dashboard.thedataproxy.com/signup" colorScheme="blue" variant="solid" size="sm">
-                  Start Free Trial
-                </Button>
-                <Button as={RouterLink} to="https://dashboard.thedataproxy.com/login" variant="outline" colorScheme="blue" size="sm">
-                  Login
-                </Button>
-              </Flex>
-            )}
-          </Flex>
-        </Flex>
-
-        <Box
-          display={{ base: isOpen ? "block" : "none", md: "none" }}
-          position="absolute"
-          top="100%"
-          left={0}
-          right={0}
-          bg="white"
-          boxShadow="md"
-          p={4}
-          zIndex={20}
-        >
-          <Flex flexDir="column" gap={4}>
-            <NavItems onClose={onClose} isMobile={true} />
-            {currentUser ? (
-              <>
-                <Text color={textColor} fontSize="sm">
-                  Logged in as: {currentUser.email}
-                </Text>
+                      <FiLogOut />
+                      <Text>Log out</Text>
+                    </Flex>
+                  </Flex>
+                </>
+              ) : (
                 <Flex flexDir="column" gap={2}>
-                  <Box
+                  <Button
                     as={RouterLink}
-                    to="/settings"
-                    p={2}
-                    color={textColor}
-                    _hover={{ color: hoverColor }}
+                    to="https://dashboard.thedataproxy.com/signup"
+                    colorScheme="blue"
+                    variant="solid"
+                    size="sm"
                     onClick={onClose}
                   >
-                    Settings
-                  </Box>
-                  <Flex
-                    as="button"
-                    onClick={handleLogout}
-                    color={hoverColor}
-                    fontWeight="bold"
-                    alignItems="center"
-                    gap={2}
+                    Start Free Trial
+                  </Button>
+                  <Button
+                    as={RouterLink}
+                    to="https://dashboard.thedataproxy.com/login"
+                    variant="outline"
+                    colorScheme="blue"
+                    size="sm"
+                    onClick={onClose}
                   >
-                    <FiLogOut />
-                    <Text>Log out</Text>
-                  </Flex>
+                    Login
+                  </Button>
                 </Flex>
-              </>
-            ) : (
-              <Flex flexDir="column" gap={2}>
-                <Button
-                  as={RouterLink}
-                  to="https://dashboard.thedataproxy.com/signup"
-                  colorScheme="blue"
-                  variant="solid"
-                  size="sm"
-                  onClick={onClose}
-                >
-                  Start Free Trial
-                </Button>
-                <Button
-                  as={RouterLink}
-                  to="https://dashboard.thedataproxy.com/login"
-                  variant="outline"
-                  colorScheme="blue"
-                  size="sm"
-                  onClick={onClose}
-                >
-                  Login
-                </Button>
-              </Flex>
-            )}
-          </Flex>
-        </Box>
+              )}
+            </Flex>
+          </Box>
+        </Flex>
       </Container>
     </Box>
   );
