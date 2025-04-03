@@ -334,7 +334,7 @@ const TopNav = () => {
   const hoverColor = "blue.600";
 
   const handleLogout = async () => {
-    logout();
+    await logout(); // Ensure logout completes
     onClose();
   };
 
@@ -355,14 +355,14 @@ const TopNav = () => {
           justify="space-between" 
           w="100%"
         >
-          <Link href="/" as={RouterLink}>
+          <Link href="/" as={RouterLink} onClick={onClose}>
             <Image src={Logo} alt="Web Scraping Proxy Network" h="40px" />
           </Link>
 
           <IconButton
-            onClick={onOpen}
+            onClick={isOpen ? onClose : onOpen} // Toggle between open and close
             display={{ base: "flex", md: "none" }}
-            aria-label="Open Menu"
+            aria-label={isOpen ? "Close Menu" : "Open Menu"} // Improve accessibility
             fontSize="20px"
             color="blue.600"
             icon={<FiMenu />}
@@ -407,10 +407,23 @@ const TopNav = () => {
                     borderRadius="md"
                     zIndex={20}
                   >
-                    <Box as={RouterLink} to="/settings" p={2} display="block" _hover={{ bg: "gray.100" }}>
+                    <Box 
+                      as={RouterLink} 
+                      to="/settings" 
+                      p={2} 
+                      display="block" 
+                      _hover={{ bg: "gray.100" }}
+                      onClick={onClose} // Close menu on settings click
+                    >
                       Settings
                     </Box>
-                    <Box as="button" p={2} display="block" _hover={{ bg: "gray.100" }} onClick={handleLogout}>
+                    <Box 
+                      as="button" 
+                      p={2} 
+                      display="block" 
+                      _hover={{ bg: "gray.100" }} 
+                      onClick={handleLogout}
+                    >
                       Log out
                     </Box>
                   </Box>
@@ -501,5 +514,4 @@ const TopNav = () => {
     </Box>
   );
 };
-
 export default TopNav;
