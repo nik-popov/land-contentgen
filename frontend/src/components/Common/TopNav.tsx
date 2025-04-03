@@ -129,7 +129,7 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
 
       if (subItems) {
         return (
-          <Box key={title}>
+          <Box key={title} position="relative">
             <Flex
               as="button"
               px={4}
@@ -148,9 +148,16 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
             {isActive && (
               <Box
                 bg="white"
-                w="100%"
+                w={isMobile ? "100%" : "auto"}
                 pl={isMobile ? 6 : 0} // Indent sub-items only on mobile
-                py={isMobile ? 2 : 0} // Add padding on mobile for clarity
+                py={isMobile ? 2 : 0}
+                position={isMobile ? "static" : "absolute"} // Static on mobile, absolute on desktop
+                top={isMobile ? "auto" : "100%"} // Position below on desktop
+                left={isMobile ? "auto" : "50%"}
+                transform={isMobile ? "none" : "translateX(-50%)"}
+                zIndex={20}
+                boxShadow={isMobile ? "none" : "md"}
+                borderRadius="md"
               >
                 {description && isMobile && (
                   <Text px={3} py={1} fontSize="sm" color="gray.600" fontStyle="italic">
@@ -165,11 +172,11 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
                     color={textColor}
                     _hover={{ color: hoverColor, bg: "gray.100" }}
                     onClick={() => {
-                      if (isMobile && onClose) onClose(); // Only call onClose on mobile
+                      if (isMobile && onClose) onClose();
                       setActiveMenuIndex(null);
                     }}
                     p={2}
-                    px={isMobile ? 3 : 4} // Consistent padding, slightly less on mobile
+                    px={isMobile ? 3 : 4}
                     display="block"
                   >
                     <Flex align="center">
@@ -200,7 +207,7 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
           _hover={{ color: hoverColor }}
           activeProps={{ style: { background: bgActive, color: activeTextColor } }}
           align="center"
-          onClick={() => isMobile && onClose ? onClose() : null} // Only close on mobile
+          onClick={() => isMobile && onClose ? onClose() : null}
         >
           {icon && <Icon as={icon} mr={2} />}
           <Text>{title}</Text>
@@ -215,7 +222,7 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
       flexDir={isMobile ? "column" : "row"}
       justify="center"
     >
-      {renderNavItems(finalNavStructure)}
+      {renderNavItems(finalNnavStructure)}
     </Flex>
   );
 };
