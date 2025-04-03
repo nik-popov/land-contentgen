@@ -366,7 +366,7 @@ function ProxyTypesPage() {
                      <Button
                          size="lg"
                          bg="white"
-                         color="blue.500"
+                         color="teal.500"
                          _hover={{ bg: "gray.100" }}
                          as="a"
                          href="/demo-request"
