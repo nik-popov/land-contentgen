@@ -222,7 +222,7 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
       flexDir={isMobile ? "column" : "row"}
       justify="center"
     >
-      {renderNavItems(finalNnavStructure)}
+      {renderNavItems(finalNavStructure)} {/* Fixed typo: finalNnavStructure -> finalNavStructure */}
     </Flex>
   );
 };
