@@ -29,7 +29,7 @@ const Footer = () => {
 </Text>
 <Flex align="center" gap={4} mb={4}>
               <Link href="mailto:info@thedataproxy.com" color="gray.300" _hover={{ color: "orange.400" }}>
-                info@thedataproxy.com
+               Email: info@thedataproxy.com
               </Link>
               
             </Flex>
