@@ -9,6 +9,134 @@
     <!-- <link rel="stylesheet" href="/styles/global.css" /> -->
   </head>
   <body>
+    <!-- Navigation Component for SEO -->
+<header class="bg-white shadow-md">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="flex justify-between h-16">
+      <!-- Logo -->
+      <div class="flex-shrink-0 flex items-center">
+        <a href="/" class="text-xl font-bold">
+          <img src="/assets/images/logo.png" alt="Data Proxy Logo" class="h-8 w-auto">
+        </a>
+      </div>
+
+      <!-- Primary Navigation -->
+      <div class="hidden md:flex md:items-center md:space-x-8">
+        <!-- Network Section -->
+        <div class="relative group">
+          <a href="/network/locations" class="inline-flex items-center px-3 py-2 text-sm font-medium text-gray-800 hover:text-blue-600">
+            Network
+          </a>
+          <div class="absolute z-10 hidden group-hover:block mt-1 w-48 bg-white rounded-md shadow-lg py-1">
+            <a href="/network/locations" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Locations</a>
+            <a href="/network/status" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Status</a>
+            <a href="/network/proxy-types" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Proxy Types</a>
+            <a href="/network/security" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Security</a>
+            <a href="/network/asia-pacific" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Asia Pacific</a>
+            <a href="/network/europe" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Europe</a>
+            <a href="/network/middle-east" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Middle East</a>
+            <a href="/network/north-america" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">North America</a>
+            <a href="/network/south-america" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">South America</a>
+          </div>
+        </div>
+
+        <!-- Solutions Section -->
+        <div class="relative group">
+          <a href="/solutions/enterprise" class="inline-flex items-center px-3 py-2 text-sm font-medium text-gray-800 hover:text-blue-600">
+            Solutions
+          </a>
+          <div class="absolute z-10 hidden group-hover:block mt-1 w-48 bg-white rounded-md shadow-lg py-1">
+            <a href="/solutions/content-aggregation" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Content Aggregation</a>
+            <a href="/solutions/enterprise" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Enterprise</a>
+            <a href="/solutions/lead-generation" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Lead Generation</a>
+            <a href="/solutions/market-research" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Market Research</a>
+            <a href="/solutions/price-monitoring" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Price Monitoring</a>
+            <a href="/solutions/seo-monitoring" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">SEO Monitoring</a>
+            <a href="/solutions/training-ai" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Training AI</a>
+          </div>
+        </div>
+
+        <!-- Tools Section -->
+        <div class="relative group">
+          <a href="/tools/html-scraper" class="inline-flex items-center px-3 py-2 text-sm font-medium text-gray-800 hover:text-blue-600">
+            Tools
+          </a>
+          <div class="absolute z-10 hidden group-hover:block mt-1 w-48 bg-white rounded-md shadow-lg py-1">
+            <a href="/tools/api-scraper" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">API Scraper</a>
+            <a href="/tools/html-scraper" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">HTML Scraper</a>
+            <a href="/tools/proxy-dashboard" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Proxy Dashboard</a>
+            <a href="/tools/scheduler" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Scheduler</a>
+          </div>
+        </div>
+
+        <!-- Use Cases Section -->
+        <div class="relative group">
+          <a href="/use-cases/competitor-analysis" class="inline-flex items-center px-3 py-2 text-sm font-medium text-gray-800 hover:text-blue-600">
+            Use Cases
+          </a>
+          <div class="absolute z-10 hidden group-hover:block mt-1 w-64 bg-white rounded-md shadow-lg py-1">
+            <a href="/use-cases/competitor-analysis" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Competitor Analysis</a>
+            <a href="/use-cases/ecommerce-price-monitoring" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Ecommerce Price Monitoring</a>
+            <a href="/use-cases/financial-data-collection" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Financial Data Collection</a>
+            <a href="/use-cases/news-aggregation" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">News Aggregation</a>
+            <a href="/use-cases/product-data-extraction" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Product Data Extraction</a>
+            <a href="/use-cases/real-estate-data-scraping" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Real Estate Data Scraping</a>
+            <a href="/use-cases/social-media-monitoring" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Social Media Monitoring</a>
+            <a href="/use-cases/travel-fare-aggregation" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Travel Fare Aggregation</a>
+          </div>
+        </div>
+
+        <!-- Resources Section -->
+        <div class="relative group">
+          <a href="/resources/blog" class="inline-flex items-center px-3 py-2 text-sm font-medium text-gray-800 hover:text-blue-600">
+            Resources
+          </a>
+          <div class="absolute z-10 hidden group-hover:block mt-1 w-48 bg-white rounded-md shadow-lg py-1">
+            <a href="/resources/blog" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Blog</a>
+            <a href="/resources/code-examples" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Code Examples</a>
+            <a href="/resources/faq" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">FAQ</a>
+            <a href="/resources/support-center" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Support Center</a>
+            <a href="/resources/web-scraping-guides" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Web Scraping Guides</a>
+          </div>
+        </div>
+
+        <!-- Pricing -->
+        <a href="/pricing" class="inline-flex items-center px-3 py-2 text-sm font-medium text-gray-800 hover:text-blue-600">
+          Pricing
+        </a>
+
+        <!-- Contact -->
+        <a href="/contact" class="inline-flex items-center px-3 py-2 text-sm font-medium bg-blue-600 text-white rounded-md hover:bg-blue-700">
+          Contact
+        </a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <div class="md:hidden flex items-center">
+        <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <!-- Icon when menu is closed -->
+          <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Mobile menu, show/hide based on menu state -->
+  <div class="hidden md:hidden">
+    <div class="pt-2 pb-3 space-y-1">
+      <a href="/network/locations" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800">Network</a>
+      <a href="/solutions/enterprise" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800">Solutions</a>
+      <a href="/tools/html-scraper" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800">Tools</a>
+      <a href="/use-cases/competitor-analysis" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800">Use Cases</a>
+      <a href="/resources/blog" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800">Resources</a>
+      <a href="/pricing" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800">Pricing</a>
+      <a href="/contact" class="block pl-3 pr-4 py-2 border-l-4 border-blue-500 text-base font-medium text-blue-700 bg-blue-50">Contact</a>
+    </div>
+  </div>
+</header>
     <div id="root"></div>
     <script type="module" src="./src/main.tsx"></script>
   </body>
