@@ -35,6 +35,8 @@ function HeroSection() {
             SaaS proxy solutions built for large-scale data processing, extraction, LLM training and more.
           </Text>
         </VStack>
+
+        {/* Right Column: Image */}
         <Box
   w={{ base: "100%", md: "40%" }}
   display="flex"
@@ -49,6 +51,8 @@ function HeroSection() {
     objectFit="contain" // Keeps the image's aspect ratio intact
   />
 </Box>
+      </Flex>
+
       <Flex justify="center" gap={4} pt={4} pb={20}>
         <Button
           as="a"
