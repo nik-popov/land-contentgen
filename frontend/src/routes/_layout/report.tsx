@@ -425,7 +425,7 @@ function WhistleblowerReportPage() {
             <VStack align="start" spacing={2}>
               <Text><strong>Phone:</strong> +1 (855) 440-2242</Text>
               <Text><strong>Email:</strong> privacy@thedataproxy.com</Text>
-              <Text><strong>Mail:</strong> Ethics & Compliance, 99 Wall St Suite 5660, NY 10005</Text>
+              <Text><strong>Mail:</strong> 99 Wall St Suite 5660, NY 10005</Text>
             </VStack>
           </Box>
         </VStack>
