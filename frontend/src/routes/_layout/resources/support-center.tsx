@@ -80,7 +80,7 @@ function SupportCenterPage() {
             tutorials, and direct support from our team of experts.
           </Text>
           
-          <Box maxW="650px" mx="auto" mb={10}>
+          {/* <Box maxW="650px" mx="auto" mb={10}>
             <InputGroup size="lg">
               <InputLeftElement pointerEvents="none">
                 <SearchIcon color="gray.300" />
@@ -93,7 +93,7 @@ function SupportCenterPage() {
                 boxShadow="sm"
               />
             </InputGroup>
-          </Box>
+          </Box> */}
           
           <Flex justify="space-between" flexWrap="wrap" gap={6}>
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
@@ -115,11 +115,11 @@ function SupportCenterPage() {
       </Box>
       
       {/* Support Options Section */}
-      <Box py={16} bg="white">
+      {/* <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
             How Can We Help You Today?
-          </Heading>
+          </Heading> */}
           
           {/* <Grid templateColumns={{ base: "1fr", md: "1fr 1fr", lg: "1fr 1fr" }} gap={10} mt={10}> */}
             {/* <VStack align="center" spacing={5} p={8} borderRadius="md" borderWidth="1px" borderColor="gray.200">
@@ -173,8 +173,8 @@ function SupportCenterPage() {
               </Button>
             </VStack> */}
           {/* </Grid> */}
-        </Box>
-      </Box>
+        {/* </Box>
+      </Box> */}
       
       {/* Support Categories Section */}
       <Box py={16} bg="blue.50">
@@ -323,7 +323,7 @@ function SupportCenterPage() {
       
       
       {/* Support Hours Section */}
-      <Box py={16} bg="white">
+      {/* <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <SimpleGrid columns={{ base: 1, md: 2 }} gap={8}>
             <Box>
@@ -376,9 +376,6 @@ function SupportCenterPage() {
               </Text>
               
               <VStack spacing={4} align="stretch">
-                {/* <Button leftIcon={<ChatIcon />} colorScheme="blue" size="lg">
-                  Start Live Chat
-                </Button> */}
                 <Button leftIcon={<EmailIcon />} colorScheme="blue" variant="outline" size="lg">
                   Send Email Request
                 </Button>
@@ -391,7 +388,7 @@ function SupportCenterPage() {
           </SimpleGrid>
         </Box>
       </Box>
-      
+       */}
       {/* Call to Action */}
       <Box py={16} bg="blue.600" color="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
