@@ -357,9 +357,9 @@ function ProxyDashboard() {
               color="white"
               _hover={{ bg: "teal.600" }}
               as="a"
-              href="https://dashboard.thedataproxy.com/signup"
-            >
-              Start Free Trial
+              href="/contact-sales"
+              >
+               Contact Sales
             </Button>
           </Flex>
         </Box>

@@ -357,9 +357,9 @@ function HTMLScraperPage() {
               color="white"
               _hover={{ bg: "blue.600" }}
               as="a"
-              href="https://dashboard.thedataproxy.com/api-signup"
-            >
-              Get API Key
+              href="/contact-sales"
+              >
+               Contact Sales
             </Button>
           </Flex>
         </Box>
