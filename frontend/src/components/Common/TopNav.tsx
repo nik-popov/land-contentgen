@@ -148,17 +148,27 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
             {isActive && (
               <Box
                 bg="white"
-                w={isMobile ? "100%" : "100vw"} // Full viewport width on desktop
+                w={isMobile ? "100%" : "100%"} // Full width within Container on desktop
                 pl={isMobile ? 6 : 0}
                 py={isMobile ? 2 : 4}
                 position={isMobile ? "static" : "absolute"}
                 top={isMobile ? "auto" : "100%"}
-                left={isMobile ? "auto" : 0} // Full width from left edge
-                transform={isMobile ? "none" : "translateX(0)"}
+                left={isMobile ? "auto" : "50%"} // Center within Container
+                transform={isMobile ? "none" : "translateX(-50%)"} // Center align
                 zIndex={20}
                 boxShadow={isMobile ? "none" : "md"}
                 borderRadius={isMobile ? 0 : "md"}
               >
+                {/* Title and Subtitle on Desktop */}
+                {!isMobile && (
+                  <Box px={4} py={2} borderBottom="1px" borderColor="gray.200">
+                    <Text fontWeight="bold" fontSize="lg">{title}</Text>
+                    {description && (
+                      <Text fontSize="sm" color="gray.600" mt={1}>{description}</Text>
+                    )}
+                  </Box>
+                )}
+                {/* Subtitle on Mobile */}
                 {description && isMobile && (
                   <Text px={3} py={1} fontSize="sm" color="gray.600" fontStyle="italic">
                     {description}
@@ -167,9 +177,9 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
                 <Flex
                   direction={isMobile ? "column" : "row"}
                   wrap={isMobile ? "nowrap" : "wrap"}
-                  justify={isMobile ? "flex-start" : "center"}
-                  maxW={isMobile ? "100%" : "1200px"} // Match Container maxW on desktop
-                  mx="auto" // Center the grid within full width
+                  justify={isMobile ? "flex-start" : "space-between"}
+                  maxW={isMobile ? "100%" : "1200px"} // Match Container maxW
+                  mx="auto" // Center the grid
                   p={isMobile ? 0 : 4}
                 >
                   {subItems.map((subItem) => (
@@ -184,14 +194,17 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
                         setActiveMenuIndex(null);
                       }}
                       p={2}
-                      flex={isMobile ? "none" : "0 0 25%"} // 4 per row (25% width each)
+                      flex={isMobile ? "none" : "0 0 25%"} // 4 per row on desktop
                       minW={isMobile ? "auto" : 0}
                     >
                       <Flex align="center">
                         {subItem.icon && <Icon as={subItem.icon} mr={2} />}
                         <Box>
                           <Text fontWeight="medium">{subItem.title}</Text>
-                          {subItem.description && isMobile && (
+                          {!isMobile && subItem.description && (
+                            <Text fontSize="xs" color="gray.500">{subItem.description}</Text>
+                          )}
+                          {isMobile && subItem.description && (
                             <Text fontSize="xs" color="gray.500">{subItem.description}</Text>
                           )}
                         </Box>

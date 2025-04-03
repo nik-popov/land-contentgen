@@ -245,8 +245,8 @@ function NetworkStatusPage() {
           <Flex justify="center" gap={6} flexWrap="wrap">
           <Button
               size="lg"
-              bg="white"
-              color="blue.500"
+              bg="blue.500"
+              color="white"
               _hover={{ bg: "gray.100" }}
               as="a"
               href="/demo-request"
@@ -256,8 +256,8 @@ function NetworkStatusPage() {
             
             <Button
               size="lg"
-              bg="white"
-              color="purple.500"
+              bg="blue.500"
+              color="white"
               _hover={{ bg: "gray.100" }}
               as="a"
               href="/contact-sales"
