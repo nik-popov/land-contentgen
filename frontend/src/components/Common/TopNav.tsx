@@ -148,12 +148,15 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
             {isActive && (
               <Box
                 bg="white"
-                w={isMobile ? "100%" : "100vw"} // Full viewport width on desktop
+                w={isMobile ? "100%" : "100%"} // Full width within Container on desktop
+                maxW={isMobile ? "100%" : "1200px"} // Match Container maxW
+                mx={isMobile ? 0 : "auto"} // Center on desktop
                 pl={isMobile ? 6 : 0}
                 py={isMobile ? 2 : 4}
-                position={isMobile ? "static" : "fixed"} // Fixed on desktop to lock position
-                top={isMobile ? "auto" : "60px"} // Fixed below header (adjust based on header height)
-                left={0} // Full width from left edge
+                position={isMobile ? "static" : "fixed"}
+                top={isMobile ? "auto" : "60px"} // Below header (adjust if needed)
+                left={isMobile ? "auto" : "50%"} // Center within viewport
+                transform={isMobile ? "none" : "translateX(-50%)"} // Center align
                 zIndex={20}
                 boxShadow={isMobile ? "none" : "md"}
                 borderRadius={isMobile ? 0 : "md"}
@@ -169,8 +172,6 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
                   direction={isMobile ? "column" : "row"}
                   wrap={isMobile ? "nowrap" : "wrap"}
                   justify={isMobile ? "flex-start" : "space-between"}
-                  maxW={isMobile ? "100%" : "1200px"} // Center content within full width
-                  mx="auto" // Center the grid
                   p={isMobile ? 0 : 4}
                 >
                   {subItems.map((subItem) => (
