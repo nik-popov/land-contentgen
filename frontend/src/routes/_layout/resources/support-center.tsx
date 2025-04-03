@@ -121,7 +121,7 @@ function SupportCenterPage() {
             How Can We Help You Today?
           </Heading>
           
-          <Grid templateColumns={{ base: "1fr", md: "1fr 1fr", lg: "1fr 1fr" }} gap={10} mt={10}>
+          {/* <Grid templateColumns={{ base: "1fr", md: "1fr 1fr", lg: "1fr 1fr" }} gap={10} mt={10}> */}
             {/* <VStack align="center" spacing={5} p={8} borderRadius="md" borderWidth="1px" borderColor="gray.200">
               <Box bg="blue.50" p={4} borderRadius="full">
                 <ChatIcon boxSize={8} color="blue.600" />
@@ -139,7 +139,7 @@ function SupportCenterPage() {
               </Button>
             </VStack>
              */}
-            <VStack align="center" spacing={5} p={8} borderRadius="md" borderWidth="1px" borderColor="gray.200">
+            {/* <VStack align="center" spacing={5} p={8} borderRadius="md" borderWidth="1px" borderColor="gray.200">
               <Box bg="blue.50" p={4} borderRadius="full">
                 <EmailIcon boxSize={8} color="blue.600" />
               </Box>
@@ -154,9 +154,9 @@ function SupportCenterPage() {
               <Button colorScheme="blue" variant="solid" width="full">
                 Send Email
               </Button>
-            </VStack>
+            </VStack> */}
             
-            <VStack align="center" spacing={5} p={8} borderRadius="md" borderWidth="1px" borderColor="gray.200">
+            {/* <VStack align="center" spacing={5} p={8} borderRadius="md" borderWidth="1px" borderColor="gray.200">
               <Box bg="blue.50" p={4} borderRadius="full">
                 <PhoneIcon boxSize={8} color="blue.600" />
               </Box>
@@ -171,8 +171,8 @@ function SupportCenterPage() {
               <Button colorScheme="blue" variant="solid" width="full">
                 Book Appointment
               </Button>
-            </VStack>
-          </Grid>
+            </VStack> */}
+          {/* </Grid> */}
         </Box>
       </Box>
       
