@@ -195,7 +195,7 @@ function SolutionsPage() {
                 <Text fontSize="sm" color="gray.600" flex="1">
                   {industry.use}
                 </Text>
-                <Link 
+                {/* <Link 
                   href={`/industries/${industry.name.toLowerCase().replace(/\s+/g, '-')}`} 
                   color="purple.500" 
                   fontWeight="medium"
@@ -203,48 +203,10 @@ function SolutionsPage() {
                   _hover={{ textDecoration: "underline" }}
                 >
                   Learn more
-                </Link>
+                </Link> */}
               </Flex>
             ))}
           </SimpleGrid>
-        </Box>
-      </Box>
-      
-      {/* Client Success Section */}
-      <Box py={16} bg="blue.50">
-        <Box maxW="1200px" mx="auto" px={4}>
-          <Heading as="h2" size="xl" textAlign="center" mb={12} fontWeight="medium">
-            Client Success Stories
-          </Heading>
-          
-          <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
-            {testimonials.map((testimonial, index) => (
-              <Box key={index} p={8} bg="white" borderRadius="md" boxShadow="md">
-                <Text fontSize="lg" fontStyle="italic" mb={6}>
-                  "{testimonial.quote}"
-                </Text>
-                <Text fontWeight="bold">
-                  {testimonial.company}
-                </Text>
-                <Text fontSize="sm" color="gray.600">
-                  {testimonial.industry}
-                </Text>
-              </Box>
-            ))}
-          </Grid>
-          
-          <Flex justify="center" mt={12}>
-            <Button 
-              as="a"
-              href="/case-studies"
-              size="lg"
-              variant="outline"
-              colorScheme="purple"
-              rightIcon={<ArrowForwardIcon />}
-            >
-              Explore All Case Studies
-            </Button>
-          </Flex>
         </Box>
       </Box>
       
@@ -269,7 +231,7 @@ function SolutionsPage() {
                 <Text color="gray.600">
                   Accelerate your machine learning initiatives with specialized infrastructure designed for high-performance AI training.
                 </Text>
-                <Link 
+                {/* <Link 
                   href="/solutions/training-ai" 
                   color="purple.500" 
                   fontWeight="medium"
@@ -277,7 +239,7 @@ function SolutionsPage() {
                   _hover={{ textDecoration: "underline" }}
                 >
                   Learn more →
-                </Link>
+                </Link> */}
               </VStack>
             </Box>
             
@@ -294,7 +256,7 @@ function SolutionsPage() {
                 <Text color="gray.600">
                   Centralize your data assets in a scalable, high-performance warehouse optimized for analytics and business intelligence.
                 </Text>
-                <Link 
+                {/* <Link 
                   href="/solutions/data-warehousing" 
                   color="purple.500" 
                   fontWeight="medium"
@@ -302,7 +264,7 @@ function SolutionsPage() {
                   _hover={{ textDecoration: "underline" }}
                 >
                   Learn more →
-                </Link>
+                </Link> */}
               </VStack>
             </Box>
             
@@ -319,7 +281,7 @@ function SolutionsPage() {
                 <Text color="gray.600">
                   Deploy and manage containerized applications at scale with our enterprise Kubernetes solutions.
                 </Text>
-                <Link 
+                {/* <Link 
                   href="/solutions/kubernetes" 
                   color="purple.500" 
                   fontWeight="medium"
@@ -327,7 +289,7 @@ function SolutionsPage() {
                   _hover={{ textDecoration: "underline" }}
                 >
                   Learn more →
-                </Link>
+                </Link> */}
               </VStack>
             </Box>
           </Grid>
@@ -417,9 +379,9 @@ function SolutionsPage() {
               _hover={{ bg: "purple.500" }}
               width={{ base: "full", md: "auto" }}
               as="a"
-              href="/solutions/compare"
+              href="/contact-sales"
             >
-              Compare Solutions
+              Contact Sales
             </Button>
           </Flex>
         </Box>
