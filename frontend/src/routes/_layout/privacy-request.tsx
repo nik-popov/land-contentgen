@@ -39,18 +39,69 @@ function PrivacyRequestPage() {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [consentChecked, setConsentChecked] = useState(false);
+  const [deletionReason, setDeletionReason] = useState('1');
+  const [verificationMethod, setVerificationMethod] = useState('email');
   const toast = useToast();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission with a delay
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      const formData = {
+        full_name: e.target.fullName.value,
+        email: e.target.email.value,
+        phone_number: e.target.phoneNumber.value || null,
+        account_id: e.target.accountId.value || null,
+        request_type: requestType,
+        verification_method: verificationMethod,
+        additional_details: e.target.additionalDetails?.value || null
+      };
+      
+      // Add request-type specific fields
+      if (requestType === 'rectification') {
+        formData.correction_details = e.target.correctionDetails.value;
+      } else if (requestType === 'erasure') {
+        formData.deletion_reason = deletionReason;
+        formData.deletion_details = e.target.deletionDetails?.value || null;
+      }
+      
+      console.log("Form data being submitted:", formData);
+
+      const response = await fetch('https://apis.thedataproxy.com/api/v1/utils/privacy-request/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to submit privacy request');
+      }
+
+      const data = await response.json();
       setFormSubmitted(true);
       window.scrollTo(0, 0);
-    }, 1500);
+      toast({
+        title: "Success",
+        description: data.message,
+        status: "success",
+        duration: 5000,
+        isClosable: true,
+      });
+    } catch (error) {
+      console.error("Form submission error:", error);
+      toast({
+        title: "Error",
+        description: error.message || "An error occurred while submitting your request",
+        status: "error",
+        duration: 5000,
+        isClosable: true,
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (formSubmitted) {
@@ -97,7 +148,6 @@ function PrivacyRequestPage() {
             <Text fontSize="lg" color="gray.600">
               Your privacy matters to us. Use this form to submit formal requests regarding your personal data.
             </Text>
-        
           </HStack>
 
           {/* Introduction */}
@@ -132,12 +182,12 @@ function PrivacyRequestPage() {
               
               <FormControl isRequired>
                 <FormLabel>Full Name</FormLabel>
-                <Input type="text" placeholder="Enter your full name" />
+                <Input name="fullName" type="text" placeholder="Enter your full name" />
               </FormControl>
               
               <FormControl isRequired>
                 <FormLabel>Email Address</FormLabel>
-                <Input type="email" placeholder="Enter your email address" />
+                <Input name="email" type="email" placeholder="Enter your email address" />
                 <FormHelperText>
                   We'll use this email to communicate about your request and send the requested information.
                 </FormHelperText>
@@ -146,12 +196,12 @@ function PrivacyRequestPage() {
               <Flex w="full" direction={{ base: "column", md: "row" }} gap={4}>
                 <FormControl>
                   <FormLabel>Phone Number</FormLabel>
-                  <Input type="tel" placeholder="Optional" />
+                  <Input name="phoneNumber" type="tel" placeholder="Optional" />
                 </FormControl>
                 
                 <FormControl>
                   <FormLabel>Account ID or Username (if applicable)</FormLabel>
-                  <Input type="text" placeholder="If you have an account with us" />
+                  <Input name="accountId" type="text" placeholder="If you have an account with us" />
                 </FormControl>
               </Flex>
               
@@ -165,6 +215,7 @@ function PrivacyRequestPage() {
               <FormControl isRequired>
                 <FormLabel>What type of privacy request would you like to submit?</FormLabel>
                 <Select 
+                  name="requestType"
                   placeholder="Select request type" 
                   value={requestType}
                   onChange={(e) => setRequestType(e.target.value)}
@@ -183,14 +234,18 @@ function PrivacyRequestPage() {
               {requestType === 'rectification' && (
                 <FormControl>
                   <FormLabel>What information needs to be corrected?</FormLabel>
-                  <Textarea placeholder="Please specify which information is incorrect and what it should be corrected to" rows={4} />
+                  <Textarea name="correctionDetails" placeholder="Please specify which information is incorrect and what it should be corrected to" rows={4} />
                 </FormControl>
               )}
               
               {requestType === 'erasure' && (
                 <FormControl>
                   <FormLabel>Reason for deletion request</FormLabel>
-                  <RadioGroup defaultValue="1">
+                  <RadioGroup 
+                    name="deletionReason"
+                    value={deletionReason} 
+                    onChange={setDeletionReason}
+                  >
                     <Stack direction="column" spacing={2}>
                       <Radio value="1">I no longer wish to use The Data Proxy services</Radio>
                       <Radio value="2">I'm concerned about my privacy</Radio>
@@ -198,7 +253,12 @@ function PrivacyRequestPage() {
                       <Radio value="4">Other reason (please specify below)</Radio>
                     </Stack>
                   </RadioGroup>
-                  <Textarea mt={4} placeholder="Additional information about your deletion request" rows={4} />
+                  <Textarea 
+                    name="deletionDetails" 
+                    mt={4} 
+                    placeholder="Additional information about your deletion request" 
+                    rows={4} 
+                  />
                 </FormControl>
               )}
               
@@ -206,6 +266,7 @@ function PrivacyRequestPage() {
                 <FormControl>
                   <FormLabel>Additional Information</FormLabel>
                   <Textarea 
+                    name="additionalDetails"
                     placeholder="Please provide any additional details that will help us process your request" 
                     rows={4}
                   />
@@ -225,7 +286,11 @@ function PrivacyRequestPage() {
               </Text>
               
               <FormControl isRequired>
-                <RadioGroup defaultValue="email">
+                <RadioGroup 
+                  name="verificationMethod"
+                  value={verificationMethod} 
+                  onChange={setVerificationMethod}
+                >
                   <Stack direction="column" spacing={4}>
                     <Radio value="email">
                       <Box>
@@ -272,6 +337,7 @@ function PrivacyRequestPage() {
               
               <FormControl isRequired>
                 <Checkbox 
+                  name="consent"
                   size="md" 
                   colorScheme="blue"
                   isChecked={consentChecked}

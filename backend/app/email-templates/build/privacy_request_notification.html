@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>New Privacy Request Notification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .header {
+            background-color: #3182ce;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .content {
+            padding: 20px;
+        }
+        .priority {
+            background-color: #fed7d7;
+            border-left: 4px solid #e53e3e;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .request-details {
+            background-color: #f0f7ff;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #e2e8f0;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f8f9fa;
+            width: 30%;
+        }
+        .request-type-header {
+            font-weight: bold;
+            color: #2b6cb0;
+            font-size: 18px;
+        }
+        .details-section {
+            background-color: #f8f9fa;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>New Privacy Request</h1>
+    </div>
+    
+    <div class="content">
+        <p class="request-type-header">{{ request_type_readable }} Request - #{{ request_ref }}</p>
+        
+        <div class="request-details">
+            <p><strong>Date Received:</strong> {{ submission_date }}</p>
+            <p><strong>Response Due By:</strong> {{ submission_date|add:"30 days"|date:"Y-m-d" }}</p>
+        </div>
+        
+        {% if request_type == "erasure" %}
+        <div class="priority">
+            <p><strong>⚠️ DELETE REQUEST ALERT</strong></p>
+            <p>This is a data deletion request that requires prompt attention. Please review and assign this request to a team member within 24 hours.</p>
+        </div>
+        {% endif %}
+        
+        <h2>Requestor Information</h2>
+        
+        <table>
+            <tr>
+                <th>Full Name</th>
+                <td>{{ full_name }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td><a href="mailto:{{ email }}">{{ email }}</a></td>
+            </tr>
+            {% if phone_number %}
+            <tr>
+                <th>Phone</th>
+                <td>{{ phone_number }}</td>
+            </tr>
+            {% endif %}
+            {% if account_id %}
+            <tr>
+                <th>Account ID</th>
+                <td>{{ account_id }}</td>
+            </tr>
+            {% endif %}
+            <tr>
+                <th>Verification Method</th>
+                <td>
+                    {% if verification_method == "email" %}
+                        Email Verification
+                    {% elif verification_method == "account" %}
+                        Account Login
+                    {% elif verification_method == "document" %}
+                        ID Verification
+                    {% else %}
+                        {{ verification_method }}
+                    {% endif %}
+                </td>
+            </tr>
+        </table>
+        
+        <h2>Request Details</h2>
+        
+        {% if request_type == "rectification" and correction_details %}
+        <div class="details-section">
+            <h3>Correction Requested:</h3>
+            <p>{{ correction_details }}</p>
+        </div>
+        {% endif %}
+        
+        {% if request_type == "erasure" %}
+        <div class="details-section">
+            <h3>Deletion Reason:</h3>
+            <p>
+                {% if deletion_reason == "1" %}
+                    No longer wishes to use The Data Proxy services
+                {% elif deletion_reason == "2" %}
+                    Concerned about privacy
+                {% elif deletion_reason == "3" %}
+                    Did not authorize the collection of data
+                {% elif deletion_reason == "4" %}
+                    Other reason (see details below)
+                {% else %}
+                    {{ deletion_reason }}
+                {% endif %}
+            </p>
+            
+            {% if deletion_details %}
+            <h3>Additional Details:</h3>
+            <p>{{ deletion_details }}</p>
+            {% endif %}
+        </div>
+        {% endif %}
+        
+        {% if additional_details %}
+        <div class="details-section">
+            <h3>Additional Information Provided:</h3>
+            <p>{{ additional_details }}</p>
+        </div>
+        {% endif %}
+        
+        <h2>Next Steps</h2>
+        
+        <ol>
+            <li>Assign this request to a team member in the privacy request tracking system</li>
+            <li>Verify the identity of the requestor using the selected verification method</li>
+            <li>Process the request according to our privacy request procedures</li>
+            <li>Prepare a response within the required timeframe (30 days from receipt)</li>
+            <li>Maintain a log of all actions taken on this request</li>
+            <li>Update the request status in the privacy management system</li>
+        </ol>
+        
+        <p>Please refer to our internal privacy request handling procedures for detailed guidance.</p>
+        
+        <p><strong>Remember:</strong> Privacy requests must be handled within strict time limits. If you anticipate any delays in processing this request, notify the Data Protection Officer immediately.</p>
+        
+        <p>This request has been automatically logged in our privacy management system.</p>
+    </div>
+</body>
+</html>

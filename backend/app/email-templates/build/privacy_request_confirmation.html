@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Privacy Request Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .header {
+            background-color: #4299e1;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .content {
+            padding: 20px;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 15px;
+            text-align: center;
+            font-size: 12px;
+            color: #6c757d;
+        }
+        .info-section {
+            background-color: #f0f7ff;
+            border-left: 4px solid #4299e1;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .request-id {
+            font-weight: bold;
+            color: #2b6cb0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #e2e8f0;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Privacy Request Confirmation</h1>
+    </div>
+    
+    <div class="content">
+        <p>Dear {{ full_name }},</p>
+        
+        <p>Thank you for submitting your privacy request. We have received your request and will process it in accordance with applicable data protection regulations.</p>
+        
+        <div class="info-section">
+            <p>Your request reference number is: <span class="request-id">{{ request_ref }}</span></p>
+            <p>Please keep this number for future reference.</p>
+        </div>
+        
+        <h2>Request Details</h2>
+        
+        <table>
+            <tr>
+                <th>Request Type</th>
+                <td>{{ request_type_readable }}</td>
+            </tr>
+            <tr>
+                <th>Submission Date</th>
+                <td>{{ submission_date }}</td>
+            </tr>
+            <tr>
+                <th>Verification Method</th>
+                <td>
+                    {% if verification_method == "email" %}
+                        Email Verification
+                    {% elif verification_method == "account" %}
+                        Account Login
+                    {% elif verification_method == "document" %}
+                        ID Verification
+                    {% else %}
+                        {{ verification_method }}
+                    {% endif %}
+                </td>
+            </tr>
+            {% if account_id %}
+            <tr>
+                <th>Account ID</th>
+                <td>{{ account_id }}</td>
+            </tr>
+            {% endif %}
+        </table>
+        
+        <h2>What happens next?</h2>
+        
+        <p>Our Data Protection team will review your request and may contact you for additional information or verification if needed. We aim to respond to all privacy requests within 30 days.</p>
+        
+        <p>If we need more time due to the complexity of your request, we will notify you and keep you updated on our progress.</p>
+        
+        <p>If you have any questions or need to provide additional information regarding your request, please reply to this email or contact our Data Protection team at <a href="mailto:privacy@thedataproxy.com">privacy@thedataproxy.com</a>.</p>
+        
+        <p>Thank you for your patience and understanding.</p>
+        
+        <p>Best regards,<br>
+        The Data Protection Team<br>
+        The Data Proxy</p>
+    </div>
+    
+    <div class="footer">
+        <p>This is an automated message. Please do not reply directly to this email if you need assistance.</p>
+        <p>© {{ submission_date|slice:"0:4" }} The Data Proxy. All rights reserved.</p>
+    </div>
+</body>
+</html>
