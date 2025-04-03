@@ -129,7 +129,7 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
 
       if (subItems) {
         return (
-          <Box key={title} position="relative">
+          <Box key={title} position="relative" flex={isMobile ? "none" : 1}>
             <Flex
               as="button"
               px={4}
@@ -149,10 +149,10 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
               <Box
                 bg="white"
                 w={isMobile ? "100%" : "auto"}
-                pl={isMobile ? 6 : 0} // Indent sub-items only on mobile
+                pl={isMobile ? 6 : 0}
                 py={isMobile ? 2 : 0}
-                position={isMobile ? "static" : "absolute"} // Static on mobile, absolute on desktop
-                top={isMobile ? "auto" : "100%"} // Position below on desktop
+                position={isMobile ? "static" : "absolute"}
+                top={isMobile ? "auto" : "100%"}
                 left={isMobile ? "auto" : "50%"}
                 transform={isMobile ? "none" : "translateX(-50%)"}
                 zIndex={20}
@@ -208,6 +208,7 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
           activeProps={{ style: { background: bgActive, color: activeTextColor } }}
           align="center"
           onClick={() => isMobile && onClose ? onClose() : null}
+          flex={isMobile ? "none" : 1}
         >
           {icon && <Icon as={icon} mr={2} />}
           <Text>{title}</Text>
@@ -220,9 +221,10 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
       align="center" 
       gap={2} 
       flexDir={isMobile ? "column" : "row"}
-      justify="center"
+      justify={isMobile ? "center" : "space-between"} // Full width on desktop
+      w={isMobile ? "auto" : "100%"} // Ensure full width on desktop
     >
-      {renderNavItems(finalNavStructure)} {/* Fixed typo: finalNnavStructure -> finalNavStructure */}
+      {renderNavItems(finalNavStructure)}
     </Flex>
   );
 };
@@ -272,8 +274,8 @@ const TopNav = () => {
               align="center" 
               gap={4} 
               display={{ base: "none", md: "flex" }}
-              flex={1}
-              justify="center"
+              w="100%" // Full width container
+              justify="space-between" // Distribute items across width
             >
               <NavItems /> {/* No onClose for desktop */}
             </Flex>
@@ -296,7 +298,7 @@ const TopNav = () => {
                     <Text maxW="200px" isTruncated>{currentUser.email}</Text>
                     <Icon as={FiChevronDown} ml={1} />
                   </Flex>
-                  {isOpen && (
+                  {isActive && (
                     <Box
                       position="absolute"
                       right={0}
