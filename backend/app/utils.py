@@ -37,22 +37,16 @@ def send_email(
     html_content: str = "",
 ) -> bool:
     try:
-        # Check if emails are enabled
         if not settings.emails_enabled:
             logger.warning("Email sending is disabled in settings")
             return False
             
-        # Create the email message
         message = emails.Message(
             subject=subject,
             html=html_content,
             mail_from=(settings.EMAILS_FROM_NAME, settings.EMAILS_FROM_EMAIL),
         )
         
-        # Log the email attempt
-        logger.info(f"Sending email to: {email_to} | Subject: {subject}")
-        
-        # Set up SMTP options
         smtp_options = {"host": settings.SMTP_HOST, "port": settings.SMTP_PORT}
         if settings.SMTP_TLS:
             smtp_options["tls"] = True
@@ -63,7 +57,6 @@ def send_email(
         if settings.SMTP_PASSWORD:
             smtp_options["password"] = settings.SMTP_PASSWORD
             
-        # Send the email
         response = message.send(to=email_to, smtp=smtp_options)
         
         # Log detailed response
@@ -71,7 +64,7 @@ def send_email(
                    f"status_text={response.status_text}, "
                    f"error={getattr(response, 'error', 'None')}")
         
-        # Return True if successful (status code between 200-299)
+        # Return True if successful
         if response.status_code and 200 <= response.status_code < 300:
             return True
         else:

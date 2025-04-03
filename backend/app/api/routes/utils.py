@@ -73,12 +73,20 @@ async def submit_demo_request(form_data: DemoRequestForm) -> Message:
             context=email_context
         )
 
-        # Send email to submission address
-        send_email(
+        # Send email and check the return value
+        email_success = send_email(
             email_to="form_submission@thedataproxy.com",
             subject=f"New Demo Request from {form_data.company_name}",
             html_content=html_content
         )
+        
+        # If email failed, raise an exception instead of returning success
+        if not email_success:
+            logger.error("Demo request email notification failed")
+            raise HTTPException(
+                status_code=500,
+                detail="Failed to submit demo request due to notification error"
+            )
 
         return Message(message="Demo request submitted successfully")
 
