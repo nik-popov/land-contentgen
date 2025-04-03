@@ -357,9 +357,9 @@ function APIScraper() {
               color="white"
               _hover={{ bg: "purple.600" }}
               as="a"
-              href="/demo-request.tsx"
+              href="/contact-sales"
             >
-              Get API Key
+             Contact Sales
             </Button>
           </Flex>
         </Box>
