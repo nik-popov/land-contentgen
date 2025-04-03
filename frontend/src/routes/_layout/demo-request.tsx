@@ -54,7 +54,8 @@ function RequestDemoPage() {
     };
 
     try {
-      const response = await fetch('/utils/demo-request/', {
+      // To this (with absolute URL):
+      const response = await fetch('https://apis.thedataproxy.com/api/v1/utils/demo-request/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
