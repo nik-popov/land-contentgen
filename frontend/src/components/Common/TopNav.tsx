@@ -139,57 +139,48 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
               _active={{ bg: bgActive, color: activeTextColor }}
               align="center"
               onClick={() => handleMenuToggle(index)}
+              w="100%"
             >
               {icon && <Icon as={icon} mr={2} />}
-              <Text>{title}</Text>
-              <Icon as={FiChevronDown} ml={1} />
+              <Text flex={1} textAlign="left">{title}</Text>
+              <Icon as={FiChevronDown} ml={1} transform={isActive ? "rotate(180deg)" : "rotate(0deg)"} transition="transform 0.2s" />
             </Flex>
             {isActive && (
               <Box
                 bg="white"
-                borderRadius="md"
-                boxShadow="md"
                 w="100%"
-                p={2}
+                pl={6} // Indent sub-items
               >
                 {description && (
-                  <Box px={3} py={2} borderBottom="1px" borderColor="gray.200">
+                  <Box px={3} py={2}>
                     <Text fontSize="sm" color="gray.600">{description}</Text>
                   </Box>
                 )}
-                <Flex direction="column" p={2}>
-                  {subItems.map((subItem) => (
-                    <Box
-                      key={subItem.title}
-                      as={RouterLink}
-                      to={subItem.path}
-                      color={textColor}
-                      _hover={{ color: hoverColor, bg: "gray.100" }}
-                      onClick={() => {
-                        onClose?.();
-                        setActiveMenuIndex(null);
-                      }}
-                      p={2}
-                    >
-                      <Flex align="flex-start">
-                        {subItem.icon && (
-                          <Icon 
-                            as={subItem.icon} 
-                            mr={2} 
-                            boxSize={5} 
-                            mt="2px"
-                          />
+                {subItems.map((subItem) => (
+                  <Box
+                    key={subItem.title}
+                    as={RouterLink}
+                    to={subItem.path}
+                    color={textColor}
+                    _hover={{ color: hoverColor, bg: "gray.100" }}
+                    onClick={() => {
+                      onClose?.();
+                      setActiveMenuIndex(null);
+                    }}
+                    p={2}
+                    display="block"
+                  >
+                    <Flex align="center">
+                      {subItem.icon && <Icon as={subItem.icon} mr={2} />}
+                      <Box>
+                        <Text fontWeight="medium">{subItem.title}</Text>
+                        {subItem.description && (
+                          <Text fontSize="xs" color="gray.500">{subItem.description}</Text>
                         )}
-                        <Box>
-                          <Text fontWeight="medium">{subItem.title}</Text>
-                          {subItem.description && (
-                            <Text fontSize="xs" color="gray.500" mt={1}>{subItem.description}</Text>
-                          )}
-                        </Box>
-                      </Flex>
-                    </Box>
-                  ))}
-                </Flex>
+                      </Box>
+                    </Flex>
+                  </Box>
+                ))}
               </Box>
             )}
           </Box>
@@ -205,9 +196,7 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
           py={2}
           color={textColor}
           _hover={{ color: hoverColor }}
-          activeProps={{
-            style: { background: bgActive, color: activeTextColor },
-          }}
+          activeProps={{ style: { background: bgActive, color: activeTextColor } }}
           align="center"
           onClick={onClose}
         >
@@ -345,18 +334,18 @@ const TopNav = () => {
         </Container>
       </Box>
 
-      {/* Mobile Menu - Shifts content down */}
+      {/* Mobile Menu - Accordion Style */}
       <Box
         display={{ base: isOpen ? "block" : "none", md: "none" }}
         bg="white"
         w="100%"
       >
         <Container maxW="1200px" px={0}>
-          <Flex flexDir="column" gap={2} py={4}>
+          <Flex flexDir="column" py={4}>
             <NavItems onClose={onClose} isMobile={true} />
             {currentUser ? (
               <>
-                <Text color={textColor} fontSize="sm" px={4}>
+                <Text color={textColor} fontSize="sm" px={4} py={2}>
                   Logged in as: {currentUser.email}
                 </Text>
                 <Box
@@ -385,14 +374,13 @@ const TopNav = () => {
                 </Flex>
               </>
             ) : (
-              <>
+              <Flex flexDir="column" gap={2} px={4} py={2}>
                 <Button
                   as={RouterLink}
                   to="https://dashboard.thedataproxy.com/signup"
                   colorScheme="blue"
                   variant="solid"
                   size="sm"
-                  m={4}
                   onClick={onClose}
                 >
                   Start Free Trial
@@ -403,12 +391,11 @@ const TopNav = () => {
                   variant="outline"
                   colorScheme="blue"
                   size="sm"
-                  m={4}
                   onClick={onClose}
                 >
                   Login
                 </Button>
-              </>
+              </Flex>
             )}
           </Flex>
         </Container>
