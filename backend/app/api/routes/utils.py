@@ -2,7 +2,6 @@ from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel  # Add this import
 from pydantic.networks import EmailStr
 from typing import Optional
-
 from app.api.deps import get_current_active_superuser
 from app.models import Message
 from app.utils import generate_test_email, send_email, render_email_template
@@ -95,4 +94,71 @@ async def submit_demo_request(form_data: DemoRequestForm) -> Message:
         raise HTTPException(
             status_code=500,
             detail="An error occurred while processing your demo request"
+        )
+
+# Pydantic model for contact sales form
+class ContactSalesForm(BaseModel):
+    first_name: str
+    last_name: str
+    business_email: EmailStr
+    phone_number: str
+    company_name: str
+    job_title: str
+    business_size: str
+    budget_range: str
+    primary_interest: str
+    project_timeline: Optional[str] = None
+    requirements: Optional[str] = None
+    contact_preference: Optional[str] = None
+
+@router.post("/contact-sales/", status_code=201)
+async def submit_contact_sales(form_data: ContactSalesForm) -> Message:
+    """
+    Submit a sales contact request and send notification email.
+    """
+    try:
+        # Prepare email context with all form data
+        email_context = {
+            "first_name": form_data.first_name,
+            "last_name": form_data.last_name,
+            "business_email": form_data.business_email,
+            "phone_number": form_data.phone_number,
+            "company_name": form_data.company_name,
+            "job_title": form_data.job_title,
+            "business_size": form_data.business_size,
+            "budget_range": form_data.budget_range,
+            "primary_interest": form_data.primary_interest,
+            "project_timeline": form_data.project_timeline,
+            "requirements": form_data.requirements,
+            "contact_preference": form_data.contact_preference
+        }
+
+        # Render email content
+        html_content = render_email_template(
+            template_name="contact_sales.html",
+            context=email_context
+        )
+
+        # Send email to sales team
+        email_success = send_email(
+            email_to="sales@thedataproxy.com",
+            subject=f"New Sales Inquiry from {form_data.company_name}",
+            html_content=html_content
+        )
+        
+        # If email failed, raise an exception
+        if not email_success:
+            logger.error("Sales contact form email notification failed")
+            raise HTTPException(
+                status_code=500,
+                detail="Failed to submit sales inquiry due to notification error"
+            )
+
+        return Message(message="Sales inquiry submitted successfully")
+
+    except Exception as e:
+        logger.error(f"Error processing sales contact form: {str(e)}")
+        raise HTTPException(
+            status_code=500,
+            detail="An error occurred while processing your sales inquiry"
         )

@@ -38,18 +38,62 @@ function SalesContactPage() {
   const [budgetRange, setBudgetRange] = useState('');
   const toast = useToast();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission with a delay
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setFormSubmitted(true);
-      window.scrollTo(0, 0);
-    }, 1500);
+// In your SalesContactPage component:
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setIsSubmitting(true);
+  
+  const formData = {
+    first_name: e.target.firstName.value,
+    last_name: e.target.lastName.value,
+    business_email: e.target.businessEmail.value,
+    phone_number: e.target.phoneNumber.value,
+    company_name: e.target.companyName.value,
+    job_title: e.target.jobTitle.value,
+    business_size: businessSize,
+    budget_range: budgetRange,
+    primary_interest: e.target.primaryInterest.value,
+    project_timeline: e.target.projectTimeline?.value || null,
+    requirements: e.target.requirements?.value || null,
+    contact_preference: e.target.contactPreference?.value || null
   };
 
+  try {
+    const response = await fetch('https://apis.thedataproxy.com/api/v1/utils/contact-sales/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (!response.ok) {
+      throw new Error('Failed to submit sales contact request');
+    }
+
+    const data = await response.json();
+    setFormSubmitted(true);
+    window.scrollTo(0, 0);
+    toast({
+      title: "Success",
+      description: data.message,
+      status: "success",
+      duration: 5000,
+      isClosable: true,
+    });
+  } catch (error) {
+    toast({
+      title: "Error",
+      description: error.message || "An error occurred while submitting your request",
+      status: "error",
+      duration: 5000,
+      isClosable: true,
+    });
+  } finally {
+    setIsSubmitting(false);
+  }
+};
   if (formSubmitted) {
     return (
       <Box>

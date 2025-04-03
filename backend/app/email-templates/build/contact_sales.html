@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>New Sales Inquiry</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        h2, h3 {
+            color: #2c5282;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        strong {
+            color: #4a5568;
+        }
+    </style>
+</head>
+<body>
+    <h2>New Sales Inquiry</h2>
+    <p>A new sales inquiry has been submitted with the following details:</p>
+    
+    <h3>Contact Information</h3>
+    <ul>
+        <li><strong>First Name:</strong> {{ first_name }}</li>
+        <li><strong>Last Name:</strong> {{ last_name }}</li>
+        <li><strong>Business Email:</strong> {{ business_email }}</li>
+        <li><strong>Phone Number:</strong> {{ phone_number }}</li>
+    </ul>
+
+    <h3>Company Information</h3>
+    <ul>
+        <li><strong>Company Name:</strong> {{ company_name }}</li>
+        <li><strong>Job Title:</strong> {{ job_title }}</li>
+        <li><strong>Business Size:</strong> {{ business_size }}</li>
+    </ul>
+
+    <h3>Inquiry Details</h3>
+    <ul>
+        <li><strong>Budget Range:</strong> {{ budget_range }}</li>
+        <li><strong>Primary Interest:</strong> {{ primary_interest }}</li>
+        {% if project_timeline %}
+        <li><strong>Project Timeline:</strong> {{ project_timeline }}</li>
+        {% endif %}
+        {% if requirements %}
+        <li><strong>Requirements:</strong> {{ requirements }}</li>
+        {% endif %}
+        {% if contact_preference %}
+        <li><strong>Preferred Contact Method:</strong> {{ contact_preference }}</li>
+        {% endif %}
+    </ul>
+
+    <p>Please follow up with this prospect within 1 business day.</p>
+</body>
+</html>
