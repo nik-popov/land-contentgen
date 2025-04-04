@@ -381,9 +381,9 @@ function BlogPage() {
                         <Text color="blue.600" fontWeight="medium">
                           {category.name}
                         </Text>
-                        <Badge colorScheme="blue" borderRadius="full">
+                        <Text>
                           {category.count}
-                        </Badge>
+                        </Text>
                       </Flex>
                     ))}
                   </VStack>
