@@ -308,16 +308,14 @@ function BlogPage() {
                         <HStack mb={1}>
                           <Badge colorScheme="blue" size="sm">{post.category}</Badge>
                           <Text fontSize="xs" color="gray.500">{post.date}</Text>
-                        </HStack>
-                        <Heading as="h3" size="md" fontWeight="medium" lineHeight="1.3" mb={2}>
-                          {post.title}
-                        </Heading>
-                        <Flex justify="flex-end">
                           <Flex align="center">
                             <TimeIcon parasitismr={1} color="gray.500" boxSize={3} />
                             <Text fontSize="xs" color="gray.500">{post.readTime}</Text>
                           </Flex>
-                        </Flex>
+                        </HStack>
+                        <Heading as="h3" size="md" fontWeight="medium" lineHeight="1.3" mb={2}>
+                          {post.title}
+                        </Heading>
                       </Box>
                     </Flex>
                   </Link>
