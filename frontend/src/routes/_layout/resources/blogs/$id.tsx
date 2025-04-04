@@ -17,10 +17,18 @@ function BlogPostDetails() {
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
-        const data = await response.json();
+        const text = await response.text(); // Get raw text first
+        console.log('Raw response:', text); // Debug raw response
+        const data = JSON.parse(text); // Parse manually to catch errors
+        console.log('Parsed posts:', data); // Debug parsed data
+        console.log('Post IDs:', data.map(post => post.id)); // Debug available IDs
+        if (!Array.isArray(data)) {
+          throw new Error('Fetched data is not an array');
+        }
         setPosts(data);
       } catch (err) {
-        setError(err.message);
+        setError(`Failed to load posts: ${err.message}`);
+        console.error('Fetch or parse error:', err);
       } finally {
         setLoading(false);
       }
@@ -30,10 +38,18 @@ function BlogPostDetails() {
   }, []);
 
   const parseContent = (content) => {
-    const elements = [];
-    const paragraphs = content.split('\n\n');
+    if (!content || typeof content !== 'string') {
+      return [<Text key="no-content" fontSize="lg" color="gray.700" mb={4}>No content available</Text>];
+    }
 
+    // Replace escaped newlines (\\n) with actual newlines (\n) and split
+    const normalizedContent = content.replace(/\\n/g, '\n');
+    const paragraphs = normalizedContent.split('\n\n');
+
+    const elements = [];
     paragraphs.forEach((paragraph, index) => {
+      if (!paragraph.trim()) return; // Skip empty paragraphs
+
       if (paragraph.startsWith('# ')) {
         elements.push(
           <Heading key={`h1-${index}`} as="h1" size="xl" mb={4}>
@@ -72,10 +88,12 @@ function BlogPostDetails() {
       }
     });
 
-    return elements;
+    return elements.length > 0 ? elements : [<Text key="empty" fontSize="lg" color="gray.700" mb={4}>Content is empty</Text>];
   };
 
   const formatText = (text) => {
+    if (!text) return '';
+
     const parts = [];
     let remainingText = text;
     let currentIndex = 0;
@@ -146,17 +164,32 @@ function BlogPostDetails() {
   if (error) {
     return (
       <Text fontSize="lg" textAlign="center" py={16} color="red.500">
-        Error: {error}
+        {error}
       </Text>
     );
   }
 
-  const post = posts.find(p => p.id === parseInt(id));
-  if (!post) {
+  if (!posts.length) {
     return (
       <Text fontSize="lg" textAlign="center" py={16}>
-        Post not found
+        No posts available
       </Text>
+    );
+  }
+
+  console.log('Requested ID:', id); // Debug: Check the requested ID
+  const parsedId = parseInt(id);
+  const post = posts.find(p => p.id === parsedId);
+  if (!post) {
+    return (
+      <Box py={16} textAlign="center">
+        <Text fontSize="lg" mb={4}>
+          Post not found for ID: {id}
+        </Text>
+        <Text fontSize="sm" color="gray.500">
+          Available IDs: {posts.map(p => p.id).join(', ')}
+        </Text>
+      </Box>
     );
   }
 
@@ -198,7 +231,7 @@ function BlogPostDetails() {
             </Text>
           )}
           <HStack spacing={2} mb={8}>
-            {post.tags.map((tag, index) => (
+            {post.tags && post.tags.map((tag, index) => (
               <Tag key={index} colorScheme="gray" variant="subtle" size="md">
                 {tag}
               </Tag>
