@@ -1,7 +1,7 @@
 import { Box, Flex, Heading, Text, Image, Tag, HStack, Divider } from "@chakra-ui/react";
 import { createFileRoute, useParams, Link as RouterLink } from "@tanstack/react-router";
 import { TimeIcon } from "@chakra-ui/icons";
-
+import Footer from "../../../../components/Common/Footer"
 // Static blog posts data
 const posts = [
   {
@@ -112,6 +112,7 @@ function BlogPostDetails() {
         </RouterLink>
       </Box>
     </Box>
+    <Footer/>
   );
 }
 export const Route = createFileRoute("/_layout/resources/blogs/:id")({
