@@ -170,7 +170,7 @@ function FAQPage() {
           <Box bg="white" borderRadius="md" boxShadow="sm" overflow="hidden">
             <Accordion allowToggle>
               {faqItems.map((faq, index) => (
-                <AccordionItem key={index} borderColor="gray.200">
+                <AccordionItem key={index} borderColor="gray.300">
                   <h3>
                     <AccordionButton py={4} px={6} _expanded={{ bg: "blue.50", color: "blue.600" }}>
                       <Box flex="1" textAlign="left" fontWeight="medium" fontSize="md">
