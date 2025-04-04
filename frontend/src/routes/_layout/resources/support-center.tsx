@@ -95,7 +95,7 @@ function SupportCenterPage() {
             </InputGroup>
           </Box> */}
           
-          <Flex justify="space-between" flexWrap="wrap" gap={6}>
+          {/* <Flex justify="space-between" flexWrap="wrap" gap={6}>
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
               <Heading as="h3" size="md" color="blue.600">Documentation</Heading>
               <Text>Comprehensive guides, API references, and technical documentation for all our products and services.</Text>
@@ -110,7 +110,7 @@ function SupportCenterPage() {
               <Heading as="h3" size="md" color="blue.600">Direct Support</Heading>
               <Text>Connect with our support team through live chat, email, or schedule a call with a technical specialist.</Text>
             </VStack>
-          </Flex>
+          </Flex> */}
         </Box>
       </Box>
       
