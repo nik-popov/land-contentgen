@@ -166,7 +166,7 @@ function BlogPage() {
                           {tag}
                         </Tag>
                       ))}
-                          <Divider mb={4} />
+                          <Divider m={4} />
                             <Flex justify="flex-end" mb={4}>
                             <Text fontSize="sm" color="gray.500">{post.date}</Text>
                     </Flex>
