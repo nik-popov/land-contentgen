@@ -17,11 +17,6 @@ function BlogPage() {
       category: "Technical",
       readTime: "8 min read",
       date: "Mar 15, 2025",
-      author: {
-        name: "Alex Chen",
-        role: "Lead Engineer",
-        avatar: "https://api.dicebear.com/6.x/personas/svg?seed=Alex&backgroundColor=b6e3f4"
-      },
       views: "15.2K",
       tags: ["Web Scraping", "JavaScript", "Browser Automation", "Puppeteer"]
     },
@@ -33,11 +28,6 @@ function BlogPage() {
       category: "Strategy",
       readTime: "11 min read",
       date: "Mar 8, 2025",
-      author: {
-        name: "Sarah Williams",
-        role: "Data Solutions Architect",
-        avatar: "https://api.dicebear.com/6.x/personas/svg?seed=Sarah&backgroundColor=b6e3f4"
-      },
       views: "12.8K",
       tags: ["Proxy Management", "IP Rotation", "Data Collection", "Scaling"]
     }
@@ -52,11 +42,6 @@ function BlogPage() {
       category: "Architecture",
       readTime: "9 min read",
       date: "Mar 2, 2025",
-      author: {
-        name: "Michael Robertson",
-        role: "Data Engineer",
-        avatar: "https://api.dicebear.com/6.x/personas/svg?seed=Michael&backgroundColor=b6e3f4"
-      },
       views: "8.4K",
       tags: ["Data Pipeline", "Resilience", "Auto-scaling", "Cloud Architecture"]
     },
@@ -68,11 +53,6 @@ function BlogPage() {
       category: "API",
       readTime: "7 min read",
       date: "Feb 28, 2025",
-      author: {
-        name: "Jennifer Lopez",
-        role: "API Specialist",
-        avatar: "https://api.dicebear.com/6.x/personas/svg?seed=Jennifer&backgroundColor=b6e3f4"
-      },
       views: "10.1K",
       tags: ["REST", "GraphQL", "API Design", "Data Integration"]
     },
@@ -84,11 +64,6 @@ function BlogPage() {
       category: "Best Practices",
       readTime: "10 min read",
       date: "Feb 22, 2025",
-      author: {
-        name: "David Thompson",
-        role: "Legal Advisor",
-        avatar: "https://api.dicebear.com/6.x/personas/svg?seed=David&backgroundColor=b6e3f4"
-      },
       views: "13.6K",
       tags: ["Ethics", "Legal", "Compliance", "Best Practices"]
     },
@@ -100,11 +75,6 @@ function BlogPage() {
       category: "Technology",
       readTime: "12 min read",
       date: "Feb 18, 2025",
-      author: {
-        name: "Rachel Kim",
-        role: "Big Data Engineer",
-        avatar: "https://api.dicebear.com/6.x/personas/svg?seed=Rachel&backgroundColor=b6e3f4"
-      },
       views: "9.3K",
       tags: ["Kafka", "Elasticsearch", "Real-time", "Stream Processing"]
     }
@@ -120,8 +90,8 @@ function BlogPage() {
   ];
 
   const popularTags = [
-    "Web Scraping", "API", "JavaScript", "Python", "Proxy Management", 
-    "Data Processing", "Automation", "Machine Learning", "Cloud", "Security", 
+    "Web Scraping", "API", "JavaScript", "Python", "Proxy Management",
+    "Data Processing", "Automation", "Machine Learning", "Cloud", "Security",
     "Best Practices", "Tutorials", "Case Studies", "Performance", "Scaling"
   ];
 
@@ -137,147 +107,137 @@ function BlogPage() {
             Expert articles, tutorials, and insights on web scraping, data collection,
             API integration, and proxy management best practices.
           </Text>
-          
-     
-      
-      {/* Featured Posts Section */}
-          
+
+          {/* Featured Posts */}
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={10}>
             {featuredPosts.map(post => (
-              <Box key={post.id} bg="white" boxShadow="md" borderRadius="lg" overflow="hidden">
-                <Image 
-                  src={post.image} 
-                  alt={post.title}
-                  h="250px"
-                  w="full"
-                  objectFit="cover"
-                />
-                <Box p={6}>
-                  <HStack mb={4} spacing={3}>
-                    <Badge colorScheme="blue" px={3} py={1} borderRadius="full">{post.category}</Badge>
-                    <Flex align="center">
-                      <TimeIcon mr={1} color="gray.500" boxSize={3} />
-                      <Text fontSize="sm" color="gray.500">{post.readTime}</Text>
+              <Link key={post.id} href={`/blog/${post.id}`} _hover={{ textDecoration: "none" }}>
+                <Box
+                  bg="white"
+                  boxShadow="md"
+                  borderRadius="lg"
+                  overflow="hidden"
+                  cursor="pointer"
+                  _hover={{ bg: "gray.50" }}
+                  transition="background-color 0.2s"
+                >
+                  <Image
+                    src={post.image}
+                    alt={post.title}
+                    h="250px"
+                    w="full"
+                    objectFit="cover"
+                  />
+                  <Box p={6}>
+                    <HStack mb={4} spacing={3}>
+                      <Badge colorScheme="blue" px={3} py={1} borderRadius="full">
+                        {post.category}
+                      </Badge>
+                      <Flex align="center">
+                        <TimeIcon mr={1} color="gray.500" boxSize={3} />
+                        <Text fontSize="sm" color="gray.500">{post.readTime}</Text>
+                      </Flex>
+                      <Flex align="center">
+                        <ViewIcon mr={1} color="gray.500" boxSize={3} />
+                        <Text fontSize="sm" color="gray.500">{post.views} views</Text>
+                      </Flex>
+                    </HStack>
+
+                    <Heading as="h3" size="lg" mb={3} fontWeight="medium" lineHeight="1.3">
+                      {post.title}
+                    </Heading>
+
+                    <Text color="gray.600" mb={5} fontSize="md">
+                      {post.excerpt}
+                    </Text>
+
+                    <Flex justify="flex-end" mb={4}>
+                      <Text fontSize="sm" color="gray.500">{post.date}</Text>
                     </Flex>
-                    {/* <Flex align="center">
-                      <ViewIcon mr={1} color="gray.500" boxSize={3} />
-                      <Text fontSize="sm" color="gray.500">{post.views} views</Text>
-                    </Flex> */}
-                  </HStack>
-                  
-                  <Heading as="h3" size="lg" mb={3} fontWeight="medium" lineHeight="1.3">
-                    {post.title}
-                  </Heading>
-                  
-                  <Text color="gray.600" mb={5} fontSize="md">
-                    {post.excerpt}
-                  </Text>
-                  
-                  <Flex justify="space-between" align="center" mb={4}>
-                    <Flex align="center">
-                      <Avatar 
-                        src={post.author.avatar} 
-                        size="md" 
-                        mr={3} 
-                        border="2px solid" 
-                        borderColor="blue.100"
-                      />
-                      <Box>
-                        <Text fontWeight="medium">{post.author.name}</Text>
-                        <Text fontSize="sm" color="gray.500">{post.author.role}</Text>
-                      </Box>
-                    </Flex>
-                    <Text fontSize="sm" color="gray.500">{post.date}</Text>
-                  </Flex>
-                  
-                  <Box mb={4}>
-                    {post.tags.map((tag, index) => (
-                      <Tag 
-                        key={index} 
-                        size="sm" 
-                        mr={2} 
-                        mb={2} 
-                        colorScheme="gray" 
-                        variant="subtle"
-                      >
-                        {tag}
-                      </Tag>
-                    ))}
+
+                    <Box>
+                      {post.tags.map((tag, index) => (
+                        <Tag
+                          key={index}
+                          size="sm"
+                          mr={2}
+                          mb={2}
+                          colorScheme="gray"
+                          variant="subtle"
+                        >
+                          {tag}
+                        </Tag>
+                      ))}
+                    </Box>
                   </Box>
-                  
-                  <Button 
-                    rightIcon={<ChevronRightIcon />} 
-                    colorScheme="blue" 
-                    variant="outline" 
-                    mt={2}
-                  >
-                    Read Article
-                  </Button>
                 </Box>
-              </Box>
+              </Link>
             ))}
           </Grid>
         </Box>
       </Box>
-      
+
       {/* Recent Posts Section */}
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
-          <Heading  textAlign="center" as="h2" size="xl" mb={12} fontWeight="medium">
+          <Heading textAlign="center" as="h2" size="xl" mb={12} fontWeight="medium">
             Recent Articles
           </Heading>
-          
+
           <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={8}>
             {recentPosts.map(post => (
-              <Box key={post.id} bg="white" boxShadow="sm" borderRadius="lg" overflow="hidden" height="100%">
-                <Image 
-                  src={post.image} 
-                  alt={post.title}
-                  h="180px"
-                  w="full"
-                  objectFit="cover"
-                />
-                <Box p={5}>
-                  <HStack mb={3} spacing={3}>
-                    <Badge colorScheme="blue" px={2} py={0.5} borderRadius="full">{post.category}</Badge>
-                    <Flex align="center">
-                      <TimeIcon mr={1} color="gray.500" boxSize={3} />
-                      <Text fontSize="xs" color="gray.500">{post.readTime}</Text>
+              <Link key={post.id} href={`/blog/${post.id}`} _hover={{ textDecoration: "none" }}>
+                <Box
+                  bg="white"
+                  boxShadow="sm"
+                  borderRadius="lg"
+                  overflow="hidden"
+                  height="100%"
+                  cursor="pointer"
+                  _hover={{ bg: "gray.50" }}
+                  transition="background-color 0.2s"
+                >
+                  <Image
+                    src={post.image}
+                    alt={post.title}
+                    h="180px"
+                    w="full"
+                    objectFit="cover"
+                  />
+                  <Box p={5}>
+                    <HStack mb={3} spacing={3}>
+                      <Badge colorScheme="blue" px={2} py={0.5} borderRadius="full">
+                        {post.category}
+                      </Badge>
+                      <Flex align="center">
+                        <TimeIcon mr={1} color="gray.500" boxSize={3} />
+                        <Text fontSize="xs" color="gray.500">{post.readTime}</Text>
+                      </Flex>
+                    </HStack>
+
+                    <Heading as="h3" size="md" mb={3} fontWeight="medium" lineHeight="1.3">
+                      {post.title}
+                    </Heading>
+
+                    <Text color="gray.600" mb={4} fontSize="sm" noOfLines={3}>
+                      {post.excerpt}
+                    </Text>
+
+                    <Divider mb={4} />
+
+                    <Flex justify="flex-end">
+                      <Text fontSize="xs" color="gray.500">{post.date}</Text>
                     </Flex>
-                  </HStack>
-                  
-                  <Heading as="h3" size="md" mb={3} fontWeight="medium" lineHeight="1.3">
-                    {post.title}
-                  </Heading>
-                  
-                  <Text color="gray.600" mb={4} fontSize="sm" noOfLines={3}>
-                    {post.excerpt}
-                  </Text>
-                  
-                  <Divider mb={4} />
-                  
-                  <Flex justify="space-between" align="center">
-                    <Flex align="center">
-                      <Avatar 
-                        src={post.author.avatar} 
-                        size="sm" 
-                        mr={2} 
-                      />
-                      <Text fontSize="sm" fontWeight="medium">{post.author.name}</Text>
-                    </Flex>
-                    <Text fontSize="xs" color="gray.500">{post.date}</Text>
-                  </Flex>
+                  </Box>
                 </Box>
-              </Box>
+              </Link>
             ))}
           </SimpleGrid>
-        
         </Box>
       </Box>
-      
-      {/* Newsletter Section */}
- {/* Call to Action */}
- <Box py={16} bg="blue.600" color="white">
+
+      {/* Call to Action */}
+      <Box py={16} bg="blue.600" color="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">
             Master Web Scraping Today
@@ -286,9 +246,9 @@ function BlogPage() {
             Download our free comprehensive guides and start building
             powerful web scrapers for your data extraction needs
           </Text>
-          
+
           <Flex justify="center" gap={6} flexWrap="wrap">
-          <Button
+            <Button
               size="lg"
               bg="white"
               color="blue.500"
@@ -298,7 +258,7 @@ function BlogPage() {
             >
               Request Demo
             </Button>
-            
+
             <Button
               size="lg"
               variant="outline"
@@ -313,62 +273,58 @@ function BlogPage() {
           </Flex>
         </Box>
       </Box>
-      
-      
+
       {/* Blog Sidebar/Categories Section */}
       <Box py={16} bg="white">
-      <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
-                More From Our Blog
-              </Heading>
+        <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
+          More From Our Blog
+        </Heading>
         <Box maxW="1200px" mx="auto" px={4}>
           <Grid templateColumns={{ base: "1fr", lg: "7fr 3fr" }} gap={10}>
             <Box>
-            
-              
               <VStack spacing={8} align="stretch">
                 {[...recentPosts, ...featuredPosts].slice(0, 4).map(post => (
-                  <Flex 
-                    key={post.id}
-                    p={4} 
-                    bg="gray.50" 
-                    borderRadius="lg" 
-                    boxShadow="sm"
-                    gap={5}
-                    alignItems="center"
-                  >
-                    <Image 
-                      src={post.image} 
-                      alt={post.title}
-                      w={{ base: "80px", md: "150px" }}
-                      h={{ base: "80px", md: "100px" }}
-                      objectFit="cover"
-                      borderRadius="md"
-                    />
-                    <Box flex="1">
-                      <HStack mb={1}>
-                        <Badge colorScheme="blue" size="sm">{post.category}</Badge>
-                        <Text fontSize="xs" color="gray.500">{post.date}</Text>
-                      </HStack>
-                      <Heading as="h3" size="md" fontWeight="medium" lineHeight="1.3" mb={2}>
-                        {post.title}
-                      </Heading>
-                      <Flex align="center" justify="space-between">
-                        <Flex align="center">
-                          <Avatar src={post.author.avatar} size="xs" mr={2} />
-                          <Text fontSize="sm">{post.author.name}</Text>
+                  <Link key={post.id} href={`/blog/${post.id}`} _hover={{ textDecoration: "none" }}>
+                    <Flex
+                      p={4}
+                      bg="gray.50"
+                      borderRadius="lg"
+                      boxShadow="sm"
+                      gap={5}
+                      alignItems="center"
+                      cursor="pointer"
+                      _hover={{ bg: "gray.100" }}
+                      transition="background-color 0.2s"
+                    >
+                      <Image
+                        src={post.image}
+                        alt={post.title}
+                        w={{ base: "80px", md: "150px" }}
+                        h={{ base: "80px", md: "100px" }}
+                        objectFit="cover"
+                        borderRadius="md"
+                      />
+                      <Box flex="1">
+                        <HStack mb={1}>
+                          <Badge colorScheme="blue" size="sm">{post.category}</Badge>
+                          <Text fontSize="xs" color="gray.500">{post.date}</Text>
+                        </HStack>
+                        <Heading as="h3" size="md" fontWeight="medium" lineHeight="1.3" mb={2}>
+                          {post.title}
+                        </Heading>
+                        <Flex justify="flex-end">
+                          <Flex align="center">
+                            <TimeIcon parasitismr={1} color="gray.500" boxSize={3} />
+                            <Text fontSize="xs" color="gray.500">{post.readTime}</Text>
+                          </Flex>
                         </Flex>
-                        <Flex align="center">
-                          <TimeIcon mr={1} color="gray.500" boxSize={3} />
-                          <Text fontSize="xs" color="gray.500">{post.readTime}</Text>
-                        </Flex>
-                      </Flex>
-                    </Box>
-                  </Flex>
+                      </Box>
+                    </Flex>
+                  </Link>
                 ))}
               </VStack>
-              
             </Box>
-            
+
             <Box>
               <VStack spacing={8} align="stretch">
                 <Box bg="gray.50" p={6} borderRadius="lg" boxShadow="sm">
@@ -389,7 +345,7 @@ function BlogPage() {
                     ))}
                   </VStack>
                 </Box>
-                
+
                 <Box bg="gray.50" p={6} borderRadius="lg" boxShadow="sm">
                   <Heading as="h3" size="md" mb={4} fontWeight="medium">
                     Popular Tags
@@ -397,11 +353,11 @@ function BlogPage() {
                   <Divider mb={4} />
                   <Flex flexWrap="wrap" gap={2}>
                     {popularTags.map((tag, index) => (
-                      <Tag 
-                        key={index} 
-                        colorScheme="blue" 
-                        variant="subtle" 
-                        size="md" 
+                      <Tag
+                        key={index}
+                        colorScheme="blue"
+                        variant="subtle"
+                        size="md"
                         borderRadius="full"
                         cursor="pointer"
                         _hover={{ bg: "blue.100" }}
@@ -411,7 +367,7 @@ function BlogPage() {
                     ))}
                   </Flex>
                 </Box>
-                
+
                 <Box bg="blue.50" p={6} borderRadius="lg" boxShadow="sm">
                   <Heading as="h3" size="md" mb={4} fontWeight="medium">
                     Need Expert Help?
@@ -419,11 +375,7 @@ function BlogPage() {
                   <Text mb={4}>
                     Our team can help you implement the strategies and techniques discussed in our articles.
                   </Text>
-                  <Button colorScheme="blue" width="full"
-                  
-                      as="a"
-              href="/contact-sales"
-                  >
+                  <Button colorScheme="blue" width="full" as="a" href="/contact-sales">
                     Contact Us
                   </Button>
                 </Box>
