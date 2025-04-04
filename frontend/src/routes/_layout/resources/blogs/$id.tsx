@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 import { Box, Flex, Heading, Text, Image, Tag, HStack, Divider, Spinner } from "@chakra-ui/react";
 import { createFileRoute, useParams, Link as RouterLink } from "@tanstack/react-router";
 import { TimeIcon } from "@chakra-ui/icons";
-import Footer from "../../../../components/Common/Footer"
+import Footer from "../../../../components/Common/Footer";
+
 function BlogPostDetails() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -53,56 +54,57 @@ function BlogPostDetails() {
     );
   }
 
-  // Assuming content exists in the fetched JSON
   const paragraphs = post.content ? post.content.split("\n\n") : [post.excerpt];
 
   return (
-    <Box py={16} bg="white">
-      <Box maxW="800px" mx="auto" px={4}>
-        <Image 
-          src={post.image} 
-          alt={post.title} 
-          w="full" 
-          h="400px" 
-          objectFit="cover" 
-          borderRadius="md" 
-          mb={8} 
-        />
-        <Flex align="center" mb={4}>
-          <Tag colorScheme="blue" mr={4} px={3} py={1} borderRadius="full">
-            {post.category}
-          </Tag>
-          <Text fontSize="sm" color="gray.500">{post.date}</Text>
-          <Flex align="center" ml={4}>
-            <TimeIcon mr={1} color="gray.500" boxSize={3} />
-            <Text fontSize="sm" color="gray.500">{post.readTime}</Text>
-          </Flex>
-        </Flex>
-        <Heading as="h1" size="2xl" mb={6} fontWeight="medium" lineHeight="1.3">
-          {post.title}
-        </Heading>
-        {paragraphs.map((paragraph, index) => (
-          <Text key={index} fontSize="lg" color="gray.700" mb={4}>
-            {paragraph}
-          </Text>
-        ))}
-        <HStack spacing={2} mb={8}>
-          {post.tags.map((tag, index) => (
-            <Tag key={index} colorScheme="gray" variant="subtle" size="md">
-              {tag}
+    <Box>
+      <Box py={16} bg="white">
+        <Box maxW="800px" mx="auto" px={4}>
+          <Image 
+            src={post.image} 
+            alt={post.title} 
+            w="full" 
+            h="400px" 
+            objectFit="cover" 
+            borderRadius="md" 
+            mb={8} 
+          />
+          <Flex align="center" mb={4}>
+            <Tag colorScheme="blue" mr={4} px={3} py={1} borderRadius="full">
+              {post.category}
             </Tag>
+            <Text fontSize="sm" color="gray.500">{post.date}</Text>
+            <Flex align="center" ml={4}>
+              <TimeIcon mr={1} color="gray.500" boxSize={3} />
+              <Text fontSize="sm" color="gray.500">{post.readTime}</Text>
+            </Flex>
+          </Flex>
+          <Heading as="h1" size="2xl" mb={6} fontWeight="medium" lineHeight="1.3">
+            {post.title}
+          </Heading>
+          {paragraphs.map((paragraph, index) => (
+            <Text key={index} fontSize="lg" color="gray.700" mb={4}>
+              {paragraph}
+            </Text>
           ))}
-        </HStack>
-        <Divider mb={8} />
-        <RouterLink 
-          to="/resources/blogs" 
-          style={{ color: "#3182CE", fontWeight: "medium", textDecoration: "none" }}
-        >
-          ← Back to Blog
-        </RouterLink>
+          <HStack spacing={2} mb={8}>
+            {post.tags.map((tag, index) => (
+              <Tag key={index} colorScheme="gray" variant="subtle" size="md">
+                {tag}
+              </Tag>
+            ))}
+          </HStack>
+          <Divider mb={8} />
+          <RouterLink 
+            to="/resources/blogs" 
+            style={{ color: "#3182CE", fontWeight: "medium", textDecoration: "none" }}
+          >
+            ← Back to Blog
+          </RouterLink>
+        </Box>
       </Box>
+      <Footer />
     </Box>
-    <Footer/>
   );
 }
 
