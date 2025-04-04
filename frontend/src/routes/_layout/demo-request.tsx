@@ -16,6 +16,7 @@ import {
   Alert,
   AlertIcon,
   AlertTitle,
+  Divider,
   AlertDescription,
   SimpleGrid,
   Icon,
@@ -129,52 +130,7 @@ function RequestDemoPage() {
             Request a Market Research Solution Demo
           </Heading>
           
-          <Text fontSize="lg" color="gray.600">
-            Experience the power of our enterprise-grade web scraping proxy infrastructure. Complete this form to schedule a personalized demo tailored to your market research needs.
-          </Text>
-
-          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6} w="full">
-            <Box bg="orange.50" p={5} borderRadius="md">
-              <Flex align="center" mb={3}>
-                <Icon as={CheckCircleIcon} color="orange.500" boxSize={5} mr={2} />
-                <Text fontWeight="medium">Personalized Demonstration</Text>
-              </Flex>
-              <Text fontSize="sm" color="gray.600">
-                Our team will showcase features most relevant to your specific market research needs.
-              </Text>
-            </Box>
-            
-            <Box bg="orange.50" p={5} borderRadius="md">
-              <Flex align="center" mb={3}>
-                <Icon as={CheckCircleIcon} color="orange.500" boxSize={5} mr={2} />
-                <Text fontWeight="medium">Technical Deep Dive</Text>
-              </Flex>
-              <Text fontSize="sm" color="gray.600">
-                Get answers to your technical questions from our expert engineering team.
-              </Text>
-            </Box>
-            
-            <Box bg="orange.50" p={5} borderRadius="md">
-              <Flex align="center" mb={3}>
-                <Icon as={CheckCircleIcon} color="orange.500" boxSize={5} mr={2} />
-                <Text fontWeight="medium">Custom Integration Planning</Text>
-              </Flex>
-              <Text fontSize="sm" color="gray.600">
-                Learn how our solutions integrate with your existing data infrastructure.
-              </Text>
-            </Box>
-            
-            <Box bg="orange.50" p={5} borderRadius="md">
-              <Flex align="center" mb={3}>
-                <Icon as={CheckCircleIcon} color="orange.500" boxSize={5} mr={2} />
-                <Text fontWeight="medium">Pricing Consultation</Text>
-              </Flex>
-              <Text fontSize="sm" color="gray.600">
-                Transparent discussion about pricing options tailored to your usage needs.
-              </Text>
-            </Box>
-          </SimpleGrid>
-          
+       
           <Box w="full" as="form" onSubmit={handleSubmit} mt={6} bg="white" p={8} borderRadius="md" boxShadow="sm">
             <VStack spacing={6} align="start">
               <Heading as="h2" size="md" fontWeight="medium">
@@ -285,10 +241,53 @@ function RequestDemoPage() {
                 Request Demo
               </Button>
               
-              <Text fontSize="sm" color="gray.500" mt={2}>
-                <Icon as={InfoIcon} mr={1} />
-                Our team typically responds within 24 business hours.
+                            <Divider />
+              <Text fontSize="lg" color="gray.600">
+            Experience the power of our enterprise-grade web scraping proxy infrastructure. Complete this form to schedule a personalized demo tailored to your market research needs.
+          </Text>
+
+          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6} w="full">
+            <Box bg="orange.50" p={5} borderRadius="md">
+              <Flex align="center" mb={3}>
+                <Icon as={CheckCircleIcon} color="orange.500" boxSize={5} mr={2} />
+                <Text fontWeight="medium">Personalized Demonstration</Text>
+              </Flex>
+              <Text fontSize="sm" color="gray.600">
+                Our team will showcase features most relevant to your specific market research needs.
               </Text>
+            </Box>
+            
+            <Box bg="orange.50" p={5} borderRadius="md">
+              <Flex align="center" mb={3}>
+                <Icon as={CheckCircleIcon} color="orange.500" boxSize={5} mr={2} />
+                <Text fontWeight="medium">Technical Deep Dive</Text>
+              </Flex>
+              <Text fontSize="sm" color="gray.600">
+                Get answers to your technical questions from our expert engineering team.
+              </Text>
+            </Box>
+            
+            <Box bg="orange.50" p={5} borderRadius="md">
+              <Flex align="center" mb={3}>
+                <Icon as={CheckCircleIcon} color="orange.500" boxSize={5} mr={2} />
+                <Text fontWeight="medium">Custom Integration Planning</Text>
+              </Flex>
+              <Text fontSize="sm" color="gray.600">
+                Learn how our solutions integrate with your existing data infrastructure.
+              </Text>
+            </Box>
+            
+            <Box bg="orange.50" p={5} borderRadius="md">
+              <Flex align="center" mb={3}>
+                <Icon as={CheckCircleIcon} color="orange.500" boxSize={5} mr={2} />
+                <Text fontWeight="medium">Pricing Consultation</Text>
+              </Flex>
+              <Text fontSize="sm" color="gray.600">
+                Transparent discussion about pricing options tailored to your usage needs.
+              </Text>
+            </Box>
+          </SimpleGrid>
+          
             </VStack>
           </Box>
         </VStack>

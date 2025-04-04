@@ -303,7 +303,7 @@ function SalesContactPage() {
               </Button>
 
           
-
+              <Divider />
           {/* Why Contact Sales */}
           <Heading as="h2" size="md" fontWeight="medium">
             How Our Sales Team Can Help You
