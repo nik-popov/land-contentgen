@@ -80,7 +80,7 @@ function PrivacyPolicyPage() {
                   personal information:
                 </Text>
                 <UnorderedList pl={6} spacing={2}>
-                  <ListItem>Name, email address, and contact details</ListItem>
+                  <ListItem>Name, email address, phone number (for SMS communications), and contact details</ListItem>
                   <ListItem>Billing and payment information</ListItem>
                   <ListItem>User credentials (username and password)</ListItem>
                   <ListItem>Company information (for business accounts)</ListItem>
@@ -148,7 +148,7 @@ function PrivacyPolicyPage() {
               <ListItem><strong>Providing and Improving Our Services:</strong> To operate, maintain, and enhance our Website and services, develop new features, and ensure a seamless user experience.</ListItem>
               <ListItem><strong>Customer Support:</strong> To respond to your inquiries, provide technical assistance, and address complaints or service issues.</ListItem>
               <ListItem><strong>Account Management:</strong> To create and maintain your account, authenticate users, and provide access to our services.</ListItem>
-              <ListItem><strong>Communication:</strong> To send administrative information, service updates, technical notices, and support messages.</ListItem>
+              <ListItem><strong>Communication:</strong> To send administrative information, service updates, technical notices, and support messages, including via SMS (reply STOP to opt out).</ListItem>
               <ListItem><strong>Marketing:</strong> To send promotional communications, newsletters, and information about new services or features (with your consent where required by law).</ListItem>
               <ListItem><strong>Security and Fraud Prevention:</strong> To detect, prevent, and address technical issues, fraud, abuse, and illegal activities.</ListItem>
               <ListItem><strong>Analytics:</strong> To understand how users interact with our Website and services, analyze trends, and gather demographic information.</ListItem>
@@ -462,9 +462,10 @@ function PrivacyPolicyPage() {
             </Heading>
             <Text fontSize="md" mb={4}>
               We may send you marketing communications about our products, services, events, and promotions that may be of interest 
-              to you. You can opt out of receiving marketing communications from us at any time by:
+              to you, including via SMS. You can opt out of receiving marketing communications from us at any time by:
             </Text>
             <UnorderedList pl={6} spacing={2} mb={4}>
+              <ListItem>Replying STOP to any SMS message we send</ListItem>
               <ListItem>Clicking the "unsubscribe" link in any marketing email we send</ListItem>
               <ListItem>Updating your communication preferences in your account settings</ListItem>
               <ListItem>Contacting us using the information provided in the "Contact Us" section below</ListItem>
@@ -473,10 +474,21 @@ function PrivacyPolicyPage() {
               Please note that even if you opt out of marketing communications, we may still send you non-promotional messages 
               related to your account and the services you use, such as service announcements, administrative messages, and surveys.
             </Text>
-            <Text fontSize="md">
+            <Text fontSize="md" mb={4}>
               We will process your request to opt out as soon as possible, but please be aware that it may take up to 10 business 
               days to update our systems. During this time, you may continue to receive marketing communications that were already in process.
             </Text>
+            <Box w="full">
+              <Heading as="h3" size="md" fontWeight="medium" mb={2}>
+                SMS Text Messaging
+              </Heading>
+              <Text fontSize="md" mb={2}>
+                We offer SMS updates and support. You may opt in by agreeing to SMS communications via our Website forms 
+                (e.g., on our contact page). Messages may include service alerts, promotional offers, or responses to your inquiries, 
+                sent from a number managed by our SMS provider. Standard message and data rates may apply. To stop receiving SMS, 
+                reply STOP at any time to the number that sent the message.
+              </Text>
+            </Box>
           </Box>
           
           {/* 11. Cookies and Similar Technologies */}
@@ -566,7 +578,7 @@ function PrivacyPolicyPage() {
             <VStack align="start" spacing={2} pl={4}>
               <Text><strong>Privacy Team Email:</strong> privacy@thedataproxy.com</Text>
               <Text><strong>Address:</strong> 99 Wall St Suite 5660, New York, NY 10005, USA</Text>
-              <Text><strong>Phone:</strong> +1 (855) 440-2242</Text>
+              <Text><strong>Phone:</strong> +1 (855) 440-2242 (call for support)</Text>
               <Text><strong>Support Hours:</strong> Monday to Friday, 9:00 AM to 5:00 PM EST</Text>
             </VStack>
             <Text fontSize="md" mt={4}>
