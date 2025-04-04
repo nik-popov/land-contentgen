@@ -319,7 +319,7 @@ function LandingPage() {
               size="lg"
               bg="white"
               color="orange.400"
-              _hover={{ bg: "gray.100" }}
+              _hover={{ bg: "gray.200" }}
               as="a"
               href="/demo-request"
             >
