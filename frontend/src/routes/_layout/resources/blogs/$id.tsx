@@ -72,7 +72,7 @@ function BlogPostDetails() {
   );
 }
 
-export const Route = createFileRoute("/_layout/resources/blog/:id")({
+export const Route = createFileRoute("/_layout/resources/blogs/:id")({
   component: BlogPostDetails,
 });
 
