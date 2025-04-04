@@ -279,7 +279,7 @@ function NetworkStatusPage() {
             <VStack align="flex-start" bg="white" p={6} borderRadius="md" boxShadow="sm" spacing={4}>
               <Image src="https://cdn-icons-png.flaticon.com/512/1932/1932655.png" boxSize="50px" mb={2} />
               <Heading as="h3" size="md" fontWeight="medium">Technical Documentation</Heading>
-              <Text color="gray.600">Access documentation to understand our infrastructure and troubleshoot common issues.</Text>
+              <Text color="gray.600">Access documentation to understand our infrastructure and troubleshoot.</Text>
               <Link color="blue.600" href="https://apis.thedataproxy.com/redoc" fontWeight="medium">
                 API Documentation →
               </Link>
@@ -299,7 +299,7 @@ function NetworkStatusPage() {
             <VStack align="flex-start" bg="white" p={6} borderRadius="md" boxShadow="sm" spacing={4}>
               <Image src="https://cdn-icons-png.flaticon.com/512/4677/4677490.png" boxSize="50px" mb={2} />
               <Heading as="h3" size="md" fontWeight="medium">Contact Support</Heading>
-              <Text color="gray.600">Need immediate assistance? Our technical support team is available 24/7 to help resolve any issues.</Text>
+              <Text color="gray.600">Our technical support team is available to help resolve any issues.</Text>
               <Link color="blue.600" href="/resources/support-center" fontWeight="medium">
                 Contact Support →
               </Link>
