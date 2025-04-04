@@ -23,9 +23,15 @@ function BlogPage() {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
+        console.log('Fetched posts:', data); // Debug: Check the fetched data
+        console.log('Post IDs:', data.map(post => post.id)); // Debug: Check available IDs
+        if (!Array.isArray(data)) {
+          throw new Error('Fetched data is not an array');
+        }
         setPosts(data);
       } catch (err) {
         setError(err.message);
+        console.error('Fetch error:', err);
       } finally {
         setLoading(false);
       }
@@ -47,9 +53,10 @@ function BlogPage() {
   };
 
   const filteredPosts = posts.filter(post => {
+    if (!post) return false; // Guard against undefined/null posts
     const matchesCategory = !selectedCategory || post.category === selectedCategory;
     const matchesTags = selectedTags.length === 0 || 
-      selectedTags.every(tag => post.tags.includes(tag));
+      (post.tags && selectedTags.every(tag => post.tags.includes(tag)));
     return matchesCategory && matchesTags;
   });
 
@@ -69,21 +76,29 @@ function BlogPage() {
     );
   }
 
+  if (!posts.length) {
+    return (
+      <Text fontSize="lg" textAlign="center" py={16}>
+        No posts available
+      </Text>
+    );
+  }
+
   const featuredPosts = posts.slice(0, 2);
   const recentPosts = posts.slice(2, 8);
 
-  const popularCategories = [...new Set(posts.map(post => post.category))]
+  const popularCategories = [...new Set(posts.map(post => post?.category).filter(Boolean))]
     .map(category => ({
       name: category,
-      count: posts.filter(post => post.category === category).length
+      count: posts.filter(post => post?.category === category).length
     }))
     .sort((a, b) => b.count - a.count)
     .slice(0, 6);
 
-  const popularTags = [...new Set(posts.flatMap(post => post.tags))]
+  const popularTags = [...new Set(posts.flatMap(post => post?.tags || []).filter(Boolean))]
     .map(tag => ({
       name: tag,
-      count: posts.filter(post => post.tags.includes(tag)).length
+      count: posts.filter(post => post?.tags?.includes(tag)).length
     }))
     .sort((a, b) => b.count - a.count)
     .slice(0, 15)
@@ -103,8 +118,12 @@ function BlogPage() {
           </Text>
 
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={10}>
-            {featuredPosts.map(post => (
-              <Link key={post.id} href={`/resources/blogs/${post.id}`} _hover={{ textDecoration: "none" }}>
+            {featuredPosts.map((post, index) => post && (
+              <Link 
+                key={post.id || `featured-${index}`} 
+                href={`/resources/blogs/${post.id}`} 
+                _hover={{ textDecoration: "none" }}
+              >
                 <Box
                   bg="white"
                   boxShadow="md"
@@ -116,7 +135,7 @@ function BlogPage() {
                 >
                   <Image
                     src={post.image}
-                    alt={post.title}
+                    alt={post.title || 'Untitled'}
                     h="250px"
                     w="full"
                     objectFit="cover"
@@ -124,26 +143,26 @@ function BlogPage() {
                   <Box p={6}>
                     <HStack mb={4} spacing={3}>
                       <Badge colorScheme="blue" px={3} py={1} borderRadius="full">
-                        {post.category}
+                        {post.category || 'Uncategorized'}
                       </Badge>
                       <Flex align="center">
                         <TimeIcon mr={1} color="gray.500" boxSize={3} />
-                        <Text fontSize="sm" color="gray.500">{post.readTime}</Text>
+                        <Text fontSize="sm" color="gray.500">{post.readTime || 'N/A'}</Text>
                       </Flex>
                     </HStack>
 
                     <Heading as="h3" size="lg" mb={3} fontWeight="medium" lineHeight="1.3">
-                      {post.title}
+                      {post.title || 'Untitled'}
                     </Heading>
 
                     <Text color="gray.600" mb={5} fontSize="md">
-                      {post.excerpt}
+                      {post.excerpt || 'No excerpt available'}
                     </Text>
 
                     <Box>
-                      {post.tags.map((tag, index) => (
+                      {post.tags && post.tags.map((tag, tagIndex) => (
                         <Tag
-                          key={index}
+                          key={tagIndex}
                           size="sm"
                           mr={2}
                           mb={4}
@@ -155,7 +174,7 @@ function BlogPage() {
                       ))}
                       <Divider m={4} />
                       <Flex justify="flex-end" mb={4}>
-                        <Text fontSize="sm" color="gray.500">{post.date}</Text>
+                        <Text fontSize="sm" color="gray.500">{post.date || 'No date'}</Text>
                       </Flex>
                     </Box>
                   </Box>
@@ -174,8 +193,12 @@ function BlogPage() {
           </Heading>
 
           <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={8}>
-            {recentPosts.map(post => (
-              <Link key={post.id} href={`/resources/blogs/${post.id}`} _hover={{ textDecoration: "none" }}>
+            {recentPosts.map((post, index) => post && (
+              <Link 
+                key={post.id || `recent-${index}`} 
+                href={`/resources/blogs/${post.id}`} 
+                _hover={{ textDecoration: "none" }}
+              >
                 <Box
                   bg="white"
                   boxShadow="sm"
@@ -188,7 +211,7 @@ function BlogPage() {
                 >
                   <Image
                     src={post.image}
-                    alt={post.title}
+                    alt={post.title || 'Untitled'}
                     h="180px"
                     w="full"
                     objectFit="cover"
@@ -196,26 +219,26 @@ function BlogPage() {
                   <Box p={5}>
                     <HStack mb={3} spacing={3}>
                       <Badge colorScheme="blue" px={2} py={0.5} borderRadius="full">
-                        {post.category}
+                        {post.category || 'Uncategorized'}
                       </Badge>
                       <Flex align="center">
                         <TimeIcon mr={1} color="gray.500" boxSize={3} />
-                        <Text fontSize="xs" color="gray.500">{post.readTime}</Text>
+                        <Text fontSize="xs" color="gray.500">{post.readTime || 'N/A'}</Text>
                       </Flex>
                     </HStack>
 
                     <Heading as="h3" size="md" mb={3} fontWeight="medium" lineHeight="1.3">
-                      {post.title}
+                      {post.title || 'Untitled'}
                     </Heading>
 
                     <Text color="gray.600" mb={4} fontSize="sm" noOfLines={3}>
-                      {post.excerpt}
+                      {post.excerpt || 'No excerpt available'}
                     </Text>
 
                     <Divider mb={4} />
 
                     <Flex justify="flex-end">
-                      <Text fontSize="xs" color="gray.500">{post.date}</Text>
+                      <Text fontSize="xs" color="gray.500">{post.date || 'No date'}</Text>
                     </Flex>
                   </Box>
                 </Box>
@@ -291,8 +314,12 @@ function BlogPage() {
               }}
             >
               <VStack spacing={8} align="stretch">
-                {filteredPosts.map(post => (
-                  <Link key={post.id} href={`/resources/blogs/${post.id}`} _hover={{ textDecoration: "none" }}>
+                {filteredPosts.map((post, index) => post && (
+                  <Link 
+                    key={post.id || `filtered-${index}`} 
+                    href={`/resources/blogs/${post.id}`} 
+                    _hover={{ textDecoration: "none" }}
+                  >
                     <Flex
                       p={4}
                       bg="gray.50"
@@ -306,7 +333,7 @@ function BlogPage() {
                     >
                       <Image
                         src={post.image}
-                        alt={post.title}
+                        alt={post.title || 'Untitled'}
                         w={{ base: "80px", md: "150px" }}
                         h={{ base: "80px", md: "100px" }}
                         objectFit="cover"
@@ -314,15 +341,15 @@ function BlogPage() {
                       />
                       <Box flex="1">
                         <HStack mb={1}>
-                          <Badge colorScheme="blue" size="sm">{post.category}</Badge>
-                          <Text fontSize="xs" color="gray.500">{post.date}</Text>
+                          <Badge colorScheme="blue" size="sm">{post.category || 'Uncategorized'}</Badge>
+                          <Text fontSize="xs" color="gray.500">{post.date || 'No date'}</Text>
                           <Flex align="center">
                             <TimeIcon mr={1} color="gray.500" boxSize={3} m={2}/>
-                            <Text fontSize="xs" color="gray.500">{post.readTime}</Text>
+                            <Text fontSize="xs" color="gray.500">{post.readTime || 'N/A'}</Text>
                           </Flex>
                         </HStack>
                         <Heading as="h3" size="md" fontWeight="medium" lineHeight="1.3" mb={2}>
-                          {post.title}
+                          {post.title || 'Untitled'}
                         </Heading>
                       </Box>
                     </Flex>
