@@ -271,7 +271,7 @@ function BlogPage() {
         <Box maxW="1200px" mx="auto" px={4}>
           <Grid templateColumns={{ base: "1fr", lg: "7fr 3fr" }} gap={10}>
             <Box 
-              maxH="70vh" 
+              maxH="90vh" 
               overflowY="auto" 
               pr={4}
               sx={{
