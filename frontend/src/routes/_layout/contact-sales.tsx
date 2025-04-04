@@ -302,46 +302,7 @@ function SalesContactPage() {
                 Contact
               </Button>
 
-          <Text fontSize="lg" color="gray.600">
-            Interested in our data collection and proxy solutions? Fill out this form to connect with our sales team and learn how we can help you achieve your business goals.
-          </Text>
-
-          {/* Quick Contact Info */}
-          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6} w="full">
-            <Box 
-              bg="blue.50" 
-              p={5} 
-              borderRadius="md" 
-              display="flex" 
-              alignItems="center"
-            >
-              <Icon as={PhoneIcon} color="blue.500" boxSize={5} mr={3} />
-              <Box>
-                <Text fontWeight="medium">Call Us Directly</Text>
-                <Text fontSize="sm" color="gray.600">
-    <a href="tel:+18554402242">+1 (855) 440-2242</a>
-  </Text>
-              </Box>
-            </Box>
-            
-            <Box 
-              bg="blue.50" 
-              p={5} 
-              borderRadius="md"
-              display="flex" 
-              alignItems="center"
-            >
-              <Icon as={EmailIcon} color="blue.500" boxSize={5} mr={3} />
-              <Box>
-                <Text fontWeight="medium">Email Sales</Text>
-                <Text fontSize="sm" color="gray.600">
-      <a href="mailto:sales@thedataproxy.com">sales@thedataproxy.com</a>
-    </Text>
-              </Box>
-            </Box>
-          </SimpleGrid>
-
-          <Divider />
+          
 
           {/* Why Contact Sales */}
           <Heading as="h2" size="md" fontWeight="medium">
@@ -389,8 +350,47 @@ function SalesContactPage() {
               </Text>
             </Box>
           </SimpleGrid>
+          <Divider />
+          <Text fontSize="lg" color="gray.600">
+            Interested in our data collection and proxy solutions? Fill out this form to connect with our sales team and learn how we can help you achieve your business goals.
+          </Text>
+       
+          {/* Quick Contact Info */}
+          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6} w="full">
+            <Box 
+              bg="blue.50" 
+              p={5} 
+              borderRadius="md" 
+              display="flex" 
+              alignItems="center"
+            >
+              <Icon as={PhoneIcon} color="blue.500" boxSize={5} mr={3} />
+              <Box>
+                <Text fontWeight="medium">Call Us Directly</Text>
+                <Text fontSize="sm" color="gray.600">
+    <a href="tel:+18554402242">+1 (855) 440-2242</a>
+  </Text>
+              </Box>
+            </Box>
+            
+            <Box 
+              bg="blue.50" 
+              p={5} 
+              borderRadius="md"
+              display="flex" 
+              alignItems="center"
+            >
+              <Icon as={EmailIcon} color="blue.500" boxSize={5} mr={3} />
+              <Box>
+                <Text fontWeight="medium">Email Sales</Text>
+                <Text fontSize="sm" color="gray.600">
+      <a href="mailto:sales@thedataproxy.com">sales@thedataproxy.com</a>
+    </Text>
+              </Box>
+            </Box>
+          </SimpleGrid>
 
-
+    
 
             </VStack>
           </Box>
