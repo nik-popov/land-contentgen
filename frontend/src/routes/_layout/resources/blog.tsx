@@ -80,7 +80,7 @@ function BlogPage() {
       id: 5,
       title: "Ethical Web Scraping: Best Practices and Legal Considerations",
       excerpt: "Guidelines for responsible data collection that respects website terms of service, user privacy, and relevant legal frameworks.",
-      image: "https://images.unsplash.com/photo-1576444356170-347f2423f2a8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      image: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
       category: "Best Practices",
       readTime: "10 min read",
       date: "Feb 22, 2025",
