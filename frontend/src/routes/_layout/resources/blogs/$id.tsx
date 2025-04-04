@@ -17,11 +17,11 @@ function BlogPostDetails() {
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
-        const text = await response.text(); // Get raw text first
-        console.log('Raw response:', text); // Debug raw response
-        const data = JSON.parse(text); // Parse manually to catch errors
-        console.log('Parsed posts:', data); // Debug parsed data
-        console.log('Post IDs:', data.map(post => post.id)); // Debug available IDs
+        const text = await response.text();
+        console.log('Raw response:', text);
+        const data = JSON.parse(text);
+        console.log('Parsed posts:', data);
+        console.log('Post IDs:', data.map(post => post.id));
         if (!Array.isArray(data)) {
           throw new Error('Fetched data is not an array');
         }
@@ -42,9 +42,8 @@ function BlogPostDetails() {
       return [<Text key="no-content" fontSize="lg" color="gray.700" mb={4}>No content available</Text>];
     }
 
-    // Replace escaped newlines (\\n) with actual newlines (\n) and split
-    const normalizedContent = content.replace(/\\n/g, '\n');
-    const paragraphs = normalizedContent.split('\n\n');
+    // Split on <br> delimiter for paragraphs
+    const paragraphs = content.split('<br>');
 
     const elements = [];
     paragraphs.forEach((paragraph, index) => {
@@ -69,12 +68,13 @@ function BlogPostDetails() {
           </Heading>
         );
       } else if (paragraph.startsWith('- ')) {
-        const listItems = paragraph.split('\n').filter(line => line.trim());
+        // For lists, split on <br> within the list block if needed
+        const listItems = paragraph.split('<br>').filter(line => line.trim());
         elements.push(
           <UnorderedList key={`ul-${index}`} mb={4}>
             {listItems.map((item, itemIndex) => (
               <ListItem key={`li-${itemIndex}`}>
-                {formatText(item.slice(2))}
+                {formatText(item.startsWith('- ') ? item.slice(2) : item)}
               </ListItem>
             ))}
           </UnorderedList>
@@ -85,6 +85,11 @@ function BlogPostDetails() {
             {formatText(paragraph)}
           </Text>
         );
+      }
+
+      // Add a <br /> after each paragraph except the last one
+      if (index < paragraphs.length - 1) {
+        elements.push(<br key={`br-${index}`} />);
       }
     });
 
@@ -177,7 +182,7 @@ function BlogPostDetails() {
     );
   }
 
-  console.log('Requested ID:', id); // Debug: Check the requested ID
+  console.log('Requested ID:', id);
   const parsedId = parseInt(id);
   const post = posts.find(p => p.id === parsedId);
   if (!post) {
