@@ -138,7 +138,63 @@ function BlogPage() {
             API integration, and proxy management best practices.
           </Text>
           
-     
+          {/* <Box maxW="650px" mx="auto" mb={10}>
+            <InputGroup size="lg">
+              <InputLeftElement pointerEvents="none">
+                <SearchIcon color="gray.300" />
+              </InputLeftElement>
+              <Input 
+                placeholder="Search articles, topics, and tutorials" 
+                bg="white" 
+                focusBorderColor="blue.500"
+                borderRadius="md"
+                boxShadow="sm"
+              />
+            </InputGroup>
+          </Box>
+          
+          <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8} maxW="800px" mx="auto">
+            <Box>
+              <Select 
+                placeholder="Filter by Category" 
+                bg="white" 
+                focusBorderColor="blue.500"
+                size="lg"
+              >
+                <option value="technical">Technical</option>
+                <option value="strategy">Strategy</option>
+                <option value="architecture">Architecture</option>
+                <option value="best-practices">Best Practices</option>
+                <option value="api">API</option>
+                <option value="technology">Technology</option>
+              </Select>
+            </Box>
+            <Box>
+              <Select 
+                placeholder="Sort By" 
+                bg="white" 
+                focusBorderColor="blue.500"
+                size="lg"
+              >
+                <option value="recent">Most Recent</option>
+                <option value="popular">Most Popular</option>
+                <option value="trending">Trending</option>
+              </Select>
+            </Box>
+            <Box>
+              <Select 
+                placeholder="Read Time" 
+                bg="white" 
+                focusBorderColor="blue.500"
+                size="lg"
+              >
+                <option value="short">5 min or less</option>
+                <option value="medium">5-10 min</option>
+                <option value="long">10+ min</option>
+              </Select>
+            </Box>
+          </SimpleGrid> */}
+
       
       {/* Featured Posts Section */}
           
@@ -432,7 +488,43 @@ function BlogPage() {
           </Grid>
         </Box>
       </Box>
-
+      
+      {/* Blog Stats Section */}
+      {/* <Box py={16} bg="blue.50">
+        <Box maxW="1200px" mx="auto" px={4} textAlign="center">
+          <Heading as="h2" size="xl" mb={8} fontWeight="medium">
+            Blog Resources
+          </Heading>
+          <Text fontSize="lg" mb={12} maxW="700px" mx="auto">
+            Comprehensive resources to help you master data collection and processing
+          </Text>
+          
+          <SimpleGrid columns={{ base: 2, md: 4 }} spacing={8}>
+            <VStack>
+              <Heading as="h3" size="2xl" color="blue.600">200+</Heading>
+              <Text fontWeight="medium">Articles</Text>
+              <Text fontSize="sm" color="gray.600">In-depth guides & tutorials</Text>
+            </VStack>
+            <VStack>
+              <Heading as="h3" size="2xl" color="blue.600">15+</Heading>
+              <Text fontWeight="medium">Categories</Text>
+              <Text fontSize="sm" color="gray.600">Specialized topics</Text>
+            </VStack>
+            <VStack>
+              <Heading as="h3" size="2xl" color="blue.600">35K+</Heading>
+              <Text fontWeight="medium">Monthly Readers</Text>
+              <Text fontSize="sm" color="gray.600">From around the world</Text>
+            </VStack>
+            <VStack>
+              <Heading as="h3" size="2xl" color="blue.600">Weekly</Heading>
+              <Text fontWeight="medium">Updates</Text>
+              <Text fontSize="sm" color="gray.600">Fresh content & insights</Text>
+            </VStack>
+          </SimpleGrid>
+        </Box>
+      </Box>
+       */}
+      {/* Footer */}
       <Footer />
     </>
   );
