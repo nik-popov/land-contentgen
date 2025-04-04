@@ -332,48 +332,44 @@ function BlogPage() {
       </Box>
       
       {/* Newsletter Section */}
-      <Box py={16} bg="blue.600" color="white">
-        <Box maxW="900px" mx="auto" px={4} textAlign="center">
-          <Heading as="h2" size="xl" mb={4} fontWeight="medium" color="white">
-            Stay Updated with the Latest Insights
+ {/* Call to Action */}
+ <Box py={16} bg="blue.600" color="white">
+        <Box maxW="1200px" mx="auto" px={4} textAlign="center">
+          <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">
+            Master Web Scraping Today
           </Heading>
-          <Text fontSize="lg" mb={8} maxW="700px" mx="auto" color="white">
-            Subscribe to our newsletter to receive expert articles, tutorials, and tips
-            delivered directly to your inbox.
+          <Text fontSize="lg" mb={10} maxW="700px" mx="auto" color="white">
+            Download our free comprehensive guides and start building
+            powerful web scrapers for your data extraction needs
           </Text>
           
-          <Flex 
-            maxW="600px" 
-            mx="auto" 
-            flexDir={{ base: "column", md: "row" }} 
-            gap={{ base: 4, md: 0 }}
-          >
-            <Input 
-              placeholder="Enter your email address" 
-              bg="white" 
-              color="gray.800"
+          <Flex justify="center" gap={6} flexWrap="wrap">
+          <Button
               size="lg"
-              borderRadius={{ base: "md", md: "md 0 0 md" }}
-              borderRight={{ md: "none" }}
-              _focus={{ borderColor: "blue.100" }}
-            />
-            <Button 
-              colorScheme="blue" 
-              bg="blue.800" 
-              size="lg" 
-              px={8}
-              borderRadius={{ base: "md", md: "0 md md 0" }}
-              _hover={{ bg: "blue.900" }}
+              bg="white"
+              color="blue.500"
+              _hover={{ bg: "gray.100" }}
+              as="a"
+              href="/demo-request"
             >
-              Subscribe
+              Request Demo
+            </Button>
+            
+            <Button
+              size="lg"
+              variant="outline"
+              borderColor="white"
+              color="white"
+              _hover={{ bg: "blue.700" }}
+              as="a"
+              href="https://dashboard.thedataproxy.com/signup"
+            >
+              Start Free Trial
             </Button>
           </Flex>
-          
-          <Text fontSize="sm" mt={4} color="blue.100">
-            We respect your privacy. Unsubscribe at any time.
-          </Text>
         </Box>
       </Box>
+      
       
       {/* Blog Sidebar/Categories Section */}
       <Box py={16} bg="white">
