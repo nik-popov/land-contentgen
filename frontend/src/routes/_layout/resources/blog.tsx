@@ -159,7 +159,7 @@ function BlogPage() {
                           key={index}
                           size="sm"
                           mr={2}
-                          mb={2}
+                          mb={4}
                           colorScheme="gray"
                           variant="subtle"
                         >
