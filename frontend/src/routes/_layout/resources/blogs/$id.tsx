@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Box, Flex, Heading, Text, Image, Tag, HStack, Divider, Spinner } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text, Image, Tag, HStack, Divider, Spinner, UnorderedList, ListItem } from "@chakra-ui/react";
 import { createFileRoute, useParams, Link as RouterLink } from "@tanstack/react-router";
 import { TimeIcon } from "@chakra-ui/icons";
 import Footer from "../../../../components/Common/Footer";
@@ -29,6 +29,112 @@ function BlogPostDetails() {
     fetchPosts();
   }, []);
 
+  const parseContent = (content) => {
+    const elements = [];
+    const paragraphs = content.split('\n\n');
+
+    paragraphs.forEach((paragraph, index) => {
+      if (paragraph.startsWith('# ')) {
+        elements.push(
+          <Heading key={`h1-${index}`} as="h1" size="xl" mb={4}>
+            {paragraph.slice(2)}
+          </Heading>
+        );
+      } else if (paragraph.startsWith('## ')) {
+        elements.push(
+          <Heading key={`h2-${index}`} as="h2" size="lg" mb={4} mt={6}>
+            {paragraph.slice(3)}
+          </Heading>
+        );
+      } else if (paragraph.startsWith('### ')) {
+        elements.push(
+          <Heading key={`h3-${index}`} as="h3" size="md" mb={4} mt={6}>
+            {paragraph.slice(4)}
+          </Heading>
+        );
+      } else if (paragraph.startsWith('- ')) {
+        const listItems = paragraph.split('\n').filter(line => line.trim());
+        elements.push(
+          <UnorderedList key={`ul-${index}`} mb={4}>
+            {listItems.map((item, itemIndex) => (
+              <ListItem key={`li-${itemIndex}`}>
+                {formatText(item.slice(2))}
+              </ListItem>
+            ))}
+          </UnorderedList>
+        );
+      } else {
+        elements.push(
+          <Text key={`p-${index}`} fontSize="lg" color="gray.700" mb={4}>
+            {formatText(paragraph)}
+          </Text>
+        );
+      }
+    });
+
+    return elements;
+  };
+
+  const formatText = (text) => {
+    const parts = [];
+    let remainingText = text;
+    let currentIndex = 0;
+
+    while (remainingText.length > 0) {
+      const boldStart = remainingText.indexOf('**');
+      const italicStart = remainingText.indexOf('*');
+
+      if (boldStart === -1 && italicStart === -1) {
+        parts.push(remainingText);
+        break;
+      }
+
+      const nextMarker = Math.min(
+        boldStart === -1 ? Infinity : boldStart,
+        italicStart === -1 ? Infinity : italicStart
+      );
+
+      if (nextMarker > 0) {
+        parts.push(remainingText.slice(0, nextMarker));
+        remainingText = remainingText.slice(nextMarker);
+        continue;
+      }
+
+      if (boldStart === 0) {
+        const boldEnd = remainingText.indexOf('**', 2);
+        if (boldEnd !== -1) {
+          parts.push(
+            <Text as="span" fontWeight="bold" key={`bold-${currentIndex}`}>
+              {remainingText.slice(2, boldEnd)}
+            </Text>
+          );
+          remainingText = remainingText.slice(boldEnd + 2);
+          currentIndex++;
+          continue;
+        }
+      }
+
+      if (italicStart === 0) {
+        const italicEnd = remainingText.indexOf('*', 1);
+        if (italicEnd !== -1) {
+          parts.push(
+            <Text as="span" fontStyle="italic" key={`italic-${currentIndex}`}>
+              {remainingText.slice(1, italicEnd)}
+            </Text>
+          );
+          remainingText = remainingText.slice(italicEnd + 1);
+          currentIndex++;
+          continue;
+        }
+      }
+
+      parts.push(remainingText[0]);
+      remainingText = remainingText.slice(1);
+    }
+
+    return parts;
+  };
+
   if (loading) {
     return (
       <Flex justify="center" align="center" minH="100vh">
@@ -54,14 +160,11 @@ function BlogPostDetails() {
     );
   }
 
-  const paragraphs = post.content ? post.content.split("\n\n") : [post.excerpt];
-
   return (
     <Box>
       <Box py={16} bg="white">
-      
         <Box maxW="800px" mx="auto" px={4}>
-        <RouterLink 
+          <RouterLink 
             to="/resources/blog" 
             style={{ color: "#3182CE", fontWeight: "medium", textDecoration: "none", margin:"2px"}}
           >
@@ -89,11 +192,11 @@ function BlogPostDetails() {
           <Heading as="h1" size="2xl" mb={6} fontWeight="medium" lineHeight="1.3">
             {post.title}
           </Heading>
-          {paragraphs.map((paragraph, index) => (
-            <Text key={index} fontSize="lg" color="gray.700" mb={4}>
-              {paragraph}
+          {post.content ? parseContent(post.content) : (
+            <Text fontSize="lg" color="gray.700" mb={4}>
+              {post.excerpt}
             </Text>
-          ))}
+          )}
           <HStack spacing={2} mb={8}>
             {post.tags.map((tag, index) => (
               <Tag key={index} colorScheme="gray" variant="subtle" size="md">
