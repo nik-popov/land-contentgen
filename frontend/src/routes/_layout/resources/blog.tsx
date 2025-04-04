@@ -111,7 +111,7 @@ function BlogPage() {
           {/* Featured Posts */}
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={10}>
             {featuredPosts.map(post => (
-              <Link key={post.id} href={`/blog/${post.id}`} _hover={{ textDecoration: "none" }}>
+              <Link key={post.id} href={`/resources/blog/${post.id}`} _hover={{ textDecoration: "none" }}>
                 <Box
                   bg="white"
                   boxShadow="md"
@@ -185,7 +185,7 @@ function BlogPage() {
 
           <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={8}>
             {recentPosts.map(post => (
-              <Link key={post.id} href={`/blog/${post.id}`} _hover={{ textDecoration: "none" }}>
+              <Link key={post.id} href={`/resources/blog/${post.id}`} _hover={{ textDecoration: "none" }}>
                 <Box
                   bg="white"
                   boxShadow="sm"
@@ -283,7 +283,7 @@ function BlogPage() {
             <Box>
               <VStack spacing={8} align="stretch">
                 {[...recentPosts, ...featuredPosts].slice(0, 4).map(post => (
-                  <Link key={post.id} href={`/blog/${post.id}`} _hover={{ textDecoration: "none" }}>
+                  <Link key={post.id} href={`/resources/blog/${post.id}`} _hover={{ textDecoration: "none" }}>
                     <Flex
                       p={4}
                       bg="gray.50"
