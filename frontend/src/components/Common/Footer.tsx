@@ -18,7 +18,7 @@ const Footer = () => {
           {/* Company Information */}
           <Box>
           <Heading as="h4" size="md" mb={1} color="white">The Data Proxy</Heading>
-          <Text color="gray.400" fontSize="sm" mb={2}>A Cobalt Data Company</Text>
+          <Text color="gray.400" fontSize="sm" mb={2}>Cobalt Data Company</Text>
           <Text color="gray.300" mb={4}>
             Enterprise grade proxy infrastructure designed specifically for web scraping, data collection, 
             and market intelligence needs with unlimited scale and global coverage across 190+ countries.
@@ -148,7 +148,7 @@ const Footer = () => {
 
         {/* Bottom Footer - Copyright and Legal */}
         <Flex justify="space-between" align="center" borderTop="1px solid" borderColor="gray.700" pt={6} flexWrap="wrap" gap={4}>
-          <Text color="gray.400" fontSize="sm">© 2025 The Data Proxy, a Cobalt Data company. All rights reserved.</Text>
+          <Text color="gray.400" fontSize="sm">© 2025 The Data Proxy, Cobalt Data company. All rights reserved.</Text>
           <Flex gap={6}>
             <Link href="/privacy" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>Privacy Policy</Link>
             <Link href="/terms" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>Terms of Service</Link>
