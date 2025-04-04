@@ -59,6 +59,12 @@ function BlogPostDetails() {
   return (
     <Box>
       <Box py={16} bg="white">
+      <RouterLink 
+            to="/resources/blogs" 
+            style={{ color: "#3182CE", fontWeight: "medium", textDecoration: "none" }}
+          >
+            ← Back to all
+          </RouterLink>
         <Box maxW="800px" mx="auto" px={4}>
           <Image 
             src={post.image} 
@@ -95,12 +101,6 @@ function BlogPostDetails() {
             ))}
           </HStack>
           <Divider mb={8} />
-          <RouterLink 
-            to="/resources/blogs" 
-            style={{ color: "#3182CE", fontWeight: "medium", textDecoration: "none" }}
-          >
-            ← Back to Blog
-          </RouterLink>
         </Box>
       </Box>
       <Footer />
