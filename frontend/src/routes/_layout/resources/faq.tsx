@@ -158,7 +158,7 @@ function FAQPage() {
       </Box>
       
       {/* FAQ Main Section */}
-      <Box py={16} bg="blue.50">
+      <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={4} fontWeight="medium">
             Most Common Questions
