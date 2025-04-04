@@ -151,9 +151,7 @@ function BlogPage() {
                       {post.excerpt}
                     </Text>
 
-                    <Flex justify="flex-end" mb={4}>
-                      <Text fontSize="sm" color="gray.500">{post.date}</Text>
-                    </Flex>
+              
 
                     <Box>
                       {post.tags.map((tag, index) => (
@@ -168,6 +166,10 @@ function BlogPage() {
                           {tag}
                         </Tag>
                       ))}
+                            <Flex justify="flex-end" mb={4}>
+                            <Text fontSize="sm" color="gray.500">{post.date}</Text>
+                    </Flex>
+                       
                     </Box>
                   </Box>
                 </Box>
