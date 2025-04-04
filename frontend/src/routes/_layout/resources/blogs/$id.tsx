@@ -59,13 +59,14 @@ function BlogPostDetails() {
   return (
     <Box>
       <Box py={16} bg="white">
-      <RouterLink 
+      
+        <Box maxW="800px" mx="auto" px={4}>
+        <RouterLink 
             to="/resources/blog" 
-            style={{ color: "#3182CE", fontWeight: "medium", textDecoration: "none" }}
+            style={{ color: "#3182CE", fontWeight: "medium", textDecoration: "none", margin:"2px"}}
           >
             ← Back to all
           </RouterLink>
-        <Box maxW="800px" mx="auto" px={4}>
           <Image 
             src={post.image} 
             alt={post.title} 
