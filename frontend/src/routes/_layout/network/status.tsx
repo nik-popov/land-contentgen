@@ -247,7 +247,7 @@ function NetworkStatusPage() {
               size="lg"
               bg="blue.500"
               color="white"
-              _hover={{ bg: "gray.100" }}
+              _hover={{ bg: "gray.300" }}
               as="a"
               href="/demo-request"
             >
@@ -258,7 +258,7 @@ function NetworkStatusPage() {
               size="lg"
               bg="blue.500"
               color="white"
-              _hover={{ bg: "gray.100" }}
+              _hover={{ bg: "gray.300" }}
               as="a"
               href="/contact-sales"
             >
