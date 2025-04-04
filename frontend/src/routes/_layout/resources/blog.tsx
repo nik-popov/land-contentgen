@@ -215,10 +215,10 @@ function BlogPage() {
                       <TimeIcon mr={1} color="gray.500" boxSize={3} />
                       <Text fontSize="sm" color="gray.500">{post.readTime}</Text>
                     </Flex>
-                    <Flex align="center">
+                    {/* <Flex align="center">
                       <ViewIcon mr={1} color="gray.500" boxSize={3} />
                       <Text fontSize="sm" color="gray.500">{post.views} views</Text>
-                    </Flex>
+                    </Flex> */}
                   </HStack>
                   
                   <Heading as="h3" size="lg" mb={3} fontWeight="medium" lineHeight="1.3">
@@ -490,7 +490,7 @@ function BlogPage() {
       </Box>
       
       {/* Blog Stats Section */}
-      <Box py={16} bg="blue.50">
+      {/* <Box py={16} bg="blue.50">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={8} fontWeight="medium">
             Blog Resources
@@ -523,7 +523,7 @@ function BlogPage() {
           </SimpleGrid>
         </Box>
       </Box>
-      
+       */}
       {/* Footer */}
       <Footer />
     </>
