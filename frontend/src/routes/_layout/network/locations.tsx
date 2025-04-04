@@ -369,7 +369,7 @@ function ProxyLocationsPage() {
               as="a"
               href="/demo-request"
             >
-              View Location Coverage
+             Request Demo
             </Button>
             
             <Button
