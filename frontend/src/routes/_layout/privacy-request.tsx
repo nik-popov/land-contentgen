@@ -27,6 +27,7 @@ import {
   Icon
 } from "@chakra-ui/react";
 import { InfoIcon, LockIcon } from '@chakra-ui/icons';
+import { CheckCircleIcon, InfoIcon, ArrowForwardIcon, PhoneIcon, EmailIcon } from '@chakra-ui/icons';
 import { useState } from 'react';
 import Footer from '../../components/Common/Footer';
 
@@ -316,18 +317,7 @@ function PrivacyRequestPage() {
                   </Stack>
                 </RadioGroup>
               </FormControl>
-              
-              <Alert status="info" borderRadius="md">
-                <AlertIcon />
-                <Box>
-                  <AlertTitle>Verification Required</AlertTitle>
-                  <AlertDescription fontSize="sm">
-                    We implement strict verification to ensure that only you can access or modify your personal data. This protects 
-                    your privacy and prevents unauthorized access to your information.
-                  </AlertDescription>
-                </Box>
-              </Alert>
-              
+            
               <Divider />
               
               {/* Consent */}
@@ -359,14 +349,12 @@ function PrivacyRequestPage() {
                 loadingText="Submitting"
                 isDisabled={!consentChecked}
                 mt={4}
+                rightIcon={<ArrowForwardIcon />}
               >
-                Submit Request
+                Submit 
               </Button>
               
-              <Text fontSize="sm" color="gray.500" mt={2}>
-                <Icon as={InfoIcon} mr={1} />
-                This form is secured with encryption to protect your information during transmission.
-              </Text>
+           
             </VStack>
           </Box>
           

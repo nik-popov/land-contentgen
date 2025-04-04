@@ -22,7 +22,7 @@ import {
   Icon,
   useToast
 } from "@chakra-ui/react";
-import { CheckCircleIcon, InfoIcon } from '@chakra-ui/icons';
+import { CheckCircleIcon, InfoIcon ,ArrowForwardIcon} from '@chakra-ui/icons';
 import { useState } from 'react';
 import Footer from '../../components/Common/Footer';
 
@@ -237,9 +237,10 @@ function RequestDemoPage() {
                 loadingText="Submitting"
                 isDisabled={!consentChecked}
                 mt={4}
-              >
-                Request Demo
-              </Button>
+                rightIcon={<ArrowForwardIcon />}
+                >
+                  Submit 
+                </Button>
               
                             <Divider />
               <Text fontSize="lg" color="gray.600">
