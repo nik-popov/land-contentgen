@@ -135,97 +135,7 @@ function SalesContactPage() {
     <Box>
       <Container maxW="800px" mx="auto" px={4} py={16} color="gray.800">
         <VStack spacing={8} align="start" w="full">
-          <Heading as="h1" size="xl" fontWeight="medium">
-            Contact Our Sales Team
-          </Heading>
-          
-          <Text fontSize="lg" color="gray.600">
-            Interested in our data collection and proxy solutions? Fill out this form to connect with our sales team and learn how we can help you achieve your business goals.
-          </Text>
 
-          {/* Quick Contact Info */}
-          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6} w="full">
-            <Box 
-              bg="blue.50" 
-              p={5} 
-              borderRadius="md" 
-              display="flex" 
-              alignItems="center"
-            >
-              <Icon as={PhoneIcon} color="blue.500" boxSize={5} mr={3} />
-              <Box>
-                <Text fontWeight="medium">Call Us Directly</Text>
-                <Text fontSize="sm" color="gray.600">
-                  +1 (855) 440-2242
-                </Text>
-              </Box>
-            </Box>
-            
-            <Box 
-              bg="blue.50" 
-              p={5} 
-              borderRadius="md"
-              display="flex" 
-              alignItems="center"
-            >
-              <Icon as={EmailIcon} color="blue.500" boxSize={5} mr={3} />
-              <Box>
-                <Text fontWeight="medium">Email Sales</Text>
-                <Text fontSize="sm" color="gray.600">
-                  sales@thedataproxy.com
-                </Text>
-              </Box>
-            </Box>
-          </SimpleGrid>
-
-          <Divider />
-
-          {/* Why Contact Sales */}
-          <Heading as="h2" size="md" fontWeight="medium">
-            How Our Sales Team Can Help You
-          </Heading>
-
-          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6} w="full">
-            <Box bg="blue.50" p={5} borderRadius="md">
-              <Flex align="center" mb={3}>
-                <Icon as={CheckCircleIcon} color="blue.500" boxSize={5} mr={2} />
-                <Text fontWeight="medium">Custom Solutions</Text>
-              </Flex>
-              <Text fontSize="sm" color="gray.600">
-                Get tailored data collection solutions designed specifically for your business requirements.
-              </Text>
-            </Box>
-            
-            <Box bg="blue.50" p={5} borderRadius="md">
-              <Flex align="center" mb={3}>
-                <Icon as={CheckCircleIcon} color="blue.500" boxSize={5} mr={2} />
-                <Text fontWeight="medium">Volume Pricing</Text>
-              </Flex>
-              <Text fontSize="sm" color="gray.600">
-                Discover cost-effective pricing options for large scale data needs and enterprise implementations.
-              </Text>
-            </Box>
-            
-            <Box bg="blue.50" p={5} borderRadius="md">
-              <Flex align="center" mb={3}>
-                <Icon as={CheckCircleIcon} color="blue.500" boxSize={5} mr={2} />
-                <Text fontWeight="medium">Integration Support</Text>
-              </Flex>
-              <Text fontSize="sm" color="gray.600">
-                Learn how our solutions integrate with your existing tech stack and business processes.
-              </Text>
-            </Box>
-            
-            <Box bg="blue.50" p={5} borderRadius="md">
-              <Flex align="center" mb={3}>
-                <Icon as={CheckCircleIcon} color="blue.500" boxSize={5} mr={2} />
-                <Text fontWeight="medium">Compliance Guidance</Text>
-              </Flex>
-              <Text fontSize="sm" color="gray.600">
-                Get expert advice on data compliance and ethical web scraping practices for your industry.
-              </Text>
-            </Box>
-          </SimpleGrid>
           
           {/* Contact Form */}
           <Box w="full" as="form" onSubmit={handleSubmit} mt={6} bg="white" p={8} borderRadius="md" boxShadow="sm">
@@ -385,13 +295,103 @@ function SalesContactPage() {
                 mt={4}
                 rightIcon={<ArrowForwardIcon />}
               >
-                Contact Sales
+                Contact
               </Button>
               
-              <Text fontSize="sm" color="gray.500" mt={2}>
-                <Icon as={InfoIcon} mr={1} />
-                Our sales team typically responds within 1 business day.
+              <Heading as="h1" size="xl" fontWeight="medium">
+            Contact Our Sales Team
+          </Heading>
+          
+          <Text fontSize="lg" color="gray.600">
+            Interested in our data collection and proxy solutions? Fill out this form to connect with our sales team and learn how we can help you achieve your business goals.
+          </Text>
+
+          {/* Quick Contact Info */}
+          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6} w="full">
+            <Box 
+              bg="blue.50" 
+              p={5} 
+              borderRadius="md" 
+              display="flex" 
+              alignItems="center"
+            >
+              <Icon as={PhoneIcon} color="blue.500" boxSize={5} mr={3} />
+              <Box>
+                <Text fontWeight="medium">Call Us Directly</Text>
+                <Text fontSize="sm" color="gray.600">
+                  +1 (855) 440-2242
+                </Text>
+              </Box>
+            </Box>
+            
+            <Box 
+              bg="blue.50" 
+              p={5} 
+              borderRadius="md"
+              display="flex" 
+              alignItems="center"
+            >
+              <Icon as={EmailIcon} color="blue.500" boxSize={5} mr={3} />
+              <Box>
+                <Text fontWeight="medium">Email Sales</Text>
+                <Text fontSize="sm" color="gray.600">
+                  sales@thedataproxy.com
+                </Text>
+              </Box>
+            </Box>
+          </SimpleGrid>
+
+          <Divider />
+
+          {/* Why Contact Sales */}
+          <Heading as="h2" size="md" fontWeight="medium">
+            How Our Sales Team Can Help You
+          </Heading>
+
+          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6} w="full">
+            <Box bg="blue.50" p={5} borderRadius="md">
+              <Flex align="center" mb={3}>
+                <Icon as={CheckCircleIcon} color="blue.500" boxSize={5} mr={2} />
+                <Text fontWeight="medium">Custom Solutions</Text>
+              </Flex>
+              <Text fontSize="sm" color="gray.600">
+                Get tailored data collection solutions designed specifically for your business requirements.
               </Text>
+            </Box>
+            
+            <Box bg="blue.50" p={5} borderRadius="md">
+              <Flex align="center" mb={3}>
+                <Icon as={CheckCircleIcon} color="blue.500" boxSize={5} mr={2} />
+                <Text fontWeight="medium">Volume Pricing</Text>
+              </Flex>
+              <Text fontSize="sm" color="gray.600">
+                Discover cost-effective pricing options for large scale data needs and enterprise implementations.
+              </Text>
+            </Box>
+            
+            <Box bg="blue.50" p={5} borderRadius="md">
+              <Flex align="center" mb={3}>
+                <Icon as={CheckCircleIcon} color="blue.500" boxSize={5} mr={2} />
+                <Text fontWeight="medium">Integration Support</Text>
+              </Flex>
+              <Text fontSize="sm" color="gray.600">
+                Learn how our solutions integrate with your existing tech stack and business processes.
+              </Text>
+            </Box>
+            
+            <Box bg="blue.50" p={5} borderRadius="md">
+              <Flex align="center" mb={3}>
+                <Icon as={CheckCircleIcon} color="blue.500" boxSize={5} mr={2} />
+                <Text fontWeight="medium">Compliance Guidance</Text>
+              </Flex>
+              <Text fontSize="sm" color="gray.600">
+                Get expert advice on data compliance and ethical web scraping practices for your industry.
+              </Text>
+            </Box>
+          </SimpleGrid>
+
+
+
             </VStack>
           </Box>
         </VStack>
