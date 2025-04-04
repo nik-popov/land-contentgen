@@ -177,11 +177,11 @@ function SupportCenterPage() {
       </Box> */}
       
       {/* Support Categories Section */}
-      <Box py={16} bg="blue.50">
-        <Box maxW="1200px" mx="auto" px={4}>
-          <Heading as="h2" size="xl" textAlign="center" mb={12} fontWeight="medium">
+      {/* <Box py={16} bg="blue.50">
+        <Box maxW="1200px" mx="auto" px={4}> */}
+          {/* <Heading as="h2" size="xl" textAlign="center" mb={12} fontWeight="medium">
             Support Categories
-          </Heading>
+          </Heading> */}
           
           <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={8}>
             {supportCategories.map((category, index) => (
@@ -203,8 +203,8 @@ function SupportCenterPage() {
               </Box>
             ))}
           </SimpleGrid>
-        </Box>
-      </Box>
+        {/* </Box>
+      </Box> */}
       
       {/* Popular Articles Section */}
       {/* <Box py={16} bg="white">
