@@ -22,7 +22,7 @@ function BlogPage() {
     },
     {
       id: 2,
-      title: "Implementing Efficient Proxy Rotation Strategies for Large-Scale Data Collection",
+      title: "Proxy Rotation Strategies for Large-Scale Data Collection",
       excerpt: "Discover how to build robust proxy rotation systems that maintain high availability, prevent IP blocking, and optimize for both performance and cost-effectiveness.",
       image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
       category: "Strategy",
