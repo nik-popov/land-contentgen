@@ -136,6 +136,10 @@ function SalesContactPage() {
       <Container maxW="800px" mx="auto" px={4} py={16} color="gray.800">
         <VStack spacing={8} align="start" w="full">
 
+                        
+        <Heading as="h1" size="xl" fontWeight="medium">
+            Contact Our Sales Team
+          </Heading>
           
           {/* Contact Form */}
           <Box w="full" as="form" onSubmit={handleSubmit} mt={6} bg="white" p={8} borderRadius="md" boxShadow="sm">
@@ -297,11 +301,7 @@ function SalesContactPage() {
               >
                 Contact
               </Button>
-              
-              <Heading as="h1" size="xl" fontWeight="medium">
-            Contact Our Sales Team
-          </Heading>
-          
+
           <Text fontSize="lg" color="gray.600">
             Interested in our data collection and proxy solutions? Fill out this form to connect with our sales team and learn how we can help you achieve your business goals.
           </Text>
@@ -319,8 +319,8 @@ function SalesContactPage() {
               <Box>
                 <Text fontWeight="medium">Call Us Directly</Text>
                 <Text fontSize="sm" color="gray.600">
-                  +1 (855) 440-2242
-                </Text>
+    <a href="tel:+18554402242">+1 (855) 440-2242</a>
+  </Text>
               </Box>
             </Box>
             
@@ -335,8 +335,8 @@ function SalesContactPage() {
               <Box>
                 <Text fontWeight="medium">Email Sales</Text>
                 <Text fontSize="sm" color="gray.600">
-                  sales@thedataproxy.com
-                </Text>
+      <a href="mailto:sales@thedataproxy.com">sales@thedataproxy.com</a>
+    </Text>
               </Box>
             </Box>
           </SimpleGrid>
