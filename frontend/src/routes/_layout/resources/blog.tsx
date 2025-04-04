@@ -12,6 +12,8 @@ function BlogPage() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [selectedTags, setSelectedTags] = useState([]);
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -31,6 +33,25 @@ function BlogPage() {
 
     fetchPosts();
   }, []);
+
+  const handleCategoryClick = (categoryName) => {
+    setSelectedCategory(categoryName === selectedCategory ? null : categoryName);
+  };
+
+  const handleTagClick = (tagName) => {
+    setSelectedTags(prev => 
+      prev.includes(tagName) 
+        ? prev.filter(t => t !== tagName)
+        : [...prev, tagName]
+    );
+  };
+
+  const filteredPosts = posts.filter(post => {
+    const matchesCategory = !selectedCategory || post.category === selectedCategory;
+    const matchesTags = selectedTags.length === 0 || 
+      selectedTags.every(tag => post.tags.includes(tag));
+    return matchesCategory && matchesTags;
+  });
 
   if (loading) {
     return (
@@ -270,7 +291,7 @@ function BlogPage() {
               }}
             >
               <VStack spacing={8} align="stretch">
-                {posts.map(post => (
+                {filteredPosts.map(post => (
                   <Link key={post.id} href={`/resources/blogs/${post.id}`} _hover={{ textDecoration: "none" }}>
                     <Flex
                       p={4}
@@ -319,10 +340,20 @@ function BlogPage() {
                   <Divider mb={4} />
                   <VStack spacing={3} align="stretch">
                     {popularCategories.map((category, index) => (
-                      <Flex key={index} justify="space-between" align="center">
-                        <Link color="blue.600" fontWeight="medium">
+                      <Flex 
+                        key={index} 
+                        justify="space-between" 
+                        align="center"
+                        cursor="pointer"
+                        onClick={() => handleCategoryClick(category.name)}
+                        _hover={{ bg: "gray.100" }}
+                        p={2}
+                        borderRadius="md"
+                        bg={selectedCategory === category.name ? "blue.100" : "transparent"}
+                      >
+                        <Text color="blue.600" fontWeight="medium">
                           {category.name}
-                        </Link>
+                        </Text>
                         <Badge colorScheme="blue" borderRadius="full">
                           {category.count}
                         </Badge>
@@ -340,12 +371,13 @@ function BlogPage() {
                     {popularTags.map((tag, index) => (
                       <Tag
                         key={index}
-                        colorScheme="blue"
-                        variant="subtle"
+                        colorScheme={selectedTags.includes(tag) ? "blue" : "blue"}
+                        variant={selectedTags.includes(tag) ? "solid" : "subtle"}
                         size="md"
                         borderRadius="full"
                         cursor="pointer"
-                        _hover={{ bg: "blue.100" }}
+                        _hover={{ bg: selectedTags.includes(tag) ? "blue.600" : "blue.100" }}
+                        onClick={() => handleTagClick(tag)}
                       >
                         {tag}
                       </Tag>
