@@ -32,7 +32,7 @@ const posts = [
 ];
 
 function BlogPostDetails() {
-  const { id } = useParams();
+  const { id } = useParams({ from: "/_layout/resources/blogs/$id" });
   console.log("ID from useParams:", id, "Parsed ID:", parseInt(id)); // Debug
   const post = posts.find((p) => p.id === parseInt(id));
 
@@ -71,7 +71,6 @@ function BlogPostDetails() {
     </Box>
   );
 }
-
 export const Route = createFileRoute("/_layout/resources/blogs/:id")({
   component: BlogPostDetails,
 });
