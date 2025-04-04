@@ -48,11 +48,9 @@ function BlogPage() {
     );
   }
 
-  // Assuming first two posts are featured
   const featuredPosts = posts.slice(0, 2);
   const recentPosts = posts.slice(2, 8);
 
-  // Calculate popular categories and tags dynamically
   const popularCategories = [...new Set(posts.map(post => post.category))]
     .map(category => ({
       name: category,
@@ -251,9 +249,28 @@ function BlogPage() {
         </Heading>
         <Box maxW="1200px" mx="auto" px={4}>
           <Grid templateColumns={{ base: "1fr", lg: "7fr 3fr" }} gap={10}>
-            <Box>
+            <Box 
+              maxH="70vh" 
+              overflowY="auto" 
+              pr={4}
+              sx={{
+                '&::-webkit-scrollbar': {
+                  width: '8px',
+                },
+                '&::-webkit-scrollbar-track': {
+                  background: 'gray.100',
+                },
+                '&::-webkit-scrollbar-thumb': {
+                  background: 'gray.400',
+                  borderRadius: '4px',
+                },
+                '&::-webkit-scrollbar-thumb:hover': {
+                  background: 'gray.600',
+                },
+              }}
+            >
               <VStack spacing={8} align="stretch">
-                {posts.slice(0, 4).map(post => (
+                {posts.map(post => (
                   <Link key={post.id} href={`/resources/blogs/${post.id}`} _hover={{ textDecoration: "none" }}>
                     <Flex
                       p={4}
