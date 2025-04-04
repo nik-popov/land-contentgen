@@ -138,7 +138,7 @@ function BlogPage() {
             API integration, and proxy management best practices.
           </Text>
           
-          <Box maxW="650px" mx="auto" mb={10}>
+          {/* <Box maxW="650px" mx="auto" mb={10}>
             <InputGroup size="lg">
               <InputLeftElement pointerEvents="none">
                 <SearchIcon color="gray.300" />
@@ -193,16 +193,10 @@ function BlogPage() {
                 <option value="long">10+ min</option>
               </Select>
             </Box>
-          </SimpleGrid>
-        </Box>
-      </Box>
+          </SimpleGrid> */}
+
       
       {/* Featured Posts Section */}
-      <Box py={16} bg="white">
-        <Box maxW="1200px" mx="auto" px={4}>
-        <Heading as="h2" size="xl" textAlign="center" mb={12} fontWeight="medium">
-            Featured Articles
-          </Heading>
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={10}>
             {featuredPosts.map(post => (
@@ -283,7 +277,7 @@ function BlogPage() {
       </Box>
       
       {/* Recent Posts Section */}
-      <Box py={16} bg="blue.50">
+      <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading  textAlign="center" as="h2" size="xl" mb={12} fontWeight="medium">
             Recent Articles
@@ -333,16 +327,7 @@ function BlogPage() {
               </Box>
             ))}
           </SimpleGrid>
-          
-          <Box textAlign="center" mt={12}>
-            <Button 
-              size="lg" 
-              colorScheme="blue" 
-              rightIcon={<ChevronRightIcon />}
-            >
-              View All Articles
-            </Button>
-          </Box>
+        
         </Box>
       </Box>
       
@@ -442,16 +427,6 @@ function BlogPage() {
                 ))}
               </VStack>
               
-              <Box textAlign="center" mt={10}>
-                <Button 
-                  size="lg" 
-                  colorScheme="blue" 
-                  variant="outline"
-                  rightIcon={<ChevronRightIcon />}
-                >
-                  Load More Articles
-                </Button>
-              </Box>
             </Box>
             
             <Box>
@@ -504,7 +479,11 @@ function BlogPage() {
                   <Text mb={4}>
                     Our team can help you implement the strategies and techniques discussed in our articles.
                   </Text>
-                  <Button colorScheme="blue" width="full">
+                  <Button colorScheme="blue" width="full"
+                  
+                      as="a"
+              href="/contact-sales"
+                  >
                     Contact Us
                   </Button>
                 </Box>
