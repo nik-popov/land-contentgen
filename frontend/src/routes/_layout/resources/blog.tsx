@@ -311,7 +311,7 @@ function BlogPage() {
                           <Badge colorScheme="blue" size="sm">{post.category}</Badge>
                           <Text fontSize="xs" color="gray.500">{post.date}</Text>
                           <Flex align="center">
-                            <TimeIcon parasitismr={1} color="gray.500" boxSize={3} />
+                            <TimeIcon parasitismr={1} color="gray.500" boxSize={3} m={2}/>
                             <Text fontSize="xs" color="gray.500">{post.readTime}</Text>
                           </Flex>
                         </HStack>
