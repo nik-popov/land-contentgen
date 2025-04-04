@@ -142,7 +142,7 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
               w="100%"
             >
               {icon && <Icon as={icon} mr={2} />}
-              {/* <Text flex={1} textAlign="left">{title}</Text> */}
+              <Text flex={1} textAlign="left">{title}</Text>
               <Icon as={FiChevronDown} ml={1} transform={isActive ? "rotate(180deg)" : "rotate(0deg)"} transition="transform 0.2s" />
             </Flex>
             {isActive && (
@@ -163,7 +163,7 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
               >
                 {/* Title and Subtitle */}
                 <Box px={4} py={2} borderBottom="1px" borderColor="gray.200">
-                  <Text fontWeight="bold" fontSize="lg">{title}</Text>
+                  {/* <Text fontWeight="bold" fontSize="lg">{title}</Text> */}
                   {description && (
                     <Text fontSize="sm" color="gray.600" mt={1}>{description}</Text>
                   )}
