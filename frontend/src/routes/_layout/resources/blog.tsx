@@ -1,99 +1,74 @@
-import { Box, Flex, Grid, Heading, Text, VStack, Button, Link, Stat, StatLabel, StatNumber, SimpleGrid, Image, Tag, HStack, Avatar, Divider, Input, InputGroup, InputLeftElement, Select, Badge } from "@chakra-ui/react";
+import { useState, useEffect } from 'react';
+import { Box, Flex, Grid, Heading, Text, VStack, Button, Link, SimpleGrid, Image, Tag, HStack, Divider, Badge, Spinner } from "@chakra-ui/react";
 import { createFileRoute } from "@tanstack/react-router";
 import Footer from '../../../components/Common/Footer';
-import { SearchIcon, TimeIcon, ViewIcon, ChevronRightIcon } from '@chakra-ui/icons';
+import { TimeIcon } from '@chakra-ui/icons';
 
 export const Route = createFileRoute("/_layout/resources/blog")({
   component: BlogPage,
 });
 
 function BlogPage() {
-  const featuredPosts = [
-    {
-      id: 1,
-      title: "Advanced Techniques for Web Scraping JavaScript-Heavy Websites",
-      excerpt: "Learn how to effectively scrape data from modern web applications that rely heavily on JavaScript rendering, dynamic content loading, and anti-bot measures.",
-      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-      category: "Technical",
-      readTime: "8 min read",
-      date: "Mar 15, 2025",
-      views: "15.2K",
-      tags: ["Web Scraping", "JavaScript", "Browser Automation", "Puppeteer"]
-    },
-    {
-      id: 2,
-      title: "Proxy Rotation Strategies for Large-Scale Data Collection",
-      excerpt: "Discover how to build robust proxy rotation systems that maintain high availability, prevent IP blocking, and optimize for both performance and cost-effectiveness.",
-      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
-      category: "Strategy",
-      readTime: "11 min read",
-      date: "Mar 8, 2025",
-      views: "12.8K",
-      tags: ["Proxy Management", "IP Rotation", "Data Collection", "Scaling"]
-    }
-  ];
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  const recentPosts = [
-    {
-      id: 3,
-      title: "Building Resilient Data Pipelines That Scale Automatically",
-      excerpt: "How to design data collection and processing pipelines that handle failures gracefully and scale up or down based on workload demands.",
-      image: "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
-      category: "Architecture",
-      readTime: "9 min read",
-      date: "Mar 2, 2025",
-      views: "8.4K",
-      tags: ["Data Pipeline", "Resilience", "Auto-scaling", "Cloud Architecture"]
-    },
-    {
-      id: 4,
-      title: "REST vs. GraphQL: Choosing the Right API for Your Data Needs",
-      excerpt: "An in-depth comparison of REST and GraphQL APIs for data collection, with practical advice on when to use each approach.",
-      image: "https://images.unsplash.com/photo-1623282033815-40b05d96c903?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-      category: "API",
-      readTime: "7 min read",
-      date: "Feb 28, 2025",
-      views: "10.1K",
-      tags: ["REST", "GraphQL", "API Design", "Data Integration"]
-    },
-    {
-      id: 5,
-      title: "Ethical Web Scraping: Best Practices and Legal Considerations",
-      excerpt: "Guidelines for responsible data collection that respects website terms of service, user privacy, and relevant legal frameworks.",
-      image: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-      category: "Best Practices",
-      readTime: "10 min read",
-      date: "Feb 22, 2025",
-      views: "13.6K",
-      tags: ["Ethics", "Legal", "Compliance", "Best Practices"]
-    },
-    {
-      id: 6,
-      title: "Real-time Data Processing with Kafka and Elasticsearch",
-      excerpt: "How to build streaming data pipelines that process and analyze large volumes of data in real-time using Kafka and Elasticsearch.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-      category: "Technology",
-      readTime: "12 min read",
-      date: "Feb 18, 2025",
-      views: "9.3K",
-      tags: ["Kafka", "Elasticsearch", "Real-time", "Stream Processing"]
-    }
-  ];
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        const response = await fetch('https://raw.githubusercontent.com/CobaltDataNet/static/refs/heads/main/blog-posts.json');
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        setPosts(data);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  const popularCategories = [
-    { name: "Web Scraping", count: 28 },
-    { name: "API Integration", count: 23 },
-    { name: "Data Processing", count: 19 },
-    { name: "Proxy Management", count: 17 },
-    { name: "Best Practices", count: 15 },
-    { name: "Technology", count: 14 }
-  ];
+    fetchPosts();
+  }, []);
 
-  const popularTags = [
-    "Web Scraping", "API", "JavaScript", "Python", "Proxy Management",
-    "Data Processing", "Automation", "Machine Learning", "Cloud", "Security",
-    "Best Practices", "Tutorials", "Case Studies", "Performance", "Scaling"
-  ];
+  if (loading) {
+    return (
+      <Flex justify="center" align="center" minH="100vh">
+        <Spinner size="xl" color="blue.500" />
+      </Flex>
+    );
+  }
+
+  if (error) {
+    return (
+      <Text fontSize="lg" textAlign="center" py={16} color="red.500">
+        Error: {error}
+      </Text>
+    );
+  }
+
+  // Assuming first two posts are featured
+  const featuredPosts = posts.slice(0, 2);
+  const recentPosts = posts.slice(2, 8);
+
+  // Calculate popular categories and tags dynamically
+  const popularCategories = [...new Set(posts.map(post => post.category))]
+    .map(category => ({
+      name: category,
+      count: posts.filter(post => post.category === category).length
+    }))
+    .sort((a, b) => b.count - a.count)
+    .slice(0, 6);
+
+  const popularTags = [...new Set(posts.flatMap(post => post.tags))]
+    .map(tag => ({
+      name: tag,
+      count: posts.filter(post => post.tags.includes(tag)).length
+    }))
+    .sort((a, b) => b.count - a.count)
+    .slice(0, 15)
+    .map(tag => tag.name);
 
   return (
     <>
@@ -108,7 +83,6 @@ function BlogPage() {
             API integration, and proxy management best practices.
           </Text>
 
-          {/* Featured Posts */}
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={10}>
             {featuredPosts.map(post => (
               <Link key={post.id} href={`/resources/blogs/${post.id}`} _hover={{ textDecoration: "none" }}>
@@ -147,8 +121,6 @@ function BlogPage() {
                       {post.excerpt}
                     </Text>
 
-              
-
                     <Box>
                       {post.tags.map((tag, index) => (
                         <Tag
@@ -162,11 +134,10 @@ function BlogPage() {
                           {tag}
                         </Tag>
                       ))}
-                          <Divider m={4} />
-                            <Flex justify="flex-end" mb={4}>
-                            <Text fontSize="sm" color="gray.500">{post.date}</Text>
-                    </Flex>
-                       
+                      <Divider m={4} />
+                      <Flex justify="flex-end" mb={4}>
+                        <Text fontSize="sm" color="gray.500">{post.date}</Text>
+                      </Flex>
                     </Box>
                   </Box>
                 </Box>
@@ -282,7 +253,7 @@ function BlogPage() {
           <Grid templateColumns={{ base: "1fr", lg: "7fr 3fr" }} gap={10}>
             <Box>
               <VStack spacing={8} align="stretch">
-                {[...recentPosts, ...featuredPosts].slice(0, 4).map(post => (
+                {posts.slice(0, 4).map(post => (
                   <Link key={post.id} href={`/resources/blogs/${post.id}`} _hover={{ textDecoration: "none" }}>
                     <Flex
                       p={4}
@@ -308,7 +279,7 @@ function BlogPage() {
                           <Badge colorScheme="blue" size="sm">{post.category}</Badge>
                           <Text fontSize="xs" color="gray.500">{post.date}</Text>
                           <Flex align="center">
-                            <TimeIcon parasitismr={1} color="gray.500" boxSize={3} m={2}/>
+                            <TimeIcon mr={1} color="gray.500" boxSize={3} m={2}/>
                             <Text fontSize="xs" color="gray.500">{post.readTime}</Text>
                           </Flex>
                         </HStack>
