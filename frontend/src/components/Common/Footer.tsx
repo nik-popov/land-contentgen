@@ -23,7 +23,7 @@ const Footer = () => {
   </Link>
 </Heading>
 <Text color="gray.400" fontSize="sm" mb={2}>
-  <Link href="https://cobaltdata.net" _hover={{ textDecoration: "none", color: "orange.400" }}>
+  <Link href="https://cobaltdata.net" _hover={{ textDecoration: "none", color: "blue.400" }}>
     Cobalt Data Company
   </Link>
 </Text>
