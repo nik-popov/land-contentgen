@@ -378,7 +378,7 @@ function ProxyTypesPage() {
               variant="outline"
               borderColor="white"
               color="white"
-              _hover={{ bg: "blue.700" }}
+              _hover={{ bg: "teal.700" }}
               as="a"
               href="https://dashboard.thedataproxy.com/signup"
             >
