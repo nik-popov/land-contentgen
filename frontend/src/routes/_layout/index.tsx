@@ -331,7 +331,7 @@ function LandingPage() {
               variant="outline"
               borderColor="white"
               color="white"
-              _hover={{ bg: "blue.600" }}
+              _hover={{ bg: "white",color:"orange" }}
               as="a"
               href="/contact-sales"
             >
