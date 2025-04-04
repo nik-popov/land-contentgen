@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Box, Flex, Heading, Text, Image, Tag, HStack, Divider, Spinner, UnorderedList, ListItem } from "@chakra-ui/react";
 import { createFileRoute, useParams, Link as RouterLink } from "@tanstack/react-router";
 import { TimeIcon } from "@chakra-ui/icons";
-import Footer from "../../../../components/Common/Footer";
+import Footer from "../../../components/Common/Footer";
 
 function BlogPostDetails() {
   const [posts, setPosts] = useState([]);
