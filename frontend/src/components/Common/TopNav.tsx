@@ -97,7 +97,7 @@ const navStructure: NavItem[] = [
     icon: FiBook,
     description: "Documentation and learning resources for web scraping",
     subItems: [
-      { title: "API Documentation", path: "https://apis.thedataproxy.com/redoc", description: "Technical documentation for our scraping APIs", icon: FiCode },
+      { title: "Useful Articles", path: "/resources/blog", description: "Learn how to use our our scraping APIs", icon: FiCode },
       { title: "Web Scraping Guides", path: "/resources/web-scraping-guides", description: "Learn how to use our web scraping tools effectively", icon: FiBook },
       { title: "Code Examples", path: "/resources/code-examples", description: "Sample code for web scraping in multiple languages", icon: FiCode },
       { title: "Support Center", path: "/resources/support-center", description: "Get help with your web scraping projects", icon: FiHelpCircle }
