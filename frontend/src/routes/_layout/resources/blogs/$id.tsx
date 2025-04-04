@@ -28,7 +28,50 @@ const posts = [
     views: "12.8K",
     tags: ["Proxy Management", "IP Rotation", "Data Collection", "Scaling"],
   },
-  // Additional posts can be added here
+  {
+    id: 3,
+    title: "Building Resilient Data Pipelines That Scale Automatically",
+    excerpt: "How to design data collection and processing pipelines that handle failures gracefully and scale up or down based on workload demands.",
+    image: "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+    category: "Architecture",
+    readTime: "9 min read",
+    date: "Mar 2, 2025",
+    views: "8.4K",
+    tags: ["Data Pipeline", "Resilience", "Auto-scaling", "Cloud Architecture"]
+  },
+  {
+    id: 4,
+    title: "REST vs. GraphQL: Choosing the Right API for Your Data Needs",
+    excerpt: "An in-depth comparison of REST and GraphQL APIs for data collection, with practical advice on when to use each approach.",
+    image: "https://images.unsplash.com/photo-1623282033815-40b05d96c903?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    category: "API",
+    readTime: "7 min read",
+    date: "Feb 28, 2025",
+    views: "10.1K",
+    tags: ["REST", "GraphQL", "API Design", "Data Integration"]
+  },
+  {
+    id: 5,
+    title: "Ethical Web Scraping: Best Practices and Legal Considerations",
+    excerpt: "Guidelines for responsible data collection that respects website terms of service, user privacy, and relevant legal frameworks.",
+    image: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    category: "Best Practices",
+    readTime: "10 min read",
+    date: "Feb 22, 2025",
+    views: "13.6K",
+    tags: ["Ethics", "Legal", "Compliance", "Best Practices"]
+  },
+  {
+    id: 6,
+    title: "Real-time Data Processing with Kafka and Elasticsearch",
+    excerpt: "How to build streaming data pipelines that process and analyze large volumes of data in real-time using Kafka and Elasticsearch.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    category: "Technology",
+    readTime: "12 min read",
+    date: "Feb 18, 2025",
+    views: "9.3K",
+    tags: ["Kafka", "Elasticsearch", "Real-time", "Stream Processing"]
+  }
 ];
 
 function BlogPostDetails() {
