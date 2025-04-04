@@ -356,7 +356,7 @@ function SchedulerPage() {
               variant="outline"
               borderColor="white"
               color="white"
-              _hover={{ bg: "purple.600" }}
+              _hover={{ bg: "gray.200" }}
               as="a"
               href="https://dashboard.thedataproxy.com/signup"
             >
