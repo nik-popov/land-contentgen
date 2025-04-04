@@ -355,7 +355,7 @@ function HTMLScraperPage() {
               variant="outline"
               borderColor="white"
               color="white"
-              _hover={{ bg: "blue.600" }}
+              _hover={{ bg: "gray.200" }}
               as="a"
               href="/contact-sales"
               >
