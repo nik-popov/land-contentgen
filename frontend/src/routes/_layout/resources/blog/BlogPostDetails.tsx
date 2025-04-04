@@ -120,7 +120,7 @@ function BlogPostDetails() {
 }
 
 // Define the route for the blog post details page
-export const Route = createFileRoute("/resources/blog/:id")({
+export const Route = createFileRoute("/_layout/resources/blog/:id")({
   component: BlogPostDetails,
 });
 
