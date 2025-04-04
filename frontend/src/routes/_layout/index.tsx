@@ -185,7 +185,7 @@ function LandingPage() {
 </Box> */}
 
 {/* Section 1B: Infrastructure & Development */}
-<Box py={16} bg="white" maxW="1200px" mx="auto" px={4}>
+{/* <Box py={16} bg="white" maxW="1200px" mx="auto" px={4}>
   <VStack spacing={8} textAlign="center">
     <Heading as="h2" size="2xl" color="gray.800" fontWeight="medium">
       Cloud Infrastructure & Development
@@ -229,7 +229,7 @@ function LandingPage() {
       Advanced monitoring is provided through Prometheus for metrics collection, Grafana for visualization dashboards, Kibana for log analysis, and Datadog for comprehensive application performance monitoring. This full-stack observability ensures your web scraping operations maintain peak performance and availability.
     </Text>
   </VStack>
-</Box>
+</Box> */}
 
           <Box py={16} bg="blue.50" maxW="1200px" mx="auto" px={4}>
         <Heading as="h2" size="2xl" textAlign="center" mb={10} color="gray.800" fontWeight="medium">
