@@ -60,7 +60,7 @@ function BlogPostDetails() {
     <Box>
       <Box py={16} bg="white">
       <RouterLink 
-            to="/resources/blogs" 
+            to="/resources/blog" 
             style={{ color: "#3182CE", fontWeight: "medium", textDecoration: "none" }}
           >
             ← Back to all
