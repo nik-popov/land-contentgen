@@ -31,87 +31,40 @@ const posts = [
   // Additional posts can be added here
 ];
 
-// BlogPostDetails component
 function BlogPostDetails() {
-  // Get the blog post ID from the URL parameters
   const { id } = useParams();
-
-  // Find the post matching the ID
+  console.log("ID from useParams:", id, "Parsed ID:", parseInt(id)); // Debug
   const post = posts.find((p) => p.id === parseInt(id));
 
-  // Handle case where post is not found
   if (!post) {
-    return (
-      <Text fontSize="lg" textAlign="center" py={16}>
-        Post not found
-      </Text>
-    );
+    return <Text fontSize="lg" textAlign="center" py={16}>Post not found</Text>;
   }
 
-  // Split content into paragraphs based on double newlines
   const paragraphs = post.content.split("\n\n");
 
   return (
     <Box py={16} bg="white">
       <Box maxW="800px" mx="auto" px={4}>
-        {/* Blog Post Image */}
-        <Image
-          src={post.image}
-          alt={post.title}
-          w="full"
-          h="400px"
-          objectFit="cover"
-          borderRadius="md"
-          mb={8}
-        />
-
-        {/* Metadata (Category, Date, Read Time) */}
+        <Image src={post.image} alt={post.title} w="full" h="400px" objectFit="cover" borderRadius="md" mb={8} />
         <Flex align="center" mb={4}>
-          <Tag colorScheme="blue" mr={4} px={3} py={1} borderRadius="full">
-            {post.category}
-          </Tag>
-          <Text fontSize="sm" color="gray.500">
-            {post.date}
-          </Text>
+          <Tag colorScheme="blue" mr={4} px={3} py={1} borderRadius="full">{post.category}</Tag>
+          <Text fontSize="sm" color="gray.500">{post.date}</Text>
           <Flex align="center" ml={4}>
             <TimeIcon mr={1} color="gray.500" boxSize={3} />
-            <Text fontSize="sm" color="gray.500">
-              {post.readTime}
-            </Text>
+            <Text fontSize="sm" color="gray.500">{post.readTime}</Text>
           </Flex>
         </Flex>
-
-        {/* Post Title */}
-        <Heading as="h1" size="2xl" mb={6} fontWeight="medium" lineHeight="1.3">
-          {post.title}
-        </Heading>
-
-        {/* Post Content */}
+        <Heading as="h1" size="2xl" mb={6} fontWeight="medium" lineHeight="1.3">{post.title}</Heading>
         {paragraphs.map((paragraph, index) => (
-          <Text key={index} fontSize="lg" color="gray.700" mb={4}>
-            {paragraph}
-          </Text>
+          <Text key={index} fontSize="lg" color="gray.700" mb={4}>{paragraph}</Text>
         ))}
-
-        {/* Tags */}
         <HStack spacing={2} mb={8}>
           {post.tags.map((tag, index) => (
-            <Tag key={index} colorScheme="gray" variant="subtle" size="md">
-              {tag}
-            </Tag>
+            <Tag key={index} colorScheme="gray" variant="subtle" size="md">{tag}</Tag>
           ))}
         </HStack>
-
-        {/* Divider and Back Link */}
         <Divider mb={8} />
-        <RouterLink
-          to="/resources/blog"
-          style={{
-            color: "#3182CE",
-            fontWeight: "medium",
-            textDecoration: "none",
-          }}
-        >
+        <RouterLink to="/resources/blog" style={{ color: "#3182CE", fontWeight: "medium", textDecoration: "none" }}>
           ← Back to Blog
         </RouterLink>
       </Box>
@@ -119,10 +72,8 @@ function BlogPostDetails() {
   );
 }
 
-// Define the route for the blog post details page
 export const Route = createFileRoute("/_layout/resources/blog/:id")({
   component: BlogPostDetails,
 });
 
-// Export the component as default
 export default BlogPostDetails;
