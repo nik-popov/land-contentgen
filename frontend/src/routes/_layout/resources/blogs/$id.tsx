@@ -204,7 +204,7 @@ function BlogPostDetails() {
         <Box maxW="800px" mx="auto" px={4}>
           <RouterLink 
             to="/resources/blog" 
-            style={{ color: "#3182CE", fontWeight: "medium", textDecoration: "none", margin:"2px"}}
+            style={{ color: "#3182CE", fontWeight: "medium", textDecoration: "none", margin:"8px"}}
           >
             ← Back to all
           </RouterLink>
