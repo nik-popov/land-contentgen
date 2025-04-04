@@ -27,7 +27,7 @@ import {
   Icon
 } from "@chakra-ui/react";
 import { InfoIcon, LockIcon } from '@chakra-ui/icons';
-import { CheckCircleIcon, InfoIcon, ArrowForwardIcon, PhoneIcon, EmailIcon } from '@chakra-ui/icons';
+import { CheckCircleIcon, ArrowForwardIcon, PhoneIcon, EmailIcon } from '@chakra-ui/icons';
 import { useState } from 'react';
 import Footer from '../../components/Common/Footer';
 
@@ -145,34 +145,7 @@ function PrivacyRequestPage() {
             Submit a Privacy Request
           </Heading>
           
-          <HStack>
-            <Text fontSize="lg" color="gray.600">
-              Your privacy matters to us. Use this form to submit formal requests regarding your personal data.
-            </Text>
-          </HStack>
-
-          {/* Introduction */}
-          <Box w="full" bg="blue.50" p={6} borderRadius="md">
-            <Text fontSize="md" mb={4}>
-              In accordance with data protection regulations like GDPR, CCPA, and others, you have certain rights regarding your personal data. 
-              You can use this form to exercise these rights, including:
-            </Text>
-            <VStack align="start" spacing={2} pl={4}>
-              <Text><strong>• Access:</strong> Request a copy of your personal data</Text>
-              <Text><strong>• Rectification:</strong> Correct inaccurate or incomplete data</Text>
-              <Text><strong>• Erasure:</strong> Request deletion of your personal data</Text>
-              <Text><strong>• Restriction:</strong> Request limitations on how we process your data</Text>
-              <Text><strong>• Portability:</strong> Receive your data in a structured, machine-readable format</Text>
-              <Text><strong>• Objection:</strong> Object to certain types of processing</Text>
-            </VStack>
-            <Text fontSize="md" mt={4}>
-              We will respond to your request within 30 days. For complex requests or if we receive a large volume of requests, 
-              we may extend this period by an additional 60 days, in which case we will notify you.
-            </Text>
-          </Box>
-          
-          <Divider />
-          
+        
           {/* Request Form */}
           <Box w="full" as="form" onSubmit={handleSubmit}>
             <VStack spacing={6} align="start">
@@ -356,6 +329,33 @@ function PrivacyRequestPage() {
               
            
             </VStack>
+          </Box>
+          
+          <Divider />
+          <HStack>
+            <Text fontSize="lg" color="gray.600">
+              Your privacy matters to us. Use this form to submit formal requests regarding your personal data.
+            </Text>
+          </HStack>
+
+          {/* Introduction */}
+          <Box w="full" bg="blue.50" p={6} borderRadius="md">
+            <Text fontSize="md" mb={4}>
+              In accordance with data protection regulations like GDPR, CCPA, and others, you have certain rights regarding your personal data. 
+              You can use this form to exercise these rights, including:
+            </Text>
+            <VStack align="start" spacing={2} pl={4}>
+              <Text><strong>• Access:</strong> Request a copy of your personal data</Text>
+              <Text><strong>• Rectification:</strong> Correct inaccurate or incomplete data</Text>
+              <Text><strong>• Erasure:</strong> Request deletion of your personal data</Text>
+              <Text><strong>• Restriction:</strong> Request limitations on how we process your data</Text>
+              <Text><strong>• Portability:</strong> Receive your data in a structured, machine-readable format</Text>
+              <Text><strong>• Objection:</strong> Object to certain types of processing</Text>
+            </VStack>
+            <Text fontSize="md" mt={4}>
+              We will respond to your request within 30 days. For complex requests or if we receive a large volume of requests, 
+              we may extend this period by an additional 60 days, in which case we will notify you.
+            </Text>
           </Box>
           
           <Divider />
