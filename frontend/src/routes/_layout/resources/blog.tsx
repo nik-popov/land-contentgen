@@ -137,10 +137,6 @@ function BlogPage() {
                         <TimeIcon mr={1} color="gray.500" boxSize={3} />
                         <Text fontSize="sm" color="gray.500">{post.readTime}</Text>
                       </Flex>
-                      {/* <Flex align="center">
-                        <ViewIcon mr={1} color="gray.500" boxSize={3} />
-                        <Text fontSize="sm" color="gray.500">{post.views} views</Text>
-                      </Flex> */}
                     </HStack>
 
                     <Heading as="h3" size="lg" mb={3} fontWeight="medium" lineHeight="1.3">
