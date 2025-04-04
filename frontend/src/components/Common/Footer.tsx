@@ -97,6 +97,8 @@ const Footer = () => {
               <Link href="/contact" color="gray.300" _hover={{ color: "orange.400" }}>Contact</Link>
               <Link href="/pricing" color="gray.300" _hover={{ color: "orange.400" }}>Pricing</Link>
               <Link href="/contact-sales" color="gray.300" _hover={{ color: "orange.400" }}>Sales</Link>
+              <Link href="https://dashboard.thedataproxy.com/login" color="gray.300" _hover={{ color: "orange.400" }}>Log In</Link>
+              <Link href="https://dashboard.thedataproxy.com/signup" color="gray.300" _hover={{ color: "orange.400" }}>Sign Up</Link>
             </VStack>
           </Box>
         </Grid>

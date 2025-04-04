@@ -281,16 +281,18 @@ function NetworkStatusPage() {
               <Heading as="h3" size="md" fontWeight="medium">Technical Documentation</Heading>
               <Text color="gray.600">Access documentation to understand our infrastructure and troubleshoot common issues.</Text>
               <Link color="blue.600" href="https://apis.thedataproxy.com/redoc" fontWeight="medium">
-                View Documentation →
+                API Documentation →
               </Link>
             </VStack>
             
             <VStack align="flex-start" bg="white" p={6} borderRadius="md" boxShadow="sm" spacing={4}>
               <Image src="https://cdn-icons-png.flaticon.com/512/1373/1373397.png" boxSize="50px" mb={2} />
-              <Heading as="h3" size="md" fontWeight="medium">Status Page API</Heading>
-              <Text color="gray.600">Integrate real-time status information directly into your monitoring systems with our status API.</Text>
-              <Link color="blue.600" href="https://apis.thedataproxy.com/redoc" fontWeight="medium">
-                API Documentation →
+              <Heading as="h3" size="md" fontWeight="medium">Proxy Status Page</Heading>
+              <Text color="gray.600">
+                Check proxy performance and availability in real-time on our dedicated status page.
+              </Text>
+              <Link color="blue.600" href="https://dashboard.thedataproxy.com/scraping-tools/search-proxies" fontWeight="medium">
+                View Status Page →
               </Link>
             </VStack>
             
