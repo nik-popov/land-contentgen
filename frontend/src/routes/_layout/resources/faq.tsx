@@ -107,34 +107,31 @@ function FAQPage() {
             </InputGroup>
           </Box> */}
           
-          <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={6}>
+          {/* <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={6}>
             <VStack align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
               <Heading as="h3" size="md" color="blue.600">Getting Started</Heading>
               <Text>Basic information about our platform, account creation, and essential features.</Text>
-              {/* <Button colorScheme="blue" variant="link" rightIcon={<InfoIcon />}>Learn more</Button> */}
+              <Button colorScheme="blue" variant="link" rightIcon={<InfoIcon />}>Learn more</Button>
             </VStack>
             
             <VStack align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
               <Heading as="h3" size="md" color="blue.600">Billing & Accounts</Heading>
               <Text>Information about pricing, subscription management, payments, and account settings.</Text>
-              {/* <Button colorScheme="blue" variant="link" rightIcon={<InfoIcon />}>Learn more</Button> */}
+              <Button colorScheme="blue" variant="link" rightIcon={<InfoIcon />}>Learn more</Button>
             </VStack>
             
             <VStack align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
               <Heading as="h3" size="md" color="blue.600">Technical Support</Heading>
               <Text>Troubleshooting guides, error resolution, and technical assistance for our platform.</Text>
-              {/* <Button colorScheme="blue" variant="link" rightIcon={<InfoIcon />}>Learn more</Button> */}
+              <Button colorScheme="blue" variant="link" rightIcon={<InfoIcon />}>Learn more</Button>
             </VStack>
-          </SimpleGrid>
-        </Box>
-      </Box>
-      
+          </SimpleGrid> */}
+
       {/* FAQ Categories Section */}
-      <Box py={16} bg="white">
-        <Box maxW="1200px" mx="auto" px={4}>
-          <Heading as="h2" size="xl" textAlign="center" mb={12} fontWeight="medium">
+
+          {/* <Heading as="h2" size="xl" textAlign="center" mb={12} fontWeight="medium">
             Browse by Category
-          </Heading>
+          </Heading> */}
           
           <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={8}>
             {faqCategories.map((category, index) => (
