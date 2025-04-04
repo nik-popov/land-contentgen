@@ -202,12 +202,18 @@ function BlogPostDetails() {
     <Box>
       <Box py={16} bg="white">
         <Box maxW="800px" mx="auto" px={4}>
-          <RouterLink 
-            to="/resources/blog" 
-            style={{ color: "#3182CE", fontWeight: "medium", textDecoration: "none", margin:"8px"}}
-          >
-            ← Back to all
-          </RouterLink>
+        <RouterLink 
+    to="/resources/blog" 
+    style={{ 
+      color: "#3182CE", 
+      fontWeight: "medium", 
+      textDecoration: "none", 
+      margin: "8px",
+      display: "block"  // or "inline-block"
+    }}
+  >
+    ← Back to all
+  </RouterLink>
           <Image 
             src={post.image} 
             alt={post.title} 
