@@ -142,7 +142,7 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
               w="100%"
             >
               {icon && <Icon as={icon} mr={2} />}
-              <Text flex={1} textAlign="left">{title}</Text>
+              {/* <Text flex={1} textAlign="left">{title}</Text> */}
               <Icon as={FiChevronDown} ml={1} transform={isActive ? "rotate(180deg)" : "rotate(0deg)"} transition="transform 0.2s" />
             </Flex>
             {isActive && (
