@@ -17,8 +17,16 @@ const Footer = () => {
         <Grid templateColumns={{ base: "1fr", md: "2fr 1fr 1fr 1fr" }} gap={8} mb={8}>
           {/* Company Information */}
           <Box>
-          <Heading as="h4" size="md" mb={1} color="white">The Data Proxy</Heading>
-          <Text color="gray.400" fontSize="sm" mb={2}>Cobalt Data Company</Text>
+          <Heading as="h4" size="md" mb={1} color="white">
+  <Link href="https://thedataproxy.com" _hover={{ textDecoration: "none", color: "orange.400" }}>
+    The Data Proxy
+  </Link>
+</Heading>
+<Text color="gray.400" fontSize="sm" mb={2}>
+  <Link href="https://cobaltdata.net" _hover={{ textDecoration: "none", color: "orange.400" }}>
+    Cobalt Data Company
+  </Link>
+</Text>
           <Text color="gray.300" mb={4}>
             Enterprise grade proxy infrastructure designed specifically for web scraping, data collection, 
             and market intelligence needs with unlimited scale and global coverage across 190+ countries.
