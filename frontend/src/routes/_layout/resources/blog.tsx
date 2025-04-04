@@ -8,7 +8,7 @@ function BlogPostDetails() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const { id } = useParams({ from: "/_layout/resources/blogs/$id" });
+  const { id } = useParams({ from: "/_layout/resources/blogs/:id" });
 
   useEffect(() => {
     const fetchPosts = async () => {
