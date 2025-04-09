@@ -62,6 +62,10 @@ const Footer = () => {
               <Link href="/solutions/market-research" color="gray.300" _hover={{ color: "orange.400" }}>Market Research</Link>
               <Link href="/tools/https-proxy" color="gray.300" _hover={{ color: "orange.400" }}>HTTPs Request Proxy</Link>
               <Link href="/tools/rotating-proxy" color="gray.300" _hover={{ color: "orange.400" }}>Rotating Proxy</Link>
+              
+              <Link href="/tools/user-agents" color="gray.300" _hover={{ color: "orange.400" }}>User Agents API</Link>
+              <Link href="/tools/socks5-proxy" color="gray.300" _hover={{ color: "orange.400" }}>SOCKS5 Proxy</Link>
+           
               <Link href="/solutions/price-monitoring" color="gray.300" _hover={{ color: "orange.400" }}>Price Monitoring</Link>
               <Link href="/solutions/training-ai" color="gray.300" _hover={{ color: "orange.400" }}>AI Training Datasets</Link>
               <Link href="/solutions/content-aggregation" color="gray.300" _hover={{ color: "orange.400" }}>Content Aggregation</Link>
