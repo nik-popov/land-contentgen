@@ -4,69 +4,69 @@ import Footer from '../../../components/Common/Footer';
 import { CheckCircleIcon } from '@chakra-ui/icons';
 
 export const Route = createFileRoute("/_layout/tools/https-proxy")({
-  component: ProxyDashboard,
+  component: HttpsProxyService,
 });
 
-function ProxyDashboard() {
+function HttpsProxyService() {
   const industryData = [
-    { industry: "E-commerce", growth: 53, useCases: "Competitive pricing, inventory monitoring, market analysis" },
-    { industry: "Travel", growth: 47, useCases: "Fare comparison, booking data, regional pricing differences" },
-    { industry: "Market Research", growth: 41, useCases: "Consumer insights, competitive intelligence, regional data" },
-    { industry: "Ad Verification", growth: 38, useCases: "Brand protection, fraud detection, campaign monitoring" },
-    { industry: "SEO & Marketing", growth: 44, useCases: "Rank tracking, SERP analysis, competitor monitoring" },
-    { industry: "Financial Services", growth: 35, useCases: "Market data, price verification, automated trading" }
+    { industry: "E-commerce", growth: 62, useCases: "Price monitoring, inventory tracking, competitor analysis, global market research" },
+    { industry: "Travel", growth: 58, useCases: "Regional pricing intelligence, content localization, availability monitoring, geo-restricted data" },
+    { industry: "Market Research", growth: 54, useCases: "Location-specific data collection, demographic insights, regional sentiment analysis" },
+    { industry: "Ad Verification", growth: 49, useCases: "Global ad placement verification, geo-targeting validation, fraud prevention" },
+    { industry: "SEO & Marketing", growth: 57, useCases: "International SERP analysis, localized keyword research, regional campaign testing" },
+    { industry: "Financial Services", growth: 51, useCases: "Geo-restricted financial data, market surveillance, cross-border compliance verification" }
   ];
 
   const proxyFeatures = [
     { 
-      title: "Global IP Network", 
-      description: "Access to over 100+ countries with city-level targeting capabilities across residential, datacenter, and mobile proxies", 
+      title: "Enterprise-Grade Global IP Network", 
+      description: "Access to 200+ countries and 50,000+ cities with precise targeting across residential, datacenter, and mobile IP addresses", 
       icon: "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/aws.png" 
     },
     { 
-      title: "Session Management", 
-      description: "Create and maintain persistent sessions with automatic rotation and sophisticated fingerprinting", 
+      title: "Advanced Session Management", 
+      description: "Create persistent, rotating, or sticky sessions with sophisticated browser fingerprinting and request obfuscation", 
       icon: "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/kubernetes.png" 
     },
     { 
-      title: "Traffic Analytics", 
-      description: "Comprehensive usage statistics with request success rates, bandwidth consumption, and cost optimization", 
+      title: "Real-Time Traffic Analytics", 
+      description: "Comprehensive metrics dashboard with success rates, latency monitoring, bandwidth tracking, and cost optimization insights", 
       icon: "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/analytics.png" 
     },
     { 
-      title: "Request Optimization", 
-      description: "Intelligent routing with automatic retries, concurrent requests, and caching mechanisms", 
+      title: "Intelligent Request Routing", 
+      description: "AI-powered request optimization with automatic retries, concurrent connections, and smart caching to maximize success rates", 
       icon: "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/grafana.png" 
     }
   ];
 
   return (
     <>
-      {/* Proxy Dashboard Hero Section */}
+      {/* HTTPS Proxy Hero Section */}
       <Box py={16} bg="blue.50" color="gray.800">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h1" size="2xl" textAlign="center" mb={8} fontWeight="medium">
-            Proxy Dashboard
+            Enterprise HTTPS Proxy Services
           </Heading>
           <Text fontSize="xl" textAlign="center" mb={12} maxW="800px" mx="auto">
-            Manage your entire proxy infrastructure through a single intuitive interface.
-            Monitor performance, optimize costs, and scale your web data collection effortlessly.
+            Route HTTPS requests globally with our secure, scalable proxy infrastructure. 
+            Access geo-restricted content, collect market intelligence, and protect your web operations with unparalleled reliability.
           </Text>
           
           <Flex justify="space-between" flexWrap="wrap" gap={6}>
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="teal.500">Centralized Proxy Management</Heading>
-              <Text>Manage all your proxy types from a single dashboard - residential, datacenter, ISP, and mobile IPs. Control rotation, location targeting, and session settings from one interface.</Text>
+              <Heading as="h3" size="md" color="teal.500">Global HTTPS Routing</Heading>
+              <Text>Access websites from 200+ countries and 50,000+ cities with precise location targeting. Bypass geo-restrictions and collect region-specific data with our extensive proxy network spanning residential, datacenter, and mobile IPs.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="teal.500">Real-time Performance Metrics</Heading>
-              <Text>Monitor success rates, response times, and bandwidth usage in real-time. Identify and troubleshoot issues instantly with comprehensive logging and analytics.</Text>
+              <Heading as="h3" size="md" color="teal.500">Enterprise-Grade Security</Heading>
+              <Text>Route HTTPS traffic through our encrypted, SOC 2 compliant infrastructure. Protect your operations with advanced IP rotation, request anonymization, and browser fingerprinting technologies designed for mission-critical applications.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="teal.500">Cost Optimization Tools</Heading>
-              <Text>Track proxy utilization across teams and projects. Implement usage quotas, optimize traffic patterns, and minimize bandwidth costs with intelligent routing algorithms.</Text>
+              <Heading as="h3" size="md" color="teal.500">Intelligent Request Optimization</Heading>
+              <Text>Maximize success rates with AI-powered routing algorithms, automatic retries, and concurrent request handling. Our intelligent proxy infrastructure adapts to changing conditions to ensure reliable data collection at scale.</Text>
             </VStack>
           </Flex>
         </Box>
@@ -76,40 +76,40 @@ function ProxyDashboard() {
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
-            Key Benefits of Proxy Dashboard
+            Key Benefits of Our HTTPS Proxy Services
           </Heading>
           
           <Grid templateColumns={{ base: "1fr", md: "1fr 1fr", lg: "1fr 1fr 1fr" }} gap={10} mt={10}>
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="teal.500">68%</StatNumber>
-                <StatLabel>Management Time Reduction</StatLabel>
+                <StatNumber color="teal.500">99.9%</StatNumber>
+                <StatLabel>Uptime Reliability</StatLabel>
               </Stat>
               <Text>
-                Organizations using our Proxy Dashboard report reducing their proxy management 
-                time by up to 68% compared to using multiple providers or in-house solutions.
+                Our enterprise HTTPS proxy infrastructure delivers carrier-grade reliability 
+                with guaranteed 99.9% uptime SLAs and redundant routing across multiple global datacenters.
               </Text>
             </VStack>
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="teal.500">42%</StatNumber>
-                <StatLabel>Cost Savings</StatLabel>
+                <StatNumber color="teal.500">87%</StatNumber>
+                <StatLabel>Higher Success Rates</StatLabel>
               </Stat>
               <Text>
-                Our intelligent routing and bandwidth optimization features help clients
-                reduce their proxy infrastructure costs by an average of 42%.
+                Organizations using our HTTPS proxy services report up to 87% higher 
+                success rates for challenging targets compared to generic proxy solutions.
               </Text>
             </VStack>
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="teal.500">5x</StatNumber>
-                <StatLabel>Faster Troubleshooting</StatLabel>
+                <StatNumber color="teal.500">65%</StatNumber>
+                <StatLabel>Cost Reduction</StatLabel>
               </Stat>
               <Text>
-                Identify and resolve issues up to 5 times faster with comprehensive
-                monitoring, detailed logs, and real-time alerts for your proxy infrastructure.
+                Our intelligent routing and bandwidth optimization technologies help 
+                enterprises reduce proxy infrastructure costs by an average of 65%.
               </Text>
             </VStack>
           </Grid>
@@ -120,7 +120,7 @@ function ProxyDashboard() {
       <Box py={16} bg="blue.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={12} fontWeight="medium">
-            Industry-Specific Proxy Solutions
+            Industry-Specific HTTPS Proxy Solutions
           </Heading>
           
           <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={8}>
@@ -131,11 +131,11 @@ function ProxyDashboard() {
                   <StatNumber color="teal.500">{industry.growth}%</StatNumber>
                   <StatHelpText>
                     <StatArrow type="increase" />
-                    Efficiency Improvement
+                    ROI Improvement
                   </StatHelpText>
                 </Stat>
                 <Text fontSize="sm" color="gray.600">
-                  <Text as="span" fontWeight="bold">Common Use Cases:</Text> {industry.useCases}
+                  <Text as="span" fontWeight="bold">Use Cases:</Text> {industry.useCases}
                 </Text>
               </Box>
             ))}
@@ -147,50 +147,50 @@ function ProxyDashboard() {
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={4} fontWeight="medium">
-            Advanced Proxy Management Capabilities
+            Advanced HTTPS Proxy Capabilities
           </Heading>
           <Text fontSize="lg" textAlign="center" mb={12} maxW="700px" mx="auto">
-            Our Proxy Dashboard provides comprehensive tools to manage even the most complex proxy infrastructures
+            Our enterprise-grade HTTPS proxy infrastructure provides unmatched capabilities for global data access and collection
           </Text>
           
           <Grid templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }} gap={8}>
             <Flex p={6} bg="gray.50" borderRadius="md" boxShadow="sm" align="flex-start">
               <Box w="50px" h="50px" mr={4} display="flex" alignItems="center" justifyContent="center">
-              <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/grafana.png" alt="Grafana" />
+              <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/grafana.png" alt="Advanced Analytics" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">Usage Analytics</Heading>
-                <Text color="gray.600">Track proxy usage across teams and projects with detailed metrics on requests, bandwidth, and success rates</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">Real-Time Analytics</Heading>
+                <Text color="gray.600">Comprehensive monitoring dashboards with request success metrics, response time tracking, and bandwidth utilization across all proxy endpoints</Text>
               </Box>
             </Flex>
             
             <Flex p={6} bg="gray.50" borderRadius="md" boxShadow="sm" align="flex-start">
               <Box w="50px" h="50px" mr={4} display="flex" alignItems="center" justifyContent="center">
-                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/aws.png" alt="Global Proxy Network" />
+                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/aws.png" alt="Global Network" />
               </Box>
               <Box>
                 <Heading as="h3" size="md" mb={2} fontWeight="medium">Global Proxy Network</Heading>
-                <Text color="gray.600">Access residential, datacenter, and mobile IPs across 195+ countries with city and ISP-level targeting capabilities</Text>
+                <Text color="gray.600">Access to over 50 million residential, datacenter, and mobile IP addresses across every continent with city and ISP-level targeting capabilities</Text>
               </Box>
             </Flex>
             
             <Flex p={6} bg="gray.50" borderRadius="md" boxShadow="sm" align="flex-start">
               <Box w="50px" h="50px" mr={4} display="flex" alignItems="center" justifyContent="center">
-                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/prometheus.png" alt="Monitoring & Alerts" />
+                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/prometheus.png" alt="Advanced Monitoring" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">Monitoring & Alerts</Heading>
-                <Text color="gray.600">Set up custom alerts for performance thresholds, usage limits, and error rates with integrations to your notification systems</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">Intelligent Monitoring</Heading>
+                <Text color="gray.600">Proactive monitoring with custom alert thresholds, automated health checks, and predictive failure detection to ensure maximum uptime</Text>
               </Box>
             </Flex>
             
             <Flex p={6} bg="gray.50" borderRadius="md" boxShadow="sm" align="flex-start">
               <Box w="50px" h="50px" mr={4} display="flex" alignItems="center" justifyContent="center">
-                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/rest.png" alt="API Access" />
+                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/rest.png" alt="API Integration" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">API Access</Heading>
-                <Text color="gray.600">Programmatically manage your proxy infrastructure with our comprehensive REST API for automation and integration</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">Enterprise API</Heading>
+                <Text color="gray.600">Comprehensive REST API with SDKs for Python, Node.js, Java, and Go to seamlessly integrate our HTTPS proxy services into your existing workflows</Text>
               </Box>
             </Flex>
           </Grid>
@@ -201,58 +201,58 @@ function ProxyDashboard() {
       <Box py={16} bg="blue.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
-            Proxy Dashboard Platform Features
+            HTTPS Proxy Technical Specifications
           </Heading>
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="teal.500">Proxy Management Features</Heading>
+              <Heading as="h3" size="md" mb={5} color="teal.500">Protocol & Configuration Features</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="teal.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Multi-protocol Support</Text> - HTTP, HTTPS, SOCKS4, and SOCKS5 proxies all managed from a single interface</Text>
+                  <Text><Text as="span" fontWeight="bold">TLS/SSL Support</Text> - Full TLS 1.3 compatibility with support for custom certificates and cipher suite configurations</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="teal.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Rotation Controls</Text> - Configure session duration, automatic rotation schedules, and sticky session policies</Text>
+                  <Text><Text as="span" fontWeight="bold">Intelligent Rotation</Text> - Configurable IP rotation based on time intervals, request counts, or response patterns</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="teal.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Geographic Targeting</Text> - Select proxies by country, region, city, or ISP with verification of proxy locations</Text>
+                  <Text><Text as="span" fontWeight="bold">Geo-Targeting</Text> - Precision targeting by country, region, city, ASN, or ISP with location verification</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="teal.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">IP Exclusion Lists</Text> - Create and manage IP exclusion lists to avoid detection or blocked proxies</Text>
+                  <Text><Text as="span" fontWeight="bold">Header Management</Text> - Customizable HTTP headers with browser fingerprinting and user-agent rotation</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="teal.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Bandwidth Controls</Text> - Set usage limits by team, project, or user with automatic notifications</Text>
+                  <Text><Text as="span" fontWeight="bold">Request Optimization</Text> - Automatic retry logic, concurrent connections, and intelligent timeout handling</Text>
                 </ListItem>
               </List>
             </Box>
             
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="teal.500">Performance & Security</Heading>
+              <Heading as="h3" size="md" mb={5} color="teal.500">Enterprise Security & Performance</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="teal.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Performance Analytics</Text> - Real-time metrics on latency, success rates, and bandwidth usage by proxy</Text>
+                  <Text><Text as="span" fontWeight="bold">SOC 2 Compliance</Text> - Enterprise-grade security with full audit logging, encryption, and access controls</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="teal.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Automatic Fallback</Text> - Configure backup proxy pools that activate automatically if performance degrades</Text>
+                  <Text><Text as="span" fontWeight="bold">DDoS Protection</Text> - Advanced DDoS mitigation with automatic traffic filtering and attack detection</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="teal.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Authentication Management</Text> - Secure credential management with role-based access controls</Text>
+                  <Text><Text as="span" fontWeight="bold">Traffic Acceleration</Text> - Proprietary connection optimization with up to 300% faster response times</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="teal.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Proxy Health Checks</Text> - Continuous monitoring of proxy availability with automatic replacement</Text>
+                  <Text><Text as="span" fontWeight="bold">Bandwidth Optimization</Text> - Intelligent compression and caching to reduce data transfer costs</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="teal.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Usage Auditing</Text> - Comprehensive logs of all proxy usage for compliance and security review</Text>
+                  <Text><Text as="span" fontWeight="bold">24/7 Support</Text> - Enterprise SLA with dedicated technical account managers and 24/7 emergency support</Text>
                 </ListItem>
               </List>
             </Box>
@@ -264,33 +264,35 @@ function ProxyDashboard() {
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={12} fontWeight="medium">
-            Proxy Management Success Stories
+            HTTPS Proxy Success Stories
           </Heading>
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="teal.500">E-commerce Price Intelligence Platform Scales Operations</Heading>
+              <Heading as="h3" size="md" mb={4} color="teal.500">Global E-commerce Leader Achieves 99.8% Data Collection Success</Heading>
               <Text mb={4}>
-                A leading price intelligence provider implemented our Proxy Dashboard to manage their growing 
-                infrastructure of over 10,000 proxies. They reduced proxy-related operational costs by 37% 
-                while improving data collection success rates from 82% to 96%.
+                A Fortune 500 e-commerce company implemented our HTTPS proxy infrastructure to monitor 
+                competitive pricing across 42 countries. They achieved a 99.8% success rate while reducing 
+                bandwidth costs by 72% and accelerating their data collection pipeline by 5x.
               </Text>
               <Text fontStyle="italic" fontSize="sm" color="gray.600">
-                "The Proxy Dashboard gave us unprecedented visibility into our proxy infrastructure performance. 
-                We can now instantly identify issues, optimize our proxy usage, and scale our operations more effectively."
+                "Your HTTPS proxy service transformed our global market intelligence operations. We now collect 
+                pricing data from thousands of competitors with near-perfect reliability and significantly lower costs."
               </Text>
             </Box>
             
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="teal.500">Market Research Firm Improves Global Data Collection</Heading>
+              <Heading as="h3" size="md" mb={4} color="teal.500">Financial Services Firm Secures Cross-Border Data Access</Heading>
               <Text mb={4}>
-                A global market research company utilized our Proxy Dashboard to coordinate data collection 
-                across 65 countries. They implemented geographic targeting to gather region-specific data and 
-                reduced their proxy management overhead by 58% while expanding coverage.
+                A leading financial intelligence provider used our HTTPS proxy infrastructure to securely 
+                access geo-restricted financial data across 78 countries. Their compliance team approved 
+                our SOC 2 certified infrastructure, enabling them to expand coverage while maintaining 
+                regulatory compliance.
               </Text>
               <Text fontStyle="italic" fontSize="sm" color="gray.600">
-                "Managing proxies used to require multiple team members and constant troubleshooting. With the 
-                Proxy Dashboard, we've automated most of our management tasks and can focus on analyzing the data instead."
+                "After evaluating several enterprise proxy solutions, yours was the only one that met our 
+                stringent security requirements while delivering the global coverage and reliability we needed 
+                for mission-critical financial data collection."
               </Text>
             </Box>
           </Grid>
@@ -301,10 +303,10 @@ function ProxyDashboard() {
       <Box py={16} bg="blue.50">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={8} fontWeight="medium">
-            Integration Partners
+            Technology Integrations
           </Heading>
           <Text fontSize="lg" mb={12} maxW="700px" mx="auto">
-            Our Proxy Dashboard integrates seamlessly with your existing data collection and monitoring tools
+            Our HTTPS proxy infrastructure integrates seamlessly with all major development frameworks and data collection platforms
           </Text>
           
           <Flex justify="center" flexWrap="wrap" gap={10} mb={12} align="center">
@@ -331,11 +333,11 @@ function ProxyDashboard() {
       <Box py={16} bg="teal.500" color="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">
-            Ready to Optimize Your Proxy Infrastructure?
+            Ready to Access Global HTTPS Resources?
           </Heading>
           <Text fontSize="lg" mb={10} maxW="700px" mx="auto" color="white">
-            Get started with our Proxy Dashboard today and take control of your proxy management,
-            performance monitoring, and cost optimization
+            Start routing your HTTPS requests through our secure, high-performance global proxy network.
+            Schedule a consultation with our solution architects to design your custom implementation.
           </Text>
           
           <Flex justify="center" gap={6} flexWrap="wrap">
@@ -345,9 +347,9 @@ function ProxyDashboard() {
               color="teal.500"
               _hover={{ bg: "gray.100" }}
               as="a"
-              href="/demo-request"
+              href="/request-demo"
             >
-              Request Dashboard Demo
+              Request Demo
             </Button>
             
             <Button
@@ -357,9 +359,9 @@ function ProxyDashboard() {
               color="white"
               _hover={{ bg: "teal.600" }}
               as="a"
-              href="/contact-sales"
+              href="https://cloud.thedataproxy.com/signup"
               >
-               Contact Sales
+               Start Free Trial
             </Button>
           </Flex>
         </Box>
@@ -372,4 +374,4 @@ function ProxyDashboard() {
   );
 }
 
-export default ProxyDashboard;
+export default HttpsProxyService;
