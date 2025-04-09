@@ -4,7 +4,7 @@ import { createFileRoute, useParams, Link as RouterLink } from "@tanstack/react-
 import { TimeIcon } from "@chakra-ui/icons";
 import Footer from "../../../../components/Common/Footer";
 
-export const Route = createFileRoute("/_layout/resources/blogs/*")({
+export const Route = createFileRoute("/_layout/resources/blogs/:path")({
   component: BlogPostDetails,
 });
 
@@ -12,7 +12,7 @@ function BlogPostDetails() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const { '*': path } = useParams({ from: "/_layout/resources/blogs/*" });
+  const { path } = useParams({ from: "/_layout/resources/blogs/:path" });
 
   useEffect(() => {
     const fetchPosts = async () => {
