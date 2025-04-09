@@ -60,6 +60,8 @@ const Footer = () => {
             <Heading as="h4" size="md" mb={4} color="white">Solutions</Heading>
             <VStack align="flex-start" spacing={2}>
               <Link href="/solutions/market-research" color="gray.300" _hover={{ color: "orange.400" }}>Market Research</Link>
+              <Link href="/tools/https-proxy" color="gray.300" _hover={{ color: "orange.400" }}>HTTPs Request Proxy</Link>
+              <Link href="/tools/rotating-proxy" color="gray.300" _hover={{ color: "orange.400" }}>HTTPs Request Proxy</Link>
               <Link href="/solutions/price-monitoring" color="gray.300" _hover={{ color: "orange.400" }}>Price Monitoring</Link>
               <Link href="/solutions/training-ai" color="gray.300" _hover={{ color: "orange.400" }}>AI Training Datasets</Link>
               <Link href="/solutions/content-aggregation" color="gray.300" _hover={{ color: "orange.400" }}>Content Aggregation</Link>
