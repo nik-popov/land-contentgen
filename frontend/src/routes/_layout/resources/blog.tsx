@@ -84,14 +84,8 @@ function BlogPage() {
                       <Flex align="center"><TimeIcon mr={1} color="gray.500" boxSize={3} /><Text fontSize="sm" color="gray.500">{post.readTime || 'N/A'}</Text></Flex>
                     </HStack>
                     <Heading as="h3" size="lg" mb={3} fontWeight="medium" lineHeight="1.3">{post.title || 'Untitled'}</Heading>
-                    <Text fontSize="sm" color="gray.600" mb={4}>{post.date || 'No date'}</Text>
-                    <HStack spacing={2}>
-                      {post.tags && post.tags.map((tag, tagIndex) => (
-                        <Tag key={tagIndex} size="sm" colorScheme="gray" variant="subtle">{tag}</Tag>
-                      ))}
-                    </HStack>
                     <Divider mt={4} />
-                    <Text fontSize="sm" color="gray.500" mt={4}>Views: {post.views || 'N/A'}</Text>
+                    <Text fontSize="sm" color="gray.600" mb={4}>{post.date || 'No date'}</Text>
                   </Box>
                 </Box>
               </Link>
