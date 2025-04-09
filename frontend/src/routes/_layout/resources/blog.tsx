@@ -83,7 +83,13 @@ function BlogPage() {
                       <Badge colorScheme="blue" px={3} py={1} borderRadius="full">{post.category || 'Uncategorized'}</Badge>
                       <Flex align="center"><TimeIcon mr={1} color="gray.500" boxSize={3} /><Text fontSize="sm" color="gray.500">{post.readTime || 'N/A'}</Text></Flex>
                     </HStack>
-                    <Heading as="h3" size="lg" mb={3} fontWeight="medium" lineHeight="1.3">{post.title || 'Untitled'}</Heading>
+                    <Heading as="h3" size="lg" mb={4} fontWeight="medium" lineHeight="1.3">{post.title || 'Untitled'}</Heading>
+
+                    <HStack spacing={2}>
+                            {post.tags && post.tags.map((tag, tagIndex) => (
+                              <Tag key={tagIndex} size="sm" colorScheme="gray" variant="subtle">{tag}</Tag>
+                            ))}
+                          </HStack>
                     <Divider mt={4} mb={4} />
                     <Text fontSize="sm" color="gray.600" mb={4}>{post.date || 'No date'}</Text>
                   </Box>
