@@ -4,7 +4,7 @@ import { createFileRoute, useParams, Link as RouterLink } from "@tanstack/react-
 import { TimeIcon } from "@chakra-ui/icons";
 import Footer from "../../../../components/Common/Footer";
 
-export const Route = createFileRoute("/_layout/resources/blogs/:path")({
+export const Route = createFileRoute("/_layout/resources/blogs/$path")({
   component: BlogPostDetails,
 });
 

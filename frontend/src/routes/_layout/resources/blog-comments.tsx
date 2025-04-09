@@ -4,7 +4,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import Footer from '../../../components/Common/Footer';
 import { TimeIcon } from '@chakra-ui/icons';
 
-export const Route = createFileRoute("/_layout/resources/blog")({
+export const Route = createFileRoute("/_layout/resources/blog-comments")({
   component: BlogPage,
 });
 
