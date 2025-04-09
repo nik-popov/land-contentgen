@@ -299,36 +299,59 @@ function HttpsProxyService() {
         </Box>
       </Box>
       
-      {/* Integration Partners */}
-      <Box py={16} bg="blue.50">
-        <Box maxW="1200px" mx="auto" px={4} textAlign="center">
-          <Heading as="h2" size="xl" mb={8} fontWeight="medium">
-            Technology Integrations
-          </Heading>
-          <Text fontSize="lg" mb={12} maxW="700px" mx="auto">
-            Our HTTPS proxy infrastructure integrates seamlessly with all major development frameworks and data collection platforms
-          </Text>
-          
-          <Flex justify="center" flexWrap="wrap" gap={10} mb={12} align="center">
-            <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
-              <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/python.png" alt="Python" maxHeight="80px" maxWidth="160px" objectFit="contain" />
-            </Box>
-            <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
-              <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/node_js.png" alt="Node.js" maxHeight="80px" maxWidth="160px" objectFit="contain" />
-            </Box>
-            <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
-              <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/selenium.png" alt="Selenium" maxHeight="80px" maxWidth="160px" objectFit="contain" />
-            </Box>
-            <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
-              <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/prometheus.png" alt="Prometheus" maxHeight="80px" maxWidth="160px" objectFit="contain" />
-            </Box>
-            <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
-              <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/grafana.png" alt="Grafana" maxHeight="80px" maxWidth="160px" objectFit="contain" />
-            </Box>
-          </Flex>
-        </Box>
+   {/* Integration Partners for HTTPS Proxy */}
+<Box py={16} bg="blue.50">
+  <Box maxW="1200px" mx="auto" px={4} textAlign="center">
+    <Heading as="h2" size="xl" mb={8} fontWeight="medium">
+      Technology Integrations
+    </Heading>
+    <Text fontSize="lg" mb={12} maxW="700px" mx="auto">
+      Our HTTPS proxy infrastructure integrates seamlessly with leading security frameworks, web technologies, and development environments
+    </Text>
+    
+    <Flex justify="center" flexWrap="wrap" gap={10} mb={12} align="center">
+      <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
+        <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/http.png" alt="HTTP Protocol" maxHeight="80px" maxWidth="160px" objectFit="contain" />
       </Box>
+      <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
+        <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/nginx.png" alt="NGINX" maxHeight="80px" maxWidth="160px" objectFit="contain" />
+      </Box>
+      <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
+        <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/docker.png" alt="Docker" maxHeight="80px" maxWidth="160px" objectFit="contain" />
+      </Box>
+      <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
+        <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/prometheus.png" alt="Prometheus" maxHeight="80px" maxWidth="160px" objectFit="contain" />
+      </Box>
+      <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
+        <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/postman.png" alt="Postman" maxHeight="80px" maxWidth="160px" objectFit="contain" />
+      </Box>
+    </Flex>
+    
+    <Grid templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }} gap={8} mt={8}>
+      <VStack align="flex-start" bg="white" p={6} borderRadius="md" boxShadow="sm">
+        <Heading as="h3" size="md" mb={4} color="teal.500">Web Application Frameworks</Heading>
+        <Text textAlign="left">
+          Our HTTPS proxy service provides seamless integration with popular web frameworks including Express, Django, Spring Boot, and Laravel. Deploy secure proxy connections with minimal configuration changes to your existing web applications.
+        </Text>
+      </VStack>
       
+      <VStack align="flex-start" bg="white" p={6} borderRadius="md" boxShadow="sm">
+        <Heading as="h3" size="md" mb={4} color="teal.500">Security & Monitoring Tools</Heading>
+        <Text textAlign="left">
+          Comprehensive compatibility with industry-standard security tools like NGINX, Prometheus, Grafana, and Vault. Monitor proxy performance, detect anomalies, and ensure regulatory compliance with our extensive security integrations.
+        </Text>
+      </VStack>
+      
+      <VStack align="flex-start" bg="white" p={6} borderRadius="md" boxShadow="sm">
+        <Heading as="h3" size="md" mb={4} color="teal.500">API Development Environments</Heading>
+        <Text textAlign="left">
+          Enhance API development workflows with native support for Postman, Swagger, and other API testing tools. Our HTTPS proxy service enables secure testing across environments while maintaining compatibility with your existing development pipeline.
+        </Text>
+      </VStack>
+    </Grid>
+  </Box>
+</Box>
+
       {/* Call to Action */}
       <Box py={16} bg="teal.500" color="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
