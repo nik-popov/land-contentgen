@@ -4,7 +4,7 @@ import { createFileRoute, useParams, Link as RouterLink } from "@tanstack/react-
 import { TimeIcon } from "@chakra-ui/icons";
 import Footer from "../../../../components/Common/Footer";
 
-export const Route = createFileRoute("/_layout/resources/blogs/:slug")({
+export const Route = createFileRoute("/_layout/resources/blogs/*")({
   component: BlogPostDetails,
 });
 
@@ -12,7 +12,7 @@ function BlogPostDetails() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const { slug } = useParams({ from: "/_layout/resources/blogs/:slug" });
+  const { '*': path } = useParams({ from: "/_layout/resources/blogs/*" });
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -104,11 +104,12 @@ function BlogPostDetails() {
   if (error) return <Text fontSize="lg" textAlign="center" py={16} color="red.500">{error}</Text>;
   if (!posts.length) return <Text fontSize="lg" textAlign="center" py={16}>No posts available</Text>;
 
-  const post = posts.find(p => p.path === `/resources/blogs/${slug}`);
+  const fullPath = `/resources/blogs/${path}`;
+  const post = posts.find(p => p.path === fullPath);
   if (!post) {
     return (
       <Box py={16} textAlign="center">
-        <Text fontSize="lg" mb={4}>Post not found for slug: {slug}</Text>
+        <Text fontSize="lg" mb={4}>Post not found for path: {fullPath}</Text>
         <Text fontSize="sm" color="gray.500">Available paths: {posts.map(p => p.path).join(', ')}</Text>
       </Box>
     );
