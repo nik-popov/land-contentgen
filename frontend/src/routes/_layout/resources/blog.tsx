@@ -71,7 +71,7 @@ function BlogPage() {
     <>
       <Box py={16} bg="blue.50" color="gray.800">
         <Box maxW="1200px" mx="auto" px={4}>
-          <Heading as="h1" size="2xl" textAlign="center" mb={6} fontWeight="medium">Trends and Guides</Heading>
+          <Heading as="h1" size="2xl" textAlign="center" mb={6} fontWeight="medium">Guides and Trends</Heading>
           <Text fontSize="xl" textAlign="center" mb={10} maxW="800px" mx="auto">Expert articles, tutorials, and insights...</Text>
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={10}>
             {featuredPosts.map((post, index) => post && (
@@ -84,13 +84,14 @@ function BlogPage() {
                       <Flex align="center"><TimeIcon mr={1} color="gray.500" boxSize={3} /><Text fontSize="sm" color="gray.500">{post.readTime || 'N/A'}</Text></Flex>
                     </HStack>
                     <Heading as="h3" size="lg" mb={3} fontWeight="medium" lineHeight="1.3">{post.title || 'Untitled'}</Heading>
-                    <Box>
+                    <Text fontSize="sm" color="gray.600" mb={4}>{post.date || 'No date'}</Text>
+                    <HStack spacing={2}>
                       {post.tags && post.tags.map((tag, tagIndex) => (
-                        <Tag key={tagIndex} size="sm" mr={2} mb={4} colorScheme="gray" variant="subtle">{tag}</Tag>
+                        <Tag key={tagIndex} size="sm" colorScheme="gray" variant="subtle">{tag}</Tag>
                       ))}
-                      <Divider m={4} />
-                      <Flex justify="flex-end" mb={4}><Text fontSize="sm" color="gray.500">{post.date || 'No date'}</Text></Flex>
-                    </Box>
+                    </HStack>
+                    <Divider mt={4} />
+                    <Text fontSize="sm" color="gray.500" mt={4}>Views: {post.views || 'N/A'}</Text>
                   </Box>
                 </Box>
               </Link>
@@ -113,8 +114,14 @@ function BlogPage() {
                       <Flex align="center"><TimeIcon mr={1} color="gray.500" boxSize={3} /><Text fontSize="xs" color="gray.500">{post.readTime || 'N/A'}</Text></Flex>
                     </HStack>
                     <Heading as="h3" size="md" mb={3} fontWeight="medium" lineHeight="1.3">{post.title || 'Untitled'}</Heading>
-                    <Divider mb={4} />
-                    <Flex justify="flex-end"><Text fontSize="xs" color="gray.500">{post.date || 'No date'}</Text></Flex>
+                    <Text fontSize="xs" color="gray.600" mb={4}>{post.date || 'No date'}</Text>
+                    <HStack spacing={2}>
+                      {post.tags && post.tags.map((tag, tagIndex) => (
+                        <Tag key={tagIndex} size="sm" colorScheme="gray" variant="subtle">{tag}</Tag>
+                      ))}
+                    </HStack>
+                    <Divider mt={4} />
+                    <Text fontSize="xs" color="gray.500" mt={4}>Views: {post.views || 'N/A'}</Text>
                   </Box>
                 </Box>
               </Link>
@@ -146,12 +153,18 @@ function BlogPage() {
                       <Flex gap={5} alignItems="center">
                         <Image src={post.image} alt={post.title || 'Untitled'} w={{ base: "80px", md: "150px" }} h={{ base: "80px", md: "100px" }} objectFit="cover" borderRadius="md" />
                         <Box flex="1">
-                          <HStack mb={1}>
+                          <HStack mb={1} spacing={3}>
                             <Badge colorScheme="blue" size="sm">{post.category || 'Uncategorized'}</Badge>
                             <Text fontSize="xs" color="gray.500">{post.date || 'No date'}</Text>
-                            <Flex align="center"><TimeIcon mr={1} color="gray.500" boxSize={3} m={2}/><Text fontSize="xs" color="gray.500">{post.readTime || 'N/A'}</Text></Flex>
+                            <Flex align="center"><TimeIcon mr={1} color="gray.500" boxSize={3} /><Text fontSize="xs" color="gray.500">{post.readTime || 'N/A'}</Text></Flex>
                           </HStack>
                           <Heading as="h3" size="md" fontWeight="medium" lineHeight="1.3" mb={2}>{post.title || 'Untitled'}</Heading>
+                          <HStack spacing={2}>
+                            {post.tags && post.tags.map((tag, tagIndex) => (
+                              <Tag key={tagIndex} size="sm" colorScheme="gray" variant="subtle">{tag}</Tag>
+                            ))}
+                          </HStack>
+                          <Text fontSize="xs" color="gray.500" mt={2}>Views: {post.views || 'N/A'}</Text>
                         </Box>
                       </Flex>
                     </Box>
