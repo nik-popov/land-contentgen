@@ -303,34 +303,35 @@ function RotatingProxyService() {
       </Box>
       
       {/* Integration Partners */}
-      <Box py={16} bg="blue.50">
-        <Box maxW="1200px" mx="auto" px={4} textAlign="center">
-          <Heading as="h2" size="xl" mb={8} fontWeight="medium">
-            Technology Integrations
-          </Heading>
-          <Text fontSize="lg" mb={12} maxW="700px" mx="auto">
-            Our rotating proxy infrastructure integrates seamlessly with all major development frameworks and data collection platforms
-          </Text>
-          
-          <Flex justify="center" flexWrap="wrap" gap={10} mb={12} align="center">
-            <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
-              <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/python.png" alt="Python" maxHeight="80px" maxWidth="160px" objectFit="contain" />
-            </Box>
-            <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
-              <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/node_js.png" alt="Node.js" maxHeight="80px" maxWidth="160px" objectFit="contain" />
-            </Box>
-            <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
-              <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/selenium.png" alt="Selenium" maxHeight="80px" maxWidth="160px" objectFit="contain" />
-            </Box>
-            <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
-              <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/prometheus.png" alt="Prometheus" maxHeight="80px" maxWidth="160px" objectFit="contain" />
-            </Box>
-            <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
-              <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/grafana.png" alt="Grafana" maxHeight="80px" maxWidth="160px" objectFit="contain" />
-            </Box>
-          </Flex>
-        </Box>
+     {/* Integration Partners for Rotating Proxy */}
+<Box py={16} bg="blue.50">
+  <Box maxW="1200px" mx="auto" px={4} textAlign="center">
+    <Heading as="h2" size="xl" mb={8} fontWeight="medium">
+      Technology Integrations
+    </Heading>
+    <Text fontSize="lg" mb={12} maxW="700px" mx="auto">
+      Our rotating proxy infrastructure integrates seamlessly with all major development frameworks and data collection platforms
+    </Text>
+    
+    <Flex justify="center" flexWrap="wrap" gap={10} mb={12} align="center">
+      <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
+        <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/python.png" alt="Python" maxHeight="80px" maxWidth="160px" objectFit="contain" />
       </Box>
+      <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
+        <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/rest.png" alt="REST API" maxHeight="80px" maxWidth="160px" objectFit="contain" />
+      </Box>
+      <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
+        <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/aws.png" alt="AWS" maxHeight="80px" maxWidth="160px" objectFit="contain" />
+      </Box>
+      <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
+        <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/kubernetes.png" alt="Kubernetes" maxHeight="80px" maxWidth="160px" objectFit="contain" />
+      </Box>
+      <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
+        <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/grafana.png" alt="Grafana" maxHeight="80px" maxWidth="160px" objectFit="contain" />
+      </Box>
+    </Flex>
+  </Box>
+</Box>
       
       {/* Call to Action */}
       <Box py={16} bg="teal.500" color="white">

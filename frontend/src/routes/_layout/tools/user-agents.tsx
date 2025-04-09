@@ -302,35 +302,35 @@ function UserAgentsService() {
         </Box>
       </Box>
       
-      {/* Integration Partners */}
-      <Box py={16} bg="blue.50">
-        <Box maxW="1200px" mx="auto" px={4} textAlign="center">
-          <Heading as="h2" size="xl" mb={8} fontWeight="medium">
-            Technology Integrations
-          </Heading>
-          <Text fontSize="lg" mb={12} maxW="700px" mx="auto">
-            Our user agent management platform integrates seamlessly with all major development frameworks and testing environments
-          </Text>
-          
-          <Flex justify="center" flexWrap="wrap" gap={10} mb={12} align="center">
-            <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
-              <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/python.png" alt="Python" maxHeight="80px" maxWidth="160px" objectFit="contain" />
-            </Box>
-            <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
-              <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/node_js.png" alt="Node.js" maxHeight="80px" maxWidth="160px" objectFit="contain" />
-            </Box>
-            <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
-              <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/selenium.png" alt="Selenium" maxHeight="80px" maxWidth="160px" objectFit="contain" />
-            </Box>
-            <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
-              <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/prometheus.png" alt="Prometheus" maxHeight="80px" maxWidth="160px" objectFit="contain" />
-            </Box>
-            <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
-              <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/grafana.png" alt="Grafana" maxHeight="80px" maxWidth="160px" objectFit="contain" />
-            </Box>
-          </Flex>
-        </Box>
+  {/* Integration Partners for User Agents */}
+<Box py={16} bg="blue.50">
+  <Box maxW="1200px" mx="auto" px={4} textAlign="center">
+    <Heading as="h2" size="xl" mb={8} fontWeight="medium">
+      Technology Integrations
+    </Heading>
+    <Text fontSize="lg" mb={12} maxW="700px" mx="auto">
+      Our user agent management platform integrates seamlessly with all major development frameworks and testing environments
+    </Text>
+    
+    <Flex justify="center" flexWrap="wrap" gap={10} mb={12} align="center">
+      <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
+        <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/cypress.png" alt="Cypress" maxHeight="80px" maxWidth="160px" objectFit="contain" />
       </Box>
+      <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
+        <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/puppeteer.png" alt="Puppeteer" maxHeight="80px" maxWidth="160px" objectFit="contain" />
+      </Box>
+      <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
+        <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/selenium.png" alt="Selenium" maxHeight="80px" maxWidth="160px" objectFit="contain" />
+      </Box>
+      <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
+        <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/playwright.png" alt="Playwright" maxHeight="80px" maxWidth="160px" objectFit="contain" />
+      </Box>
+      <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
+        <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/chai.png" alt="Chai" maxHeight="80px" maxWidth="160px" objectFit="contain" />
+      </Box>
+    </Flex>
+  </Box>
+</Box>
       
       {/* Call to Action */}
       <Box py={16} bg="teal.500" color="white">
