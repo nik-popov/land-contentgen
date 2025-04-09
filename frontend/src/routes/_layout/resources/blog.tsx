@@ -109,13 +109,14 @@ function BlogPage() {
                     </HStack>
                     <Heading as="h3" size="md" mb={3} fontWeight="medium" lineHeight="1.3">{post.title || 'Untitled'}</Heading>
                     <Text fontSize="xs" color="gray.600" mb={4}>{post.date || 'No date'}</Text>
+                    <Divider mt={4} />
                     <HStack spacing={2}>
                       {post.tags && post.tags.map((tag, tagIndex) => (
                         <Tag key={tagIndex} size="sm" colorScheme="gray" variant="subtle">{tag}</Tag>
                       ))}
                     </HStack>
-                    <Divider mt={4} />
-                    <Text fontSize="xs" color="gray.500" mt={4}>Views: {post.views || 'N/A'}</Text>
+
+                  
                   </Box>
                 </Box>
               </Link>
@@ -158,7 +159,7 @@ function BlogPage() {
                               <Tag key={tagIndex} size="sm" colorScheme="gray" variant="subtle">{tag}</Tag>
                             ))}
                           </HStack>
-                          <Text fontSize="xs" color="gray.500" mt={2}>Views: {post.views || 'N/A'}</Text>
+                          
                         </Box>
                       </Flex>
                     </Box>
