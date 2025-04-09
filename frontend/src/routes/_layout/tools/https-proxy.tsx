@@ -46,10 +46,10 @@ function HttpsProxyService() {
       <Box py={16} bg="blue.50" color="gray.800">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h1" size="2xl" textAlign="center" mb={8} fontWeight="medium">
-            Enterprise HTTPS Proxy Services
+            HTTPS Proxy Services
           </Heading>
           <Text fontSize="xl" textAlign="center" mb={12} maxW="800px" mx="auto">
-            Route HTTPS requests globally with our secure, scalable proxy infrastructure. 
+            Route HTTPS requests globally with our secure, scalable, enterprise grade proxy infrastructure. 
             Access geo-restricted content, collect market intelligence, and protect your web operations with unparalleled reliability.
           </Text>
           
