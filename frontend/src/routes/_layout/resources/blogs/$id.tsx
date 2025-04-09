@@ -130,8 +130,11 @@ function BlogPostDetails() {
             <Flex align="center" mb={4}>
               <Tag colorScheme="blue" mr={4} px={3} py={1} borderRadius="full">{post.category || 'Uncategorized'}</Tag>
               <Text fontSize="sm" color="gray.500">{post.date || 'No date'}</Text>
-              <Flex align="center" ml={4}><TimeIcon mr={1} color="gray.500" boxSize={3} /><Text fontSize="sm" color="gray.500">{post.readTime || 'N/A'}</Text></Flex>
-            </HStack>
+              <Flex align="center" ml={4}>
+                <TimeIcon mr={1} color="gray.500" boxSize={3} />
+                <Text fontSize="sm" color="gray.500">{post.readTime || 'N/A'}</Text>
+              </Flex>
+            </Flex>
             <Heading as="h1" size="2xl" mb={6} fontWeight="medium" lineHeight="1.3">{post.title || 'Untitled'}</Heading>
             {parseContent(post.content)}
             <HStack spacing={2} mt={4} mb={8}>
