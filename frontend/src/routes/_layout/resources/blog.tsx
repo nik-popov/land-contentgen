@@ -71,7 +71,7 @@ function BlogPage() {
     <>
       <Box py={16} bg="blue.50" color="gray.800">
         <Box maxW="1200px" mx="auto" px={4}>
-          <Heading as="h1" size="2xl" textAlign="center" mb={6} fontWeight="medium">Insights and Trends at TheDataProxy</Heading>
+          <Heading as="h1" size="2xl" textAlign="center" mb={6} fontWeight="medium">Trends and Guides</Heading>
           <Text fontSize="xl" textAlign="center" mb={10} maxW="800px" mx="auto">Expert articles, tutorials, and insights...</Text>
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={10}>
             {featuredPosts.map((post, index) => post && (
