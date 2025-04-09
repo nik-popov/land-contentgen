@@ -9,8 +9,6 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-
-
   <url>
     <loc>https://thedataproxy.com/pricing</loc>
     <lastmod>2025-03-10</lastmod>
@@ -29,7 +27,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://thedataproxy.com/privacy</loc>
     <lastmod>2025-01-15</lastmod>
@@ -48,7 +45,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
-
   <url>
     <loc>https://thedataproxy.com/solutions/enterprise</loc>
     <lastmod>2025-03-12</lastmod>
@@ -91,7 +87,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://thedataproxy.com/tools/html-scraper</loc>
     <lastmod>2025-03-05</lastmod>
@@ -116,8 +111,30 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
-  <!-- Use Cases -->
+  <url>
+    <loc>https://thedataproxy.com/tools/https-proxy</loc>
+    <lastmod>2025-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thedataproxy.com/tools/user-agents</loc>
+    <lastmod>2025-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thedataproxy.com/tools/rotating-proxy</loc>
+    <lastmod>2025-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thedataproxy.com/tools/socks5-proxy</loc>
+    <lastmod>2025-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
     <loc>https://thedataproxy.com/use-cases/competitor-analysis</loc>
     <lastmod>2025-02-25</lastmod>
@@ -166,7 +183,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://thedataproxy.com/network/locations</loc>
     <lastmod>2025-03-01</lastmod>
@@ -221,7 +237,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-
   <url>
     <loc>https://thedataproxy.com/resources/faq</loc>
     <lastmod>2025-03-10</lastmod>
@@ -250,6 +265,96 @@
     <loc>https://thedataproxy.com/resources/blog</loc>
     <lastmod>2025-03-18</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thedataproxy.com/resources/blogs/proxy-rotation-strategies-for-large-scale-data-collection</loc>
+    <lastmod>2025-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thedataproxy.com/resources/blogs/residential-vs-datacenter-proxies-right-choice-for-web-scraping</loc>
+    <lastmod>2025-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thedataproxy.com/resources/blogs/building-a-self-healing-proxy-infrastructure-for-continuous-data-access</loc>
+    <lastmod>2025-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thedataproxy.com/resources/blogs/advanced-proxy-rotation-algorithms-that-mimic-human-browsing-patterns</loc>
+    <lastmod>2025-03-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thedataproxy.com/resources/blogs/geographic-ip-distribution-optimizing-data-collection-by-region</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thedataproxy.com/resources/blogs/proxy-management-apis-building-a-centralized-control-system</loc>
+    <lastmod>2025-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thedataproxy.com/resources/blogs/cost-optimization-strategies-for-enterprise-scale-proxy-networks</loc>
+    <lastmod>2025-04-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thedataproxy.com/resources/blogs/real-time-proxy-quality-scoring-keeping-your-pool-healthy</loc>
+    <lastmod>2025-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thedataproxy.com/resources/blogs/legal-compliance-in-proxy-usage-navigating-the-gray-areas</loc>
+    <lastmod>2025-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thedataproxy.com/resources/blogs/proxy-rotation-for-api-harvesting-respecting-rate-limits-while-maximizing-throughput</loc>
+    <lastmod>2025-05-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thedataproxy.com/resources/blogs/mobile-proxy-solutions-collecting-data-from-mobile-first-platforms</loc>
+    <lastmod>2025-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thedataproxy.com/resources/blogs/combining-proxy-rotation-with-headless-browsers-for-undetectable-scraping</loc>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thedataproxy.com/resources/blogs/private-proxy-pools-vs-shared-services-building-the-right-infrastructure-for-your-needs</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thedataproxy.com/resources/blogs/proxy-rotation-for-social-media-intelligence-accessing-platform-data-at-scale</loc>
+    <lastmod>2025-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thedataproxy.com/resources/blogs/future-proofing-your-proxy-infrastructure-adapting-to-evolving-anti-bot-technologies</loc>
+    <lastmod>2025-06-15</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 </urlset>
