@@ -64,10 +64,11 @@ const navStructure: NavItem[] = [
     icon: FiTool,
     description: "Professional web scraping tools and proxies for data collection",
     subItems: [
-      { title: "HTTPs Request Proxy ", path: "/tools/proxy-dashboard", description: "Monitor and manage your web scraping proxies", icon: FiTarget },
+      { title: "HTTPs Request Proxy ", path: "/tools/https-proxy", description: "Route HTTPS requests globally", icon: FiTarget },
       { title: "HTML Scraper", path: "/tools/html-scraper", description: "Extract data from HTML websites with precision", icon: FiCode },
       { title: "API Scraper", path: "/tools/api-scraper", description: "Collect data from APIs with reliable proxies", icon: FiDatabase },
-      { title: "Scheduler", path: "/tools/scheduler", description: "Automate your web scraping jobs with scheduling", icon: FiMonitor }
+      { title: "Scheduler", path: "/tools/scheduler", description: "Automate your web scraping jobs with scheduling", icon: FiMonitor },
+      { title: "Proxy Dashboard", path: "/tools/proxy-dashboard", description: "Monitor and manage your web scraping proxies", icon: FiTarget },
     ]
   },
   {
