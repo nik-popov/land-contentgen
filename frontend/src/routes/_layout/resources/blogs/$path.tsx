@@ -1,6 +1,6 @@
 import { createFileRoute, useParams } from "@tanstack/react-router";
 
-export const Route = createFileRoute("/resources/blogs/*")({
+export const Route = createFileRoute("/_layout/resources/blogs/$path")({
   component: BlogPostDetails,
 });
 
