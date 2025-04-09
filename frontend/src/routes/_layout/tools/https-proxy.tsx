@@ -347,7 +347,7 @@ function HttpsProxyService() {
               color="teal.500"
               _hover={{ bg: "gray.100" }}
               as="a"
-              href="/request-demo"
+              href="/demo-request"
             >
               Request Demo
             </Button>
