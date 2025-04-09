@@ -4,7 +4,7 @@ import { createFileRoute, useParams, Link as RouterLink } from "@tanstack/react-
 import { TimeIcon } from "@chakra-ui/icons";
 import Footer from "../../../../components/Common/Footer";
 
-export const Route = createFileRoute("/_layout/resources/blogs/:id/:slug")({
+export const Route = createFileRoute("/_layout/resources/blogs/:id")({
   component: BlogPostDetails,
 });
 
@@ -12,7 +12,7 @@ function BlogPostDetails() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const { id, slug } = useParams({ from: "/_layout/resources/blogs/:id/:slug" });
+  const { id } = useParams({ from: "/_layout/resources/blogs/:id" });
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -20,6 +20,8 @@ function BlogPostDetails() {
         const response = await fetch('https://raw.githubusercontent.com/CobaltDataNet/static/refs/heads/main/blog-posts.json');
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         const data = await response.json();
+        console.log('Parsed posts:', data);
+        console.log('Post IDs:', data.map(post => post.id));
         if (!Array.isArray(data)) throw new Error('Fetched data is not an array');
         setPosts(data);
       } catch (err) {
@@ -33,7 +35,9 @@ function BlogPostDetails() {
   }, []);
 
   const parseContent = (content) => {
-    if (!content || typeof content !== 'string') return [<Text key="no-content" fontSize="lg" color="gray.700" mb={4}>No content available</Text>];
+    if (!content || typeof content !== 'string') {
+      return [<Text key="no-content" fontSize="lg" color="gray.700" mb={4}>No content available</Text>];
+    }
     const paragraphs = content.split('<br>');
     const elements = [];
     paragraphs.forEach((paragraph, index) => {
@@ -111,13 +115,6 @@ function BlogPostDetails() {
     );
   }
 
-  // Extract slug from path for comparison
-  const expectedSlug = post.path.split('/').pop();
-  if (expectedSlug !== slug) {
-    console.warn(`Slug mismatch: Expected ${expectedSlug}, got ${slug}`);
-    // Optional: Redirect to canonical URL if desired
-  }
-
   return (
     <Box>
       <Box py={16} bg="white">
@@ -129,20 +126,21 @@ function BlogPostDetails() {
             ← Back to all
           </RouterLink>
           <Box>
-            <Image src={post.image} alt={post.title} w="full" h="400px" objectFit="cover" borderRadius="md" mb={8} />
+            <Image src={post.image} alt={post.title || 'Untitled'} w="full" h="400px" objectFit="cover" borderRadius="md" mb={8} />
             <Flex align="center" mb={4}>
-              <Tag colorScheme="blue" mr={4} px={3} py={1} borderRadius="full">{post.category}</Tag>
-              <Text fontSize="sm" color="gray.500">{post.date}</Text>
-              <Flex align="center" ml={4}><TimeIcon mr={1} color="gray.500" boxSize={3} /><Text fontSize="sm" color="gray.500">{post.readTime}</Text></Flex>
-            </Flex>
-            <Heading as="h1" size="2xl" mb={6} fontWeight="medium" lineHeight="1.3">{post.title}</Heading>
+              <Tag colorScheme="blue" mr={4} px={3} py={1} borderRadius="full">{post.category || 'Uncategorized'}</Tag>
+              <Text fontSize="sm" color="gray.500">{post.date || 'No date'}</Text>
+              <Flex align="center" ml={4}><TimeIcon mr={1} color="gray.500" boxSize={3} /><Text fontSize="sm" color="gray.500">{post.readTime || 'N/A'}</Text></Flex>
+            </HStack>
+            <Heading as="h1" size="2xl" mb={6} fontWeight="medium" lineHeight="1.3">{post.title || 'Untitled'}</Heading>
             {parseContent(post.content)}
-            <HStack spacing={2} mb={8}>
+            <HStack spacing={2} mt={4} mb={8}>
               {post.tags && post.tags.map((tag, index) => (
                 <Tag key={index} colorScheme="gray" variant="subtle" size="md">{tag}</Tag>
               ))}
             </HStack>
             <Divider mb={8} />
+            <Text fontSize="sm" color="gray.500">Views: {post.views || 'N/A'}</Text>
           </Box>
         </Box>
       </Box>
