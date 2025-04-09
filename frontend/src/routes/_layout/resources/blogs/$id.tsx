@@ -4,7 +4,7 @@ import { createFileRoute, useParams, Link as RouterLink } from "@tanstack/react-
 import { TimeIcon } from "@chakra-ui/icons";
 import Footer from "../../../../components/Common/Footer";
 
-export const Route = createFileRoute("/_layout/resources/blogs/:id")({
+export const Route = createFileRoute("/_layout/resources/blogs/:slug")({
   component: BlogPostDetails,
 });
 
@@ -12,7 +12,7 @@ function BlogPostDetails() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const { id } = useParams({ from: "/_layout/resources/blogs/:id" });
+  const { slug } = useParams({ from: "/_layout/resources/blogs/:slug" });
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -21,7 +21,7 @@ function BlogPostDetails() {
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         const data = await response.json();
         console.log('Parsed posts:', data);
-        console.log('Post IDs:', data.map(post => post.id));
+        console.log('Post paths:', data.map(post => post.path));
         if (!Array.isArray(data)) throw new Error('Fetched data is not an array');
         setPosts(data);
       } catch (err) {
@@ -104,13 +104,12 @@ function BlogPostDetails() {
   if (error) return <Text fontSize="lg" textAlign="center" py={16} color="red.500">{error}</Text>;
   if (!posts.length) return <Text fontSize="lg" textAlign="center" py={16}>No posts available</Text>;
 
-  const parsedId = parseInt(id);
-  const post = posts.find(p => p.id === parsedId);
+  const post = posts.find(p => p.path === `/resources/blogs/${slug}`);
   if (!post) {
     return (
       <Box py={16} textAlign="center">
-        <Text fontSize="lg" mb={4}>Post not found for ID: {id}</Text>
-        <Text fontSize="sm" color="gray.500">Available IDs: {posts.map(p => p.id).join(', ')}</Text>
+        <Text fontSize="lg" mb={4}>Post not found for slug: {slug}</Text>
+        <Text fontSize="sm" color="gray.500">Available paths: {posts.map(p => p.path).join(', ')}</Text>
       </Box>
     );
   }
