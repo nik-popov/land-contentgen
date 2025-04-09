@@ -64,11 +64,54 @@ const navStructure: NavItem[] = [
     icon: FiTool,
     description: "Professional web scraping tools and proxies for data collection",
     subItems: [
-      { title: "HTTPs Request Proxy ", path: "/tools/https-proxy", description: "Route HTTPS requests globally", icon: FiGlobe },
-      { title: "HTML Scraper", path: "/tools/html-scraper", description: "Extract data from HTML websites with precision", icon: FiCode },
-      { title: "API Scraper", path: "/tools/api-scraper", description: "Collect data from APIs with reliable proxies", icon: FiDatabase },
-      { title: "Scheduler", path: "/tools/scheduler", description: "Automate your web scraping jobs with scheduling", icon: FiTarget  },
-      { title: "Proxy Dashboard", path: "/tools/proxy-dashboard", description: "Monitor and manage your web scraping proxies", icon: FiMonitor },
+        {
+          "title": "HTTPs Request Proxy",
+          "path": "/tools/https-proxy",
+          "description": "Route HTTPS requests globally",
+          "icon": "FiGlobe"
+        },
+        {
+          "title": "HTML Scraper",
+          "path": "/tools/html-scraper",
+          "description": "Extract data from HTML websites with precision",
+          "icon": "FiCode"
+        },
+        {
+          "title": "API Scraper",
+          "path": "/tools/api-scraper",
+          "description": "Collect data from APIs with reliable proxies",
+          "icon": "FiDatabase"
+        },
+        {
+          "title": "Scheduler",
+          "path": "/tools/scheduler",
+          "description": "Automate your web scraping jobs with scheduling",
+          "icon": "FiTarget"
+        },
+        {
+          "title": "User-Agents",
+          "path": "/tools/user-agents",
+          "description": "Customize and rotate user-agent strings to mimic real browsers effortlessly",
+          "icon": "FiUser"
+        },
+        {
+          "title": "Rotating Proxy",
+          "path": "/tools/rotating-proxy",
+          "description": "Cycle through proxies seamlessly to maintain anonymity and avoid blocks",
+          "icon": "FiRefreshCw"
+        },
+        {
+          "title": "SOCKS5 Proxy",
+          "path": "/tools/socks5-proxy",
+          "description": "Leverage SOCKS5 proxies for secure and versatile web traffic routing",
+          "icon": "FiShield"
+        },
+        {
+          "title": "Proxy Dashboard",
+          "path": "/tools/proxy-dashboard",
+          "description": "Monitor and manage your web scraping proxies",
+          "icon": "FiMonitor"
+        }
     ]
   },
   {
