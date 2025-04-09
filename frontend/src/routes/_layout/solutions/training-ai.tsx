@@ -359,7 +359,7 @@ function TrainingAIPage() {
         _hover={{ bg: "purple.500" }}
         width={{ base: "full", md: "auto" }}
         as="a"
-        href="https://dashboard.thedataproxy.com/signup"
+        href="https://cloud.thedataproxy.com/signup"
       >
         Start Free Trial
       </Button>

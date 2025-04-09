@@ -357,7 +357,7 @@ function ContentAggregationPage() {
               color="white"
               _hover={{ bg: "teal.600" }}
               as="a"
-              href="https://dashboard.thedataproxy.com/signup"
+              href="https://cloud.thedataproxy.com/signup"
             >
               Start Free Trial
             </Button>

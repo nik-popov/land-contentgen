@@ -383,7 +383,7 @@ function FinancialDataCollectionPage() {
               color="white"
               _hover={{ bg: "blue.700" }}
               as="a"
-              href="https://dashboard.thedataproxy.com/signup"
+              href="https://cloud.thedataproxy.com/signup"
             >
               Start Free Trial
             </Button>

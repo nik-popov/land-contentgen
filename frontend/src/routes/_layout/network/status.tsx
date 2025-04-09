@@ -291,7 +291,7 @@ function NetworkStatusPage() {
               <Text color="gray.600">
                 Check proxy performance and availability in real-time on our dedicated status page.
               </Text>
-              <Link color="blue.600" href="https://dashboard.thedataproxy.com/scraping-tools/search-proxies" fontWeight="medium">
+              <Link color="blue.600" href="https://cloud.thedataproxy.com/scraping-tools/search-proxies" fontWeight="medium">
                 View Status Page →
               </Link>
             </VStack>
