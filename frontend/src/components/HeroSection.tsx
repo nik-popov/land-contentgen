@@ -87,11 +87,11 @@ function HeroSection({ title, subtitle, ctas, bgImage }) {
             as="a"
             href={cta.link}
             color="white"
-            bg={index === 0 ? "orange.400" : "blue.400"}
+            bg={index === 0 ? "orange.400" : "white"}
             size="lg"
             _hover={{ 
-              bg: "white", 
-              color: index === 0 ? "orange.400" : "blue.400" 
+              bg: index === 0 ? "white" : "orange.400" , 
+              color: index === 0 ? "orange.400" : "white" 
             }}
             px={6}
           >
