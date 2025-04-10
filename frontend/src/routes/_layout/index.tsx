@@ -11,7 +11,13 @@ function LandingPage() {
   const navigate = useNavigate();
   return (
     <Box>
-      <HeroSection />
+      <HeroSection
+        title="Your Systems Gateway to the Public Web"
+        subtitle="SaaS proxy solutions built for large-scale data processing, extraction, LLM training and more."
+        ctaText="Schedule Demo"
+        ctaLink="/demo-request"
+        bgImage="https://images.unsplash.com/photo-1451187580459-43490279c0fa"
+      />
     {/* Section 3: Proxy Network Coverage for Web Scraping */}
     <Box py={16} bg="blue.50" color="gray.800">
         <Heading as="h2" size="2xl" textAlign="center" mb={10} fontWeight="medium">
