@@ -10,11 +10,10 @@ export const Route = createFileRoute("/_layout/pricing")({
 
 function PricingPage() {
   const [isAnnual, setIsAnnual] = useState(true);
-  
   const pricingPlans = [
     {
       name: "Starter",
-      description: "Perfect for hobbyists and small-scale experiments",
+      description: "Web scraping is complex. We make it simple for hobbyists and small-scale experiments to unlock their data’s potential with ease.",
       monthlyPrice: 49,
       annualPrice: 39, // ~20% discount from $49
       features: [
@@ -33,9 +32,10 @@ function PricingPage() {
     },
     {
       name: "Analyst",
-      description: "Crafted for data analysts and growing teams",
+      description: "Web scraping is complex. We make it simple for data analysts and growing teams to take control of their data with confidence—our most popular choice!",
       monthlyPrice: 149,
       annualPrice: 119, // ~20% discount from $149
+      popular: true,
       features: [
         "1,000,000 API calls per month",
         "50 simultaneous threads",
@@ -52,33 +52,13 @@ function PricingPage() {
     },
     {
       name: "Business",
-      description: "Tailored for companies scaling steady data operations",
-      monthlyPrice: 299,
-      annualPrice: 239, // ~20% discount from $299
-      features: [
-        "3,000,000 API calls per month",
-        "100 simultaneous threads",
-        "Global country-specific targeting",
-        "Dynamic page rendering",
-        "High-quality residential & mobile proxies",
-        "Sophisticated anti-block technology",
-        "Data extraction & formatting tools",
-      ],
-      limitations: [
-        "No personal account manager",
-        "No premium chat support",
-      ],
-    },
-    {
-      name: "Data Mogul",
-      description: "For data geeks ruling over massive data empires",
+      description: "Web scraping is complex. We make it simple for data geeks and businesses to harness massive datasets with expert-backed tools.",
       monthlyPrice: 475,
-      annualPrice: 380, // ~20% discount from $475
-      popular: true,
+      annualPrice: 380, // ~20% discount from $475 (updated from $299 to match Archivist pricing)
       features: [
-        "5,000,000 API calls per month",
-        "200 simultaneous threads",
-        "Global country-specific targeting",
+        "5,000,000 API calls per month", // From Archivist
+        "200 simultaneous threads",      // From Archivist
+        "Global country-specific targeting", // From Archivist
         "Dynamic page rendering",
         "High-quality residential & mobile proxies",
         "Sophisticated anti-block technology",
@@ -91,7 +71,7 @@ function PricingPage() {
     },
     {
       name: "Enterprise",
-      description: "Customized for leaders scaling complex data ecosystems",
+      description: "Web scraping is complex. We make it simple for leaders scaling complex data ecosystems, with expert support and comprehensive tools to take control.",
       customPricing: true,
       features: [
         "5,000,000+ API calls per month",
@@ -115,16 +95,14 @@ function PricingPage() {
           name: "Monthly API calls",
           starter: "100,000",
           analyst: "1,000,000",
-          business: "3,000,000",
-          "data mogul": "5,000,000",
+          business: "5,000,000",  // Updated from 3M to 5M
           enterprise: "5,000,000+",
         },
         {
           name: "Simultaneous threads",
           starter: "20",
           analyst: "50",
-          business: "100",
-          "data mogul": "200",
+          business: "200",        // Updated from 100 to 200
           enterprise: "200+",
         },
       ],
@@ -136,8 +114,7 @@ function PricingPage() {
           name: "Location targeting",
           starter: "US & EU",
           analyst: "US & EU",
-          business: "Country-level",
-          "data mogul": "Country-level",
+          business: "Country-level",  // Updated from US & EU to Country-level
           enterprise: "Country-level",
         },
         {
@@ -145,7 +122,6 @@ function PricingPage() {
           starter: true,
           analyst: true,
           business: true,
-          "data mogul": true,
           enterprise: true,
         },
       ],
@@ -156,9 +132,8 @@ function PricingPage() {
         {
           name: "Dynamic rendering",
           starter: true,
-          analyst: "true",
+          analyst: true,
           business: true,
-          "data mogul": true,
           enterprise: true,
         },
         {
@@ -166,7 +141,6 @@ function PricingPage() {
           starter: true,
           analyst: true,
           business: true,
-          "data mogul": true,
           enterprise: true,
         },
       ],
