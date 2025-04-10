@@ -90,7 +90,7 @@ function BlogPage() {
                   transition="background-color 0.2s"
                   display="flex"
                   flexDirection="column"
-                  h="full" // Ensure full height usage within Grid
+                  h="full"
                 >
                   <Image src={post.image} alt={post.title || 'Untitled'} h="250px" w="full" objectFit="cover" />
                   <Box
@@ -114,7 +114,7 @@ function BlogPage() {
                         mb={4}
                         fontWeight="medium"
                         lineHeight="1.3"
-                        minH="3.9em" // Fixed height for 3 lines
+                        minH="3.9em"
                         maxH="3.9em"
                         overflow="hidden"
                         textOverflow="ellipsis"
@@ -197,8 +197,8 @@ function BlogPage() {
                             <Flex align="center"><TimeIcon mr={1} color="gray.500" boxSize={3} /><Text fontSize="xs" color="gray.500">{post.readTime || 'N/A'}</Text></Flex>
                           </HStack>
                           <Heading as="h3" size="md" fontWeight="medium" lineHeight="1.3" mb={2}>{post.title || 'Untitled'}</Heading>
-                          <HStack spacing={2}>
-                            {post.tags && post.tags.map((tag, tagIndex) => (
+                          <HStack spacing={2} flexWrap="wrap" rowGap={2}>
+                            {post.tags && post.tags.slice(0, 4).map((tag, tagIndex) => (
                               <Tag key={tagIndex} size="sm" colorScheme="gray" variant="subtle">{tag}</Tag>
                             ))}
                           </HStack>
