@@ -85,13 +85,14 @@ const Footer = () => {
             <Link href="/network/status" color="gray.300" _hover={{ color: "orange.400" }}>Status</Link>
                   
             <Link href="/network/security" color="gray.300" _hover={{ color: "orange.400" }}>Security</Link>
-              <Link href="/resources/blog" color="gray.300" _hover={{ color: "orange.400" }}>Blog</Link>
-              {/* <Link href="/documentation" color="gray.300" _hover={{ color: "orange.400" }}>Documentation</Link> */}
-              {/* <Link href="/case-studies" color="gray.300" _hover={{ color: "orange.400" }}>Case Studies</Link>
-              <Link href="/webinars" color="gray.300" _hover={{ color: "orange.400" }}>Webinars</Link> */}
+              <Link href="/resources/blog" color="gray.300" _hover={{ color: "orange.400" }}>Articles</Link>
+              <Link href="https://api.thedataproxy.com/redoc" color="gray.300" _hover={{ color: "orange.400" }}>Documentation</Link> 
+               <Link href="/resources/code-examples" color="gray.300" _hover={{ color: "orange.400" }}>Support</Link>
+              <Link href="/resources/web-scraping-guides" color="gray.300" _hover={{ color: "orange.400" }}>Guides</Link> 
                 <Link href="/network/proxy-types" color="gray.300" _hover={{ color: "orange.400" }}>Proxy Types</Link>
               <Link href="/resources/faq" color="gray.300" _hover={{ color: "orange.400" }}>FAQ</Link>
 
+             <Link href="/resources/support-center" color="gray.300" _hover={{ color: "orange.400" }}>Help & Support</Link>
               <Link href="https://apis.thedataproxy.com/redoc" color="gray.300" _hover={{ color: "orange.400" }}>API Reference</Link>
             </VStack>
           </Box>
