@@ -5,11 +5,11 @@ function HeroSection({ title, subtitle, ctaText, ctaLink, bgImage }) {
     <Box
       bgGradient="linear(to-bl, blue.900, blue.400)"
       py={{ base: 10, md: 15 }}
-      bgImage={bgImage} // Use the provided background image
-      bgSize="cover" // Ensure the image covers the section
-      bgPosition="center" // Center the background image
-      bgRepeat="no-repeat" // Prevent tiling
-      position="relative" // For layering content over the image
+      bgImage={bgImage}
+      bgSize="cover"
+      bgPosition="center"
+      bgRepeat="no-repeat"
+      position="relative"
       _before={{
         content: '""',
         position: "absolute",
@@ -17,7 +17,7 @@ function HeroSection({ title, subtitle, ctaText, ctaLink, bgImage }) {
         left: 0,
         right: 0,
         bottom: 0,
-        bg: "rgba(0, 0, 0, 0.4)", // Optional overlay for readability
+        bg: "rgba(0, 0, 0, 0.4)",
         zIndex: 1,
       }}
     >
@@ -29,10 +29,9 @@ function HeroSection({ title, subtitle, ctaText, ctaLink, bgImage }) {
         align="center"
         justify="space-between"
         gap={{ base: 6, md: 8 }}
-        position="relative" // Ensure content sits above the overlay
-        zIndex={2} // Above the overlay
+        position="relative"
+        zIndex={2}
       >
-        {/* Left Column: Text Content */}
         <VStack
           align="flex-start"
           spacing={6}
@@ -58,13 +57,12 @@ function HeroSection({ title, subtitle, ctaText, ctaLink, bgImage }) {
           </Text>
         </VStack>
 
-        {/* Right Column: Placeholder for Height */}
         <Box
           w={{ base: "100%", md: "50%" }}
           display="flex"
           justifyContent={{ base: "center", md: "flex-end" }}
           alignItems="center"
-          minH={{ base: "300px", md: "400px" }} // Maintains the height of the original image
+          minH={{ base: "300px", md: "400px" }}
         >
           {/* Image removed, but space preserved */}
         </Box>
@@ -88,44 +86,6 @@ function HeroSection({ title, subtitle, ctaText, ctaLink, bgImage }) {
           px={6}
         >
           {ctaText}
-        </Button>
-        <Button
-          as="a"
-          href="https://cloud.thedataproxy.com/login"
-          color="white"
-          bg="orange.400"
-          size="lg"
-          _hover={{ bg: "white", color: "orange.400" }}
-        >
-          Start Your Free Trial
-        </Button>
-      </Flex>
-    </Box>
-  );
-}
-
-export default HeroSection;
-
-      <Flex justify="center" gap={4} pt={4} pb={20}>
-        <Button
-          as="a"
-          href="https://cloud.thedataproxy.com/signup"
-          color="white"
-          bg="orange.400"
-          size="lg"
-          _hover={{ bg: "white", color: "orange.400" }}
-        >
-          Start Your Free Trial
-        </Button>
-        <Button
-          as="a"
-          href="https://cloud.thedataproxy.com/login"
-          color="white"
-          bg="orange.400"
-          size="lg"
-          _hover={{ bg: "white", color: "orange.400" }}
-        >
-          Login
         </Button>
       </Flex>
     </Box>
