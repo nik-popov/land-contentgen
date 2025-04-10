@@ -56,10 +56,10 @@ function BlogPage() {
   if (!posts.length) return <Text fontSize="lg" textAlign="center" py={16}>No posts available</Text>;
 
   const sortedPosts = posts
-  .filter(post => post && post.id) // Ensure post exists and has an ID
-  .sort((a, b) => b.id - a.id); // Sort by ID descending (largest/newest first)
+    .filter(post => post && post.id)
+    .sort((a, b) => b.id - a.id);
 
-  const recentPosts = sortedPosts.slice(0, 6); // Take the first 6 (largest IDs)
+  const recentPosts = sortedPosts.slice(0, 6);
   const featuredPosts = sortedPosts.slice(6, 8);
   const popularCategories = [...new Set(posts.map(post => post?.category).filter(Boolean))]
     .map(category => ({ name: category, count: posts.filter(post => post?.category === category).length }))
@@ -73,66 +73,77 @@ function BlogPage() {
 
   return (
     <>
-<Box py={16} bg="blue.50" color="gray.800">
-  <Box maxW="1200px" mx="auto" px={4}>
-    <Heading as="h1" size="2xl" textAlign="center" mb={6} fontWeight="medium">Guides and Trends</Heading>
-    <Text fontSize="xl" textAlign="center" mb={10} maxW="800px" mx="auto">Expert articles, tutorials, and insights...</Text>
-    <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={10}>
-      {featuredPosts.map((post, index) => post && (
-        <Link key={post.id || `featured-${index}`} href={post.path} _hover={{ textDecoration: "none" }}>
-          <Box
-            bg="white"
-            boxShadow="md"
-            borderRadius="lg"
-            overflow="hidden"
-            cursor="pointer"
-            _hover={{ bg: "gray.50" }}
-            transition="background-color 0.2s"
-            display="flex"
-            flexDirection="column"
-          >
-            <Image src={post.image} alt={post.title || 'Untitled'} h="250px" w="full" objectFit="cover" />
-            <Box
-              p={6}
-              flex="1"
-              display="flex"
-              flexDirection="column"
-              justifyContent="space-between"
-            >
-              <Box>
-                <HStack mb={4} spacing={3}>
-                  <Badge colorScheme="blue" px={3} py={1} borderRadius="full">{post.category || 'Uncategorized'}</Badge>
-                  <Flex align="center">
-                    <TimeIcon mr={1} color="gray.500" boxSize={3} />
-                    <Text fontSize="sm" color="gray.500">{post.readTime || 'N/A'}</Text>
-                  </Flex>
-                </HStack>
-                <Heading
-                  as="h3"
-                  size="lg"
-                  mb={4}
-                  fontWeight="medium"
-                  lineHeight="1.3"
+      <Box py={16} bg="blue.50" color="gray.800">
+        <Box maxW="1200px" mx="auto" px={4}>
+          <Heading as="h1" size="2xl" textAlign="center" mb={6} fontWeight="medium">Guides and Trends</Heading>
+          <Text fontSize="xl" textAlign="center" mb={10} maxW="800px" mx="auto">Expert articles, tutorials, and insights...</Text>
+          <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={10}>
+            {featuredPosts.map((post, index) => post && (
+              <Link key={post.id || `featured-${index}`} href={post.path} _hover={{ textDecoration: "none" }}>
+                <Box
+                  bg="white"
+                  boxShadow="md"
+                  borderRadius="lg"
+                  overflow="hidden"
+                  cursor="pointer"
+                  _hover={{ bg: "gray.50" }}
+                  transition="background-color 0.2s"
+                  display="flex"
+                  flexDirection="column"
+                  h="full" // Ensure full height usage within Grid
                 >
-                  {post.title || 'Untitled'}
-                </Heading>
-                <HStack spacing={2} flexWrap="wrap" maxW="100%" rowGap={2}>
-                  {post.tags && post.tags.slice(0, 4).map((tag, tagIndex) => (
-                    <Tag key={tagIndex} size="sm" colorScheme="gray" variant="subtle">{tag}</Tag>
-                  ))}
-                </HStack>
-              </Box>
-              <Box>
-                <Divider mt={4} mb={4} />
-                <Text fontSize="sm" color="gray.600">{post.date || 'No date'}</Text>
-              </Box>
-            </Box>
-          </Box>
-        </Link>
-      ))}
-    </Grid>
-  </Box>
-</Box>
+                  <Image src={post.image} alt={post.title || 'Untitled'} h="250px" w="full" objectFit="cover" />
+                  <Box
+                    p={6}
+                    flex="1"
+                    display="flex"
+                    flexDirection="column"
+                    justifyContent="space-between"
+                  >
+                    <Box>
+                      <HStack mb={4} spacing={3}>
+                        <Badge colorScheme="blue" px={3} py={1} borderRadius="full">{post.category || 'Uncategorized'}</Badge>
+                        <Flex align="center">
+                          <TimeIcon mr={1} color="gray.500" boxSize={3} />
+                          <Text fontSize="sm" color="gray.500">{post.readTime || 'N/A'}</Text>
+                        </Flex>
+                      </HStack>
+                      <Heading
+                        as="h3"
+                        size="lg"
+                        mb={4}
+                        fontWeight="medium"
+                        lineHeight="1.3"
+                        minH="3.9em" // Fixed height for 3 lines
+                        maxH="3.9em"
+                        overflow="hidden"
+                        textOverflow="ellipsis"
+                        display="-webkit-box"
+                        sx={{
+                          WebkitLineClamp: 3,
+                          WebkitBoxOrient: "vertical",
+                        }}
+                      >
+                        {post.title || 'Untitled'}
+                      </Heading>
+                      <HStack spacing={2} flexWrap="wrap" maxW="100%" rowGap={2} minH="2em">
+                        {post.tags && post.tags.slice(0, 4).map((tag, tagIndex) => (
+                          <Tag key={tagIndex} size="sm" colorScheme="gray" variant="subtle">{tag}</Tag>
+                        ))}
+                      </HStack>
+                    </Box>
+                    <Box>
+                      <Divider mt={4} mb={4} />
+                      <Text fontSize="sm" color="gray.600">{post.date || 'No date'}</Text>
+                    </Box>
+                  </Box>
+                </Box>
+              </Link>
+            ))}
+          </Grid>
+        </Box>
+      </Box>
+
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading textAlign="center" as="h2" size="xl" mb={12} fontWeight="medium">Recent Articles</Heading>
@@ -147,10 +158,8 @@ function BlogPage() {
                       <Flex align="center"><TimeIcon mr={1} color="gray.500" boxSize={3} /><Text fontSize="xs" color="gray.500">{post.readTime || 'N/A'}</Text></Flex>
                     </HStack>
                     <Heading as="h3" size="md" mb={3} fontWeight="medium" lineHeight="1.3">{post.title || 'Untitled'}</Heading>
-                    
                     <Divider mt={4} mb={4}/>
                     <Text fontSize="xs" color="gray.600" mb={4}>{post.date || 'No date'}</Text>
-                  
                   </Box>
                 </Box>
               </Link>
@@ -193,7 +202,6 @@ function BlogPage() {
                               <Tag key={tagIndex} size="sm" colorScheme="gray" variant="subtle">{tag}</Tag>
                             ))}
                           </HStack>
-                          
                         </Box>
                       </Flex>
                     </Box>
