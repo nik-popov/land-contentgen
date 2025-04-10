@@ -33,7 +33,7 @@ function PricingPage() {
     },
     {
       name: "Analyst",
-      description: "Ideal for data analysts and teams scaling their insights with confidence—our top pick!",
+      description: "Ideal for data analysts and teams scaling their insights with confidence",
       monthlyPrice: 149,
       annualPrice: 119, // ~20% discount from $149
       popular: true,
