@@ -166,7 +166,7 @@ const Footer = () => {
         {/* Bottom Footer - Copyright and Legal */}
         <Flex justify="space-between" align="center" borderTop="1px solid" borderColor="gray.700" pt={6} flexWrap="wrap" gap={4}>
           <Text color="gray.400" fontSize="sm">
-          © 2025 The Data Proxy, <Link href="https://cobaltdata.net" color="gray.200" _hover={{ color: "orange.400" }}>Cobalt Data Network</Link>. All rights reserved.
+          © 2025 <Link href="https://thedataproxy.com" color="gray.200" _hover={{ color: "orange.400" }}>The Data Proxy</Link>, <Link href="https://cobaltdata.net" color="gray.200" _hover={{ color: "blue.400" }}>Cobalt Data Network</Link>. All rights reserved.
           </Text>
           <Flex gap={6}>
             <Link href="/privacy" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>Privacy Policy</Link>
