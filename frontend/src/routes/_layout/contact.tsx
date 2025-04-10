@@ -20,19 +20,19 @@ function ContactPage() {
       city: "New York",
       address: "500 7th Avenue, 8th Floor, New York, NY 10018",
       phone: "+1 (855) 440-2242",
-      email: "nyc@thedataproxy.com"
+      email: "nyc@roamingproxy.com"
     },
     {
       city: "San Francisco",
       address: "535 Mission Street, 14th Floor, San Francisco, CA 94105",
       phone: "+1 (415) 555-1234",
-      email: "sf@thedataproxy.com"
+      email: "sf@roamingproxy.com"
     },
     {
       city: "London",
       address: "201 Borough High Street, London SE1 1JA, UK",
       phone: "+44 20 7946 0958",
-      email: "london@thedataproxy.com"
+      email: "london@roamingproxy.com"
     }
   ];
 
@@ -61,7 +61,7 @@ function ContactPage() {
               <EmailIcon boxSize={6} color="blue.600" />
               <Heading as="h3" size="md" color="blue.600">Email Us</Heading>
               <Text>Send us a message anytime and we'll respond within 4 business hours.</Text>
-              <Link href="mailto:support@thedataproxy.com" color="blue.600">support@thedataproxy.com</Link>
+              <Link href="mailto:support@roamingproxy.com" color="blue.600">support@roamingproxy.com</Link>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>

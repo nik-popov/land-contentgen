@@ -380,7 +380,7 @@ function ProxyTypesPage() {
               color="white"
               _hover={{ bg: "teal.700" }}
               as="a"
-              href="https://cloud.thedataproxy.com/signup"
+              href="https://cloud.roamingproxy.com/signup"
             >
               Start Free Trial
             </Button>

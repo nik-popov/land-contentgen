@@ -4,409 +4,409 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
-    <loc>https://thedataproxy.com/</loc>
+    <loc>https://roamingproxy.com/</loc>
     <lastmod>2025-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/pricing</loc>
+    <loc>https://roamingproxy.com/pricing</loc>
     <lastmod>2025-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/contact</loc>
+    <loc>https://roamingproxy.com/contact</loc>
     <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/compliance</loc>
+    <loc>https://roamingproxy.com/compliance</loc>
     <lastmod>2025-02-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/privacy</loc>
+    <loc>https://roamingproxy.com/privacy</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/terms</loc>
+    <loc>https://roamingproxy.com/terms</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/cookie</loc>
+    <loc>https://roamingproxy.com/cookie</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/solutions/enterprise</loc>
+    <loc>https://roamingproxy.com/solutions/enterprise</loc>
     <lastmod>2025-03-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/solutions/market-research</loc>
+    <loc>https://roamingproxy.com/solutions/market-research</loc>
     <lastmod>2025-03-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/solutions/price-monitoring</loc>
+    <loc>https://roamingproxy.com/solutions/price-monitoring</loc>
     <lastmod>2025-03-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/solutions/lead-generation</loc>
+    <loc>https://roamingproxy.com/solutions/lead-generation</loc>
     <lastmod>2025-03-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/solutions/content-aggregation</loc>
+    <loc>https://roamingproxy.com/solutions/content-aggregation</loc>
     <lastmod>2025-03-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/solutions/seo-monitoring</loc>
+    <loc>https://roamingproxy.com/solutions/seo-monitoring</loc>
     <lastmod>2025-03-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/solutions/training-ai</loc>
+    <loc>https://roamingproxy.com/solutions/training-ai</loc>
     <lastmod>2025-03-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/tools/html-scraper</loc>
+    <loc>https://roamingproxy.com/tools/html-scraper</loc>
     <lastmod>2025-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/tools/api-scraper</loc>
+    <loc>https://roamingproxy.com/tools/api-scraper</loc>
     <lastmod>2025-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/tools/proxy-dashboard</loc>
+    <loc>https://roamingproxy.com/tools/proxy-dashboard</loc>
     <lastmod>2025-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/tools/scheduler</loc>
+    <loc>https://roamingproxy.com/tools/scheduler</loc>
     <lastmod>2025-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/tools/https-proxy</loc>
+    <loc>https://roamingproxy.com/tools/https-proxy</loc>
     <lastmod>2025-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/tools/user-agents</loc>
+    <loc>https://roamingproxy.com/tools/user-agents</loc>
     <lastmod>2025-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/tools/rotating-proxy</loc>
+    <loc>https://roamingproxy.com/tools/rotating-proxy</loc>
     <lastmod>2025-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/tools/socks5-proxy</loc>
+    <loc>https://roamingproxy.com/tools/socks5-proxy</loc>
     <lastmod>2025-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/use-cases/competitor-analysis</loc>
+    <loc>https://roamingproxy.com/use-cases/competitor-analysis</loc>
     <lastmod>2025-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/use-cases/ecommerce-price-monitoring</loc>
+    <loc>https://roamingproxy.com/use-cases/ecommerce-price-monitoring</loc>
     <lastmod>2025-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/use-cases/financial-data-collection</loc>
+    <loc>https://roamingproxy.com/use-cases/financial-data-collection</loc>
     <lastmod>2025-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/use-cases/news-aggregation</loc>
+    <loc>https://roamingproxy.com/use-cases/news-aggregation</loc>
     <lastmod>2025-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/use-cases/product-data-extraction</loc>
+    <loc>https://roamingproxy.com/use-cases/product-data-extraction</loc>
     <lastmod>2025-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/use-cases/real-estate-data-scraping</loc>
+    <loc>https://roamingproxy.com/use-cases/real-estate-data-scraping</loc>
     <lastmod>2025-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/use-cases/social-media-monitoring</loc>
+    <loc>https://roamingproxy.com/use-cases/social-media-monitoring</loc>
     <lastmod>2025-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/use-cases/travel-fare-aggregation</loc>
+    <loc>https://roamingproxy.com/use-cases/travel-fare-aggregation</loc>
     <lastmod>2025-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/network/locations</loc>
+    <loc>https://roamingproxy.com/network/locations</loc>
     <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/network/proxy-types</loc>
+    <loc>https://roamingproxy.com/network/proxy-types</loc>
     <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/network/security</loc>
+    <loc>https://roamingproxy.com/network/security</loc>
     <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/network/status</loc>
+    <loc>https://roamingproxy.com/network/status</loc>
     <lastmod>2025-03-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/network/north-america</loc>
+    <loc>https://roamingproxy.com/network/north-america</loc>
     <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/network/europe</loc>
+    <loc>https://roamingproxy.com/network/europe</loc>
     <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/network/asia-pacific</loc>
+    <loc>https://roamingproxy.com/network/asia-pacific</loc>
     <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/network/south-america</loc>
+    <loc>https://roamingproxy.com/network/south-america</loc>
     <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/network/middle-east</loc>
+    <loc>https://roamingproxy.com/network/middle-east</loc>
     <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/resources/faq</loc>
+    <loc>https://roamingproxy.com/resources/faq</loc>
     <lastmod>2025-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/resources/support-center</loc>
+    <loc>https://roamingproxy.com/resources/support-center</loc>
     <lastmod>2025-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/resources/web-scraping-guides</loc>
+    <loc>https://roamingproxy.com/resources/web-scraping-guides</loc>
     <lastmod>2025-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/resources/code-examples</loc>
+    <loc>https://roamingproxy.com/resources/code-examples</loc>
     <lastmod>2025-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/resources/blog</loc>
+    <loc>https://roamingproxy.com/resources/blog</loc>
     <lastmod>2025-03-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/resources/blogs/proxy-rotation-strategies-for-large-scale-data-collection</loc>
+    <loc>https://roamingproxy.com/resources/blogs/proxy-rotation-strategies-for-large-scale-data-collection</loc>
     <lastmod>2025-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/resources/blogs/residential-vs-datacenter-proxies-right-choice-for-web-scraping</loc>
+    <loc>https://roamingproxy.com/resources/blogs/residential-vs-datacenter-proxies-right-choice-for-web-scraping</loc>
     <lastmod>2025-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/resources/blogs/building-a-self-healing-proxy-infrastructure-for-continuous-data-access</loc>
+    <loc>https://roamingproxy.com/resources/blogs/building-a-self-healing-proxy-infrastructure-for-continuous-data-access</loc>
     <lastmod>2025-03-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/resources/blogs/advanced-proxy-rotation-algorithms-that-mimic-human-browsing-patterns</loc>
+    <loc>https://roamingproxy.com/resources/blogs/advanced-proxy-rotation-algorithms-that-mimic-human-browsing-patterns</loc>
     <lastmod>2025-03-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/resources/blogs/geographic-ip-distribution-optimizing-data-collection-by-region</loc>
+    <loc>https://roamingproxy.com/resources/blogs/geographic-ip-distribution-optimizing-data-collection-by-region</loc>
     <lastmod>2025-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/resources/blogs/proxy-management-apis-building-a-centralized-control-system</loc>
+    <loc>https://roamingproxy.com/resources/blogs/proxy-management-apis-building-a-centralized-control-system</loc>
     <lastmod>2025-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/resources/blogs/cost-optimization-strategies-for-enterprise-scale-proxy-networks</loc>
+    <loc>https://roamingproxy.com/resources/blogs/cost-optimization-strategies-for-enterprise-scale-proxy-networks</loc>
     <lastmod>2025-04-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/resources/blogs/real-time-proxy-quality-scoring-keeping-your-pool-healthy</loc>
+    <loc>https://roamingproxy.com/resources/blogs/real-time-proxy-quality-scoring-keeping-your-pool-healthy</loc>
     <lastmod>2025-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/resources/blogs/legal-compliance-in-proxy-usage-navigating-the-gray-areas</loc>
+    <loc>https://roamingproxy.com/resources/blogs/legal-compliance-in-proxy-usage-navigating-the-gray-areas</loc>
     <lastmod>2025-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/resources/blogs/proxy-rotation-for-api-harvesting-respecting-rate-limits-while-maximizing-throughput</loc>
+    <loc>https://roamingproxy.com/resources/blogs/proxy-rotation-for-api-harvesting-respecting-rate-limits-while-maximizing-throughput</loc>
     <lastmod>2025-05-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/resources/blogs/mobile-proxy-solutions-collecting-data-from-mobile-first-platforms</loc>
+    <loc>https://roamingproxy.com/resources/blogs/mobile-proxy-solutions-collecting-data-from-mobile-first-platforms</loc>
     <lastmod>2025-05-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/resources/blogs/combining-proxy-rotation-with-headless-browsers-for-undetectable-scraping</loc>
+    <loc>https://roamingproxy.com/resources/blogs/combining-proxy-rotation-with-headless-browsers-for-undetectable-scraping</loc>
     <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/resources/blogs/private-proxy-pools-vs-shared-services-building-the-right-infrastructure-for-your-needs</loc>
+    <loc>https://roamingproxy.com/resources/blogs/private-proxy-pools-vs-shared-services-building-the-right-infrastructure-for-your-needs</loc>
     <lastmod>2025-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/resources/blogs/proxy-rotation-for-social-media-intelligence-accessing-platform-data-at-scale</loc>
+    <loc>https://roamingproxy.com/resources/blogs/proxy-rotation-for-social-media-intelligence-accessing-platform-data-at-scale</loc>
     <lastmod>2025-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/resources/blogs/future-proofing-your-proxy-infrastructure-adapting-to-evolving-anti-bot-technologies</loc>
+    <loc>https://roamingproxy.com/resources/blogs/future-proofing-your-proxy-infrastructure-adapting-to-evolving-anti-bot-technologies</loc>
     <lastmod>2025-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
     <url>
-    <loc>https://thedataproxy.com/resources/blogs/enterprise-grade-proxy-infrastructure-building-scalable-data-collection-systems</loc>
+    <loc>https://roamingproxy.com/resources/blogs/enterprise-grade-proxy-infrastructure-building-scalable-data-collection-systems</loc>
     <lastmod>2025-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/resources/blogs/residential-proxy-networks-ethical-considerations-and-best-practices</loc>
+    <loc>https://roamingproxy.com/resources/blogs/residential-proxy-networks-ethical-considerations-and-best-practices</loc>
     <lastmod>2025-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/resources/blogs/api-based-data-collection-when-to-use-apis-instead-of-web-scraping</loc>
+    <loc>https://roamingproxy.com/resources/blogs/api-based-data-collection-when-to-use-apis-instead-of-web-scraping</loc>
     <lastmod>2025-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/resources/blogs/understanding-browser-fingerprinting-detection-methods-and-countermeasures</loc>
+    <loc>https://roamingproxy.com/resources/blogs/understanding-browser-fingerprinting-detection-methods-and-countermeasures</loc>
     <lastmod>2025-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
     <url>
-    <loc>https://thedataproxy.com/resources/blogs/proxy-server-security-protecting-your-data-collection-infrastructure</loc>
+    <loc>https://roamingproxy.com/resources/blogs/proxy-server-security-protecting-your-data-collection-infrastructure</loc>
     <lastmod>2025-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
     <url>
-    <loc>https://thedataproxy.com/resources/blogs/mobile-proxy-networks-applications-and-implementation-best-practices</loc>
+    <loc>https://roamingproxy.com/resources/blogs/mobile-proxy-networks-applications-and-implementation-best-practices</loc>
     <lastmod>2025-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/resources/blogs/ip-rotation-strategies-optimizing-collection-success-and-resource-efficiency</loc>
+    <loc>https://roamingproxy.com/resources/blogs/ip-rotation-strategies-optimizing-collection-success-and-resource-efficiency</loc>
     <lastmod>2025-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
     <url>
-    <loc>https://thedataproxy.com/resources/blogs/automated-web-intelligence-rotating-proxies-scheduling</loc>
+    <loc>https://roamingproxy.com/resources/blogs/automated-web-intelligence-rotating-proxies-scheduling</loc>
     <lastmod>2025-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://thedataproxy.com/resources/blogs/financial-data-collection-european-proxy-networks</loc>
+    <loc>https://roamingproxy.com/resources/blogs/financial-data-collection-european-proxy-networks</loc>
     <lastmod>2025-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

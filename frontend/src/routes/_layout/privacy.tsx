@@ -41,7 +41,7 @@ function PrivacyPolicyPage() {
             <Text fontSize="lg" mb={4}>
               At The Data Proxy, we are committed to protecting your privacy and ensuring the security of your personal information. 
               This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website 
-              at thedataproxy.com ("Website") or use our services.
+              at roamingproxy.com ("Website") or use our services.
             </Text>
             <Text fontSize="lg" mb={4}>
               We value transparency and want you to understand exactly how we handle your data. This policy outlines your privacy 
@@ -576,14 +576,14 @@ function PrivacyPolicyPage() {
               please contact us at:
             </Text>
             <VStack align="start" spacing={2} pl={4}>
-              <Text><strong>Privacy Team Email:</strong> privacy@thedataproxy.com</Text>
+              <Text><strong>Privacy Team Email:</strong> privacy@roamingproxy.com</Text>
               <Text><strong>Address:</strong> 99 Wall St Suite 5660, New York, NY 10005, USA</Text>
               <Text><strong>Phone:</strong> +1 (855) 440-2242 </Text>
               <Text><strong>Support Hours:</strong> Monday to Friday, 9:00 AM to 5:00 PM EST</Text>
             </VStack>
             <Text fontSize="md" mt={4}>
               For formal privacy requests, such as data access, correction, or deletion requests, please use our dedicated 
-              form available at <Link color="blue.500" href="https://thedataproxy.com/privacy-request">thedataproxy.com/privacy-request</Link>.
+              form available at <Link color="blue.500" href="https://roamingproxy.com/privacy-request">roamingproxy.com/privacy-request</Link>.
             </Text>
             <Text fontSize="md" mt={4}>
               We will respond to your request within the timeframe required by applicable law, typically within 30 days. 

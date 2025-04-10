@@ -18,7 +18,7 @@ function BlogPage() {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await fetch('https://raw.githubusercontent.com/CobaltDataNet/static/refs/heads/main/thedataproxy-blog-posts.json');
+        const response = await fetch('https://raw.githubusercontent.com/CobaltDataNet/static/refs/heads/main/roamingproxy-blog-posts.json');
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         const data = await response.json();
         if (!Array.isArray(data)) throw new Error('Fetched data is not an array');
@@ -174,7 +174,7 @@ function BlogPage() {
           <Text fontSize="lg" mb={10} maxW="700px" mx="auto" color="white">Download our free comprehensive guides...</Text>
           <Flex justify="center" gap={6} flexWrap="wrap">
             <Button size="lg" bg="white" color="blue.500" _hover={{ bg: "gray.100" }} as="a" href="/demo-request">Request Demo</Button>
-            <Button size="lg" variant="outline" borderColor="white" color="white" _hover={{ bg: "blue.700" }} as="a" href="https://cloud.thedataproxy.com/signup">Start Free Trial</Button>
+            <Button size="lg" variant="outline" borderColor="white" color="white" _hover={{ bg: "blue.700" }} as="a" href="https://cloud.roamingproxy.com/signup">Start Free Trial</Button>
           </Flex>
         </Box>
       </Box>

@@ -77,7 +77,7 @@ async def submit_demo_request(form_data: DemoRequestForm) -> Message:
 
         # Send email and check the return value
         email_success = send_email(
-            email_to="form_submission@thedataproxy.com",
+            email_to="form_submission@roamingproxy.com",
             subject=f"New Demo Request from {form_data.company_name}",
             html_content=html_content
         )
@@ -144,7 +144,7 @@ async def submit_contact_sales(form_data: ContactSalesForm) -> Message:
 
         # Send email to sales team
         email_success = send_email(
-            email_to="sales@thedataproxy.com",
+            email_to="sales@roamingproxy.com",
             subject=f"New Sales Inquiry from {form_data.company_name}",
             html_content=html_content
         )
@@ -272,7 +272,7 @@ async def submit_privacy_request(form_data: PrivacyRequestForm) -> Message:
                     specific_details += f"<h3>Additional Details:</h3><p>{form_data.deletion_details}</p>"
             
             team_notification_sent = send_email(
-                email_to="privacy@thedataproxy.com",
+                email_to="privacy@roamingproxy.com",
                 subject=f"New Privacy Request: {request_type_readable} - #{request_ref}",
                 html_content=f"""
                 <html>
@@ -382,7 +382,7 @@ async def submit_whistleblower_report(form_data: WhistleblowerReportForm) -> dic
 
         # Send notification to compliance team
         team_email_success = send_email(
-            email_to="compliance@thedataproxy.com",
+            email_to="compliance@roamingproxy.com",
             subject=f"New Whistleblower Report #{report_id}",
             html_content=team_html_content
         )

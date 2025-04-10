@@ -64,7 +64,7 @@ function SalesContactPage() {
       
       console.log("Form data being submitted:", formData);
 
-      const response = await fetch('https://apis.thedataproxy.com/api/v1/utils/contact-sales/', {
+      const response = await fetch('https://apis.roamingproxy.com/api/v1/utils/contact-sales/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -384,7 +384,7 @@ function SalesContactPage() {
               <Box>
                 <Text fontWeight="medium">Email Sales</Text>
                 <Text fontSize="sm" color="gray.600">
-      <a href="mailto:sales@thedataproxy.com">sales@thedataproxy.com</a>
+      <a href="mailto:sales@roamingproxy.com">sales@roamingproxy.com</a>
     </Text>
               </Box>
             </Box>

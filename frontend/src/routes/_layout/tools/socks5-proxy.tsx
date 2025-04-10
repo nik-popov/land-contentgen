@@ -362,7 +362,7 @@ function SOCKS5ProxyService() {
               color="white"
               _hover={{ bg: "teal.600" }}
               as="a"
-              href="https://cloud.thedataproxy.com/signup"
+              href="https://cloud.roamingproxy.com/signup"
               >
                Start Free Trial
             </Button>

@@ -382,7 +382,7 @@ function RealEstateDataScrapingPage() {
               color="white"
               _hover={{ bg: "blue.700" }}
               as="a"
-              href="https://cloud.thedataproxy.com/signup"
+              href="https://cloud.roamingproxy.com/signup"
             >
               Start Free Trial
             </Button>

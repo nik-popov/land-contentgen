@@ -366,14 +366,14 @@ function CompliancePage() {
               concern, please reach out to us at:
             </Text>
             <VStack align="start" spacing={2} pl={4}>
-              <Text><strong>Compliance Email:</strong> compliance@thedataproxy.com</Text>
+              <Text><strong>Compliance Email:</strong> compliance@roamingproxy.com</Text>
               <Text><strong>Address:</strong> 99 Wall St Suite 5660, New York, NY 10005, USA</Text>
               <Text><strong>Phone:</strong> +1 (855) 440-2242</Text>
               <Text><strong>Office Hours:</strong> Monday to Friday, 9:00 AM to 5:00 PM EST</Text>
             </VStack>
             <Text fontSize="md" mt={4}>
               For whistleblower reports or confidential compliance concerns, please use our anonymous reporting 
-              channel at <Link color="blue.500" href="https://thedataproxy.com/report">thedataproxy.com/report</Link>.
+              channel at <Link color="blue.500" href="https://roamingproxy.com/report">roamingproxy.com/report</Link>.
             </Text>
           </Box>
         </VStack>

@@ -280,7 +280,7 @@ function NetworkStatusPage() {
               <Image src="https://cdn-icons-png.flaticon.com/512/1932/1932655.png" boxSize="50px" mb={2} />
               <Heading as="h3" size="md" fontWeight="medium">Technical Documentation</Heading>
               <Text color="gray.600">Access documentation to understand our infrastructure and troubleshoot.</Text>
-              <Link color="blue.600" href="https://apis.thedataproxy.com/redoc" fontWeight="medium">
+              <Link color="blue.600" href="https://apis.roamingproxy.com/redoc" fontWeight="medium">
                 API Documentation →
               </Link>
             </VStack>
@@ -291,7 +291,7 @@ function NetworkStatusPage() {
               <Text color="gray.600">
                 Check proxy performance and availability in real-time on our dedicated status page.
               </Text>
-              <Link color="blue.600" href="https://cloud.thedataproxy.com/scraping-tools/search-proxies" fontWeight="medium">
+              <Link color="blue.600" href="https://cloud.roamingproxy.com/scraping-tools/search-proxies" fontWeight="medium">
                 View Status Page →
               </Link>
             </VStack>

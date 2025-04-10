@@ -9,16 +9,15 @@ export const Route = createFileRoute("/_layout/")({
 
 function LandingPage() {
   const navigate = useNavigate();
-  return (
-    <Box>
-      <HeroSection
-        title="Your Systems Gateway to the Public Web"
-        subtitle="SaaS proxy solutions built for large-scale data processing, extraction, LLM training and more."
-        ctas={[
-          { text: "Get Started", link: "/demo-request" },
-          { text: "Start Free Trial", link: "https://cloud.thedataproxy.com" },
-        ]}
-        bgImage="https://images.unsplash.com/photo-1451187580459-43490279c0fa"
+<Box>
+  <HeroSection
+    title="Enterprise Web Access Infrastructure for AI & Data Operations"
+    subtitle="Scale-optimized proxy solutions for data collection, ML training, and business intelligence at global enterprise scale."
+    ctas={[
+      { text: "Get Started", link: "/demo-request" },
+      { text: "Start Free Trial", link: "https://cloud.roamingproxy.com" },
+    ]}
+        bgImage="https://images.unsplash.com/photo-1625685554528-2a0b517e094c"
       />
     {/* Section 3: Proxy Network Coverage for Web Scraping */}
     <Box py={16} bg="blue.50" color="gray.800">

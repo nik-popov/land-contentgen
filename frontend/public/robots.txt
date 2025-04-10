@@ -25,4 +25,4 @@ Disallow: /privacy-request
 Disallow: /report
 
 # Sitemap
-Sitemap: https://thedataproxy.com/sitemap.xml
+Sitemap: https://roamingproxy.com/sitemap.xml
