@@ -27,7 +27,7 @@ function PricingPage() {
         "Data extraction & formatting tools",
       ],
       limitations: [
- Pong        "No personal account manager",
+        "No personal account manager",
         "No premium chat support",
       ],
     },

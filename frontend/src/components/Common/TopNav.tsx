@@ -59,7 +59,14 @@ interface NavItemsProps {
   isMobile?: boolean;
 }
 
+
 const navStructure: NavItem[] = [
+    {
+      title: "Pricing",
+      icon: FiTrendingUp,
+      path: "/pricing",
+      description: "View our pricing plans and features"
+    },
   {
     title: "Web Scraping Tools",
     icon: FiTool,
