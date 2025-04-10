@@ -55,11 +55,12 @@ function BlogPage() {
   if (error) return <Text fontSize="lg" textAlign="center" py={16} color="red.500">Error: {error}</Text>;
   if (!posts.length) return <Text fontSize="lg" textAlign="center" py={16}>No posts available</Text>;
 
-  const featuredPosts = posts.slice(0, 2);
-  const recentPosts = posts
+  const sortedPosts = posts
   .filter(post => post && post.id) // Ensure post exists and has an ID
-  .sort((a, b) => b.id - a.id) // Sort by ID descending (largest/newest first)
-  .slice(0, 6); // Take the first 6 (largest IDs)
+  .sort((a, b) => b.id - a.id); // Sort by ID descending (largest/newest first)
+
+  const recentPosts = sortedPosts.slice(0, 6); // Take the first 6 (largest IDs)
+  const featuredPosts = sortedPosts.slice(6, 8);
   const popularCategories = [...new Set(posts.map(post => post?.category).filter(Boolean))]
     .map(category => ({ name: category, count: posts.filter(post => post?.category === category).length }))
     .sort((a, b) => b.count - a.count)
