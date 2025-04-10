@@ -63,7 +63,7 @@ interface NavItemsProps {
 const navStructure: NavItem[] = [
     {
       title: "Pricing",
-      icon: FiTrendingUp,
+
       path: "/pricing",
       description: "View our pricing plans and features"
     },
