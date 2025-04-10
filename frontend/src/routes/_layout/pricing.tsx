@@ -70,8 +70,8 @@ function PricingPage() {
       ],
     },
     {
-      name: "Data Miner",
-      description: "Designed for advanced data miners scaling extraction efforts",
+      name: "Data Mogul",
+      description: "For data geeks ruling over massive data empires",
       monthlyPrice: 475,
       annualPrice: 380, // ~20% discount from $475
       popular: true,
@@ -107,7 +107,6 @@ function PricingPage() {
       limitations: [],
     },
   ];
-
   const featureComparison = [
     {
       category: "API Capabilities",
@@ -117,7 +116,7 @@ function PricingPage() {
           starter: "100,000",
           analyst: "1,000,000",
           business: "3,000,000",
-          "data miner": "5,000,000",
+          "data mogul": "5,000,000",
           enterprise: "5,000,000+",
         },
         {
@@ -125,7 +124,7 @@ function PricingPage() {
           starter: "20",
           analyst: "50",
           business: "100",
-          "data miner": "200",
+          "data mogul": "200",
           enterprise: "200+",
         },
       ],
@@ -138,7 +137,7 @@ function PricingPage() {
           starter: "US & EU",
           analyst: "US & EU",
           business: "Country-level",
-          "data miner": "Country-level",
+          "data mogul": "Country-level",
           enterprise: "Country-level",
         },
         {
@@ -146,7 +145,7 @@ function PricingPage() {
           starter: true,
           analyst: true,
           business: true,
-          "data miner": true,
+          "data mogul": true,
           enterprise: true,
         },
       ],
@@ -157,9 +156,9 @@ function PricingPage() {
         {
           name: "Dynamic rendering",
           starter: true,
-          analyst: true,
+          analyst: "true",
           business: true,
-          "data miner": true,
+          "data mogul": true,
           enterprise: true,
         },
         {
@@ -167,7 +166,7 @@ function PricingPage() {
           starter: true,
           analyst: true,
           business: true,
-          "data miner": true,
+          "data mogul": true,
           enterprise: true,
         },
       ],
