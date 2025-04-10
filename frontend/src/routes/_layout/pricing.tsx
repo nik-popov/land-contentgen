@@ -32,7 +32,7 @@ function PricingPage() {
     },
     {
       name: "Analyst",
-      description: "For data analysts and growing teams to take control of their data with confidence—our most popular choice!",
+      description: "For data analysts and growing teams to take control of their data with confidence",
       monthlyPrice: 149,
       annualPrice: 119, // ~20% discount from $149
       popular: true,
@@ -71,7 +71,7 @@ function PricingPage() {
     },
     {
       name: "Enterprise",
-      description: "For leaders scaling complex data ecosystems, with expert support and comprehensive tools to take control.",
+      description: "For scaling complex ecosystems, with expert support and comprehensive tools to take control.",
       customPricing: true,
       features: [
         "5,000,000+ API calls per month",
