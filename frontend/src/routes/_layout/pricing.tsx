@@ -71,7 +71,7 @@ function PricingPage() {
     },
     {
       name: "Enterprise",
-      description: "For scaling complex ecosystems, with comprehensive tools to take control.",
+      description: "For scaling ecosystems, with comprehensive tools to take control.",
       customPricing: true,
       features: [
         "5,000,000+ API calls per month",
