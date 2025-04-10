@@ -24,7 +24,7 @@ const Footer = () => {
 </Heading>
 <Text color="gray.400" fontSize="sm" mb={2}>
   <Link href="https://cobaltdata.net" _hover={{ textDecoration: "none", color: "blue.400" }}>
-    Cobalt Data Company
+    Cobalt Data Network
   </Link>
 </Text>
           <Text color="gray.300" mb={4}>
@@ -165,7 +165,7 @@ const Footer = () => {
 
         {/* Bottom Footer - Copyright and Legal */}
         <Flex justify="space-between" align="center" borderTop="1px solid" borderColor="gray.700" pt={6} flexWrap="wrap" gap={4}>
-          <Text color="gray.400" fontSize="sm">© 2025 The Data Proxy, Cobalt Data company. All rights reserved.</Text>
+          <Text color="gray.400" fontSize="sm">© 2025 The Data Proxy, Cobalt Data Network. All rights reserved.</Text>
           <Flex gap={6}>
             <Link href="/privacy" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>Privacy Policy</Link>
             <Link href="/terms" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>Terms of Service</Link>
