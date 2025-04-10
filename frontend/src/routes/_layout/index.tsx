@@ -16,7 +16,7 @@ function LandingPage() {
         subtitle="SaaS proxy solutions built for large-scale data processing, extraction, LLM training and more."
         ctas={[
           { text: "Get Started", link: "/demo-request" },
-          { text: "Start free trial", link: "/pricing" },
+          { text: "Start Free Trial", link: "https://cloud.thedataproxy.com" },
         ]}
         bgImage="https://images.unsplash.com/photo-1451187580459-43490279c0fa"
       />
