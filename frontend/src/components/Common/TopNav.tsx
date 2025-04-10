@@ -111,7 +111,6 @@ const navStructure: NavItem[] = [
   },
   {
     title: "Pricing",
-
     path: "/pricing",
     description: "View our pricing plans and features"
   }
