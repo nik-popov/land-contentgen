@@ -100,11 +100,11 @@ const Footer = () => {
           <Box>
             <Heading as="h4" size="md" mb={4} color="white">Company</Heading>
             <VStack align="flex-start" spacing={2}>
+              <Link href="/pricing" color="gray.300" _hover={{ color: "orange.400" }}>Pricing</Link>
+              <Link href="/contact-sales" color="gray.300" _hover={{ color: "orange.400" }}>Sales</Link>
               <Link href="https://cloud.thedataproxy.com/login" color="gray.300" _hover={{ color: "orange.400" }}>Log In</Link>
               <Link href="https://cloud.thedataproxy.com/signup" color="gray.300" _hover={{ color: "orange.400" }}>Sign Up</Link>
               <Link href="/contact" color="gray.300" _hover={{ color: "orange.400" }}>Contact</Link>
-              <Link href="/pricing" color="gray.300" _hover={{ color: "orange.400" }}>Pricing</Link>
-              <Link href="/contact-sales" color="gray.300" _hover={{ color: "orange.400" }}>Sales</Link>
               <Link href="https://cobaltdata.net" color="gray.300" _hover={{ color: "blue.400" }}>Cobalt Data</Link>
             </VStack>
           </Box>
