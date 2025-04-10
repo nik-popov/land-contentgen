@@ -284,7 +284,7 @@ function BlogPostDetails() {
           variant="subtle"
           size="md"
           flex="0 0 calc(25% - 8px)" // 25% width minus spacing
-          mb={2} // Margin bottom for wrapped rows
+          m={6} // Margin bottom for wrapped rows
         >
           {tag}
         </Tag>
