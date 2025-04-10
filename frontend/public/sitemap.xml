@@ -353,12 +353,18 @@
   </url>
   <url>
     <loc>https://thedataproxy.com/resources/blogs/future-proofing-your-proxy-infrastructure-adapting-to-evolving-anti-bot-technologies</loc>
-    <lastmod>2025-04-10</lastmod>
+    <lastmod>2025-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
     <url>
     <loc>https://thedataproxy.com/resources/blogs/enterprise-grade-proxy-infrastructure-building-scalable-data-collection-systems</loc>
+    <lastmod>2025-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thedataproxy.com/resources/blogs/residential-proxy-networks-ethical-considerations-and-best-practices</loc>
     <lastmod>2025-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
