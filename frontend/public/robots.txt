@@ -13,7 +13,7 @@ Allow: /network/
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /api/
-Disallow: /dashboard/
+Disallow: /cloud/
 Disallow: /login/
 Disallow: /account/
 Disallow: /billing/
