@@ -1,7 +1,7 @@
-import { Box, Flex, Grid, Heading, Text, VStack, Button, Link, Stat, StatLabel, StatNumber, StatHelpText, StatArrow, SimpleGrid, List, ListItem, ListIcon, Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon, Divider, Tag, HStack, Table, Thead, Tbody, Tr, Th, Td, Switch, FormControl, FormLabel, Badge } from "@chakra-ui/react";
+import { Box, Flex, Grid, Heading, Text, VStack, Button, SimpleGrid, List, ListItem, ListIcon, Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon, Divider, Badge, Table, Thead, Tbody, Tr, Th, Td, Switch, FormControl, FormLabel } from "@chakra-ui/react";
 import { createFileRoute } from "@tanstack/react-router";
 import Footer from '../../components/Common/Footer';
-import { CheckCircleIcon, CloseIcon, StarIcon, InfoIcon, TimeIcon } from '@chakra-ui/icons';
+import { CheckCircleIcon, CloseIcon } from '@chakra-ui/icons';
 import { useState } from 'react';
 
 export const Route = createFileRoute("/_layout/pricing")({
@@ -10,10 +10,11 @@ export const Route = createFileRoute("/_layout/pricing")({
 
 function PricingPage() {
   const [isAnnual, setIsAnnual] = useState(true);
+
   const pricingPlans = [
     {
       name: "Starter",
-      description: "For hobbyists and small-scale experiments to unlock their data’s potential with ease.",
+      description: "Perfect for hobbyists and small projects looking to tap into data effortlessly.",
       monthlyPrice: 49,
       annualPrice: 39, // ~20% discount from $49
       features: [
@@ -26,13 +27,13 @@ function PricingPage() {
         "Data extraction & formatting tools",
       ],
       limitations: [
-        "No personal account manager",
+ Pong        "No personal account manager",
         "No premium chat support",
       ],
     },
     {
       name: "Analyst",
-      description: "For data analysts and growing teams to take control of their data with confidence",
+      description: "Ideal for data analysts and teams scaling their insights with confidence—our top pick!",
       monthlyPrice: 149,
       annualPrice: 119, // ~20% discount from $149
       popular: true,
@@ -52,13 +53,13 @@ function PricingPage() {
     },
     {
       name: "Business",
-      description: "For data geeks and businesses to harness massive datasets with expert-backed tools.",
+      description: "Designed for data enthusiasts and companies tackling large-scale data challenges.",
       monthlyPrice: 475,
-      annualPrice: 380, // ~20% discount from $475 (updated from $299 to match Archivist pricing)
+      annualPrice: 380, // ~20% discount from $475
       features: [
-        "5,000,000 API calls per month", // From Archivist
-        "200 simultaneous threads",      // From Archivist
-        "Global country-specific targeting", // From Archivist
+        "5,000,000 API calls per month",
+        "200 simultaneous threads",
+        "Global country-specific targeting",
         "Dynamic page rendering",
         "High-quality residential & mobile proxies",
         "Sophisticated anti-block technology",
@@ -71,7 +72,7 @@ function PricingPage() {
     },
     {
       name: "Enterprise",
-      description: "For scaling ecosystems, with comprehensive tools to take control.",
+      description: "Tailored for leaders managing vast data ecosystems with premium support.",
       customPricing: true,
       features: [
         "5,000,000+ API calls per month",
@@ -87,6 +88,7 @@ function PricingPage() {
       limitations: [],
     },
   ];
+
   const featureComparison = [
     {
       category: "API Capabilities",
@@ -95,14 +97,14 @@ function PricingPage() {
           name: "Monthly API calls",
           starter: "100,000",
           analyst: "1,000,000",
-          business: "5,000,000",  // Updated from 3M to 5M
+          business: "5,000,000",
           enterprise: "5,000,000+",
         },
         {
           name: "Simultaneous threads",
           starter: "20",
           analyst: "50",
-          business: "200",        // Updated from 100 to 200
+          business: "200",
           enterprise: "200+",
         },
       ],
@@ -114,7 +116,7 @@ function PricingPage() {
           name: "Location targeting",
           starter: "US & EU",
           analyst: "US & EU",
-          business: "Country-level",  // Updated from US & EU to Country-level
+          business: "Country-level",
           enterprise: "Country-level",
         },
         {
@@ -146,27 +148,28 @@ function PricingPage() {
       ],
     },
   ];
+
   const faqItems = [
     {
       question: "How do you calculate API requests?",
-      answer: "Each API request counts as one unit against your monthly quota. A request is counted when you make a call to any of our API endpoints. Failed requests due to client errors (4xx status codes) still count toward your quota, while server errors (5xx) do not. Unused requests do not roll over to the next month."
+      answer: "Each API call counts as one request toward your monthly quota. This includes successful calls and failed ones due to client errors (4xx status codes), but not server errors (5xx). Unused requests expire at the end of the month.",
     },
     {
-      question: "Can I upgrade or downgrade my plan at any time?",
-      answer: "Yes, you can upgrade your plan at any time, and the new features will be available immediately. When upgrading, we prorate the remaining balance of your current subscription. Downgrades take effect at the start of your next billing cycle to ensure uninterrupted service."
+      question: "Can I upgrade or downgrade my plan anytime?",
+      answer: "Yes! Upgrades take effect immediately with prorated billing for the remaining subscription period. Downgrades apply at the start of your next billing cycle to maintain uninterrupted service.",
     },
     {
       question: "Do you offer custom plans for specific needs?",
-      answer: "Absolutely! Our Enterprise plan is fully customizable to meet your specific requirements. This includes custom API limits, dedicated infrastructure, specialized support arrangements, and tailored contracts. Please contact our sales team to discuss your needs and get a custom quote."
+      answer: "Definitely! The Enterprise plan is fully customizable, offering tailored API limits, dedicated infrastructure, and specialized support. Reach out to our sales team for a personalized quote.",
     },
     {
       question: "What happens if I exceed my monthly request limit?",
-      answer: "If you exceed your monthly API request limit, you can continue using the service at a pay-as-you-go rate. Overage charges are billed at $0.005 per additional request for Basic plan, $0.004 for Professional, and $0.003 for Business. You can also set up usage alerts or auto-upgrade options in your account settings."
+      answer: "You can keep going with pay-as-you-go rates: $0.005 per extra request for Starter, $0.004 for Analyst, and $0.003 for Business. Set up alerts or auto-upgrades in your account to stay in control.",
     },
     {
       question: "How secure is my data?",
-      answer: "We take data security very seriously. All data transmission is encrypted using TLS 1.3, and all stored data is encrypted at rest. We maintain SOC 2 compliance and follow industry best practices for security. We do not access your collected data except for troubleshooting purposes with your explicit permission."
-    }
+      answer: "Your data’s safety is our priority. We use TLS 1.3 encryption for transmission and encrypt data at rest. With SOC 2 compliance and strict access policies, we only touch your data for troubleshooting with your consent.",
+    },
   ];
 
   return (
@@ -175,20 +178,19 @@ function PricingPage() {
       <Box py={16} bg="blue.50" color="gray.800">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h1" size="2xl" textAlign="center" mb={8} fontWeight="medium">
-            Transparent Pricing for Every Need
+            Pricing That Scales With You
           </Heading>
           <Text fontSize="xl" textAlign="center" mb={8} maxW="800px" mx="auto">
-            Choose the plan that fits your data collection requirements, from individual projects to enterprise-scale operations.
+            From small experiments to enterprise solutions, find a plan that powers your data journey.
           </Text>
-          
           <Box maxW="300px" mx="auto" mb={10}>
             <FormControl display="flex" alignItems="center" justifyContent="center">
               <FormLabel htmlFor="billing-toggle" mb="0" mr={2}>
                 Monthly
               </FormLabel>
-              <Switch 
-                id="billing-toggle" 
-                colorScheme="blue" 
+              <Switch
+                id="billing-toggle"
+                colorScheme="blue"
                 size="lg"
                 isChecked={isAnnual}
                 onChange={() => setIsAnnual(!isAnnual)}
@@ -201,26 +203,26 @@ function PricingPage() {
           </Box>
         </Box>
       </Box>
-      
+
       {/* Pricing Plans Section */}
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Grid templateColumns={{ base: "1fr", md: "repeat(2, 1fr)", lg: "repeat(4, 1fr)" }} gap={8}>
             {pricingPlans.map((plan, index) => (
-              <Box 
-                key={index} 
-                borderWidth="1px" 
-                borderRadius="lg" 
+              <Box
+                key={index}
+                borderWidth="1px"
+                borderRadius="lg"
                 overflow="hidden"
                 boxShadow={plan.popular ? "lg" : "md"}
                 bg={plan.popular ? "blue.50" : "white"}
                 position="relative"
               >
                 {plan.popular && (
-                  <Badge 
-                    position="absolute" 
-                    top={4} 
-                    right={4} 
+                  <Badge
+                    position="absolute"
+                    top={4}
+                    right={4}
                     colorScheme="blue"
                     variant="solid"
                     px={2}
@@ -230,7 +232,6 @@ function PricingPage() {
                     Most Popular
                   </Badge>
                 )}
-                
                 <Box p={6}>
                   <Heading as="h3" size="lg" mb={2}>
                     {plan.name}
@@ -238,7 +239,6 @@ function PricingPage() {
                   <Text color="gray.600" h="60px" mb={4}>
                     {plan.description}
                   </Text>
-                  
                   {plan.customPricing ? (
                     <Box my={6}>
                       <Text fontSize="2xl" fontWeight="bold" mb={1}>
@@ -258,21 +258,18 @@ function PricingPage() {
                       </Text>
                     </Box>
                   )}
-                  
-                  <Button 
-                    colorScheme={plan.popular ? "blue" : "gray"} 
+                  <Button
+                    colorScheme={plan.popular ? "blue" : "gray"}
                     variant={plan.popular ? "solid" : "outline"}
-                    size="lg" 
-                    width="full" 
+                    size="lg"
+                    width="full"
                     mb={6}
                     as="a"
                     href="/contact-sales"
                   >
                     {plan.customPricing ? "Contact Sales" : "Select Plan"}
                   </Button>
-                  
                   <Divider mb={4} />
-                  
                   <Text fontWeight="medium" mb={3}>Features:</Text>
                   <List spacing={2} mb={6}>
                     {plan.features.map((feature, featureIndex) => (
@@ -282,7 +279,6 @@ function PricingPage() {
                       </ListItem>
                     ))}
                   </List>
-                  
                   {plan.limitations.length > 0 && (
                     <>
                       <Text fontWeight="medium" mb={3}>Limitations:</Text>
@@ -302,25 +298,23 @@ function PricingPage() {
           </Grid>
         </Box>
       </Box>
-      
-      
+
       {/* Feature Comparison Table */}
       <Box py={16} bg="gray.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
-            Feature Comparison
+            Compare Plans
           </Heading>
           <Text fontSize="lg" textAlign="center" mb={12} maxW="700px" mx="auto">
-            Compare all features across our plans to find the right fit for your needs
+            See how our plans stack up to match your data needs.
           </Text>
-          
           <Box overflowX="auto">
             <Table variant="simple" bg="white" boxShadow="md" borderRadius="md">
               <Thead>
                 <Tr bg="gray.100">
                   <Th width="30%">Feature</Th>
-                  <Th width="17.5%">Basic</Th>
-                  <Th width="17.5%" bg="blue.50">Pro</Th>
+                  <Th width="17.5%">Starter</Th>
+                  <Th width="17.5%" bg="blue.50">Analyst</Th>
                   <Th width="17.5%">Business</Th>
                   <Th width="17.5%">Enterprise</Th>
                 </Tr>
@@ -337,31 +331,23 @@ function PricingPage() {
                       <Tr key={`feature-${categoryIndex}-${featureIndex}`}>
                         <Td fontWeight="medium">{feature.name}</Td>
                         <Td>
-                          {typeof feature.basic === 'boolean' 
-                            ? (feature.basic 
-                                ? <CheckCircleIcon color="green.500" />
-                                : <CloseIcon color="red.500" fontSize="xs" />)
-                            : feature.basic}
+                          {typeof feature.starter === 'boolean'
+                            ? (feature.starter ? <CheckCircleIcon color="green.500" /> : <CloseIcon color="red.500" fontSize="xs" />)
+                            : feature.starter}
                         </Td>
                         <Td bg="blue.50">
-                          {typeof feature.professional === 'boolean' 
-                            ? (feature.professional
-                                ? <CheckCircleIcon color="green.500" />
-                                : <CloseIcon color="red.500" fontSize="xs" />)
-                            : feature.professional}
+                          {typeof feature.analyst === 'boolean'
+                            ? (feature.analyst ? <CheckCircleIcon color="green.500" /> : <CloseIcon color="red.500" fontSize="xs" />)
+                            : feature.analyst}
                         </Td>
                         <Td>
-                          {typeof feature.business === 'boolean' 
-                            ? (feature.business
-                                ? <CheckCircleIcon color="green.500" />
-                                : <CloseIcon color="red.500" fontSize="xs" />)
+                          {typeof feature.business === 'boolean'
+                            ? (feature.business ? <CheckCircleIcon color="green.500" /> : <CloseIcon color="red.500" fontSize="xs" />)
                             : feature.business}
                         </Td>
                         <Td>
-                          {typeof feature.enterprise === 'boolean' 
-                            ? (feature.enterprise
-                                ? <CheckCircleIcon color="green.500" />
-                                : <CloseIcon color="red.500" fontSize="xs" />)
+                          {typeof feature.enterprise === 'boolean'
+                            ? (feature.enterprise ? <CheckCircleIcon color="green.500" /> : <CloseIcon color="red.500" fontSize="xs" />)
                             : feature.enterprise}
                         </Td>
                       </Tr>
@@ -373,14 +359,13 @@ function PricingPage() {
           </Box>
         </Box>
       </Box>
-      
+
       {/* FAQ Section */}
       <Box py={16} bg="white">
         <Box maxW="900px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
-            Frequently Asked Questions
+            Got Questions?
           </Heading>
-          
           <Box borderRadius="md" boxShadow="sm" overflow="hidden">
             <Accordion allowToggle>
               {faqItems.map((faq, index) => (
@@ -402,82 +387,68 @@ function PricingPage() {
           </Box>
         </Box>
       </Box>
-      
-            {/* Usage Statistics Section */}
-            <Box py={16} bg="blue.50">
+
+      {/* Usage Statistics Section */}
+      <Box py={16} bg="blue.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
-            Delivering Data at Scale
+            Data Powerhouse
           </Heading>
           <Text fontSize="lg" textAlign="center" mb={10} maxW="700px" mx="auto">
-            Join thousands of businesses leveraging our platform for reliable data collection
+            Trusted by thousands to deliver reliable, scalable data solutions.
           </Text>
-          
           <SimpleGrid columns={{ base: 2, md: 4 }} spacing={10}>
             <VStack>
               <Heading as="h3" size="2xl" color="blue.600">99.9%</Heading>
               <Text fontWeight="medium">Uptime Reliability</Text>
-              <Text fontSize="sm" color="gray.600">Enterprise-grade infrastructure</Text>
+              <Text fontSize="sm" color="gray.600">Built for the enterprise</Text>
             </VStack>
-            
             <VStack>
               <Heading as="h3" size="2xl" color="blue.600">5B+</Heading>
               <Text fontWeight="medium">Monthly Requests</Text>
-              <Text fontSize="sm" color="gray.600">Across all customers</Text>
+              <Text fontSize="sm" color="gray.600">Across our network</Text>
             </VStack>
-            
             <VStack>
               <Heading as="h3" size="2xl" color="blue.600">15K+</Heading>
               <Text fontWeight="medium">Active Users</Text>
-              <Text fontSize="sm" color="gray.600">From startups to enterprises</Text>
+              <Text fontSize="sm" color="gray.600">From solo to scale</Text>
             </VStack>
-            
             <VStack>
               <Heading as="h3" size="2xl" color="blue.600">190+</Heading>
               <Text fontWeight="medium">Countries Covered</Text>
-              <Text fontSize="sm" color="gray.600">Global proxy network</Text>
+              <Text fontSize="sm" color="gray.600">Global reach</Text>
             </VStack>
           </SimpleGrid>
-          
           <Box mt={16} p={8} bg="white" borderRadius="lg" boxShadow="md">
             <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8}>
               <VStack align="flex-start">
-                <Heading as="h3" size="md" color="blue.600" mb={2}>Enterprise-Grade Security</Heading>
-                <Text>
-                  SOC 2 Type II compliant with end-to-end encryption and regular security audits to protect your data.
-                </Text>
+                <Heading as="h3" size="md" color="blue.600" mb={2}>Top-Tier Security</Heading>
+                <Text>SOC 2 compliant, fully encrypted, and audited regularly.</Text>
               </VStack>
-              
               <VStack align="flex-start">
-                <Heading as="h3" size="md" color="blue.600" mb={2}>Scalable Architecture</Heading>
-                <Text>
-                  Our infrastructure automatically scales to handle peak loads without compromising performance.
-                </Text>
+                <Heading as="h3" size="md" color="blue.600" mb={2}>Scales With You</Heading>
+                <Text>Handles peak demand without breaking a sweat.</Text>
               </VStack>
-              
               <VStack align="flex-start">
-                <Heading as="h3" size="md" color="blue.600" mb={2}>Developer-Friendly</Heading>
-                <Text>
-                  Comprehensive API documentation, SDKs for popular languages, and ready-to-use code examples.
-                </Text>
+                <Heading as="h3" size="md" color="blue.600" mb={2}>Dev-Ready</Heading>
+                <Text>APIs, SDKs, and examples to get you started fast.</Text>
               </VStack>
             </SimpleGrid>
           </Box>
         </Box>
       </Box>
+
       {/* Call to Action */}
       <Box py={16} bg="blue.600" color="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">
-            Ready to Get Started?
+            Start Collecting Data Today
           </Heading>
           <Text fontSize="lg" mb={10} maxW="700px" mx="auto" color="white">
-            Choose the plan that fits your needs or contact our sales team for a custom solution.
-            All plans include a 14-day free trial with no credit card required.
+            Pick your plan or talk to sales for a custom fit. Enjoy a 14-day trial, no card needed.
           </Text>
-          
           <Flex justify="center" gap={6} flexWrap="wrap">
-          <Button
+            <Button
               size="lg"
               variant="outline"
               borderColor="white"
@@ -488,7 +459,6 @@ function PricingPage() {
             >
               Start Free Trial
             </Button>
-            
             <Button
               size="lg"
               variant="outline"
@@ -498,13 +468,12 @@ function PricingPage() {
               as="a"
               href="/contact"
             >
-          Contact Sales
+              Contact Sales
             </Button>
-           
           </Flex>
         </Box>
       </Box>
-      
+
       {/* Footer */}
       <Footer />
     </>
