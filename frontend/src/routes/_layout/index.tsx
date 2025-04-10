@@ -14,8 +14,10 @@ function LandingPage() {
       <HeroSection
         title="Your Systems Gateway to the Public Web"
         subtitle="SaaS proxy solutions built for large-scale data processing, extraction, LLM training and more."
-        ctaText="Schedule Demo"
-        ctaLink="/demo-request"
+        ctas={[
+          { text: "Get Started", link: "/demo-request" },
+          { text: "Start free trial", link: "/pricing" },
+        ]}
         bgImage="https://images.unsplash.com/photo-1451187580459-43490279c0fa"
       />
     {/* Section 3: Proxy Network Coverage for Web Scraping */}
