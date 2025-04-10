@@ -83,20 +83,20 @@ function HeroSection({ title, subtitle, ctas, bgImage }) {
       >
         {ctaButtons.map((cta, index) => (
           <Button
-            key={index}
-            as="a"
-            href={cta.link}
-            color="white"
-            bg={index === 0 ? "orange.400" : "white"}
-            size="lg"
-            _hover={{ 
-              bg: index === 0 ? "white" : "orange.400" , 
-              color: index === 0 ? "orange.400" : "white" 
-            }}
-            px={6}
-          >
-            {cta.text}
-          </Button>
+          key={index}
+          as="a"
+          href={cta.link}
+          color={index === 0 ? "white" : "orange.400"} 
+          bg={index === 0 ? "orange.400" : "white"}
+          size="lg"
+          _hover={{ 
+            bg: index === 0 ? "white" : "orange.400", 
+            color: index === 0 ? "orange.400" : "white" 
+          }}
+          px={6}
+        >
+          {cta.text}
+        </Button>
         ))}
       </Flex>
     </Box>
