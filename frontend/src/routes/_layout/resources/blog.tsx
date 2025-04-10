@@ -58,8 +58,8 @@ function BlogPage() {
   const featuredPosts = posts.slice(0, 2);
   const recentPosts = posts
   .filter(post => post && post.id) // Ensure post exists and has an ID
-  .sort((a, b) => a.id - b.id) // Sort by ID ascending (older first)
-  .slice(0, 6); // Take the first 6 after sorting
+  .sort((a, b) => b.id - a.id) // Sort by ID descending (largest/newest first)
+  .slice(0, 6); // Take the first 6 (largest IDs)
   const popularCategories = [...new Set(posts.map(post => post?.category).filter(Boolean))]
     .map(category => ({ name: category, count: posts.filter(post => post?.category === category).length }))
     .sort((a, b) => b.count - a.count)
