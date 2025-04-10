@@ -86,7 +86,6 @@ const Footer = () => {
                   
             <Link href="/network/security" color="gray.300" _hover={{ color: "orange.400" }}>Security</Link>
               <Link href="/resources/blog" color="gray.300" _hover={{ color: "orange.400" }}>Articles</Link>
-              <Link href="https://api.thedataproxy.com/redoc" color="gray.300" _hover={{ color: "orange.400" }}>Documentation</Link> 
                <Link href="/resources/code-examples" color="gray.300" _hover={{ color: "orange.400" }}>Support</Link>
               <Link href="/resources/web-scraping-guides" color="gray.300" _hover={{ color: "orange.400" }}>Guides</Link> 
                 <Link href="/network/proxy-types" color="gray.300" _hover={{ color: "orange.400" }}>Proxy Types</Link>
