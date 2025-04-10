@@ -13,165 +13,166 @@ function PricingPage() {
   
   const pricingPlans = [
     {
-      name: "Basic",
-      description: "For individuals and small projects exploring data collection",
-      monthlyPrice: 99,
-      annualPrice: 75,
+      name: "Starter",
+      description: "Perfect for hobbyists and small-scale experiments",
+      monthlyPrice: 49,
+      annualPrice: 39, // ~20% discount from $49
       features: [
-        "10,000 API requests per month",
-        "Standard proxy rotation",
-        "Basic data extraction templates",
-        "Email support (24h response time)",
-        "Single user account"
+        "100,000 API calls per month",
+        "20 simultaneous threads",
+        "Targeting in US & EU regions",
+        "Dynamic page rendering",
+        "High-quality residential & mobile proxies",
+        "Sophisticated anti-block technology",
+        "Data extraction & formatting tools",
       ],
       limitations: [
-        "Limited to 5 concurrent requests",
-        "No custom proxies",
-        "No advanced extraction tools"
-      ]
+        "No personal account manager",
+        "No premium chat support",
+      ],
     },
     {
-      name: "Pro",
-      description: "For professionals and growing businesses with regular data needs",
-      monthlyPrice: 399,
-      annualPrice: 285,
-      popular: true,
+      name: "Analyst",
+      description: "Crafted for data analysts and growing teams",
+      monthlyPrice: 149,
+      annualPrice: 119, // ~20% discount from $149
       features: [
-        "50,000 API requests per month",
-        "Advanced proxy rotation settings",
-        "Custom extraction templates",
-        "Priority email support (8h response)",
-        "Up to 3 user accounts",
-        "Advanced data parsing & cleaning",
-        "Custom headers and cookies management"
+        "1,000,000 API calls per month",
+        "50 simultaneous threads",
+        "Targeting in US & EU regions",
+        "Dynamic page rendering",
+        "High-quality residential & mobile proxies",
+        "Sophisticated anti-block technology",
+        "Data extraction & formatting tools",
       ],
       limitations: [
-        "Limited to 20 concurrent requests",
-        "Basic IP geolocation options"
-      ]
+        "No personal account manager",
+        "No premium chat support",
+      ],
     },
     {
       name: "Business",
-      description: "For teams and businesses with high-volume data requirements",
-      monthlyPrice: 749,
-      annualPrice: 495,
+      description: "Tailored for companies scaling steady data operations",
+      monthlyPrice: 299,
+      annualPrice: 239, // ~20% discount from $299
       features: [
-        "200,000 API requests per month",
-        "Premium proxy pool access",
-        "Advanced data extraction suite",
-        "Priority support (4h response)",
-        "Up to 10 user accounts",
-        "Advanced IP geolocation targeting",
-        "Custom extraction rules & scripts",
-        "Scheduled data collection jobs",
-        "Dedicated success manager"
+        "3,000,000 API calls per month",
+        "100 simultaneous threads",
+        "Global country-specific targeting",
+        "Dynamic page rendering",
+        "High-quality residential & mobile proxies",
+        "Sophisticated anti-block technology",
+        "Data extraction & formatting tools",
       ],
       limitations: [
-        "Limited to 50 concurrent requests"
-      ]
+        "No personal account manager",
+        "No premium chat support",
+      ],
+    },
+    {
+      name: "Data Miner",
+      description: "Designed for advanced data miners scaling extraction efforts",
+      monthlyPrice: 475,
+      annualPrice: 380, // ~20% discount from $475
+      popular: true,
+      features: [
+        "5,000,000 API calls per month",
+        "200 simultaneous threads",
+        "Global country-specific targeting",
+        "Dynamic page rendering",
+        "High-quality residential & mobile proxies",
+        "Sophisticated anti-block technology",
+        "Data extraction & formatting tools",
+      ],
+      limitations: [
+        "No personal account manager",
+        "No premium chat support",
+      ],
     },
     {
       name: "Enterprise",
-      description: "Custom solutions for large organizations with specific requirements",
+      description: "Customized for leaders scaling complex data ecosystems",
       customPricing: true,
       features: [
-        "Unlimited API requests",
-        "Dedicated proxy infrastructure",
-        "Custom data extraction solutions",
-        "24/7 premium support with SLA",
-        "Unlimited user accounts",
-        "Custom integrations & workflows",
-        "On-premises deployment options",
-        "Custom contracts & compliance",
-        "Dedicated account representative",
-        "Custom development services"
+        "5,000,000+ API calls per month",
+        "200+ simultaneous threads",
+        "Global country-specific targeting",
+        "Dynamic page rendering",
+        "High-quality residential & mobile proxies",
+        "Sophisticated anti-block technology",
+        "Data extraction & formatting tools",
+        "Personal account manager",
+        "Premium chat support",
       ],
-      limitations: []
-    }
+      limitations: [],
+    },
   ];
 
   const featureComparison = [
     {
-      category: "API Access",
+      category: "API Capabilities",
       features: [
         {
-          name: "Monthly API requests",
-          basic: "10,000",
-          professional: "50,000",
-          business: "200,000",
-          enterprise: "Unlimited"
+          name: "Monthly API calls",
+          starter: "100,000",
+          analyst: "1,000,000",
+          business: "3,000,000",
+          "data miner": "5,000,000",
+          enterprise: "5,000,000+",
         },
         {
-          name: "Concurrent requests",
-          basic: "5",
-          professional: "20",
-          business: "50",
-          enterprise: "Unlimited"
+          name: "Simultaneous threads",
+          starter: "20",
+          analyst: "50",
+          business: "100",
+          "data miner": "200",
+          enterprise: "200+",
         },
-        {
-          name: "Rate limits",
-          basic: "60/minute",
-          professional: "180/minute",
-          business: "600/minute",
-          enterprise: "Custom"
-        }
-      ]
+      ],
     },
     {
-      category: "Proxy Services",
+      category: "Proxy Features",
       features: [
         {
-          name: "Proxy rotation",
-          basic: "Standard",
-          professional: "Advanced",
-          business: "Premium",
-          enterprise: "Dedicated"
+          name: "Location targeting",
+          starter: "US & EU",
+          analyst: "US & EU",
+          business: "Country-level",
+          "data miner": "Country-level",
+          enterprise: "Country-level",
         },
         {
-          name: "Geolocation targeting",
-          basic: "Limited",
-          professional: "Basic",
-          business: "Advanced",
-          enterprise: "Custom"
-        },
-        {
-          name: "Residential proxies",
-          basic: false,
-          professional: true,
+          name: "Residential proxy access",
+          starter: true,
+          analyst: true,
           business: true,
-          enterprise: true
-        }
-      ]
+          "data miner": true,
+          enterprise: true,
+        },
+      ],
     },
     {
-      category: "Data Collection",
+      category: "Scraping Tools",
       features: [
         {
-          name: "Extraction templates",
-          basic: "Basic",
-          professional: "Advanced",
-          business: "Premium",
-          enterprise: "Custom"
+          name: "Dynamic rendering",
+          starter: true,
+          analyst: true,
+          business: true,
+          "data miner": true,
+          enterprise: true,
         },
         {
-          name: "JavaScript rendering",
-          basic: "Limited",
-          professional: true,
+          name: "Anti-block solutions",
+          starter: true,
+          analyst: true,
           business: true,
-          enterprise: true
+          "data miner": true,
+          enterprise: true,
         },
-        {
-          name: "Custom scripts",
-          basic: false,
-          professional: true,
-          business: true,
-          enterprise: true
-        }
-      ]
+      ],
     },
-    
   ];
-
   const faqItems = [
     {
       question: "How do you calculate API requests?",
