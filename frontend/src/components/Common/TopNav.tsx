@@ -61,12 +61,6 @@ interface NavItemsProps {
 
 
 const navStructure: NavItem[] = [
-    {
-      title: "Pricing",
-
-      path: "/pricing",
-      description: "View our pricing plans and features"
-    },
   {
     title: "Web Scraping Tools",
     icon: FiTool,
@@ -114,6 +108,12 @@ const navStructure: NavItem[] = [
       { title: "Code Examples", path: "/resources/code-examples", description: "Sample code for web scraping in multiple languages", icon: FiCode },
       { title: "Support Center", path: "/resources/support-center", description: "Get help with your web scraping projects", icon: FiHelpCircle }
     ]
+  },
+  {
+    title: "Pricing",
+
+    path: "/pricing",
+    description: "View our pricing plans and features"
   }
 ];
 
