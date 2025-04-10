@@ -56,7 +56,10 @@ function BlogPage() {
   if (!posts.length) return <Text fontSize="lg" textAlign="center" py={16}>No posts available</Text>;
 
   const featuredPosts = posts.slice(0, 2);
-  const recentPosts = posts.slice(2, 8);
+  const recentPosts = posts
+  .filter(post => post && post.id) // Ensure post exists and has an ID
+  .sort((a, b) => a.id - b.id) // Sort by ID ascending (older first)
+  .slice(0, 6); // Take the first 6 after sorting
   const popularCategories = [...new Set(posts.map(post => post?.category).filter(Boolean))]
     .map(category => ({ name: category, count: posts.filter(post => post?.category === category).length }))
     .sort((a, b) => b.count - a.count)
