@@ -13,7 +13,7 @@ function PricingPage() {
   const pricingPlans = [
     {
       name: "Starter",
-      description: "Web scraping is complex. We make it simple for hobbyists and small-scale experiments to unlock their data’s potential with ease.",
+      description: "For hobbyists and small-scale experiments to unlock their data’s potential with ease.",
       monthlyPrice: 49,
       annualPrice: 39, // ~20% discount from $49
       features: [
@@ -32,7 +32,7 @@ function PricingPage() {
     },
     {
       name: "Analyst",
-      description: "Web scraping is complex. We make it simple for data analysts and growing teams to take control of their data with confidence—our most popular choice!",
+      description: "For data analysts and growing teams to take control of their data with confidence—our most popular choice!",
       monthlyPrice: 149,
       annualPrice: 119, // ~20% discount from $149
       popular: true,
@@ -52,7 +52,7 @@ function PricingPage() {
     },
     {
       name: "Business",
-      description: "Web scraping is complex. We make it simple for data geeks and businesses to harness massive datasets with expert-backed tools.",
+      description: "For data geeks and businesses to harness massive datasets with expert-backed tools.",
       monthlyPrice: 475,
       annualPrice: 380, // ~20% discount from $475 (updated from $299 to match Archivist pricing)
       features: [
@@ -71,7 +71,7 @@ function PricingPage() {
     },
     {
       name: "Enterprise",
-      description: "Web scraping is complex. We make it simple for leaders scaling complex data ecosystems, with expert support and comprehensive tools to take control.",
+      description: "For leaders scaling complex data ecosystems, with expert support and comprehensive tools to take control.",
       customPricing: true,
       features: [
         "5,000,000+ API calls per month",
