@@ -276,13 +276,20 @@ function BlogPostDetails() {
               {post.excerpt}
             </Text>
           )}
-          <HStack spacing={2} mb={8}>
-            {post.tags && post.tags.map((tag, index) => (
-              <Tag key={index} colorScheme="gray" variant="subtle" size="md">
-                {tag}
-              </Tag>
-            ))}
-          </HStack>
+          <HStack spacing={2} mb={8} flexWrap="wrap" maxW="100%" gap={2}>
+      {post.tags && post.tags.map((tag, index) => (
+        <Tag
+          key={index}
+          colorScheme="gray"
+          variant="subtle"
+          size="md"
+          flex="0 0 calc(25% - 8px)" // 25% width minus spacing
+          mb={2} // Margin bottom for wrapped rows
+        >
+          {tag}
+        </Tag>
+      ))}
+    </HStack>
           <Divider mb={8} />
         </Box>
       </Box>
