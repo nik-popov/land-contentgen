@@ -73,7 +73,7 @@ function BlogPage() {
 
   return (
     <>
-   <Box py={16} bg="blue.50" color="gray.800">
+<Box py={16} bg="blue.50" color="gray.800">
   <Box maxW="1200px" mx="auto" px={4}>
     <Heading as="h1" size="2xl" textAlign="center" mb={6} fontWeight="medium">Guides and Trends</Heading>
     <Text fontSize="xl" textAlign="center" mb={10} maxW="800px" mx="auto">Expert articles, tutorials, and insights...</Text>
@@ -90,15 +90,14 @@ function BlogPage() {
             transition="background-color 0.2s"
             display="flex"
             flexDirection="column"
-            minH="500px" // Set a minimum height for consistency
           >
             <Image src={post.image} alt={post.title || 'Untitled'} h="250px" w="full" objectFit="cover" />
             <Box
               p={6}
-              flex="1" // Allow this to grow and fill remaining space
+              flex="1"
               display="flex"
               flexDirection="column"
-              justifyContent="space-between" // Distribute content evenly
+              justifyContent="space-between"
             >
               <Box>
                 <HStack mb={4} spacing={3}>
@@ -114,14 +113,6 @@ function BlogPage() {
                   mb={4}
                   fontWeight="medium"
                   lineHeight="1.3"
-                  maxH="3.9em" // Limit to ~3 lines (adjust based on font size)
-                  overflow="hidden"
-                  textOverflow="ellipsis"
-                  display="-webkit-box"
-                  sx={{
-                    WebkitLineClamp: 3, // Limit to 3 lines in Webkit browsers
-                    WebkitBoxOrient: "vertical",
-                  }}
                 >
                   {post.title || 'Untitled'}
                 </Heading>
