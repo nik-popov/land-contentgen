@@ -355,7 +355,7 @@ function PriceMonitoringPage() {
               variant="outline"
               borderColor="white"
               color="white"
-              _hover={{ bg: "blue.600" }}
+              _hover={{ bg: "red.600" }}
               as="a"
               href="https://cloud.roamingproxy.com/signup"
             >

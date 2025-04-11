@@ -55,17 +55,17 @@ function WebScrapingGuidesPage() {
           
           <Flex justify="space-between" flexWrap="wrap" gap={6}>
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Beginner Tutorials</Heading>
+              <Heading as="h3" size="md" color="red.600">Beginner Tutorials</Heading>
               <Text>Start your web scraping journey with our beginner-friendly guides. Learn the fundamentals of HTML parsing, making HTTP requests, and extracting structured data from websites.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Programming Recipes</Heading>
+              <Heading as="h3" size="md" color="red.600">Programming Recipes</Heading>
               <Text>Ready-to-use code examples and recipes for web scraping in Python, JavaScript, Ruby, and other popular languages. Copy, paste, and adapt for your specific needs.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Advanced Techniques</Heading>
+              <Heading as="h3" size="md" color="red.600">Advanced Techniques</Heading>
               <Text>Take your scraping skills to the next level with guides on handling JavaScript-heavy sites, bypassing anti-bot measures, and building resilient enterprise-scale scrapers.</Text>
             </VStack>
           </Flex>
@@ -82,7 +82,7 @@ function WebScrapingGuidesPage() {
           <Grid templateColumns={{ base: "1fr", md: "1fr 1fr", lg: "1fr 1fr 1fr" }} gap={10} mt={10}>
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="blue.600">100+</StatNumber>
+                <StatNumber color="red.600">100+</StatNumber>
                 <StatLabel>Detailed Tutorials</StatLabel>
               </Stat>
               <Text>
@@ -93,7 +93,7 @@ function WebScrapingGuidesPage() {
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="blue.600">95%</StatNumber>
+                <StatNumber color="red.600">95%</StatNumber>
                 <StatLabel>Implementation Success Rate</StatLabel>
               </Stat>
               <Text>
@@ -104,7 +104,7 @@ function WebScrapingGuidesPage() {
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="blue.600">350K+</StatNumber>
+                <StatNumber color="red.600">350K+</StatNumber>
                 <StatLabel>Monthly Downloads</StatLabel>
               </Stat>
               <Text>
@@ -129,11 +129,11 @@ function WebScrapingGuidesPage() {
                 <Stat mb={4}>
                   <StatLabel fontSize="lg" fontWeight="medium">{category.category}</StatLabel>
                   <Flex justify="space-between" align="center">
-                    <StatNumber color="blue.600">{category.guides}</StatNumber>
+                    <StatNumber color="red.600">{category.guides}</StatNumber>
                     <Text color="gray.500" fontSize="sm" fontWeight="normal">Guides</Text>
                   </Flex>
                   <Flex justify="space-between" align="center" mt={1}>
-                    <StatNumber color="blue.400">{category.downloads}</StatNumber>
+                    <StatNumber color="red.400">{category.downloads}</StatNumber>
                     <Text color="gray.500" fontSize="sm" fontWeight="normal">Downloads</Text>
                   </Flex>
                 </Stat>
@@ -213,52 +213,52 @@ function WebScrapingGuidesPage() {
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="blue.600">Educational Content</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.600">Educational Content</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Step-by-Step Tutorials</Text> - Clear instructions with screenshots and explanations for every stage</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Production-Ready Code</Text> - Fully tested code examples that you can implement immediately</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Multiple Languages</Text> - Examples in Python, JavaScript, Ruby, PHP, and other popular languages</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Deep Explanations</Text> - Understanding of how web scraping works, not just copy-paste solutions</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Best Practices</Text> - Industry standards for efficient, ethical, and reliable data extraction</Text>
                 </ListItem>
               </List>
             </Box>
             
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="blue.600">Technical Coverage</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.600">Technical Coverage</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Library & Framework Tutorials</Text> - Scrapy, BeautifulSoup, Selenium, Puppeteer, and more</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Anti-Detection Strategies</Text> - Advanced techniques for avoiding blocks and maintaining access</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Proxy Integration</Text> - How to effectively use residential, datacenter, and rotating proxies</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Data Processing</Text> - Techniques for cleaning, structuring, and storing scraped data</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Legal Guidelines</Text> - Ethical scraping practices and legal considerations for data collection</Text>
                 </ListItem>
               </List>
@@ -276,7 +276,7 @@ function WebScrapingGuidesPage() {
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="blue.600">From Beginner to Production in Two Weeks</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.600">From Beginner to Production in Two Weeks</Heading>
               <Text mb={4}>
                 "I had zero scraping experience when I started with the Python web scraping guide. 
                 The step-by-step approach was exactly what I needed. Within two weeks, I had a production-ready 
@@ -288,7 +288,7 @@ function WebScrapingGuidesPage() {
             </Box>
             
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="blue.600">Solved Our Enterprise Scalability Issues</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.600">Solved Our Enterprise Scalability Issues</Heading>
               <Text mb={4}>
                 "The large-scale data extraction guide was instrumental in helping us redesign our scraping 
                 infrastructure. The distributed architecture patterns they outlined helped us scale from 
@@ -315,32 +315,32 @@ function WebScrapingGuidesPage() {
           <Box bg="white" p={6} borderRadius="md" boxShadow="md">
             <SimpleGrid columns={{ base: 2, md: 3, lg: 6 }} spacing={4} mt={8}>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Total Guides</Text>
+                <Text fontWeight="bold" color="red.600">Total Guides</Text>
                 <Text>115+</Text>
                 <Text>Comprehensive</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Code Examples</Text>
+                <Text fontWeight="bold" color="red.600">Code Examples</Text>
                 <Text>2,500+</Text>
                 <Text>Ready to Use</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Languages</Text>
+                <Text fontWeight="bold" color="red.600">Languages</Text>
                 <Text>8</Text>
                 <Text>Programming</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Libraries</Text>
+                <Text fontWeight="bold" color="red.600">Libraries</Text>
                 <Text>25+</Text>
                 <Text>Covered</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Monthly Updates</Text>
+                <Text fontWeight="bold" color="red.600">Monthly Updates</Text>
                 <Text>12-15</Text>
                 <Text>New Resources</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">User Base</Text>
+                <Text fontWeight="bold" color="red.600">User Base</Text>
                 <Text>150K+</Text>
                 <Text>Active Developers</Text>
               </VStack>
@@ -350,7 +350,7 @@ function WebScrapingGuidesPage() {
       </Box>
       
       {/* Call to Action */}
-      <Box py={16} bg="blue.600" color="white">
+      <Box py={16} bg="red.600" color="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">
             Master Web Scraping Today
@@ -377,7 +377,7 @@ function WebScrapingGuidesPage() {
               variant="outline"
               borderColor="white"
               color="white"
-              _hover={{ bg: "blue.700" }}
+              _hover={{ bg: "red.700" }}
               as="a"
               href="https://cloud.roamingproxy.com/signup"
             >

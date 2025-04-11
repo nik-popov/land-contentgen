@@ -55,17 +55,17 @@ function FinancialDataCollectionPage() {
           
           <Flex justify="space-between" flexWrap="wrap" gap={6}>
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Market & Securities Data</Heading>
+              <Heading as="h3" size="md" color="red.600">Market & Securities Data</Heading>
               <Text>Access real-time and historical data for equities, fixed income, derivatives, FX, and commodities from exchanges worldwide. Track prices, volumes, spreads, and order book data with millisecond precision.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Fundamental & Company Data</Heading>
+              <Heading as="h3" size="md" color="red.600">Fundamental & Company Data</Heading>
               <Text>Collect comprehensive financial statements, corporate actions, ownership details, and executive information. Extract structured data from earnings reports, presentations, and regulatory filings.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Alternative & ESG Data</Heading>
+              <Heading as="h3" size="md" color="red.600">Alternative & ESG Data</Heading>
               <Text>Harness non-traditional data sources including social sentiment, satellite imagery, web traffic, supply chain information, and environmental, social, and governance metrics for unique investment insights.</Text>
             </VStack>
           </Flex>
@@ -82,7 +82,7 @@ function FinancialDataCollectionPage() {
           <Grid templateColumns={{ base: "1fr", md: "1fr 1fr", lg: "1fr 1fr 1fr" }} gap={10} mt={10}>
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="blue.600">99.99%</StatNumber>
+                <StatNumber color="red.600">99.99%</StatNumber>
                 <StatLabel>Data Accuracy Rate</StatLabel>
               </Stat>
               <Text>
@@ -93,7 +93,7 @@ function FinancialDataCollectionPage() {
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="blue.600">24%</StatNumber>
+                <StatNumber color="red.600">24%</StatNumber>
                 <StatLabel>Alpha Generation Improvement</StatLabel>
               </Stat>
               <Text>
@@ -104,7 +104,7 @@ function FinancialDataCollectionPage() {
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="blue.600">10B+</StatNumber>
+                <StatNumber color="red.600">10B+</StatNumber>
                 <StatLabel>Daily Data Points</StatLabel>
               </Stat>
               <Text>
@@ -129,11 +129,11 @@ function FinancialDataCollectionPage() {
                 <Stat mb={4}>
                   <StatLabel fontSize="lg" fontWeight="medium">{feature.feature}</StatLabel>
                   <Flex justify="space-between" align="center">
-                    <StatNumber color="blue.600">{feature.sources}</StatNumber>
+                    <StatNumber color="red.600">{feature.sources}</StatNumber>
                     <Text color="gray.500" fontSize="sm" fontWeight="normal">Sources</Text>
                   </Flex>
                   <Flex justify="space-between" align="center" mt={1}>
-                    <StatNumber color="blue.400">{feature.fields}</StatNumber>
+                    <StatNumber color="red.400">{feature.fields}</StatNumber>
                     <Text color="gray.500" fontSize="sm" fontWeight="normal">Data Fields</Text>
                   </Flex>
                 </Stat>
@@ -209,52 +209,52 @@ function FinancialDataCollectionPage() {
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="blue.600">Data Collection & Processing</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.600">Data Collection & Processing</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Multi-Source Integration</Text> - Collect data from exchanges, regulatory sources, news providers, and alternative data</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Real-time Processing</Text> - Stream financial data with microsecond latency for time-sensitive applications</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Corporate Action Adjustments</Text> - Automatic handling of splits, dividends, mergers, and other events</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Data Cleansing & Validation</Text> - Multi-layer verification for accuracy and completeness</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Entity Recognition & Mapping</Text> - Comprehensive identifiers and hierarchies for companies, securities, and funds</Text>
                 </ListItem>
               </List>
             </Box>
             
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="blue.600">Analytics & Delivery</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.600">Analytics & Delivery</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Financial Calculations</Text> - Pre-computed metrics, ratios, and indicators for immediate use</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Custom Data Feeds</Text> - Tailored delivery of specific datasets based on your requirements</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">API & SDK Access</Text> - Flexible integration options with comprehensive documentation</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Cloud Data Warehouse</Text> - Direct access to structured financial data in cloud storage</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Backtesting Environment</Text> - Integrated tools for testing strategies against historical data</Text>
                 </ListItem>
               </List>
@@ -272,7 +272,7 @@ function FinancialDataCollectionPage() {
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="blue.600">Hedge Fund Improves Strategy Performance by 31%</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.600">Hedge Fund Improves Strategy Performance by 31%</Heading>
               <Text mb={4}>
                 A quantitative hedge fund used our financial data platform to enhance their trading strategies 
                 with alternative data integration. By combining traditional market data with consumer sentiment, 
@@ -288,7 +288,7 @@ function FinancialDataCollectionPage() {
             </Box>
             
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="blue.600">Asset Manager Reduces Research Time by 85%</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.600">Asset Manager Reduces Research Time by 85%</Heading>
               <Text mb={4}>
                 A global asset management firm implemented our NLP-powered financial document analysis to 
                 streamline their fundamental research process. The platform automatically extracted key metrics, 
@@ -319,32 +319,32 @@ function FinancialDataCollectionPage() {
           <Box bg="white" p={6} borderRadius="md" boxShadow="md">
             <SimpleGrid columns={{ base: 2, md: 3, lg: 6 }} spacing={4} mt={8}>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Exchanges</Text>
+                <Text fontWeight="bold" color="red.600">Exchanges</Text>
                 <Text>150+</Text>
                 <Text>Global Markets</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Securities</Text>
+                <Text fontWeight="bold" color="red.600">Securities</Text>
                 <Text>500K+</Text>
                 <Text>Active Instruments</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Companies</Text>
+                <Text fontWeight="bold" color="red.600">Companies</Text>
                 <Text>75K+</Text>
                 <Text>Public & Private</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Historical Data</Text>
+                <Text fontWeight="bold" color="red.600">Historical Data</Text>
                 <Text>50+ Years</Text>
                 <Text>Time Series</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Alternative Data</Text>
+                <Text fontWeight="bold" color="red.600">Alternative Data</Text>
                 <Text>200+</Text>
                 <Text>Sources</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Update Frequency</Text>
+                <Text fontWeight="bold" color="red.600">Update Frequency</Text>
                 <Text>Microsecond</Text>
                 <Text>to Daily</Text>
               </VStack>
@@ -354,7 +354,7 @@ function FinancialDataCollectionPage() {
       </Box>
       
       {/* Call to Action */}
-      <Box py={16} bg="blue.600" color="white">
+      <Box py={16} bg="red.600" color="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">
             Transform Your Financial Intelligence
@@ -381,7 +381,7 @@ function FinancialDataCollectionPage() {
               variant="outline"
               borderColor="white"
               color="white"
-              _hover={{ bg: "blue.700" }}
+              _hover={{ bg: "red.700" }}
               as="a"
               href="https://cloud.roamingproxy.com/signup"
             >

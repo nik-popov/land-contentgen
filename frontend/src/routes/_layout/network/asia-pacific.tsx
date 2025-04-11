@@ -53,17 +53,17 @@ function AsiaPacificProxiesPage() {
           
           <Flex justify="space-between" flexWrap="wrap" gap={6}>
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Regional Coverage</Heading>
+              <Heading as="h3" size="md" color="red.600">Regional Coverage</Heading>
               <Text>Connect through residential, datacenter, and mobile IPs from 25 countries across East Asia, Southeast Asia, South Asia, and Oceania. Target specific regions, cities, or postal codes for precise geo-targeting.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Mobile-First Testing</Heading>
+              <Heading as="h3" size="md" color="red.600">Mobile-First Testing</Heading>
               <Text>Experience websites and apps exactly as Asia-Pacific users do with genuine mobile IPs that reflect real user attributes, device characteristics, and network conditions in the world's most mobile-centric region.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Emerging Market Access</Heading>
+              <Heading as="h3" size="md" color="red.600">Emerging Market Access</Heading>
               <Text>Test your digital products in the fastest-growing online markets with access to residential IPs across developing Asian economies. Validate performance in various network conditions and on different device types.</Text>
             </VStack>
           </Flex>
@@ -80,7 +80,7 @@ function AsiaPacificProxiesPage() {
           <Grid templateColumns={{ base: "1fr", md: "1fr 1fr", lg: "1fr 1fr 1fr" }} gap={10} mt={10}>
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="blue.600">100%</StatNumber>
+                <StatNumber color="red.600">100%</StatNumber>
                 <StatLabel>APAC Market Coverage</StatLabel>
               </Stat>
               <Text>
@@ -91,7 +91,7 @@ function AsiaPacificProxiesPage() {
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="blue.600">89%</StatNumber>
+                <StatNumber color="red.600">89%</StatNumber>
                 <StatLabel>Mobile App Testing Accuracy</StatLabel>
               </Stat>
               <Text>
@@ -102,7 +102,7 @@ function AsiaPacificProxiesPage() {
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="blue.600">1.6M+</StatNumber>
+                <StatNumber color="red.600">1.6M+</StatNumber>
                 <StatLabel>Residential & Mobile IPs</StatLabel>
               </Stat>
               <Text>
@@ -127,11 +127,11 @@ function AsiaPacificProxiesPage() {
                 <Stat mb={4}>
                   <StatLabel fontSize="lg" fontWeight="medium">{region.region}</StatLabel>
                   <Flex justify="space-between" align="center">
-                    <StatNumber color="blue.600">{region.countries}</StatNumber>
+                    <StatNumber color="red.600">{region.countries}</StatNumber>
                     <Text color="gray.500" fontSize="sm" fontWeight="normal">Countries</Text>
                   </Flex>
                   <Flex justify="space-between" align="center" mt={1}>
-                    <StatNumber color="blue.400">{region.cities}</StatNumber>
+                    <StatNumber color="red.400">{region.cities}</StatNumber>
                     <Text color="gray.500" fontSize="sm" fontWeight="normal">Cities</Text>
                   </Flex>
                 </Stat>
@@ -207,52 +207,52 @@ function AsiaPacificProxiesPage() {
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="blue.600">Geographic Targeting</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.600">Geographic Targeting</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Country Selection</Text> - Access proxies from all 25 Asia-Pacific countries with comprehensive coverage</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Regional Targeting</Text> - Select from specific regions including East Asia, Southeast Asia, South Asia, and Oceania</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">City Precision</Text> - Target specific Asian cities with multiple proxies available in each location</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Mobile Carrier Selection</Text> - Choose proxies from specific mobile carriers for realistic testing in mobile-first markets</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Connection Speed Filtering</Text> - Filter proxies by connection speed to simulate various network conditions</Text>
                 </ListItem>
               </List>
             </Box>
             
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="blue.600">Control & Integration</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.600">Control & Integration</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Location Groups</Text> - Create and save custom Asia-Pacific location groups for frequent testing scenarios</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Location API</Text> - Access all Asia-Pacific location features programmatically through our comprehensive API</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Browser Integration</Text> - Use browser extensions to quickly switch between Asian locations in your testing</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Mobile App Testing</Text> - Specialized tools for testing mobile apps in various Asian network environments</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Location Analytics</Text> - Track proxy performance by location with detailed success metrics across Asia-Pacific</Text>
                 </ListItem>
               </List>
@@ -270,7 +270,7 @@ function AsiaPacificProxiesPage() {
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="blue.600">Mobile App Developer Expands into Southeast Asia</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.600">Mobile App Developer Expands into Southeast Asia</Heading>
               <Text mb={4}>
                 A mobile gaming company used our Asia-Pacific proxies to test their app performance across 
                 10 Southeast Asian countries. They identified critical optimization opportunities for low-bandwidth 
@@ -284,7 +284,7 @@ function AsiaPacificProxiesPage() {
             </Box>
             
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="blue.600">E-commerce Platform Masters Multi-language Support</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.600">E-commerce Platform Masters Multi-language Support</Heading>
               <Text mb={4}>
                 A global e-commerce platform implemented our Asia-Pacific proxies to test their website across 
                 12 different language versions. They discovered significant rendering issues with non-Latin scripts 
@@ -313,25 +313,25 @@ function AsiaPacificProxiesPage() {
           <Box bg="white" p={6} borderRadius="md" boxShadow="md">
             <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={8} mt={8}>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">East Asia</Text>
+                <Text fontWeight="bold" color="red.600">East Asia</Text>
                 <Text>6 Countries</Text>
                 <Text>62 Cities</Text>
                 <Text>Major Carriers Covered</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Southeast Asia</Text>
+                <Text fontWeight="bold" color="red.600">Southeast Asia</Text>
                 <Text>10 Countries</Text>
                 <Text>48 Cities</Text>
                 <Text>Major Carriers Covered</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">South Asia</Text>
+                <Text fontWeight="bold" color="red.600">South Asia</Text>
                 <Text>7 Countries</Text>
                 <Text>45 Cities</Text>
                 <Text>Major Carriers Covered</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Oceania & Pacific</Text>
+                <Text fontWeight="bold" color="red.600">Oceania & Pacific</Text>
                 <Text>4 Countries</Text>
                 <Text>23 Cities</Text>
                 <Text>Major Carriers Covered</Text>
@@ -342,7 +342,7 @@ function AsiaPacificProxiesPage() {
       </Box>
       
       {/* Call to Action */}
-      <Box py={16} bg="blue.600" color="white">
+      <Box py={16} bg="red.600" color="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">
             Access Any Asia-Pacific Location
@@ -368,7 +368,7 @@ function AsiaPacificProxiesPage() {
               variant="outline"
               borderColor="white"
               color="white"
-              _hover={{ bg: "blue.700" }}
+              _hover={{ bg: "red.700" }}
               as="a"
               href="https://cloud.roamingproxy.com/signup"
             >

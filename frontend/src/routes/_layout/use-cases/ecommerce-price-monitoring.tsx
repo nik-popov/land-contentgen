@@ -55,17 +55,17 @@ function EcommercePriceMonitoringPage() {
           
           <Flex justify="space-between" flexWrap="wrap" gap={6}>
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Competitor Price Tracking</Heading>
+              <Heading as="h3" size="md" color="red.600">Competitor Price Tracking</Heading>
               <Text>Monitor your competitors' prices in real-time across thousands of online retailers, marketplaces, and direct-to-consumer brands. Track regular prices, promotional offers, and dynamic pricing patterns.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Intelligent Price Optimization</Heading>
+              <Heading as="h3" size="md" color="red.600">Intelligent Price Optimization</Heading>
               <Text>Leverage AI-powered pricing recommendations based on competitive data, market trends, and your specific business rules. Set automated repricing strategies to maximize margins while maintaining market competitiveness.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Market & Trend Analysis</Heading>
+              <Heading as="h3" size="md" color="red.600">Market & Trend Analysis</Heading>
               <Text>Gain valuable insights into pricing trends, market positioning, and competitive landscape. Identify opportunities for pricing adjustments and track the effectiveness of your pricing strategies over time.</Text>
             </VStack>
           </Flex>
@@ -82,7 +82,7 @@ function EcommercePriceMonitoringPage() {
           <Grid templateColumns={{ base: "1fr", md: "1fr 1fr", lg: "1fr 1fr 1fr" }} gap={10} mt={10}>
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="blue.600">15%</StatNumber>
+                <StatNumber color="red.600">15%</StatNumber>
                 <StatLabel>Average Margin Improvement</StatLabel>
               </Stat>
               <Text>
@@ -93,7 +93,7 @@ function EcommercePriceMonitoringPage() {
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="blue.600">24/7</StatNumber>
+                <StatNumber color="red.600">24/7</StatNumber>
                 <StatLabel>Real-time Monitoring</StatLabel>
               </Stat>
               <Text>
@@ -104,7 +104,7 @@ function EcommercePriceMonitoringPage() {
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="blue.600">98%</StatNumber>
+                <StatNumber color="red.600">98%</StatNumber>
                 <StatLabel>Time Saved on Research</StatLabel>
               </Stat>
               <Text>
@@ -129,11 +129,11 @@ function EcommercePriceMonitoringPage() {
                 <Stat mb={4}>
                   <StatLabel fontSize="lg" fontWeight="medium">{feature.feature}</StatLabel>
                   <Flex justify="space-between" align="center">
-                    <StatNumber color="blue.600">{feature.sites}</StatNumber>
+                    <StatNumber color="red.600">{feature.sites}</StatNumber>
                     <Text color="gray.500" fontSize="sm" fontWeight="normal">Retailers</Text>
                   </Flex>
                   <Flex justify="space-between" align="center" mt={1}>
-                    <StatNumber color="blue.400">{feature.updates}</StatNumber>
+                    <StatNumber color="red.400">{feature.updates}</StatNumber>
                     <Text color="gray.500" fontSize="sm" fontWeight="normal">Updates</Text>
                   </Flex>
                 </Stat>
@@ -209,52 +209,52 @@ function EcommercePriceMonitoringPage() {
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="blue.600">Competitive Intelligence</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.600">Competitive Intelligence</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Real-time Price Tracking</Text> - Monitor competitor prices with up-to-the-minute accuracy</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Promotional Detection</Text> - Automatically identify sales, discounts, bundles, and special offers</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">MAP Compliance Monitoring</Text> - Track minimum advertised price adherence across all channels</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Product Availability Tracking</Text> - Monitor stock levels and inventory changes at competitor sites</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Market Share Analysis</Text> - Understand your positioning within specific product categories</Text>
                 </ListItem>
               </List>
             </Box>
             
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="blue.600">Strategic Pricing Tools</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.600">Strategic Pricing Tools</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Price Optimization Engine</Text> - AI-driven recommendations to maximize margins and market share</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Rule-based Pricing</Text> - Set custom pricing rules based on competitor activities and market conditions</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">What-if Analysis</Text> - Simulate different pricing scenarios and their impact on sales and profitability</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Historical Trend Analysis</Text> - Identify seasonal patterns and pricing cycles to anticipate changes</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Automated Repricing</Text> - Direct integration with your e-commerce platform for immediate price updates</Text>
                 </ListItem>
               </List>
@@ -272,7 +272,7 @@ function EcommercePriceMonitoringPage() {
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="blue.600">Electronics Retailer Increases Margins by 22%</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.600">Electronics Retailer Increases Margins by 22%</Heading>
               <Text mb={4}>
                 A mid-sized electronics retailer used our price monitoring platform to track competitors 
                 across 15,000 SKUs. By implementing our dynamic pricing recommendations and identifying 
@@ -287,7 +287,7 @@ function EcommercePriceMonitoringPage() {
             </Box>
             
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="blue.600">Fashion Brand Optimizes Promotional Strategy</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.600">Fashion Brand Optimizes Promotional Strategy</Heading>
               <Text mb={4}>
                 A global fashion brand leveraged our promotional analysis tools to monitor competitor 
                 discount patterns and timing. By adjusting their promotional calendar based on these 
@@ -317,32 +317,32 @@ function EcommercePriceMonitoringPage() {
           <Box bg="white" p={6} borderRadius="md" boxShadow="md">
             <SimpleGrid columns={{ base: 2, md: 3, lg: 6 }} spacing={4} mt={8}>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Online Retailers</Text>
+                <Text fontWeight="bold" color="red.600">Online Retailers</Text>
                 <Text>2,500+</Text>
                 <Text>Monitored</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Marketplaces</Text>
+                <Text fontWeight="bold" color="red.600">Marketplaces</Text>
                 <Text>185+</Text>
                 <Text>Covered</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Countries</Text>
+                <Text fontWeight="bold" color="red.600">Countries</Text>
                 <Text>54</Text>
                 <Text>Global Reach</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Product Categories</Text>
+                <Text fontWeight="bold" color="red.600">Product Categories</Text>
                 <Text>500+</Text>
                 <Text>Specialized</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Data Points</Text>
+                <Text fontWeight="bold" color="red.600">Data Points</Text>
                 <Text>25M+</Text>
                 <Text>Daily Collection</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Update Frequency</Text>
+                <Text fontWeight="bold" color="red.600">Update Frequency</Text>
                 <Text>Real-time</Text>
                 <Text>to Hourly</Text>
               </VStack>
@@ -352,7 +352,7 @@ function EcommercePriceMonitoringPage() {
       </Box>
       
       {/* Call to Action */}
-      <Box py={16} bg="blue.600" color="white">
+      <Box py={16} bg="red.600" color="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">
             Optimize Your Pricing Strategy
@@ -379,7 +379,7 @@ function EcommercePriceMonitoringPage() {
               variant="outline"
               borderColor="white"
               color="white"
-              _hover={{ bg: "blue.700" }}
+              _hover={{ bg: "red.700" }}
               as="a"
               href="https://cloud.roamingproxy.com/signup"
             >

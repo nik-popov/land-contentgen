@@ -55,17 +55,17 @@ function ProxyLocationsPage() {
           
           <Flex justify="space-between" flexWrap="wrap" gap={6}>
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Global Coverage</Heading>
+              <Heading as="h3" size="md" color="red.600">Global Coverage</Heading>
               <Text>Connect through residential, datacenter, and mobile IPs from 195+ countries and 850+ cities worldwide. Target specific regions, cities, or postal codes for precise geo-targeting.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Authentic Local Experience</Heading>
+              <Heading as="h3" size="md" color="red.600">Authentic Local Experience</Heading>
               <Text>Experience websites and apps exactly as local users do with genuine residential IPs that reflect real user attributes, browser fingerprints, and network characteristics.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Customizable Selection</Heading>
+              <Heading as="h3" size="md" color="red.600">Customizable Selection</Heading>
               <Text>Choose locations based on specific criteria including country, region, city, ISP, network type, and connection speed. Save custom location profiles for frequent use cases.</Text>
             </VStack>
           </Flex>
@@ -82,7 +82,7 @@ function ProxyLocationsPage() {
           <Grid templateColumns={{ base: "1fr", md: "1fr 1fr", lg: "1fr 1fr 1fr" }} gap={10} mt={10}>
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="blue.600">100%</StatNumber>
+                <StatNumber color="red.600">100%</StatNumber>
                 <StatLabel>Global Market Coverage</StatLabel>
               </Stat>
               <Text>
@@ -93,7 +93,7 @@ function ProxyLocationsPage() {
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="blue.600">87%</StatNumber>
+                <StatNumber color="red.600">87%</StatNumber>
                 <StatLabel>Testing Accuracy Increase</StatLabel>
               </Stat>
               <Text>
@@ -104,7 +104,7 @@ function ProxyLocationsPage() {
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="blue.600">5M+</StatNumber>
+                <StatNumber color="red.600">5M+</StatNumber>
                 <StatLabel>Residential IPs</StatLabel>
               </Stat>
               <Text>
@@ -129,11 +129,11 @@ function ProxyLocationsPage() {
                 <Stat mb={4}>
                   <StatLabel fontSize="lg" fontWeight="medium">{region.region}</StatLabel>
                   <Flex justify="space-between" align="center">
-                    <StatNumber color="blue.600">{region.countries}</StatNumber>
+                    <StatNumber color="red.600">{region.countries}</StatNumber>
                     <Text color="gray.500" fontSize="sm" fontWeight="normal">Countries</Text>
                   </Flex>
                   <Flex justify="space-between" align="center" mt={1}>
-                    <StatNumber color="blue.400">{region.cities}</StatNumber>
+                    <StatNumber color="red.400">{region.cities}</StatNumber>
                     <Text color="gray.500" fontSize="sm" fontWeight="normal">Cities</Text>
                   </Flex>
                 </Stat>
@@ -209,52 +209,52 @@ function ProxyLocationsPage() {
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="blue.600">Geographic Targeting</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.600">Geographic Targeting</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Country Selection</Text> - Access proxies from 195+ countries with comprehensive global coverage</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">City Targeting</Text> - Select from 850+ cities worldwide with multiple proxies available in each location</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Postal Code Precision</Text> - Target specific postal codes in major markets for hyper-local testing</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">ISP Selection</Text> - Choose proxies from specific internet service providers or mobile carriers</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Region Rotation</Text> - Automatically rotate through proxies within a specific geographic region</Text>
                 </ListItem>
               </List>
             </Box>
             
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="blue.600">Control & Integration</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.600">Control & Integration</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Location Groups</Text> - Create and save custom location groups for frequent testing scenarios</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Location API</Text> - Access all location features programmatically through our comprehensive API</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Browser Integration</Text> - Use browser extensions to quickly switch between locations in your testing</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Location Validation</Text> - Verify the accuracy of proxy locations with our built-in testing tools</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Location Analytics</Text> - Track proxy performance by location with detailed success metrics</Text>
                 </ListItem>
               </List>
@@ -272,7 +272,7 @@ function ProxyLocationsPage() {
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="blue.600">Global E-commerce Platform Perfects Localization</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.600">Global E-commerce Platform Perfects Localization</Heading>
               <Text mb={4}>
                 A leading e-commerce platform used our location-specific proxies to test their website and mobile 
                 app across 73 countries. They identified critical localization issues in 18 markets, improving user 
@@ -286,7 +286,7 @@ function ProxyLocationsPage() {
             </Box>
             
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="blue.600">Travel Industry Leader Optimizes Regional Pricing</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.600">Travel Industry Leader Optimizes Regional Pricing</Heading>
               <Text mb={4}>
                 A global travel booking service implemented our geo-targeted proxies to monitor competitive 
                 pricing across 42 countries simultaneously. They discovered significant pricing discrepancies 
@@ -315,32 +315,32 @@ function ProxyLocationsPage() {
           <Box bg="white" p={6} borderRadius="md" boxShadow="md">
             <SimpleGrid columns={{ base: 2, md: 3, lg: 6 }} spacing={4} mt={8}>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">North America</Text>
+                <Text fontWeight="bold" color="red.600">North America</Text>
                 <Text>3 Countries</Text>
                 <Text>182 Cities</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Europe</Text>
+                <Text fontWeight="bold" color="red.600">Europe</Text>
                 <Text>38 Countries</Text>
                 <Text>215 Cities</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Asia-Pacific</Text>
+                <Text fontWeight="bold" color="red.600">Asia-Pacific</Text>
                 <Text>25 Countries</Text>
                 <Text>178 Cities</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Latin America</Text>
+                <Text fontWeight="bold" color="red.600">Latin America</Text>
                 <Text>20 Countries</Text>
                 <Text>94 Cities</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Middle East & Africa</Text>
+                <Text fontWeight="bold" color="red.600">Middle East & Africa</Text>
                 <Text>35 Countries</Text>
                 <Text>127 Cities</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Oceania</Text>
+                <Text fontWeight="bold" color="red.600">Oceania</Text>
                 <Text>4 Countries</Text>
                 <Text>36 Cities</Text>
               </VStack>
@@ -350,7 +350,7 @@ function ProxyLocationsPage() {
       </Box>
       
       {/* Call to Action */}
-      <Box py={16} bg="blue.600" color="white">
+      <Box py={16} bg="red.600" color="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">
             Access Any Location Worldwide
@@ -364,7 +364,7 @@ function ProxyLocationsPage() {
             <Button
               size="lg"
               bg="white"
-              color="blue.600"
+              color="red.600"
               _hover={{ bg: "gray.100" }}
               as="a"
               href="/demo-request"
@@ -377,7 +377,7 @@ function ProxyLocationsPage() {
               variant="outline"
               borderColor="white"
               color="white"
-              _hover={{ bg: "blue.700" }}
+              _hover={{ bg: "red.700" }}
               as="a"
               href="https://cloud.roamingproxy.com/signup"
             >

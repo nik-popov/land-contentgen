@@ -133,7 +133,7 @@ function ProxyTypesPage() {
                     <Text color="gray.500" fontSize="sm" fontWeight="normal">IPs</Text>
                   </Flex>
                   <Flex justify="space-between" align="center" mt={1}>
-                    <StatNumber color="blue.400">{proxy.locations}</StatNumber>
+                    <StatNumber color="red.400">{proxy.locations}</StatNumber>
                     <Text color="gray.500" fontSize="sm" fontWeight="normal">Countries</Text>
                   </Flex>
                 </Stat>

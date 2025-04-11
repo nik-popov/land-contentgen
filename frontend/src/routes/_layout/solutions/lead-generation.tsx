@@ -55,17 +55,17 @@ function LeadGenerationPage() {
           
           <Flex justify="space-between" flexWrap="wrap" gap={6}>
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Contact Discovery</Heading>
+              <Heading as="h3" size="md" color="red.600">Contact Discovery</Heading>
               <Text>Find the right decision-makers with access to over 500 million verified business contacts. Identify prospects by job title, company size, industry, technology usage, and dozens of other targeting criteria.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Intent Monitoring</Heading>
+              <Heading as="h3" size="md" color="red.600">Intent Monitoring</Heading>
               <Text>Identify accounts actively researching solutions like yours through proprietary buying intent signals. Engage prospects at the perfect moment when they're actively in-market for your solutions.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Data Enrichment</Heading>
+              <Heading as="h3" size="md" color="red.600">Data Enrichment</Heading>
               <Text>Enhance your existing customer and prospect records with comprehensive firmographic, technographic, and contact data. Fill gaps in your database and ensure information stays current and accurate.</Text>
             </VStack>
           </Flex>
@@ -82,7 +82,7 @@ function LeadGenerationPage() {
           <Grid templateColumns={{ base: "1fr", md: "1fr 1fr", lg: "1fr 1fr 1fr" }} gap={10} mt={10}>
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="blue.600">3.5x</StatNumber>
+                <StatNumber color="red.600">3.5x</StatNumber>
                 <StatLabel>Pipeline Growth</StatLabel>
               </Stat>
               <Text>
@@ -93,7 +93,7 @@ function LeadGenerationPage() {
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="blue.600">42%</StatNumber>
+                <StatNumber color="red.600">42%</StatNumber>
                 <StatLabel>Higher Conversion Rates</StatLabel>
               </Stat>
               <Text>
@@ -104,7 +104,7 @@ function LeadGenerationPage() {
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="blue.600">68%</StatNumber>
+                <StatNumber color="red.600">68%</StatNumber>
                 <StatLabel>Time Saved</StatLabel>
               </Stat>
               <Text>
@@ -129,11 +129,11 @@ function LeadGenerationPage() {
                 <Stat mb={4}>
                   <StatLabel fontSize="lg" fontWeight="medium">{solution.solution}</StatLabel>
                   <Flex justify="space-between" align="center">
-                    <StatNumber color="blue.600">{solution.records}</StatNumber>
+                    <StatNumber color="red.600">{solution.records}</StatNumber>
                     <Text color="gray.500" fontSize="sm" fontWeight="normal">Records</Text>
                   </Flex>
                   <Flex justify="space-between" align="center" mt={1}>
-                    <StatNumber color="blue.400">{solution.accuracy}</StatNumber>
+                    <StatNumber color="red.400">{solution.accuracy}</StatNumber>
                     <Text color="gray.500" fontSize="sm" fontWeight="normal">Accuracy</Text>
                   </Flex>
                 </Stat>
@@ -209,52 +209,52 @@ function LeadGenerationPage() {
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="blue.600">Data Quality & Targeting</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.600">Data Quality & Targeting</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Triple-Verified Contacts</Text> - All contact data is verified through multiple independent sources</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Advanced Search</Text> - Find prospects using 50+ targeting criteria including job title, company size, industry, and technology</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Ideal Customer Profile Matching</Text> - Automatically find prospects that match your best customers</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Data Enrichment</Text> - Enhance your existing CRM data with comprehensive profile information</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Real-time Updates</Text> - Automatic notifications when contacts change jobs or companies</Text>
                 </ListItem>
               </List>
             </Box>
             
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="blue.600">Sales Intelligence & Integration</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.600">Sales Intelligence & Integration</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Buying Intent Signals</Text> - Identify accounts actively researching solutions in your category</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Sales Triggers</Text> - Alerts for funding rounds, executive changes, expansions, and other buying signals</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">CRM Synchronization</Text> - Bi-directional integration with your existing CRM system</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">API Access</Text> - Programmatic access to our entire database for custom applications</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Sales Engagement</Text> - Direct integration with popular sales engagement platforms</Text>
                 </ListItem>
               </List>
@@ -272,7 +272,7 @@ function LeadGenerationPage() {
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="blue.600">SaaS Company Triples Pipeline in 60 Days</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.600">SaaS Company Triples Pipeline in 60 Days</Heading>
               <Text mb={4}>
                 A mid-market SaaS provider leveraged our contact discovery and intent data to identify 
                 and engage accounts actively researching solutions in their category. By focusing their 
@@ -287,7 +287,7 @@ function LeadGenerationPage() {
             </Box>
             
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="blue.600">Agency Increases Client Acquisition by 65%</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.600">Agency Increases Client Acquisition by 65%</Heading>
               <Text mb={4}>
                 A digital marketing agency used our technology tracking and company intelligence tools 
                 to identify businesses using competing solutions and approaching contract renewal. By 
@@ -317,32 +317,32 @@ function LeadGenerationPage() {
           <Box bg="white" p={6} borderRadius="md" boxShadow="md">
             <SimpleGrid columns={{ base: 2, md: 3, lg: 6 }} spacing={4} mt={8}>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">North America</Text>
+                <Text fontWeight="bold" color="red.600">North America</Text>
                 <Text>195M+ Contacts</Text>
                 <Text>12M+ Companies</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Europe</Text>
+                <Text fontWeight="bold" color="red.600">Europe</Text>
                 <Text>175M+ Contacts</Text>
                 <Text>18M+ Companies</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Asia-Pacific</Text>
+                <Text fontWeight="bold" color="red.600">Asia-Pacific</Text>
                 <Text>120M+ Contacts</Text>
                 <Text>25M+ Companies</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Latin America</Text>
+                <Text fontWeight="bold" color="red.600">Latin America</Text>
                 <Text>45M+ Contacts</Text>
                 <Text>8M+ Companies</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Middle East & Africa</Text>
+                <Text fontWeight="bold" color="red.600">Middle East & Africa</Text>
                 <Text>35M+ Contacts</Text>
                 <Text>5M+ Companies</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Total Coverage</Text>
+                <Text fontWeight="bold" color="red.600">Total Coverage</Text>
                 <Text>570M+ Contacts</Text>
                 <Text>68M+ Companies</Text>
               </VStack>
@@ -352,7 +352,7 @@ function LeadGenerationPage() {
       </Box>
       
       {/* Call to Action */}
-      <Box py={16} bg="blue.600" color="white">
+      <Box py={16} bg="red.600" color="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">
             Transform Your Lead Generation
@@ -379,7 +379,7 @@ function LeadGenerationPage() {
               variant="outline"
               borderColor="white"
               color="white"
-              _hover={{ bg: "blue.700" }}
+              _hover={{ bg: "red.700" }}
               as="a"
               href="https://cloud.roamingproxy.com/signup"
             >

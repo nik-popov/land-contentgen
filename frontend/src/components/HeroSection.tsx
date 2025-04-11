@@ -7,7 +7,7 @@ function HeroSection({ title, subtitle, ctas, bgImage }) {
 
   return (
     <Box
-      bgGradient="linear(to-bl, blue.900, blue.400)"
+      bgGradient="linear(to-bl, red.900, red.400)"
       py={{ base: 10, md: 15 }}
       bgImage={bgImage}
       bgSize="cover"

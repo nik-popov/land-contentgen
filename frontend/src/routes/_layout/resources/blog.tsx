@@ -168,13 +168,13 @@ function BlogPage() {
         </Box>
       </Box>
 
-      <Box py={16} bg="blue.600" color="white">
+      <Box py={16} bg="red.600" color="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">Master Web Scraping Today</Heading>
           <Text fontSize="lg" mb={10} maxW="700px" mx="auto" color="white">Download our free comprehensive guides...</Text>
           <Flex justify="center" gap={6} flexWrap="wrap">
             <Button size="lg" bg="white" color="red.500" _hover={{ bg: "gray.100" }} as="a" href="/demo-request">Request Demo</Button>
-            <Button size="lg" variant="outline" borderColor="white" color="white" _hover={{ bg: "blue.700" }} as="a" href="https://cloud.roamingproxy.com/signup">Start Free Trial</Button>
+            <Button size="lg" variant="outline" borderColor="white" color="white" _hover={{ bg: "red.700" }} as="a" href="https://cloud.roamingproxy.com/signup">Start Free Trial</Button>
           </Flex>
         </Box>
       </Box>
@@ -216,8 +216,8 @@ function BlogPage() {
                   <Divider mb={4} />
                   <VStack spacing={3} align="stretch">
                     {popularCategories.map((category, index) => (
-                      <Flex key={index} justify="space-between" align="center" cursor="pointer" onClick={() => handleCategoryClick(category.name)} _hover={{ bg: "gray.100" }} p={2} borderRadius="md" bg={selectedCategory === category.name ? "blue.100" : "transparent"}>
-                        <Text color="blue.600" fontWeight="medium">{category.name}</Text>
+                      <Flex key={index} justify="space-between" align="center" cursor="pointer" onClick={() => handleCategoryClick(category.name)} _hover={{ bg: "gray.100" }} p={2} borderRadius="md" bg={selectedCategory === category.name ? "red.100" : "transparent"}>
+                        <Text color="red.600" fontWeight="medium">{category.name}</Text>
                         <Text>{category.count}</Text>
                       </Flex>
                     ))}
@@ -228,7 +228,7 @@ function BlogPage() {
                   <Divider mb={4} />
                   <Flex flexWrap="wrap" gap={2}>
                     {popularTags.map((tag, index) => (
-                      <Tag key={index} colorScheme={selectedTags.includes(tag) ? "blue" : "blue"} variant={selectedTags.includes(tag) ? "solid" : "subtle"} size="md" borderRadius="full" cursor="pointer" _hover={{ bg: selectedTags.includes(tag) ? "blue.600" : "blue.100" }} onClick={() => handleTagClick(tag)}>{tag}</Tag>
+                      <Tag key={index} colorScheme={selectedTags.includes(tag) ? "blue" : "blue"} variant={selectedTags.includes(tag) ? "solid" : "subtle"} size="md" borderRadius="full" cursor="pointer" _hover={{ bg: selectedTags.includes(tag) ? "red.600" : "red.100" }} onClick={() => handleTagClick(tag)}>{tag}</Tag>
                     ))}
                   </Flex>
                 </Box>

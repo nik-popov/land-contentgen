@@ -119,7 +119,7 @@ const navStructure: NavItem[] = [
 const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
   const queryClient = useQueryClient();
   const textColor = "gray.800";
-  const hoverColor = "blue.600";
+  const hoverColor = "red.600";
   const bgActive = "red.100";
   const activeTextColor = "red.800";
   const currentUser = queryClient.getQueryData<UserPublic>(["currentUser"]);
@@ -255,7 +255,7 @@ const TopNav = () => {
   const { logout } = useAuth();
   const currentUser = queryClient.getQueryData<UserPublic>(["currentUser"]);
   const textColor = "gray.800";
-  const hoverColor = "blue.600";
+  const hoverColor = "red.5600";
 
   const handleLogout = async () => {
     await logout();
@@ -285,7 +285,7 @@ const TopNav = () => {
               display={{ base: "flex", md: "none" }}
               aria-label={isOpen ? "Close Menu" : "Open Menu"}
               fontSize="20px"
-              color="blue.600"
+              color="red.5600"
               icon={<FiMenu />}
               variant="ghost"
             />

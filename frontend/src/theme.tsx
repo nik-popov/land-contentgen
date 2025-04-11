@@ -130,10 +130,10 @@ const theme = extendTheme({
         },
         info: {
           container: {
-            bg: "blue.100", // Light blue for info
-            color: "blue.900",
+            bg: "red.100", // Light blue for info
+            color: "red.900",
             border: "1px solid",
-            borderColor: "blue.300",
+            borderColor: "red.300",
           },
         },
         warning: {

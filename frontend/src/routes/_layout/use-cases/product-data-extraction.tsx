@@ -55,17 +55,17 @@ function ProductDataExtractionPage() {
           
           <Flex justify="space-between" flexWrap="wrap" gap={6}>
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Complete Product Attributes</Heading>
+              <Heading as="h3" size="md" color="red.600">Complete Product Attributes</Heading>
               <Text>Extract detailed product information including specifications, pricing, images, descriptions, variants, and availability. Capture every data point for complete product intelligence.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Global Retail Coverage</Heading>
+              <Heading as="h3" size="md" color="red.600">Global Retail Coverage</Heading>
               <Text>Access product data from thousands of online retailers, marketplaces, and brand websites worldwide. Our platform supports multi-language extraction across all major global markets.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Structured Data Output</Heading>
+              <Heading as="h3" size="md" color="red.600">Structured Data Output</Heading>
               <Text>Receive perfectly structured product data in your preferred format. Our system normalizes, cleans, and organizes product information into consistent, usable datasets ready for analysis.</Text>
             </VStack>
           </Flex>
@@ -82,7 +82,7 @@ function ProductDataExtractionPage() {
           <Grid templateColumns={{ base: "1fr", md: "1fr 1fr", lg: "1fr 1fr 1fr" }} gap={10} mt={10}>
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="blue.600">99.8%</StatNumber>
+                <StatNumber color="red.600">99.8%</StatNumber>
                 <StatLabel>Data Accuracy Rate</StatLabel>
               </Stat>
               <Text>
@@ -93,7 +93,7 @@ function ProductDataExtractionPage() {
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="blue.600">95%</StatNumber>
+                <StatNumber color="red.600">95%</StatNumber>
                 <StatLabel>Time Saved vs. Manual</StatLabel>
               </Stat>
               <Text>
@@ -104,7 +104,7 @@ function ProductDataExtractionPage() {
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="blue.600">Unlimited</StatNumber>
+                <StatNumber color="red.600">Unlimited</StatNumber>
                 <StatLabel>Scaling Capability</StatLabel>
               </Stat>
               <Text>
@@ -129,11 +129,11 @@ function ProductDataExtractionPage() {
                 <Stat mb={4}>
                   <StatLabel fontSize="lg" fontWeight="medium">{feature.feature}</StatLabel>
                   <Flex justify="space-between" align="center">
-                    <StatNumber color="blue.600">{feature.sites}</StatNumber>
+                    <StatNumber color="red.600">{feature.sites}</StatNumber>
                     <Text color="gray.500" fontSize="sm" fontWeight="normal">Sources</Text>
                   </Flex>
                   <Flex justify="space-between" align="center" mt={1}>
-                    <StatNumber color="blue.400">{feature.fields}</StatNumber>
+                    <StatNumber color="red.400">{feature.fields}</StatNumber>
                     <Text color="gray.500" fontSize="sm" fontWeight="normal">Attributes</Text>
                   </Flex>
                 </Stat>
@@ -209,52 +209,52 @@ function ProductDataExtractionPage() {
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="blue.600">Data Collection Capabilities</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.600">Data Collection Capabilities</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Complete Product Attributes</Text> - Extract all available product specifications and details</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Multi-source Integration</Text> - Combine data from multiple retailers, marketplaces, and manufacturers</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Dynamic Content Handling</Text> - Extract data from JavaScript-rendered pages and dynamic content</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Image & Media Extraction</Text> - Collect product images, videos, 3D models, and visual assets</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Variant Mapping</Text> - Capture all product variations, options, and their respective attributes</Text>
                 </ListItem>
               </List>
             </Box>
             
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="blue.600">Data Processing & Delivery</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.600">Data Processing & Delivery</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Custom Data Schema</Text> - Define your own data structure or use industry-specific templates</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Data Cleaning & Enrichment</Text> - Automated correction, standardization, and enhancement</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Multiple Export Formats</Text> - Receive data in JSON, CSV, XML, or custom formats</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Real-time API Access</Text> - Direct integration with your systems via comprehensive API</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Scheduled Exports</Text> - Automated delivery to your preferred storage or processing systems</Text>
                 </ListItem>
               </List>
@@ -272,7 +272,7 @@ function ProductDataExtractionPage() {
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="blue.600">Marketplace Seller Expands Product Catalog by 400%</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.600">Marketplace Seller Expands Product Catalog by 400%</Heading>
               <Text mb={4}>
                 An online retailer needed to rapidly expand their product offerings but lacked the resources 
                 to manually create detailed product listings. Using our extraction platform, they automatically 
@@ -288,7 +288,7 @@ function ProductDataExtractionPage() {
             </Box>
             
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="blue.600">Electronics Brand Monitors 15,000 Products Daily</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.600">Electronics Brand Monitors 15,000 Products Daily</Heading>
               <Text mb={4}>
                 A consumer electronics manufacturer needed to monitor how their products were being presented 
                 across hundreds of retail partners. Our platform extracted detailed product information, 
@@ -319,32 +319,32 @@ function ProductDataExtractionPage() {
           <Box bg="white" p={6} borderRadius="md" boxShadow="md">
             <SimpleGrid columns={{ base: 2, md: 3, lg: 6 }} spacing={4} mt={8}>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">E-commerce Sites</Text>
+                <Text fontWeight="bold" color="red.600">E-commerce Sites</Text>
                 <Text>3,500+</Text>
                 <Text>Major Retailers</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Marketplaces</Text>
+                <Text fontWeight="bold" color="red.600">Marketplaces</Text>
                 <Text>250+</Text>
                 <Text>Global Platforms</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Brand Websites</Text>
+                <Text fontWeight="bold" color="red.600">Brand Websites</Text>
                 <Text>12,000+</Text>
                 <Text>Manufacturer Sites</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Languages</Text>
+                <Text fontWeight="bold" color="red.600">Languages</Text>
                 <Text>45+</Text>
                 <Text>Supported</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Product Categories</Text>
+                <Text fontWeight="bold" color="red.600">Product Categories</Text>
                 <Text>1,200+</Text>
                 <Text>Specialized</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Data Points</Text>
+                <Text fontWeight="bold" color="red.600">Data Points</Text>
                 <Text>350+</Text>
                 <Text>Per Product</Text>
               </VStack>
@@ -354,7 +354,7 @@ function ProductDataExtractionPage() {
       </Box>
       
       {/* Call to Action */}
-      <Box py={16} bg="blue.600" color="white">
+      <Box py={16} bg="red.600" color="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">
             Transform Your Product Intelligence
@@ -381,7 +381,7 @@ function ProductDataExtractionPage() {
               variant="outline"
               borderColor="white"
               color="white"
-              _hover={{ bg: "blue.700" }}
+              _hover={{ bg: "red.700" }}
               as="a"
               href="https://cloud.roamingproxy.com/signup"
             >

@@ -58,22 +58,22 @@ function ContactPage() {
           
           <Flex justify="space-between" flexWrap="wrap" gap={6}>
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <EmailIcon boxSize={6} color="blue.600" />
-              <Heading as="h3" size="md" color="blue.600">Email Us</Heading>
+              <EmailIcon boxSize={6} color="red.600" />
+              <Heading as="h3" size="md" color="red.600">Email Us</Heading>
               <Text>Send us a message anytime and we'll respond within 4 business hours.</Text>
-              <Link href="mailto:support@roamingproxy.com" color="blue.600">support@roamingproxy.com</Link>
+              <Link href="mailto:support@roamingproxy.com" color="red.600">support@roamingproxy.com</Link>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <PhoneIcon boxSize={6} color="blue.600" />
-              <Heading as="h3" size="md" color="blue.600">Call Us</Heading>
+              <PhoneIcon boxSize={6} color="red.600" />
+              <Heading as="h3" size="md" color="red.600">Call Us</Heading>
               <Text>Speak directly with our team during business hours.</Text>
-              <Link href="tel:+18554402242" color="blue.600">+1 (855) 440-2242</Link>
+              <Link href="tel:+18554402242" color="red.600">+1 (855) 440-2242</Link>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <TimeIcon boxSize={6} color="blue.600" />
-              <Heading as="h3" size="md" color="blue.600">Business Hours</Heading>
+              <TimeIcon boxSize={6} color="red.600" />
+              <Heading as="h3" size="md" color="red.600">Business Hours</Heading>
               <Text>Mon-Fri: 9am - 8pm (EST)</Text>
               <Text>Weekend: Closed (Email support available)</Text>
             </VStack>
@@ -101,8 +101,8 @@ function ContactPage() {
               align="center"
               minW="300px"
             >
-              <Box bg="blue.100" p={4} borderRadius="full">
-                <EmailIcon boxSize={8} color="blue.600" />
+              <Box bg="red.100" p={4} borderRadius="full">
+                <EmailIcon boxSize={8} color="red.600" />
               </Box>
               <Heading as="h3" size="lg" fontWeight="medium">
                 Contact Sales
@@ -129,8 +129,8 @@ function ContactPage() {
               align="center"
               minW="300px"
             >
-              <Box bg="blue.100" p={4} borderRadius="full">
-                <PhoneIcon boxSize={8} color="blue.600" />
+              <Box bg="red.100" p={4} borderRadius="full">
+                <PhoneIcon boxSize={8} color="red.600" />
               </Box>
               <Heading as="h3" size="lg" fontWeight="medium">
                 Call Us
@@ -174,7 +174,7 @@ function ContactPage() {
                 align="flex-start"
               >
                 <Box bg="red.50" p={3} borderRadius="md">
-                  <Icon as={category.icon} boxSize={6} color="blue.600" />
+                  <Icon as={category.icon} boxSize={6} color="red.600" />
                 </Box>
                 <Heading as="h3" size="md" fontWeight="medium">
                   {category.category}
@@ -221,22 +221,22 @@ function ContactPage() {
           <Box bg="red.50" p={8} borderRadius="md" boxShadow="md">
             <SimpleGrid columns={{ base: 2, md: 4 }} spacing={8}>
               <VStack>
-                <Heading as="h3" size="lg" color="blue.600">4 hrs</Heading>
+                <Heading as="h3" size="lg" color="red.600">4 hrs</Heading>
                 <Text fontWeight="medium">Email Response</Text>
                 <Text fontSize="sm" color="gray.600">Average reply time</Text>
               </VStack>
               <VStack>
-                <Heading as="h3" size="lg" color="blue.600">3 mins</Heading>
+                <Heading as="h3" size="lg" color="red.600">3 mins</Heading>
                 <Text fontWeight="medium">Phone Wait Time</Text>
                 <Text fontSize="sm" color="gray.600">During business hours</Text>
               </VStack>
               <VStack>
-                <Heading as="h3" size="lg" color="blue.600">96%</Heading>
+                <Heading as="h3" size="lg" color="red.600">96%</Heading>
                 <Text fontWeight="medium">Resolution Rate</Text>
                 <Text fontSize="sm" color="gray.600">First contact resolution</Text>
               </VStack>
               <VStack>
-                <Heading as="h3" size="lg" color="blue.600">24/7</Heading>
+                <Heading as="h3" size="lg" color="red.600">24/7</Heading>
                 <Text fontWeight="medium">Online Support</Text>
                 <Text fontSize="sm" color="gray.600">Email & documentation</Text>
               </VStack>
@@ -247,7 +247,7 @@ function ContactPage() {
     
       
       {/* Call to Action */}
-      <Box py={16} bg="blue.600" color="white">
+      <Box py={16} bg="red.600" color="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">
             Ready to Get Started?
@@ -275,7 +275,7 @@ function ContactPage() {
               variant="outline"
               borderColor="white"
               color="white"
-              _hover={{ bg: "blue.700" }}
+              _hover={{ bg: "red.700" }}
               leftIcon={<PhoneIcon />}
             >
               Call Now

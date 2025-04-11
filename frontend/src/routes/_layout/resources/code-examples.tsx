@@ -55,17 +55,17 @@ function CodeExamplesPage() {
           
           <Flex justify="space-between" flexWrap="wrap" gap={6}>
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Web Scraping Code</Heading>
+              <Heading as="h3" size="md" color="red.600">Web Scraping Code</Heading>
               <Text>Ready-to-use scraping implementations for various websites and platforms. Extract data from e-commerce, social media, real estate, and job sites with robust error handling.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">API & Integration Code</Heading>
+              <Heading as="h3" size="md" color="red.600">API & Integration Code</Heading>
               <Text>Complete examples for integrating with popular APIs and services. Includes authentication, data retrieval, pagination handling, and webhook processing code.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Proxy Management Code</Heading>
+              <Heading as="h3" size="md" color="red.600">Proxy Management Code</Heading>
               <Text>Sophisticated examples for proxy management including IP rotation, session handling, geo-targeting, and proxy authentication across different programming languages.</Text>
             </VStack>
           </Flex>
@@ -82,7 +82,7 @@ function CodeExamplesPage() {
           <Grid templateColumns={{ base: "1fr", md: "1fr 1fr", lg: "1fr 1fr 1fr" }} gap={10} mt={10}>
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="blue.600">100%</StatNumber>
+                <StatNumber color="red.600">100%</StatNumber>
                 <StatLabel>Production-Tested</StatLabel>
               </Stat>
               <Text>
@@ -93,7 +93,7 @@ function CodeExamplesPage() {
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="blue.600">7</StatNumber>
+                <StatNumber color="red.600">7</StatNumber>
                 <StatLabel>Programming Languages</StatLabel>
               </Stat>
               <Text>
@@ -104,7 +104,7 @@ function CodeExamplesPage() {
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="blue.600">85%</StatNumber>
+                <StatNumber color="red.600">85%</StatNumber>
                 <StatLabel>Development Time Saved</StatLabel>
               </Stat>
               <Text>
@@ -129,11 +129,11 @@ function CodeExamplesPage() {
                 <Stat mb={4}>
                   <StatLabel fontSize="lg" fontWeight="medium">{category.category}</StatLabel>
                   <Flex justify="space-between" align="center">
-                    <StatNumber color="blue.600">{category.examples}</StatNumber>
+                    <StatNumber color="red.600">{category.examples}</StatNumber>
                     <Text color="gray.500" fontSize="sm" fontWeight="normal">Examples</Text>
                   </Flex>
                   <Flex justify="space-between" align="center" mt={1}>
-                    <StatNumber color="blue.400">{category.downloads}</StatNumber>
+                    <StatNumber color="red.400">{category.downloads}</StatNumber>
                     <Text color="gray.500" fontSize="sm" fontWeight="normal">Downloads</Text>
                   </Flex>
                 </Stat>
@@ -213,52 +213,52 @@ function CodeExamplesPage() {
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="blue.600">Quality Standards</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.600">Quality Standards</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Production-Ready</Text> - All code is thoroughly tested in real-world production environments</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Comprehensive Error Handling</Text> - Robust exception management for all edge cases</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Well-Documented</Text> - Detailed comments and explanations for every section of code</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Modular Design</Text> - Easily adaptable components that can be customized for your needs</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Regular Updates</Text> - Code is maintained and updated to work with the latest platform changes</Text>
                 </ListItem>
               </List>
             </Box>
             
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="blue.600">Implementation Features</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.600">Implementation Features</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Multiple Language Versions</Text> - Examples in Python, JavaScript, PHP, Ruby, Java, Go, and C#</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Framework Specific Code</Text> - Implementations for popular frameworks like Django, Express, Laravel</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Scaling Patterns</Text> - Examples of how to scale implementations from prototype to enterprise</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Deployment Configs</Text> - Docker configurations and deployment scripts for various environments</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Test Suites</Text> - Comprehensive test cases to ensure code reliability</Text>
                 </ListItem>
               </List>
@@ -276,7 +276,7 @@ function CodeExamplesPage() {
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="blue.600">Reduced Development Time by 80%</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.600">Reduced Development Time by 80%</Heading>
               <Text mb={4}>
                 "The e-commerce scraper examples saved us weeks of development time. Instead of figuring out how to 
                 handle dynamic content loading and anti-bot measures, we were able to adapt the existing code 
@@ -288,7 +288,7 @@ function CodeExamplesPage() {
             </Box>
             
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="blue.600">Scaled to Enterprise Level Smoothly</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.600">Scaled to Enterprise Level Smoothly</Heading>
               <Text mb={4}>
                 "We started with the proxy rotation example for a small project, but as our needs grew, the 
                 modular design made it easy to scale up. The code was so well structured that we were able to 
@@ -315,32 +315,32 @@ function CodeExamplesPage() {
           <Box bg="white" p={6} borderRadius="md" boxShadow="md">
             <SimpleGrid columns={{ base: 2, md: 3, lg: 6 }} spacing={4} mt={8}>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Total Examples</Text>
+                <Text fontWeight="bold" color="red.600">Total Examples</Text>
                 <Text>475+</Text>
                 <Text>Ready to Use</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Languages</Text>
+                <Text fontWeight="bold" color="red.600">Languages</Text>
                 <Text>7</Text>
                 <Text>Supported</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Frameworks</Text>
+                <Text fontWeight="bold" color="red.600">Frameworks</Text>
                 <Text>18+</Text>
                 <Text>Implementations</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Monthly Downloads</Text>
+                <Text fontWeight="bold" color="red.600">Monthly Downloads</Text>
                 <Text>125K+</Text>
                 <Text>Code Examples</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Updates</Text>
+                <Text fontWeight="bold" color="red.600">Updates</Text>
                 <Text>Weekly</Text>
                 <Text>Maintenance</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Support</Text>
+                <Text fontWeight="bold" color="red.600">Support</Text>
                 <Text>Community</Text>
                 <Text>+ Enterprise</Text>
               </VStack>
@@ -350,7 +350,7 @@ function CodeExamplesPage() {
       </Box>
       
       {/* Call to Action */}
-      <Box py={16} bg="blue.600" color="white">
+      <Box py={16} bg="red.600" color="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">
             Accelerate Your Development
@@ -377,7 +377,7 @@ function CodeExamplesPage() {
               variant="outline"
               borderColor="white"
               color="white"
-              _hover={{ bg: "blue.700" }}
+              _hover={{ bg: "red.700" }}
               as="a"
               href="https://cloud.roamingproxy.com/signup"
             >

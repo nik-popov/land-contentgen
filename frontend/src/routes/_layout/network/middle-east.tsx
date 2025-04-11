@@ -53,17 +53,17 @@ function MiddleEastProxiesPage() {
           
           <Flex justify="space-between" flexWrap="wrap" gap={6}>
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Regional Coverage</Heading>
+              <Heading as="h3" size="md" color="red.600">Regional Coverage</Heading>
               <Text>Connect through residential, datacenter, and mobile IPs from 22 countries across the Middle East and North Africa. Target specific regions, cities, or neighborhoods for precise geo-targeting.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Content Compliance Testing</Heading>
+              <Heading as="h3" size="md" color="red.600">Content Compliance Testing</Heading>
               <Text>Verify content compliance with local regulations and cultural sensitivities using authentic local IPs. Test geo-restrictions, access controls, and region-specific content adaptations.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Localization Validation</Heading>
+              <Heading as="h3" size="md" color="red.600">Localization Validation</Heading>
               <Text>Test Arabic and other regional language implementations, right-to-left interfaces, date formats, and culturally adapted content with country-specific proxies across diverse markets.</Text>
             </VStack>
           </Flex>
@@ -80,7 +80,7 @@ function MiddleEastProxiesPage() {
           <Grid templateColumns={{ base: "1fr", md: "1fr 1fr", lg: "1fr 1fr 1fr" }} gap={10} mt={10}>
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="blue.600">100%</StatNumber>
+                <StatNumber color="red.600">100%</StatNumber>
                 <StatLabel>Regional Market Coverage</StatLabel>
               </Stat>
               <Text>
@@ -91,7 +91,7 @@ function MiddleEastProxiesPage() {
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="blue.600">92%</StatNumber>
+                <StatNumber color="red.600">92%</StatNumber>
                 <StatLabel>Content Compliance Accuracy</StatLabel>
               </Stat>
               <Text>
@@ -102,7 +102,7 @@ function MiddleEastProxiesPage() {
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="blue.600">950K+</StatNumber>
+                <StatNumber color="red.600">950K+</StatNumber>
                 <StatLabel>Residential IPs</StatLabel>
               </Stat>
               <Text>
@@ -127,11 +127,11 @@ function MiddleEastProxiesPage() {
                 <Stat mb={4}>
                   <StatLabel fontSize="lg" fontWeight="medium">{region.region}</StatLabel>
                   <Flex justify="space-between" align="center">
-                    <StatNumber color="blue.600">{region.countries}</StatNumber>
+                    <StatNumber color="red.600">{region.countries}</StatNumber>
                     <Text color="gray.500" fontSize="sm" fontWeight="normal">Countries</Text>
                   </Flex>
                   <Flex justify="space-between" align="center" mt={1}>
-                    <StatNumber color="blue.400">{region.cities}</StatNumber>
+                    <StatNumber color="red.400">{region.cities}</StatNumber>
                     <Text color="gray.500" fontSize="sm" fontWeight="normal">Cities</Text>
                   </Flex>
                 </Stat>
@@ -207,52 +207,52 @@ function MiddleEastProxiesPage() {
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="blue.600">Geographic Targeting</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.600">Geographic Targeting</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Country Selection</Text> - Access proxies from all 22 Middle Eastern and North African countries</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Regional Targeting</Text> - Select from specific regions including Gulf States, Levant, North Africa, and Extended Region</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">City Precision</Text> - Target specific Middle Eastern cities with multiple proxies available in each location</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">ISP Selection</Text> - Choose proxies from specific Middle Eastern internet service providers or mobile carriers</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Bandwidth Profile Filtering</Text> - Filter proxies by connection speed to match diverse regional infrastructure</Text>
                 </ListItem>
               </List>
             </Box>
             
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="blue.600">Control & Integration</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.600">Control & Integration</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Location Groups</Text> - Create and save custom Middle Eastern location groups for frequent testing scenarios</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Location API</Text> - Access all Middle Eastern location features programmatically through our comprehensive API</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Browser Integration</Text> - Use browser extensions to quickly switch between Middle Eastern locations in your testing</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Compliance Testing</Text> - Specialized tools for testing content compliance with regional regulations</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Location Analytics</Text> - Track proxy performance by location with detailed success metrics across the Middle East</Text>
                 </ListItem>
               </List>
@@ -270,7 +270,7 @@ function MiddleEastProxiesPage() {
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="blue.600">Global Media Platform Ensures Content Compliance</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.600">Global Media Platform Ensures Content Compliance</Heading>
               <Text mb={4}>
                 A major global media company used our Middle Eastern proxies to test content delivery across 
                 8 countries in the region. They identified critical compliance issues with locally restricted 
@@ -284,7 +284,7 @@ function MiddleEastProxiesPage() {
             </Box>
             
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="blue.600">E-commerce Platform Perfects Arabic Experience</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.600">E-commerce Platform Perfects Arabic Experience</Heading>
               <Text mb={4}>
                 A leading e-commerce business implemented our Middle Eastern proxy network to test their 
                 Arabic-language experience across multiple countries. They discovered significant rendering 
@@ -314,25 +314,25 @@ function MiddleEastProxiesPage() {
           <Box bg="white" p={6} borderRadius="md" boxShadow="md">
             <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={8} mt={8}>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Gulf States</Text>
+                <Text fontWeight="bold" color="red.600">Gulf States</Text>
                 <Text>6 Countries</Text>
                 <Text>28 Cities</Text>
                 <Text>Major ISPs Covered</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Levant</Text>
+                <Text fontWeight="bold" color="red.600">Levant</Text>
                 <Text>5 Countries</Text>
                 <Text>22 Cities</Text>
                 <Text>Major ISPs Covered</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">North Africa</Text>
+                <Text fontWeight="bold" color="red.600">North Africa</Text>
                 <Text>5 Countries</Text>
                 <Text>18 Cities</Text>
                 <Text>Major ISPs Covered</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Extended Region</Text>
+                <Text fontWeight="bold" color="red.600">Extended Region</Text>
                 <Text>6 Countries</Text>
                 <Text>16 Cities</Text>
                 <Text>Major ISPs Covered</Text>
@@ -343,7 +343,7 @@ function MiddleEastProxiesPage() {
       </Box>
       
       {/* Call to Action */}
-      <Box py={16} bg="blue.600" color="white">
+      <Box py={16} bg="red.600" color="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">
             Access Any Middle Eastern Location
@@ -370,7 +370,7 @@ function MiddleEastProxiesPage() {
               variant="outline"
               borderColor="white"
               color="white"
-              _hover={{ bg: "blue.700" }}
+              _hover={{ bg: "red.700" }}
               as="a"
               href="https://cloud.roamingproxy.com/signup"
             >

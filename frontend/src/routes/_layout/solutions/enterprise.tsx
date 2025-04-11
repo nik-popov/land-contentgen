@@ -218,7 +218,7 @@ function SolutionsPage() {
           </Heading>
           
           <Grid templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }} gap={8}>
-            <Box p={6} borderWidth="1px" borderColor="blue.100" borderRadius="md" boxShadow="sm">
+            <Box p={6} borderWidth="1px" borderColor="red.100" borderRadius="md" boxShadow="sm">
               <VStack align="flex-start" spacing={4}>
                 <Image 
                   src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/tensorflow.png" 
@@ -243,7 +243,7 @@ function SolutionsPage() {
               </VStack>
             </Box>
             
-            <Box p={6} borderWidth="1px" borderColor="blue.100" borderRadius="md" boxShadow="sm">
+            <Box p={6} borderWidth="1px" borderColor="red.100" borderRadius="md" boxShadow="sm">
               <VStack align="flex-start" spacing={4}>
                 <Image 
                   src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/elasticsearch.png" 
@@ -268,7 +268,7 @@ function SolutionsPage() {
               </VStack>
             </Box>
             
-            <Box p={6} borderWidth="1px" borderColor="blue.100" borderRadius="md" boxShadow="sm">
+            <Box p={6} borderWidth="1px" borderColor="red.100" borderRadius="md" boxShadow="sm">
               <VStack align="flex-start" spacing={4}>
                 <Image 
                   src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/kubernetes.png" 

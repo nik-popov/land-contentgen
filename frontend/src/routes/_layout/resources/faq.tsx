@@ -109,19 +109,19 @@ function FAQPage() {
           
           {/* <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={6}>
             <VStack align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Getting Started</Heading>
+              <Heading as="h3" size="md" color="red.600">Getting Started</Heading>
               <Text>Basic information about our platform, account creation, and essential features.</Text>
               <Button colorScheme="blue" variant="link" rightIcon={<InfoIcon />}>Learn more</Button>
             </VStack>
             
             <VStack align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Billing & Accounts</Heading>
+              <Heading as="h3" size="md" color="red.600">Billing & Accounts</Heading>
               <Text>Information about pricing, subscription management, payments, and account settings.</Text>
               <Button colorScheme="blue" variant="link" rightIcon={<InfoIcon />}>Learn more</Button>
             </VStack>
             
             <VStack align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Technical Support</Heading>
+              <Heading as="h3" size="md" color="red.600">Technical Support</Heading>
               <Text>Troubleshooting guides, error resolution, and technical assistance for our platform.</Text>
               <Button colorScheme="blue" variant="link" rightIcon={<InfoIcon />}>Learn more</Button>
             </VStack>
@@ -139,11 +139,11 @@ function FAQPage() {
                 <Stat mb={4}>
                   <StatLabel fontSize="lg" fontWeight="medium">{category.category}</StatLabel>
                   <Flex justify="space-between" align="center">
-                    <StatNumber color="blue.600">{category.articles}</StatNumber>
+                    <StatNumber color="red.600">{category.articles}</StatNumber>
                     <Text color="gray.500" fontSize="sm" fontWeight="normal">Articles</Text>
                   </Flex>
                   <Flex justify="space-between" align="center" mt={1}>
-                    <StatNumber color="blue.400">{category.views}</StatNumber>
+                    <StatNumber color="red.400">{category.views}</StatNumber>
                     <Text color="gray.500" fontSize="sm" fontWeight="normal">Monthly Views</Text>
                   </Flex>
                 </Stat>
@@ -172,7 +172,7 @@ function FAQPage() {
               {faqItems.map((faq, index) => (
                 <AccordionItem key={index} borderColor="gray.300">
                   <h3>
-                    <AccordionButton py={4} px={6} _expanded={{ bg: "red.50", color: "blue.600" }}>
+                    <AccordionButton py={4} px={6} _expanded={{ bg: "red.50", color: "red.600" }}>
                       <Box flex="1" textAlign="left" fontWeight="medium" fontSize="md">
                         {faq.question}
                       </Box>
@@ -203,7 +203,7 @@ function FAQPage() {
             {popularQuestions.map((article, index) => (
               <Flex key={index} p={6} bg="gray.50" borderRadius="md" boxShadow="sm" align="flex-start">
                 <Box w="50px" h="50px" mr={4} display="flex" alignItems="center" justifyContent="center">
-                  <QuestionIcon boxSize="30px" color="blue.600" />
+                  <QuestionIcon boxSize="30px" color="red.600" />
                 </Box>
                 <Box>
                   <Flex justify="space-between" align="center" mb={2}>
@@ -226,7 +226,7 @@ function FAQPage() {
       </Box> */}
       
       {/* Need More Help Section */}
-      <Box py={16} bg="blue.600" color="white">
+      <Box py={16} bg="red.600" color="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">
             Didn't Find Your Answer?
@@ -252,7 +252,7 @@ function FAQPage() {
               variant="outline"
               borderColor="white"
               color="white"
-              _hover={{ bg: "blue.700" }}
+              _hover={{ bg: "red.700" }}
               as="a"
               href="https://cloud.roamingproxy.com/signup"
             >

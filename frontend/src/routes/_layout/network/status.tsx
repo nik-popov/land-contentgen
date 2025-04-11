@@ -119,7 +119,7 @@ function NetworkStatusPage() {
                 <Stat>
                   <StatLabel color="gray.500" fontSize="sm">{metric.metric}</StatLabel>
                   <Flex width="100%" justify="space-between" align="flex-end">
-                    <StatNumber color="blue.600">{metric.value}</StatNumber>
+                    <StatNumber color="red.600">{metric.value}</StatNumber>
        
                   </Flex>
                   <StatHelpText fontSize="xs" color="gray.500">{metric.period}</StatHelpText>
@@ -200,7 +200,7 @@ function NetworkStatusPage() {
               <Box key={index} p={8} bg="white" borderRadius="md" boxShadow="sm">
                 <Flex justify="space-between" align="center" mb={4} flexWrap="wrap" gap={2}>
                   <HStack>
-                    <TimeIcon color="blue.600" />
+                    <TimeIcon color="red.600" />
                     <Text fontSize="sm" color="gray.600">{incident.date}</Text>
                   </HStack>
                   <Badge colorScheme="green" px={3} py={1} borderRadius="full">
@@ -280,7 +280,7 @@ function NetworkStatusPage() {
               <Image src="https://cdn-icons-png.flaticon.com/512/1932/1932655.png" boxSize="50px" mb={2} />
               <Heading as="h3" size="md" fontWeight="medium">Technical Documentation</Heading>
               <Text color="gray.600">Access documentation to understand our infrastructure and troubleshoot.</Text>
-              <Link color="blue.600" href="https://apis.roamingproxy.com/redoc" fontWeight="medium">
+              <Link color="red.600" href="https://apis.roamingproxy.com/redoc" fontWeight="medium">
                 API Documentation →
               </Link>
             </VStack>
@@ -291,7 +291,7 @@ function NetworkStatusPage() {
               <Text color="gray.600">
                 Check proxy performance and availability in real-time on our dedicated status page.
               </Text>
-              <Link color="blue.600" href="https://cloud.roamingproxy.com/scraping-tools/search-proxies" fontWeight="medium">
+              <Link color="red.600" href="https://cloud.roamingproxy.com/scraping-tools/search-proxies" fontWeight="medium">
                 View Status Page →
               </Link>
             </VStack>
@@ -300,7 +300,7 @@ function NetworkStatusPage() {
               <Image src="https://cdn-icons-png.flaticon.com/512/4677/4677490.png" boxSize="50px" mb={2} />
               <Heading as="h3" size="md" fontWeight="medium">Contact Support</Heading>
               <Text color="gray.600">Our technical support team is available to help resolve any issues.</Text>
-              <Link color="blue.600" href="/resources/support-center" fontWeight="medium">
+              <Link color="red.600" href="/resources/support-center" fontWeight="medium">
                 Contact Support →
               </Link>
             </VStack>

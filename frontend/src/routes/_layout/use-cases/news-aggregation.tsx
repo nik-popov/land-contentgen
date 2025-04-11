@@ -55,17 +55,17 @@ function NewsAggregationPage() {
           
           <Flex justify="space-between" flexWrap="wrap" gap={6}>
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Comprehensive Content Discovery</Heading>
+              <Heading as="h3" size="md" color="red.600">Comprehensive Content Discovery</Heading>
               <Text>Access news from thousands of global sources including major publications, niche blogs, industry journals, and multimedia content. Our platform continuously indexes and categorizes content in real-time for complete coverage.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Intelligent Content Analysis</Heading>
+              <Heading as="h3" size="md" color="red.600">Intelligent Content Analysis</Heading>
               <Text>Leverage AI-powered content understanding that automatically categorizes, summarizes, and extracts key entities from articles. Our technology identifies connections between stories and provides contextual insights for deeper understanding.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Personalized News Experience</Heading>
+              <Heading as="h3" size="md" color="red.600">Personalized News Experience</Heading>
               <Text>Deliver tailored news experiences with customizable feeds based on interests, reading history, and trending topics. Our personalization engine learns user preferences over time to continuously improve content relevance.</Text>
             </VStack>
           </Flex>
@@ -82,7 +82,7 @@ function NewsAggregationPage() {
           <Grid templateColumns={{ base: "1fr", md: "1fr 1fr", lg: "1fr 1fr 1fr" }} gap={10} mt={10}>
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="blue.600">76%</StatNumber>
+                <StatNumber color="red.600">76%</StatNumber>
                 <StatLabel>Higher Engagement</StatLabel>
               </Stat>
               <Text>
@@ -93,7 +93,7 @@ function NewsAggregationPage() {
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="blue.600">89%</StatNumber>
+                <StatNumber color="red.600">89%</StatNumber>
                 <StatLabel>Time Saved</StatLabel>
               </Stat>
               <Text>
@@ -104,7 +104,7 @@ function NewsAggregationPage() {
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="blue.600">50M+</StatNumber>
+                <StatNumber color="red.600">50M+</StatNumber>
                 <StatLabel>Daily Articles Processed</StatLabel>
               </Stat>
               <Text>
@@ -129,11 +129,11 @@ function NewsAggregationPage() {
                 <Stat mb={4}>
                   <StatLabel fontSize="lg" fontWeight="medium">{feature.feature}</StatLabel>
                   <Flex justify="space-between" align="center">
-                    <StatNumber color="blue.600">{feature.sources}</StatNumber>
+                    <StatNumber color="red.600">{feature.sources}</StatNumber>
                     <Text color="gray.500" fontSize="sm" fontWeight="normal">Sources</Text>
                   </Flex>
                   <Flex justify="space-between" align="center" mt={1}>
-                    <StatNumber color="blue.400">{feature.metrics}</StatNumber>
+                    <StatNumber color="red.400">{feature.metrics}</StatNumber>
                     <Text color="gray.500" fontSize="sm" fontWeight="normal">Metrics</Text>
                   </Flex>
                 </Stat>
@@ -209,52 +209,52 @@ function NewsAggregationPage() {
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="blue.600">Content Discovery & Analysis</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.600">Content Discovery & Analysis</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Real-time Content Monitoring</Text> - Continuous indexing and processing of new content</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Advanced Topic Detection</Text> - Identify emerging topics and trending stories</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Source Credibility Scoring</Text> - Evaluate reliability and authority of content sources</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Breaking News Alerts</Text> - Instant notifications for major developing stories</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Semantic Content Analysis</Text> - Understand meaning and context beyond keywords</Text>
                 </ListItem>
               </List>
             </Box>
             
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="blue.600">Personalization & Distribution</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.600">Personalization & Distribution</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Personalized Feed Creation</Text> - Tailored news experiences based on user interests</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Custom News Digests</Text> - Automated summaries of important stories by topic</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Multi-channel Distribution</Text> - Deliver content via web, mobile, email, and API</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Engagement Analytics</Text> - Track content performance and user interactions</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Content Summarization</Text> - AI-generated summaries of lengthy articles</Text>
                 </ListItem>
               </List>
@@ -272,7 +272,7 @@ function NewsAggregationPage() {
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="blue.600">Major Media Company Increases Reader Engagement</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.600">Major Media Company Increases Reader Engagement</Heading>
               <Text mb={4}>
                 A leading media organization implemented our news aggregation platform to enhance their 
                 digital strategy. By leveraging our AI-powered content discovery and personalization 
@@ -289,7 +289,7 @@ function NewsAggregationPage() {
             </Box>
             
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="blue.600">Corporate Intelligence Team Improves Decision Making</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.600">Corporate Intelligence Team Improves Decision Making</Heading>
               <Text mb={4}>
                 A Fortune 500 company's corporate intelligence department utilized our platform to monitor 
                 news relevant to their industry, competitors, and global market conditions. By implementing 
@@ -321,32 +321,32 @@ function NewsAggregationPage() {
           <Box bg="white" p={6} borderRadius="md" boxShadow="md">
             <SimpleGrid columns={{ base: 2, md: 3, lg: 6 }} spacing={4} mt={8}>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">News Publications</Text>
+                <Text fontWeight="bold" color="red.600">News Publications</Text>
                 <Text>7,500+</Text>
                 <Text>Global Sources</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Industry Journals</Text>
+                <Text fontWeight="bold" color="red.600">Industry Journals</Text>
                 <Text>3,200+</Text>
                 <Text>Specialized Sources</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Blogs & Independent</Text>
+                <Text fontWeight="bold" color="red.600">Blogs & Independent</Text>
                 <Text>25,000+</Text>
                 <Text>Monitored</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Multimedia</Text>
+                <Text fontWeight="bold" color="red.600">Multimedia</Text>
                 <Text>1,800+</Text>
                 <Text>Video & Podcast</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Languages</Text>
+                <Text fontWeight="bold" color="red.600">Languages</Text>
                 <Text>40+</Text>
                 <Text>Supported</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Content Archive</Text>
+                <Text fontWeight="bold" color="red.600">Content Archive</Text>
                 <Text>10+ Years</Text>
                 <Text>Available</Text>
               </VStack>
@@ -356,7 +356,7 @@ function NewsAggregationPage() {
       </Box>
       
       {/* Call to Action */}
-      <Box py={16} bg="blue.600" color="white">
+      <Box py={16} bg="red.600" color="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">
             Transform Your News Discovery
@@ -384,7 +384,7 @@ function NewsAggregationPage() {
               variant="outline"
               borderColor="white"
               color="white"
-              _hover={{ bg: "blue.700" }}
+              _hover={{ bg: "red.700" }}
               as="a"
               href="https://cloud.roamingproxy.com/signup"
             >

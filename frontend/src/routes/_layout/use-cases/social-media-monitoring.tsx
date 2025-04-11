@@ -55,17 +55,17 @@ function SocialMediaMonitoringPage() {
           
           <Flex justify="space-between" flexWrap="wrap" gap={6}>
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Comprehensive Brand Listening</Heading>
+              <Heading as="h3" size="md" color="red.600">Comprehensive Brand Listening</Heading>
               <Text>Monitor all mentions of your brand, products, and industry across social networks, news sites, blogs, forums, and review platforms. Track conversations in real-time and gain a complete view of your online presence.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Advanced Sentiment Intelligence</Heading>
+              <Heading as="h3" size="md" color="red.600">Advanced Sentiment Intelligence</Heading>
               <Text>Understand the emotions behind customer conversations with AI-powered sentiment analysis. Detect nuanced feelings, track sentiment trends over time, and identify what drives both positive and negative reactions.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Competitive & Market Insights</Heading>
+              <Heading as="h3" size="md" color="red.600">Competitive & Market Insights</Heading>
               <Text>Track competitor activities, benchmark your social performance, and identify emerging industry trends. Discover opportunities for differentiation and gain strategic insights to inform your marketing decisions.</Text>
             </VStack>
           </Flex>
@@ -82,7 +82,7 @@ function SocialMediaMonitoringPage() {
           <Grid templateColumns={{ base: "1fr", md: "1fr 1fr", lg: "1fr 1fr 1fr" }} gap={10} mt={10}>
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="blue.600">83%</StatNumber>
+                <StatNumber color="red.600">83%</StatNumber>
                 <StatLabel>Faster Crisis Response</StatLabel>
               </Stat>
               <Text>
@@ -93,7 +93,7 @@ function SocialMediaMonitoringPage() {
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="blue.600">42%</StatNumber>
+                <StatNumber color="red.600">42%</StatNumber>
                 <StatLabel>Increased Engagement</StatLabel>
               </Stat>
               <Text>
@@ -104,7 +104,7 @@ function SocialMediaMonitoringPage() {
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="blue.600">5B+</StatNumber>
+                <StatNumber color="red.600">5B+</StatNumber>
                 <StatLabel>Daily Social Data Points</StatLabel>
               </Stat>
               <Text>
@@ -129,11 +129,11 @@ function SocialMediaMonitoringPage() {
                 <Stat mb={4}>
                   <StatLabel fontSize="lg" fontWeight="medium">{feature.feature}</StatLabel>
                   <Flex justify="space-between" align="center">
-                    <StatNumber color="blue.600">{feature.platforms}</StatNumber>
+                    <StatNumber color="red.600">{feature.platforms}</StatNumber>
                     <Text color="gray.500" fontSize="sm" fontWeight="normal">Platforms</Text>
                   </Flex>
                   <Flex justify="space-between" align="center" mt={1}>
-                    <StatNumber color="blue.400">{feature.metrics}</StatNumber>
+                    <StatNumber color="red.400">{feature.metrics}</StatNumber>
                     <Text color="gray.500" fontSize="sm" fontWeight="normal">Metrics</Text>
                   </Flex>
                 </Stat>
@@ -209,52 +209,52 @@ function SocialMediaMonitoringPage() {
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="blue.600">Monitoring & Intelligence</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.600">Monitoring & Intelligence</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Real-time Brand Monitoring</Text> - Track all brand mentions and conversations as they happen</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Advanced Sentiment Analysis</Text> - Understand the emotions behind social conversations</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Competitor Benchmarking</Text> - Compare social performance against key competitors</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Crisis Detection & Alerts</Text> - Instant notifications for potential brand issues</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Audience Insight Analytics</Text> - Understand your audience demographics and interests</Text>
                 </ListItem>
               </List>
             </Box>
             
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="blue.600">Engagement & Reporting</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.600">Engagement & Reporting</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Social Engagement Hub</Text> - Respond to and engage with mentions from a unified inbox</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Custom Dashboards</Text> - Build personalized analytics views for different teams and needs</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Automated Reporting</Text> - Schedule and distribute insights to stakeholders</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Campaign Measurement</Text> - Track and analyze social campaign performance</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Social ROI Analytics</Text> - Connect social metrics with business outcomes</Text>
                 </ListItem>
               </List>
@@ -272,7 +272,7 @@ function SocialMediaMonitoringPage() {
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="blue.600">Global Brand Averts Potential Crisis</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.600">Global Brand Averts Potential Crisis</Heading>
               <Text mb={4}>
                 A multinational consumer brand used our monitoring platform to detect early signs of a 
                 potential product issue brewing on social media. The real-time alerts and sentiment tracking 
@@ -288,7 +288,7 @@ function SocialMediaMonitoringPage() {
             </Box>
             
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="blue.600">Retailer Increases Social Engagement by 67%</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.600">Retailer Increases Social Engagement by 67%</Heading>
               <Text mb={4}>
                 A mid-sized retail chain leveraged our content performance and trend detection features to 
                 transform their social media strategy. By analyzing which content formats, topics, and posting 
@@ -320,32 +320,32 @@ function SocialMediaMonitoringPage() {
           <Box bg="white" p={6} borderRadius="md" boxShadow="md">
             <SimpleGrid columns={{ base: 2, md: 3, lg: 6 }} spacing={4} mt={8}>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Social Networks</Text>
+                <Text fontWeight="bold" color="red.600">Social Networks</Text>
                 <Text>12+</Text>
                 <Text>Major Platforms</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">News Sources</Text>
+                <Text fontWeight="bold" color="red.600">News Sources</Text>
                 <Text>50,000+</Text>
                 <Text>Publications</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Blogs & Forums</Text>
+                <Text fontWeight="bold" color="red.600">Blogs & Forums</Text>
                 <Text>100M+</Text>
                 <Text>Monitored</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Review Sites</Text>
+                <Text fontWeight="bold" color="red.600">Review Sites</Text>
                 <Text>350+</Text>
                 <Text>Platforms</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Languages</Text>
+                <Text fontWeight="bold" color="red.600">Languages</Text>
                 <Text>45+</Text>
                 <Text>Supported</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Historical Data</Text>
+                <Text fontWeight="bold" color="red.600">Historical Data</Text>
                 <Text>5+ Years</Text>
                 <Text>Available</Text>
               </VStack>
@@ -355,7 +355,7 @@ function SocialMediaMonitoringPage() {
       </Box>
       
       {/* Call to Action */}
-      <Box py={16} bg="blue.600" color="white">
+      <Box py={16} bg="red.600" color="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">
             Transform Your Social Intelligence
@@ -381,7 +381,7 @@ function SocialMediaMonitoringPage() {
               variant="outline"
               borderColor="white"
               color="white"
-              _hover={{ bg: "blue.700" }}
+              _hover={{ bg: "red.700" }}
               as="a"
               href="https://cloud.roamingproxy.com/signup"
             >

@@ -53,17 +53,17 @@ function SouthAmericaProxiesPage() {
           
           <Flex justify="space-between" flexWrap="wrap" gap={6}>
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Regional Coverage</Heading>
+              <Heading as="h3" size="md" color="red.600">Regional Coverage</Heading>
               <Text>Connect through residential, datacenter, and mobile IPs from all 14 South American countries. Target specific regions, cities, or postal codes for precise geo-targeting across diverse markets.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Authentic Local Experience</Heading>
+              <Heading as="h3" size="md" color="red.600">Authentic Local Experience</Heading>
               <Text>Experience websites and apps exactly as South American users do with genuine residential IPs that reflect real user attributes, browser fingerprints, and regional network characteristics.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Emerging Market Testing</Heading>
+              <Heading as="h3" size="md" color="red.600">Emerging Market Testing</Heading>
               <Text>Validate your digital products in rapidly growing South American economies. Test payment integrations, localized content, and performance across diverse bandwidth conditions.</Text>
             </VStack>
           </Flex>
@@ -80,7 +80,7 @@ function SouthAmericaProxiesPage() {
           <Grid templateColumns={{ base: "1fr", md: "1fr 1fr", lg: "1fr 1fr 1fr" }} gap={10} mt={10}>
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="blue.600">100%</StatNumber>
+                <StatNumber color="red.600">100%</StatNumber>
                 <StatLabel>Market Coverage</StatLabel>
               </Stat>
               <Text>
@@ -91,7 +91,7 @@ function SouthAmericaProxiesPage() {
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="blue.600">86%</StatNumber>
+                <StatNumber color="red.600">86%</StatNumber>
                 <StatLabel>Localization Accuracy</StatLabel>
               </Stat>
               <Text>
@@ -102,7 +102,7 @@ function SouthAmericaProxiesPage() {
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="blue.600">1.1M+</StatNumber>
+                <StatNumber color="red.600">1.1M+</StatNumber>
                 <StatLabel>Residential IPs</StatLabel>
               </Stat>
               <Text>
@@ -128,17 +128,17 @@ function SouthAmericaProxiesPage() {
                   <StatLabel fontSize="lg" fontWeight="medium">{region.region}</StatLabel>
                   {region.states ? (
                     <Flex justify="space-between" align="center">
-                      <StatNumber color="blue.600">{region.states}</StatNumber>
+                      <StatNumber color="red.600">{region.states}</StatNumber>
                       <Text color="gray.500" fontSize="sm" fontWeight="normal">States</Text>
                     </Flex>
                   ) : (
                     <Flex justify="space-between" align="center">
-                      <StatNumber color="blue.600">{region.countries}</StatNumber>
+                      <StatNumber color="red.600">{region.countries}</StatNumber>
                       <Text color="gray.500" fontSize="sm" fontWeight="normal">Countries</Text>
                     </Flex>
                   )}
                   <Flex justify="space-between" align="center" mt={1}>
-                    <StatNumber color="blue.400">{region.cities}</StatNumber>
+                    <StatNumber color="red.400">{region.cities}</StatNumber>
                     <Text color="gray.500" fontSize="sm" fontWeight="normal">Cities</Text>
                   </Flex>
                 </Stat>
@@ -214,52 +214,52 @@ function SouthAmericaProxiesPage() {
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="blue.600">Geographic Targeting</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.600">Geographic Targeting</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Country Selection</Text> - Access proxies from all 14 South American countries with comprehensive coverage</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Regional Targeting</Text> - Select from specific regions including Brazil, Andean Region, Southern Cone, and Northern Region</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">City Precision</Text> - Target specific South American cities with multiple proxies available in each location</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">ISP Selection</Text> - Choose proxies from specific South American internet service providers or mobile carriers</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Connection Type Filtering</Text> - Filter proxies by connection type (fiber, cable, DSL, mobile) to match market conditions</Text>
                 </ListItem>
               </List>
             </Box>
             
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="blue.600">Control & Integration</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.600">Control & Integration</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Location Groups</Text> - Create and save custom South American location groups for frequent testing scenarios</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Location API</Text> - Access all South American location features programmatically through our comprehensive API</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Browser Integration</Text> - Use browser extensions to quickly switch between South American locations in your testing</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Localization Testing</Text> - Specialized tools for testing language variants and regional content adaptations</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Location Analytics</Text> - Track proxy performance by location with detailed success metrics across South America</Text>
                 </ListItem>
               </List>
@@ -277,7 +277,7 @@ function SouthAmericaProxiesPage() {
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="blue.600">Retail Chain Optimizes Regional Pricing Strategy</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.600">Retail Chain Optimizes Regional Pricing Strategy</Heading>
               <Text mb={4}>
                 A major international retailer used our South American proxies to analyze regional pricing across 
                 6 countries. They discovered significant opportunities for price optimization by country and 
@@ -291,7 +291,7 @@ function SouthAmericaProxiesPage() {
             </Box>
             
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="blue.600">Fintech Startup Perfects Payment Processing</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.600">Fintech Startup Perfects Payment Processing</Heading>
               <Text mb={4}>
                 A fintech company used our South American proxy network to test their payment platform across 
                 multiple countries. They identified critical issues with local payment methods and banking 
@@ -320,25 +320,25 @@ function SouthAmericaProxiesPage() {
           <Box bg="white" p={6} borderRadius="md" boxShadow="md">
             <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={8} mt={8}>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Brazil</Text>
+                <Text fontWeight="bold" color="red.600">Brazil</Text>
                 <Text>26 States</Text>
                 <Text>32 Cities</Text>
                 <Text>Major ISPs Covered</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Andean Region</Text>
+                <Text fontWeight="bold" color="red.600">Andean Region</Text>
                 <Text>5 Countries</Text>
                 <Text>28 Cities</Text>
                 <Text>Major ISPs Covered</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Southern Cone</Text>
+                <Text fontWeight="bold" color="red.600">Southern Cone</Text>
                 <Text>4 Countries</Text>
                 <Text>22 Cities</Text>
                 <Text>Major ISPs Covered</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Northern Region</Text>
+                <Text fontWeight="bold" color="red.600">Northern Region</Text>
                 <Text>4 Countries</Text>
                 <Text>12 Cities</Text>
                 <Text>Major ISPs Covered</Text>
@@ -349,7 +349,7 @@ function SouthAmericaProxiesPage() {
       </Box>
       
       {/* Call to Action */}
-      <Box py={16} bg="blue.600" color="white">
+      <Box py={16} bg="red.600" color="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">
             Access Any South American Location
@@ -376,7 +376,7 @@ function SouthAmericaProxiesPage() {
               variant="outline"
               borderColor="white"
               color="white"
-              _hover={{ bg: "blue.700" }}
+              _hover={{ bg: "red.700" }}
               as="a"
               href="https://cloud.roamingproxy.com/signup"
             >

@@ -125,7 +125,7 @@ function TrainingAIPage() {
           
           <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={8}>
             {industryData.map((industry, index) => (
-              <Box key={index} p={6} bg="white" borderRadius="md" boxShadow="sm" borderColor="blue.100">
+              <Box key={index} p={6} bg="white" borderRadius="md" boxShadow="sm" borderColor="red.100">
                 <Stat mb={4}>
                   <StatLabel fontSize="lg" fontWeight="medium">{industry.industry}</StatLabel>
                   <StatNumber color="purple.500">{industry.growth}%</StatNumber>

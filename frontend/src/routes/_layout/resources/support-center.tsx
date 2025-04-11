@@ -97,17 +97,17 @@ function SupportCenterPage() {
           
           {/* <Flex justify="space-between" flexWrap="wrap" gap={6}>
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Documentation</Heading>
+              <Heading as="h3" size="md" color="red.600">Documentation</Heading>
               <Text>Comprehensive guides, API references, and technical documentation for all our products and services.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Tutorials & Guides</Heading>
+              <Heading as="h3" size="md" color="red.600">Tutorials & Guides</Heading>
               <Text>Step-by-step tutorials and best practices for getting the most out of our platform and services.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Direct Support</Heading>
+              <Heading as="h3" size="md" color="red.600">Direct Support</Heading>
               <Text>Connect with our support team through live chat, email, or schedule a call with a technical specialist.</Text>
             </VStack>
           </Flex> */}
@@ -124,7 +124,7 @@ function SupportCenterPage() {
           {/* <Grid templateColumns={{ base: "1fr", md: "1fr 1fr", lg: "1fr 1fr" }} gap={10} mt={10}> */}
             {/* <VStack align="center" spacing={5} p={8} borderRadius="md" borderWidth="1px" borderColor="gray.200">
               <Box bg="red.50" p={4} borderRadius="full">
-                <ChatIcon boxSize={8} color="blue.600" />
+                <ChatIcon boxSize={8} color="red.600" />
               </Box>
               <Heading as="h3" size="md">Live Chat Support</Heading>
               <Text textAlign="center">
@@ -132,7 +132,7 @@ function SupportCenterPage() {
               </Text>
               <Stat textAlign="center">
                 <StatLabel>Average Response Time</StatLabel>
-                <StatNumber color="blue.600">2 min</StatNumber>
+                <StatNumber color="red.600">2 min</StatNumber>
               </Stat>
               <Button colorScheme="blue" variant="solid" width="full">
                 Start Live Chat
@@ -141,7 +141,7 @@ function SupportCenterPage() {
              */}
             {/* <VStack align="center" spacing={5} p={8} borderRadius="md" borderWidth="1px" borderColor="gray.200">
               <Box bg="red.50" p={4} borderRadius="full">
-                <EmailIcon boxSize={8} color="blue.600" />
+                <EmailIcon boxSize={8} color="red.600" />
               </Box>
               <Heading as="h3" size="md">Email Support</Heading>
               <Text textAlign="center">
@@ -149,7 +149,7 @@ function SupportCenterPage() {
               </Text>
               <Stat textAlign="center">
                 <StatLabel>Average Response Time</StatLabel>
-                <StatNumber color="blue.600">4 hours</StatNumber>
+                <StatNumber color="red.600">4 hours</StatNumber>
               </Stat>
               <Button colorScheme="blue" variant="solid" width="full">
                 Send Email
@@ -158,7 +158,7 @@ function SupportCenterPage() {
             
             {/* <VStack align="center" spacing={5} p={8} borderRadius="md" borderWidth="1px" borderColor="gray.200">
               <Box bg="red.50" p={4} borderRadius="full">
-                <PhoneIcon boxSize={8} color="blue.600" />
+                <PhoneIcon boxSize={8} color="red.600" />
               </Box>
               <Heading as="h3" size="md">Schedule a Call</Heading>
               <Text textAlign="center">
@@ -166,7 +166,7 @@ function SupportCenterPage() {
               </Text>
               <Stat textAlign="center">
                 <StatLabel>Available For</StatLabel>
-                <StatNumber color="blue.600">Premium</StatNumber>
+                <StatNumber color="red.600">Premium</StatNumber>
               </Stat>
               <Button colorScheme="blue" variant="solid" width="full">
                 Book Appointment
@@ -189,11 +189,11 @@ function SupportCenterPage() {
                 <Stat mb={4}>
                   <StatLabel fontSize="lg" fontWeight="medium">{category.category}</StatLabel>
                   <Flex justify="space-between" align="center">
-                    <StatNumber color="blue.600">{category.articles}</StatNumber>
+                    <StatNumber color="red.600">{category.articles}</StatNumber>
                     <Text color="gray.500" fontSize="sm" fontWeight="normal">Articles</Text>
                   </Flex>
                   <Flex justify="space-between" align="center" mt={1}>
-                    <StatNumber color="blue.400">{category.views}</StatNumber>
+                    <StatNumber color="red.400">{category.views}</StatNumber>
                     <Text color="gray.500" fontSize="sm" fontWeight="normal">Monthly Views</Text>
                   </Flex>
                 </Stat>
@@ -220,7 +220,7 @@ function SupportCenterPage() {
             {popularArticles.map((article, index) => (
               <Flex key={index} p={6} bg="gray.50" borderRadius="md" boxShadow="sm" align="flex-start">
                 <Box w="50px" h="50px" mr={4} display="flex" alignItems="center" justifyContent="center">
-                  <QuestionIcon boxSize="30px" color="blue.600" />
+                  <QuestionIcon boxSize="30px" color="red.600" />
                 </Box>
                 <Box>
                   <Flex justify="space-between" align="center" mb={2}>
@@ -254,22 +254,22 @@ function SupportCenterPage() {
           <Box bg="red.50" p={8} borderRadius="md" boxShadow="md">
             <SimpleGrid columns={{ base: 2, md: 4 }} spacing={8}>
               <VStack>
-                <Heading as="h3" size="lg" color="blue.600">96%</Heading>
+                <Heading as="h3" size="lg" color="red.600">96%</Heading>
                 <Text fontWeight="medium">Satisfaction Rate</Text>
                 <Text fontSize="sm" color="gray.600">Based on customer feedback</Text>
               </VStack>
               <VStack>
-                <Heading as="h3" size="lg" color="blue.600">2 min</Heading>
+                <Heading as="h3" size="lg" color="red.600">2 min</Heading>
                 <Text fontWeight="medium">Chat Response</Text>
                 <Text fontSize="sm" color="gray.600">Average wait time</Text>
               </VStack>
               <VStack>
-                <Heading as="h3" size="lg" color="blue.600"> 4 hrs</Heading>
+                <Heading as="h3" size="lg" color="red.600"> 4 hrs</Heading>
                 <Text fontWeight="medium">Email Response</Text>
                 <Text fontSize="sm" color="gray.600">During business hours</Text>
               </VStack>
               <VStack>
-                <Heading as="h3" size="lg" color="blue.600">24/7</Heading>
+                <Heading as="h3" size="lg" color="red.600">24/7</Heading>
                 <Text fontWeight="medium">Documentation</Text>
                 <Text fontSize="sm" color="gray.600">Always available</Text>
               </VStack>
@@ -292,7 +292,7 @@ function SupportCenterPage() {
               {faqItems.map((faq, index) => (
                 <AccordionItem key={index} borderColor="gray.200">
                   <h3>
-                    <AccordionButton py={4} px={6} _expanded={{ bg: "red.50", color: "blue.600" }}>
+                    <AccordionButton py={4} px={6} _expanded={{ bg: "red.50", color: "red.600" }}>
                       <Box flex="1" textAlign="left" fontWeight="medium" fontSize="md">
                         {faq.question}
                       </Box>
@@ -336,21 +336,21 @@ function SupportCenterPage() {
               
               <List spacing={5}>
                 <ListItem display="flex" alignItems="center">
-                  <Box as={TimeIcon} color="blue.600" mr={4} />
+                  <Box as={TimeIcon} color="red.600" mr={4} />
                   <Box>
                     <Text fontWeight="bold">Live Chat Support</Text>
                     <Text color="gray.600">Monday to Friday, 9 AM - 8 PM (EST)</Text>
                   </Box>
                 </ListItem>
                 <ListItem display="flex" alignItems="center">
-                  <Box as={TimeIcon} color="blue.600" mr={4} />
+                  <Box as={TimeIcon} color="red.600" mr={4} />
                   <Box>
                     <Text fontWeight="bold">Email Support</Text>
                     <Text color="gray.600">24/7 - Response times vary outside business hours</Text>
                   </Box>
                 </ListItem>
                 <ListItem display="flex" alignItems="center">
-                  <Box as={TimeIcon} color="blue.600" mr={4} />
+                  <Box as={TimeIcon} color="red.600" mr={4} />
                   <Box>
                     <Text fontWeight="bold">Phone Support</Text>
                     <Text color="gray.600">Monday to Friday, 10 AM - 6 PM (EST)</Text>
@@ -358,7 +358,7 @@ function SupportCenterPage() {
                   </Box>
                 </ListItem>
                 <ListItem display="flex" alignItems="center">
-                  <Box as={TimeIcon} color="blue.600" mr={4} />
+                  <Box as={TimeIcon} color="red.600" mr={4} />
                   <Box>
                     <Text fontWeight="bold">Emergency Support</Text>
                     <Text color="gray.600">24/7 for critical issues (Enterprise plans)</Text>
@@ -390,7 +390,7 @@ function SupportCenterPage() {
       </Box>
        */}
       {/* Call to Action */}
-      <Box py={16} bg="blue.600" color="white">
+      <Box py={16} bg="red.600" color="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">
             Can't Find What You're Looking For?
@@ -417,7 +417,7 @@ function SupportCenterPage() {
               variant="outline"
               borderColor="white"
               color="white"
-              _hover={{ bg: "blue.700" }}
+              _hover={{ bg: "red.700" }}
               as="a"
               href="https://cloud.roamingproxy.com/signup"
             >
@@ -428,7 +428,7 @@ function SupportCenterPage() {
               variant="outline"
               borderColor="white"
               color="white"
-              _hover={{ bg: "blue.700" }}
+              _hover={{ bg: "red.700" }}
               leftIcon={<InfoIcon />}
             >
               Browse Documentation

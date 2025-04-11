@@ -249,7 +249,7 @@ function BlogPage() {
       </Box>
 
       {/* Call to Action */}
-      <Box py={16} bg="blue.600" color="white">
+      <Box py={16} bg="red.600" color="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">
             Master Web Scraping Today
@@ -276,7 +276,7 @@ function BlogPage() {
               variant="outline"
               borderColor="white"
               color="white"
-              _hover={{ bg: "blue.700" }}
+              _hover={{ bg: "red.700" }}
               as="a"
               href="https://cloud.roamingproxy.com/signup"
             >
@@ -376,9 +376,9 @@ function BlogPage() {
                         _hover={{ bg: "gray.100" }}
                         p={2}
                         borderRadius="md"
-                        bg={selectedCategory === category.name ? "blue.100" : "transparent"}
+                        bg={selectedCategory === category.name ? "red.100" : "transparent"}
                       >
-                        <Text color="blue.600" fontWeight="medium">
+                        <Text color="red.600" fontWeight="medium">
                           {category.name}
                         </Text>
                         <Text>
@@ -403,7 +403,7 @@ function BlogPage() {
                         size="md"
                         borderRadius="full"
                         cursor="pointer"
-                        _hover={{ bg: selectedTags.includes(tag) ? "blue.600" : "blue.100" }}
+                        _hover={{ bg: selectedTags.includes(tag) ? "red.600" : "red.100" }}
                         onClick={() => handleTagClick(tag)}
                       >
                         {tag}

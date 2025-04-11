@@ -136,7 +136,7 @@ function SecurityFeaturesPage() {
                   <Flex justify="space-between" align="center" mt={1}>
                     
                     <Text color="gray.500" fontSize="sm" fontWeight="normal">Protocols</Text>
-                    <StatNumber color="blue.400">{tier.protocols}</StatNumber>
+                    <StatNumber color="red.400">{tier.protocols}</StatNumber>
                   </Flex>
                 </Stat>
                 <Text fontSize="sm" color="gray.600">
@@ -378,7 +378,7 @@ function SecurityFeaturesPage() {
               variant="outline"
               borderColor="white"
               color="white"
-              _hover={{ bg: "blue.700" }}
+              _hover={{ bg: "red.700" }}
               as="a"
               href="https://cloud.roamingproxy.com/signup"
             >

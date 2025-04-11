@@ -55,17 +55,17 @@ function CompetitorAnalysisPage() {
           
           <Flex justify="space-between" flexWrap="wrap" gap={6}>
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Market Intelligence</Heading>
+              <Heading as="h3" size="md" color="red.600">Market Intelligence</Heading>
               <Text>Monitor your competitors' activities across products, pricing, marketing, content, and technology. Track changes in real-time and identify emerging trends and threats in your industry.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Strategic Analysis</Heading>
+              <Heading as="h3" size="md" color="red.600">Strategic Analysis</Heading>
               <Text>Transform competitive data into actionable insights with AI-powered analysis that identifies strengths, weaknesses, opportunities, and threats. Develop strategic responses to competitor moves.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Differentiation Opportunities</Heading>
+              <Heading as="h3" size="md" color="red.600">Differentiation Opportunities</Heading>
               <Text>Discover gaps in competitor offerings and identify unique selling propositions that can differentiate your products and services. Build strategy based on verified market needs.</Text>
             </VStack>
           </Flex>
@@ -82,7 +82,7 @@ function CompetitorAnalysisPage() {
           <Grid templateColumns={{ base: "1fr", md: "1fr 1fr", lg: "1fr 1fr 1fr" }} gap={10} mt={10}>
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="blue.600">32%</StatNumber>
+                <StatNumber color="red.600">32%</StatNumber>
                 <StatLabel>Faster Market Response</StatLabel>
               </Stat>
               <Text>
@@ -93,7 +93,7 @@ function CompetitorAnalysisPage() {
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="blue.600">24/7</StatNumber>
+                <StatNumber color="red.600">24/7</StatNumber>
                 <StatLabel>Continuous Monitoring</StatLabel>
               </Stat>
               <Text>
@@ -104,7 +104,7 @@ function CompetitorAnalysisPage() {
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="blue.600">40%</StatNumber>
+                <StatNumber color="red.600">40%</StatNumber>
                 <StatLabel>More Strategic Opportunities</StatLabel>
               </Stat>
               <Text>
@@ -129,11 +129,11 @@ function CompetitorAnalysisPage() {
                 <Stat mb={4}>
                   <StatLabel fontSize="lg" fontWeight="medium">{feature.feature}</StatLabel>
                   <Flex justify="space-between" align="center">
-                    <StatNumber color="blue.600">{feature.metrics}</StatNumber>
+                    <StatNumber color="red.600">{feature.metrics}</StatNumber>
                     <Text color="gray.500" fontSize="sm" fontWeight="normal">Metrics</Text>
                   </Flex>
                   <Flex justify="space-between" align="center" mt={1}>
-                    <StatNumber color="blue.400">{feature.frequency}</StatNumber>
+                    <StatNumber color="red.400">{feature.frequency}</StatNumber>
                     <Text color="gray.500" fontSize="sm" fontWeight="normal">Updates</Text>
                   </Flex>
                 </Stat>
@@ -209,52 +209,52 @@ function CompetitorAnalysisPage() {
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="blue.600">Monitoring & Data Collection</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.600">Monitoring & Data Collection</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Automated Competitor Tracking</Text> - Continuous monitoring of competitor activities and changes</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Multi-channel Coverage</Text> - Data collection from websites, social media, news, reviews, and job postings</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Change Detection</Text> - Automatic identification of significant changes in competitor strategies</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Technology Stack Analysis</Text> - Insights into competitor technology choices and digital infrastructure</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Marketing Campaign Tracking</Text> - Monitor competitor advertising, content, and promotional strategies</Text>
                 </ListItem>
               </List>
             </Box>
             
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="blue.600">Analysis & Strategic Insights</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.600">Analysis & Strategic Insights</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Competitive Benchmarking</Text> - Side-by-side comparison against key competitors on critical metrics</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">SWOT Analysis</Text> - AI-powered identification of strengths, weaknesses, opportunities, and threats</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Gap Identification</Text> - Detection of unmet market needs and competitor blind spots</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Trend Analysis</Text> - Identification of emerging patterns and shifts in competitive landscape</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Strategic Recommendations</Text> - Actionable insights on how to respond to competitive threats and opportunities</Text>
                 </ListItem>
               </List>
@@ -272,7 +272,7 @@ function CompetitorAnalysisPage() {
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="blue.600">SaaS Company Discovers Key Market Opportunity</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.600">SaaS Company Discovers Key Market Opportunity</Heading>
               <Text mb={4}>
                 A B2B software provider used our competitor analysis platform to identify an unaddressed 
                 pain point in their market. By monitoring competitor products, customer reviews, and 
@@ -288,7 +288,7 @@ function CompetitorAnalysisPage() {
             </Box>
             
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="blue.600">Retailer Anticipates Competitor Strategy Shift</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.600">Retailer Anticipates Competitor Strategy Shift</Heading>
               <Text mb={4}>
                 A national retail chain leveraged our platform's change detection capabilities to identify 
                 early signals of a competitor's expansion strategy. By analyzing job postings, leadership 
@@ -319,32 +319,32 @@ function CompetitorAnalysisPage() {
           <Box bg="white" p={6} borderRadius="md" boxShadow="md">
             <SimpleGrid columns={{ base: 2, md: 3, lg: 6 }} spacing={4} mt={8}>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Digital Presence</Text>
+                <Text fontWeight="bold" color="red.600">Digital Presence</Text>
                 <Text>Websites</Text>
                 <Text>Social Media</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Products</Text>
+                <Text fontWeight="bold" color="red.600">Products</Text>
                 <Text>Features</Text>
                 <Text>Pricing</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Marketing</Text>
+                <Text fontWeight="bold" color="red.600">Marketing</Text>
                 <Text>Campaigns</Text>
                 <Text>Messaging</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Content</Text>
+                <Text fontWeight="bold" color="red.600">Content</Text>
                 <Text>Strategy</Text>
                 <Text>SEO</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Technology</Text>
+                <Text fontWeight="bold" color="red.600">Technology</Text>
                 <Text>Stack</Text>
                 <Text>Infrastructure</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="blue.600">Strategy</Text>
+                <Text fontWeight="bold" color="red.600">Strategy</Text>
                 <Text>Growth</Text>
                 <Text>Partnerships</Text>
               </VStack>
@@ -354,7 +354,7 @@ function CompetitorAnalysisPage() {
       </Box>
       
       {/* Call to Action */}
-      <Box py={16} bg="blue.600" color="white">
+      <Box py={16} bg="red.600" color="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">
             Gain Your Competitive Edge
@@ -368,7 +368,7 @@ function CompetitorAnalysisPage() {
             <Button
               size="lg"
               bg="white"
-              color="blue.600"
+              color="red.600"
               _hover={{ bg: "gray.100" }}
               as="a"
               href="/demo-request"
@@ -381,7 +381,7 @@ function CompetitorAnalysisPage() {
               variant="outline"
               borderColor="white"
               color="white"
-              _hover={{ bg: "blue.700" }}
+              _hover={{ bg: "red.700" }}
               as="a"
               href="https://cloud.roamingproxy.com/signup"
             >
