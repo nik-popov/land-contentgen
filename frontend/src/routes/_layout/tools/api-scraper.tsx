@@ -9,64 +9,64 @@ export const Route = createFileRoute("/_layout/tools/api-scraper")({
 
 function APIScraper() {
   const industryData = [
-    { industry: "E-commerce", growth: 46, useCases: "Product data extraction, price monitoring, competitor analysis" },
-    { industry: "Real Estate", growth: 39, useCases: "Property listings, market trend analysis, investment opportunities" },
-    { industry: "Travel & Hospitality", growth: 35, useCases: "Price comparisons, review monitoring, booking optimization" },
-    { industry: "Digital Marketing", growth: 42, useCases: "Content research, SEO analysis, market intelligence" },
-    { industry: "Financial Research", growth: 31, useCases: "Financial data aggregation, market trends, stock analysis" },
-    { industry: "Job Market Analysis", growth: 29, useCases: "Job postings, salary benchmarking, skill demand tracking" }
+    { industry: "E-commerce", growth: 46, useCases: "Product data retrieval, price tracking, competitor insights" },
+    { industry: "Real Estate", growth: 39, useCases: "Property data compilation, market movement analysis, investment prospects" },
+    { industry: "Travel & Hospitality", growth: 35, useCases: "Rate comparisons, guest feedback monitoring, booking enhancements" },
+    { industry: "Digital Marketing", growth: 42, useCases: "Content analysis, SEO evaluation, market trends" },
+    { industry: "Financial Research", growth: 31, useCases: "Financial data collection, market patterns, equity research" },
+    { industry: "Job Market Analysis", growth: 29, useCases: "Job listing aggregation, salary comparisons, skill demand analysis" }
   ];
 
   const scraperFeatures = [
     { 
-      title: "Multi-API Integration", 
-      description: "Connect with any API type including REST, GraphQL, SOAP, and proprietary interfaces with our universal adapter", 
+      title: "Versatile API Connectivity", 
+      description: "Integrate with diverse API types like REST, GraphQL, SOAP, and custom interfaces using our flexible adapter", 
       icon: "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/rest.png" 
     },
     { 
-      title: "Response Transformation", 
-      description: "Normalize responses from different APIs into consistent formats for easier integration with your systems", 
+      title: "Data Format Standardization", 
+      description: "Unify responses from varied APIs into consistent structures for seamless system integration", 
       icon: "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/graphql.png" 
     },
     { 
-      title: "Authentication Handling", 
-      description: "Manage complex authentication flows including OAuth, API keys, and custom token management securely", 
+      title: "Secure Authentication Management", 
+      description: "Handle intricate authentication processes, including OAuth, API keys, and custom tokens, with robust security", 
       icon: "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/jwt.png" 
     },
     { 
-      title: "Rate Limit Management", 
-      description: "Optimize API usage with intelligent rate limiting, request queuing and automatic backoff strategies", 
+      title: "Smart Rate Limit Control", 
+      description: "Maximize API efficiency with adaptive rate limiting, request prioritization, and automated backoff mechanisms", 
       icon: "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/analytics.png" 
     }
   ];
 
   return (
     <>
-      {/* HTML Scraper Hero Section */}
+      {/* API Scraper Hero Section */}
       <Box py={16} bg="red.50" color="gray.800">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h1" size="2xl" textAlign="center" mb={8} fontWeight="medium">
-            API Scraper
+            API Scraper Solutions
           </Heading>
           <Text fontSize="xl" textAlign="center" mb={12} maxW="800px" mx="auto">
-            Transform any API or website into structured, consistent data with our powerful API scraping infrastructure.
-            Extract valuable data, automate workflows, and streamline API integrations for your applications.
+            Convert any API or website into organized, uniform data with our advanced API scraping platform. 
+            Capture critical information, optimize processes, and enhance API connectivity for your applications.
           </Text>
           
           <Flex justify="space-between" flexWrap="wrap" gap={6}>
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="purple.500">Reliable Data Extraction</Heading>
-              <Text>Extract structured data from any website with robust selectors that adapt to site changes. Our intelligent scraping handles dynamic content, authentication, and rate limiting.</Text>
+              <Heading as="h3" size="md" color="purple.500">Consistent Data Collection</Heading>
+              <Text>Gather structured data from any site with adaptive selectors that adjust to updates. Our intelligent platform manages dynamic content, authentication, and request throttling.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="purple.500">Developer-Friendly APIs</Heading>
-              <Text>Integrate web data into your applications with RESTful APIs, webhooks, and custom endpoints. Receive data in JSON, CSV, or XML formats with comprehensive documentation.</Text>
+              <Heading as="h3" size="md" color="purple.500">Developer-Optimized APIs</Heading>
+              <Text>Embed web data into your systems with RESTful APIs, webhooks, and tailored endpoints, delivered in JSON, CSV, or XML with detailed guides.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="purple.500">Enterprise-Grade Infrastructure</Heading>
-              <Text>Scale your data extraction with our high-performance infrastructure designed for reliability, uptime, and throughput. Handle millions of requests with automatic retries and caching.</Text>
+              <Heading as="h3" size="md" color="purple.500">High-Performance Infrastructure</Heading>
+              <Text>Scale your data operations with our robust platform, built for reliability, availability, and efficiency, supporting millions of requests with retries and caching.</Text>
             </VStack>
           </Flex>
         </Box>
@@ -76,40 +76,37 @@ function APIScraper() {
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
-            Key Benefits of API Scraper
+            Core Advantages of API Scraper
           </Heading>
           
           <Grid templateColumns={{ base: "1fr", md: "1fr 1fr", lg: "1fr 1fr 1fr" }} gap={10} mt={10}>
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
                 <StatNumber color="purple.500">85%</StatNumber>
-                <StatLabel>Development Time Reduction</StatLabel>
+                <StatLabel>Reduced Development Time</StatLabel>
               </Stat>
               <Text>
-                Organizations using our HTML scraper APIs report reducing their data extraction development 
-                time by up to 85% compared to building and maintaining their own scrapers.
+                Companies using our API scraper report cutting data integration development time by up to 85% compared to creating and managing custom solutions.
               </Text>
             </VStack>
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
                 <StatNumber color="purple.500">99.9%</StatNumber>
-                <StatLabel>Uptime Reliability</StatLabel>
+                <StatLabel>Service Uptime</StatLabel>
               </Stat>
               <Text>
-                Our enterprise-grade infrastructure ensures 99.9% uptime for your data extraction needs,
-                with automatic failover, load balancing, and continuous monitoring.
+                Our advanced infrastructure delivers 99.9% availability for your data needs, with automated failover, load balancing, and real-time monitoring.
               </Text>
             </VStack>
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
                 <StatNumber color="purple.500">3x</StatNumber>
-                <StatLabel>Faster Data Integration</StatLabel>
+                <StatLabel>Accelerated Integration</StatLabel>
               </Stat>
               <Text>
-                Implement data-driven features and applications up to 3 times faster with our ready-to-use
-                APIs that transform complex web scraping into simple API calls.
+                Deploy data-driven features up to three times faster with our pre-built APIs, simplifying complex API scraping into straightforward integrations.
               </Text>
             </VStack>
           </Grid>
@@ -120,7 +117,7 @@ function APIScraper() {
       <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={12} fontWeight="medium">
-            Industry-Specific API Solutions
+            Industry-Tailored API Integrations
           </Heading>
           
           <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={8}>
@@ -131,11 +128,11 @@ function APIScraper() {
                   <StatNumber color="purple.500">{industry.growth}%</StatNumber>
                   <StatHelpText>
                     <StatArrow type="increase" />
-                    Adoption Growth
+                    Usage Growth
                   </StatHelpText>
                 </Stat>
                 <Text fontSize="sm" color="gray.600">
-                  <Text as="span" fontWeight="bold">Common Use Cases:</Text> {industry.useCases}
+                  <Text as="span" fontWeight="bold">Typical Applications:</Text> {industry.useCases}
                 </Text>
               </Box>
             ))}
@@ -147,50 +144,50 @@ function APIScraper() {
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={4} fontWeight="medium">
-            Advanced API Capabilities
+            Powerful API Tools
           </Heading>
           <Text fontSize="lg" textAlign="center" mb={12} maxW="700px" mx="auto">
-            Our API scraper provides sophisticated integration techniques that handle even the most complex APIs and websites
+            Our API scraper delivers advanced connectivity features to manage even the most intricate APIs and websites
           </Text>
           
           <Grid templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }} gap={8}>
             <Flex p={6} bg="gray.50" borderRadius="md" boxShadow="sm" align="flex-start">
               <Box w="50px" h="50px" mr={4} display="flex" alignItems="center" justifyContent="center">
-                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/javascript.png" alt="Dynamic Content Extraction" />
+                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/javascript.png" alt="Interactive Data Retrieval" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">Dynamic Content Extraction</Heading>
-                <Text color="gray.600">Extract data from JavaScript-rendered sites, single-page applications, and interactive elements with our headless browser integration</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">Interactive Data Retrieval</Heading>
+                <Text color="gray.600">Capture data from JavaScript-driven sites, single-page apps, and dynamic elements using our headless browser technology</Text>
               </Box>
             </Flex>
             
             <Flex p={6} bg="gray.50" borderRadius="md" boxShadow="sm" align="flex-start">
               <Box w="50px" h="50px" mr={4} display="flex" alignItems="center" justifyContent="center">
-                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/aws.png" alt="Scalable Infrastructure" />
+                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/aws.png" alt="Flexible Infrastructure" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">Scalable Infrastructure</Heading>
-                <Text color="gray.600">Handle millions of requests with distributed cloud infrastructure that automatically scales based on your extraction needs</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">Flexible Infrastructure</Heading>
+                <Text color="gray.600">Process millions of requests with a cloud-based system that dynamically scales to meet your data needs</Text>
               </Box>
             </Flex>
             
             <Flex p={6} bg="gray.50" borderRadius="md" boxShadow="sm" align="flex-start">
               <Box w="50px" h="50px" mr={4} display="flex" alignItems="center" justifyContent="center">
-                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/rest.png" alt="API Customization" />
+                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/rest.png" alt="Tailored API Endpoints" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">API Customization</Heading>
-                <Text color="gray.600">Create custom endpoints that deliver exactly the data your application needs with filtering, pagination, and transformation options</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">Tailored API Endpoints</Heading>
+                <Text color="gray.600">Design custom endpoints to deliver precisely the data your app requires, with filtering, pagination, and formatting options</Text>
               </Box>
             </Flex>
             
             <Flex p={6} bg="gray.50" borderRadius="md" boxShadow="sm" align="flex-start">
               <Box w="50px" h="50px" mr={4} display="flex" alignItems="center" justifyContent="center">
-                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/prometheus.png" alt="Monitoring & Alerts" />
+                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/prometheus.png" alt="Real-Time Monitoring" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">Monitoring & Alerts</Heading>
-                <Text color="gray.600">Receive notifications when data changes, extraction fails, or website structures update with our comprehensive monitoring system</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">Real-Time Monitoring</Heading>
+                <Text color="gray.600">Stay informed with alerts for data updates, extraction errors, or site changes through our robust tracking system</Text>
               </Box>
             </Flex>
           </Grid>
@@ -201,58 +198,58 @@ function APIScraper() {
       <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
-            API Scraper Platform Features
+            Features of Our API Scraper Platform
           </Heading>
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="purple.500">Extraction Capabilities</Heading>
+              <Heading as="h3" size="md" mb={5} color="purple.500">Data Extraction Features</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="purple.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">CSS & XPath Selectors</Text> - Target specific elements with precision using standard or custom selectors</Text>
+                  <Text><Text as="span" fontWeight="bold">CSS & XPath Targeting</Text> - Pinpoint specific elements with accuracy using standard or tailored selectors</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="purple.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">JavaScript Rendering</Text> - Extract data from dynamic websites using headless browser technology</Text>
+                  <Text><Text as="span" fontWeight="bold">Dynamic Rendering</Text> - Retrieve data from interactive sites with headless browser capabilities</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="purple.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Authentication Support</Text> - Access protected content with cookie handling, header management, and login workflows</Text>
+                  <Text><Text as="span" fontWeight="bold">Secure Access</Text> - Reach protected content with cookie management, headers, and authentication flows</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="purple.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Pagination Handling</Text> - Automatically navigate through multi-page content with custom rules</Text>
+                  <Text><Text as="span" fontWeight="bold">Multi-Page Navigation</Text> - Seamlessly crawl paginated content with customized rules</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="purple.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Data Transformation</Text> - Clean, normalize, and structure extracted data into your preferred format</Text>
+                  <Text><Text as="span" fontWeight="bold">Data Structuring</Text> - Refine, standardize, and format extracted data to your specifications</Text>
                 </ListItem>
               </List>
             </Box>
             
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="purple.500">Developer Experience</Heading>
+              <Heading as="h3" size="md" mb={5} color="purple.500">Developer Tools</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="purple.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">RESTful API</Text> - Integrate with any technology stack using our standard REST API with comprehensive documentation</Text>
+                  <Text><Text as="span" fontWeight="bold">REST API Integration</Text> - Connect with any tech stack via our standardized REST API with detailed guides</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="purple.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Webhook Notifications</Text> - Receive real-time updates when new data is available or extraction patterns change</Text>
+                  <Text><Text as="span" fontWeight="bold">Instant Webhooks</Text> - Receive immediate updates for new data or changes in extraction patterns</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="purple.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">SDKs & Libraries</Text> - Implement faster with official SDKs for Python, Node.js, PHP, Java, and Ruby</Text>
+                  <Text><Text as="span" fontWeight="bold">SDK Support</Text> - Speed up development with SDKs for Python, Node.js, PHP, Java, and Ruby</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="purple.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Visual Builder</Text> - Create extraction rules with our no-code visual selector tool without writing complex queries</Text>
+                  <Text><Text as="span" fontWeight="bold">No-Code Interface</Text> - Build extraction rules using our intuitive visual tool without complex coding</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="purple.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Extensive Documentation</Text> - Get started quickly with comprehensive guides, examples, and API references</Text>
+                  <Text><Text as="span" fontWeight="bold">Comprehensive Guides</Text> - Start fast with in-depth tutorials, examples, and API documentation</Text>
                 </ListItem>
               </List>
             </Box>
@@ -264,33 +261,28 @@ function APIScraper() {
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={12} fontWeight="medium">
-            API Scraper Success Stories
+            API Scraper Achievements
           </Heading>
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="purple.500">E-commerce Platform Increases Competitive Edge</Heading>
+              <Heading as="h3" size="md" mb={4} color="purple.500">E-commerce Leader Strengthens Market Position</Heading>
               <Text mb={4}>
-                A leading e-commerce marketplace implemented our HTML scraper APIs to monitor competitor pricing 
-                across 12,000+ products daily. Their automated repricing system achieved a 23% increase in 
-                conversion rates and 18% revenue growth within the first quarter of implementation.
+                A top e-commerce platform adopted our API scraper to track pricing for over 12,000 products daily, 
+                boosting conversions by 23% and revenue by 18% in their first quarter with automated repricing.
               </Text>
               <Text fontStyle="italic" fontSize="sm" color="gray.600">
-                "The real-time data from the API Scraper has transformed our pricing strategy. We're now 
-                able to respond to market changes within minutes instead of days, giving us a decisive advantage."
+                "The instant insights from our API Scraper have redefined our pricing approach. We now respond to market trends in minutes, securing a clear competitive advantage."
               </Text>
             </Box>
             
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="purple.500">Real Estate Tech Startup Expands Market Coverage</Heading>
+              <Heading as="h3" size="md" mb={4} color="purple.500">Real Estate Startup Expands Reach</Heading>
               <Text mb={4}>
-                A real estate technology startup used our HTML scraper APIs to aggregate property listings from 
-                200+ sources into their search platform. They increased their property database by 340% and reduced 
-                data collection costs by 67% compared to their previous manual processes.
+                A real estate tech company used our API scraper to compile listings from over 200 sources, growing their database by 340% and cutting data collection costs by 67% compared to manual methods.
               </Text>
               <Text fontStyle="italic" fontSize="sm" color="gray.600">
-                "The API Scraper allowed us to scale our coverage exponentially without growing our engineering 
-                team. We now offer the most comprehensive property search in our region, all powered by automated data collection."
+                "Our API Scraper enabled us to scale our data coverage dramatically without expanding our team. We now offer the most extensive property search in our market, driven by automated integration."
               </Text>
             </Box>
           </Grid>
@@ -301,10 +293,10 @@ function APIScraper() {
       <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={8} fontWeight="medium">
-            Integration Partners
+            Supported Integrations
           </Heading>
           <Text fontSize="lg" mb={12} maxW="700px" mx="auto">
-            Our API Scraper integrates seamlessly with your existing development stack and business tools
+            Our API Scraper connects effortlessly with your existing tech stack and business tools
           </Text>
           
           <Flex justify="center" flexWrap="wrap" gap={10} mb={12} align="center">
@@ -331,11 +323,11 @@ function APIScraper() {
       <Box py={16} bg="purple.500" color="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">
-            Ready to Supercharge Your API Integrations?
+            Ready to Optimize Your API Connections?
           </Heading>
           <Text fontSize="lg" mb={10} maxW="700px" mx="auto" color="white">
-            Get started with our API Scraper today and harness the power of streamlined API connections
-            for your applications, analysis, and business intelligence
+            Start leveraging our API Scraper to unlock seamless API integrations 
+            for your applications, analytics, and business strategies
           </Text>
           
           <Flex justify="center" gap={6} flexWrap="wrap">
@@ -347,7 +339,7 @@ function APIScraper() {
               as="a"
               href="/demo-request"
             >
-              Request Demo
+              Schedule a Demo
             </Button>
             
             <Button
@@ -359,13 +351,12 @@ function APIScraper() {
               as="a"
               href="/contact-sales"
             >
-             Contact Sales
+              Reach Our Sales Team
             </Button>
           </Flex>
         </Box>
       </Box>
       
-     
       {/* Footer */}
       <Footer />
     </>
