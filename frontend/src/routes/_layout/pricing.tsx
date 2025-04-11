@@ -13,77 +13,77 @@ function PricingPage() {
 
   const pricingPlans = [
     {
-      name: "Basic",
-      description: "Ideal for hobbyists and small-scale projects seeking seamless access to data.",
+      name: "Essential",
+      description: "Perfect for enthusiasts and modest projects needing smooth data retrieval.",
       monthlyPrice: 49,
-      annualPrice: 39, // ~20% discount from $49
+      annualPrice: 39,
       features: [
-        "100,000 API calls per month",
-        "20 simultaneous threads",
-        "Targeting in US & EU regions",
-        "Dynamic page rendering",
-        "High-quality residential & mobile proxies",
-        "Sophisticated anti-block technology",
-        "Data extraction & formatting tools",
+        "100,000 API requests monthly",
+        "20 concurrent connections",
+        "Geo-targeting in US & EU areas",
+        "Interactive page processing",
+        "Top-tier residential & mobile proxies",
+        "Advanced block prevention",
+        "Tools for data retrieval & structuring",
       ],
       limitations: [
-        "No personal account manager",
-        "No premium chat support",
+        "No dedicated account support",
+        "No priority messaging assistance",
       ],
     },
     {
-      name: "Pro",
-      description: "Perfect for data analysts and teams looking to expand their insights with reliability.",
+      name: "Advanced",
+      description: "Great for analysts and groups aiming to deepen their understanding with consistency.",
       monthlyPrice: 149,
-      annualPrice: 119, // ~20% discount from $149
+      annualPrice: 119,
       popular: true,
       features: [
-        "1,000,000 API calls per month",
-        "50 simultaneous threads",
-        "Targeting in US & EU regions",
-        "Dynamic page rendering",
-        "High-quality residential & mobile proxies",
-        "Sophisticated anti-block technology",
-        "Data extraction & formatting tools",
+        "1,000,000 API requests monthly",
+        "50 concurrent connections",
+        "Geo-targeting in US & EU areas",
+        "Interactive page processing",
+        "Top-tier residential & mobile proxies",
+        "Advanced block prevention",
+        "Tools for data retrieval & structuring",
       ],
       limitations: [
-        "No personal account manager",
-        "No premium chat support",
+        "No dedicated account support",
+        "No priority messaging assistance",
       ],
     },
     {
-      name: "Business",
-      description: "Tailored for data enthusiasts and businesses conquering complex, large-scale data.",
+      name: "Professional",
+      description: "Designed for data lovers and companies tackling intricate, large-volume tasks.",
       monthlyPrice: 475,
-      annualPrice: 380, // ~20% discount from $475
+      annualPrice: 380,
       features: [
-        "5,000,000 API calls per month",
-        "200 simultaneous threads",
-        "Global country-specific targeting",
-        "Dynamic page rendering",
-        "High-quality residential & mobile proxies",
-        "Sophisticated anti-block technology",
-        "Data extraction & formatting tools",
+        "5,000,000 API requests monthly",
+        "200 concurrent connections",
+        "Worldwide nation-specific targeting",
+        "Interactive page processing",
+        "Top-tier residential & mobile proxies",
+        "Advanced block prevention",
+        "Tools for data retrieval & structuring",
       ],
       limitations: [
-        "No personal account manager",
-        "No premium chat support",
+        "No dedicated account support",
+        "No priority messaging assistance",
       ],
     },
     {
-      name: "Enterprise",
-      description: "Crafted for leaders overseeing extensive data ecosystems, with top-tier support.",
+      name: "Corporate",
+      description: "Built for pioneers managing vast data networks, with elite assistance.",
       customPricing: true,
       features: [
-        "5,000,000+ API calls per month",
-        "200+ simultaneous threads",
-        "Global country-specific targeting",
-        "Dynamic page rendering",
-        "High-quality residential & mobile proxies",
-        "Sophisticated anti-block technology",
-        "Data extraction & formatting tools",
-        "Personal account manager",
-        "Premium chat support",
+        "5,000,000+ API requests monthly",
+        "200+ concurrent connections",
+        "Worldwide nation-specific targeting",
+        "Interactive page processing",
+        "Top-tier residential & mobile proxies",
+        "Advanced block prevention",
+        "Tools for data retrieval & structuring",
+        "Exclusive account coordinator",
+        "Enhanced chat support",
       ],
       limitations: [],
     },
@@ -91,17 +91,17 @@ function PricingPage() {
 
   const featureComparison = [
     {
-      category: "API Capabilities",
+      category: "API Functions",
       features: [
         {
-          name: "Monthly API calls",
+          name: "Monthly API requests",
           starter: "100,000",
           analyst: "1,000,000",
           business: "5,000,000",
           enterprise: "5,000,000+",
         },
         {
-          name: "Simultaneous threads",
+          name: "Parallel connections",
           starter: "20",
           analyst: "50",
           business: "200",
@@ -110,17 +110,17 @@ function PricingPage() {
       ],
     },
     {
-      category: "Proxy Features",
+      category: "Proxy Options",
       features: [
         {
-          name: "Location targeting",
+          name: "Geo-specific targeting",
           starter: "US & EU",
           analyst: "US & EU",
           business: "Country-level",
           enterprise: "Country-level",
         },
         {
-          name: "Residential proxy access",
+          name: "Home proxy availability",
           starter: true,
           analyst: true,
           business: true,
@@ -129,17 +129,17 @@ function PricingPage() {
       ],
     },
     {
-      category: "Scraping Tools",
+      category: "Data Collection Tools",
       features: [
         {
-          name: "Dynamic rendering",
+          name: "Live rendering",
           starter: true,
           analyst: true,
           business: true,
           enterprise: true,
         },
         {
-          name: "Anti-block solutions",
+          name: "Anti-detection measures",
           starter: true,
           analyst: true,
           business: true,
@@ -151,24 +151,24 @@ function PricingPage() {
 
   const faqItems = [
     {
-      question: "How do you calculate API requests?",
-      answer: "Each API call counts as one request toward your monthly quota. This includes successful calls and failed ones due to client errors (4xx status codes), but not server errors (5xx). Unused requests expire at the end of the month.",
+      question: "How are API requests tallied?",
+      answer: "Every API request counts toward your monthly limit, including both successful attempts and client-side errors (4xx codes), but not server-side issues (5xx). Unused requests vanish at month’s end.",
     },
     {
-      question: "Can I upgrade or downgrade my plan anytime?",
-      answer: "Yes! Upgrades take effect immediately with prorated billing for the remaining subscription period. Downgrades apply at the start of your next billing cycle to maintain uninterrupted service.",
+      question: "Is it possible to switch plans whenever I want?",
+      answer: "Absolutely! Upgrades kick in right away with adjusted billing for the current term. Downgrades take effect at your next billing period to keep service seamless.",
     },
     {
-      question: "Do you offer custom plans for specific needs?",
-      answer: "Definitely! The Enterprise plan is fully customizable, offering tailored API limits, dedicated infrastructure, and specialized support. Reach out to our sales team for a personalized quote.",
+      question: "Are tailored plans available for unique requirements?",
+      answer: "Yes, indeed! The Corporate plan can be customized with specific API quotas, dedicated setups, and focused support. Contact our sales crew for a bespoke offer.",
     },
     {
-      question: "What happens if I exceed my monthly request limit?",
-      answer: "You can keep going with pay-as-you-go rates: $0.005 per extra request for Starter, $0.004 for Analyst, and $0.003 for Business. Set up alerts or auto-upgrades in your account to stay in control.",
+      question: "What occurs if I go over my monthly request cap?",
+      answer: "You can continue with flexible rates: $0.005 per additional request for Essential, $0.004 for Advanced, and $0.003 for Professional. Configure notifications or auto-upgrades in your profile to manage usage.",
     },
     {
-      question: "How secure is my data?",
-      answer: "Your data’s safety is our priority. We use TLS 1.3 encryption for transmission and encrypt data at rest. With SOC 2 compliance and strict access policies, we only touch your data for troubleshooting with your consent.",
+      question: "How safe is my information?",
+      answer: "Protecting your data is paramount. We employ TLS 1.3 for transfers and secure data at rest. With SOC 2 adherence and tight access rules, we only handle your data for fixes with your approval.",
     },
   ];
 
@@ -178,15 +178,15 @@ function PricingPage() {
       <Box py={16} bg="red.50" color="gray.800">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h1" size="2xl" textAlign="center" mb={8} fontWeight="medium">
-          Pricing That Grows With You
+            Plans That Scale With Your Needs
           </Heading>
           <Text fontSize="xl" textAlign="center" mb={8} maxW="800px" mx="auto">
-          From startups to enterprise-scale projects, discover a plan tailored to fuel your data-driven journey.
+            Whether you’re a beginner or managing enterprise demands, find a package designed to empower your data pursuits.
           </Text>
           <Box maxW="300px" mx="auto" mb={10}>
             <FormControl display="flex" alignItems="center" justifyContent="center">
-              <FormLabel htmlFor="billing-toggle" mb="0" mr={2}>
-                Monthly
+              <FormLabel htmlFor="billing-toggle" mb="0" mravag={2}>
+                Month-to-Month
               </FormLabel>
               <Switch
                 id="billing-toggle"
@@ -196,8 +196,8 @@ function PricingPage() {
                 onChange={() => setIsAnnual(!isAnnual)}
               />
               <FormLabel htmlFor="billing-toggle" mb="0" ml={2}>
-                Annual
-                <Badge ml={2} colorScheme="green" fontSize="0.8em">Save 20%</Badge>
+                Yearly
+                <Badge ml={2} colorScheme="green" fontSize="0.8em">20% Off</Badge>
               </FormLabel>
             </FormControl>
           </Box>
@@ -229,7 +229,7 @@ function PricingPage() {
                     py={1}
                     borderRadius="md"
                   >
-                    Most Popular
+                    Best Choice
                   </Badge>
                 )}
                 <Box p={6}>
@@ -242,10 +242,10 @@ function PricingPage() {
                   {plan.customPricing ? (
                     <Box my={6}>
                       <Text fontSize="3xl" fontWeight="bold" mb={1}>
-                        Custom Pricing
+                        Personalized Rates
                       </Text>
                       <Text color="gray.600">
-                        Tailored to your needs
+                        Customized for you
                       </Text>
                     </Box>
                   ) : (
@@ -254,7 +254,7 @@ function PricingPage() {
                         ${isAnnual ? plan.annualPrice : plan.monthlyPrice}
                       </Text>
                       <Text color="gray.600">
-                        per month {isAnnual && "(billed annually)"}
+                        monthly {isAnnual && "(charged yearly)"}
                       </Text>
                     </Box>
                   )}
@@ -267,10 +267,10 @@ function PricingPage() {
                     as="a"
                     href="/contact-sales"
                   >
-                    {plan.customPricing ? "Contact Sales" : "Select Plan"}
+                    {plan.customPricing ? "Reach Out to Sales" : "Choose This Plan"}
                   </Button>
                   <Divider mb={4} />
-                  <Text fontWeight="medium" mb={3}>Features:</Text>
+                  <Text fontWeight="medium" mb={3}>What’s Included:</Text>
                   <List spacing={2} mb={6}>
                     {plan.features.map((feature, featureIndex) => (
                       <ListItem key={featureIndex} display="flex">
@@ -281,7 +281,7 @@ function PricingPage() {
                   </List>
                   {plan.limitations.length > 0 && (
                     <>
-                      <Text fontWeight="medium" mb={3}>Limitations:</Text>
+                      <Text fontWeight="medium" mb={3}>What’s Not Included:</Text>
                       <List spacing={2}>
                         {plan.limitations.map((limitation, limitationIndex) => (
                           <ListItem key={limitationIndex} display="flex" color="gray.600">
@@ -303,20 +303,20 @@ function PricingPage() {
       <Box py={16} bg="gray.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
-            Compare Plans
+            Plan Breakdown
           </Heading>
           <Text fontSize="lg" textAlign="center" mb={12} maxW="700px" mx="auto">
-            See how our plans stack up to match your data needs.
+            Explore how our packages align with your data requirements.
           </Text>
           <Box overflowX="auto">
             <Table variant="simple" bg="white" boxShadow="md" borderRadius="md">
               <Thead>
                 <Tr bg="gray.100">
-                  <Th width="30%">Feature</Th>
-                  <Th width="17.5%">Basic</Th>
-                  <Th width="17.5%" bg="red.50">Pro</Th>
-                  <Th width="17.5%">Business</Th>
-                  <Th width="17.5%">Enterprise</Th>
+                  <Th width="30%">Aspect</Th>
+                  <Th width="17.5%">Essential</Th>
+                  <Th width="17.5%" bg="red.50">Advanced</Th>
+                  <Th width="17.5%">Professional</Th>
+                  <Th width="17.5%">Corporate</Th>
                 </Tr>
               </Thead>
               <Tbody>
@@ -364,7 +364,7 @@ function PricingPage() {
       <Box py={16} bg="white">
         <Box maxW="900px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
-            Got Questions?
+            Need Answers?
           </Heading>
           <Box borderRadius="md" boxShadow="sm" overflow="hidden">
             <Accordion allowToggle>
@@ -392,46 +392,46 @@ function PricingPage() {
       <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
-            Data Powerhouse
+            Data Mastery Hub
           </Heading>
           <Text fontSize="lg" textAlign="center" mb={10} maxW="700px" mx="auto">
-            Trusted by thousands to deliver reliable, scalable data solutions.
+            Relied upon by thousands for dependable, adaptable data solutions.
           </Text>
           <SimpleGrid columns={{ base: 2, md: 4 }} spacing={10}>
             <VStack>
               <Heading as="h3" size="2xl" color="red.600">99.9%</Heading>
-              <Text fontWeight="medium">Uptime Reliability</Text>
-              <Text fontSize="sm" color="gray.600">Built for the enterprise</Text>
+              <Text fontWeight="medium">Service Consistency</Text>
+              <Text fontSize="sm" color="gray.600">Crafted for business needs</Text>
             </VStack>
             <VStack>
               <Heading as="h3" size="2xl" color="red.600">5B+</Heading>
-              <Text fontWeight="medium">Monthly Requests</Text>
-              <Text fontSize="sm" color="gray.600">Across our network</Text>
+              <Text fontWeight="medium">Requests Each Month</Text>
+              <Text fontSize="sm" color="gray.600">Across our system</Text>
             </VStack>
             <VStack>
               <Heading as="h3" size="2xl" color="red.600">15K+</Heading>
-              <Text fontWeight="medium">Active Users</Text>
-              <Text fontSize="sm" color="gray.600">From solo to scale</Text>
+              <Text fontWeight="medium">Current Users</Text>
+              <Text fontSize="sm" color="gray.600">From individuals to enterprises</Text>
             </VStack>
             <VStack>
               <Heading as="h3" size="2xl" color="red.600">190+</Heading>
-              <Text fontWeight="medium">Countries Covered</Text>
-              <Text fontSize="sm" color="gray.600">Global reach</Text>
+              <Text fontWeight="medium">Nations Spanned</Text>
+              <Text fontSize="sm" color="gray.600">Worldwide coverage</Text>
             </VStack>
           </SimpleGrid>
           <Box mt={16} p={8} bg="white" borderRadius="lg" boxShadow="md">
             <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8}>
               <VStack align="flex-start">
-                <Heading as="h3" size="md" color="red.600" mb={2}>Top-Tier Security</Heading>
-                <Text>SOC 2 compliant, fully encrypted, and audited regularly.</Text>
+                <Heading as="h3" size="md" color="red.600" mb={2}>Robust Protection</Heading>
+                <Text>SOC 2 certified, fully secured, and routinely reviewed.</Text>
               </VStack>
               <VStack align="flex-start">
-                <Heading as="h3" size="md" color="red.600" mb={2}>Scales With You</Heading>
-                <Text>Handles peak demand without breaking a sweat.</Text>
+                <Heading as="h3" size="md" color="red.600" mb={2}>Grows With Demand</Heading>
+                <Text>Manages high usage effortlessly.</Text>
               </VStack>
               <VStack align="flex-start">
-                <Heading as="h3" size="md" color="red.600" mb={2}>Dev-Ready</Heading>
-                <Text>APIs, SDKs, and examples to get you started fast.</Text>
+                <Heading as="h3" size="md" color="red.600" mb={2}>Developer-Friendly</Heading>
+                <Text>APIs, libraries, and tutorials for quick onboarding.</Text>
               </VStack>
             </SimpleGrid>
           </Box>
@@ -442,10 +442,10 @@ function PricingPage() {
       <Box py={16} bg="red.600" color="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">
-            Start Collecting Data Today
+            Begin Your Data Journey Now
           </Heading>
           <Text fontSize="lg" mb={10} maxW="700px" mx="auto" color="white">
-            Pick your plan or talk to sales for a custom fit. Enjoy a 14-day trial, no card needed.
+            Select a package or consult sales for a bespoke solution. Try it free for 14 days, no payment upfront.
           </Text>
           <Flex justify="center" gap={6} flexWrap="wrap">
             <Button
@@ -457,7 +457,7 @@ function PricingPage() {
               as="a"
               href="https://cloud.roamingproxy.com/signup"
             >
-              Start Free Trial
+              Try It Free
             </Button>
             <Button
               size="lg"
@@ -468,7 +468,7 @@ function PricingPage() {
               as="a"
               href="/contact"
             >
-              Contact Sales
+              Speak With Sales
             </Button>
           </Flex>
         </Box>
