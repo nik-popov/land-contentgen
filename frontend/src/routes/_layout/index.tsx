@@ -28,11 +28,11 @@ function LandingPage() {
         </Heading>
         <Flex justify="space-around" flexWrap="wrap" maxW="1200px" mx="auto" px={4}>
           <VStack textAlign="center" p={4} minW="150px" spacing={2}>
-            <Text fontSize="4xl" fontWeight="bold" color="orange.400">190+</Text>
+            <Text fontSize="4xl" fontWeight="bold" color="orange.400">200+</Text>
             <Text fontSize="lg">Nations Covered</Text>
           </VStack>
           <VStack textAlign="center" p={4} minW="150px" spacing={2}>
-            <Text fontSize="4xl" fontWeight="bold" color="orange.400">99.9%</Text>
+            <Text fontSize="4xl" fontWeight="bold" color="orange.400">99.8%</Text>
             <Text fontSize="lg">Availability</Text>
           </VStack>
           <VStack textAlign="center" p={4} minW="150px" spacing={2}>
@@ -40,7 +40,7 @@ function LandingPage() {
             <Text fontSize="lg">Customer Support</Text>
           </VStack>
           <VStack textAlign="center" p={4} minW="150px" spacing={2}>
-            <Text fontSize="4xl" fontWeight="bold" color="orange.400">10M+</Text>
+            <Text fontSize="4xl" fontWeight="bold" color="orange.400">15M+</Text>
             <Text fontSize="lg">IP Addresses</Text>
           </VStack>
           <VStack textAlign="center" p={4} minW="150px" spacing={2}>
