@@ -28,8 +28,9 @@ const Footer = () => {
   </Link>
 </Text>
           <Text color="gray.300" mb={4}>
-            Enterprise grade proxy infrastructure designed specifically for web scraping, data collection, 
-            and market intelligence needs with unlimited scale and global coverage across 190+ countries.
+            
+Enterprise-level proxy infrastructure built for web scraping, data collection, and market intelligence, 
+offering limitless scalability and global reach across over 190 countries.
           </Text>
          
             <Text color="gray.300" mb={4}>
