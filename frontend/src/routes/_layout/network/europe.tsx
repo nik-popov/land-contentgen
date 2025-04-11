@@ -9,31 +9,31 @@ export const Route = createFileRoute("/_layout/network/europe")({
 
 function EuropeProxiesPage() {
   const regionData = [
-    { region: "Western Europe", countries: 9, cities: 78, useCases: "GDPR compliance, market research, localized testing" },
-    { region: "Northern Europe", countries: 10, cities: 42, useCases: "E-commerce optimization, multilingual testing, price verification" },
-    { region: "Southern Europe", countries: 8, cities: 48, useCases: "Tourism industry testing, regional content delivery, SEO validation" },
-    { region: "Eastern Europe", countries: 11, cities: 47, useCases: "Market expansion research, pricing analysis, compliance verification" }
+    { region: "Western Europe", countries: 9, cities: 78, useCases: "GDPR adherence, market studies, regional testing" },
+    { region: "Northern Europe", countries: 10, cities: 42, useCases: "Online store enhancement, language testing, price checks" },
+    { region: "Southern Europe", countries: 8, cities: 48, useCases: "Travel sector validation, local content serving, SEO confirmation" },
+    { region: "Eastern Europe", countries: 11, cities: 47, useCases: "Market growth analysis, cost evaluation, regulatory checks" }
   ];
 
   const locationFeatures = [
     { 
-      title: "Comprehensive Coverage", 
-      description: "Access to residential proxies across all 38 European countries with EU and non-EU specific targeting", 
+      title: "Extensive Reach", 
+      description: "Utilize residential proxies spanning all 38 European nations, with options for EU and non-EU targeting", 
       icon: "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/aws.png" 
     },
     { 
-      title: "City-Level Precision", 
-      description: "Target proxies in 215 major European cities with specific postal code targeting capabilities", 
+      title: "City-Specific Accuracy", 
+      description: "Pinpoint proxies in 215 key European cities, including precise postal code targeting", 
       icon: "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/mongodb.png" 
     },
     { 
-      title: "ISP Selection", 
-      description: "Choose specific European internet service providers like Deutsche Telekom, Orange, Vodafone, and more", 
+      title: "Provider Choice", 
+      description: "Select from prominent European ISPs such as Deutsche Telekom, Orange, Vodafone, and others", 
       icon: "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/kubernetes.png" 
     },
     { 
-      title: "Location Verification", 
-      description: "Every proxy location is verified through multiple sources to ensure accurate geographic positioning", 
+      title: "Geo-Verification", 
+      description: "All proxy locations are cross-checked via multiple sources for precise geographic placement", 
       icon: "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/analytics.png" 
     }
   ];
@@ -44,27 +44,26 @@ function EuropeProxiesPage() {
       <Box py={16} bg="red.50" color="gray.800">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h1" size="2xl" textAlign="center" mb={8} fontWeight="medium">
-            Europe Proxies
+            European Proxy Network
           </Heading>
           <Text fontSize="xl" textAlign="center" mb={12} maxW="800px" mx="auto">
-            Access the most comprehensive network of European geo-targeted proxies.
-            Route your connections through any EU country, region, or city with pinpoint accuracy for GDPR compliance and local market research.
+            Tap into the broadest array of geo-targeted proxies in Europe. Direct your traffic through any EU country, region, or city with exceptional precision for GDPR compliance and localized market insights.
           </Text>
           
           <Flex justify="space-between" flexWrap="wrap" gap={6}>
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="red.600">Pan-European Coverage</Heading>
-              <Text>Connect through residential, datacenter, and mobile IPs from all 38 European countries. Target specific regions, cities, or postal codes for precise geo-targeting across the EU and beyond.</Text>
+              <Heading as="h3" size="md" color="red.600">Europe-Wide Access</Heading>
+              <Text>Route traffic via residential, datacenter, and mobile IPs across all 38 European nations. Focus on specific regions, cities, or postal codes for accurate geo-targeting throughout the EU and beyond.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="red.600">Authentic European Experience</Heading>
-              <Text>Experience websites and apps exactly as European users do with genuine residential IPs that reflect real user attributes, browser fingerprints, and network characteristics from each country.</Text>
+              <Heading as="h3" size="md" color="red.600">True European Perspective</Heading>
+              <Text>View websites and apps as European users do, using authentic residential IPs that mirror real user profiles, browser signatures, and network traits from each country.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="red.600">EU Regulatory Compliance</Heading>
-              <Text>Test GDPR compliance, cookie consent flows, and regulatory requirements with country-specific IPs. Verify geo-restrictions and ensure proper implementation of European privacy standards.</Text>
+              <Heading as="h3" size="md" color="red.600">EU Regulation Testing</Heading>
+              <Text>Assess GDPR compliance, cookie policies, and regulatory standards with country-specific IPs. Confirm geo-blocks and ensure adherence to European privacy rules.</Text>
             </VStack>
           </Flex>
         </Box>
@@ -74,29 +73,27 @@ function EuropeProxiesPage() {
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
-            Key Benefits of European Proxies
+            Advantages of European Proxies
           </Heading>
           
           <Grid templateColumns={{ base: "1fr", md: "1fr 1fr", lg: "1fr 1fr 1fr" }} gap={10} mt={10}>
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
                 <StatNumber color="red.600">100%</StatNumber>
-                <StatLabel>European Market Coverage</StatLabel>
+                <StatLabel>Europe-Wide Reach</StatLabel>
               </Stat>
               <Text>
-                Access every European market with our comprehensive network that covers all 
-                38 countries from Iceland to Cyprus, and from Portugal to Russia.
+                Cover every European market with our extensive network spanning all 38 countries, from Iceland to Cyprus and Portugal to Russia.
               </Text>
             </VStack>
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
                 <StatNumber color="red.600">94%</StatNumber>
-                <StatLabel>GDPR Compliance Accuracy</StatLabel>
+                <StatLabel>GDPR Testing Precision</StatLabel>
               </Stat>
               <Text>
-                Organizations report up to 94% more accurate regulatory compliance testing when using
-                our European proxies compared to simulated environments or VPNs.
+                Companies achieve up to 94% higher accuracy in regulatory testing with our European proxies compared to emulated setups or VPNs.
               </Text>
             </VStack>
             
@@ -106,8 +103,7 @@ function EuropeProxiesPage() {
                 <StatLabel>Residential IPs</StatLabel>
               </Stat>
               <Text>
-                Choose from over 1.8 million residential IP addresses across Europe, 
-                ensuring authentic local browsing experiences and reduced detection rates.
+                Select from over 1.8 million residential IPs across Europe for genuine local browsing and lower detection risks.
               </Text>
             </VStack>
           </Grid>
@@ -118,7 +114,7 @@ function EuropeProxiesPage() {
       <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={12} fontWeight="medium">
-            European Proxy Coverage
+            Proxy Coverage Across Europe
           </Heading>
           
           <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={8}>
@@ -136,7 +132,7 @@ function EuropeProxiesPage() {
                   </Flex>
                 </Stat>
                 <Text fontSize="sm" color="gray.600">
-                  <Text as="span" fontWeight="bold">Common Use Cases:</Text> {region.useCases}
+                  <Text as="span" fontWeight="bold">Key Uses:</Text> {region.useCases}
                 </Text>
               </Box>
             ))}
@@ -148,10 +144,10 @@ function EuropeProxiesPage() {
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={4} fontWeight="medium">
-            Advanced European Location Capabilities
+            Advanced Geo-Targeting in Europe
           </Heading>
           <Text fontSize="lg" textAlign="center" mb={12} maxW="700px" mx="auto">
-            Our European proxy network provides precise geographic targeting with industry-leading accuracy
+            Our European proxy network offers exact location targeting with top-tier precision.
           </Text>
           
           <Grid templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }} gap={8}>
@@ -160,8 +156,8 @@ function EuropeProxiesPage() {
                 <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/grafana.png" alt="Real-time Location Verification" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">Real-time Location Verification</Heading>
-                <Text color="gray.600">Every proxy location is continuously verified through multiple independent sources to ensure geographic accuracy</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">Live Geo-Validation</Heading>
+                <Text color="gray.600">Proxy locations are constantly validated using various independent sources to guarantee geographic fidelity.</Text>
               </Box>
             </Flex>
             
@@ -170,8 +166,8 @@ function EuropeProxiesPage() {
                 <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/aws.png" alt="EU/Non-EU Targeting" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">EU/Non-EU Targeting</Heading>
-                <Text color="gray.600">Specifically target EU or non-EU countries for regulatory compliance testing and regional market research</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">EU vs. Non-EU Focus</Heading>
+                <Text color="gray.600">Target EU or non-EU nations specifically for compliance testing and regional market analysis.</Text>
               </Box>
             </Flex>
             
@@ -180,8 +176,8 @@ function EuropeProxiesPage() {
                 <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/redis.png" alt="Multilingual Testing" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">Multilingual Testing</Heading>
-                <Text color="gray.600">Test language-specific content and localization with country-specific proxies that trigger appropriate language settings</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">Language-Specific Testing</Heading>
+                <Text color="gray.600">Validate language-specific content and localization using country-tailored proxies to activate correct language settings.</Text>
               </Box>
             </Flex>
             
@@ -190,8 +186,8 @@ function EuropeProxiesPage() {
                 <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/rest.png" alt="European Location API" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">European Location API</Heading>
-                <Text color="gray.600">Programmatically select locations with our comprehensive API for automated geo-targeting across all European regions</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">Europe Geo-API</Heading>
+                <Text color="gray.600">Automate location selection across Europe with our robust API for seamless geo-targeting.</Text>
               </Box>
             </Flex>
           </Grid>
@@ -202,58 +198,58 @@ function EuropeProxiesPage() {
       <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
-            European Proxy Platform Features
+            Features of Our European Proxy Platform
           </Heading>
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="red.600">Geographic Targeting</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.600">Geo-Targeting Options</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Country Selection</Text> - Access proxies from all 38 European countries with comprehensive coverage</Text>
+                  <Text><Text as="span" fontWeight="bold">Nationwide Access</Text> - Reach proxies in all 38 European countries with full coverage.</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Regional Targeting</Text> - Select from specific European regions including Western, Northern, Southern, and Eastern Europe</Text>
+                  <Text><Text as="span" fontWeight="bold">Region Selection</Text> - Choose from Western, Northern, Southern, and Eastern European zones.</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">City Precision</Text> - Target specific European cities with multiple proxies available in each location</Text>
+                  <Text><Text as="span" fontWeight="bold">Urban Targeting</Text> - Focus on specific European cities with multiple proxy options per location.</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">ISP Selection</Text> - Choose proxies from specific European internet service providers or mobile carriers</Text>
+                  <Text><Text as="span" fontWeight="bold">ISP Options</Text> - Pick proxies from specific European ISPs or mobile networks.</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">EU/Non-EU Filtering</Text> - Filter proxies by EU membership status for regulatory compliance testing</Text>
+                  <Text><Text as="span" fontWeight="bold">EU/Non-EU Sorting</Text> - Sort proxies by EU status for compliance validation.</Text>
                 </ListItem>
               </List>
             </Box>
             
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="red.600">Control & Integration</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.600">Management & Connectivity</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Location Groups</Text> - Create and save custom European location groups for frequent testing scenarios</Text>
+                  <Text><Text as="span" fontWeight="bold">Geo-Groups</Text> - Save custom European location sets for recurring test scenarios.</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Location API</Text> - Access all European location features programmatically through our comprehensive API</Text>
+                  <Text><Text as="span" fontWeight="bold">Geo-API</Text> - Leverage all European location features via our detailed API.</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Browser Integration</Text> - Use browser extensions to quickly switch between European locations in your testing</Text>
+                  <Text><Text as="span" fontWeight="bold">Browser Tools</Text> - Use extensions to easily switch European locations during testing.</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">GDPR Test Suite</Text> - Specialized tools for testing GDPR compliance across different European jurisdictions</Text>
+                  <Text><Text as="span" fontWeight="bold">GDPR Toolkit</Text> - Dedicated tools for GDPR compliance testing across European regions.</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Location Analytics</Text> - Track proxy performance by location with detailed success metrics across Europe</Text>
+                  <Text><Text as="span" fontWeight="bold">Geo-Performance Insights</Text> - Monitor proxy success rates by location with comprehensive European metrics.</Text>
                 </ListItem>
               </List>
             </Box>
@@ -265,35 +261,27 @@ function EuropeProxiesPage() {
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={12} fontWeight="medium">
-            European Success Stories
+            Success Stories from Europe
           </Heading>
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="red.600">E-commerce Platform Masters GDPR Compliance</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.600">E-commerce Firm Ensures GDPR Compliance</Heading>
               <Text mb={4}>
-                A global e-commerce company used our European proxies to test their GDPR compliance across 
-                all EU member states. They identified critical variations in cookie consent implementations 
-                and data collection practices, avoiding potential fines of up to €20 million.
+                A worldwide e-commerce business used our European proxies to verify GDPR compliance across all EU countries. They spotted critical differences in cookie consent setups and data practices, avoiding fines up to €20 million.
               </Text>
-              <Text fontStyle="italic" fontSize="sm" color="gray.600">
-                "Testing with authentic European IPs revealed that our cookie consent mechanisms were failing in 
-                certain countries due to local browser variations. The country-specific insights helped us 
-                implement proper compliance across the entire European market."
+              <Text fontStyle="italic" fontSize="sm" color="gray. W600">
+                "Using real European IPs showed our cookie consent systems failing in some nations due to local browser quirks. These insights enabled us to achieve full compliance across Europe."
               </Text>
             </Box>
             
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="red.600">Travel Site Optimizes Multilingual Experience</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.600">Travel Platform Refines Language Support</Heading>
               <Text mb={4}>
-                A leading travel booking service implemented our European proxies to test their website across 
-                22 different language versions. They discovered significant localization issues and currency 
-                display problems, leading to a 27% increase in European booking conversions after fixes.
+                A major travel reservation service employed our European proxies to test their site in 22 languages. They identified key localization and currency display issues, boosting European bookings by 27% after corrections.
               </Text>
               <Text fontStyle="italic" fontSize="sm" color="gray.600">
-                "The ability to test from specific European countries allowed us to experience our site exactly 
-                as local users do. We uncovered language detection issues and currency conversion problems that 
-                were costing us millions in lost bookings."
+                "Testing from specific European nations let us see our site as locals do. We fixed language detection and currency errors that were losing us millions in bookings."
               </Text>
             </Box>
           </Grid>
@@ -304,10 +292,10 @@ function EuropeProxiesPage() {
       <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={8} fontWeight="medium">
-            European Proxy Network Coverage
+            Coverage of Our European Proxy Network
           </Heading>
           <Text fontSize="lg" mb={12} maxW="700px" mx="auto">
-            Our extensive network provides comprehensive coverage across all European regions with dense concentration in key markets
+            Our vast network ensures full coverage across Europe with strong presence in major markets.
           </Text>
           
           <Box bg="white" p={6} borderRadius="md" boxShadow="md">
@@ -316,25 +304,25 @@ function EuropeProxiesPage() {
                 <Text fontWeight="bold" color="red.600">Western Europe</Text>
                 <Text>9 Countries</Text>
                 <Text>78 Cities</Text>
-                <Text>Major ISPs Covered</Text>
+                <Text>Key ISPs Included</Text>
               </VStack>
               <VStack>
                 <Text fontWeight="bold" color="red.600">Northern Europe</Text>
                 <Text>10 Countries</Text>
                 <Text>42 Cities</Text>
-                <Text>Major ISPs Covered</Text>
+                <Text>Key ISPs Included</Text>
               </VStack>
               <VStack>
                 <Text fontWeight="bold" color="red.600">Southern Europe</Text>
                 <Text>8 Countries</Text>
                 <Text>48 Cities</Text>
-                <Text>Major ISPs Covered</Text>
+                <Text>Key ISPs Included</Text>
               </VStack>
               <VStack>
                 <Text fontWeight="bold" color="red.600">Eastern Europe</Text>
                 <Text>11 Countries</Text>
                 <Text>47 Cities</Text>
-                <Text>Major ISPs Covered</Text>
+                <Text>Key ISPs Included</Text>
               </VStack>
             </SimpleGrid>
           </Box>
@@ -345,15 +333,14 @@ function EuropeProxiesPage() {
       <Box py={16} bg="red.600" color="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">
-            Access Any European Location
+            Reach Any European Locale
           </Heading>
           <Text fontSize="lg" mb={10} maxW="700px" mx="auto" color="white">
-            Get started with our European proxy network today and experience
-            the web from any location across 38 European countries
+            Start using our European proxy network now and navigate the web from any of the 38 European countries.
           </Text>
           
           <Flex justify="center" gap={6} flexWrap="wrap">
-          <Button
+            <Button
               size="lg"
               bg="white"
               color="red.500"
@@ -361,7 +348,7 @@ function EuropeProxiesPage() {
               as="a"
               href="/demo-request"
             >
-              Request Demo
+              Schedule Demo
             </Button>
             
             <Button
@@ -373,36 +360,11 @@ function EuropeProxiesPage() {
               as="a"
               href="https://cloud.roamingproxy.com/signup"
             >
-              Start Free Trial
+              Try Free Now
             </Button>
           </Flex>
         </Box>
       </Box>
-      
-      {/* <Box py={16} bg="white">
-        <Box maxW="1200px" mx="auto" px={4} textAlign="center">
-          <Heading as="h3" size="lg" mb={8} fontWeight="medium">
-            Powered by Familiar Technologies
-          </Heading>
-          <Flex justify="center" gap={8} flexWrap="wrap">
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/python.png" alt="Python" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/selenium.png" alt="Selenium" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/aws.png" alt="AWS" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/docker.png" alt="Docker" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/kubernetes.png" alt="Kubernetes" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/redis.png" alt="Redis" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/mongodb.png" alt="MongoDB" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/postgresql.png" alt="PostgreSQL" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/rest.png" alt="REST API" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/javascript.png" alt="JavaScript" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/html.png" alt="HTML" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/css.png" alt="CSS" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/node_js.png" alt="Node.js" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/react.png" alt="React" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/typescript.png" alt="TypeScript" boxSize="50px" />
-          </Flex>
-        </Box>
-      </Box> */}
       
       {/* Footer */}
       <Footer />
