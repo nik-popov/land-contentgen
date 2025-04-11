@@ -47,11 +47,13 @@ function Layout() {
         expires={150}
         debug={true} // Remove in production
         onAccept={() => {
-          console.log("Cookies accepted");
-          // Update consent for analytics
           window.gtag?.("consent", "update", {
-            analytics_storage: "granted",
-            ad_storage: "granted",
+            ad_user_data: "granted",        // For ad personalization data sharing
+            ad_personalization: "granted",  // For personalized ads
+            ad_storage: "granted",          // For ad cookies (e.g., _fbp)
+            analytics_storage: "granted",   // For analytics cookies (e.g., _ga)
+            functionality_storage: "granted", // For functional cookies (e.g., language_pref)
+            security_storage: "granted"     // For essential cookies (e.g., JSESSIONID)
           });
         }}
         onDecline={() => {
