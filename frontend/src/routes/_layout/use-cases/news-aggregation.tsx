@@ -381,7 +381,7 @@ function NewsAggregationPage() {
               color="white"
               _hover={{ bg: "red.700" }}
               as="a"
-              href="https://cloud.roamingproxy.com/signup"
+              href="https://buy.stripe.com/4gwg1C2by9Cs2Ry6op"
             >
               Start Free Trial
             </Button>

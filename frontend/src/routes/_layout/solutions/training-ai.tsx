@@ -359,7 +359,7 @@ function TrainingAIPage() {
         _hover={{ bg: "purple.500" }}
         width={{ base: "full", md: "auto" }}
         as="a"
-        href="https://cloud.roamingproxy.com/signup"
+        href="https://buy.stripe.com/4gwg1C2by9Cs2Ry6op"
       >
         Start Free Trial
       </Button>

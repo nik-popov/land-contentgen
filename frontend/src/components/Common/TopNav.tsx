@@ -352,7 +352,7 @@ const TopNav = () => {
                 </Box>
               ) : (
                 <Flex gap={2}>
-                  <Button as={RouterLink} to="https://cloud.roamingproxy.com/signup" colorScheme="red" variant="solid" size="sm">
+                  <Button as={RouterLink} to="https://buy.stripe.com/4gwg1C2by9Cs2Ry6op" colorScheme="red" variant="solid" size="sm">
                     Start Free Trial
                   </Button>
                   <Button as={RouterLink} to="https://cloud.roamingproxy.com/login" variant="outline" colorScheme="red" size="sm">
@@ -408,7 +408,7 @@ const TopNav = () => {
               <Flex flexDir="column" gap={2} px={4} py={2}>
                 <Button
                   as={RouterLink}
-                  to="https://cloud.roamingproxy.com/signup"
+                  to="https://buy.stripe.com/4gwg1C2by9Cs2Ry6op"
                   colorScheme="red"
                   variant="solid"
                   size="sm"
