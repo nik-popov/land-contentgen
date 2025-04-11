@@ -415,11 +415,6 @@ function CookiePolicyPage() {
               When you first visit our Website, you will be presented with a cookie consent banner that allows you to accept or decline different categories of cookies. This tool is designed to give you control over the cookies stored on your device and to ensure that we comply with applicable data protection regulations.
             </Text>
             <Text fontSize="md" mb={4}>
-              Our consent tool lets you accept all cookies or decline non-essential ones. 
-              Essential cookies are always active for site functionality. 
-              California residents can opt out of targeted advertising cookies via this tool or by visiting <Link color="red.500" href="https://roamingproxy.com/do-not-sell">roamingproxy.com/do-not-sell</Link>.
-            </Text>
-            <Text fontSize="md" mb={4}>
               Through our cookie consent tool, you can:
             </Text>
             <UnorderedList pl={6} spacing={2} mb={4}>
