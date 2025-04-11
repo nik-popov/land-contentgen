@@ -46,27 +46,27 @@ function ProxyLocationsPage() {
       <Box py={16} bg="red.50" color="gray.800">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h1" size="2xl" textAlign="center" mb={8} fontWeight="medium">
-            Proxy Locations
+            Global Proxy Locations
           </Heading>
           <Text fontSize="xl" textAlign="center" mb={12} maxW="800px" mx="auto">
-            Access the world's most comprehensive network of geo-targeted proxies.
-            Route your connections through any country, city, or ISP with pinpoint accuracy.
+            Tap into the most extensive collection of geo-specific proxies worldwide. 
+            Direct your traffic through any nation, urban center, or ISP with exceptional precision.
           </Text>
           
           <Flex justify="space-between" flexWrap="wrap" gap={6}>
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="red.600">Global Coverage</Heading>
-              <Text>Connect through residential, datacenter, and mobile IPs from 195+ countries and 850+ cities worldwide. Target specific regions, cities, or postal codes for precise geo-targeting.</Text>
+              <Heading as="h3" size="md" color="red.600">Worldwide Reach</Heading>
+              <Text>Link through residential, datacenter, and mobile IPs across 195+ countries and 850+ cities globally. Focus on specific regions, cities, or postal codes for accurate geo-targeting.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="red.600">Authentic Local Experience</Heading>
-              <Text>Experience websites and apps exactly as local users do with genuine residential IPs that reflect real user attributes, browser fingerprints, and network characteristics.</Text>
+              <Heading as="h3" size="md" color="red.600">Realistic Local Views</Heading>
+              <Text>Interact with websites and applications as local users would, using genuine residential IPs that mimic actual user profiles, browser signatures, and network conditions.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="red.600">Customizable Selection</Heading>
-              <Text>Choose locations based on specific criteria including country, region, city, ISP, network type, and connection speed. Save custom location profiles for frequent use cases.</Text>
+              <Heading as="h3" size="md" color="red.600">Tailored Location Options</Heading>
+              <Text>Pick locations based on criteria like country, region, city, ISP, network type, or speed. Store custom location sets for recurring use scenarios.</Text>
             </VStack>
           </Flex>
         </Box>
@@ -76,40 +76,40 @@ function ProxyLocationsPage() {
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
-            Key Benefits of Geo-Targeted Proxies
+            Advantages of Geo-Specific Proxies
           </Heading>
           
           <Grid templateColumns={{ base: "1fr", md: "1fr 1fr", lg: "1fr 1fr 1fr" }} gap={10} mt={10}>
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
                 <StatNumber color="red.600">100%</StatNumber>
-                <StatLabel>Global Market Coverage</StatLabel>
+                <StatLabel>Worldwide Market Access</StatLabel>
               </Stat>
               <Text>
-                Access any geographic market with our comprehensive network that covers every country 
-                and major city worldwide, enabling truly global reach for your business.
+                Reach any global market with our extensive network, covering every country 
+                and key city, providing unmatched scope for your operations.
               </Text>
             </VStack>
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
                 <StatNumber color="red.600">87%</StatNumber>
-                <StatLabel>Testing Accuracy Increase</StatLabel>
+                <StatLabel>Enhanced Testing Precision</StatLabel>
               </Stat>
               <Text>
-                Organizations report up to 87% more accurate localization testing when using
-                our geo-targeted proxies compared to simulated environments or VPNs.
+                Companies note up to 87% improved accuracy in localization testing with our 
+                geo-specific proxies compared to virtual setups or VPNs.
               </Text>
             </VStack>
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
                 <StatNumber color="red.600">5M+</StatNumber>
-                <StatLabel>Residential IPs</StatLabel>
+                <StatLabel>Residential IPs Available</StatLabel>
               </Stat>
               <Text>
-                Choose from over 5 million residential IP addresses across the globe, 
-                ensuring authentic local browsing experiences and reduced detection rates.
+                Select from over 5 million residential IPs worldwide for true local browsing 
+                experiences and minimized detection risks.
               </Text>
             </VStack>
           </Grid>
@@ -120,7 +120,7 @@ function ProxyLocationsPage() {
       <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={12} fontWeight="medium">
-            Regional Proxy Coverage
+            Proxy Coverage by Region
           </Heading>
           
           <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={8}>
@@ -138,7 +138,7 @@ function ProxyLocationsPage() {
                   </Flex>
                 </Stat>
                 <Text fontSize="sm" color="gray.600">
-                  <Text as="span" fontWeight="bold">Common Use Cases:</Text> {region.useCases}
+                  <Text as="span" fontWeight="bold">Typical Applications:</Text> {region.useCases}
                 </Text>
               </Box>
             ))}
@@ -150,10 +150,10 @@ function ProxyLocationsPage() {
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={4} fontWeight="medium">
-            Advanced Location Capabilities
+            Sophisticated Location Tools
           </Heading>
           <Text fontSize="lg" textAlign="center" mb={12} maxW="700px" mx="auto">
-            Our proxy location network provides precise geographic targeting with industry-leading accuracy
+            Our proxy network offers exact geographic targeting with top-tier precision.
           </Text>
           
           <Grid templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }} gap={8}>
@@ -162,8 +162,8 @@ function ProxyLocationsPage() {
                 <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/grafana.png" alt="Real-time Location Verification" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">Real-time Location Verification</Heading>
-                <Text color="gray.600">Every proxy location is continuously verified through multiple independent sources to ensure geographic accuracy</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">Dynamic Location Validation</Heading>
+                <Text color="gray.600">Proxy locations are consistently checked using multiple independent sources to guarantee geographic reliability.</Text>
               </Box>
             </Flex>
             
@@ -172,8 +172,8 @@ function ProxyLocationsPage() {
                 <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/aws.png" alt="Diverse IP Types" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">Diverse IP Types</Heading>
-                <Text color="gray.600">Access residential, datacenter, and mobile IPs in each location, with the ability to specify connection type for your use case</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">Varied IP Options</Heading>
+                <Text color="gray.600">Utilize residential, datacenter, and mobile IPs per location, with options to choose connection types suited to your needs.</Text>
               </Box>
             </Flex>
             
@@ -182,8 +182,8 @@ function ProxyLocationsPage() {
                 <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/redis.png" alt="Location Persistence" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">Location Persistence</Heading>
-                <Text color="gray.600">Maintain consistent geo-locations across sessions with sticky IP options that keep you in the same region</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">Stable Location Continuity</Heading>
+                <Text color="gray.600">Keep consistent geo-locations across sessions using sticky IP settings to stay within the same area.</Text>
               </Box>
             </Flex>
             
@@ -192,8 +192,8 @@ function ProxyLocationsPage() {
                 <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/rest.png" alt="Location API" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">Location API</Heading>
-                <Text color="gray.600">Programmatically select locations with our comprehensive API for automated geo-targeting across all applications</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">Geo-Targeting API</Heading>
+                <Text color="gray.600">Automate location choices with our robust API for seamless geo-targeting across your applications.</Text>
               </Box>
             </Flex>
           </Grid>
@@ -204,58 +204,58 @@ function ProxyLocationsPage() {
       <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
-            Proxy Location Platform Features
+            Proxy Location System Features
           </Heading>
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="red.600">Geographic Targeting</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.600">Geo-Selection Tools</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Country Selection</Text> - Access proxies from 195+ countries with comprehensive global coverage</Text>
+                  <Text><Text as="span" fontWeight="bold">Nationwide Options</Text> - Use proxies from 195+ countries with full global reach.</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">City Targeting</Text> - Select from 850+ cities worldwide with multiple proxies available in each location</Text>
+                  <Text><Text as="span" fontWeight="bold">City-Level Focus</Text> - Pick from 850+ cities worldwide with multiple proxies per location.</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Postal Code Precision</Text> - Target specific postal codes in major markets for hyper-local testing</Text>
+                  <Text><Text as="span" fontWeight="bold">Postal Code Accuracy</Text> - Target specific postal codes in key markets for ultra-local testing.</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">ISP Selection</Text> - Choose proxies from specific internet service providers or mobile carriers</Text>
+                  <Text><Text as="span" fontWeight="bold">ISP Customization</Text> - Select proxies from specific ISPs or mobile networks.</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Region Rotation</Text> - Automatically rotate through proxies within a specific geographic region</Text>
+                  <Text><Text as="span" fontWeight="bold">Regional Cycling</Text> - Seamlessly cycle through proxies within a chosen geographic area.</Text>
                 </ListItem>
               </List>
             </Box>
             
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="red.600">Control & Integration</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.600">Management & Connectivity</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Location Groups</Text> - Create and save custom location groups for frequent testing scenarios</Text>
+                  <Text><Text as="span" fontWeight="bold">Location Profiles</Text> - Build and save tailored location sets for common testing needs.</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Location API</Text> - Access all location features programmatically through our comprehensive API</Text>
+                  <Text><Text as="span" fontWeight="bold">Geo-API Access</Text> - Leverage all location capabilities through our detailed API.</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Browser Integration</Text> - Use browser extensions to quickly switch between locations in your testing</Text>
+                  <Text><Text as="span" fontWeight="bold">Browser Tools</Text> - Use extensions to swiftly change locations during testing.</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Location Validation</Text> - Verify the accuracy of proxy locations with our built-in testing tools</Text>
+                  <Text><Text as="span" fontWeight="bold">Location Assurance</Text> - Confirm proxy location accuracy with integrated validation tools.</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Location Analytics</Text> - Track proxy performance by location with detailed success metrics</Text>
+                  <Text><Text as="span" fontWeight="bold">Performance Tracking</Text> - Monitor proxy effectiveness by location with in-depth metrics.</Text>
                 </ListItem>
               </List>
             </Box>
@@ -267,35 +267,33 @@ function ProxyLocationsPage() {
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={12} fontWeight="medium">
-            Geo-Targeting Success Stories
+            Success Stories with Geo-Targeting
           </Heading>
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="red.600">Global E-commerce Platform Perfects Localization</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.600">E-commerce Giant Refines Localization</Heading>
               <Text mb={4}>
-                A leading e-commerce platform used our location-specific proxies to test their website and mobile 
-                app across 73 countries. They identified critical localization issues in 18 markets, improving user 
-                experience and increasing conversion rates by an average of 26% in those regions.
+                A top e-commerce company employed our geo-specific proxies to evaluate their website and app 
+                across 73 nations. They pinpointed vital localization flaws in 18 regions, enhancing user 
+                satisfaction and boosting conversions by an average of 26% in those areas.
               </Text>
               <Text fontStyle="italic" fontSize="sm" color="gray.600">
-                "The ability to access authentic residential IPs in each market gave us unprecedented insight into 
-                how our platform actually performs for local users. We uncovered issues that were invisible in our 
-                traditional testing environments."
+                "Authentic residential IPs in each region gave us unmatched visibility into our platform’s 
+                local performance, revealing issues we couldn’t see in standard testing setups."
               </Text>
             </Box>
             
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="red.600">Travel Industry Leader Optimizes Regional Pricing</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.600">Travel Leader Enhances Pricing Strategy</Heading>
               <Text mb={4}>
-                A global travel booking service implemented our geo-targeted proxies to monitor competitive 
-                pricing across 42 countries simultaneously. They discovered significant pricing discrepancies 
-                based on user location and optimized their own pricing strategy, resulting in 14% revenue growth.
+                A worldwide travel booking service used our geo-targeted proxies to track competitor pricing 
+                across 42 countries at once. They identified notable pricing variations by location, refining 
+                their pricing approach and achieving a 14% revenue increase.
               </Text>
               <Text fontStyle="italic" fontSize="sm" color="gray.600">
-                "Before using location-specific proxies, we had no idea how much our competitors' pricing varied 
-                by region. The insights we gained transformed our entire pricing strategy and significantly 
-                improved our market position."
+                "Geo-specific proxies showed us how much competitor pricing differed by region—insights that 
+                reshaped our pricing model and strengthened our market standing."
               </Text>
             </Box>
           </Grid>
@@ -306,10 +304,10 @@ function ProxyLocationsPage() {
       <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={8} fontWeight="medium">
-            Global Proxy Network
+            Worldwide Proxy Coverage
           </Heading>
           <Text fontSize="lg" mb={12} maxW="700px" mx="auto">
-            Our extensive network provides coverage across all populated continents with dense concentration in key markets
+            Our broad network spans all inhabited continents, with dense coverage in critical markets.
           </Text>
           
           <Box bg="white" p={6} borderRadius="md" boxShadow="md">
@@ -353,11 +351,11 @@ function ProxyLocationsPage() {
       <Box py={16} bg="red.600" color="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">
-            Access Any Location Worldwide
+            Connect Globally with Ease
           </Heading>
           <Text fontSize="lg" mb={10} maxW="700px" mx="auto" color="white">
-            Get started with our geo-targeted proxy network today and experience
-            the web from any location around the globe
+            Begin using our geo-targeted proxy network now and navigate 
+            the web from any spot across the globe.
           </Text>
           
           <Flex justify="center" gap={6} flexWrap="wrap">
@@ -369,7 +367,7 @@ function ProxyLocationsPage() {
               as="a"
               href="/demo-request"
             >
-             Request Demo
+              Request Demo
             </Button>
             
             <Button
@@ -386,37 +384,6 @@ function ProxyLocationsPage() {
           </Flex>
         </Box>
       </Box>
-      {/* <Box py={16} bg="white">
-        <Box maxW="1200px" mx="auto" px={4} textAlign="center">
-          <Heading as="h3" size="lg" mb={8} fontWeight="medium">
-            Powered by Familiar Technologies
-          </Heading>
-          <Flex justify="center" gap={8} flexWrap="wrap">
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/python.png" alt="Python" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/selenium.png" alt="Selenium" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/aws.png" alt="AWS" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/docker.png" alt="Docker" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/kubernetes.png" alt="Kubernetes" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/redis.png" alt="Redis" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/mongodb.png" alt="MongoDB" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/postgresql.png" alt="PostgreSQL" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/rest.png" alt="REST API" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/javascript.png" alt="JavaScript" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/html.png" alt="HTML" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/css.png" alt="CSS" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/node_js.png" alt="Node.js" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/react.png" alt="React" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/typescript.png" alt="TypeScript" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/rabbitmq.png" alt="RabbitMQ" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/graphql.png" alt="GraphQL" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/git.png" alt="Git" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/prometheus.png" alt="Prometheus" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/grafana.png" alt="Grafana" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/gcp.png" alt="Google Cloud Platform" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/microsoft_azure.png" alt="Microsoft Azure" boxSize="50px" />
-          </Flex>
-        </Box>
-      </Box> */}
       
       {/* Footer */}
       <Footer />
