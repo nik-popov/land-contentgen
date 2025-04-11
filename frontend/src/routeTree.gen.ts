@@ -50,7 +50,6 @@ import { Route as LayoutResourcesWebScrapingGuidesImport } from './routes/_layou
 import { Route as LayoutResourcesSupportCenterImport } from './routes/_layout/resources/support-center'
 import { Route as LayoutResourcesFaqImport } from './routes/_layout/resources/faq'
 import { Route as LayoutResourcesCodeExamplesImport } from './routes/_layout/resources/code-examples'
-import { Route as LayoutResourcesBlogCommentsImport } from './routes/_layout/resources/blog-comments'
 import { Route as LayoutResourcesBlogImport } from './routes/_layout/resources/blog'
 import { Route as LayoutNetworkStatusImport } from './routes/_layout/network/status'
 import { Route as LayoutNetworkSouthAmericaImport } from './routes/_layout/network/south-america'
@@ -314,13 +313,6 @@ const LayoutResourcesCodeExamplesRoute =
     getParentRoute: () => LayoutRoute,
   } as any)
 
-const LayoutResourcesBlogCommentsRoute =
-  LayoutResourcesBlogCommentsImport.update({
-    id: '/resources/blog-comments',
-    path: '/resources/blog-comments',
-    getParentRoute: () => LayoutRoute,
-  } as any)
-
 const LayoutResourcesBlogRoute = LayoutResourcesBlogImport.update({
   id: '/resources/blog',
   path: '/resources/blog',
@@ -543,13 +535,6 @@ declare module '@tanstack/react-router' {
       path: '/resources/blog'
       fullPath: '/resources/blog'
       preLoaderRoute: typeof LayoutResourcesBlogImport
-      parentRoute: typeof LayoutImport
-    }
-    '/_layout/resources/blog-comments': {
-      id: '/_layout/resources/blog-comments'
-      path: '/resources/blog-comments'
-      fullPath: '/resources/blog-comments'
-      preLoaderRoute: typeof LayoutResourcesBlogCommentsImport
       parentRoute: typeof LayoutImport
     }
     '/_layout/resources/code-examples': {
@@ -775,7 +760,6 @@ interface LayoutRouteChildren {
   LayoutNetworkSouthAmericaRoute: typeof LayoutNetworkSouthAmericaRoute
   LayoutNetworkStatusRoute: typeof LayoutNetworkStatusRoute
   LayoutResourcesBlogRoute: typeof LayoutResourcesBlogRoute
-  LayoutResourcesBlogCommentsRoute: typeof LayoutResourcesBlogCommentsRoute
   LayoutResourcesCodeExamplesRoute: typeof LayoutResourcesCodeExamplesRoute
   LayoutResourcesFaqRoute: typeof LayoutResourcesFaqRoute
   LayoutResourcesSupportCenterRoute: typeof LayoutResourcesSupportCenterRoute
@@ -828,7 +812,6 @@ const LayoutRouteChildren: LayoutRouteChildren = {
   LayoutNetworkSouthAmericaRoute: LayoutNetworkSouthAmericaRoute,
   LayoutNetworkStatusRoute: LayoutNetworkStatusRoute,
   LayoutResourcesBlogRoute: LayoutResourcesBlogRoute,
-  LayoutResourcesBlogCommentsRoute: LayoutResourcesBlogCommentsRoute,
   LayoutResourcesCodeExamplesRoute: LayoutResourcesCodeExamplesRoute,
   LayoutResourcesFaqRoute: LayoutResourcesFaqRoute,
   LayoutResourcesSupportCenterRoute: LayoutResourcesSupportCenterRoute,
@@ -892,7 +875,6 @@ export interface FileRoutesByFullPath {
   '/network/south-america': typeof LayoutNetworkSouthAmericaRoute
   '/network/status': typeof LayoutNetworkStatusRoute
   '/resources/blog': typeof LayoutResourcesBlogRoute
-  '/resources/blog-comments': typeof LayoutResourcesBlogCommentsRoute
   '/resources/code-examples': typeof LayoutResourcesCodeExamplesRoute
   '/resources/faq': typeof LayoutResourcesFaqRoute
   '/resources/support-center': typeof LayoutResourcesSupportCenterRoute
@@ -945,7 +927,6 @@ export interface FileRoutesByTo {
   '/network/south-america': typeof LayoutNetworkSouthAmericaRoute
   '/network/status': typeof LayoutNetworkStatusRoute
   '/resources/blog': typeof LayoutResourcesBlogRoute
-  '/resources/blog-comments': typeof LayoutResourcesBlogCommentsRoute
   '/resources/code-examples': typeof LayoutResourcesCodeExamplesRoute
   '/resources/faq': typeof LayoutResourcesFaqRoute
   '/resources/support-center': typeof LayoutResourcesSupportCenterRoute
@@ -1000,7 +981,6 @@ export interface FileRoutesById {
   '/_layout/network/south-america': typeof LayoutNetworkSouthAmericaRoute
   '/_layout/network/status': typeof LayoutNetworkStatusRoute
   '/_layout/resources/blog': typeof LayoutResourcesBlogRoute
-  '/_layout/resources/blog-comments': typeof LayoutResourcesBlogCommentsRoute
   '/_layout/resources/code-examples': typeof LayoutResourcesCodeExamplesRoute
   '/_layout/resources/faq': typeof LayoutResourcesFaqRoute
   '/_layout/resources/support-center': typeof LayoutResourcesSupportCenterRoute
@@ -1056,7 +1036,6 @@ export interface FileRouteTypes {
     | '/network/south-america'
     | '/network/status'
     | '/resources/blog'
-    | '/resources/blog-comments'
     | '/resources/code-examples'
     | '/resources/faq'
     | '/resources/support-center'
@@ -1108,7 +1087,6 @@ export interface FileRouteTypes {
     | '/network/south-america'
     | '/network/status'
     | '/resources/blog'
-    | '/resources/blog-comments'
     | '/resources/code-examples'
     | '/resources/faq'
     | '/resources/support-center'
@@ -1161,7 +1139,6 @@ export interface FileRouteTypes {
     | '/_layout/network/south-america'
     | '/_layout/network/status'
     | '/_layout/resources/blog'
-    | '/_layout/resources/blog-comments'
     | '/_layout/resources/code-examples'
     | '/_layout/resources/faq'
     | '/_layout/resources/support-center'
@@ -1238,7 +1215,6 @@ export const routeTree = rootRoute
         "/_layout/network/south-america",
         "/_layout/network/status",
         "/_layout/resources/blog",
-        "/_layout/resources/blog-comments",
         "/_layout/resources/code-examples",
         "/_layout/resources/faq",
         "/_layout/resources/support-center",
@@ -1351,10 +1327,6 @@ export const routeTree = rootRoute
     },
     "/_layout/resources/blog": {
       "filePath": "_layout/resources/blog.tsx",
-      "parent": "/_layout"
-    },
-    "/_layout/resources/blog-comments": {
-      "filePath": "_layout/resources/blog-comments.tsx",
       "parent": "/_layout"
     },
     "/_layout/resources/code-examples": {
