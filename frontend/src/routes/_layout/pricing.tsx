@@ -33,7 +33,7 @@ function PricingPage() {
     },
     {
       name: "Pro",
-      description: "Great for analysts and groups aiming to deepen their understanding with consistency.",
+      description: "Great for analysts aiming to deepen their understanding with consistency.",
       monthlyPrice: 149,
       annualPrice: 119,
       popular: true,
