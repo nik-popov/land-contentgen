@@ -9,73 +9,73 @@ export const Route = createFileRoute("/_layout/resources/faq")({
 
 function FAQPage() {
   const faqCategories = [
-    { category: "General Questions", articles: 24, views: "85K+", topics: "Platform overview, getting started, account creation, basic features, system requirements" },
-    { category: "Account & Billing", articles: 36, views: "95K+", topics: "Subscription plans, payment methods, invoices, refunds, enterprise billing, account management" },
-    { category: "Product Features", articles: 42, views: "120K+", topics: "Feature explanations, usage tips, best practices, limitations, feature comparison" },
-    { category: "Technical Support", articles: 65, views: "175K+", topics: "Troubleshooting, error resolution, performance issues, compatibility, integration help" },
-    { category: "Security & Privacy", articles: 28, views: "65K+", topics: "Data protection, security measures, compliance, privacy controls, access management" },
-    { category: "Integrations", articles: 31, views: "80K+", topics: "Third-party integrations, API connections, data syncing, custom integrations" }
+    { category: "General Inquiries", articles: 24, views: "85K+", topics: "Platform basics, initial setup, account registration, core functions, technical prerequisites" },
+    { category: "Account & Payments", articles: 36, views: "95K+", topics: "Pricing tiers, payment options, billing statements, refund process, corporate billing, profile management" },
+    { category: "Platform Capabilities", articles: 42, views: "120K+", topics: "Feature details, usage advice, recommended practices, constraints, feature comparisons" },
+    { category: "Technical Assistance", articles: 65, views: "175K+", topics: "Problem-solving, error fixes, performance optimization, compatibility support, integration guidance" },
+    { category: "Security & Data Privacy", articles: 28, views: "65K+", topics: "Data safeguarding, security protocols, regulatory adherence, privacy settings, access controls" },
+    { category: "External Integrations", articles: 31, views: "80K+", topics: "Third-party connections, API linking, data synchronization, tailored integrations" }
   ];
 
   const popularQuestions = [
     { 
-      question: "How do I reset my password?", 
-      answer: "To reset your password, click on the 'Forgot Password' link on the login page. Enter your email address, and we'll send you a password reset link. Follow the instructions in the email to create a new password. For security reasons, password reset links expire after 24 hours.", 
+      question: "How can I reset my password?", 
+      answer: "To reset your password, visit the login page and select 'Forgot Password'. Provide your email, and we’ll send a reset link. Follow the email instructions to set a new password. Note that reset links expire after 24 hours for security purposes.", 
       views: "15.3K",
-      category: "Account & Billing"
+      category: "Account & Payments"
     },
     { 
-      question: "What payment methods do you accept?", 
-      answer: "We accept all major credit cards (Visa, Mastercard, American Express, Discover), PayPal, and bank transfers for annual enterprise plans. Cryptocurrency payments are available upon request for annual subscriptions. All payments are processed securely through our PCI-compliant payment system.", 
+      question: "Which payment methods are supported?", 
+      answer: "We support major credit cards (Visa, Mastercard, American Express, Discover), PayPal, and bank transfers for yearly enterprise plans. Cryptocurrency options are available for annual subscriptions upon request. Payments are securely handled via our PCI-compliant system.", 
       views: "12.8K",
-      category: "Account & Billing"
+      category: "Account & Payments"
     },
     { 
-      question: "How do I upgrade my subscription plan?", 
-      answer: "You can upgrade your subscription at any time by going to Account Settings > Subscription. Click on 'Change Plan' and select your desired plan. The price difference will be prorated based on the remaining days in your current billing cycle. Your new plan benefits will be available immediately after upgrading.", 
+      question: "How do I switch to a higher plan?", 
+      answer: "Upgrade your plan anytime by navigating to Account Settings > Subscription. Select 'Change Plan', choose your preferred tier, and the cost difference will be adjusted based on your current billing cycle’s remaining time. New plan features activate instantly upon upgrade.", 
       views: "11.5K",
-      category: "Account & Billing"
+      category: "Account & Payments"
     },
     { 
-      question: "Can I get a refund if I'm not satisfied?", 
-      answer: "Yes, we offer a 14-day money-back guarantee for new subscriptions. If you're not completely satisfied with our service, contact our support team within 14 days of your initial purchase for a full refund. Refunds for monthly plans are processed within 3-5 business days.", 
+      question: "Is a refund possible if I’m unhappy?", 
+      answer: "Yes, we provide a 14-day money-back guarantee for new users. If you’re dissatisfied, reach out to our support team within 14 days of purchase for a full refund. Monthly plan refunds are processed within 3-5 business days.", 
       views: "10.7K",
-      category: "Account & Billing"
+      category: "Account & Payments"
     }
   ];
 
   const faqItems = [
     {
-      question: "How do I create an account?",
-      answer: "Creating an account is simple. Click the 'Sign Up' button on our homepage, enter your email address, create a secure password, and verify your email address through the confirmation link we'll send you. Once verified, you can complete your profile and start using our platform immediately."
+      question: "How do I set up an account?",
+      answer: "Setting up an account is straightforward. Click 'Sign Up' on our homepage, input your email, create a strong password, and confirm your email via the link we send. After verification, fill out your profile and begin exploring the platform right away."
     },
     {
-      question: "What are the system requirements?",
-      answer: "Our platform is web-based and works on most modern browsers including Chrome, Firefox, Safari, and Edge. We recommend using the latest version of your preferred browser for optimal performance. For mobile access, we offer iOS and Android apps that require iOS 13+ or Android 8.0+ respectively."
+      question: "What are the technical requirements?",
+      answer: "Our platform operates online and is compatible with modern browsers like Chrome, Firefox, Safari, and Edge. For the best experience, use the latest browser version. Mobile users can download our iOS (13+) or Android (8.0+) apps."
     },
     {
-      question: "How can I change my email address?",
-      answer: "To change your email address, log in to your account and navigate to Account Settings > Profile. Click on 'Edit' next to your email address, enter your new email, and click 'Save Changes'. You'll receive a verification email at your new address. Click the verification link to complete the process."
+      question: "How do I update my email address?",
+      answer: "To update your email, log into your account, go to Account Settings > Profile, and click 'Edit' beside your email. Enter the new email and save it. A verification email will be sent to the new address—click the link to finalize the change."
     },
     {
-      question: "Is my data secure?",
-      answer: "Yes, we take data security very seriously. All data is encrypted both in transit and at rest using industry-standard encryption protocols. We use secure, SOC 2 compliant data centers, conduct regular security audits, and maintain strict access controls. Additionally, we offer two-factor authentication for added account security."
+      question: "Is my information protected?",
+      answer: "Absolutely, we prioritize data protection. All information is encrypted in transit and at rest with top-tier protocols. We use SOC 2 compliant data centers, perform regular security reviews, enforce strict access policies, and offer two-factor authentication for extra safety."
     },
     {
-      question: "How do I cancel my subscription?",
-      answer: "To cancel your subscription, go to Account Settings > Subscription and click 'Cancel Subscription'. Follow the prompts to complete the cancellation process. You'll receive an email confirming your cancellation. Your account will remain active until the end of your current billing period, after which it will be downgraded to the free plan."
+      question: "How can I terminate my subscription?",
+      answer: "To end your subscription, visit Account Settings > Subscription and select 'Cancel Subscription'. Follow the steps to confirm cancellation. You’ll get a confirmation email, and your account will stay active until the billing period ends, then revert to the free tier."
     },
     {
-      question: "Do you offer enterprise solutions?",
-      answer: "Yes, we offer customized enterprise solutions with additional features like dedicated support, custom integrations, single sign-on (SSO), advanced security controls, and volume licensing. Contact our sales team at enterprise@example.com to discuss your specific requirements and request a personalized demo."
+      question: "Are there enterprise options available?",
+      answer: "Yes, we provide tailored enterprise packages with perks like dedicated assistance, bespoke integrations, SSO, enhanced security features, and bulk licensing. Email our sales team at enterprise@example.com to discuss your needs and arrange a custom demo."
     },
     {
-      question: "What's your data retention policy?",
-      answer: "We retain your account data and content for as long as you maintain an active account. For inactive accounts, data is retained for 12 months, after which it may be permanently deleted. For enterprise customers, we offer custom data retention policies to meet specific compliance requirements. You can export your data at any time from the Account Settings page."
+      question: "What’s your policy on data retention?",
+      answer: "We keep your account and content data as long as your account is active. Inactive accounts have data retained for 12 months before potential deletion. Enterprise clients can request custom retention terms. You can export your data anytime from Account Settings."
     },
     {
-      question: "Do you offer training or onboarding?",
-      answer: "Yes, we provide several onboarding options. All plans include access to our comprehensive knowledge base, video tutorials, and community forums. Premium and Enterprise plans include personalized onboarding sessions with our customer success team. Enterprise customers also receive custom training workshops tailored to their specific use cases."
+      question: "Do you provide onboarding or training?",
+      answer: "Yes, we offer various onboarding resources. All users get access to our detailed knowledge base, video guides, and forums. Premium and Enterprise tiers include one-on-one onboarding with our success team, while Enterprise clients also get bespoke training sessions."
     }
   ];
 
@@ -85,53 +85,11 @@ function FAQPage() {
       <Box py={16} bg="red.50" color="gray.800">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h1" size="2xl" textAlign="center" mb={8} fontWeight="medium">
-            Frequently Asked Questions
+            Common Questions Answered
           </Heading>
           <Text fontSize="xl" textAlign="center" mb={8} maxW="800px" mx="auto">
-            Find quick answers to common questions about our platform, features, billing,
-            and technical support.
+            Discover prompt solutions to frequent inquiries about our platform, functionalities, payments, and support.
           </Text>
-          
-          {/* <Box maxW="650px" mx="auto" mb={10}>
-            <InputGroup size="lg">
-              <InputLeftElement pointerEvents="none">
-                <SearchIcon color="gray.300" />
-              </InputLeftElement>
-              <Input 
-                placeholder="Search for questions and answers" 
-                bg="white" 
-                focusBorderColor="red.500"
-                borderRadius="md"
-                boxShadow="sm"
-              />
-            </InputGroup>
-          </Box> */}
-          
-          {/* <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={6}>
-            <VStack align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="red.600">Getting Started</Heading>
-              <Text>Basic information about our platform, account creation, and essential features.</Text>
-              <Button colorScheme="blue" variant="link" rightIcon={<InfoIcon />}>Learn more</Button>
-            </VStack>
-            
-            <VStack align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="red.600">Billing & Accounts</Heading>
-              <Text>Information about pricing, subscription management, payments, and account settings.</Text>
-              <Button colorScheme="blue" variant="link" rightIcon={<InfoIcon />}>Learn more</Button>
-            </VStack>
-            
-            <VStack align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="red.600">Technical Support</Heading>
-              <Text>Troubleshooting guides, error resolution, and technical assistance for our platform.</Text>
-              <Button colorScheme="blue" variant="link" rightIcon={<InfoIcon />}>Learn more</Button>
-            </VStack>
-          </SimpleGrid> */}
-
-      {/* FAQ Categories Section */}
-
-          {/* <Heading as="h2" size="xl" textAlign="center" mb={12} fontWeight="medium">
-            Browse by Category
-          </Heading> */}
           
           <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={8}>
             {faqCategories.map((category, index) => (
@@ -140,17 +98,16 @@ function FAQPage() {
                   <StatLabel fontSize="lg" fontWeight="medium">{category.category}</StatLabel>
                   <Flex justify="space-between" align="center">
                     <StatNumber color="red.600">{category.articles}</StatNumber>
-                    <Text color="gray.500" fontSize="sm" fontWeight="normal">Articles</Text>
+                    <Text color="gray.500" fontSize="sm" fontWeight="normal">Entries</Text>
                   </Flex>
                   <Flex justify="space-between" align="center" mt={1}>
                     <StatNumber color="red.400">{category.views}</StatNumber>
-                    <Text color="gray.500" fontSize="sm" fontWeight="normal">Monthly Views</Text>
+                    <Text color="gray.500" fontSize="sm" fontWeight="normal">Monthly Readers</Text>
                   </Flex>
                 </Stat>
                 <Text fontSize="sm" color="gray.600">
-                  <Text as="span" fontWeight="bold">Topics covered:</Text> {category.topics}
+                  <Text as="span" fontWeight="bold">Subjects:</Text> {category.topics}
                 </Text>
-                {/* <Button mt={4} colorScheme="blue" variant="outline" size="sm">View Articles</Button> */}
               </Box>
             ))}
           </SimpleGrid>
@@ -161,10 +118,10 @@ function FAQPage() {
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={4} fontWeight="medium">
-            Most Common Questions
+            Top Questions
           </Heading>
           <Text fontSize="lg" textAlign="center" mb={12} maxW="700px" mx="auto">
-            Quick answers to our most frequently asked questions
+            Fast responses to the questions we hear most often
           </Text>
           
           <Box bg="white" borderRadius="md" boxShadow="sm" overflow="hidden">
@@ -189,54 +146,18 @@ function FAQPage() {
         </Box>
       </Box>
       
-      {/* Popular Articles Section */}
-      {/* <Box py={16} bg="white">
-        <Box maxW="1200px" mx="auto" px={4}>
-          <Heading as="h2" size="xl" textAlign="center" mb={4} fontWeight="medium">
-            Popular Questions
-          </Heading>
-          <Text fontSize="lg" textAlign="center" mb={12} maxW="700px" mx="auto">
-            The most viewed questions and comprehensive answers from our knowledge base
-          </Text>
-          
-          <Grid templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }} gap={8}>
-            {popularQuestions.map((article, index) => (
-              <Flex key={index} p={6} bg="gray.50" borderRadius="md" boxShadow="sm" align="flex-start">
-                <Box w="50px" h="50px" mr={4} display="flex" alignItems="center" justifyContent="center">
-                  <QuestionIcon boxSize="30px" color="red.600" />
-                </Box>
-                <Box>
-                  <Flex justify="space-between" align="center" mb={2}>
-                    <Heading as="h3" size="md" fontWeight="medium">{article.question}</Heading>
-                    <Tag size="sm" colorScheme="blue" ml={2}>{article.category}</Tag>
-                  </Flex>
-                  <Text color="gray.600" mb={3} noOfLines={3}>{article.answer}</Text>
-                  <HStack spacing={8}>
-                    <Flex align="center">
-                      <InfoIcon color="gray.400" mr={2} />
-                      <Text fontSize="sm" color="gray.500">{article.views} views</Text>
-                    </Flex>
-                    <Button colorScheme="blue" size="sm" variant="outline">Read More</Button>
-                  </HStack>
-                </Box>
-              </Flex>
-            ))}
-          </Grid>
-        </Box>
-      </Box> */}
-      
       {/* Need More Help Section */}
       <Box py={16} bg="red.600" color="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">
-            Didn't Find Your Answer?
+            Still Need Help?
           </Heading>
           <Text fontSize="lg" mb={10} maxW="700px" mx="auto" color="white">
-            Our support team is ready to assist you with any questions that aren't covered in our FAQ
+            Our support crew is here to help with any queries not addressed in our FAQ
           </Text>
           
           <Flex justify="center" gap={6} flexWrap="wrap">
-          <Button
+            <Button
               size="lg"
               bg="white"
               color="red.500"
@@ -244,7 +165,7 @@ function FAQPage() {
               as="a"
               href="/demo-request"
             >
-              Request Demo
+              Schedule a Demo
             </Button>
             
             <Button
@@ -256,14 +177,11 @@ function FAQPage() {
               as="a"
               href="https://cloud.roamingproxy.com/signup"
             >
-              Start Free Trial
+              Begin Free Trial
             </Button>
           </Flex>
         </Box>
       </Box>
-
- 
-  
       
       {/* Footer */}
       <Footer />
