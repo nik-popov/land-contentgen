@@ -224,7 +224,7 @@ async def submit_privacy_request(form_data: PrivacyRequestForm) -> Message:
                     <p>Your request reference number is: <strong>{request_ref}</strong></p>
                     <p>Please keep this number for future reference.</p>
                     <p>Our Data Protection team will review your request and may contact you for additional information if needed. We aim to respond to all privacy requests within 30 days.</p>
-                    <p>Best regards,<br>The Data Protection Team<br>The Data Proxy</p>
+                    <p>Best regards,<br>The Data Protection Team<br>Roaming Proxy</p>
                 </body>
                 </html>
                 """

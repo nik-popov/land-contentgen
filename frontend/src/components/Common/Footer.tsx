@@ -19,7 +19,7 @@ const Footer = () => {
           <Box>
           <Heading as="h4" size="md" mb={1} color="white">
   <Link href="https://roamingproxy.com" _hover={{ textDecoration: "none", color: "orange.400" }}>
-    The Data Proxy
+    Roaming Proxy
   </Link>
 </Heading>
 <Text color="gray.400" fontSize="sm" mb={2}>
@@ -166,7 +166,7 @@ const Footer = () => {
         {/* Bottom Footer - Copyright and Legal */}
         <Flex justify="space-between" align="center" borderTop="1px solid" borderColor="gray.700" pt={6} flexWrap="wrap" gap={4}>
           <Text color="gray.400" fontSize="sm">
-          © 2025 <Link href="https://roamingproxy.com" color="gray.200" _hover={{ color: "orange.400" }}>The Data Proxy</Link>, <Link href="https://cobaltdata.net" color="gray.200" _hover={{ color: "blue.400" }}>Cobalt Data Network</Link>. All rights reserved.
+          © 2025 <Link href="https://roamingproxy.com" color="gray.200" _hover={{ color: "orange.400" }}>Roaming Proxy</Link>, <Link href="https://cobaltdata.net" color="gray.200" _hover={{ color: "blue.400" }}>Cobalt Data Network</Link>. All rights reserved.
           </Text>
           <Flex gap={6}>
             <Link href="/privacy" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>Privacy Policy</Link>

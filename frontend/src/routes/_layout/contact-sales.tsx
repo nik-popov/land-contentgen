@@ -281,7 +281,7 @@ function SalesContactPage() {
                   isChecked={consentChecked}
                   onChange={(e) => setConsentChecked(e.target.checked)}
                 >
-                  I agree to receive communications from The Data Proxy. I understand that my information will be processed in accordance with the 
+                  I agree to receive communications from Roaming Proxy. I understand that my information will be processed in accordance with the 
                   <Button as="a" href="/privacy" variant="link" color="blue.500" mx={1}>Privacy Policy</Button>.
                 </Checkbox>
               </FormControl>

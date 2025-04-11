@@ -39,7 +39,7 @@ function PrivacyPolicyPage() {
           {/* Introduction */}
           <Box w="full">
             <Text fontSize="lg" mb={4}>
-              At The Data Proxy, we are committed to protecting your privacy and ensuring the security of your personal information. 
+              At Roaming Proxy, we are committed to protecting your privacy and ensuring the security of your personal information. 
               This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website 
               at roamingproxy.com ("Website") or use our services.
             </Text>

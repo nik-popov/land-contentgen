@@ -31,7 +31,7 @@ function CompliancePage() {
           {/* Introduction */}
           <Box w="full">
             <Text fontSize="lg" mb={4}>
-              At The Data Proxy, we are committed to maintaining the highest standards of regulatory compliance, 
+              At Roaming Proxy, we are committed to maintaining the highest standards of regulatory compliance, 
               data protection, and ethical business practices across all our operations. This page details our 
               approach to compliance and outlines the measures we take to ensure we meet or exceed all relevant 
               regulatory requirements.

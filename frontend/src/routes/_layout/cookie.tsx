@@ -39,7 +39,7 @@ function CookiePolicyPage() {
           {/* Introduction */}
           <Box w="full">
             <Text fontSize="lg" mb={4}>
-              This Cookie Policy explains how The Data Proxy ("we," "us," or "our") uses cookies and similar 
+              This Cookie Policy explains how Roaming Proxy ("we," "us," or "our") uses cookies and similar 
               technologies to recognize you when you visit our website at roamingproxy.com ("Website"). 
               It explains what these technologies are and why we use them, as well as your rights to control our use of them.
             </Text>
@@ -282,7 +282,7 @@ function CookiePolicyPage() {
                   </Tr>
                   <Tr>
                     <Td>JSESSIONID</Td>
-                    <Td>The Data Proxy</Td>
+                    <Td>Roaming Proxy</Td>
                     <Td>Preserves user session state across page requests</Td>
                     <Td>Session</Td>
                     <Td>
@@ -291,7 +291,7 @@ function CookiePolicyPage() {
                   </Tr>
                   <Tr>
                     <Td>cookie_consent</Td>
-                    <Td>The Data Proxy</Td>
+                    <Td>Roaming Proxy</Td>
                     <Td>Stores your cookie consent preferences</Td>
                     <Td>1 year</Td>
                     <Td>
@@ -300,7 +300,7 @@ function CookiePolicyPage() {
                   </Tr>
                   <Tr>
                     <Td>language_pref</Td>
-                    <Td>The Data Proxy</Td>
+                    <Td>Roaming Proxy</Td>
                     <Td>Remembers user language preference</Td>
                     <Td>1 year</Td>
                     <Td>
