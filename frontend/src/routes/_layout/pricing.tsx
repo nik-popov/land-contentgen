@@ -13,7 +13,7 @@ function PricingPage() {
 
   const pricingPlans = [
     {
-      name: "Essential",
+      name: "Basic",
       description: "Perfect for enthusiasts and modest projects needing smooth data retrieval.",
       monthlyPrice: 49,
       annualPrice: 39,
@@ -32,7 +32,7 @@ function PricingPage() {
       ],
     },
     {
-      name: "Advanced",
+      name: "Pro",
       description: "Great for analysts and groups aiming to deepen their understanding with consistency.",
       monthlyPrice: 149,
       annualPrice: 119,
@@ -52,7 +52,7 @@ function PricingPage() {
       ],
     },
     {
-      name: "Professional",
+      name: "Business",
       description: "Designed for data lovers and companies tackling intricate, large-volume tasks.",
       monthlyPrice: 475,
       annualPrice: 380,
@@ -313,9 +313,9 @@ function PricingPage() {
               <Thead>
                 <Tr bg="gray.100">
                   <Th width="30%">Aspect</Th>
-                  <Th width="17.5%">Essential</Th>
-                  <Th width="17.5%" bg="red.50">Advanced</Th>
-                  <Th width="17.5%">Professional</Th>
+                  <Th width="17.5%">Basic</Th>
+                  <Th width="17.5%" bg="red.50">Pro</Th>
+                  <Th width="17.5%">Business</Th>
                   <Th width="17.5%">Corporate</Th>
                 </Tr>
               </Thead>
