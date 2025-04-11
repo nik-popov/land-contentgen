@@ -44,7 +44,7 @@ function Layout() {
           fontWeight: "medium",
         }}
         expires={150}
-        // debug={true} // Removed to respect cookie state
+        debug={true}
         onAccept={() => {
           console.log("Accept clicked");
           if (window.gtag) {
@@ -87,7 +87,7 @@ function Layout() {
         </Link>
         .
       </CookieConsent>
-      <TrackPageViews />
+      <TrackPageViews /> 
     </Flex>
   );
 }
