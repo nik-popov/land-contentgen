@@ -9,33 +9,33 @@ export const Route = createFileRoute("/_layout/use-cases/financial-data-collecti
 
 function FinancialDataCollectionPage() {
   const dataCollectionFeatures = [
-    { feature: "Market Data", sources: "150+", fields: "280+", useCases: "Price analysis, trading signals, volatility metrics, technical indicators" },
-    { feature: "Company Financials", sources: "80+", fields: "350+", useCases: "Fundamental analysis, valuation models, industry benchmarking, financial health" },
-    { feature: "Economic Indicators", sources: "60+", fields: "180+", useCases: "Macroeconomic research, forecasting, regional analysis, policy impact" },
-    { feature: "Alternative Data", sources: "200+", fields: "420+", useCases: "Sentiment analysis, consumer behavior, ESG metrics, supply chain insights" },
-    { feature: "Fund Performance", sources: "90+", fields: "210+", useCases: "Performance benchmarking, asset allocation, risk profiles, manager evaluation" },
-    { feature: "Regulatory Filings", sources: "45+", fields: "320+", useCases: "Compliance monitoring, disclosure analysis, insider activity, ownership changes" }
+    { feature: "Market Insights", sources: "150+", fields: "280+", useCases: "Pricing trends, trade signals, volatility analysis, market indicators" },
+    { feature: "Corporate Metrics", sources: "80+", fields: "350+", useCases: "Core analysis, valuation insights, sector comparisons, company vitality" },
+    { feature: "Economic Trends", sources: "60+", fields: "180+", useCases: "Broad economic studies, predictions, regional insights, policy effects" },
+    { feature: "Non-Traditional Data", sources: "200+", fields: "420+", useCases: "Opinion analysis, buyer patterns, ESG factors, logistics insights" },
+    { feature: "Investment Returns", sources: "90+", fields: "210+", useCases: "Return comparisons, portfolio planning, risk assessment, fund manager reviews" },
+    { feature: "Compliance Documents", sources: "45+", fields: "320+", useCases: "Regulatory oversight, filing reviews, insider tracking, ownership shifts" }
   ];
 
   const platformFeatures = [
     { 
-      title: "Comprehensive Financial Coverage", 
-      description: "Collect data from global exchanges, regulatory sources, financial statements, and alternative data providers across all asset classes", 
+      title: "Extensive Financial Reach", 
+      description: "Tap into data from worldwide exchanges, compliance sources, company reports, and unconventional data streams across all investment types", 
       icon: "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/aws.png" 
     },
     { 
-      title: "Real-time Market Intelligence", 
-      description: "Access live market data with millisecond precision for equities, fixed income, commodities, FX, and derivatives worldwide", 
+      title: "Instant Market Updates", 
+      description: "Get up-to-the-second market insights for stocks, bonds, commodities, forex, and derivatives globally", 
       icon: "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/mongodb.png" 
     },
     { 
-      title: "Advanced Financial Analytics", 
-      description: "Transform raw data into actionable insights with sophisticated financial models, indicators, and proprietary algorithms", 
+      title: "Insightful Financial Tools", 
+      description: "Turn raw figures into strategic decisions with advanced models, metrics, and custom algorithms", 
       icon: "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/kubernetes.png" 
     },
     { 
-      title: "Historical Database Access", 
-      description: "Leverage decades of clean, normalized financial data to identify patterns, conduct backtesting, and build predictive models", 
+      title: "Deep Historical Records", 
+      description: "Access decades of refined, standardized data for trend analysis, strategy testing, and forecasting", 
       icon: "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/analytics.png" 
     }
   ];
@@ -46,27 +46,26 @@ function FinancialDataCollectionPage() {
       <Box py={16} bg="red.50" color="gray.800">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h1" size="2xl" textAlign="center" mb={8} fontWeight="medium">
-            Financial Data Collection
+            Financial Insights Gathering
           </Heading>
           <Text fontSize="xl" textAlign="center" mb={12} maxW="800px" mx="auto">
-            Gather comprehensive financial intelligence from global markets 
-            to power investment strategies, risk analysis, and business decisions.
+            Collect vital financial data from worldwide markets to fuel investment planning, risk evaluation, and strategic choices.
           </Text>
           
           <Flex justify="space-between" flexWrap="wrap" gap={6}>
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="red.600">Market & Securities Data</Heading>
-              <Text>Access real-time and historical data for equities, fixed income, derivatives, FX, and commodities from exchanges worldwide. Track prices, volumes, spreads, and order book data with millisecond precision.</Text>
+              <Heading as="h3" size="md" color="red.600">Markets & Investments</Heading>
+              <Text>Retrieve live and past data on stocks, bonds, derivatives, currencies, and commodities from global exchanges, including prices, volumes, spreads, and order details with pinpoint timing.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="red.600">Fundamental & Company Data</Heading>
-              <Text>Collect comprehensive financial statements, corporate actions, ownership details, and executive information. Extract structured data from earnings reports, presentations, and regulatory filings.</Text>
+              <Heading as="h3" size="md" color="red.600">Company Insights</Heading>
+              <Text>Gather detailed corporate reports, action updates, ownership info, and leadership details. Pull organized data from earnings, slides, and compliance documents.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="red.600">Alternative & ESG Data</Heading>
-              <Text>Harness non-traditional data sources including social sentiment, satellite imagery, web traffic, supply chain information, and environmental, social, and governance metrics for unique investment insights.</Text>
+              <Heading as="h3" size="md" color="red.600">Unique & ESG Insights</Heading>
+              <Text>Leverage alternative sources like social trends, satellite views, online activity, supply chain stats, and ESG factors for distinctive investment perspectives.</Text>
             </VStack>
           </Flex>
         </Box>
@@ -76,40 +75,37 @@ function FinancialDataCollectionPage() {
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
-            Key Benefits of Financial Data Collection
+            Advantages of Financial Insights Gathering
           </Heading>
           
           <Grid templateColumns={{ base: "1fr", md: "1fr 1fr", lg: "1fr 1fr 1fr" }} gap={10} mt={10}>
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
                 <StatNumber color="red.600">99.99%</StatNumber>
-                <StatLabel>Data Accuracy Rate</StatLabel>
+                <StatLabel>Data Precision</StatLabel>
               </Stat>
               <Text>
-                Our multi-layered validation ensures virtually perfect accuracy
-                for all financial data with robust cleaning and normalization.
+                Our thorough validation process guarantees near-perfect precision with extensive cleaning and standardization.
               </Text>
             </VStack>
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
                 <StatNumber color="red.600">24%</StatNumber>
-                <StatLabel>Alpha Generation Improvement</StatLabel>
+                <StatLabel>Strategy Edge Gain</StatLabel>
               </Stat>
               <Text>
-                Financial firms using our data collection services report up to
-                24% improvement in alpha generation for their investment strategies.
+                Investment firms using our insights report up to a 24% boost in strategy performance and returns.
               </Text>
             </VStack>
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
                 <StatNumber color="red.600">10B+</StatNumber>
-                <StatLabel>Daily Data Points</StatLabel>
+                <StatLabel>Daily Insights</StatLabel>
               </Stat>
               <Text>
-                Our platform processes over 10 billion financial data points
-                daily across global markets, companies, and economic indicators.
+                Our system handles over 10 billion data points daily, spanning markets, firms, and economic trends globally.
               </Text>
             </VStack>
           </Grid>
@@ -120,7 +116,7 @@ function FinancialDataCollectionPage() {
       <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={12} fontWeight="medium">
-            Comprehensive Financial Data Collection
+            Wide-Ranging Financial Insights
           </Heading>
           
           <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={8}>
@@ -130,15 +126,15 @@ function FinancialDataCollectionPage() {
                   <StatLabel fontSize="lg" fontWeight="medium">{feature.feature}</StatLabel>
                   <Flex justify="space-between" align="center">
                     <StatNumber color="red.600">{feature.sources}</StatNumber>
-                    <Text color="gray.500" fontSize="sm" fontWeight="normal">Sources</Text>
+                    <Text color="gray.500" fontSize="sm" fontWeight="normal">Origins</Text>
                   </Flex>
                   <Flex justify="space-between" align="center" mt={1}>
                     <StatNumber color="red.400">{feature.fields}</StatNumber>
-                    <Text color="gray.500" fontSize="sm" fontWeight="normal">Data Fields</Text>
+                    <Text color="gray.500" fontSize="sm" fontWeight="normal">Categories</Text>
                   </Flex>
                 </Stat>
                 <Text fontSize="sm" color="gray.600">
-                  <Text as="span" fontWeight="bold">Common Use Cases:</Text> {feature.useCases}
+                  <Text as="span" fontWeight="bold">Applications:</Text> {feature.useCases}
                 </Text>
               </Box>
             ))}
@@ -150,50 +146,50 @@ function FinancialDataCollectionPage() {
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={4} fontWeight="medium">
-            Advanced Financial Data Platform
+            Sophisticated Insights Platform
           </Heading>
           <Text fontSize="lg" textAlign="center" mb={12} maxW="700px" mx="auto">
-            Our financial data collection platform combines cutting-edge technology with comprehensive global market coverage
+            Our insights platform merges innovative tech with extensive global market reach
           </Text>
           
           <Grid templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }} gap={8}>
             <Flex p={6} bg="gray.50" borderRadius="md" boxShadow="sm" align="flex-start">
               <Box w="50px" h="50px" mr={4} display="flex" alignItems="center" justifyContent="center">
-                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/grafana.png" alt="Low-Latency Architecture" />
+                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/grafana.png" alt="Fast Processing" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">Low-Latency Architecture</Heading>
-                <Text color="gray.600">High-performance infrastructure delivering microsecond response times for time-sensitive financial applications</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">Fast Processing</Heading>
+                <Text color="gray.600">High-speed system offering microsecond responses for urgent financial needs</Text>
               </Box>
             </Flex>
             
             <Flex p={6} bg="gray.50" borderRadius="md" boxShadow="sm" align="flex-start">
               <Box w="50px" h="50px" mr={4} display="flex" alignItems="center" justifyContent="center">
-                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/aws.png" alt="NLP Processing" />
+                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/aws.png" alt="Text Analysis" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">Advanced NLP Processing</Heading>
-                <Text color="gray.600">Extract structured data from financial reports, news, transcripts, and filings using sophisticated language models</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">Text Analysis</Heading>
+                <Text color="gray.600">Pull structured insights from reports, news, calls, and filings with advanced language processing</Text>
               </Box>
             </Flex>
             
             <Flex p={6} bg="gray.50" borderRadius="md" boxShadow="sm" align="flex-start">
               <Box w="50px" h="50px" mr={4} display="flex" alignItems="center" justifyContent="center">
-                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/redis.png" alt="Point-in-Time Database" />
+                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/redis.png" alt="Time-Specific Data" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">Point-in-Time Database</Heading>
-                <Text color="gray.600">Access historical data as it appeared at any specific moment, eliminating survivorship bias and enabling accurate backtesting</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">Time-Specific Data</Heading>
+                <Text color="gray.600">View past data as it was at any moment, avoiding bias and supporting precise testing</Text>
               </Box>
             </Flex>
             
             <Flex p={6} bg="gray.50" borderRadius="md" boxShadow="sm" align="flex-start">
               <Box w="50px" h="50px" mr={4} display="flex" alignItems="center" justifyContent="center">
-                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/rest.png" alt="API Integration" />
+                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/rest.png" alt="API Connectivity" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">Enterprise API Infrastructure</Heading>
-                <Text color="gray.600">Flexible API options including REST, WebSocket, and bulk data delivery with customizable formats and query capabilities</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">API Connectivity</Heading>
+                <Text color="gray.600">Versatile API options like REST, WebSocket, and bulk delivery with adaptable formats and queries</Text>
               </Box>
             </Flex>
           </Grid>
@@ -204,58 +200,58 @@ function FinancialDataCollectionPage() {
       <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
-            Financial Data Platform Features
+            Platform Capabilities
           </Heading>
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="red.600">Data Collection & Processing</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.600">Gathering & Refining</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Multi-Source Integration</Text> - Collect data from exchanges, regulatory sources, news providers, and alternative data</Text>
+                  <Text><Text as="span" fontWeight="bold">Diverse Sources</Text> - Pull insights from exchanges, regulators, news, and unique data providers</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Real-time Processing</Text> - Stream financial data with microsecond latency for time-sensitive applications</Text>
+                  <Text><Text as="span" fontWeight="bold">Live Updates</Text> - Stream data with microsecond timing for critical applications</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Corporate Action Adjustments</Text> - Automatic handling of splits, dividends, mergers, and other events</Text>
+                  <Text><Text as="span" fontWeight="bold">Event Adjustments</Text> - Auto-correct for splits, dividends, mergers, and more</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Data Cleansing & Validation</Text> - Multi-layer verification for accuracy and completeness</Text>
+                  <Text><Text as="span" fontWeight="bold">Data Refinement</Text> - Multi-step checks for accuracy and fullness</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Entity Recognition & Mapping</Text> - Comprehensive identifiers and hierarchies for companies, securities, and funds</Text>
+                  <Text><Text as="span" fontWeight="bold">Identity Linking</Text> - Full IDs and structures for firms, securities, and funds</Text>
                 </ListItem>
               </List>
             </Box>
             
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="red.600">Analytics & Delivery</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.600">Analysis & Access</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Financial Calculations</Text> - Pre-computed metrics, ratios, and indicators for immediate use</Text>
+                  <Text><Text as="span" fontWeight="bold">Calculated Metrics</Text> - Ready-to-use ratios, indicators, and stats</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Custom Data Feeds</Text> - Tailored delivery of specific datasets based on your requirements</Text>
+                  <Text><Text as="span" fontWeight="bold">Tailored Streams</Text> - Custom data feeds based on your needs</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">API & SDK Access</Text> - Flexible integration options with comprehensive documentation</Text>
+                  <Text><Text as="span" fontWeight="bold">API & Tools</Text> - Easy integration with detailed guides</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Cloud Data Warehouse</Text> - Direct access to structured financial data in cloud storage</Text>
+                  <Text><Text as="span" fontWeight="bold">Cloud Storage</Text> - Direct access to organized data in the cloud</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Backtesting Environment</Text> - Integrated tools for testing strategies against historical data</Text>
+                  <Text><Text as="span" fontWeight="bold">Strategy Testing</Text> - Built-in tools for evaluating plans with past data</Text>
                 </ListItem>
               </List>
             </Box>
@@ -267,39 +263,27 @@ function FinancialDataCollectionPage() {
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={12} fontWeight="medium">
-            Financial Data Success Stories
+            Success in Financial Insights
           </Heading>
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="red.600">Hedge Fund Improves Strategy Performance by 31%</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.600">Hedge Fund Lifts Returns by 31%</Heading>
               <Text mb={4}>
-                A quantitative hedge fund used our financial data platform to enhance their trading strategies 
-                with alternative data integration. By combining traditional market data with consumer sentiment, 
-                satellite imagery, and supply chain analysis, they were able to identify market signals earlier 
-                than competitors. This comprehensive approach improved their strategy performance by 31% and 
-                reduced drawdowns by 18% during volatile market conditions.
+                A data-driven hedge fund tapped our platform to refine trading tactics with unique data blends. Merging market stats with public sentiment, satellite data, and supply insights, they spotted trends ahead of rivals, boosting returns by 31% and cutting losses by 18% in tough markets.
               </Text>
               <Text fontStyle="italic" fontSize="sm" color="gray.600">
-                "The breadth and quality of data transformed our investment process. The ability to seamlessly 
-                integrate alternative data with traditional financial information gave us a significant edge in 
-                identifying opportunities before they became apparent in the market."
+                "The depth and accuracy of the data reshaped our approach. Blending alternative insights with classic financials gave us a clear lead in catching market shifts early."
               </Text>
             </Box>
             
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="red.600">Asset Manager Reduces Research Time by 85%</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.600">Asset Firm Slashes Study Time by 85%</Heading>
               <Text mb={4}>
-                A global asset management firm implemented our NLP-powered financial document analysis to 
-                streamline their fundamental research process. The platform automatically extracted key metrics, 
-                management sentiment, and forward-looking statements from thousands of earnings calls, SEC 
-                filings, and analyst reports. This automation reduced research time by 85% while increasing 
-                the breadth of companies covered by their analysts by over 300%.
+                A worldwide asset manager used our text-analysis tools to speed up core research. Automatically pulling key figures, tones, and projections from earnings, filings, and reports, they cut research time by 85% and tripled their company coverage with the same staff.
               </Text>
               <Text fontStyle="italic" fontSize="sm" color="gray.600">
-                "Our analysts now spend their time on high-value interpretation rather than manual data 
-                collection. The NLP capabilities are remarkably accurate at extracting nuanced information 
-                from financial documents, enabling us to cover far more companies with the same team."
+                "Our team now focuses on analysis, not data hunting. The text tools nail down subtle details from documents, letting us track far more firms efficiently."
               </Text>
             </Box>
           </Grid>
@@ -310,41 +294,41 @@ function FinancialDataCollectionPage() {
       <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={8} fontWeight="medium">
-            Global Financial Data Coverage
+            Worldwide Financial Reach
           </Heading>
           <Text fontSize="lg" mb={12} maxW="700px" mx="auto">
-            Our financial data collection platform covers all major markets, asset classes, and data types worldwide
+            Our platform spans all key markets, investment types, and data categories globally
           </Text>
           
           <Box bg="white" p={6} borderRadius="md" boxShadow="md">
             <SimpleGrid columns={{ base: 2, md: 3, lg: 6 }} spacing={4} mt={8}>
               <VStack>
-                <Text fontWeight="bold" color="red.600">Exchanges</Text>
+                <Text fontWeight="bold" color="red.600">Markets</Text>
                 <Text>150+</Text>
-                <Text>Global Markets</Text>
+                <Text>Worldwide</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="red.600">Securities</Text>
+                <Text fontWeight="bold" color="red.600">Instruments</Text>
                 <Text>500K+</Text>
-                <Text>Active Instruments</Text>
+                <Text>Active</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="red.600">Companies</Text>
+                <Text fontWeight="bold" color="red.600">Firms</Text>
                 <Text>75K+</Text>
-                <Text>Public & Private</Text>
+                <Text>All Types</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="red.600">Historical Data</Text>
+                <Text fontWeight="bold" color="red.600">Past Records</Text>
                 <Text>50+ Years</Text>
-                <Text>Time Series</Text>
+                <Text>History</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="red.600">Alternative Data</Text>
+                <Text fontWeight="bold" color="red.600">Unique Sources</Text>
                 <Text>200+</Text>
-                <Text>Sources</Text>
+                <Text>Providers</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="red.600">Update Frequency</Text>
+                <Text fontWeight="bold" color="red.600">Refresh Rate</Text>
                 <Text>Microsecond</Text>
                 <Text>to Daily</Text>
               </VStack>
@@ -357,15 +341,14 @@ function FinancialDataCollectionPage() {
       <Box py={16} bg="red.600" color="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">
-            Transform Your Financial Intelligence
+            Elevate Your Market Insights
           </Heading>
           <Text fontSize="lg" mb={10} maxW="700px" mx="auto" color="white">
-            Start collecting comprehensive financial data and gain
-            valuable market insights for your investment strategies
+            Begin tapping into vast financial data to sharpen your investment strategies and market understanding
           </Text>
           
           <Flex justify="center" gap={6} flexWrap="wrap">
-          <Button
+            <Button
               size="lg"
               bg="white"
               color="red.500"
@@ -373,7 +356,7 @@ function FinancialDataCollectionPage() {
               as="a"
               href="/demo-request"
             >
-              Request Demo
+              Book a Demo
             </Button>
             
             <Button
@@ -385,12 +368,11 @@ function FinancialDataCollectionPage() {
               as="a"
               href="https://cloud.roamingproxy.com/signup"
             >
-              Start Free Trial
+              Try Free Now
             </Button>
           </Flex>
         </Box>
       </Box>
-      
       
       {/* Footer */}
       <Footer />
