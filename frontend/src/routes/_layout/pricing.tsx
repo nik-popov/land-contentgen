@@ -415,6 +415,11 @@ function PricingPage() {
               <Text fontSize="sm" color="gray.600">Across our system</Text>
             </VStack>
             <VStack>
+              <Heading as="h3" size="2xl" color="red.600">100K+</Heading>
+              <Text fontWeight="medium">Unique IPs</Text>
+              <Text fontSize="sm" color="gray.600">From individuals to enterprises</Text>
+            </VStack>
+            <VStack>
               <Heading as="h3" size="2xl" color="red.600">190+</Heading>
               <Text fontWeight="medium">Nations Spanned</Text>
               <Text fontSize="sm" color="gray.600">Worldwide coverage</Text>
