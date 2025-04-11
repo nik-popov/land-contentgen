@@ -9,30 +9,30 @@ export const Route = createFileRoute("/_layout/network/north-america")({
 
 function NorthAmericaProxiesPage() {
   const regionData = [
-    { region: "United States", cities: 112, states: 50, useCases: "Market research, SEO verification, ad targeting" },
-    { region: "Canada", cities: 42, states: 13, useCases: "Localization testing, compliance verification, regional content" },
-    { region: "Mexico", cities: 28, states: 32, useCases: "Market entry research, competitive analysis, price monitoring" }
+    { region: "United States", cities: 112, states: 50, useCases: "Consumer insights, SEO auditing, ad localization" },
+    { region: "Canada", cities: 42, states: 13, useCases: "Regional testing, regulatory checks, localized content" },
+    { region: "Mexico", cities: 28, states: 32, useCases: "Market exploration, competitor tracking, price analysis" }
   ];
 
   const locationFeatures = [
     { 
-      title: "Comprehensive Coverage", 
-      description: "Access to residential proxies across all 50 US states, 13 Canadian provinces/territories, and 32 Mexican states", 
+      title: "Extensive Reach", 
+      description: "Tap into residential proxies spanning all 50 US states, 13 Canadian provinces/territories, and 32 Mexican states", 
       icon: "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/aws.png" 
     },
     { 
-      title: "City-Level Precision", 
-      description: "Target proxies in 182 major cities across North America with specific postal code targeting capabilities", 
+      title: "Pinpoint City Targeting", 
+      description: "Zero in on proxies in 182 key North American cities with precise postal code accuracy", 
       icon: "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/mongodb.png" 
     },
     { 
-      title: "ISP Selection", 
-      description: "Choose specific internet service providers or mobile carriers like AT&T, Verizon, Rogers, Telcel, and more", 
+      title: "Provider Customization", 
+      description: "Select from specific ISPs or mobile networks like AT&T, Verizon, Rogers, Telcel, and others", 
       icon: "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/kubernetes.png" 
     },
     { 
-      title: "Location Verification", 
-      description: "Every proxy location is verified through multiple sources to ensure accurate geographic positioning", 
+      title: "Geo-Verification", 
+      description: "Proxy locations validated through multiple channels for reliable geographic placement", 
       icon: "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/analytics.png" 
     }
   ];
@@ -43,27 +43,26 @@ function NorthAmericaProxiesPage() {
       <Box py={16} bg="red.50" color="gray.800">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h1" size="2xl" textAlign="center" mb={8} fontWeight="medium">
-            North America Proxies
+            North American Proxy Network
           </Heading>
           <Text fontSize="xl" textAlign="center" mb={12} maxW="800px" mx="auto">
-            Access the most comprehensive network of North American geo-targeted proxies.
-            Route your connections through any US state, Canadian province, or Mexican region with pinpoint accuracy.
+            Leverage the widest array of North American location-specific proxies. Direct your traffic through any US state, Canadian province, or Mexican region with unmatched precision.
           </Text>
           
           <Flex justify="space-between" flexWrap="wrap" gap={6}>
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="red.600">Regional Coverage</Heading>
-              <Text>Connect through residential, datacenter, and mobile IPs from the United States, Canada, and Mexico. Target specific states, provinces, cities, or postal codes for precise geo-targeting.</Text>
+              <Heading as="h3" size="md" color="red.600">Broad Regional Access</Heading>
+              <Text>Use residential, datacenter, and mobile IPs across the US, Canada, and Mexico, targeting specific states, provinces, cities, or zip codes with ease.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="red.600">Authentic Local Experience</Heading>
-              <Text>Experience websites and apps exactly as North American users do with genuine residential IPs that reflect real user attributes, browser fingerprints, and network characteristics.</Text>
+              <Heading as="h3" size="md" color="red.600">True Local Perspective</Heading>
+              <Text>View websites and applications as North American users do, using authentic residential IPs that mimic real user profiles, browser traits, and network conditions.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="red.600">Customizable Selection</Heading>
-              <Text>Choose locations based on specific criteria including country, state/province, city, ISP, network type, and connection speed. Save custom location profiles for frequent use cases.</Text>
+              <Heading as="h3" size="md" color="red.600">Flexible Location Options</Heading>
+              <Text>Pick locations by country, state/province, city, ISP, network type, or speed, and store tailored location setups for recurring tasks.</Text>
             </VStack>
           </Flex>
         </Box>
@@ -73,40 +72,37 @@ function NorthAmericaProxiesPage() {
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
-            Key Benefits of North American Proxies
+            Advantages of North American Proxies
           </Heading>
           
           <Grid templateColumns={{ base: "1fr", md: "1fr 1fr", lg: "1fr 1fr 1fr" }} gap={10} mt={10}>
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
                 <StatNumber color="red.600">100%</StatNumber>
-                <StatLabel>Regional Market Coverage</StatLabel>
+                <StatLabel>Market Penetration</StatLabel>
               </Stat>
               <Text>
-                Access every corner of the North American market with our comprehensive network that covers all 
-                US states, Canadian provinces/territories, and Mexican regions.
+                Reach every part of North America with our network spanning all US states, Canadian provinces/territories, and Mexican regions.
               </Text>
             </VStack>
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
                 <StatNumber color="red.600">91%</StatNumber>
-                <StatLabel>Testing Accuracy Increase</StatLabel>
+                <StatLabel>Localization Precision Boost</StatLabel>
               </Stat>
               <Text>
-                Organizations report up to 91% more accurate localization testing when using
-                our North American proxies compared to simulated environments or VPNs.
+                Businesses see up to 91% better accuracy in regional testing with our proxies compared to virtual setups or VPNs.
               </Text>
             </VStack>
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
                 <StatNumber color="red.600">2.3M+</StatNumber>
-                <StatLabel>Residential IPs</StatLabel>
+                <StatLabel>Home-Based IPs</StatLabel>
               </Stat>
               <Text>
-                Choose from over 2.3 million residential IP addresses across North America, 
-                ensuring authentic local browsing experiences and reduced detection rates.
+                Select from over 2.3 million residential IPs across North America for genuine browsing and lower detection risks.
               </Text>
             </VStack>
           </Grid>
@@ -117,7 +113,7 @@ function NorthAmericaProxiesPage() {
       <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={12} fontWeight="medium">
-            North American Proxy Coverage
+            Proxy Coverage Across North America
           </Heading>
           
           <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={8}>
@@ -127,15 +123,15 @@ function NorthAmericaProxiesPage() {
                   <StatLabel fontSize="lg" fontWeight="medium">{region.region}</StatLabel>
                   <Flex justify="space-between" align="center">
                     <StatNumber color="red.600">{region.states}</StatNumber>
-                    <Text color="gray.500" fontSize="sm" fontWeight="normal">States/Provinces</Text>
+                    <Text color="gray.500" fontSize="sm" fontWeight="normal">Regions</Text>
                   </Flex>
                   <Flex justify="space-between" align="center" mt={1}>
                     <StatNumber color="red.400">{region.cities}</StatNumber>
-                    <Text color="gray.500" fontSize="sm" fontWeight="normal">Cities</Text>
+                    <Text color="gray.500" fontSize="sm" fontWeight="normal">Urban Areas</Text>
                   </Flex>
                 </Stat>
                 <Text fontSize="sm" color="gray.600">
-                  <Text as="span" fontWeight="bold">Common Use Cases:</Text> {region.useCases}
+                  <Text as="span" fontWeight="bold">Applications:</Text> {region.useCases}
                 </Text>
               </Box>
             ))}
@@ -147,50 +143,50 @@ function NorthAmericaProxiesPage() {
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={4} fontWeight="medium">
-            Advanced North American Location Capabilities
+            Precision North American Proxy Features
           </Heading>
           <Text fontSize="lg" textAlign="center" mb={12} maxW="700px" mx="auto">
-            Our North American proxy network provides precise geographic targeting with industry-leading accuracy
+            Our North American proxy system offers exact location targeting with top-notch reliability
           </Text>
           
           <Grid templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }} gap={8}>
             <Flex p={6} bg="gray.50" borderRadius="md" boxShadow="sm" align="flex-start">
               <Box w="50px" h="50px" mr={4} display="flex" alignItems="center" justifyContent="center">
-                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/grafana.png" alt="Real-time Location Verification" />
+                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/grafana.png" alt="Live Geo-Checks" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">Real-time Location Verification</Heading>
-                <Text color="gray.600">Every proxy location is continuously verified through multiple independent sources to ensure geographic accuracy</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">Live Geo-Checks</Heading>
+                <Text color="gray.600">All proxy locations are actively confirmed through diverse sources for dependable geographic accuracy</Text>
               </Box>
             </Flex>
             
             <Flex p={6} bg="gray.50" borderRadius="md" boxShadow="sm" align="flex-start">
               <Box w="50px" h="50px" mr={4} display="flex" alignItems="center" justifyContent="center">
-                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/aws.png" alt="Diverse IP Types" />
+                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/aws.png" alt="Varied IP Options" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">Diverse IP Types</Heading>
-                <Text color="gray.600">Access residential, datacenter, and mobile IPs across North America, with the ability to specify connection type for your use case</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">Varied IP Options</Heading>
+                <Text color="gray.600">Choose residential, datacenter, or mobile IPs across North America, specifying connection types for your needs</Text>
               </Box>
             </Flex>
             
             <Flex p={6} bg="gray.50" borderRadius="md" boxShadow="sm" align="flex-start">
               <Box w="50px" h="50px" mr={4} display="flex" alignItems="center" justifyContent="center">
-                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/redis.png" alt="Location Persistence" />
+                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/redis.png" alt="Stable Locations" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">Location Persistence</Heading>
-                <Text color="gray.600">Maintain consistent geo-locations across sessions with sticky IP options that keep you in the same North American region</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">Stable Locations</Heading>
+                <Text color="gray.600">Keep consistent North American locations across sessions with fixed IP options</Text>
               </Box>
             </Flex>
             
             <Flex p={6} bg="gray.50" borderRadius="md" boxShadow="sm" align="flex-start">
               <Box w="50px" h="50px" mr={4} display="flex" alignItems="center" justifyContent="center">
-                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/rest.png" alt="Location API" />
+                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/rest.png" alt="API Control" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">North American Location API</Heading>
-                <Text color="gray.600">Programmatically select locations with our comprehensive API for automated geo-targeting across all North American regions</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">North American API Control</Heading>
+                <Text color="gray.600">Automate location selection across North America with our robust API for seamless geo-targeting</Text>
               </Box>
             </Flex>
           </Grid>
@@ -201,58 +197,58 @@ function NorthAmericaProxiesPage() {
       <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
-            North American Proxy Platform Features
+            North American Proxy System Tools
           </Heading>
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="red.600">Geographic Targeting</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.600">Location Precision</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Country Selection</Text> - Access proxies from the United States, Canada, and Mexico with comprehensive coverage</Text>
+                  <Text><Text as="span" fontWeight="bold">Nationwide Access</Text> - Reach proxies in the US, Canada, and Mexico with full coverage</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">State/Province Targeting</Text> - Select from all 50 US states, 13 Canadian provinces/territories, and 32 Mexican states</Text>
+                  <Text><Text as="span" fontWeight="bold">Regional Focus</Text> - Target all 50 US states, 13 Canadian provinces/territories, and 32 Mexican states</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">City Precision</Text> - Target specific cities with multiple proxies available in each location across North America</Text>
+                  <Text><Text as="span" fontWeight="bold">Urban Accuracy</Text> - Select specific cities with ample proxy options across North America</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">ISP Selection</Text> - Choose proxies from specific North American internet service providers or mobile carriers</Text>
+                  <Text><Text as="span" fontWeight="bold">Network Choices</Text> - Pick proxies from key North American ISPs or mobile carriers</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Region Rotation</Text> - Automatically rotate through proxies within specific North American regions</Text>
+                  <Text><Text as="span" fontWeight="bold">Area Cycling</Text> - Auto-switch proxies within designated North American zones</Text>
                 </ListItem>
               </List>
             </Box>
             
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="red.600">Control & Integration</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.600">Management & Connectivity</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Location Groups</Text> - Create and save custom North American location groups for frequent testing scenarios</Text>
+                  <Text><Text as="span" fontWeight="bold">Location Sets</Text> - Build and save North American location groups for repeated use</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Location API</Text> - Access all North American location features programmatically through our comprehensive API</Text>
+                  <Text><Text as="span" fontWeight="bold">API Management</Text> - Control all North American locations via our powerful API</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Browser Integration</Text> - Use browser extensions to quickly switch between North American locations in your testing</Text>
+                  <Text><Text as="span" fontWeight="bold">Browser Tools</Text> - Switch North American locations quickly with browser add-ons</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Location Validation</Text> - Verify the accuracy of North American proxy locations with our built-in testing tools</Text>
+                  <Text><Text as="span" fontWeight="bold">Location Assurance</Text> - Confirm North American proxy accuracy with built-in tools</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Location Analytics</Text> - Track proxy performance by location with detailed success metrics across North America</Text>
+                  <Text><Text as="span" fontWeight="bold">Performance Tracking</Text> - Monitor proxy success by location with detailed North American metrics</Text>
                 </ListItem>
               </List>
             </Box>
@@ -264,35 +260,27 @@ function NorthAmericaProxiesPage() {
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={12} fontWeight="medium">
-            North American Success Stories
+            North American Proxy Wins
           </Heading>
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="red.600">Retail Chain Optimizes Cross-Border Strategy</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.600">Retailer Boosts Border Sales by 32%</Heading>
               <Text mb={4}>
-                A major retail chain used our North American proxies to test their website across all US states, 
-                Canadian provinces, and Mexican regions. They identified critical pricing and promotional 
-                differences, leading to a unified cross-border strategy that increased sales by 32% in border regions.
+                A large retail chain tapped our North American proxies to test their site across all US states, Canadian provinces, and Mexican regions. Spotting key pricing and promo gaps, they crafted a cohesive cross-border plan, lifting sales by 32% near borders.
               </Text>
               <Text fontStyle="italic" fontSize="sm" color="gray.600">
-                "By accessing authentic residential IPs across North America, we gained unprecedented insights into 
-                how our customers experience our platform in different regions. The ability to test from specific 
-                cities and postal codes was invaluable for our border strategy optimization."
+                "Using real residential IPs across North America gave us deep insights into regional user experiences. Targeting specific cities and zip codes was critical for refining our border strategy."
               </Text>
             </Box>
             
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="red.600">Streaming Service Perfects Regional Content</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.600">Streamer Enhances Viewing by 19%</Heading>
               <Text mb={4}>
-                A leading streaming platform implemented our North American proxies to monitor content availability 
-                and recommendations across different regions. They discovered significant discrepancies in their 
-                algorithm performance based on location, resulting in improved recommendations and a 19% increase in viewing time.
+                A top streaming service used our proxies to check content and recommendations across North American regions. They found major algorithm flaws by location, improving suggestions and boosting watch time by 19%.
               </Text>
               <Text fontStyle="italic" fontSize="sm" color="gray.600">
-                "The granular location targeting allowed us to test our platform exactly as users in different North American 
-                regions experience it. We uncovered regional biases in our recommendation system that were invisible 
-                in our standard testing environments."
+                "The fine-tuned location targeting let us see our platform as regional users do. We caught algorithm quirks that standard testing missed, enhancing viewer satisfaction."
               </Text>
             </Box>
           </Grid>
@@ -303,10 +291,10 @@ function NorthAmericaProxiesPage() {
       <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={8} fontWeight="medium">
-            North American Proxy Network
+            North American Proxy Reach
           </Heading>
           <Text fontSize="lg" mb={12} maxW="700px" mx="auto">
-            Our extensive network provides coverage across all regions of North America with dense concentration in key markets
+            Our vast network blankets North America, with heavy coverage in major markets
           </Text>
           
           <Box bg="white" p={6} borderRadius="md" boxShadow="md">
@@ -315,19 +303,19 @@ function NorthAmericaProxiesPage() {
                 <Text fontWeight="bold" color="red.600">United States</Text>
                 <Text>50 States</Text>
                 <Text>112 Cities</Text>
-                <Text>All Major ISPs</Text>
+                <Text>All Key ISPs</Text>
               </VStack>
               <VStack>
                 <Text fontWeight="bold" color="red.600">Canada</Text>
                 <Text>13 Provinces/Territories</Text>
                 <Text>42 Cities</Text>
-                <Text>All Major ISPs</Text>
+                <Text>All Key ISPs</Text>
               </VStack>
               <VStack>
                 <Text fontWeight="bold" color="red.600">Mexico</Text>
                 <Text>32 States</Text>
                 <Text>28 Cities</Text>
-                <Text>All Major ISPs</Text>
+                <Text>All Key ISPs</Text>
               </VStack>
             </SimpleGrid>
           </Box>
@@ -338,24 +326,23 @@ function NorthAmericaProxiesPage() {
       <Box py={16} bg="red.600" color="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">
-            Access Any North American Location
+            Reach Every North American Spot
           </Heading>
           <Text fontSize="lg" mb={10} maxW="700px" mx="auto" color="white">
-            Get started with our North American proxy network today and experience
-            the web from any location across the United States, Canada, and Mexico
+            Begin using our North American proxy network now to browse the web from any point in the US, Canada, or Mexico
           </Text>
           
           <Flex justify="center" gap={6} flexWrap="wrap">
-                    <Button
-                        size="lg"
-                        bg="white"
-                        color="red.500"
-                        _hover={{ bg: "gray.100" }}
-                        as="a"
-                        href="/demo-request"
-                      >
-                        Request Demo
-                      </Button>
+            <Button
+              size="lg"
+              bg="white"
+              color="red.500"
+              _hover={{ bg: "gray.100" }}
+              as="a"
+              href="/demo-request"
+            >
+              Schedule Demo
+            </Button>
             
             <Button
               size="lg"
@@ -366,37 +353,12 @@ function NorthAmericaProxiesPage() {
               as="a"
               href="https://cloud.roamingproxy.com/signup"
             >
-              Start Free Trial
+              Try Free Today
             </Button>
           </Flex>
         </Box>
       </Box>
       
-      {/* <Box py={16} bg="white">
-        <Box maxW="1200px" mx="auto" px={4} textAlign="center">
-          <Heading as="h3" size="lg" mb={8} fontWeight="medium">
-            Powered by Familiar Technologies
-          </Heading>
-          <Flex justify="center" gap={8} flexWrap="wrap">
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/python.png" alt="Python" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/selenium.png" alt="Selenium" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/aws.png" alt="AWS" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/docker.png" alt="Docker" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/kubernetes.png" alt="Kubernetes" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/redis.png" alt="Redis" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/mongodb.png" alt="MongoDB" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/postgresql.png" alt="PostgreSQL" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/rest.png" alt="REST API" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/javascript.png" alt="JavaScript" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/html.png" alt="HTML" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/css.png" alt="CSS" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/node_js.png" alt="Node.js" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/react.png" alt="React" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/typescript.png" alt="TypeScript" boxSize="50px" />
-          </Flex>
-        </Box>
-      </Box>
-       */}
       {/* Footer */}
       <Footer />
     </>
