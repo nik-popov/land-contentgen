@@ -222,15 +222,15 @@ function RequestDemoPage() {
                   onChange={(e) => setConsentChecked(e.target.checked)}
                 >
                   I agree to receive communications about Roaming Proxy services. I understand that my information will be processed in accordance with the 
-                  <Button as="a" href="/privacy" variant="link" color="orange.500" mx={1}>Privacy Policy</Button>.
+                  <Button as="a" href="/privacy" variant="link" color="blue.500" mx={1}>Privacy Policy</Button>.
                 </Checkbox>
               </FormControl>
               
               <Button 
                 type="submit" 
-                bg="orange.400"
+                bg="blue.600"
                 color="white"
-                _hover={{ bg: "orange.500" }}
+                _hover={{ bg: "blue.500" }}
                 size="lg" 
                 w={{ base: "full", md: "auto" }}
                 isLoading={isSubmitting}
@@ -248,9 +248,9 @@ function RequestDemoPage() {
           </Text>
 
           <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6} w="full">
-            <Box bg="orange.50" p={5} borderRadius="md">
+            <Box bg="blue.50" p={5} borderRadius="md">
               <Flex align="center" mb={3}>
-                <Icon as={CheckCircleIcon} color="orange.500" boxSize={5} mr={2} />
+                <Icon as={CheckCircleIcon} color="blue.500" boxSize={5} mr={2} />
                 <Text fontWeight="medium">Personalized Demonstration</Text>
               </Flex>
               <Text fontSize="sm" color="gray.600">
@@ -258,9 +258,9 @@ function RequestDemoPage() {
               </Text>
             </Box>
             
-            <Box bg="orange.50" p={5} borderRadius="md">
+            <Box bg="blue.50" p={5} borderRadius="md">
               <Flex align="center" mb={3}>
-                <Icon as={CheckCircleIcon} color="orange.500" boxSize={5} mr={2} />
+                <Icon as={CheckCircleIcon} color="blue.500" boxSize={5} mr={2} />
                 <Text fontWeight="medium">Technical Deep Dive</Text>
               </Flex>
               <Text fontSize="sm" color="gray.600">
@@ -268,9 +268,9 @@ function RequestDemoPage() {
               </Text>
             </Box>
             
-            <Box bg="orange.50" p={5} borderRadius="md">
+            <Box bg="blue.50" p={5} borderRadius="md">
               <Flex align="center" mb={3}>
-                <Icon as={CheckCircleIcon} color="orange.500" boxSize={5} mr={2} />
+                <Icon as={CheckCircleIcon} color="blue.500" boxSize={5} mr={2} />
                 <Text fontWeight="medium">Custom Integration Planning</Text>
               </Flex>
               <Text fontSize="sm" color="gray.600">
@@ -278,9 +278,9 @@ function RequestDemoPage() {
               </Text>
             </Box>
             
-            <Box bg="orange.50" p={5} borderRadius="md">
+            <Box bg="blue.50" p={5} borderRadius="md">
               <Flex align="center" mb={3}>
-                <Icon as={CheckCircleIcon} color="orange.500" boxSize={5} mr={2} />
+                <Icon as={CheckCircleIcon} color="blue.500" boxSize={5} mr={2} />
                 <Text fontWeight="medium">Pricing Consultation</Text>
               </Flex>
               <Text fontSize="sm" color="gray.600">

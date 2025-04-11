@@ -190,31 +190,31 @@ function WhistleblowerReportPage() {
                 </Text>
                 <List spacing={2}>
                   <ListItem>
-                    <ListIcon as={WarningIcon} color="orange.500" />
+                    <ListIcon as={WarningIcon} color="blue.500" />
                     Financial fraud or accounting irregularities
                   </ListItem>
                   <ListItem>
-                    <ListIcon as={WarningIcon} color="orange.500" />
+                    <ListIcon as={WarningIcon} color="blue.500" />
                     Corruption, bribery, or illegal activities
                   </ListItem>
                   <ListItem>
-                    <ListIcon as={WarningIcon} color="orange.500" />
+                    <ListIcon as={WarningIcon} color="blue.500" />
                     Data security breaches or privacy violations
                   </ListItem>
                   <ListItem>
-                    <ListIcon as={WarningIcon} color="orange.500" />
+                    <ListIcon as={WarningIcon} color="blue.500" />
                     Ethical violations or conflicts of interest
                   </ListItem>
                   <ListItem>
-                    <ListIcon as={WarningIcon} color="orange.500" />
+                    <ListIcon as={WarningIcon} color="blue.500" />
                     Harassment, discrimination, or workplace safety issues
                   </ListItem>
                   <ListItem>
-                    <ListIcon as={WarningIcon} color="orange.500" />
+                    <ListIcon as={WarningIcon} color="blue.500" />
                     Environmental, health, or safety violations
                   </ListItem>
                   <ListItem>
-                    <ListIcon as={WarningIcon} color="orange.500" />
+                    <ListIcon as={WarningIcon} color="blue.500" />
                     Violations of our Code of Conduct or policies
                   </ListItem>
                 </List>

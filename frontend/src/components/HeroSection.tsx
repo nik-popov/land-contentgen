@@ -70,12 +70,12 @@ function HeroSection({ title, subtitle, ctas = [], bgImage = '' }) {
                 key={cta.link}
                 as="a"
                 href={cta.link}
-                color={index === 0 ? "white" : "orange.400"}
-                bg={index === 0 ? "orange.400" : "white"}
+                color={index === 0 ? "white" : "blue.600"}
+                bg={index === 0 ? "blue.600" : "white"}
                 size="lg"
                 _hover={{
-                  bg: index === 0 ? "white" : "orange.400",
-                  color: index === 0 ? "orange.400" : "white",
+                  bg: index === 0 ? "white" : "blue.600",
+                  color: index === 0 ? "blue.600" : "white",
                 }}
                 px={6}
               >
@@ -112,12 +112,12 @@ function HeroSection({ title, subtitle, ctas = [], bgImage = '' }) {
             key={cta.link}
             as="a"
             href={cta.link}
-            color={index === 0 ? "white" : "orange.400"}
-            bg={index === 0 ? "orange.400" : "white"}
+            color={index === 0 ? "white" : "blue.600"}
+            bg={index === 0 ? "blue.600" : "white"}
             size="lg"
             _hover={{
-              bg: index === 0 ? "white" : "orange.400",
-              color: index === 0 ? "orange.400" : "white",
+              bg: index === 0 ? "white" : "blue.600",
+              color: index === 0 ? "blue.600" : "white",
             }}
             px={6}
           >
