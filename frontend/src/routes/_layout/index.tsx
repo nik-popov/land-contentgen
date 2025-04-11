@@ -16,7 +16,7 @@ function LandingPage() {
         subtitle="SaaS proxy services crafted for large-scale data handling, web crawling, AI model training, and more."
         ctas={[
           { text: "Begin Now", link: "/demo-request" },
-          { text: "Try for Free", link: "https://cloud.roamingproxy.com" },
+          { text: "Try for Free", link: "https://buy.stripe.com/4gwg1C2by9Cs2Ry6op" },
         ]}
         bgImage="https://images.unsplash.com/photo-1625685554528-2a0b517e094c"
       />
