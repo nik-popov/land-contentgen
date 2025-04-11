@@ -9,33 +9,33 @@ export const Route = createFileRoute("/_layout/use-cases/ecommerce-price-monitor
 
 function EcommercePriceMonitoringPage() {
   const monitoringFeatures = [
-    { feature: "Competitor Tracking", sites: "5,000+", updates: "Real-time", useCases: "Price comparison, MAP monitoring, promotional detection, dynamic pricing" },
-    { feature: "Historical Analysis", sites: "3,500+", updates: "Hourly", useCases: "Pricing trends, seasonal patterns, competitive positioning, market analysis" },
-    { feature: "Product Matching", sites: "4,200+", updates: "Continuous", useCases: "SKU alignment, variant detection, catalog mapping, product comparison" },
-    { feature: "Stock Monitoring", sites: "2,800+", updates: "Real-time", useCases: "Inventory tracking, availability alerts, restocking patterns, market demand" },
-    { feature: "Promotional Analysis", sites: "3,200+", updates: "Hourly", useCases: "Discount tracking, bundle offers, loyalty programs, coupon monitoring" },
-    { feature: "Market Insights", sites: "4,500+", updates: "Daily", useCases: "Category trends, market positioning, competitive landscape, pricing strategy" }
+    { feature: "Rival Observation", sites: "5,000+", updates: "Real-time", useCases: "Pricing benchmarks, MAP oversight, promo spotting, adaptive pricing" },
+    { feature: "Past Data Review", sites: "3,500+", updates: "Hourly", useCases: "Price shifts, seasonal cycles, rival placement, industry trends" },
+    { feature: "Item Pairing", sites: "4,200+", updates: "Continuous", useCases: "SKU syncing, variant identification, product catalog alignment, item benchmarking" },
+    { feature: "Inventory Watch", sites: "2,800+", updates: "Real-time", useCases: "Stock monitoring, availability notices, restock trends, demand signals" },
+    { feature: "Promo Insights", sites: "3,200+", updates: "Hourly", useCases: "Discount observation, package deals, rewards tracking, voucher analysis" },
+    { feature: "Industry Perspectives", sites: "4,500+", updates: "Daily", useCases: "Sector patterns, market stance, competitive overview, pricing tactics" }
   ];
 
   const platformFeatures = [
     { 
-      title: "Global E-commerce Coverage", 
-      description: "Monitor prices across 5,000+ online retailers, marketplaces, and direct-to-consumer brands in over 50 countries", 
+      title: "Worldwide E-commerce Reach", 
+      description: "Track pricing across 5,000+ online stores, marketplaces, and direct brands in over 50 nations", 
       icon: "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/aws.png" 
     },
     { 
-      title: "AI-Powered Product Matching", 
-      description: "Our advanced algorithms automatically match identical and similar products across different retailers with 99.8% accuracy", 
+      title: "AI-Enhanced Item Matching", 
+      description: "Cutting-edge algorithms align identical or similar items across retailers with 99.8% precision", 
       icon: "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/mongodb.png" 
     },
     { 
-      title: "Real-time Price Alerts", 
-      description: "Receive instant notifications when competitors change prices, launch promotions, or go out of stock on key products", 
+      title: "Instant Price Notifications", 
+      description: "Get immediate alerts for rival price changes, new promotions, or stock shortages on critical items", 
       icon: "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/kubernetes.png" 
     },
     { 
-      title: "Dynamic Pricing Recommendations", 
-      description: "Get AI-driven pricing recommendations based on competitive landscape, market trends, and your business rules", 
+      title: "Smart Pricing Suggestions", 
+      description: "Receive AI-based pricing advice tailored to rival actions, market shifts, and your custom rules", 
       icon: "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/analytics.png" 
     }
   ];
@@ -46,27 +46,27 @@ function EcommercePriceMonitoringPage() {
       <Box py={16} bg="red.50" color="gray.800">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h1" size="2xl" textAlign="center" mb={8} fontWeight="medium">
-            E-commerce Price Monitoring
+            E-commerce Pricing Tracker
           </Heading>
           <Text fontSize="xl" textAlign="center" mb={12} maxW="800px" mx="auto">
-            Track competitor prices, optimize your pricing strategy, and maximize
-            profitability with our advanced e-commerce price monitoring platform.
+            Monitor rival prices, refine your pricing approach, and boost 
+            earnings with our sophisticated e-commerce pricing tool.
           </Text>
           
           <Flex justify="space-between" flexWrap="wrap" gap={6}>
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="red.600">Competitor Price Tracking</Heading>
-              <Text>Monitor your competitors' prices in real-time across thousands of online retailers, marketplaces, and direct-to-consumer brands. Track regular prices, promotional offers, and dynamic pricing patterns.</Text>
+              <Heading as="h3" size="md" color="red.600">Rival Price Oversight</Heading>
+              <Text>Keep an eye on competitor pricing live across thousands of online stores, marketplaces, and direct brands. Observe standard rates, special deals, and shifting price trends.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="red.600">Intelligent Price Optimization</Heading>
-              <Text>Leverage AI-powered pricing recommendations based on competitive data, market trends, and your specific business rules. Set automated repricing strategies to maximize margins while maintaining market competitiveness.</Text>
+              <Heading as="h3" size="md" color="red.600">Smart Pricing Refinement</Heading>
+              <Text>Use AI-driven pricing guidance based on rival data, industry patterns, and your unique rules. Implement automated adjustments to optimize profits while staying competitive.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="red.600">Market & Trend Analysis</Heading>
-              <Text>Gain valuable insights into pricing trends, market positioning, and competitive landscape. Identify opportunities for pricing adjustments and track the effectiveness of your pricing strategies over time.</Text>
+              <Heading as="h3" size="md" color="red.600">Industry & Trend Insights</Heading>
+              <Text>Unlock key understanding of pricing movements, market placement, and rival landscape. Spot chances for price tweaks and measure your strategy’s impact over time.</Text>
             </VStack>
           </Flex>
         </Box>
@@ -76,40 +76,40 @@ function EcommercePriceMonitoringPage() {
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
-            Key Benefits of Price Monitoring
+            Core Advantages of Pricing Tracking
           </Heading>
           
           <Grid templateColumns={{ base: "1fr", md: "1fr 1fr", lg: "1fr 1fr 1fr" }} gap={10} mt={10}>
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
                 <StatNumber color="red.600">15%</StatNumber>
-                <StatLabel>Average Margin Improvement</StatLabel>
+                <StatLabel>Profit Boost Average</StatLabel>
               </Stat>
               <Text>
-                Our customers typically see a 15% increase in profit margins
-                through optimized pricing strategies based on competitive intelligence.
+                Users typically enjoy a 15% profit increase by refining pricing 
+                with insights from competitive data.
               </Text>
             </VStack>
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
                 <StatNumber color="red.600">24/7</StatNumber>
-                <StatLabel>Real-time Monitoring</StatLabel>
+                <StatLabel>Live Oversight</StatLabel>
               </Stat>
               <Text>
-                Continuous monitoring of competitor prices ensures you never
-                miss a price change, promotion, or inventory fluctuation.
+                Round-the-clock tracking ensures you catch every rival price 
+                shift, promotion, or stock change.
               </Text>
             </VStack>
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
                 <StatNumber color="red.600">98%</StatNumber>
-                <StatLabel>Time Saved on Research</StatLabel>
+                <StatLabel>Research Time Cut</StatLabel>
               </Stat>
               <Text>
-                Eliminate manual price checking and market research with
-                automated monitoring of your entire competitive landscape.
+                Skip manual price checks and market studies with automated 
+                coverage of your full rival landscape.
               </Text>
             </VStack>
           </Grid>
@@ -120,7 +120,7 @@ function EcommercePriceMonitoringPage() {
       <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={12} fontWeight="medium">
-            Comprehensive Monitoring Features
+            Robust Tracking Capabilities
           </Heading>
           
           <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={8}>
@@ -130,15 +130,15 @@ function EcommercePriceMonitoringPage() {
                   <StatLabel fontSize="lg" fontWeight="medium">{feature.feature}</StatLabel>
                   <Flex justify="space-between" align="center">
                     <StatNumber color="red.600">{feature.sites}</StatNumber>
-                    <Text color="gray.500" fontSize="sm" fontWeight="normal">Retailers</Text>
+                    <Text color="gray.500" fontSize="sm" fontWeight="normal">Stores</Text>
                   </Flex>
                   <Flex justify="space-between" align="center" mt={1}>
                     <StatNumber color="red.400">{feature.updates}</StatNumber>
-                    <Text color="gray.500" fontSize="sm" fontWeight="normal">Updates</Text>
+                    <Text color="gray.500" fontSize="sm" fontWeight="normal">Refreshes</Text>
                   </Flex>
                 </Stat>
                 <Text fontSize="sm" color="gray.600">
-                  <Text as="span" fontWeight="bold">Common Use Cases:</Text> {feature.useCases}
+                  <Text as="span" fontWeight="bold">Key Applications:</Text> {feature.useCases}
                 </Text>
               </Box>
             ))}
@@ -150,50 +150,50 @@ function EcommercePriceMonitoringPage() {
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={4} fontWeight="medium">
-            Advanced Platform Capabilities
+            Cutting-Edge Platform Tools
           </Heading>
           <Text fontSize="lg" textAlign="center" mb={12} maxW="700px" mx="auto">
-            Our e-commerce price monitoring platform combines cutting-edge technology with comprehensive market coverage
+            Our e-commerce pricing tracker blends innovative tech with extensive market reach
           </Text>
           
           <Grid templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }} gap={8}>
             <Flex p={6} bg="gray.50" borderRadius="md" boxShadow="sm" align="flex-start">
               <Box w="50px" h="50px" mr={4} display="flex" alignItems="center" justifyContent="center">
-                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/grafana.png" alt="Real-time Dashboard" />
+                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/grafana.png" alt="Live Insights Panel" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">Real-time Monitoring Dashboard</Heading>
-                <Text color="gray.600">Comprehensive visualization of competitor pricing, market positioning, and historical trends with customizable alerts</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">Live Insights Panel</Heading>
+                <Text color="gray.600">Detailed views of rival pricing, market stance, and past trends with adjustable notifications</Text>
               </Box>
             </Flex>
             
             <Flex p={6} bg="gray.50" borderRadius="md" boxShadow="sm" align="flex-start">
               <Box w="50px" h="50px" mr={4} display="flex" alignItems="center" justifyContent="center">
-                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/aws.png" alt="AI Matching" />
+                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/aws.png" alt="AI Pairing" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">AI Product Matching</Heading>
-                <Text color="gray.600">Advanced algorithms that automatically match identical and similar products across retailers with 99.8% accuracy</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">AI Item Pairing</Heading>
+                <Text color="gray.600">Sophisticated algorithms that align matching or similar items across stores with 99.8% accuracy</Text>
               </Box>
             </Flex>
             
             <Flex p={6} bg="gray.50" borderRadius="md" boxShadow="sm" align="flex-start">
               <Box w="50px" h="50px" mr={4} display="flex" alignItems="center" justifyContent="center">
-                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/redis.png" alt="Dynamic Pricing" />
+                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/redis.png" alt="Adaptive Pricing" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">Dynamic Pricing Engine</Heading>
-                <Text color="gray.600">Set automated pricing rules based on competitor prices, inventory levels, margin targets, and market position</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">Adaptive Pricing System</Heading>
+                <Text color="gray.600">Apply automated pricing adjustments based on rival rates, stock levels, profit goals, and market position</Text>
               </Box>
             </Flex>
             
             <Flex p={6} bg="gray.50" borderRadius="md" boxShadow="sm" align="flex-start">
               <Box w="50px" h="50px" mr={4} display="flex" alignItems="center" justifyContent="center">
-                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/rest.png" alt="API Integration" />
+                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/rest.png" alt="System Syncing" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">Seamless API Integration</Heading>
-                <Text color="gray.600">Connect directly with your e-commerce platform, ERP system, or pricing tools for automated data synchronization</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">Smooth System Syncing</Heading>
+                <Text color="gray.600">Link directly to your e-commerce setup, ERP, or pricing systems for seamless data updates</Text>
               </Box>
             </Flex>
           </Grid>
@@ -204,58 +204,58 @@ function EcommercePriceMonitoringPage() {
       <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
-            Price Monitoring Platform Features
+            Pricing Tracker Platform Features
           </Heading>
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="red.600">Competitive Intelligence</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.600">Rival Intelligence</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Real-time Price Tracking</Text> - Monitor competitor prices with up-to-the-minute accuracy</Text>
+                  <Text><Text as="span" fontWeight="bold">Live Price Monitoring</Text> - Track rival prices with pinpoint timing</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Promotional Detection</Text> - Automatically identify sales, discounts, bundles, and special offers</Text>
+                  <Text><Text as="span" fontWeight="bold">Promo Identification</Text> - Instantly spot sales, discounts, bundles, and deals</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">MAP Compliance Monitoring</Text> - Track minimum advertised price adherence across all channels</Text>
+                  <Text><Text as="span" fontWeight="bold">MAP Adherence Checks</Text> - Monitor compliance with minimum advertised prices across channels</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Product Availability Tracking</Text> - Monitor stock levels and inventory changes at competitor sites</Text>
+                  <Text><Text as="span" fontWeight="bold">Stock Level Oversight</Text> - Track inventory changes and availability at rival sites</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Market Share Analysis</Text> - Understand your positioning within specific product categories</Text>
+                  <Text><Text as="span" fontWeight="bold">Category Share Insights</Text> - Gauge your stance within specific product groups</Text>
                 </ListItem>
               </List>
             </Box>
             
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="red.600">Strategic Pricing Tools</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.600">Pricing Strategy Tools</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Price Optimization Engine</Text> - AI-driven recommendations to maximize margins and market share</Text>
+                  <Text><Text as="span" fontWeight="bold">Pricing Enhancement Engine</Text> - AI-guided suggestions to boost profits and market presence</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Rule-based Pricing</Text> - Set custom pricing rules based on competitor activities and market conditions</Text>
+                  <Text><Text as="span" fontWeight="bold">Custom Pricing Rules</Text> - Define tailored pricing based on rival moves and market conditions</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">What-if Analysis</Text> - Simulate different pricing scenarios and their impact on sales and profitability</Text>
+                  <Text><Text as="span" fontWeight="bold">Scenario Testing</Text> - Explore pricing options and their effects on revenue and sales</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Historical Trend Analysis</Text> - Identify seasonal patterns and pricing cycles to anticipate changes</Text>
+                  <Text><Text as="span" fontWeight="bold">Trend History Review</Text> - Spot seasonal shifts and pricing rhythms to plan ahead</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Automated Repricing</Text> - Direct integration with your e-commerce platform for immediate price updates</Text>
+                  <Text><Text as="span" fontWeight="bold">Auto Price Updates</Text> - Sync with your e-commerce system for instant pricing changes</Text>
                 </ListItem>
               </List>
             </Box>
@@ -267,37 +267,33 @@ function EcommercePriceMonitoringPage() {
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={12} fontWeight="medium">
-            Price Monitoring Success Stories
+            Pricing Tracker Wins
           </Heading>
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="red.600">Electronics Retailer Increases Margins by 22%</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.600">Tech Retailer Lifts Margins by 22%</Heading>
               <Text mb={4}>
-                A mid-sized electronics retailer used our price monitoring platform to track competitors 
-                across 15,000 SKUs. By implementing our dynamic pricing recommendations and identifying 
-                opportunities where they could maintain higher prices without losing sales, they increased 
-                their average profit margin by 22% within the first 90 days.
+                A mid-sized tech retailer used our pricing tracker to monitor rivals across 15,000 SKUs. 
+                By applying our smart pricing tips and finding spots to hold higher prices without losing 
+                sales, they raised average profit margins by 22% in just 90 days.
               </Text>
               <Text fontStyle="italic" fontSize="sm" color="gray.600">
-                "The granular insights into our competitor pricing allowed us to be much more strategic 
-                with our pricing decisions. We discovered numerous products where we were unnecessarily 
-                undercutting the market, and others where slight price reductions dramatically improved conversion."
+                "The detailed rival pricing data let us refine our approach strategically. We found items 
+                where we were underpricing unnecessarily and others where small cuts boosted sales significantly."
               </Text>
             </Box>
             
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="red.600">Fashion Brand Optimizes Promotional Strategy</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.600">Fashion Label Refines Promo Timing</Heading>
               <Text mb={4}>
-                A global fashion brand leveraged our promotional analysis tools to monitor competitor 
-                discount patterns and timing. By adjusting their promotional calendar based on these 
-                insights, they reduced their average discount depth by 8% while maintaining sales volume, 
-                resulting in a 15% increase in quarterly revenue.
+                A global fashion label tapped our promo insights to track rival discount trends and timing. 
+                Adjusting their promo schedule based on this data cut their average discount size by 8% while 
+                keeping sales steady, lifting quarterly revenue by 15%.
               </Text>
               <Text fontStyle="italic" fontSize="sm" color="gray.600">
-                "The ability to track not just regular prices but promotional activities across hundreds 
-                of competitors gave us unprecedented insight into market dynamics. We've completely 
-                transformed our promotional strategy based on these insights."
+                "Tracking both regular prices and promos across numerous rivals gave us unmatched market 
+                insight. It reshaped our promo strategy entirely based on what we learned."
               </Text>
             </Box>
           </Grid>
@@ -308,41 +304,41 @@ function EcommercePriceMonitoringPage() {
       <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={8} fontWeight="medium">
-            Comprehensive Market Coverage
+            Extensive Market Reach
           </Heading>
           <Text fontSize="lg" mb={12} maxW="700px" mx="auto">
-            Our price monitoring solution covers all major e-commerce sites and marketplaces globally
+            Our pricing tracker spans major e-commerce platforms and marketplaces worldwide
           </Text>
           
           <Box bg="white" p={6} borderRadius="md" boxShadow="md">
             <SimpleGrid columns={{ base: 2, md: 3, lg: 6 }} spacing={4} mt={8}>
               <VStack>
-                <Text fontWeight="bold" color="red.600">Online Retailers</Text>
+                <Text fontWeight="bold" color="red.600">Online Stores</Text>
                 <Text>2,500+</Text>
-                <Text>Monitored</Text>
+                <Text>Tracked</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="red.600">Marketplaces</Text>
+                <Text fontWeight="bold" color="red.600">Market Hubs</Text>
                 <Text>185+</Text>
-                <Text>Covered</Text>
+                <Text>Included</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="red.600">Countries</Text>
+                <Text fontWeight="bold" color="red.600">Nations</Text>
                 <Text>54</Text>
-                <Text>Global Reach</Text>
+                <Text>Worldwide Scope</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="red.600">Product Categories</Text>
+                <Text fontWeight="bold" color="red.600">Item Groups</Text>
                 <Text>500+</Text>
-                <Text>Specialized</Text>
+                <Text>Detailed</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="red.600">Data Points</Text>
+                <Text fontWeight="bold" color="red.600">Data Metrics</Text>
                 <Text>25M+</Text>
-                <Text>Daily Collection</Text>
+                <Text>Daily Gathered</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="red.600">Update Frequency</Text>
+                <Text fontWeight="bold" color="red.600">Refresh Rate</Text>
                 <Text>Real-time</Text>
                 <Text>to Hourly</Text>
               </VStack>
@@ -355,15 +351,15 @@ function EcommercePriceMonitoringPage() {
       <Box py={16} bg="red.600" color="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">
-            Optimize Your Pricing Strategy
+            Enhance Your Pricing Approach
           </Heading>
           <Text fontSize="lg" mb={10} maxW="700px" mx="auto" color="white">
-            Start monitoring competitor prices and maximizing your
-            profitability with our powerful price intelligence platform
+            Begin tracking rival prices and amplifying your profits 
+            with our robust pricing intelligence tool
           </Text>
           
           <Flex justify="center" gap={6} flexWrap="wrap">
-          <Button
+            <Button
               size="lg"
               bg="white"
               color="red.500"
@@ -371,7 +367,7 @@ function EcommercePriceMonitoringPage() {
               as="a"
               href="/demo-request"
             >
-              Request Demo
+              Schedule a Demo
             </Button>
             
             <Button
@@ -383,13 +379,11 @@ function EcommercePriceMonitoringPage() {
               as="a"
               href="https://cloud.roamingproxy.com/signup"
             >
-              Start Free Trial
+              Try Free Today
             </Button>
           </Flex>
         </Box>
       </Box>
-      
-  
       
       {/* Footer */}
       <Footer />
