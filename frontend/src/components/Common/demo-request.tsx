@@ -244,7 +244,7 @@ function RequestDemoPage() {
               
                             <Divider />
               <Text fontSize="lg" color="gray.600">
-            Experience the power of our enterprise-grade web scraping proxy infrastructure. Complete this form to schedule a personalized demo tailored to your market research needs.
+            Experience the power of our enterprise-grade web scraping proxy infrastructure. Complete this form to schedule a personalized demo tailored to your https://buy.stripe.com/4gwg1C2by9Cs2Ry6op needs.
           </Text>
 
           <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6} w="full">
@@ -254,7 +254,7 @@ function RequestDemoPage() {
                 <Text fontWeight="medium">Personalized Demonstration</Text>
               </Flex>
               <Text fontSize="sm" color="gray.600">
-                Our team will showcase features most relevant to your specific market research needs.
+                Our team will showcase features most relevant to your specific https://buy.stripe.com/4gwg1C2by9Cs2Ry6op needs.
               </Text>
             </Box>
             
