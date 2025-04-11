@@ -9,33 +9,33 @@ export const Route = createFileRoute("/_layout/network/proxy-types")({
 
 function ProxyTypesPage() {
   const proxyTypes = [
-    { type: "Residential Proxies", servers: 5000000, locations: 195, useCases: "Web scraping, social media management, ad verification, market research" },
-    { type: "Datacenter Proxies", servers: 350000, locations: 130, useCases: "High-speed data extraction, bulk operations, performance testing" },
-    { type: "Mobile Proxies", servers: 2500000, locations: 170, useCases: "Mobile app testing, mobile SEO verification, in-app ad validation" },
-    { type: "ISP Proxies", servers: 1500000, locations: 120, useCases: "E-commerce price monitoring, travel fare aggregation, high-value operations" },
-    { type: "Static Proxies", servers: 800000, locations: 95, useCases: "Account management, consistent identity operations, long-term automation" },
-    { type: "Rotating Proxies", servers: 3500000, locations: 175, useCases: "High-volume data collection, anonymity, avoiding rate limits" }
+    { type: "Residential Proxies", servers: 5000000, locations: 195, useCases: "Data harvesting, social media operations, ad verification, market studies" },
+    { type: "Datacenter Proxies", servers: 350000, locations: 130, useCases: "Rapid data retrieval, large-scale tasks, performance evaluation" },
+    { type: "Mobile Proxies", servers: 2500000, locations: 170, useCases: "App testing, mobile SEO checks, in-app ad confirmation" },
+    { type: "ISP Proxies", servers: 1500000, locations: 120, useCases: "Online price tracking, travel rate aggregation, critical operations" },
+    { type: "Static Proxies", servers: 800000, locations: 95, useCases: "Profile management, stable identity tasks, prolonged automation" },
+    { type: "Rotating Proxies", servers: 3500000, locations: 175, useCases: "Extensive data gathering, privacy, bypassing restrictions" }
   ];
 
   const proxyFeatures = [
     { 
-      title: "Diverse Proxy Types", 
-      description: "Access to the full spectrum of proxy types including residential, datacenter, mobile, ISP, static, and rotating proxies", 
+      title: "Varied Proxy Options", 
+      description: "Tap into a wide array of proxy types such as residential, datacenter, mobile, ISP, static, and rotating proxies", 
       icon: "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/aws.png" 
     },
     { 
-      title: "Proxy Rotation Control", 
-      description: "Configure rotation intervals from seconds to days or trigger rotations manually based on your specific use case", 
+      title: "Rotation Customization", 
+      description: "Set rotation schedules from seconds to days or manually initiate rotations tailored to your needs", 
       icon: "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/mongodb.png" 
     },
     { 
-      title: "Authentication Options", 
-      description: "Multiple authentication methods including username/password, IP whitelisting, and API key integration", 
+      title: "Secure Access Methods", 
+      description: "Multiple authentication choices including credentials, IP allowlisting, and API key linkage", 
       icon: "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/kubernetes.png" 
     },
     { 
-      title: "Protocol Support", 
-      description: "Full support for HTTP, HTTPS, SOCKS4, and SOCKS5 protocols across all proxy types with advanced configuration options", 
+      title: "Protocol Compatibility", 
+      description: "Complete support for HTTP, HTTPS, SOCKS4, and SOCKS5 protocols with extensive customization options", 
       icon: "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/analytics.png" 
     }
   ];
@@ -46,27 +46,26 @@ function ProxyTypesPage() {
       <Box py={16} bg="red.50" color="gray.800">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h1" size="2xl" textAlign="center" mb={8} fontWeight="medium">
-            Proxy Types
+            Proxy Options
           </Heading>
           <Text fontSize="xl" textAlign="center" mb={12} maxW="800px" mx="auto">
-            The right proxy for every use case. Choose from our comprehensive range of
-            proxy types tailored to meet specific performance, location, and reliability requirements.
+            The ideal proxy for every scenario. Select from our extensive lineup of proxy types designed to fulfill specific speed, geographic, and dependability needs.
           </Text>
           
           <Flex justify="space-between" flexWrap="wrap" gap={6}>
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
               <Heading as="h3" size="md" color="teal.500">Residential Proxies</Heading>
-              <Text>Access the web through real residential IP addresses from actual devices in homes around the world, providing the highest level of authenticity and the lowest detection rates.</Text>
+              <Text>Browse the internet via authentic residential IPs from real household devices worldwide, ensuring top-tier legitimacy and minimal detection risks.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
               <Heading as="h3" size="md" color="teal.500">Datacenter Proxies</Heading>
-              <Text>High-performance proxies hosted in enterprise-grade datacenters, optimized for speed and reliability. Ideal for high-volume operations where pure performance matters most.</Text>
+              <Text>Fast-performing proxies housed in premium datacenters, built for speed and stability. Perfect for large-scale tasks where efficiency is key.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
               <Heading as="h3" size="md" color="teal.500">Mobile Proxies</Heading>
-              <Text>Connect through real mobile devices and carriers to experience the web exactly as mobile users do. Perfect for testing mobile apps, websites, and mobile-specific functionality.</Text>
+              <Text>Navigate through real mobile networks and devices to view the web as mobile users do, ideal for validating mobile apps, sites, and features.</Text>
             </VStack>
           </Flex>
         </Box>
@@ -76,40 +75,37 @@ function ProxyTypesPage() {
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
-            Key Benefits of Our Diverse Proxy Network
+            Advantages of Our Varied Proxy Network
           </Heading>
           
           <Grid templateColumns={{ base: "1fr", md: "1fr 1fr", lg: "1fr 1fr 1fr" }} gap={10} mt={10}>
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
                 <StatNumber color="teal.500">99.8%</StatNumber>
-                <StatLabel>Uptime Guarantee</StatLabel>
+                <StatLabel>Reliability Assurance</StatLabel>
               </Stat>
               <Text>
-                Our proxy network is built for enterprise reliability with redundant infrastructure, 
-                automatic failover, and 24/7 monitoring ensuring continuous availability.
+                Our proxy system is engineered for business-grade dependability with backup infrastructure, seamless failover, and round-the-clock oversight for uninterrupted service.
               </Text>
             </VStack>
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
                 <StatNumber color="teal.500">95%</StatNumber>
-                <StatLabel>Success Rate Improvement</StatLabel>
+                <StatLabel>Improved Success Rate</StatLabel>
               </Stat>
               <Text>
-                Organizations using our specialized proxy types report up to 95% higher 
-                success rates on challenging targets compared to generic proxy solutions.
+                Users of our tailored proxy types see up to 95% better outcomes on complex targets compared to standard proxy offerings.
               </Text>
             </VStack>
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
                 <StatNumber color="teal.500">12M+</StatNumber>
-                <StatLabel>Total Proxy Pool</StatLabel>
+                <StatLabel>Total Proxy Inventory</StatLabel>
               </Stat>
               <Text>
-                Access to over 12 million proxies across all types, ensuring you always 
-                have fresh IPs available for any task, at any scale, in any location.
+                Utilize over 12 million proxies across all categories, guaranteeing a constant supply of fresh IPs for any project, scale, or region.
               </Text>
             </VStack>
           </Grid>
@@ -120,7 +116,7 @@ function ProxyTypesPage() {
       <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={12} fontWeight="medium">
-            Comprehensive Proxy Types
+            Wide-Ranging Proxy Options
           </Heading>
           
           <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={8}>
@@ -138,7 +134,7 @@ function ProxyTypesPage() {
                   </Flex>
                 </Stat>
                 <Text fontSize="sm" color="gray.600">
-                  <Text as="span" fontWeight="bold">Common Use Cases:</Text> {proxy.useCases}
+                  <Text as="span" fontWeight="bold">Typical Applications:</Text> {proxy.useCases}
                 </Text>
               </Box>
             ))}
@@ -150,10 +146,10 @@ function ProxyTypesPage() {
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={4} fontWeight="medium">
-            Advanced Proxy Capabilities
+            Enhanced Proxy Features
           </Heading>
           <Text fontSize="lg" textAlign="center" mb={12} maxW="700px" mx="auto">
-            Our advanced proxy technology offers unmatched flexibility and control for any use case
+            Our cutting-edge proxy technology delivers unparalleled adaptability and precision for all scenarios.
           </Text>
           
           <Grid templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }} gap={8}>
@@ -162,8 +158,8 @@ function ProxyTypesPage() {
                 <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/grafana.png" alt="Session Control" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">Sticky Session Control</Heading>
-                <Text color="gray.600">Maintain the same IP for consistent sessions or set custom rotation intervals based on time, requests, or bandwidth usage</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">Persistent Session Management</Heading>
+                <Text color="gray.600">Keep the same IP for steady sessions or customize rotation based on time, requests, or data usage.</Text>
               </Box>
             </Flex>
             
@@ -172,8 +168,8 @@ function ProxyTypesPage() {
                 <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/aws.png" alt="Targeting Options" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">Granular Targeting</Heading>
-                <Text color="gray.600">Select proxies by type, location, ASN, carrier, connection speed, and other parameters for perfectly matched capabilities</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">Precise Targeting</Heading>
+                <Text color="gray.600">Pick proxies by category, region, ASN, carrier, speed, and other criteria for optimal performance.</Text>
               </Box>
             </Flex>
             
@@ -182,8 +178,8 @@ function ProxyTypesPage() {
                 <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/redis.png" alt="Smart Routing" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">Smart Routing</Heading>
-                <Text color="gray.600">AI-powered routing selects the optimal proxy for each request based on target, history, and real-time performance metrics</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">Intelligent Routing</Heading>
+                <Text color="gray.600">AI-driven routing chooses the best proxy per request using target data, past performance, and live metrics.</Text>
               </Box>
             </Flex>
             
@@ -192,8 +188,8 @@ function ProxyTypesPage() {
                 <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/rest.png" alt="Protocol Support" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">Multi-Protocol Support</Heading>
-                <Text color="gray.600">Full support for HTTP, HTTPS, SOCKS4 and SOCKS5 with advanced configuration options for specialized requirements</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">Versatile Protocol Support</Heading>
+                <Text color="gray.600">Comprehensive compatibility with HTTP, HTTPS, SOCKS4, and SOCKS5, featuring advanced setup options.</Text>
               </Box>
             </Flex>
           </Grid>
@@ -204,7 +200,7 @@ function ProxyTypesPage() {
       <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
-            Detailed Proxy Type Specifications
+            Proxy Type Details
           </Heading>
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
@@ -213,49 +209,49 @@ function ProxyTypesPage() {
               <List spacing={3}>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="teal.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">100% Real Devices</Text> - Genuine residential and mobile IPs from real devices, not datacenter IPs</Text>
+                  <Text><Text as="span" fontWeight="bold">Authentic Devices</Text> - Real residential and mobile IPs from genuine devices, not datacenter-based.</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="teal.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Global Coverage</Text> - Access from 195+ countries and 850+ cities with authentic local characteristics</Text>
+                  <Text><Text as="span" fontWeight="bold">Worldwide Reach</Text> - Coverage in 195+ countries and 850+ cities with true local traits.</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="teal.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Carrier Selection</Text> - Choose specific ISPs or mobile carriers for targeted testing</Text>
+                  <Text><Text as="span" fontWeight="bold">Provider Selection</Text> - Specify ISPs or mobile carriers for precise testing.</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="teal.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Flexible Rotation</Text> - Configure sticky sessions or automatic rotation at custom intervals</Text>
+                  <Text><Text as="span" fontWeight="bold">Rotation Flexibility</Text> - Set persistent sessions or auto-rotate at chosen intervals.</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="teal.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Advanced Fingerprinting</Text> - Includes authentic browser fingerprints matching real devices</Text>
+                  <Text><Text as="span" fontWeight="bold">Realistic Fingerprinting</Text> - Features genuine browser fingerprints aligned with actual devices.</Text>
                 </ListItem>
               </List>
             </Box>
             
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="teal.500">Datacenter & Specialized Proxies</Heading>
+              <Heading as="h3" size="md" mb={5} color="teal.500">Datacenter & Specialty Proxies</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="teal.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">High Performance</Text> - Ultra-fast connections with 99.9% uptime guarantee for critical operations</Text>
+                  <Text><Text as="span" fontWeight="bold">Top Speed</Text> - High-speed connections with a 99.9% uptime promise for vital tasks.</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="teal.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Dedicated Options</Text> - Private, dedicated proxies with exclusive access for maximum reliability</Text>
+                  <Text><Text as="span" fontWeight="bold">Exclusive Access</Text> - Dedicated proxies with sole usage for peak reliability.</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="teal.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Unmetered Bandwidth</Text> - Unlimited data transfer on select plans for high-volume operations</Text>
+                  <Text><Text as="span" fontWeight="bold">Unlimited Data</Text> - No bandwidth caps on select plans for intensive operations.</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="teal.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Static Options</Text> - Long-term static IPs available for consistent identity management</Text>
+                  <Text><Text as="span" fontWeight="bold">Fixed IPs</Text> - Stable, long-term IPs for consistent identity handling.</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="teal.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Specialized Configurations</Text> - Custom proxy setups for specific platforms and use cases</Text>
+                  <Text><Text as="span" fontWeight="bold">Custom Setups</Text> - Tailored proxy configurations for unique platforms and needs.</Text>
                 </ListItem>
               </List>
             </Box>
@@ -267,37 +263,27 @@ function ProxyTypesPage() {
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={12} fontWeight="medium">
-            Proxy Types Success Stories
+            Proxy Success Stories
           </Heading>
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="teal.500">E-commerce Company Increases Data Accuracy</Heading>
+              <Heading as="h3" size="md" mb={4} color="teal.500">E-commerce Firm Boosts Data Precision</Heading>
               <Text mb={4}>
-                A leading e-commerce analytics provider switched from generic datacenter proxies to our 
-                residential proxy network for price monitoring. The authenticity of residential IPs increased 
-                their data collection success rate from 67% to 98%, dramatically improving the accuracy of 
-                their competitive pricing intelligence.
+                A top e-commerce analytics company moved from basic datacenter proxies to our residential proxy system for price tracking. The real residential IPs lifted their data retrieval success from 67% to 98%, vastly enhancing their pricing intelligence accuracy.
               </Text>
               <Text fontStyle="italic" fontSize="sm" color="gray.600">
-                "The switch to residential proxies transformed our data quality overnight. We're now able to 
-                collect accurate pricing data from previously inaccessible sources, giving our customers a 
-                significant competitive advantage."
+                "Switching to residential proxies revolutionized our data quality instantly. We can now gather precise pricing from sources we couldn’t reach before, giving our clients a clear edge."
               </Text>
             </Box>
             
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="teal.500">Mobile App Developer Perfects User Experience</Heading>
+              <Heading as="h3" size="md" mb={4} color="teal.500">Mobile Developer Enhances App Quality</Heading>
               <Text mb={4}>
-                A mobile application developer utilized our mobile proxy network to test their app across 
-                42 different mobile carriers in 18 countries. They discovered critical performance issues 
-                specific to certain networks that weren't visible in simulated environments, improving their 
-                app store rating from 3.7 to 4.8 stars after resolving these issues.
+                A mobile app developer used our mobile proxy network to test their app across 42 carriers in 18 countries. They uncovered network-specific performance flaws missed by emulators, boosting their app store rating from 3.7 to 4.8 stars after fixes.
               </Text>
               <Text fontStyle="italic" fontSize="sm" color="gray.600">
-                "Testing through actual mobile carrier networks revealed issues our emulators never caught. 
-                The ability to test through specific carriers in each market has fundamentally changed our 
-                QA process and dramatically improved our user experience."
+                "Testing via real mobile networks exposed issues simulators overlooked. Targeting specific carriers per market transformed our QA and elevated user satisfaction significantly."
               </Text>
             </Box>
           </Grid>
@@ -308,10 +294,10 @@ function ProxyTypesPage() {
       <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={8} fontWeight="medium">
-            Comprehensive Proxy Selection
+            Proxy Selection Overview
           </Heading>
           <Text fontSize="lg" mb={12} maxW="700px" mx="auto">
-            Choose the perfect proxy type for every use case with our extensive proxy network
+            Pick the best proxy type for any task with our expansive proxy network.
           </Text>
           
           <Box bg="white" p={6} borderRadius="md" boxShadow="md">
@@ -355,24 +341,23 @@ function ProxyTypesPage() {
       <Box py={16} bg="teal.500" color="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">
-            Find Your Perfect Proxy Solution
+            Discover Your Ideal Proxy Solution
           </Heading>
           <Text fontSize="lg" mb={10} maxW="700px" mx="auto" color="white">
-            Get started with our comprehensive proxy network and select
-            the ideal proxy types for your specific use cases
+            Begin exploring our diverse proxy network and choose the perfect proxy types for your unique needs.
           </Text>
           
           <Flex justify="center" gap={6} flexWrap="wrap">
-                     <Button
-                         size="lg"
-                         bg="white"
-                         color="teal.500"
-                         _hover={{ bg: "gray.100" }}
-                         as="a"
-                         href="/demo-request"
-                       >
-                         Request Demo
-                       </Button>
+            <Button
+              size="lg"
+              bg="white"
+              color="teal.500"
+              _hover={{ bg: "gray.100" }}
+              as="a"
+              href="/demo-request"
+            >
+              Schedule Demo
+            </Button>
             <Button
               size="lg"
               variant="outline"
@@ -382,7 +367,7 @@ function ProxyTypesPage() {
               as="a"
               href="https://cloud.roamingproxy.com/signup"
             >
-              Start Free Trial
+              Try for Free
             </Button>
           </Flex>
         </Box>
