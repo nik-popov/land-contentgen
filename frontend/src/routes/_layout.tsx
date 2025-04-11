@@ -14,8 +14,21 @@ function Layout() {
   const [consentGiven, setConsentGiven] = useState(
     document.cookie.includes("roamingproxy-consent=true")
   );
+  const [gtagLoaded, setGtagLoaded] = useState(!!window.gtag);
 
-  // Sync consent state with cookie
+  useEffect(() => {
+    if (!window.gtag) {
+      const checkGtag = () => {
+        if (window.gtag) {
+          setGtagLoaded(true);
+          clearInterval(interval);
+        }
+      };
+      const interval = setInterval(checkGtag, 100);
+      return () => clearInterval(interval);
+    }
+  }, []);
+
   useEffect(() => {
     const handleConsentChange = () => {
       const granted = document.cookie.includes("roamingproxy-consent=true");
@@ -23,20 +36,19 @@ function Layout() {
         setConsentGiven(granted);
       }
     };
-    // Use an event listener or lightweight check instead of polling
-    window.addEventListener("storage", handleConsentChange); // For cross-tab updates
-    const interval = setInterval(handleConsentChange, 500); // Lightweight polling for same-tab
-    handleConsentChange(); // Initial check
+    window.addEventListener("storage", handleConsentChange);
+    window.addEventListener("consentChange", handleConsentChange);
+    handleConsentChange();
     return () => {
       window.removeEventListener("storage", handleConsentChange);
-      clearInterval(interval);
+      window.removeEventListener("consentChange", handleConsentChange);
     };
   }, [consentGiven]);
 
   return (
     <Flex direction="column" minH="100vh" w="100%">
       <TopNav />
-      <TrackPageViews consentGiven={consentGiven} /> {/* Pass consent state */}
+      <TrackPageViews consentGiven={consentGiven} />
       <Flex flex="1" direction="column" maxW="1200px" mx="auto" w="100%">
         <Outlet />
       </Flex>
@@ -71,7 +83,7 @@ function Layout() {
           expires={150}
           onAccept={() => {
             console.log("Accept clicked");
-            if (window.gtag) {
+            if (gtagLoaded && window.gtag) {
               window.gtag("consent", "update", {
                 ad_user_data: "granted",
                 ad_personalization: "granted",
@@ -86,17 +98,25 @@ function Layout() {
                 send_to: "G-X7X57Z2WXP",
               });
             } else {
-              console.error("gtag not loaded");
+              console.error("gtag not loaded yet");
             }
-            setConsentGiven(true); // Update state immediately
+            setConsentGiven(true);
+            window.dispatchEvent(new Event("consentChange"));
           }}
           onDecline={() => {
             console.log("Cookies declined");
-            window.gtag?.("consent", "update", {
-              analytics_storage: "denied",
-              ad_storage: "denied",
-            });
-            setConsentGiven(false); // Ensure state reflects decline
+            if (gtagLoaded && window.gtag) {
+              window.gtag("consent", "update", {
+                ad_user_data: "denied",
+                ad_personalization: "denied",
+                ad_storage: "denied",
+                analytics_storage: "denied",
+                functionality_storage: "denied",
+                security_storage: "granted",
+              });
+            }
+            setConsentGiven(false);
+            window.dispatchEvent(new Event("consentChange"));
           }}
         >
           We use cookies to enhance your experience, analyze usage, and deliver ads. Learn more in our{" "}
