@@ -209,7 +209,7 @@ function ContactPage() {
       </Box>
       
       {/* Stats Section */}
-      <Box py={16} bg="white">
+      {/* <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={8} fontWeight="medium">
             We're Here For You
@@ -243,7 +243,7 @@ function ContactPage() {
             </SimpleGrid>
           </Box>
         </Box>
-      </Box>
+      </Box> */}
     
       
       {/* Call to Action */}
