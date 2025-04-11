@@ -9,18 +9,19 @@ export const Route = createFileRoute("/_layout/")({
 
 function LandingPage() {
   const navigate = useNavigate();
-<Box>
-  <HeroSection
-    title="Enterprise Web Access Infrastructure for AI & Data Operations"
-    subtitle="Scale-optimized proxy solutions for data collection, ML training, and business intelligence at global enterprise scale."
-    ctas={[
-      { text: "Get Started", link: "/demo-request" },
-      { text: "Start Free Trial", link: "https://cloud.roamingproxy.com" },
-    ]}
+  return (
+    <Box>
+      <HeroSection
+        title="Your Gateway to Seamless Web Access"
+        subtitle="SaaS proxy solutions designed for high-volume data processing, web scraping, LLM training, and beyond."
+        ctas={[
+          { text: "Get Started", link: "/demo-request" },
+          { text: "Start Free Trial", link: "https://cloud.roamingproxy.com" },
+        ]}
         bgImage="https://images.unsplash.com/photo-1625685554528-2a0b517e094c"
       />
     {/* Section 3: Proxy Network Coverage for Web Scraping */}
-    <Box py={16} bg="blue.50" color="gray.800">
+    <Box py={16} bg="red.50" color="gray.800">
         <Heading as="h2" size="2xl" textAlign="center" mb={10} fontWeight="medium">
           Global Web Scraping Proxy Network
         </Heading>
@@ -48,7 +49,7 @@ function LandingPage() {
         </Flex>
       </Box>
         {/* Cloud Provider Links */}
-        <Box py={10} bg="blue.50">
+        <Box py={10} bg="red.50">
         <Flex justify="center" gap={8} flexWrap="wrap">
           <Link href="https://aws.amazon.com" isExternal>
             <Image
@@ -146,7 +147,7 @@ function LandingPage() {
         </Grid>
       </Box>
 
-      {/* <Box py={16} bg="blue.50" maxW="1200px" mx="auto" px={4}>
+      {/* <Box py={16} bg="red.50" maxW="1200px" mx="auto" px={4}>
   <VStack spacing={8} textAlign="center">
     <Heading as="h2" size="2xl" color="gray.800" fontWeight="medium">
       Web Scraping Technology Stack
@@ -238,7 +239,7 @@ function LandingPage() {
   </VStack>
 </Box> */}
 
-          <Box py={16} bg="blue.50" maxW="1200px" mx="auto" px={4}>
+          <Box py={16} bg="red.50" maxW="1200px" mx="auto" px={4}>
         <Heading as="h2" size="2xl" textAlign="center" mb={10} color="gray.800" fontWeight="medium">
           Web Scraping Business Solutions
         </Heading>
