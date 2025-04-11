@@ -7,22 +7,21 @@
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png" />
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-X7X57Z2WXP"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      // Set Consent Mode defaults
-      gtag('consent', 'default', {
-        ad_user_data: 'denied',
-        ad_personalization: 'denied',
-        ad_storage: 'denied',
-        analytics_storage: 'denied',
-        functionality_storage: 'denied',
-        security_storage: 'granted',
-        wait_for_update: 500, // Wait 500ms for consent update
-      });
-      gtag('js', new Date());
-      gtag('config', 'G-X7X57Z2WXP', { send_page_view: false }); // Disable auto page view
-    </script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    ad_storage: 'denied',
+    analytics_storage: 'denied',
+    functionality_storage: 'denied',
+    security_storage: 'granted',
+    wait_for_update: 500,
+  });
+  gtag('js', new Date());
+  gtag('config', 'G-X7X57Z2WXP', { send_page_view: false });
+</script>
   </head>
   <body>
     <!-- SEO Navigation -->

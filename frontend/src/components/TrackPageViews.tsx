@@ -8,13 +8,12 @@ export const TrackPageViews = () => {
   );
 
   useEffect(() => {
-    const checkConsent = () => {
+    const handleConsentChange = () => {
       setConsentGranted(document.cookie.includes("roamingproxy-consent=true"));
     };
-    // Listen for cookie changes (simplified; consider a more robust solution in production)
-    window.addEventListener("storage", checkConsent);
-    checkConsent(); // Initial check
-    return () => window.removeEventListener("storage", checkConsent);
+    window.addEventListener("storage", handleConsentChange);
+    handleConsentChange();
+    return () => window.removeEventListener("storage", handleConsentChange);
   }, []);
 
   useEffect(() => {

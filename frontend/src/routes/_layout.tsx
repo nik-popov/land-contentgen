@@ -47,6 +47,7 @@ function Layout() {
         expires={150}
         debug={true}
         onAccept={() => {
+          console.log("Accept clicked");
           if (window.gtag) {
             window.gtag("consent", "update", {
               ad_user_data: "granted",
@@ -56,7 +57,7 @@ function Layout() {
               functionality_storage: "granted",
               security_storage: "granted",
             });
-            // Send page view after consent is granted
+            console.log("Consent updated, sending page view");
             window.gtag("event", "page_view", {
               page_path: window.location.pathname,
               send_to: "G-X7X57Z2WXP",
