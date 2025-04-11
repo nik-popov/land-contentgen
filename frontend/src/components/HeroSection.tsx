@@ -1,10 +1,7 @@
 import { Box, Flex, Heading, Text, Button, VStack } from "@chakra-ui/react";
 import PropTypes from 'prop-types';
 
-function HeroSection({ title, subtitle, ctas, bgImage }) {
-  // Ensure ctas is an array
-  const ctaButtons = Array.isArray(ctas) ? ctas : [];
-
+function HeroSection({ title, subtitle, ctas = [], bgImage = '' }) {
   return (
     <Box
       bgGradient="linear(to-bl, red.900, red.400)"
@@ -79,24 +76,24 @@ function HeroSection({ title, subtitle, ctas, bgImage }) {
         pb={{ base: 10, md: 20 }}
         position="relative"
         zIndex={2}
-        flexWrap="wrap" // Allow buttons to wrap on smaller screens
+        flexWrap="wrap"
       >
-        {ctaButtons.map((cta, index) => (
+        {ctas.map((cta, index) => (
           <Button
-          key={index}
-          as="a"
-          href={cta.link}
-          color={index === 0 ? "white" : "orange.400"} 
-          bg={index === 0 ? "orange.400" : "white"}
-          size="lg"
-          _hover={{ 
-            bg: index === 0 ? "white" : "orange.400", 
-            color: index === 0 ? "orange.400" : "white" 
-          }}
-          px={6}
-        >
-          {cta.text}
-        </Button>
+            key={cta.link}
+            as="a"
+            href={cta.link}
+            color={index === 0 ? "white" : "orange.400"}
+            bg={index === 0 ? "orange.400" : "white"}
+            size="lg"
+            _hover={{
+              bg: index === 0 ? "white" : "orange.400",
+              color: index === 0 ? "orange.400" : "white"
+            }}
+            px={6}
+          >
+            {cta.text}
+          </Button>
         ))}
       </Flex>
     </Box>
@@ -113,11 +110,6 @@ HeroSection.propTypes = {
     })
   ),
   bgImage: PropTypes.string,
-};
-
-HeroSection.defaultProps = {
-  ctas: [],
-  bgImage: '',
 };
 
 export default HeroSection;
