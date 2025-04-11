@@ -29,7 +29,7 @@ const Footer = () => {
             </Text>
             <Text color="gray.300" mb={4}>
               Enterprise level proxy infrastructure built for web scraping, data collection, and market intelligence, 
-              offering limitless scalability and global reach across over 190 countries.
+              offering limitless scalability and global reach across over 200 countries.
             </Text>
             <Text color="gray.300" mb={4}>
               <strong>Phone:</strong> <a href="tel:+18554402242">+1 (855) 440-2242</a>
