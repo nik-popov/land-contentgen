@@ -67,7 +67,7 @@ function Layout() {
             zIndex: 9999,
           }}
           buttonStyle={{
-            background: theme.colors.red[500] || "#EF4444",
+            background: theme.colors.orange[500] || "#EF4444",
             color: theme.colors.white || "#FFFFFF",
             borderRadius: theme.radii.md || "4px",
             padding: "8px 16px",
@@ -120,15 +120,15 @@ function Layout() {
           }}
         >
           We use cookies to enhance your experience, analyze usage, and deliver ads. Learn more in our{" "}
-          <Link to="/cookie" style={{ color: theme.colors.red[500] || "#EF4444", textDecoration: "underline" }}>
+          <Link to="/cookie" style={{ color: theme.colors.orange[500] || "#EF4444", textDecoration: "underline" }}>
             Cookie Policy
           </Link>
           ,{" "}
-          <Link to="/privacy" style={{ color: theme.colors.red[500] || "#EF4444", textDecoration: "underline" }}>
+          <Link to="/privacy" style={{ color: theme.colors.orange[500] || "#EF4444", textDecoration: "underline" }}>
             Privacy Policy
           </Link>
           , or{" "}
-          <Link to="/terms" style={{ color: theme.colors.red[500] || "#EF4444", textDecoration: "underline" }}>
+          <Link to="/terms" style={{ color: theme.colors.orange[500] || "#EF4444", textDecoration: "underline" }}>
             Terms
           </Link>
           .
