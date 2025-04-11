@@ -273,7 +273,7 @@ function PricingPage() {
   as="a"
   href={plan.customPricing ? "/contact-sales" : isAnnual ? plan.annualHref : plan.monthlyHref}
 >
-  {plan.customPricing ? "Reach Out to Sales" : "Choose This Plan"}
+  {plan.customPricing ? "Contact Sales" : "Choose This Plan"}
 </Button>
                   <Divider mb={4} />
                   <Text fontWeight="medium" mb={3}>What’s Included:</Text>
