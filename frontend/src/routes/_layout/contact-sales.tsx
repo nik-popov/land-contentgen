@@ -282,13 +282,13 @@ function SalesContactPage() {
                   onChange={(e) => setConsentChecked(e.target.checked)}
                 >
                   I agree to receive communications from Roaming Proxy. I understand that my information will be processed in accordance with the 
-                  <Button as="a" href="/privacy" variant="link" color="blue.500" mx={1}>Privacy Policy</Button>.
+                  <Button as="a" href="/privacy" variant="link" color="red.500" mx={1}>Privacy Policy</Button>.
                 </Checkbox>
               </FormControl>
               
               <Button 
                 type="submit" 
-                bg="blue.500"
+                bg="red.500"
                 color="white"
                 _hover={{ bg: "blue.600" }}
                 size="lg" 
@@ -310,9 +310,9 @@ function SalesContactPage() {
           </Heading>
 
           <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6} w="full">
-            <Box bg="blue.50" p={5} borderRadius="md">
+            <Box bg="red.50" p={5} borderRadius="md">
               <Flex align="center" mb={3}>
-                <Icon as={CheckCircleIcon} color="blue.500" boxSize={5} mr={2} />
+                <Icon as={CheckCircleIcon} color="red.500" boxSize={5} mr={2} />
                 <Text fontWeight="medium">Custom Solutions</Text>
               </Flex>
               <Text fontSize="sm" color="gray.600">
@@ -320,9 +320,9 @@ function SalesContactPage() {
               </Text>
             </Box>
             
-            <Box bg="blue.50" p={5} borderRadius="md">
+            <Box bg="red.50" p={5} borderRadius="md">
               <Flex align="center" mb={3}>
-                <Icon as={CheckCircleIcon} color="blue.500" boxSize={5} mr={2} />
+                <Icon as={CheckCircleIcon} color="red.500" boxSize={5} mr={2} />
                 <Text fontWeight="medium">Volume Pricing</Text>
               </Flex>
               <Text fontSize="sm" color="gray.600">
@@ -330,9 +330,9 @@ function SalesContactPage() {
               </Text>
             </Box>
             
-            <Box bg="blue.50" p={5} borderRadius="md">
+            <Box bg="red.50" p={5} borderRadius="md">
               <Flex align="center" mb={3}>
-                <Icon as={CheckCircleIcon} color="blue.500" boxSize={5} mr={2} />
+                <Icon as={CheckCircleIcon} color="red.500" boxSize={5} mr={2} />
                 <Text fontWeight="medium">Integration Support</Text>
               </Flex>
               <Text fontSize="sm" color="gray.600">
@@ -340,9 +340,9 @@ function SalesContactPage() {
               </Text>
             </Box>
             
-            <Box bg="blue.50" p={5} borderRadius="md">
+            <Box bg="red.50" p={5} borderRadius="md">
               <Flex align="center" mb={3}>
-                <Icon as={CheckCircleIcon} color="blue.500" boxSize={5} mr={2} />
+                <Icon as={CheckCircleIcon} color="red.500" boxSize={5} mr={2} />
                 <Text fontWeight="medium">Compliance Guidance</Text>
               </Flex>
               <Text fontSize="sm" color="gray.600">
@@ -358,13 +358,13 @@ function SalesContactPage() {
           {/* Quick Contact Info */}
           <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6} w="full">
             <Box 
-              bg="blue.50" 
+              bg="red.50" 
               p={5} 
               borderRadius="md" 
               display="flex" 
               alignItems="center"
             >
-              <Icon as={PhoneIcon} color="blue.500" boxSize={5} mr={3} />
+              <Icon as={PhoneIcon} color="red.500" boxSize={5} mr={3} />
               <Box>
                 <Text fontWeight="medium">Call Us Directly</Text>
                 <Text fontSize="sm" color="gray.600">
@@ -374,13 +374,13 @@ function SalesContactPage() {
             </Box>
             
             <Box 
-              bg="blue.50" 
+              bg="red.50" 
               p={5} 
               borderRadius="md"
               display="flex" 
               alignItems="center"
             >
-              <Icon as={EmailIcon} color="blue.500" boxSize={5} mr={3} />
+              <Icon as={EmailIcon} color="red.500" boxSize={5} mr={3} />
               <Box>
                 <Text fontWeight="medium">Email Sales</Text>
                 <Text fontSize="sm" color="gray.600">

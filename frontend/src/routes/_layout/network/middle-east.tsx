@@ -41,7 +41,7 @@ function MiddleEastProxiesPage() {
   return (
     <>
       {/* Middle East Proxies Hero Section */}
-      <Box py={16} bg="blue.50" color="gray.800">
+      <Box py={16} bg="red.50" color="gray.800">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h1" size="2xl" textAlign="center" mb={8} fontWeight="medium">
             Middle East Proxies
@@ -115,7 +115,7 @@ function MiddleEastProxiesPage() {
       </Box>
       
       {/* Region Coverage Section */}
-      <Box py={16} bg="blue.50">
+      <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={12} fontWeight="medium">
             Middle Eastern Proxy Coverage
@@ -199,7 +199,7 @@ function MiddleEastProxiesPage() {
       </Box>
       
       {/* Platform Features Section */}
-      <Box py={16} bg="blue.50">
+      <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
             Middle Eastern Proxy Platform Features
@@ -302,7 +302,7 @@ function MiddleEastProxiesPage() {
       </Box>
       
       {/* Middle East Map Section */}
-      <Box py={16} bg="blue.50">
+      <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={8} fontWeight="medium">
             Middle Eastern Proxy Network Coverage
@@ -357,7 +357,7 @@ function MiddleEastProxiesPage() {
                 <Button
                     size="lg"
                     bg="white"
-                    color="blue.500"
+                    color="red.500"
                     _hover={{ bg: "gray.100" }}
                     as="a"
                     href="/demo-request"

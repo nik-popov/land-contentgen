@@ -51,7 +51,7 @@ function BlogPage() {
     return matchesCategory && matchesTags;
   });
 
-  if (loading) return <Flex justify="center" align="center" minH="100vh"><Spinner size="xl" color="blue.500" /></Flex>;
+  if (loading) return <Flex justify="center" align="center" minH="100vh"><Spinner size="xl" color="red.500" /></Flex>;
   if (error) return <Text fontSize="lg" textAlign="center" py={16} color="red.500">Error: {error}</Text>;
   if (!posts.length) return <Text fontSize="lg" textAlign="center" py={16}>No posts available</Text>;
 
@@ -73,7 +73,7 @@ function BlogPage() {
 
   return (
     <>
-      <Box py={16} bg="blue.50" color="gray.800">
+      <Box py={16} bg="red.50" color="gray.800">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h1" size="2xl" textAlign="center" mb={6} fontWeight="medium">Guides and Trends</Heading>
           <Text fontSize="xl" textAlign="center" mb={10} maxW="800px" mx="auto">Expert articles, tutorials, and insights...</Text>
@@ -173,7 +173,7 @@ function BlogPage() {
           <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">Master Web Scraping Today</Heading>
           <Text fontSize="lg" mb={10} maxW="700px" mx="auto" color="white">Download our free comprehensive guides...</Text>
           <Flex justify="center" gap={6} flexWrap="wrap">
-            <Button size="lg" bg="white" color="blue.500" _hover={{ bg: "gray.100" }} as="a" href="/demo-request">Request Demo</Button>
+            <Button size="lg" bg="white" color="red.500" _hover={{ bg: "gray.100" }} as="a" href="/demo-request">Request Demo</Button>
             <Button size="lg" variant="outline" borderColor="white" color="white" _hover={{ bg: "blue.700" }} as="a" href="https://cloud.roamingproxy.com/signup">Start Free Trial</Button>
           </Flex>
         </Box>
@@ -232,7 +232,7 @@ function BlogPage() {
                     ))}
                   </Flex>
                 </Box>
-                <Box bg="blue.50" p={6} borderRadius="lg" boxShadow="sm">
+                <Box bg="red.50" p={6} borderRadius="lg" boxShadow="sm">
                   <Heading as="h3" size="md" mb={4} fontWeight="medium">Need Expert Help?</Heading>
                   <Text mb={4}>Our team can help you implement the strategies...</Text>
                   <Button colorScheme="blue" width="full" as="a" href="/contact-sales">Contact Us</Button>

@@ -63,7 +63,7 @@ function BlogPage() {
   if (loading) {
     return (
       <Flex justify="center" align="center" minH="100vh">
-        <Spinner size="xl" color="blue.500" />
+        <Spinner size="xl" color="red.500" />
       </Flex>
     );
   }
@@ -107,7 +107,7 @@ function BlogPage() {
   return (
     <>
       {/* Blog Hero Section */}
-      <Box py={16} bg="blue.50" color="gray.800">
+      <Box py={16} bg="red.50" color="gray.800">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h1" size="2xl" textAlign="center" mb={6} fontWeight="medium">
           Insights and Trends at TheDataProxy
@@ -263,7 +263,7 @@ function BlogPage() {
             <Button
               size="lg"
               bg="white"
-              color="blue.500"
+              color="red.500"
               _hover={{ bg: "gray.100" }}
               as="a"
               href="/demo-request"
@@ -412,7 +412,7 @@ function BlogPage() {
                   </Flex>
                 </Box>
 
-                <Box bg="blue.50" p={6} borderRadius="lg" boxShadow="sm">
+                <Box bg="red.50" p={6} borderRadius="lg" boxShadow="sm">
                   <Heading as="h3" size="md" mb={4} fontWeight="medium">
                     Need Expert Help?
                   </Heading>

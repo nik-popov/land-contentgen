@@ -40,7 +40,7 @@ function NorthAmericaProxiesPage() {
   return (
     <>
       {/* North America Proxies Hero Section */}
-      <Box py={16} bg="blue.50" color="gray.800">
+      <Box py={16} bg="red.50" color="gray.800">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h1" size="2xl" textAlign="center" mb={8} fontWeight="medium">
             North America Proxies
@@ -114,7 +114,7 @@ function NorthAmericaProxiesPage() {
       </Box>
       
       {/* Region Coverage Section */}
-      <Box py={16} bg="blue.50">
+      <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={12} fontWeight="medium">
             North American Proxy Coverage
@@ -198,7 +198,7 @@ function NorthAmericaProxiesPage() {
       </Box>
       
       {/* Platform Features Section */}
-      <Box py={16} bg="blue.50">
+      <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
             North American Proxy Platform Features
@@ -300,7 +300,7 @@ function NorthAmericaProxiesPage() {
       </Box>
       
       {/* North America Map Section */}
-      <Box py={16} bg="blue.50">
+      <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={8} fontWeight="medium">
             North American Proxy Network
@@ -349,7 +349,7 @@ function NorthAmericaProxiesPage() {
                     <Button
                         size="lg"
                         bg="white"
-                        color="blue.500"
+                        color="red.500"
                         _hover={{ bg: "gray.100" }}
                         as="a"
                         href="/demo-request"

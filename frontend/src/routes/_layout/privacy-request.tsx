@@ -308,7 +308,7 @@ function PrivacyRequestPage() {
                 >
                   I understand that Roaming Proxy will use the information provided in this form to verify my identity and respond 
                   to my request. The information will be processed in accordance with the 
-                  <Button variant="link" color="blue.500" mx={1}>Privacy Policy</Button>
+                  <Button variant="link" color="red.500" mx={1}>Privacy Policy</Button>
                   and retained as required by law.
                 </Checkbox>
               </FormControl>
@@ -339,7 +339,7 @@ function PrivacyRequestPage() {
           </HStack>
 
           {/* Introduction */}
-          <Box w="full" bg="blue.50" p={6} borderRadius="md">
+          <Box w="full" bg="red.50" p={6} borderRadius="md">
             <Text fontSize="md" mb={4}>
               In accordance with data protection regulations like GDPR, CCPA, and others, you have certain rights regarding your personal data. 
               You can use this form to exercise these rights, including:
@@ -379,7 +379,7 @@ function PrivacyRequestPage() {
             
             <Text fontSize="md">
               For more information about how we handle your personal data, please refer to our 
-              <Button variant="link" color="blue.500" mx={1}>Privacy Policy</Button>.
+              <Button variant="link" color="red.500" mx={1}>Privacy Policy</Button>.
             </Text>
           </Box>
         </VStack>

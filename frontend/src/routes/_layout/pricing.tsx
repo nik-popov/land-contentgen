@@ -175,7 +175,7 @@ function PricingPage() {
   return (
     <>
       {/* Pricing Hero Section */}
-      <Box py={16} bg="blue.50" color="gray.800">
+      <Box py={16} bg="red.50" color="gray.800">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h1" size="2xl" textAlign="center" mb={8} fontWeight="medium">
             Pricing That Scales With You
@@ -215,7 +215,7 @@ function PricingPage() {
                 borderRadius="lg"
                 overflow="hidden"
                 boxShadow={plan.popular ? "lg" : "md"}
-                bg={plan.popular ? "blue.50" : "white"}
+                bg={plan.popular ? "red.50" : "white"}
                 position="relative"
               >
                 {plan.popular && (
@@ -314,7 +314,7 @@ function PricingPage() {
                 <Tr bg="gray.100">
                   <Th width="30%">Feature</Th>
                   <Th width="17.5%">Starter</Th>
-                  <Th width="17.5%" bg="blue.50">Analyst</Th>
+                  <Th width="17.5%" bg="red.50">Analyst</Th>
                   <Th width="17.5%">Business</Th>
                   <Th width="17.5%">Enterprise</Th>
                 </Tr>
@@ -335,7 +335,7 @@ function PricingPage() {
                             ? (feature.starter ? <CheckCircleIcon color="green.500" /> : <CloseIcon color="red.500" fontSize="xs" />)
                             : feature.starter}
                         </Td>
-                        <Td bg="blue.50">
+                        <Td bg="red.50">
                           {typeof feature.analyst === 'boolean'
                             ? (feature.analyst ? <CheckCircleIcon color="green.500" /> : <CloseIcon color="red.500" fontSize="xs" />)
                             : feature.analyst}
@@ -371,7 +371,7 @@ function PricingPage() {
               {faqItems.map((faq, index) => (
                 <AccordionItem key={index} borderColor="gray.200">
                   <h3>
-                    <AccordionButton py={4} px={6} _expanded={{ bg: "blue.50", color: "blue.600" }}>
+                    <AccordionButton py={4} px={6} _expanded={{ bg: "red.50", color: "blue.600" }}>
                       <Box flex="1" textAlign="left" fontWeight="medium" fontSize="md">
                         {faq.question}
                       </Box>
@@ -389,7 +389,7 @@ function PricingPage() {
       </Box>
 
       {/* Usage Statistics Section */}
-      <Box py={16} bg="blue.50">
+      <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
             Data Powerhouse

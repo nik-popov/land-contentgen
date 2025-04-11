@@ -43,7 +43,7 @@ function FinancialDataCollectionPage() {
   return (
     <>
       {/* Financial Data Collection Hero Section */}
-      <Box py={16} bg="blue.50" color="gray.800">
+      <Box py={16} bg="red.50" color="gray.800">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h1" size="2xl" textAlign="center" mb={8} fontWeight="medium">
             Financial Data Collection
@@ -117,7 +117,7 @@ function FinancialDataCollectionPage() {
       </Box>
       
       {/* Data Collection Features Section */}
-      <Box py={16} bg="blue.50">
+      <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={12} fontWeight="medium">
             Comprehensive Financial Data Collection
@@ -201,7 +201,7 @@ function FinancialDataCollectionPage() {
       </Box>
       
       {/* Detailed Features Section */}
-      <Box py={16} bg="blue.50">
+      <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
             Financial Data Platform Features
@@ -307,7 +307,7 @@ function FinancialDataCollectionPage() {
       </Box>
       
       {/* Global Coverage Section */}
-      <Box py={16} bg="blue.50">
+      <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={8} fontWeight="medium">
             Global Financial Data Coverage
@@ -368,7 +368,7 @@ function FinancialDataCollectionPage() {
           <Button
               size="lg"
               bg="white"
-              color="blue.500"
+              color="red.500"
               _hover={{ bg: "gray.100" }}
               as="a"
               href="/demo-request"

@@ -82,7 +82,7 @@ function FAQPage() {
   return (
     <>
       {/* FAQ Hero Section */}
-      <Box py={16} bg="blue.50" color="gray.800">
+      <Box py={16} bg="red.50" color="gray.800">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h1" size="2xl" textAlign="center" mb={8} fontWeight="medium">
             Frequently Asked Questions
@@ -100,7 +100,7 @@ function FAQPage() {
               <Input 
                 placeholder="Search for questions and answers" 
                 bg="white" 
-                focusBorderColor="blue.500"
+                focusBorderColor="red.500"
                 borderRadius="md"
                 boxShadow="sm"
               />
@@ -172,7 +172,7 @@ function FAQPage() {
               {faqItems.map((faq, index) => (
                 <AccordionItem key={index} borderColor="gray.300">
                   <h3>
-                    <AccordionButton py={4} px={6} _expanded={{ bg: "blue.50", color: "blue.600" }}>
+                    <AccordionButton py={4} px={6} _expanded={{ bg: "red.50", color: "blue.600" }}>
                       <Box flex="1" textAlign="left" fontWeight="medium" fontSize="md">
                         {faq.question}
                       </Box>
@@ -239,7 +239,7 @@ function FAQPage() {
           <Button
               size="lg"
               bg="white"
-              color="blue.500"
+              color="red.500"
               _hover={{ bg: "gray.100" }}
               as="a"
               href="/demo-request"

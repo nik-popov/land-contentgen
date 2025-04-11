@@ -43,7 +43,7 @@ function SchedulerPage() {
   return (
     <>
       {/* Scheduler Hero Section */}
-      <Box py={16} bg="blue.50" color="gray.800">
+      <Box py={16} bg="red.50" color="gray.800">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h1" size="2xl" textAlign="center" mb={8} fontWeight="medium">
             Scheduler
@@ -55,17 +55,17 @@ function SchedulerPage() {
           
           <Flex justify="space-between" flexWrap="wrap" gap={6}>
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.500">Intelligent Automation</Heading>
+              <Heading as="h3" size="md" color="red.500">Intelligent Automation</Heading>
               <Text>Create sophisticated data workflows that combine APIs, web scraping, transformations, and delivery into seamless automated processes that run exactly when needed.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.500">Reliable Execution</Heading>
+              <Heading as="h3" size="md" color="red.500">Reliable Execution</Heading>
               <Text>Ensure your critical processes run on time, every time with our fault-tolerant architecture. Automatic retries, dependency management, and alerting keep your workflows on track.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.500">Complete Visibility</Heading>
+              <Heading as="h3" size="md" color="red.500">Complete Visibility</Heading>
               <Text>Monitor all your scheduled tasks from a single dashboard with real-time execution status, detailed logs, resource utilization metrics, and customizable alerts.</Text>
             </VStack>
           </Flex>
@@ -82,7 +82,7 @@ function SchedulerPage() {
           <Grid templateColumns={{ base: "1fr", md: "1fr 1fr", lg: "1fr 1fr 1fr" }} gap={10} mt={10}>
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="blue.500">76%</StatNumber>
+                <StatNumber color="red.500">76%</StatNumber>
                 <StatLabel>Operational Efficiency Gain</StatLabel>
               </Stat>
               <Text>
@@ -93,7 +93,7 @@ function SchedulerPage() {
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="blue.500">24/7</StatNumber>
+                <StatNumber color="red.500">24/7</StatNumber>
                 <StatLabel>Automated Operations</StatLabel>
               </Stat>
               <Text>
@@ -104,7 +104,7 @@ function SchedulerPage() {
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="blue.500">94%</StatNumber>
+                <StatNumber color="red.500">94%</StatNumber>
                 <StatLabel>Error Reduction</StatLabel>
               </Stat>
               <Text>
@@ -117,7 +117,7 @@ function SchedulerPage() {
       </Box>
       
       {/* Industry Applications Section */}
-      <Box py={16} bg="blue.50">
+      <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={12} fontWeight="medium">
             Industry-Specific Scheduling Solutions
@@ -128,7 +128,7 @@ function SchedulerPage() {
               <Box key={index} p={6} bg="white" borderRadius="md" boxShadow="sm">
                 <Stat mb={4}>
                   <StatLabel fontSize="lg" fontWeight="medium">{industry.industry}</StatLabel>
-                  <StatNumber color="blue.500">{industry.growth}%</StatNumber>
+                  <StatNumber color="red.500">{industry.growth}%</StatNumber>
                   <StatHelpText>
                     <StatArrow type="increase" />
                     Automation Adoption
@@ -198,7 +198,7 @@ function SchedulerPage() {
       </Box>
       
       {/* Platform Features Section */}
-      <Box py={16} bg="blue.50">
+      <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
             Scheduler Platform Features
@@ -206,52 +206,52 @@ function SchedulerPage() {
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="blue.500">Scheduling & Orchestration</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.500">Scheduling & Orchestration</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.500" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.500" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Cron Expressions</Text> - Schedule jobs with precise timing using standard cron syntax with seconds-level granularity</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.500" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.500" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Event-Based Triggers</Text> - Initiate workflows based on external events such as file uploads, API calls, or database changes</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.500" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.500" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Dependency Management</Text> - Define complex task dependencies with conditional execution paths based on task outcomes</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.500" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.500" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Parameterized Jobs</Text> - Create reusable job templates with configurable parameters for flexible execution</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.500" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.500" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Retry Policies</Text> - Configure automatic retry logic with backoff strategies for handling transient failures</Text>
                 </ListItem>
               </List>
             </Box>
             
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="blue.500">Operations & Monitoring</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.500">Operations & Monitoring</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.500" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.500" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Real-time Monitoring</Text> - Track job status, duration, and resource utilization in real-time on a centralized dashboard</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.500" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.500" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Alerting System</Text> - Receive notifications via email, Slack, or webhook when jobs fail or exceed duration thresholds</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.500" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.500" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Audit Logs</Text> - Maintain comprehensive execution history with detailed logs for compliance and troubleshooting</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.500" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.500" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Resource Management</Text> - Allocate CPU, memory, and concurrent execution limits for optimal performance</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.500" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.500" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Team Collaboration</Text> - Share workflows, schedule across teams with role-based access controls and versioning</Text>
                 </ListItem>
               </List>
@@ -269,7 +269,7 @@ function SchedulerPage() {
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="blue.500">E-commerce Platform Streamlines Operations</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.500">E-commerce Platform Streamlines Operations</Heading>
               <Text mb={4}>
                 A rapidly growing e-commerce platform implemented our Scheduler to automate inventory management 
                 across 15 warehouses and 50,000+ SKUs. They reduced manual processing time by 84% and eliminated 
@@ -282,7 +282,7 @@ function SchedulerPage() {
             </Box>
             
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="blue.500">Financial Services Firm Automates Reporting</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.500">Financial Services Firm Automates Reporting</Heading>
               <Text mb={4}>
                 A financial services company used our Scheduler to orchestrate their daily reporting workflows 
                 across 37 different systems. They reduced report generation time from 6 hours to 45 minutes and 
@@ -299,7 +299,7 @@ function SchedulerPage() {
       </Box>
       
       {/* Integration Partners */}
-      <Box py={16} bg="blue.50">
+      <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={8} fontWeight="medium">
             Integration Partners
@@ -329,7 +329,7 @@ function SchedulerPage() {
       </Box>
       
       {/* Call to Action */}
-      <Box py={16} bg="blue.500" color="white">
+      <Box py={16} bg="red.500" color="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">
             Ready to Automate Your Workflows?
@@ -343,7 +343,7 @@ function SchedulerPage() {
             <Button
               size="lg"
               bg="white"
-              color="blue.500"
+              color="red.500"
               _hover={{ bg: "gray.100" }}
               as="a"
               href="/demo-request"

@@ -70,7 +70,7 @@ function SupportCenterPage() {
   return (
     <>
       {/* Support Center Hero Section */}
-      <Box py={16} bg="blue.50" color="gray.800">
+      <Box py={16} bg="red.50" color="gray.800">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h1" size="2xl" textAlign="center" mb={8} fontWeight="medium">
             Support Center
@@ -88,7 +88,7 @@ function SupportCenterPage() {
               <Input 
                 placeholder="Search for help articles, tutorials, and FAQs" 
                 bg="white" 
-                focusBorderColor="blue.500"
+                focusBorderColor="red.500"
                 borderRadius="md"
                 boxShadow="sm"
               />
@@ -123,7 +123,7 @@ function SupportCenterPage() {
           
           {/* <Grid templateColumns={{ base: "1fr", md: "1fr 1fr", lg: "1fr 1fr" }} gap={10} mt={10}> */}
             {/* <VStack align="center" spacing={5} p={8} borderRadius="md" borderWidth="1px" borderColor="gray.200">
-              <Box bg="blue.50" p={4} borderRadius="full">
+              <Box bg="red.50" p={4} borderRadius="full">
                 <ChatIcon boxSize={8} color="blue.600" />
               </Box>
               <Heading as="h3" size="md">Live Chat Support</Heading>
@@ -140,7 +140,7 @@ function SupportCenterPage() {
             </VStack>
              */}
             {/* <VStack align="center" spacing={5} p={8} borderRadius="md" borderWidth="1px" borderColor="gray.200">
-              <Box bg="blue.50" p={4} borderRadius="full">
+              <Box bg="red.50" p={4} borderRadius="full">
                 <EmailIcon boxSize={8} color="blue.600" />
               </Box>
               <Heading as="h3" size="md">Email Support</Heading>
@@ -157,7 +157,7 @@ function SupportCenterPage() {
             </VStack> */}
             
             {/* <VStack align="center" spacing={5} p={8} borderRadius="md" borderWidth="1px" borderColor="gray.200">
-              <Box bg="blue.50" p={4} borderRadius="full">
+              <Box bg="red.50" p={4} borderRadius="full">
                 <PhoneIcon boxSize={8} color="blue.600" />
               </Box>
               <Heading as="h3" size="md">Schedule a Call</Heading>
@@ -177,7 +177,7 @@ function SupportCenterPage() {
       </Box> */}
       
       {/* Support Categories Section */}
-      {/* <Box py={16} bg="blue.50">
+      {/* <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}> */}
           {/* <Heading as="h2" size="xl" textAlign="center" mb={12} fontWeight="medium">
             Support Categories
@@ -251,7 +251,7 @@ function SupportCenterPage() {
             We're committed to providing exceptional support with fast response times and high satisfaction rates
           </Text>
           
-          <Box bg="blue.50" p={8} borderRadius="md" boxShadow="md">
+          <Box bg="red.50" p={8} borderRadius="md" boxShadow="md">
             <SimpleGrid columns={{ base: 2, md: 4 }} spacing={8}>
               <VStack>
                 <Heading as="h3" size="lg" color="blue.600">96%</Heading>
@@ -278,7 +278,7 @@ function SupportCenterPage() {
         </Box>
       </Box>
       {/* FAQ Section */}
-      <Box py={16} bg="blue.50">
+      <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
             Frequently Asked Questions
@@ -292,7 +292,7 @@ function SupportCenterPage() {
               {faqItems.map((faq, index) => (
                 <AccordionItem key={index} borderColor="gray.200">
                   <h3>
-                    <AccordionButton py={4} px={6} _expanded={{ bg: "blue.50", color: "blue.600" }}>
+                    <AccordionButton py={4} px={6} _expanded={{ bg: "red.50", color: "blue.600" }}>
                       <Box flex="1" textAlign="left" fontWeight="medium" fontSize="md">
                         {faq.question}
                       </Box>
@@ -367,7 +367,7 @@ function SupportCenterPage() {
               </List>
             </Box>
             
-            <Box bg="blue.50" p={8} borderRadius="md">
+            <Box bg="red.50" p={8} borderRadius="md">
               <Heading as="h3" size="lg" mb={6} fontWeight="medium">
                 Need Immediate Assistance?
               </Heading>
@@ -404,7 +404,7 @@ function SupportCenterPage() {
           <Button
               size="lg"
               bg="white"
-              color="blue.500"
+              color="red.500"
               _hover={{ bg: "gray.100" }}
               as="a"
               href="/demo-request"

@@ -139,7 +139,7 @@ const Overview: React.FC<OverviewProps> = ({ endpointId }) => {
   }, [selectedChart]);
 
   if (isLoading) {
-    return <Flex justify="center" align="center" h="200px"><Spinner size="xl" color="blue.500" /></Flex>;
+    return <Flex justify="center" align="center" h="200px"><Spinner size="xl" color="red.500" /></Flex>;
   }
 
   if (error) {

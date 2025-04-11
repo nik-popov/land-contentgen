@@ -46,7 +46,7 @@ function ContactPage() {
   return (
     <>
       {/* Contact Hero Section */}
-      <Box py={16} bg="blue.50" color="gray.800">
+      <Box py={16} bg="red.50" color="gray.800">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h1" size="2xl" textAlign="center" mb={8} fontWeight="medium">
             Contact Us
@@ -94,7 +94,7 @@ function ContactPage() {
           <Flex justifyContent="center" gap={8} flexWrap="wrap" mt={10}>
             <VStack 
               p={8} 
-              bg="blue.50" 
+              bg="red.50" 
               borderRadius="md" 
               boxShadow="sm" 
               spacing={5} 
@@ -122,7 +122,7 @@ function ContactPage() {
             
             <VStack 
               p={8} 
-              bg="blue.50" 
+              bg="red.50" 
               borderRadius="md" 
               boxShadow="sm" 
               spacing={5} 
@@ -153,7 +153,7 @@ function ContactPage() {
       </Box> */}
       
       {/* Contact Categories Section */}
-      <Box py={16} bg="blue.50">
+      <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={4} fontWeight="medium">
             How Can We Help You?
@@ -173,7 +173,7 @@ function ContactPage() {
                 spacing={4} 
                 align="flex-start"
               >
-                <Box bg="blue.50" p={3} borderRadius="md">
+                <Box bg="red.50" p={3} borderRadius="md">
                   <Icon as={category.icon} boxSize={6} color="blue.600" />
                 </Box>
                 <Heading as="h3" size="md" fontWeight="medium">
@@ -218,7 +218,7 @@ function ContactPage() {
             Our dedicated team is committed to providing exceptional service and support
           </Text>
           
-          <Box bg="blue.50" p={8} borderRadius="md" boxShadow="md">
+          <Box bg="red.50" p={8} borderRadius="md" boxShadow="md">
             <SimpleGrid columns={{ base: 2, md: 4 }} spacing={8}>
               <VStack>
                 <Heading as="h3" size="lg" color="blue.600">4 hrs</Heading>
@@ -262,7 +262,7 @@ function ContactPage() {
               href="/contact-sales"
               size="lg"
               bg="white"
-              color="blue.500"
+              color="red.500"
               _hover={{ bg: "gray.100" }}
             >
               Contact Sales

@@ -389,17 +389,17 @@ function CookiePolicyPage() {
               Browser controls for cookies vary from browser to browser. Please consult the documentation for your specific browser:
             </Text>
             <UnorderedList pl={6} spacing={2} mb={4}>
-              <ListItem><Link color="blue.500" href="https://support.google.com/chrome/answer/95647" isExternal>Google Chrome</Link></ListItem>
-              <ListItem><Link color="blue.500" href="https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop" isExternal>Mozilla Firefox</Link></ListItem>
-              <ListItem><Link color="blue.500" href="https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471" isExternal>Apple Safari</Link></ListItem>
-              <ListItem><Link color="blue.500" href="https://support.microsoft.com/en-us/help/4027947/microsoft-edge-delete-cookies" isExternal>Microsoft Edge</Link></ListItem>
+              <ListItem><Link color="red.500" href="https://support.google.com/chrome/answer/95647" isExternal>Google Chrome</Link></ListItem>
+              <ListItem><Link color="red.500" href="https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop" isExternal>Mozilla Firefox</Link></ListItem>
+              <ListItem><Link color="red.500" href="https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471" isExternal>Apple Safari</Link></ListItem>
+              <ListItem><Link color="red.500" href="https://support.microsoft.com/en-us/help/4027947/microsoft-edge-delete-cookies" isExternal>Microsoft Edge</Link></ListItem>
             </UnorderedList>
             <Text fontSize="md" mb={4}>
               In addition, most advertising networks offer you a way to opt out of targeted advertising. For more information, please visit:
             </Text>
             <UnorderedList pl={6} spacing={2} mb={4}>
-              <ListItem><Link color="blue.500" href="http://www.aboutads.info/choices/" isExternal>Digital Advertising Alliance</Link></ListItem>
-              <ListItem><Link color="blue.500" href="https://www.youronlinechoices.com" isExternal>Your Online Choices (EU)</Link></ListItem>
+              <ListItem><Link color="red.500" href="http://www.aboutads.info/choices/" isExternal>Digital Advertising Alliance</Link></ListItem>
+              <ListItem><Link color="red.500" href="https://www.youronlinechoices.com" isExternal>Your Online Choices (EU)</Link></ListItem>
             </UnorderedList>
           </Box>
           
@@ -598,7 +598,7 @@ function CookiePolicyPage() {
             <Text fontSize="md" mt={4}>
               For urgent privacy concerns or cookie-related issues, please contact our dedicated privacy team via email. 
               We aim to respond to all inquiries within 48 hours during business days. For formal privacy requests, such as data access or 
-              deletion requests, please use our dedicated form available at <Link color="blue.500" href="https://roamingproxy.com/privacy-request">roamingproxy.com/privacy-request</Link>.
+              deletion requests, please use our dedicated form available at <Link color="red.500" href="https://roamingproxy.com/privacy-request">roamingproxy.com/privacy-request</Link>.
             </Text>
           </Box>
         </VStack>

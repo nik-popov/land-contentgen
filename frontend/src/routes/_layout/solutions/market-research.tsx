@@ -42,7 +42,7 @@ function MarketResearchPage() {
   return (
     <>
       {/* Market Research Hero Section */}
-      <Box py={16} bg="blue.50" color="gray.800">
+      <Box py={16} bg="red.50" color="gray.800">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h1" size="2xl" textAlign="center" mb={8} fontWeight="medium">
             Data-Driven Market Research
@@ -99,7 +99,7 @@ function MarketResearchPage() {
       </Box>
       
       {/* Research Methodologies Section */}
-      <Box py={16} bg="blue.50">
+      <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={4} fontWeight="medium">
             Advanced Research Methodologies
@@ -152,7 +152,7 @@ function MarketResearchPage() {
       </Box>
     
          {/* Case Study Section */}
-         <Box py={16}  bg="blue.50" >
+         <Box py={16}  bg="red.50" >
         <Box maxW="1200px" mx="auto" px={4} py={15}>
           <Heading as="h2" size="xl" textAlign="center" mb={12} fontWeight="medium">
             Market Research Success Stories
@@ -188,7 +188,7 @@ function MarketResearchPage() {
         </Box>
         </Box>
 
-        <Box bg="blue.50" px={4} py={16}>
+        <Box bg="red.50" px={4} py={16}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
             Enterprise-Grade Research Tools
           </Heading>

@@ -43,7 +43,7 @@ function APIScraper() {
   return (
     <>
       {/* HTML Scraper Hero Section */}
-      <Box py={16} bg="blue.50" color="gray.800">
+      <Box py={16} bg="red.50" color="gray.800">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h1" size="2xl" textAlign="center" mb={8} fontWeight="medium">
             API Scraper
@@ -117,7 +117,7 @@ function APIScraper() {
       </Box>
       
       {/* Industry Applications Section */}
-      <Box py={16} bg="blue.50">
+      <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={12} fontWeight="medium">
             Industry-Specific API Solutions
@@ -198,7 +198,7 @@ function APIScraper() {
       </Box>
       
       {/* Platform Features Section */}
-      <Box py={16} bg="blue.50">
+      <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
             API Scraper Platform Features
@@ -298,7 +298,7 @@ function APIScraper() {
       </Box>
       
       {/* Integration Partners */}
-      <Box py={16} bg="blue.50">
+      <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={8} fontWeight="medium">
             Integration Partners

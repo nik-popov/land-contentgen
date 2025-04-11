@@ -43,7 +43,7 @@ function PriceMonitoringPage() {
   return (
     <>
       {/* Price Monitoring Hero Section */}
-      <Box py={16} bg="blue.50" color="gray.800">
+      <Box py={16} bg="red.50" color="gray.800">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h1" size="2xl" textAlign="center" mb={8} fontWeight="medium">
              Price Monitoring Solutions
@@ -55,17 +55,17 @@ function PriceMonitoringPage() {
           
           <Flex justify="space-between" flexWrap="wrap" gap={6}>
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.500">Comprehensive Market Coverage</Heading>
+              <Heading as="h3" size="md" color="red.500">Comprehensive Market Coverage</Heading>
               <Text>Track pricing across thousands of products and competitors simultaneously with our enterprise-grade proxy network and data extraction capabilities.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.500">Real-time Price Intelligence</Heading>
+              <Heading as="h3" size="md" color="red.500">Real-time Price Intelligence</Heading>
               <Text>Receive instant alerts on competitor price changes, promotional activities, and market shifts that impact your positioning and profitability.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.500">Actionable Pricing Insights</Heading>
+              <Heading as="h3" size="md" color="red.500">Actionable Pricing Insights</Heading>
               <Text>Transform raw pricing data into strategic decisions with advanced analytics, customizable dashboards, and automated reporting systems.</Text>
             </VStack>
           </Flex>
@@ -82,7 +82,7 @@ function PriceMonitoringPage() {
           <Grid templateColumns={{ base: "1fr", md: "1fr 1fr", lg: "1fr 1fr 1fr" }} gap={10} mt={10}>
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="blue.500">23%</StatNumber>
+                <StatNumber color="red.500">23%</StatNumber>
                 <StatLabel>Average Profit Increase</StatLabel>
               </Stat>
               <Text>
@@ -93,7 +93,7 @@ function PriceMonitoringPage() {
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="blue.500">87%</StatNumber>
+                <StatNumber color="red.500">87%</StatNumber>
                 <StatLabel>Time Savings</StatLabel>
               </Stat>
               <Text>
@@ -104,7 +104,7 @@ function PriceMonitoringPage() {
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="blue.500">5x</StatNumber>
+                <StatNumber color="red.500">5x</StatNumber>
                 <StatLabel>Faster Response Time</StatLabel>
               </Stat>
               <Text>
@@ -117,7 +117,7 @@ function PriceMonitoringPage() {
       </Box>
       
       {/* Industry Applications Section */}
-      <Box py={16} bg="blue.50">
+      <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={12} fontWeight="medium">
             Industry-Specific Price Monitoring Applications
@@ -128,7 +128,7 @@ function PriceMonitoringPage() {
               <Box key={index} p={6} bg="white" borderRadius="md" boxShadow="sm">
                 <Stat mb={4}>
                   <StatLabel fontSize="lg" fontWeight="medium">{industry.industry}</StatLabel>
-                  <StatNumber color="blue.500">{industry.growth}%</StatNumber>
+                  <StatNumber color="red.500">{industry.growth}%</StatNumber>
                   <StatHelpText>
                     <StatArrow type="increase" />
                     Implementation Growth
@@ -198,7 +198,7 @@ function PriceMonitoringPage() {
       </Box>
       
       {/* Platform Features Section */}
-      <Box py={16} bg="blue.50">
+      <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
              Price Monitoring Platform Features
@@ -206,52 +206,52 @@ function PriceMonitoringPage() {
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="blue.500">Data Collection Capabilities</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.500">Data Collection Capabilities</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.500" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.500" mt={1} />
                   <Text><Text as="span" fontWeight="bold">High-volume Extraction</Text> - Monitor millions of price points daily across thousands of sources</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.500" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.500" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Geo-specific Pricing</Text> - Access regional and location-based pricing through our global proxy network</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.500" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.500" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Dynamic Elements</Text> - Capture JavaScript-rendered prices and dynamic content on modern websites</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.500" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.500" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Attribute Tracking</Text> - Monitor not just prices but related attributes like promotions, stock levels, and ratings</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.500" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.500" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Scheduled Monitoring</Text> - Customize extraction frequency from real-time to scheduled intervals</Text>
                 </ListItem>
               </List>
             </Box>
             
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="blue.500">Analytics & Integration</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.500">Analytics & Integration</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.500" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.500" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Historical Tracking</Text> - Analyze pricing trends and patterns over time with comprehensive historical data</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.500" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.500" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Real-time Alerts</Text> - Receive instant notifications for critical price changes and competitive movements</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.500" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.500" mt={1} />
                   <Text><Text as="span" fontWeight="bold">API Access</Text> - Integrate pricing data directly into your existing systems via our robust API</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.500" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.500" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Custom Dashboards</Text> - Visualize pricing data through customizable dashboards and reporting tools</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.500" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.500" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Automated Actions</Text> - Set rule-based price adjustments and actions triggered by competitor movements</Text>
                 </ListItem>
               </List>
@@ -269,7 +269,7 @@ function PriceMonitoringPage() {
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="blue.500">Electronics Retailer Increases Margins by 18%</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.500">Electronics Retailer Increases Margins by 18%</Heading>
               <Text mb={4}>
                 A leading electronics retailer implemented our price monitoring solution to track 50,000+ SKUs across 
                 35 competitor websites. By identifying optimal price points and strategic opportunities to avoid 
@@ -282,7 +282,7 @@ function PriceMonitoringPage() {
             </Box>
             
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="blue.500">Online Travel Agency Optimizes Dynamic Pricing</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.500">Online Travel Agency Optimizes Dynamic Pricing</Heading>
               <Text mb={4}>
                 An international online travel agency used our solution to monitor hotel and flight pricing across 
                 global markets. By implementing real-time competitive tracking, they optimized their dynamic pricing 
@@ -298,7 +298,7 @@ function PriceMonitoringPage() {
       </Box>
       
       {/* Integration Partners */}
-      <Box py={16} bg="blue.50">
+      <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={8} fontWeight="medium">
             Integration Partners
@@ -328,7 +328,7 @@ function PriceMonitoringPage() {
       </Box>
       
       {/* Call to Action */}
-      <Box py={16} bg="blue.500" color="white">
+      <Box py={16} bg="red.500" color="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">
             Ready to Optimize Your Pricing Strategy?
@@ -342,7 +342,7 @@ function PriceMonitoringPage() {
             <Button
               size="lg"
               bg="white"
-              color="blue.500"
+              color="red.500"
               _hover={{ bg: "gray.100" }}
               as="a"
               href="/demo-request"

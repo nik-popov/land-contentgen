@@ -43,7 +43,7 @@ function ProxyTypesPage() {
   return (
     <>
       {/* Proxy Types Hero Section */}
-      <Box py={16} bg="blue.50" color="gray.800">
+      <Box py={16} bg="red.50" color="gray.800">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h1" size="2xl" textAlign="center" mb={8} fontWeight="medium">
             Proxy Types
@@ -117,7 +117,7 @@ function ProxyTypesPage() {
       </Box>
       
       {/* Proxy Types Section */}
-      <Box py={16} bg="blue.50">
+      <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={12} fontWeight="medium">
             Comprehensive Proxy Types
@@ -201,7 +201,7 @@ function ProxyTypesPage() {
       </Box>
       
       {/* Proxy Types Features Section */}
-      <Box py={16} bg="blue.50">
+      <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
             Detailed Proxy Type Specifications
@@ -305,7 +305,7 @@ function ProxyTypesPage() {
       </Box>
       
       {/* Proxy Types Overview Section */}
-      <Box py={16} bg="blue.50">
+      <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={8} fontWeight="medium">
             Comprehensive Proxy Selection

@@ -114,7 +114,7 @@ function PrivacyPolicyPage() {
                 <Text fontSize="md" mb={2}>
                   We use cookies and similar tracking technologies to collect and store information about your interactions with our 
                   Website. For detailed information about our use of cookies, please refer to our
-                  <Link color="blue.500" href="/cookie" ml={1}>Cookie Policy</Link>.
+                  <Link color="red.500" href="/cookie" ml={1}>Cookie Policy</Link>.
                 </Text>
               </Box>
               
@@ -516,7 +516,7 @@ function PrivacyPolicyPage() {
             </Text>
             <Text fontSize="md">
               For more detailed information about the cookies we use and how you can manage them, please refer to our 
-              <Link color="blue.500" href="/cookie" ml={1}>Cookie Policy</Link>.
+              <Link color="red.500" href="/cookie" ml={1}>Cookie Policy</Link>.
             </Text>
           </Box>
           
@@ -583,7 +583,7 @@ function PrivacyPolicyPage() {
             </VStack>
             <Text fontSize="md" mt={4}>
               For formal privacy requests, such as data access, correction, or deletion requests, please use our dedicated 
-              form available at <Link color="blue.500" href="https://roamingproxy.com/privacy-request">roamingproxy.com/privacy-request</Link>.
+              form available at <Link color="red.500" href="https://roamingproxy.com/privacy-request">roamingproxy.com/privacy-request</Link>.
             </Text>
             <Text fontSize="md" mt={4}>
               We will respond to your request within the timeframe required by applicable law, typically within 30 days. 

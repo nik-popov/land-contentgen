@@ -37,7 +37,7 @@ const UserMenu = () => {
             border="1px solid"
             borderColor="blue.300"
             _hover={{ bg: "blue.100", borderColor: "blue.400" }}
-            _active={{ bg: "blue.200", borderColor: "blue.500" }}
+            _active={{ bg: "blue.200", borderColor: "red.500" }}
             isRound
             data-testid="user-menu"
           />
@@ -52,7 +52,7 @@ const UserMenu = () => {
               as={Link}
               to="/settings"
               bg="gray.50"
-              _hover={{ bg: "blue.100", color: "blue.500" }}
+              _hover={{ bg: "blue.100", color: "red.500" }}
             >
               Settings
             </MenuItem>

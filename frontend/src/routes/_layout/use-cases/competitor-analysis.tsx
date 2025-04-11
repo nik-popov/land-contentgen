@@ -43,7 +43,7 @@ function CompetitorAnalysisPage() {
   return (
     <>
       {/* Competitor Analysis Hero Section */}
-      <Box py={16} bg="blue.50" color="gray.800">
+      <Box py={16} bg="red.50" color="gray.800">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h1" size="2xl" textAlign="center" mb={8} fontWeight="medium">
             Competitor Analysis Platform
@@ -117,7 +117,7 @@ function CompetitorAnalysisPage() {
       </Box>
       
       {/* Analysis Features Section */}
-      <Box py={16} bg="blue.50">
+      <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={12} fontWeight="medium">
             Comprehensive Analysis Areas
@@ -201,7 +201,7 @@ function CompetitorAnalysisPage() {
       </Box>
       
       {/* Detailed Features Section */}
-      <Box py={16} bg="blue.50">
+      <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
             Competitor Analysis Platform Features
@@ -307,7 +307,7 @@ function CompetitorAnalysisPage() {
       </Box>
       
       {/* Analysis Coverage Section */}
-      <Box py={16} bg="blue.50">
+      <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={8} fontWeight="medium">
             Comprehensive Analysis Coverage
