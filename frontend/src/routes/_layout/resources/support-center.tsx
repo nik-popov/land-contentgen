@@ -9,61 +9,61 @@ export const Route = createFileRoute("/_layout/resources/support-center")({
 
 function SupportCenterPage() {
   const supportCategories = [
-    { category: "Account Issues", articles: 48, views: "125K+", topics: "Login problems, password reset, account security, billing questions, subscription management" },
-    { category: "Data Collection", articles: 65, views: "180K+", topics: "Web scraping errors, data quality issues, format conversion, extraction techniques, parsing problems" },
-    { category: "API Integration", articles: 72, views: "210K+", topics: "Authentication issues, rate limits, response errors, endpoint usage, webhook configuration" },
-    { category: "Proxy Services", articles: 54, views: "155K+", topics: "Connection errors, IP rotation setup, geolocation targeting, proxy authentication, session management" },
-    { category: "Billing & Payments", articles: 36, views: "95K+", topics: "Subscription plans, payment methods, invoices, refunds, enterprise billing" },
-    { category: "Technical Issues", articles: 83, views: "220K+", topics: "Error troubleshooting, performance optimization, compatibility issues, implementation help" }
+    { category: "Account Concerns", articles: 48, views: "125K+", topics: "Sign-in troubles, password recovery, account protection, payment inquiries, plan adjustments" },
+    { category: "Data Harvesting", articles: 65, views: "180K+", topics: "Scraping glitches, data accuracy challenges, format adjustments, extraction methods, parsing errors" },
+    { category: "API Connectivity", articles: 72, views: "210K+", topics: "Login failures, request caps, response issues, endpoint handling, webhook setup" },
+    { category: "Proxy Operations", articles: 54, views: "155K+", topics: "Connectivity hiccups, IP cycling setup, location precision, proxy validation, session control" },
+    { category: "Payments & Billing", articles: 36, views: "95K+", topics: "Plan options, payment types, billing records, refund requests, corporate invoicing" },
+    { category: "Tech Challenges", articles: 83, views: "220K+", topics: "Fixing errors, boosting performance, compatibility fixes, setup assistance" }
   ];
 
   const popularArticles = [
     { 
-      title: "Resolving Authentication Failures", 
-      description: "Step-by-step guide to diagnosing and fixing the most common authentication issues with our API and proxy services", 
+      title: "Fixing Login Errors", 
+      description: "Detailed steps to troubleshoot and resolve frequent login problems with our API and proxy tools", 
       views: "12.5K",
-      category: "API Integration"
+      category: "API Connectivity"
     },
     { 
-      title: "Optimizing Data Collection Performance", 
-      description: "Best practices for improving speed and efficiency when collecting large volumes of data from websites and APIs", 
+      title: "Enhancing Data Gathering Speed", 
+      description: "Top tips for speeding up and streamlining the collection of large data sets from websites and APIs", 
       views: "10.2K",
-      category: "Data Collection"
+      category: "Data Harvesting"
     },
     { 
-      title: "Managing Billing & Usage Limits", 
-      description: "How to set up alerts, monitor usage, and manage your billing settings to avoid unexpected charges", 
+      title: "Controlling Costs & Limits", 
+      description: "Guide to setting notifications, tracking usage, and managing billing to prevent surprise fees", 
       views: "9.7K",
-      category: "Billing & Payments"
+      category: "Payments & Billing"
     },
     { 
-      title: "Troubleshooting IP Blocking Issues", 
-      description: "Complete guide to identifying and resolving IP blocking when using our proxy services for data collection", 
+      title: "Overcoming IP Restrictions", 
+      description: "Thorough walkthrough for detecting and fixing IP blocks when using our proxy services", 
       views: "11.3K",
-      category: "Proxy Services"
+      category: "Proxy Operations"
     }
   ];
 
   const faqItems = [
     {
-      question: "How do I reset my password?",
-      answer: "To reset your password, click on the 'Forgot Password' link on the login page. Enter your email address, and we'll send you a password reset link. Follow the instructions in the email to create a new password. For security reasons, password reset links expire after 24 hours."
+      question: "How can I recover my password?",
+      answer: "To recover your password, select 'Forgot Password' on the login screen. Input your email, and we’ll send a reset link. Follow the email’s steps to set a new password. For security, reset links expire after 24 hours."
     },
     {
-      question: "What payment methods do you accept?",
-      answer: "We accept all major credit cards (Visa, Mastercard, American Express, Discover), PayPal, and bank transfers for annual enterprise plans. Cryptocurrency payments are available upon request for annual subscriptions. All payments are processed securely through our PCI-compliant payment system."
+      question: "Which payment options are available?",
+      answer: "We support major credit cards (Visa, Mastercard, American Express, Discover), PayPal, and wire transfers for yearly enterprise plans. Crypto payments can be arranged for annual subscriptions upon request. All transactions are secured via our PCI-compliant system."
     },
     {
-      question: "How do I upgrade my subscription plan?",
-      answer: "You can upgrade your subscription at any time by going to Account Settings > Subscription. Click on 'Change Plan' and select your desired plan. The price difference will be prorated based on the remaining days in your current billing cycle. Your new plan benefits will be available immediately after upgrading."
+      question: "How do I switch to a higher plan?",
+      answer: "Upgrade your plan anytime in Account Settings > Subscription. Click 'Modify Plan,' pick your new tier, and the cost difference will adjust based on your current cycle’s remaining days. New features activate instantly upon upgrade."
     },
     {
-      question: "Can I get a refund if I'm not satisfied?",
-      answer: "Yes, we offer a 14-day money-back guarantee for new subscriptions. If you're not completely satisfied with our service, contact our support team within 14 days of your initial purchase for a full refund. Refunds for monthly plans are processed within 3-5 business days."
+      question: "Is a refund possible if I’m unhappy?",
+      answer: "Yes, we provide a 14-day refund policy for new subscribers. If unsatisfied, reach out to our support within 14 days of purchase for a full refund. Monthly plan refunds process within 3-5 business days."
     },
     {
-      question: "What are the IP rotation options for proxy services?",
-      answer: "We offer several IP rotation options including session-based rotation, time-based rotation (rotating IPs at fixed intervals), and request-based rotation. You can configure these settings in the dashboard under Proxy Settings > Rotation Options. Enterprise users have access to additional custom rotation strategies."
+      question: "What IP cycling choices do proxies offer?",
+      answer: "Options include session-based cycling, timed rotations (set intervals), and per-request switches. Adjust these in the dashboard under Proxy Settings > Rotation Preferences. Enterprise clients get custom cycling options."
     }
   ];
 
@@ -73,11 +73,10 @@ function SupportCenterPage() {
       <Box py={16} bg="red.50" color="gray.800">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h1" size="2xl" textAlign="center" mb={8} fontWeight="medium">
-            Support Center
+            Help Hub
           </Heading>
           <Text fontSize="xl" textAlign="center" mb={8} maxW="800px" mx="auto">
-            Find answers to your questions with our comprehensive documentation,
-            tutorials, and direct support from our team of experts.
+            Discover solutions to your queries with our detailed guides, how-tos, and expert assistance.
           </Text>
           
           {/* <Box maxW="650px" mx="auto" mb={10}>
@@ -86,7 +85,7 @@ function SupportCenterPage() {
                 <SearchIcon color="gray.300" />
               </InputLeftElement>
               <Input 
-                placeholder="Search for help articles, tutorials, and FAQs" 
+                placeholder="Look up assistance articles, how-tos, and FAQs" 
                 bg="white" 
                 focusBorderColor="red.500"
                 borderRadius="md"
@@ -97,18 +96,18 @@ function SupportCenterPage() {
           
           {/* <Flex justify="space-between" flexWrap="wrap" gap={6}>
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="red.600">Documentation</Heading>
-              <Text>Comprehensive guides, API references, and technical documentation for all our products and services.</Text>
+              <Heading as="h3" size="md" color="red.600">Guides</Heading>
+              <Text>In-depth manuals, API docs, and tech resources covering all our offerings.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="red.600">Tutorials & Guides</Heading>
-              <Text>Step-by-step tutorials and best practices for getting the most out of our platform and services.</Text>
+              <Heading as="h3" size="md" color="red.600">How-To Resources</Heading>
+              <Text>Clear, step-by-step instructions and tips to maximize our platform’s potential.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="red.600">Direct Support</Heading>
-              <Text>Connect with our support team through live chat, email, or schedule a call with a technical specialist.</Text>
+              <Heading as="h3" size="md" color="red.600">Expert Help</Heading>
+              <Text>Reach our team via live chat, email, or book a session with a tech specialist.</Text>
             </VStack>
           </Flex> */}
         </Box>
@@ -118,70 +117,70 @@ function SupportCenterPage() {
       {/* <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
-            How Can We Help You Today?
-          </Heading> */}
+            How Can We Assist You Today?
+          </Heading>
           
-          {/* <Grid templateColumns={{ base: "1fr", md: "1fr 1fr", lg: "1fr 1fr" }} gap={10} mt={10}> */}
-            {/* <VStack align="center" spacing={5} p={8} borderRadius="md" borderWidth="1px" borderColor="gray.200">
+          <Grid templateColumns={{ base: "1fr", md: "1fr 1fr", lg: "1fr 1fr" }} gap={10} mt={10}>
+            <VStack align="center" spacing={5} p={8} borderRadius="md" borderWidth="1px" borderColor="gray.200">
               <Box bg="red.50" p={4} borderRadius="full">
                 <ChatIcon boxSize={8} color="red.600" />
               </Box>
-              <Heading as="h3" size="md">Live Chat Support</Heading>
+              <Heading as="h3" size="md">Instant Chat Help</Heading>
               <Text textAlign="center">
-                Connect with our technical support team in real-time for immediate assistance with your questions.
+                Chat live with our tech support crew for quick answers to your queries.
               </Text>
               <Stat textAlign="center">
-                <StatLabel>Average Response Time</StatLabel>
+                <StatLabel>Typical Response Time</StatLabel>
                 <StatNumber color="red.600">2 min</StatNumber>
               </Stat>
               <Button colorScheme="red" variant="solid" width="full">
-                Start Live Chat
+                Begin Chat
               </Button>
             </VStack>
-             */}
-            {/* <VStack align="center" spacing={5} p={8} borderRadius="md" borderWidth="1px" borderColor="gray.200">
+            
+            <VStack align="center" spacing={5} p={8} borderRadius="md" borderWidth="1px" borderColor="gray.200">
               <Box bg="red.50" p={4} borderRadius="full">
                 <EmailIcon boxSize={8} color="red.600" />
               </Box>
-              <Heading as="h3" size="md">Email Support</Heading>
+              <Heading as="h3" size="md">Email Assistance</Heading>
               <Text textAlign="center">
-                Submit a detailed question or issue and receive a comprehensive response from our support engineers.
+                Send us a detailed inquiry or issue and get a thorough reply from our support staff.
               </Text>
               <Stat textAlign="center">
-                <StatLabel>Average Response Time</StatLabel>
+                <StatLabel>Typical Response Time</StatLabel>
                 <StatNumber color="red.600">4 hours</StatNumber>
               </Stat>
               <Button colorScheme="red" variant="solid" width="full">
-                Send Email
+                Email Us
               </Button>
-            </VStack> */}
+            </VStack>
             
-            {/* <VStack align="center" spacing={5} p={8} borderRadius="md" borderWidth="1px" borderColor="gray.200">
+            <VStack align="center" spacing={5} p={8} borderRadius="md" borderWidth="1px" borderColor="gray.200">
               <Box bg="red.50" p={4} borderRadius="full">
                 <PhoneIcon boxSize={8} color="red.600" />
               </Box>
-              <Heading as="h3" size="md">Schedule a Call</Heading>
+              <Heading as="h3" size="md">Book a Call</Heading>
               <Text textAlign="center">
-                Book a call with one of our technical specialists for personalized assistance with complex issues.
+                Arrange a call with a tech expert for tailored help with tricky problems.
               </Text>
               <Stat textAlign="center">
-                <StatLabel>Available For</StatLabel>
+                <StatLabel>Offered To</StatLabel>
                 <StatNumber color="red.600">Premium</StatNumber>
               </Stat>
               <Button colorScheme="red" variant="solid" width="full">
-                Book Appointment
+                Schedule Now
               </Button>
-            </VStack> */}
-          {/* </Grid> */}
-        {/* </Box>
+            </VStack>
+          </Grid>
+        </Box>
       </Box> */}
       
       {/* Support Categories Section */}
       {/* <Box py={16} bg="red.50">
-        <Box maxW="1200px" mx="auto" px={4}> */}
-          {/* <Heading as="h2" size="xl" textAlign="center" mb={12} fontWeight="medium">
-            Support Categories
-          </Heading> */}
+        <Box maxW="1200px" mx="auto" px={4}>
+          <Heading as="h2" size="xl" textAlign="center" mb={12} fontWeight="medium">
+            Help Topics
+          </Heading>
           
           <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={8}>
             {supportCategories.map((category, index) => (
@@ -190,30 +189,30 @@ function SupportCenterPage() {
                   <StatLabel fontSize="lg" fontWeight="medium">{category.category}</StatLabel>
                   <Flex justify="space-between" align="center">
                     <StatNumber color="red.600">{category.articles}</StatNumber>
-                    <Text color="gray.500" fontSize="sm" fontWeight="normal">Articles</Text>
+                    <Text color="gray.500" fontSize="sm" fontWeight="normal">Resources</Text>
                   </Flex>
                   <Flex justify="space-between" align="center" mt={1}>
                     <StatNumber color="red.400">{category.views}</StatNumber>
-                    <Text color="gray.500" fontSize="sm" fontWeight="normal">Monthly Views</Text>
+                    <Text color="gray.500" fontSize="sm" fontWeight="normal">Monthly Reads</Text>
                   </Flex>
                 </Stat>
                 <Text fontSize="sm" color="gray.600">
-                  <Text as="span" fontWeight="bold">Common Topics:</Text> {category.topics}
+                  <Text as="span" fontWeight="bold">Key Issues:</Text> {category.topics}
                 </Text>
               </Box>
             ))}
           </SimpleGrid>
-        {/* </Box>
+        </Box>
       </Box> */}
       
       {/* Popular Articles Section */}
       {/* <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={4} fontWeight="medium">
-            Most Popular Help Articles
+            Top Support Resources
           </Heading>
           <Text fontSize="lg" textAlign="center" mb={12} maxW="700px" mx="auto">
-            Find solutions to common questions and issues with our most frequently accessed support articles
+            Quick fixes for frequent queries and challenges from our most-viewed help resources
           </Text>
           
           <Grid templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }} gap={8}>
@@ -231,9 +230,9 @@ function SupportCenterPage() {
                   <HStack spacing={8}>
                     <Flex align="center">
                       <InfoIcon color="gray.400" mr={2} />
-                      <Text fontSize="sm" color="gray.500">{article.views} views</Text>
+                      <Text fontSize="sm" color="gray.500">{article.views} reads</Text>
                     </Flex>
-                    <Button colorScheme="red" size="sm" variant="outline">Read Article</Button>
+                    <Button colorScheme="red" size=" CainSm" variant="outline">View Resource</Button>
                   </HStack>
                 </Box>
               </Flex>
@@ -241,50 +240,52 @@ function SupportCenterPage() {
           </Grid>
         </Box>
       </Box> */}
-        {/* Customer Support Stats */}
-        <Box py={16} bg="white">
+      
+      {/* Customer Support Stats */}
+      <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={8} fontWeight="medium">
-            Our Support at a Glance
+            Support Highlights
           </Heading>
           <Text fontSize="lg" mb={12} maxW="700px" mx="auto">
-            We're committed to providing exceptional support with fast response times and high satisfaction rates
+            We’re dedicated to top-notch support, offering swift responses and high satisfaction
           </Text>
           
           <Box bg="red.50" p={8} borderRadius="md" boxShadow="md">
             <SimpleGrid columns={{ base: 2, md: 4 }} spacing={8}>
               <VStack>
                 <Heading as="h3" size="lg" color="red.600">96%</Heading>
-                <Text fontWeight="medium">Satisfaction Rate</Text>
-                <Text fontSize="sm" color="gray.600">Based on customer feedback</Text>
+                <Text fontWeight="medium">User Happiness</Text>
+                <Text fontSize="sm" color="gray.600">From customer reviews</Text>
               </VStack>
               <VStack>
                 <Heading as="h3" size="lg" color="red.600">2 min</Heading>
-                <Text fontWeight="medium">Chat Response</Text>
-                <Text fontSize="sm" color="gray.600">Average wait time</Text>
+                <Text fontWeight="medium">Chat Reply</Text>
+                <Text fontSize="sm" color="gray.600">Average delay</Text>
               </VStack>
               <VStack>
-                <Heading as="h3" size="lg" color="red.600"> 4 hrs</Heading>
-                <Text fontWeight="medium">Email Response</Text>
-                <Text fontSize="sm" color="gray.600">During business hours</Text>
+                <Heading as="h3" size="lg" color="red.600">4 hrs</Heading>
+                <Text fontWeight="medium">Email Reply</Text>
+                <Text fontSize="sm" color="gray.600">Within work hours</Text>
               </VStack>
               <VStack>
                 <Heading as="h3" size="lg" color="red.600">24/7</Heading>
-                <Text fontWeight="medium">Documentation</Text>
-                <Text fontSize="sm" color="gray.600">Always available</Text>
+                <Text fontWeight="medium">Guides Access</Text>
+                <Text fontSize="sm" color="gray.600">Always open</Text>
               </VStack>
             </SimpleGrid>
           </Box>
         </Box>
       </Box>
+      
       {/* FAQ Section */}
       <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
-            Frequently Asked Questions
+            Common Queries Answered
           </Heading>
           <Text fontSize="lg" textAlign="center" mb={12} maxW="700px" mx="auto">
-            Quick answers to our most common support questions
+            Fast responses to our most-asked support questions
           </Text>
           
           <Box bg="white" borderRadius="md" boxShadow="sm" overflow="hidden">
@@ -315,12 +316,11 @@ function SupportCenterPage() {
               href="/resources/faq"
               size="lg"
             >
-              View All FAQs
+              See All FAQs
             </Button>
           </Box>
         </Box>
       </Box>
-      
       
       {/* Support Hours Section */}
       {/* <Box py={16} bg="white">
@@ -328,40 +328,40 @@ function SupportCenterPage() {
           <SimpleGrid columns={{ base: 1, md: 2 }} gap={8}>
             <Box>
               <Heading as="h2" size="xl" mb={6} fontWeight="medium">
-                Support Hours & Availability
+                Help Availability & Hours
               </Heading>
               <Text fontSize="lg" mb={8}>
-                We provide multiple support channels with different availability to ensure you can get help when you need it.
+                We offer various help channels with differing schedules to ensure support when you need it.
               </Text>
               
               <List spacing={5}>
                 <ListItem display="flex" alignItems="center">
                   <Box as={TimeIcon} color="red.600" mr={4} />
                   <Box>
-                    <Text fontWeight="bold">Live Chat Support</Text>
+                    <Text fontWeight="bold">Instant Chat Assistance</Text>
                     <Text color="gray.600">Monday to Friday, 9 AM - 8 PM (EST)</Text>
                   </Box>
                 </ListItem>
                 <ListItem display="flex" alignItems="center">
                   <Box as={TimeIcon} color="red.600" mr={4} />
                   <Box>
-                    <Text fontWeight="bold">Email Support</Text>
-                    <Text color="gray.600">24/7 - Response times vary outside business hours</Text>
+                    <Text fontWeight="bold">Email Help</Text>
+                    <Text color="gray.600">24/7 - Replies may delay outside business hours</Text>
                   </Box>
                 </ListItem>
                 <ListItem display="flex" alignItems="center">
                   <Box as={TimeIcon} color="red.600" mr={4} />
                   <Box>
-                    <Text fontWeight="bold">Phone Support</Text>
+                    <Text fontWeight="bold">Phone Assistance</Text>
                     <Text color="gray.600">Monday to Friday, 10 AM - 6 PM (EST)</Text>
-                    <Text color="gray.600">Premium and Enterprise plans only</Text>
+                    <Text color="gray.600">For Premium and Enterprise users</Text>
                   </Box>
                 </ListItem>
                 <ListItem display="flex" alignItems="center">
                   <Box as={TimeIcon} color="red.600" mr={4} />
                   <Box>
-                    <Text fontWeight="bold">Emergency Support</Text>
-                    <Text color="gray.600">24/7 for critical issues (Enterprise plans)</Text>
+                    <Text fontWeight="bold">Urgent Help</Text>
+                    <Text color="gray.600">24/7 for major issues (Enterprise plans)</Text>
                   </Box>
                 </ListItem>
               </List>
@@ -369,39 +369,38 @@ function SupportCenterPage() {
             
             <Box bg="red.50" p={8} borderRadius="md">
               <Heading as="h3" size="lg" mb={6} fontWeight="medium">
-                Need Immediate Assistance?
+                Need Help Right Away?
               </Heading>
               <Text mb={6}>
-                Our team is standing by to help you resolve any issues quickly and efficiently.
+                Our crew is ready to tackle your issues swiftly and effectively.
               </Text>
               
               <VStack spacing={4} align="stretch">
                 <Button leftIcon={<EmailIcon />} colorScheme="red" variant="outline" size="lg">
-                  Send Email Request
+                  Submit Email Inquiry
                 </Button>
                 <Divider my={2} />
                 <Button leftIcon={<PhoneIcon />} colorScheme="red" variant="outline" size="md">
-                +1 (855) 440-2242
+                  +1 (855) 440-2242
                 </Button>
               </VStack>
             </Box>
           </SimpleGrid>
         </Box>
-      </Box>
-       */}
+      </Box> */}
+      
       {/* Call to Action */}
       <Box py={16} bg="red.600" color="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">
-            Can't Find What You're Looking For?
+            Still Searching for Answers?
           </Heading>
           <Text fontSize="lg" mb={10} maxW="700px" mx="auto" color="white">
-            Our support team is ready to assist you with any questions or issues
-            that aren't covered in our documentation
+            Our support crew is here to tackle any queries or problems not found in our guides
           </Text>
           
           <Flex justify="center" gap={6} flexWrap="wrap">
-          <Button
+            <Button
               size="lg"
               bg="white"
               color="red.500"
@@ -409,7 +408,7 @@ function SupportCenterPage() {
               as="a"
               href="/demo-request"
             >
-              Request Demo
+              Book a Demo
             </Button>
             
             <Button
@@ -421,7 +420,7 @@ function SupportCenterPage() {
               as="a"
               href="https://cloud.roamingproxy.com/signup"
             >
-              Start Free Trial
+              Try Free Today
             </Button>
             {/* <Button
               size="lg"
@@ -431,7 +430,7 @@ function SupportCenterPage() {
               _hover={{ bg: "red.700" }}
               leftIcon={<InfoIcon />}
             >
-              Browse Documentation
+              Explore Guides
             </Button> */}
           </Flex>
         </Box>
