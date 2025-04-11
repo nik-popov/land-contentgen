@@ -13,8 +13,8 @@ function PricingPage() {
 
   const pricingPlans = [
     {
-      name: "Starter",
-      description: "Perfect for hobbyists and small projects looking to tap into data effortlessly.",
+      name: "Basic",
+      description: "Ideal for hobbyists and small-scale projects seeking seamless access to data.",
       monthlyPrice: 49,
       annualPrice: 39, // ~20% discount from $49
       features: [
@@ -32,8 +32,8 @@ function PricingPage() {
       ],
     },
     {
-      name: "Analyst",
-      description: "Ideal for data analysts and teams scaling their insights with confidence",
+      name: "Pro",
+      description: "Perfect for data analysts and teams looking to expand their insights with reliability.",
       monthlyPrice: 149,
       annualPrice: 119, // ~20% discount from $149
       popular: true,
@@ -53,7 +53,7 @@ function PricingPage() {
     },
     {
       name: "Business",
-      description: "Designed for data enthusiasts and companies tackling large-scale data challenges.",
+      description: "Tailored for data enthusiasts and businesses conquering complex, large-scale data.",
       monthlyPrice: 475,
       annualPrice: 380, // ~20% discount from $475
       features: [
@@ -72,7 +72,7 @@ function PricingPage() {
     },
     {
       name: "Enterprise",
-      description: "Tailored for leaders managing vast data ecosystems with premium support.",
+      description: "Crafted for leaders overseeing extensive data ecosystems, with top-tier support.",
       customPricing: true,
       features: [
         "5,000,000+ API calls per month",
@@ -178,10 +178,10 @@ function PricingPage() {
       <Box py={16} bg="red.50" color="gray.800">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h1" size="2xl" textAlign="center" mb={8} fontWeight="medium">
-            Pricing That Scales With You
+          Pricing That Grows With You
           </Heading>
           <Text fontSize="xl" textAlign="center" mb={8} maxW="800px" mx="auto">
-            From small experiments to enterprise solutions, find a plan that powers your data journey.
+          From startups to enterprise-scale projects, discover a plan tailored to fuel your data-driven journey.
           </Text>
           <Box maxW="300px" mx="auto" mb={10}>
             <FormControl display="flex" alignItems="center" justifyContent="center">
@@ -313,8 +313,8 @@ function PricingPage() {
               <Thead>
                 <Tr bg="gray.100">
                   <Th width="30%">Feature</Th>
-                  <Th width="17.5%">Starter</Th>
-                  <Th width="17.5%" bg="red.50">Analyst</Th>
+                  <Th width="17.5%">Basic</Th>
+                  <Th width="17.5%" bg="red.50">Pro</Th>
                   <Th width="17.5%">Business</Th>
                   <Th width="17.5%">Enterprise</Th>
                 </Tr>
