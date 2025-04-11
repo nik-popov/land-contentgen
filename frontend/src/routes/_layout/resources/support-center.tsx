@@ -134,7 +134,7 @@ function SupportCenterPage() {
                 <StatLabel>Average Response Time</StatLabel>
                 <StatNumber color="red.600">2 min</StatNumber>
               </Stat>
-              <Button colorScheme="blue" variant="solid" width="full">
+              <Button colorScheme="red" variant="solid" width="full">
                 Start Live Chat
               </Button>
             </VStack>
@@ -151,7 +151,7 @@ function SupportCenterPage() {
                 <StatLabel>Average Response Time</StatLabel>
                 <StatNumber color="red.600">4 hours</StatNumber>
               </Stat>
-              <Button colorScheme="blue" variant="solid" width="full">
+              <Button colorScheme="red" variant="solid" width="full">
                 Send Email
               </Button>
             </VStack> */}
@@ -168,7 +168,7 @@ function SupportCenterPage() {
                 <StatLabel>Available For</StatLabel>
                 <StatNumber color="red.600">Premium</StatNumber>
               </Stat>
-              <Button colorScheme="blue" variant="solid" width="full">
+              <Button colorScheme="red" variant="solid" width="full">
                 Book Appointment
               </Button>
             </VStack> */}
@@ -225,7 +225,7 @@ function SupportCenterPage() {
                 <Box>
                   <Flex justify="space-between" align="center" mb={2}>
                     <Heading as="h3" size="md" fontWeight="medium">{article.title}</Heading>
-                    <Tag size="sm" colorScheme="blue" ml={2}>{article.category}</Tag>
+                    <Tag size="sm" colorScheme="red" ml={2}>{article.category}</Tag>
                   </Flex>
                   <Text color="gray.600" mb={3}>{article.description}</Text>
                   <HStack spacing={8}>
@@ -233,7 +233,7 @@ function SupportCenterPage() {
                       <InfoIcon color="gray.400" mr={2} />
                       <Text fontSize="sm" color="gray.500">{article.views} views</Text>
                     </Flex>
-                    <Button colorScheme="blue" size="sm" variant="outline">Read Article</Button>
+                    <Button colorScheme="red" size="sm" variant="outline">Read Article</Button>
                   </HStack>
                 </Box>
               </Flex>
@@ -309,7 +309,7 @@ function SupportCenterPage() {
           
           <Box textAlign="center" mt={8}>
             <Button 
-              colorScheme="blue" 
+              colorScheme="red" 
               variant="outline" 
               as="a"
               href="/resources/faq"
@@ -376,7 +376,7 @@ function SupportCenterPage() {
               </Text>
               
               <VStack spacing={4} align="stretch">
-                <Button leftIcon={<EmailIcon />} colorScheme="blue" variant="outline" size="lg">
+                <Button leftIcon={<EmailIcon />} colorScheme="red" variant="outline" size="lg">
                   Send Email Request
                 </Button>
                 <Divider my={2} />

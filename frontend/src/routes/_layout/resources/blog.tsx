@@ -102,7 +102,7 @@ function BlogPage() {
                   >
                     <Box>
                       <HStack mb={4} spacing={3}>
-                        <Badge colorScheme="blue" px={3} py={1} borderRadius="full">{post.category || 'Uncategorized'}</Badge>
+                        <Badge colorScheme="red" px={3} py={1} borderRadius="full">{post.category || 'Uncategorized'}</Badge>
                         <Flex align="center">
                           <TimeIcon mr={1} color="gray.500" boxSize={3} />
                           <Text fontSize="sm" color="gray.500">{post.readTime || 'N/A'}</Text>
@@ -154,7 +154,7 @@ function BlogPage() {
                   <Image src={post.image} alt={post.title || 'Untitled'} h="180px" w="full" objectFit="cover" />
                   <Box p={5}>
                     <HStack mb={3} spacing={3}>
-                      <Badge colorScheme="blue" px={2} py={0.5} borderRadius="full">{post.category || 'Uncategorized'}</Badge>
+                      <Badge colorScheme="red" px={2} py={0.5} borderRadius="full">{post.category || 'Uncategorized'}</Badge>
                       <Flex align="center"><TimeIcon mr={1} color="gray.500" boxSize={3} /><Text fontSize="xs" color="gray.500">{post.readTime || 'N/A'}</Text></Flex>
                     </HStack>
                     <Heading as="h3" size="md" mb={3} fontWeight="medium" lineHeight="1.3">{post.title || 'Untitled'}</Heading>
@@ -192,7 +192,7 @@ function BlogPage() {
                         <Image src={post.image} alt={post.title || 'Untitled'} w={{ base: "80px", md: "150px" }} h={{ base: "80px", md: "100px" }} objectFit="cover" borderRadius="md" />
                         <Box flex="1">
                           <HStack mb={1} spacing={3}>
-                            <Badge colorScheme="blue" size="sm">{post.category || 'Uncategorized'}</Badge>
+                            <Badge colorScheme="red" size="sm">{post.category || 'Uncategorized'}</Badge>
                             <Text fontSize="xs" color="gray.500">{post.date || 'No date'}</Text>
                             <Flex align="center"><TimeIcon mr={1} color="gray.500" boxSize={3} /><Text fontSize="xs" color="gray.500">{post.readTime || 'N/A'}</Text></Flex>
                           </HStack>
@@ -228,14 +228,14 @@ function BlogPage() {
                   <Divider mb={4} />
                   <Flex flexWrap="wrap" gap={2}>
                     {popularTags.map((tag, index) => (
-                      <Tag key={index} colorScheme={selectedTags.includes(tag) ? "blue" : "blue"} variant={selectedTags.includes(tag) ? "solid" : "subtle"} size="md" borderRadius="full" cursor="pointer" _hover={{ bg: selectedTags.includes(tag) ? "red.600" : "red.100" }} onClick={() => handleTagClick(tag)}>{tag}</Tag>
+                      <Tag key={index} colorScheme={selectedTags.includes(tag) ? "red" : "red"} variant={selectedTags.includes(tag) ? "solid" : "subtle"} size="md" borderRadius="full" cursor="pointer" _hover={{ bg: selectedTags.includes(tag) ? "red.600" : "red.100" }} onClick={() => handleTagClick(tag)}>{tag}</Tag>
                     ))}
                   </Flex>
                 </Box>
                 <Box bg="red.50" p={6} borderRadius="lg" boxShadow="sm">
                   <Heading as="h3" size="md" mb={4} fontWeight="medium">Need Expert Help?</Heading>
                   <Text mb={4}>Our team can help you implement the strategies...</Text>
-                  <Button colorScheme="blue" width="full" as="a" href="/contact-sales">Contact Us</Button>
+                  <Button colorScheme="red" width="full" as="a" href="/contact-sales">Contact Us</Button>
                 </Box>
               </VStack>
             </Box>

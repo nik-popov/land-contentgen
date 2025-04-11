@@ -164,7 +164,7 @@ function WebScrapingGuidesPage() {
               <Box>
                 <Heading as="h3" size="md" mb={2} fontWeight="medium">Web Scraping with Python</Heading>
                 <Text color="gray.600" mb={3}>Comprehensive guide to building reliable scrapers with Python using libraries like BeautifulSoup, Requests, Scrapy, and Selenium</Text>
-                <Button leftIcon={<DownloadIcon />} colorScheme="blue" size="sm" variant="outline">Download Guide</Button>
+                <Button leftIcon={<DownloadIcon />} colorScheme="" size="sm" variant="outline">Download Guide</Button>
               </Box>
             </Flex>
             
@@ -175,7 +175,7 @@ function WebScrapingGuidesPage() {
               <Box>
                 <Heading as="h3" size="md" mb={2} fontWeight="medium">JavaScript Scraping Masterclass</Heading>
                 <Text color="gray.600" mb={3}>Learn how to scrape dynamic websites using JavaScript with Puppeteer, Cheerio, and other Node.js libraries for efficient data extraction</Text>
-                <Button leftIcon={<DownloadIcon />} colorScheme="blue" size="sm" variant="outline">Download Guide</Button>
+                <Button leftIcon={<DownloadIcon />} colorScheme="" size="sm" variant="outline">Download Guide</Button>
               </Box>
             </Flex>
             
@@ -186,7 +186,7 @@ function WebScrapingGuidesPage() {
               <Box>
                 <Heading as="h3" size="md" mb={2} fontWeight="medium">Avoiding Blocks & Captchas</Heading>
                 <Text color="gray.600" mb={3}>Advanced techniques for maintaining scraper reliability, managing sessions, rotating proxies, and avoiding detection and blocks</Text>
-                <Button leftIcon={<DownloadIcon />} colorScheme="blue" size="sm" variant="outline">Download Guide</Button>
+                <Button leftIcon={<DownloadIcon />} colorScheme="" size="sm" variant="outline">Download Guide</Button>
               </Box>
             </Flex>
             
@@ -197,7 +197,7 @@ function WebScrapingGuidesPage() {
               <Box>
                 <Heading as="h3" size="md" mb={2} fontWeight="medium">Large-Scale Data Extraction</Heading>
                 <Text color="gray.600" mb={3}>Enterprise-level scraping architecture for handling distributed scrapers, parallel processing, and managing millions of data points</Text>
-                <Button leftIcon={<DownloadIcon />} colorScheme="blue" size="sm" variant="outline">Download Guide</Button>
+                <Button leftIcon={<DownloadIcon />} colorScheme="" size="sm" variant="outline">Download Guide</Button>
               </Box>
             </Flex>
           </Grid>

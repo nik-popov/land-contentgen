@@ -259,7 +259,7 @@ function CookiePolicyPage() {
                     <Td>Registers a unique ID to generate statistical data on website usage</Td>
                     <Td>2 years</Td>
                     <Td>
-                      <Badge colorScheme="blue">Analytics</Badge>
+                      <Badge colorScheme="red">Analytics</Badge>
                     </Td>
                   </Tr>
                   <Tr>
@@ -268,7 +268,7 @@ function CookiePolicyPage() {
                     <Td>Registers a unique ID for tracking daily website usage</Td>
                     <Td>24 hours</Td>
                     <Td>
-                      <Badge colorScheme="blue">Analytics</Badge>
+                      <Badge colorScheme="red">Analytics</Badge>
                     </Td>
                   </Tr>
                   <Tr>
@@ -277,7 +277,7 @@ function CookiePolicyPage() {
                     <Td>Used to throttle request rate</Td>
                     <Td>1 minute</Td>
                     <Td>
-                      <Badge colorScheme="blue">Analytics</Badge>
+                      <Badge colorScheme="red">Analytics</Badge>
                     </Td>
                   </Tr>
                   <Tr>
@@ -331,7 +331,7 @@ function CookiePolicyPage() {
                     <Td>Used to track visitors across HubSpot's services</Td>
                     <Td>13 months</Td>
                     <Td>
-                      <Badge colorScheme="blue">Analytics</Badge>
+                      <Badge colorScheme="red">Analytics</Badge>
                     </Td>
                   </Tr>
                 </Tbody>

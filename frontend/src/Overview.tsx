@@ -384,14 +384,14 @@ const Overview: React.FC<OverviewProps> = ({ endpointId }) => {
             ))}
           </ButtonGroup>
           <Tooltip label="Refresh overview data">
-            <Button size="sm" colorScheme="blue" onClick={fetchData} isLoading={isLoading}>
+            <Button size="sm" colorScheme="red" onClick={fetchData} isLoading={isLoading}>
               Refresh
             </Button>
           </Tooltip>
           <Tooltip label="Toggle chart labels">
             <Button
               size="sm"
-              colorScheme={showLabels ? "blue" : "gray"}
+              colorScheme={showLabels ? "red" : "gray"}
               onClick={() => setShowLabels(!showLabels)}
             >
               {showLabels ? "Labels: On" : "Labels: Off"}

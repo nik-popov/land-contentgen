@@ -186,7 +186,7 @@ function ContactPage() {
                   <Button 
                     as="a"
                     href="/contact-sales"
-                    colorScheme="blue" 
+                    colorScheme="red" 
                     variant="link" 
                     rightIcon={<EmailIcon />}
                   >
@@ -195,7 +195,7 @@ function ContactPage() {
                   <Button 
                     as="a"
                     href="tel:+18554402242"
-                    colorScheme="blue" 
+                    colorScheme="red" 
                     variant="link" 
                     rightIcon={<PhoneIcon />}
                   >

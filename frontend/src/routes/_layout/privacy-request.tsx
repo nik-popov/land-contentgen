@@ -127,7 +127,7 @@ function PrivacyRequestPage() {
               Your privacy request has been received. Our Data Protection team will review your request and respond within 30 days. 
               A confirmation email has been sent to the email address you provided.
             </AlertDescription>
-            <Button mt={6} colorScheme="blue" onClick={() => window.location.href = "/"}>
+            <Button mt={6} colorScheme="red" onClick={() => window.location.href = "/"}>
               Return to Homepage
             </Button>
           </Alert>
@@ -302,7 +302,7 @@ function PrivacyRequestPage() {
                 <Checkbox 
                   name="consent"
                   size="md" 
-                  colorScheme="blue"
+                  colorScheme="red"
                   isChecked={consentChecked}
                   onChange={(e) => setConsentChecked(e.target.checked)}
                 >
@@ -315,7 +315,7 @@ function PrivacyRequestPage() {
               
               <Button 
                 type="submit" 
-                colorScheme="blue" 
+                colorScheme="red" 
                 size="lg" 
                 w={{ base: "full", md: "auto" }}
                 isLoading={isSubmitting}

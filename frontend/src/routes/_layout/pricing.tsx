@@ -190,7 +190,7 @@ function PricingPage() {
               </FormLabel>
               <Switch
                 id="billing-toggle"
-                colorScheme="blue"
+                colorScheme="red"
                 size="lg"
                 isChecked={isAnnual}
                 onChange={() => setIsAnnual(!isAnnual)}
@@ -223,7 +223,7 @@ function PricingPage() {
                     position="absolute"
                     top={4}
                     right={4}
-                    colorScheme="blue"
+                    colorScheme="red"
                     variant="solid"
                     px={2}
                     py={1}
@@ -259,7 +259,7 @@ function PricingPage() {
                     </Box>
                   )}
                   <Button
-                    colorScheme={plan.popular ? "blue" : "gray"}
+                    colorScheme={plan.popular ? "red" : "gray"}
                     variant={plan.popular ? "solid" : "outline"}
                     size="lg"
                     width="full"

@@ -259,7 +259,7 @@ function BlogPostDetails() {
             mb={8} 
           />
           <Flex align="center" mb={4}>
-            <Tag colorScheme="blue" mr={4} px={3} py={1} borderRadius="full">
+            <Tag colorScheme="" mr={4} px={3} py={1} borderRadius="full">
               {post.category}
             </Tag>
             <Text fontSize="sm" color="gray.500">{post.date}</Text>

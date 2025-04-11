@@ -137,7 +137,7 @@ function WhistleblowerReportPage() {
                 Our team will review your report within 1 business day. Use your Report ID and Access Key to check status anonymously.
               </Text>
               <HStack justifyContent="center" mt={4}>
-                <Button colorScheme="blue" onClick={() => window.print()}>
+                <Button colorScheme="red" onClick={() => window.print()}>
                   Print This Information
                 </Button>
               </HStack>
@@ -395,7 +395,7 @@ function WhistleblowerReportPage() {
               <Flex w="full" direction={{ base: "column", sm: "row" }} gap={6}>
                 <Button 
                   type="submit" 
-                  colorScheme="blue" 
+                  colorScheme="red" 
                   size="lg"
                   isLoading={isSubmitting}
                   loadingText="Submitting Securely"

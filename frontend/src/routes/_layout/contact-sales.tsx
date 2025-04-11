@@ -121,7 +121,7 @@ function SalesContactPage() {
             <AlertDescription maxWidth="sm">
               Your inquiry has been received and a dedicated sales representative will contact you within 1 business day to discuss how our solutions can meet your specific needs.
             </AlertDescription>
-            <Button mt={6} colorScheme="blue" onClick={() => window.location.href = "/"}>
+            <Button mt={6} colorScheme="red" onClick={() => window.location.href = "/"}>
               Return to Homepage
             </Button>
           </Alert>
@@ -277,7 +277,7 @@ function SalesContactPage() {
                 <Checkbox 
                   name="consent"
                   size="md" 
-                  colorScheme="blue"
+                  colorScheme="red"
                   isChecked={consentChecked}
                   onChange={(e) => setConsentChecked(e.target.checked)}
                 >
