@@ -410,14 +410,9 @@ function PricingPage() {
               <Text fontSize="sm" color="gray.600">Crafted for business needs</Text>
             </VStack>
             <VStack>
-              <Heading as="h3" size="2xl" color="red.600">5B+</Heading>
+              <Heading as="h3" size="2xl" color="red.600">7B+</Heading>
               <Text fontWeight="medium">Requests Each Month</Text>
               <Text fontSize="sm" color="gray.600">Across our system</Text>
-            </VStack>
-            <VStack>
-              <Heading as="h3" size="2xl" color="red.600">15K+</Heading>
-              <Text fontWeight="medium">Current Users</Text>
-              <Text fontSize="sm" color="gray.600">From individuals to enterprises</Text>
             </VStack>
             <VStack>
               <Heading as="h3" size="2xl" color="red.600">190+</Heading>
