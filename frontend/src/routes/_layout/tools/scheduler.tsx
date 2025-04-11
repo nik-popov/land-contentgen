@@ -9,33 +9,33 @@ export const Route = createFileRoute("/_layout/tools/scheduler")({
 
 function SchedulerPage() {
   const industryData = [
-    { industry: "E-commerce", growth: 58, useCases: "Inventory updates, pricing synchronization, order processing" },
-    { industry: "Digital Marketing", growth: 51, useCases: "Campaign scheduling, analytics reporting, content publishing" },
-    { industry: "Financial Services", growth: 43, useCases: "Report generation, data reconciliation, compliance checks" },
-    { industry: "Operations", growth: 47, useCases: "Resource allocation, maintenance scheduling, SLA monitoring" },
-    { industry: "Data Analytics", growth: 62, useCases: "ETL processes, data pipeline management, dashboard refreshes" },
-    { industry: "IT Management", growth: 44, useCases: "System backups, security scans, infrastructure scaling" }
+    { industry: "E-commerce", growth: 58, useCases: "Stock updates, price alignment, order automation" },
+    { industry: "Digital Marketing", growth: 51, useCases: "Campaign timing, report generation, content deployment" },
+    { industry: "Financial Services", growth: 43, useCases: "Report creation, data syncing, compliance verification" },
+    { industry: "Operations", growth: 47, useCases: "Resource planning, upkeep scheduling, SLA tracking" },
+    { industry: "Data Analytics", growth: 62, useCases: "ETL workflows, pipeline coordination, dashboard updates" },
+    { industry: "IT Management", growth: 44, useCases: "Backups, security audits, system scaling" }
   ];
 
   const schedulerFeatures = [
     { 
-      title: "Visual Workflow Builder", 
-      description: "Create complex workflows with our intuitive drag-and-drop interface - no coding required for most automation tasks", 
+      title: "Graphical Task Designer", 
+      description: "Build intricate task sequences using an easy drag-and-drop tool—no coding needed for most automations", 
       icon: "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/python.png" 
     },
     { 
-      title: "Advanced Scheduling", 
-      description: "Set precise execution schedules with cron expressions, dependencies, and conditional triggers based on events", 
+      title: "Precision Timing", 
+      description: "Define exact run times with cron syntax, task dependencies, and event-driven triggers", 
       icon: "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/grafana.png" 
     },
     { 
-      title: "Distributed Execution", 
-      description: "Run jobs across multiple workers with automatic load balancing, retry logic, and parallel processing", 
+      title: "Scalable Task Execution", 
+      description: "Distribute tasks across workers with auto-balancing, retry mechanisms, and parallel runs", 
       icon: "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/kubernetes.png" 
     },
     { 
-      title: "Comprehensive Monitoring", 
-      description: "Track execution history, resource usage, and success rates with detailed logs and performance metrics", 
+      title: "In-Depth Oversight", 
+      description: "Monitor run history, resource use, and success metrics with detailed logs and analytics", 
       icon: "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/prometheus.png" 
     }
   ];
@@ -46,27 +46,27 @@ function SchedulerPage() {
       <Box py={16} bg="red.50" color="gray.800">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h1" size="2xl" textAlign="center" mb={8} fontWeight="medium">
-            Scheduler
+            Task Scheduler
           </Heading>
           <Text fontSize="xl" textAlign="center" mb={12} maxW="800px" mx="auto">
-            Automate your data workflows with our powerful scheduling and orchestration platform.
-            Design, execute, and monitor complex processes with precision timing and reliable delivery.
+            Streamline your workflows with our robust scheduling and orchestration tool. 
+            Plan, run, and oversee intricate processes with accurate timing and dependable execution.
           </Text>
           
           <Flex justify="space-between" flexWrap="wrap" gap={6}>
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="red.500">Intelligent Automation</Heading>
-              <Text>Create sophisticated data workflows that combine APIs, web scraping, transformations, and delivery into seamless automated processes that run exactly when needed.</Text>
+              <Heading as="h3" size="md" color="red.500">Smart Workflow Automation</Heading>
+              <Text>Design advanced workflows integrating APIs, scraping, data processing, and delivery into smooth, automated sequences that trigger precisely when required.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="red.500">Reliable Execution</Heading>
-              <Text>Ensure your critical processes run on time, every time with our fault-tolerant architecture. Automatic retries, dependency management, and alerting keep your workflows on track.</Text>
+              <Heading as="h3" size="md" color="red.500">Dependable Performance</Heading>
+              <Text>Guarantee your key tasks execute on schedule with a resilient system featuring retries, dependency handling, and alerts to keep everything running smoothly.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="red.500">Complete Visibility</Heading>
-              <Text>Monitor all your scheduled tasks from a single dashboard with real-time execution status, detailed logs, resource utilization metrics, and customizable alerts.</Text>
+              <Heading as="h3" size="md" color="red.500">Full Transparency</Heading>
+              <Text>Keep tabs on all scheduled activities via a unified dashboard showing live status, detailed logs, resource stats, and tailored notifications.</Text>
             </VStack>
           </Flex>
         </Box>
@@ -76,40 +76,37 @@ function SchedulerPage() {
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
-            Key Benefits of Scheduler
+            Why Choose Our Scheduler
           </Heading>
           
           <Grid templateColumns={{ base: "1fr", md: "1fr 1fr", lg: "1fr 1fr 1fr" }} gap={10} mt={10}>
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
                 <StatNumber color="red.500">76%</StatNumber>
-                <StatLabel>Operational Efficiency Gain</StatLabel>
+                <StatLabel>Boost in Efficiency</StatLabel>
               </Stat>
               <Text>
-                Organizations using our Scheduler report up to 76% increase in operational efficiency 
-                by eliminating manual processes and reducing errors in mission-critical workflows.
+                Companies using our tool see up to a 76% rise in efficiency by automating tasks and minimizing errors in critical operations.
               </Text>
             </VStack>
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
                 <StatNumber color="red.500">24/7</StatNumber>
-                <StatLabel>Automated Operations</StatLabel>
+                <StatLabel>Non-Stop Automation</StatLabel>
               </Stat>
               <Text>
-                Achieve round-the-clock operation with automated workflows that run nights, 
-                weekends, and holidays without human intervention or oversight.
+                Enable continuous operations with workflows that run unattended during nights, weekends, and holidays.
               </Text>
             </VStack>
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
                 <StatNumber color="red.500">94%</StatNumber>
-                <StatLabel>Error Reduction</StatLabel>
+                <StatLabel>Mistake Reduction</StatLabel>
               </Stat>
               <Text>
-                Eliminate human error from your data processes with standardized workflows 
-                that follow the same precise steps every time they execute.
+                Cut out human errors with consistent, repeatable workflows that execute flawlessly every time.
               </Text>
             </VStack>
           </Grid>
@@ -120,7 +117,7 @@ function SchedulerPage() {
       <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={12} fontWeight="medium">
-            Industry-Specific Scheduling Solutions
+            Sector-Tailored Automation
           </Heading>
           
           <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={8}>
@@ -131,11 +128,11 @@ function SchedulerPage() {
                   <StatNumber color="red.500">{industry.growth}%</StatNumber>
                   <StatHelpText>
                     <StatArrow type="increase" />
-                    Automation Adoption
+                    Automation Growth
                   </StatHelpText>
                 </Stat>
                 <Text fontSize="sm" color="gray.600">
-                  <Text as="span" fontWeight="bold">Common Use Cases:</Text> {industry.useCases}
+                  <Text as="span" fontWeight="bold">Applications:</Text> {industry.useCases}
                 </Text>
               </Box>
             ))}
@@ -147,50 +144,50 @@ function SchedulerPage() {
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={4} fontWeight="medium">
-            Advanced Scheduling Capabilities
+            Powerful Automation Features
           </Heading>
           <Text fontSize="lg" textAlign="center" mb={12} maxW="700px" mx="auto">
-            Our Scheduler provides sophisticated workflow management tools to handle complex business processes
+            Our Scheduler delivers advanced tools to manage sophisticated business workflows
           </Text>
           
           <Grid templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }} gap={8}>
             <Flex p={6} bg="gray.50" borderRadius="md" boxShadow="sm" align="flex-start">
               <Box w="50px" h="50px" mr={4} display="flex" alignItems="center" justifyContent="center">
-                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/python.png" alt="Workflow Automation" />
+                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/python.png" alt="Task Designer" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">Workflow Automation</Heading>
-                <Text color="gray.600">Connect multiple tasks with complex dependencies, conditional logic, and parallel execution paths in a visual workflow builder</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">Task Designer</Heading>
+                <Text color="gray.600">Link tasks with dependencies, logic conditions, and parallel paths using a visual design tool</Text>
               </Box>
             </Flex>
             
             <Flex p={6} bg="gray.50" borderRadius="md" boxShadow="sm" align="flex-start">
               <Box w="50px" h="50px" mr={4} display="flex" alignItems="center" justifyContent="center">
-                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/rest.png" alt="API Integration" />
+                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/rest.png" alt="System Integration" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">API Integration</Heading>
-                <Text color="gray.600">Trigger and connect to hundreds of third-party systems through pre-built connectors and custom API integrations</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">System Integration</Heading>
+                <Text color="gray.600">Activate and connect with numerous external systems via ready-made connectors or custom APIs</Text>
               </Box>
             </Flex>
             
             <Flex p={6} bg="gray.50" borderRadius="md" boxShadow="sm" align="flex-start">
               <Box w="50px" h="50px" mr={4} display="flex" alignItems="center" justifyContent="center">
-                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/docker.png" alt="Containerized Execution" />
+                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/docker.png" alt="Isolated Runs" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">Containerized Execution</Heading>
-                <Text color="gray.600">Run each job in isolated containers with precise resource allocation and security boundaries for reliable execution</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">Isolated Runs</Heading>
+                <Text color="gray.600">Execute tasks in secure, isolated containers with controlled resources for consistent performance</Text>
               </Box>
             </Flex>
             
             <Flex p={6} bg="gray.50" borderRadius="md" boxShadow="sm" align="flex-start">
               <Box w="50px" h="50px" mr={4} display="flex" alignItems="center" justifyContent="center">
-                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/grafana.png" alt="Execution Monitoring" />
+                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/grafana.png" alt="Run Monitoring" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">Execution Monitoring</Heading>
-                <Text color="gray.600">Track every aspect of your scheduled jobs with detailed logs, performance metrics, and historical execution data</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">Run Monitoring</Heading>
+                <Text color="gray.600">Observe every detail of your tasks with comprehensive logs, performance data, and past run records</Text>
               </Box>
             </Flex>
           </Grid>
@@ -201,58 +198,58 @@ function SchedulerPage() {
       <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
-            Scheduler Platform Features
+            Scheduler Core Capabilities
           </Heading>
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="red.500">Scheduling & Orchestration</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.500">Timing & Workflow Control</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Cron Expressions</Text> - Schedule jobs with precise timing using standard cron syntax with seconds-level granularity</Text>
+                  <Text><Text as="span" fontWeight="bold">Cron Scheduling</Text> - Set precise task times with cron syntax down to the second</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Event-Based Triggers</Text> - Initiate workflows based on external events such as file uploads, API calls, or database changes</Text>
+                  <Text><Text as="span" fontWeight="bold">Event Triggers</Text> - Launch workflows based on events like file uploads, API hits, or data changes</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Dependency Management</Text> - Define complex task dependencies with conditional execution paths based on task outcomes</Text>
+                  <Text><Text as="span" fontWeight="bold">Task Dependencies</Text> - Set up intricate task sequences with conditional paths based on results</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Parameterized Jobs</Text> - Create reusable job templates with configurable parameters for flexible execution</Text>
+                  <Text><Text as="span" fontWeight="bold">Flexible Templates</Text> - Design reusable tasks with adjustable settings for versatile use</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Retry Policies</Text> - Configure automatic retry logic with backoff strategies for handling transient failures</Text>
+                  <Text><Text as="span" fontWeight="bold">Retry Handling</Text> - Apply smart retry policies with delays for temporary setbacks</Text>
                 </ListItem>
               </List>
             </Box>
             
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="red.500">Operations & Monitoring</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.500">Management & Tracking</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Real-time Monitoring</Text> - Track job status, duration, and resource utilization in real-time on a centralized dashboard</Text>
+                  <Text><Text as="span" fontWeight="bold">Live Tracking</Text> - View task status, runtime, and resource use on a central dashboard</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Alerting System</Text> - Receive notifications via email, Slack, or webhook when jobs fail or exceed duration thresholds</Text>
+                  <Text><Text as="span" fontWeight="bold">Notifications</Text> - Get alerts via email, Slack, or webhooks for failures or delays</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Audit Logs</Text> - Maintain comprehensive execution history with detailed logs for compliance and troubleshooting</Text>
+                  <Text><Text as="span" fontWeight="bold">Run History</Text> - Keep detailed records of all runs for auditing and problem-solving</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Resource Management</Text> - Allocate CPU, memory, and concurrent execution limits for optimal performance</Text>
+                  <Text><Text as="span" fontWeight="bold">Resource Allocation</Text> - Control CPU, memory, and concurrency for peak efficiency</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Team Collaboration</Text> - Share workflows, schedule across teams with role-based access controls and versioning</Text>
+                  <Text><Text as="span" fontWeight="bold">Team Coordination</Text> - Share tasks and manage access with permissions and version control</Text>
                 </ListItem>
               </List>
             </Box>
@@ -264,34 +261,27 @@ function SchedulerPage() {
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={12} fontWeight="medium">
-            Scheduler Success Stories
+            Automation Wins
           </Heading>
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="red.500">E-commerce Platform Streamlines Operations</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.500">E-commerce Firm Enhances Efficiency</Heading>
               <Text mb={4}>
-                A rapidly growing e-commerce platform implemented our Scheduler to automate inventory management 
-                across 15 warehouses and 50,000+ SKUs. They reduced manual processing time by 84% and eliminated 
-                out-of-stock incidents by 96% through timely inventory updates and reorder automations.
+                A fast-growing online retailer used our Scheduler to automate stock management across 15 warehouses and over 50,000 SKUs. They cut manual work by 84% and reduced stockouts by 96% with timely updates and reordering.
               </Text>
               <Text fontStyle="italic" fontSize="sm" color="gray.600">
-                "Before the Scheduler, we had a team working around the clock just to keep our inventory synchronized. 
-                Now the process runs automatically, and we can focus on growth strategies instead of firefighting."
+                "We used to have staff working non-stop to sync inventory. Now it’s all automated, letting us focus on scaling rather than fixing issues."
               </Text>
             </Box>
             
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="red.500">Financial Services Firm Automates Reporting</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.500">Finance Company Speeds Up Reports</Heading>
               <Text mb={4}>
-                A financial services company used our Scheduler to orchestrate their daily reporting workflows 
-                across 37 different systems. They reduced report generation time from 6 hours to 45 minutes and 
-                eliminated manual errors that previously required extensive reconciliation.
+                A financial firm leveraged our Scheduler to streamline daily reports across 37 systems. They shortened report creation from 6 hours to 45 minutes and removed manual errors that once demanded heavy rework.
               </Text>
               <Text fontStyle="italic" fontSize="sm" color="gray.600">
-                "The dependency management in the Scheduler has been a game-changer for us. We can now define 
-                complex workflows that ensure data consistency across all our reports, and the alerting system 
-                notifies us immediately if any issues arise."
+                "The task dependency features transformed our reporting. We ensure data accuracy across all reports, and alerts keep us ahead of any problems."
               </Text>
             </Box>
           </Grid>
@@ -302,10 +292,10 @@ function SchedulerPage() {
       <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={8} fontWeight="medium">
-            Integration Partners
+            Connected Tools
           </Heading>
           <Text fontSize="lg" mb={12} maxW="700px" mx="auto">
-            Our Scheduler integrates seamlessly with your existing tools and platforms
+            Our Scheduler works smoothly with your current platforms and services
           </Text>
           
           <Flex justify="center" flexWrap="wrap" gap={10} mb={12} align="center">
@@ -332,11 +322,10 @@ function SchedulerPage() {
       <Box py={16} bg="red.500" color="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">
-            Ready to Automate Your Workflows?
+            Ready to Streamline Your Processes?
           </Heading>
           <Text fontSize="lg" mb={10} maxW="700px" mx="auto" color="white">
-            Get started with our Scheduler today and transform your manual processes into
-            reliable, automated workflows that save time and eliminate errors
+            Begin using our Scheduler now to turn repetitive tasks into efficient, error-free automated workflows
           </Text>
           
           <Flex justify="center" gap={6} flexWrap="wrap">
@@ -348,7 +337,7 @@ function SchedulerPage() {
               as="a"
               href="/demo-request"
             >
-              Request Scheduler Demo
+              Schedule a Demo
             </Button>
             
             <Button
@@ -360,13 +349,12 @@ function SchedulerPage() {
               as="a"
               href="https://cloud.roamingproxy.com/signup"
             >
-              Start Free Trial
+              Try It Free
             </Button>
           </Flex>
         </Box>
       </Box>
       
-    
       {/* Footer */}
       <Footer />
     </>
