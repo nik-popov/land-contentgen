@@ -1,24 +1,18 @@
-import { useEffect } from "react";
 import { useLocation } from "@tanstack/react-router";
+import { useEffect } from "react";
 
-// Declare gtag for TypeScript
-declare global {
-  interface Window {
-    gtag?: (...args: any[]) => void;
-    dataLayer?: any[];
-  }
-}
-
-export function TrackPageViews() {
+export const TrackPageViews = () => {
   const location = useLocation();
 
   useEffect(() => {
+    // Only send page view if analytics_storage is granted
     if (window.gtag) {
-      window.gtag("config", "G-X7X57Z2WXP", {
-        page_path: location.pathname + location.search,
+      window.gtag("event", "page_view", {
+        page_path: location.pathname,
+        send_to: "G-X7X57Z2WXP",
       });
     }
-  }, [location.pathname, location.search]);
+  }, [location.pathname]);
 
   return null;
-}
+};
