@@ -62,7 +62,7 @@ interface NavItemsProps {
 
 const navStructure: NavItem[] = [
   {
-    title: "Web Scraping Tools",
+    title: "Web Scraping",
     icon: FiTool,
     description: "Professional web scraping tools and proxies for data collection",
     subItems: [
@@ -77,7 +77,7 @@ const navStructure: NavItem[] = [
     ]
   },
   {
-    title: "Data Solutions",
+    title: "Solutions",
     icon: FiDatabase,
     description: "Data extraction and processing solutions for businesses",
     subItems: [
@@ -88,7 +88,7 @@ const navStructure: NavItem[] = [
     ]
   },
   {
-    title: "Global Proxy Network",
+    title: "Network",
     icon: FiGlobe,
     description: "Worldwide proxy infrastructure for web scraping",
     subItems: [
