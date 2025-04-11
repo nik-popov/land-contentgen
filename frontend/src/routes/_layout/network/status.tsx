@@ -9,12 +9,12 @@ export const Route = createFileRoute("/_layout/network/status")({
 
 function NetworkStatusPage() {
   const networkMetrics = [
-    { metric: "Availability", value: "99.997%", period: "Past 30 days", trend: "increase", trendValue: "0.015%" },
-    { metric: "Mean Latency", value: "84ms", period: "Past 24 hours", trend: "decrease", trendValue: "12ms" },
-    { metric: "Completion Rate", value: "99.92%", period: "Past 24 hours", trend: "increase", trendValue: "0.08%" },
-    { metric: "Live Proxies", value: "5.2M+", period: "Now", trend: "increase", trendValue: "83K" },
-    { metric: "System Load", value: "42%", period: "Now", trend: "decrease", trendValue: "4%" },
-    { metric: "Request Volume", value: "8.4M", period: "Hourly", trend: "increase", trendValue: "12%" },
+    { metric: "Availability", value: "99.92%", period: "Past 30 days", trend: "increase", trendValue: "0.015%" },
+    { metric: "Mean Latency", value: "85ms", period: "Past 24 hours", trend: "decrease", trendValue: "12ms" },
+    { metric: "Completion Rate", value: "99.97%", period: "Past 24 hours", trend: "increase", trendValue: "0.08%" },
+    { metric: "Live Proxies", value: "15.2M+", period: "Now", trend: "increase", trendValue: "83K" },
+    { metric: "System Load", value: "22%", period: "Now", trend: "decrease", trendValue: "4%" },
+    { metric: "Request Volume", value: "1.4M", period: "Hourly", trend: "increase", trendValue: "12%" },
   ];
 
   const serviceStatus = [
@@ -27,12 +27,12 @@ function NetworkStatusPage() {
   ];
 
   const regionStatus = [
-    { region: "North America", status: "Running Smoothly", performance: 100, activeNodes: "1.2M+" },
-    { region: "Europe", status: "Running Smoothly", performance: 100, activeNodes: "1.8M+" },
-    { region: "Asia-Pacific", status: "Slight Disruptions", performance: 97, activeNodes: "935K+" },
-    { region: "Latin America", status: "Running Smoothly", performance: 99, activeNodes: "480K+" },
-    { region: "Middle East & Africa", status: "Running Smoothly", performance: 99, activeNodes: "520K+" },
-    { region: "Oceania", status: "Running Smoothly", performance: 100, activeNodes: "240K+" },
+    { region: "North America", status: "Running Smoothly", performance: 100, activeNodes: "1.8M+" },
+    { region: "Europe", status: "Running Smoothly", performance: 100, activeNodes: "2.7M+" },
+    { region: "Asia-Pacific", status: "Slight Disruptions", performance: 97, activeNodes: "535K+" },
+    { region: "Latin America", status: "Running Smoothly", performance: 99, activeNodes: "280K+" },
+    { region: "Middle East & Africa", status: "Running Smoothly", performance: 99, activeNodes: "120K+" },
+    { region: "Oceania", status: "Running Smoothly", performance: 100, activeNodes: "40K+" },
   ];
 
   const recentIncidents = [
