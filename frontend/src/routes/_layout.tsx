@@ -2,7 +2,7 @@ import { Flex } from "@chakra-ui/react";
 import { Outlet, createFileRoute, Link } from "@tanstack/react-router";
 import TopNav from "../components/Common/TopNav";
 import CookieConsent from "react-cookie-consent";
-import { TrackPageViews } from "../components/TrackPageViews"; // Import the component
+import { TrackPageViews } from "../components/TrackPageViews";
 import theme from "../theme";
 
 export const Route = createFileRoute("/_layout")({
@@ -13,9 +13,9 @@ function Layout() {
   return (
     <Flex direction="column" minH="100vh" w="100%">
       <TopNav />
-      <TrackPageViews /> {/* Track all route changes */}
+      <TrackPageViews />
       <Flex flex="1" direction="column" maxW="1200px" mx="auto" w="100%">
-        <Outlet /> {/* Child routes render here */}
+        <Outlet />
       </Flex>
       <CookieConsent
         location="bottom"
@@ -45,20 +45,28 @@ function Layout() {
           fontWeight: "medium",
         }}
         expires={150}
-        debug={true} // Remove in production
+        debug={true}
         onAccept={() => {
-          window.gtag?.("consent", "update", {
-            ad_user_data: "granted",        // For ad personalization data sharing
-            ad_personalization: "granted",  // For personalized ads
-            ad_storage: "granted",          // For ad cookies (e.g., _fbp)
-            analytics_storage: "granted",   // For analytics cookies (e.g., _ga)
-            functionality_storage: "granted", // For functional cookies (e.g., language_pref)
-            security_storage: "granted"     // For essential cookies (e.g., JSESSIONID)
-          });
+          if (window.gtag) {
+            window.gtag("consent", "update", {
+              ad_user_data: "granted",
+              ad_personalization: "granted",
+              ad_storage: "granted",
+              analytics_storage: "granted",
+              functionality_storage: "granted",
+              security_storage: "granted",
+            });
+            // Send page view after consent is granted
+            window.gtag("event", "page_view", {
+              page_path: window.location.pathname,
+              send_to: "G-X7X57Z2WXP",
+            });
+          } else {
+            console.error("gtag not loaded");
+          }
         }}
         onDecline={() => {
           console.log("Cookies declined");
-          // Ensure consent remains denied
           window.gtag?.("consent", "update", {
             analytics_storage: "denied",
             ad_storage: "denied",
@@ -66,24 +74,15 @@ function Layout() {
         }}
       >
         We use cookies to enhance your experience, analyze usage, and deliver ads. Learn more in our{" "}
-        <Link
-          to="/cookie"
-          style={{ color: theme.colors.red[500] || "#EF4444", textDecoration: "underline" }}
-        >
+        <Link to="/cookie" style={{ color: theme.colors.red[500] || "#EF4444", textDecoration: "underline" }}>
           Cookie Policy
         </Link>
         ,{" "}
-        <Link
-          to="/privacy"
-          style={{ color: theme.colors.red[500] || "#EF4444", textDecoration: "underline" }}
-        >
+        <Link to="/privacy" style={{ color: theme.colors.red[500] || "#EF4444", textDecoration: "underline" }}>
           Privacy Policy
         </Link>
         , or{" "}
-        <Link
-          to="/terms"
-          style={{ color: theme.colors.red[500] || "#EF4444", textDecoration: "underline" }}
-        >
+        <Link to="/terms" style={{ color: theme.colors.red[500] || "#EF4444", textDecoration: "underline" }}>
           Terms
         </Link>
         .
