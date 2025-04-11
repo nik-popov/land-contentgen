@@ -8,16 +8,19 @@ export const TrackPageViews = () => {
   );
 
   useEffect(() => {
-    const handleConsentChange = () => {
-      setConsentGranted(document.cookie.includes("roamingproxy-consent=true"));
+    // Poll for consent cookie changes
+    const checkConsent = () => {
+      const granted = document.cookie.includes("roamingproxy-consent=true");
+      setConsentGranted(granted);
     };
-    window.addEventListener("storage", handleConsentChange);
-    handleConsentChange();
-    return () => window.removeEventListener("storage", handleConsentChange);
+    const interval = setInterval(checkConsent, 100); // Check every 100ms
+    checkConsent(); // Initial check
+    return () => clearInterval(interval);
   }, []);
 
   useEffect(() => {
     if (window.gtag && consentGranted) {
+      console.log("TrackPageViews: Sending page view for", location.pathname);
       window.gtag("event", "page_view", {
         page_path: location.pathname,
         send_to: "G-X7X57Z2WXP",

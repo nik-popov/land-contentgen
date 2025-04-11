@@ -13,7 +13,6 @@ function Layout() {
   return (
     <Flex direction="column" minH="100vh" w="100%">
       <TopNav />
-      <TrackPageViews />
       <Flex flex="1" direction="column" maxW="1200px" mx="auto" w="100%">
         <Outlet />
       </Flex>
@@ -88,6 +87,7 @@ function Layout() {
         </Link>
         .
       </CookieConsent>
+      <TrackPageViews /> 
     </Flex>
   );
 }
