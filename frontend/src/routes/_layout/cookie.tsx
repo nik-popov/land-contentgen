@@ -432,6 +432,12 @@ function CookiePolicyPage() {
             <Text fontSize="md">
               You can access the cookie consent tool at any time by clicking on the "Cookie Settings" link in the footer of our Website. This allows you to review and update your preferences whenever you wish. Please note that essential cookies cannot be declined as they are necessary for the website to function properly.
             </Text>
+            <Text fontSize="md" mt={4}>
+            California residents can also opt out of targeted advertising cookies at{" "}
+            <Link href="/do-not-sell" color="red.500" textDecoration="underline">
+              roamingproxy.com/do-not-sell
+            </Link>.
+</Text>
           </Box>
           
           {/* 8. Cookie Lifecycle */}
