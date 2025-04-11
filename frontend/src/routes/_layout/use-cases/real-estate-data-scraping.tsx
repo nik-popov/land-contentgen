@@ -9,33 +9,33 @@ export const Route = createFileRoute("/_layout/use-cases/real-estate-data-scrapi
 
 function RealEstateDataScrapingPage() {
   const scrapingFeatures = [
-    { feature: "Property Listings", sources: "2,500+", fields: "95+", useCases: "Market analysis, competitive intelligence, investment research, pricing models" },
-    { feature: "Property Details", sources: "1,800+", fields: "120+", useCases: "Valuation, feature comparison, property database building, amenity tracking" },
-    { feature: "Sales & Transaction", sources: "1,200+", fields: "65+", useCases: "Sales history, price trends, turnover rates, market liquidity analysis" },
-    { feature: "Rental Data", sources: "1,600+", fields: "85+", useCases: "Rental yield analysis, vacancy rates, lease terms, rental market trends" },
-    { feature: "Location Intelligence", sources: "850+", fields: "75+", useCases: "Neighborhood analysis, demographic insights, proximity data, school districts" },
-    { feature: "Agent & Broker", sources: "1,400+", fields: "55+", useCases: "Competitive analysis, agent performance, market share, service offerings" }
+    { feature: "Property Listings", sources: "2,500+", fields: "95+", useCases: "Market insights, competitor analysis, investment studies, pricing strategies" },
+    { feature: "Property Details", sources: "1,800+", fields: "120+", useCases: "Appraisal, feature benchmarking, property database creation, amenity monitoring" },
+    { feature: "Sales & Transaction", sources: "1,200+", fields: "65+", useCases: "Transaction history, price movements, turnover metrics, market flow analysis" },
+    { feature: "Rental Data", sources: "1,600+", fields: "85+", useCases: "Rental return analysis, occupancy trends, lease conditions, rental market dynamics" },
+    { feature: "Location Intelligence", sources: "850+", fields: "75+", useCases: "Community profiling, demographic trends, proximity insights, school zone mapping" },
+    { feature: "Agent & Broker", sources: "1,400+", fields: "55+", useCases: "Competitor benchmarking, agent metrics, market share analysis, service comparisons" }
   ];
 
   const platformFeatures = [
     { 
-      title: "Global Real Estate Coverage", 
-      description: "Extract property data from residential, commercial, and rental listings across major real estate portals, MLS systems, and broker websites worldwide", 
+      title: "Worldwide Property Coverage", 
+      description: "Retrieve property data from residential, commercial, and rental listings across leading real estate platforms, MLS databases, and agency websites globally", 
       icon: "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/aws.png" 
     },
     { 
-      title: "AI-Powered Property Analysis", 
-      description: "Advanced algorithms that extract and categorize property features, amenities, and details from unstructured descriptions and images", 
+      title: "AI-Driven Property Insights", 
+      description: "Sophisticated algorithms that identify and organize property attributes, amenities, and details from unstructured text and visuals", 
       icon: "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/mongodb.png" 
     },
     { 
-      title: "Geospatial Data Integration", 
-      description: "Enrich property data with location-specific insights including neighborhood statistics, points of interest, and geographic information", 
+      title: "Geographic Data Enrichment", 
+      description: "Enhance property data with location-based insights, including community demographics, nearby amenities, and geospatial information", 
       icon: "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/kubernetes.png" 
     },
     { 
-      title: "Historical Trend Analysis", 
-      description: "Track changes in property listings, prices, and availability over time to identify market trends and investment opportunities", 
+      title: "Market Trend Tracking", 
+      description: "Monitor shifts in property listings, pricing, and availability to uncover market patterns and investment prospects", 
       icon: "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/analytics.png" 
     }
   ];
@@ -46,27 +46,26 @@ function RealEstateDataScrapingPage() {
       <Box py={16} bg="red.50" color="gray.800">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h1" size="2xl" textAlign="center" mb={8} fontWeight="medium">
-            Real Estate Data Scraping
+            Real Estate Data Collection
           </Heading>
           <Text fontSize="xl" textAlign="center" mb={12} maxW="800px" mx="auto">
-            Extract comprehensive property data at scale to power your
-            real estate analytics, investment decisions, and market intelligence.
+            Gather extensive property information efficiently to fuel your real estate analysis, investment strategies, and market insights.
           </Text>
           
           <Flex justify="space-between" flexWrap="wrap" gap={6}>
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="red.600">Property Listing Data</Heading>
-              <Text>Collect detailed information from property listings including prices, features, square footage, lot size, bedrooms, bathrooms, and amenities from thousands of real estate websites and platforms.</Text>
+              <Heading as="h3" size="md" color="red.600">Property Listing Insights</Heading>
+              <Text>Retrieve comprehensive details from property listings, including pricing, specifications, square footage, lot size, bedrooms, bathrooms, and amenities from thousands of real estate platforms.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="red.600">Market Analytics</Heading>
-              <Text>Transform raw property data into actionable market insights with comprehensive analytics on pricing trends, inventory levels, days on market, and competitive positioning across different locations and property types.</Text>
+              <Heading as="h3" size="md" color="red.600">Market Trends</Heading>
+              <Text>Convert raw property data into valuable market insights with detailed analysis of pricing patterns, inventory changes, time on market, and competitive landscapes across regions and property types.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="red.600">Investment Intelligence</Heading>
-              <Text>Identify investment opportunities by analyzing property values, rental yields, appreciation rates, and neighborhood trends. Make data-driven decisions with comprehensive market intelligence.</Text>
+              <Heading as="h3" size="md" color="red.600">Investment Opportunities</Heading>
+              <Text>Pinpoint investment prospects by evaluating property valuations, rental returns, growth rates, and neighborhood trends to support informed, data-backed decisions.</Text>
             </VStack>
           </Flex>
         </Box>
@@ -76,29 +75,27 @@ function RealEstateDataScrapingPage() {
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
-            Key Benefits of Real Estate Data Scraping
+            Advantages of Real Estate Data Collection
           </Heading>
           
           <Grid templateColumns={{ base: "1fr", md: "1fr 1fr", lg: "1fr 1fr 1fr" }} gap={10} mt={10}>
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
                 <StatNumber color="red.600">99.7%</StatNumber>
-                <StatLabel>Data Accuracy Rate</StatLabel>
+                <StatLabel>Data Precision Rate</StatLabel>
               </Stat>
               <Text>
-                Our advanced AI validation ensures near-perfect accuracy
-                for all extracted property data and market intelligence.
+                Our advanced AI verification delivers near-flawless accuracy for all collected property data and market insights.
               </Text>
             </VStack>
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
                 <StatNumber color="red.600">85%</StatNumber>
-                <StatLabel>Faster Market Insights</StatLabel>
+                <StatLabel>Quicker Market Insights</StatLabel>
               </Stat>
               <Text>
-                Gain market insights and identify trends up to 85% faster
-                than traditional research and data collection methods.
+                Uncover market trends and insights up to 85% faster than conventional research and data-gathering approaches.
               </Text>
             </VStack>
             
@@ -108,8 +105,7 @@ function RealEstateDataScrapingPage() {
                 <StatLabel>Daily Property Data Points</StatLabel>
               </Stat>
               <Text>
-                Our platform processes over 25 million property data points
-                daily across residential, commercial, and rental markets.
+                Our platform handles over 25 million property data points daily, covering residential, commercial, and rental markets.
               </Text>
             </VStack>
           </Grid>
@@ -120,7 +116,7 @@ function RealEstateDataScrapingPage() {
       <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={12} fontWeight="medium">
-            Comprehensive Data Collection
+            Extensive Data Retrieval
           </Heading>
           
           <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={8}>
@@ -138,7 +134,7 @@ function RealEstateDataScrapingPage() {
                   </Flex>
                 </Stat>
                 <Text fontSize="sm" color="gray.600">
-                  <Text as="span" fontWeight="bold">Common Use Cases:</Text> {feature.useCases}
+                  <Text as="span" fontWeight="bold">Key Applications:</Text> {feature.useCases}
                 </Text>
               </Box>
             ))}
@@ -150,10 +146,10 @@ function RealEstateDataScrapingPage() {
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={4} fontWeight="medium">
-            Advanced Real Estate Data Platform
+            Advanced Real Estate Data Solution
           </Heading>
           <Text fontSize="lg" textAlign="center" mb={12} maxW="700px" mx="auto">
-            Our real estate data scraping platform combines cutting-edge technology with comprehensive market coverage
+            Our real estate data collection platform blends innovative technology with broad market coverage.
           </Text>
           
           <Grid templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }} gap={8}>
@@ -162,8 +158,8 @@ function RealEstateDataScrapingPage() {
                 <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/grafana.png" alt="Real-time Monitoring" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">Real-time Market Monitoring</Heading>
-                <Text color="gray.600">Continuous tracking of property listings with instant alerts for new properties, price changes, and status updates</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">Live Market Tracking</Heading>
+                <Text color="gray.600">Ongoing monitoring of property listings with instant notifications for new listings, price updates, and status changes.</Text>
               </Box>
             </Flex>
             
@@ -172,8 +168,8 @@ function RealEstateDataScrapingPage() {
                 <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/aws.png" alt="Property Matching" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">Intelligent Property Matching</Heading>
-                <Text color="gray.600">Advanced algorithms that identify the same property across multiple listings and consolidate data for complete profiles</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">Smart Property Consolidation</Heading>
+                <Text color="gray.600">Intelligent algorithms that detect identical properties across multiple sources and merge data for complete profiles.</Text>
               </Box>
             </Flex>
             
@@ -182,8 +178,8 @@ function RealEstateDataScrapingPage() {
                 <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/redis.png" alt="Image Analysis" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">Computer Vision Property Analysis</Heading>
-                <Text color="gray.600">Extract property features, conditions, and attributes directly from listing photos and virtual tours</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">Visual Property Insights</Heading>
+                <Text color="gray.600">Extract property attributes, conditions, and features directly from listing images and virtual tours.</Text>
               </Box>
             </Flex>
             
@@ -192,8 +188,8 @@ function RealEstateDataScrapingPage() {
                 <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/rest.png" alt="API Integration" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">Seamless Data Integration</Heading>
-                <Text color="gray.600">Connect property data directly to your analytics tools, CRM, or custom applications via our comprehensive API</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">Effortless Data Connectivity</Heading>
+                <Text color="gray.600">Link property data to your analytics platforms, CRM, or custom tools through our robust API.</Text>
               </Box>
             </Flex>
           </Grid>
@@ -204,58 +200,58 @@ function RealEstateDataScrapingPage() {
       <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
-            Real Estate Data Platform Features
+            Real Estate Data Solution Features
           </Heading>
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="red.600">Property Data Collection</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.600">Property Data Retrieval</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Comprehensive Property Details</Text> - Extract all available property specifications and features</Text>
+                  <Text><Text as="span" fontWeight="bold">Full Property Specs</Text> - Capture all available property attributes and details.</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Multi-source Integration</Text> - Combine data from MLS, portals, broker sites, and public records</Text>
+                  <Text><Text as="span" fontWeight="bold">Multi-Source Aggregation</Text> - Combine data from MLS, real estate portals, agency sites, and public records.</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Sales History Tracking</Text> - Collect historical transaction data, pricing, and ownership changes</Text>
+                  <Text><Text as="span" fontWeight="bold">Transaction History</Text> - Gather past sales data, pricing, and ownership transitions.</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Image & Media Collection</Text> - Gather property photos, floor plans, virtual tours, and videos</Text>
+                  <Text><Text as="span" fontWeight="bold">Media Collection</Text> - Collect property images, floor plans, virtual tours, and videos.</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Listing Activity Monitoring</Text> - Track days on market, price changes, and listing status updates</Text>
+                  <Text><Text as="span" fontWeight="bold">Listing Updates</Text> - Monitor time on market, price adjustments, and status changes.</Text>
                 </ListItem>
               </List>
             </Box>
             
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="red.600">Market Intelligence & Analytics</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.600">Market Insights & Analysis</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Market Trend Analysis</Text> - Identify pricing trends, inventory changes, and market dynamics</Text>
+                  <Text><Text as="span" fontWeight="bold">Market Dynamics</Text> - Track pricing trends, inventory shifts, and market patterns.</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Neighborhood Analytics</Text> - Comprehensive location data including demographics, amenities, and trends</Text>
+                  <Text><Text as="span" fontWeight="bold">Community Insights</Text> - Detailed location data covering demographics, amenities, and trends.</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Valuation Models</Text> - Automated property valuations based on comparable sales and market data</Text>
+                  <Text><Text as="span" fontWeight="bold">Property Valuations</Text> - Automated appraisals using comparable sales and market data.</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Investment Analysis</Text> - Calculate potential returns, cap rates, and ROI for investment properties</Text>
+                  <Text><Text as="span" fontWeight="bold">Investment Metrics</Text> - Assess potential returns, cap rates, and ROI for investment properties.</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Predictive Analytics</Text> - Machine learning models that forecast market trends and property values</Text>
+                  <Text><Text as="span" fontWeight="bold">Forecasting Models</Text> - AI-driven predictions for market trends and property valuations.</Text>
                 </ListItem>
               </List>
             </Box>
@@ -272,34 +268,22 @@ function RealEstateDataScrapingPage() {
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="red.600">Real Estate Investment Firm Increases ROI by 32%</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.600">Investment Firm Boosts Returns by 32%</Heading>
               <Text mb={4}>
-                A mid-sized real estate investment firm used our data scraping platform to analyze over 
-                250,000 properties across multiple markets. By leveraging comprehensive property data and 
-                our predictive analytics, they identified undervalued properties with high appreciation 
-                potential. Their data-driven acquisition strategy resulted in a 32% higher ROI compared to 
-                their previous investment approach.
+                A mid-sized real estate investment firm leveraged our data collection platform to analyze over 250,000 properties across various regions. Using detailed property data and predictive insights, they identified undervalued assets with strong growth potential, achieving a 32% increase in ROI compared to their prior strategy.
               </Text>
               <Text fontStyle="italic" fontSize="sm" color="gray.600">
-                "The depth and accuracy of the property data transformed our investment strategy. We now 
-                have insights into market trends and property values that give us a significant competitive 
-                advantage in identifying opportunities before they become apparent to the broader market."
+                "The accuracy and depth of the property data revolutionized our investment approach. We now have insights into market dynamics and property values that give us a clear edge in spotting opportunities before they hit the mainstream market."
               </Text>
             </Box>
             
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="red.600">PropTech Startup Builds Innovative Valuation Model</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.600">PropTech Startup Pioneers Valuation Model</Heading>
               <Text mb={4}>
-                A real estate technology startup used our data scraping platform to build a revolutionary 
-                property valuation model. By collecting detailed data on property features, neighborhood 
-                characteristics, and historical transactions, they trained machine learning algorithms to 
-                predict property values with unprecedented accuracy. Their platform now powers valuation 
-                services for several major mortgage lenders and real estate portals.
+                A real estate tech startup utilized our data collection platform to develop an innovative property valuation system. By gathering detailed data on property features, neighborhood profiles, and past transactions, they built machine learning models to predict property values with exceptional precision, now powering valuation services for major lenders and real estate platforms.
               </Text>
               <Text fontStyle="italic" fontSize="sm" color="gray.600">
-                "The comprehensive property data we accessed through the platform gave us the foundation 
-                to build valuation models that are 40% more accurate than traditional methods. We simply 
-                couldn't have developed our technology without this level of detailed property data."
+                "The extensive property data we accessed through the platform provided the foundation for valuation models that are 40% more accurate than traditional approaches. This level of detail was critical to building our technology."
               </Text>
             </Box>
           </Grid>
@@ -310,10 +294,10 @@ function RealEstateDataScrapingPage() {
       <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={8} fontWeight="medium">
-            Global Real Estate Data Coverage
+            Global Real Estate Data Reach
           </Heading>
           <Text fontSize="lg" mb={12} maxW="700px" mx="auto">
-            Our real estate data scraping platform covers major property markets and listing sources worldwide
+            Our real estate data collection platform spans major property markets and listing sources worldwide.
           </Text>
           
           <Box bg="white" p={6} borderRadius="md" boxShadow="md">
@@ -357,15 +341,14 @@ function RealEstateDataScrapingPage() {
       <Box py={16} bg="red.600" color="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">
-            Transform Your Real Estate Intelligence
+            Elevate Your Real Estate Insights
           </Heading>
           <Text fontSize="lg" mb={10} maxW="700px" mx="auto" color="white">
-            Start extracting comprehensive property data and gain
-            valuable market insights for your real estate business
+            Begin collecting comprehensive property data to unlock powerful market insights for your real estate business.
           </Text>
           
           <Flex justify="center" gap={6} flexWrap="wrap">
-          <Button
+            <Button
               size="lg"
               bg="white"
               color="red.500"
@@ -373,7 +356,7 @@ function RealEstateDataScrapingPage() {
               as="a"
               href="/demo-request"
             >
-              Request Demo
+              Schedule a Demo
             </Button>
             <Button
               size="lg"
@@ -384,13 +367,11 @@ function RealEstateDataScrapingPage() {
               as="a"
               href="https://cloud.roamingproxy.com/signup"
             >
-              Start Free Trial
+              Try for Free
             </Button>
           </Flex>
         </Box>
       </Box>
-      
-        
       
       {/* Footer */}
       <Footer />
