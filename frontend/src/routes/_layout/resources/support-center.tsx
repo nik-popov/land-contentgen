@@ -73,7 +73,7 @@ function SupportCenterPage() {
       <Box py={16} bg="red.50" color="gray.800">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h1" size="2xl" textAlign="center" mb={8} fontWeight="medium">
-            Help Hub
+            Support & Help Center
           </Heading>
           <Text fontSize="xl" textAlign="center" mb={8} maxW="800px" mx="auto">
             Discover solutions to your queries with our detailed guides, how-tos, and expert assistance.
