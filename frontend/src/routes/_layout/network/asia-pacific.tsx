@@ -44,27 +44,27 @@ function AsiaPacificProxiesPage() {
       <Box py={16} bg="red.50" color="gray.800">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h1" size="2xl" textAlign="center" mb={8} fontWeight="medium">
-            Asia-Pacific Proxies
+            Asia-Pacific Proxy Network
           </Heading>
           <Text fontSize="xl" textAlign="center" mb={12} maxW="800px" mx="auto">
-            Access the most comprehensive network of Asia-Pacific geo-targeted proxies.
-            Route your connections through any country, major city, or mobile network with pinpoint accuracy for market research and app testing.
+            Tap into the widest array of geo-specific proxies across the Asia-Pacific region. 
+            Channel your traffic through any nation, key city, or mobile carrier with exceptional precision for market insights and application testing.
           </Text>
           
           <Flex justify="space-between" flexWrap="wrap" gap={6}>
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="red.600">Regional Coverage</Heading>
-              <Text>Connect through residential, datacenter, and mobile IPs from 25 countries across East Asia, Southeast Asia, South Asia, and Oceania. Target specific regions, cities, or postal codes for precise geo-targeting.</Text>
+              <Heading as="h3" size="md" color="red.600">Broad Regional Access</Heading>
+              <Text>Link through residential, datacenter, and mobile IPs spanning 25 countries in East Asia, Southeast Asia, South Asia, and Oceania. Focus on specific zones, urban areas, or postal codes for accurate geo-targeting.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="red.600">Mobile-First Testing</Heading>
-              <Text>Experience websites and apps exactly as Asia-Pacific users do with genuine mobile IPs that reflect real user attributes, device characteristics, and network conditions in the world's most mobile-centric region.</Text>
+              <Heading as="h3" size="md" color="red.600">Mobile-Centric Validation</Heading>
+              <Text>View websites and apps as Asia-Pacific users do, leveraging authentic mobile IPs that mirror real user traits, device specifics, and network environments in this mobile-dominant region.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="red.600">Emerging Market Access</Heading>
-              <Text>Test your digital products in the fastest-growing online markets with access to residential IPs across developing Asian economies. Validate performance in various network conditions and on different device types.</Text>
+              <Heading as="h3" size="md" color="red.600">Growth Market Insights</Heading>
+              <Text>Evaluate your digital offerings in Asia’s rapidly expanding online markets with residential IPs from emerging economies. Test functionality across diverse network speeds and device types.</Text>
             </VStack>
           </Flex>
         </Box>
@@ -74,29 +74,29 @@ function AsiaPacificProxiesPage() {
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
-            Key Benefits of Asia-Pacific Proxies
+            Advantages of Asia-Pacific Proxies
           </Heading>
           
           <Grid templateColumns={{ base: "1fr", md: "1fr 1fr", lg: "1fr 1fr 1fr" }} gap={10} mt={10}>
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
                 <StatNumber color="red.600">100%</StatNumber>
-                <StatLabel>APAC Market Coverage</StatLabel>
+                <StatLabel>APAC Region Reach</StatLabel>
               </Stat>
               <Text>
-                Access every key market in the Asia-Pacific region with our comprehensive network that covers 
-                25 countries from Japan to Australia, and from India to New Zealand.
+                Cover every significant market in Asia-Pacific with our extensive network, spanning 
+                25 nations from Japan to Australia and India to New Zealand.
               </Text>
             </VStack>
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
                 <StatNumber color="red.600">89%</StatNumber>
-                <StatLabel>Mobile App Testing Accuracy</StatLabel>
+                <StatLabel>Mobile Testing Precision</StatLabel>
               </Stat>
               <Text>
-                Organizations report up to 89% more accurate mobile app testing when using
-                our Asia-Pacific proxies compared to simulated environments or emulators.
+                Businesses achieve up to 89% greater accuracy in mobile app testing using our 
+                Asia-Pacific proxies compared to virtual simulations or emulators.
               </Text>
             </VStack>
             
@@ -106,8 +106,8 @@ function AsiaPacificProxiesPage() {
                 <StatLabel>Residential & Mobile IPs</StatLabel>
               </Stat>
               <Text>
-                Choose from over 1.6 million residential and mobile IP addresses across Asia-Pacific, 
-                ensuring authentic local experiences and reduced detection rates.
+                Select from over 1.6 million residential and mobile IPs across Asia-Pacific for 
+                genuine local interactions and lower detection probabilities.
               </Text>
             </VStack>
           </Grid>
@@ -118,7 +118,7 @@ function AsiaPacificProxiesPage() {
       <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={12} fontWeight="medium">
-            Asia-Pacific Proxy Coverage
+            Proxy Coverage in Asia-Pacific
           </Heading>
           
           <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={8}>
@@ -136,7 +136,7 @@ function AsiaPacificProxiesPage() {
                   </Flex>
                 </Stat>
                 <Text fontSize="sm" color="gray.600">
-                  <Text as="span" fontWeight="bold">Common Use Cases:</Text> {region.useCases}
+                  <Text as="span" fontWeight="bold">Typical Applications:</Text> {region.useCases}
                 </Text>
               </Box>
             ))}
@@ -148,10 +148,10 @@ function AsiaPacificProxiesPage() {
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={4} fontWeight="medium">
-            Advanced Asia-Pacific Location Capabilities
+            Sophisticated Asia-Pacific Targeting Features
           </Heading>
           <Text fontSize="lg" textAlign="center" mb={12} maxW="700px" mx="auto">
-            Our Asia-Pacific proxy network provides precise geographic targeting with industry-leading accuracy
+            Our Asia-Pacific proxy system offers exact geographic targeting with top-tier precision.
           </Text>
           
           <Grid templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }} gap={8}>
@@ -160,8 +160,8 @@ function AsiaPacificProxiesPage() {
                 <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/grafana.png" alt="Real-time Location Verification" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">Real-time Location Verification</Heading>
-                <Text color="gray.600">Every proxy location is continuously verified through multiple independent sources to ensure geographic accuracy</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">Dynamic Location Validation</Heading>
+                <Text color="gray.600">Proxy locations are consistently checked via multiple independent sources to ensure geographic reliability.</Text>
               </Box>
             </Flex>
             
@@ -170,8 +170,8 @@ function AsiaPacificProxiesPage() {
                 <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/aws.png" alt="Mobile Network Targeting" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">Mobile Network Targeting</Heading>
-                <Text color="gray.600">Specifically target mobile carriers in each country for testing apps and websites on specific network conditions</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">Mobile Carrier Focus</Heading>
+                <Text color="gray.600">Pinpoint specific mobile carriers in each country to test apps and sites under realistic network scenarios.</Text>
               </Box>
             </Flex>
             
@@ -180,8 +180,8 @@ function AsiaPacificProxiesPage() {
                 <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/redis.png" alt="Language & Script Support" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">Language & Script Support</Heading>
-                <Text color="gray.600">Test content in local languages and scripts including Chinese, Japanese, Korean, Hindi, Thai, and more</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">Multilingual Capabilities</Heading>
+                <Text color="gray.600">Validate content in regional languages and scripts such as Chinese, Japanese, Korean, Hindi, Thai, and beyond.</Text>
               </Box>
             </Flex>
             
@@ -190,8 +190,8 @@ function AsiaPacificProxiesPage() {
                 <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/rest.png" alt="Asia-Pacific Location API" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">Asia-Pacific Location API</Heading>
-                <Text color="gray.600">Programmatically select locations with our comprehensive API for automated geo-targeting across all Asia-Pacific regions</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">Asia-Pacific Geo-API</Heading>
+                <Text color="gray.600">Automate location selection with our robust API for seamless geo-targeting across Asia-Pacific regions.</Text>
               </Box>
             </Flex>
           </Grid>
@@ -202,58 +202,58 @@ function AsiaPacificProxiesPage() {
       <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
-            Asia-Pacific Proxy Platform Features
+            Asia-Pacific Proxy System Features
           </Heading>
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="red.600">Geographic Targeting</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.600">Geo-Selection Options</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Country Selection</Text> - Access proxies from all 25 Asia-Pacific countries with comprehensive coverage</Text>
+                  <Text><Text as="span" fontWeight="bold">Nationwide Reach</Text> - Utilize proxies from all 25 Asia-Pacific countries with full coverage.</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Regional Targeting</Text> - Select from specific regions including East Asia, Southeast Asia, South Asia, and Oceania</Text>
+                  <Text><Text as="span" fontWeight="bold">Region-Specific Choices</Text> - Pick from areas like East Asia, Southeast Asia, South Asia, and Oceania.</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">City Precision</Text> - Target specific Asian cities with multiple proxies available in each location</Text>
+                  <Text><Text as="span" fontWeight="bold">Urban Accuracy</Text> - Focus on specific Asian cities with multiple proxy options per location.</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Mobile Carrier Selection</Text> - Choose proxies from specific mobile carriers for realistic testing in mobile-first markets</Text>
+                  <Text><Text as="span" fontWeight="bold">Carrier Customization</Text> - Select proxies from specific mobile carriers for authentic testing in mobile-heavy markets.</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Connection Speed Filtering</Text> - Filter proxies by connection speed to simulate various network conditions</Text>
+                  <Text><Text as="span" fontWeight="bold">Speed-Based Filtering</Text> - Sort proxies by connection speed to mimic diverse network environments.</Text>
                 </ListItem>
               </List>
             </Box>
             
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="red.600">Control & Integration</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.600">Management & Integration</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Location Groups</Text> - Create and save custom Asia-Pacific location groups for frequent testing scenarios</Text>
+                  <Text><Text as="span" fontWeight="bold">Custom Location Sets</Text> - Define and store tailored Asia-Pacific location profiles for repeated testing.</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Location API</Text> - Access all Asia-Pacific location features programmatically through our comprehensive API</Text>
+                  <Text><Text as="span" fontWeight="bold">Geo-API Tools</Text> - Leverage all Asia-Pacific location capabilities programmatically via our detailed API.</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Browser Integration</Text> - Use browser extensions to quickly switch between Asian locations in your testing</Text>
+                  <Text><Text as="span" fontWeight="bold">Browser Compatibility</Text> - Use extensions to easily switch Asian locations during testing.</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Mobile App Testing</Text> - Specialized tools for testing mobile apps in various Asian network environments</Text>
+                  <Text><Text as="span" fontWeight="bold">Mobile Testing Features</Text> - Advanced tools for validating mobile apps across Asian network conditions.</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Location Analytics</Text> - Track proxy performance by location with detailed success metrics across Asia-Pacific</Text>
+                  <Text><Text as="span" fontWeight="bold">Performance Metrics</Text> - Monitor proxy effectiveness by location with precise success data across Asia-Pacific.</Text>
                 </ListItem>
               </List>
             </Box>
@@ -265,35 +265,34 @@ function AsiaPacificProxiesPage() {
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={12} fontWeight="medium">
-            Asia-Pacific Success Stories
+            Success Stories in Asia-Pacific
           </Heading>
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="red.600">Mobile App Developer Expands into Southeast Asia</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.600">Mobile Game Developer Boosts Southeast Asia Reach</Heading>
               <Text mb={4}>
-                A mobile gaming company used our Asia-Pacific proxies to test their app performance across 
-                10 Southeast Asian countries. They identified critical optimization opportunities for low-bandwidth 
-                areas and adapted their content delivery system, resulting in a 64% increase in user retention.
+                A mobile gaming firm utilized our Asia-Pacific proxies to assess app performance across 
+                10 Southeast Asian nations. They uncovered key optimization needs for low-bandwidth zones, 
+                enhancing their delivery system and achieving a 64% rise in user retention.
               </Text>
               <Text fontStyle="italic" fontSize="sm" color="gray.600">
-                "Testing with authentic mobile IPs from across Southeast Asia revealed that our app was unusable in many 
-                regions due to high data requirements. The country-specific insights helped us implement a progressive 
-                loading system that dramatically improved accessibility."
+                "Authentic mobile IPs across Southeast Asia showed our app was inaccessible in many areas due to 
+                heavy data demands. Country-specific data led us to a progressive loading solution that vastly 
+                improved reach."
               </Text>
             </Box>
             
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="red.600">E-commerce Platform Masters Multi-language Support</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.600">E-commerce Giant Enhances Language Support</Heading>
               <Text mb={4}>
-                A global e-commerce platform implemented our Asia-Pacific proxies to test their website across 
-                12 different language versions. They discovered significant rendering issues with non-Latin scripts 
-                and payment processing errors, leading to a 41% increase in East Asian conversions after fixes.
+                A global e-commerce company employed our Asia-Pacific proxies to evaluate their site across 
+                12 language variants. They identified critical display issues with non-Latin scripts and payment 
+                glitches, boosting East Asian conversions by 41% after corrections.
               </Text>
               <Text fontStyle="italic" fontSize="sm" color="gray.600">
-                "The ability to test from specific Asian countries allowed us to experience our site exactly 
-                as local users do. We uncovered serious problems with Chinese, Japanese and Korean character 
-                rendering that were completely invisible when testing from our Western offices."
+                "Testing from specific Asian locations let us see our site as local users do, revealing major 
+                rendering flaws in Chinese, Japanese, and Korean scripts that went unnoticed from Western hubs."
               </Text>
             </Box>
           </Grid>
@@ -304,10 +303,10 @@ function AsiaPacificProxiesPage() {
       <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={8} fontWeight="medium">
-            Asia-Pacific Proxy Network Coverage
+            Asia-Pacific Proxy Reach
           </Heading>
           <Text fontSize="lg" mb={12} maxW="700px" mx="auto">
-            Our extensive network provides comprehensive coverage across all Asia-Pacific regions with dense concentration in key markets
+            Our vast network ensures thorough coverage across all Asia-Pacific zones, with strong presence in major markets.
           </Text>
           
           <Box bg="white" p={6} borderRadius="md" boxShadow="md">
@@ -316,25 +315,25 @@ function AsiaPacificProxiesPage() {
                 <Text fontWeight="bold" color="red.600">East Asia</Text>
                 <Text>6 Countries</Text>
                 <Text>62 Cities</Text>
-                <Text>Major Carriers Covered</Text>
+                <Text>Key Carriers Included</Text>
               </VStack>
               <VStack>
                 <Text fontWeight="bold" color="red.600">Southeast Asia</Text>
                 <Text>10 Countries</Text>
                 <Text>48 Cities</Text>
-                <Text>Major Carriers Covered</Text>
+                <Text>Key Carriers Included</Text>
               </VStack>
               <VStack>
                 <Text fontWeight="bold" color="red.600">South Asia</Text>
                 <Text>7 Countries</Text>
                 <Text>45 Cities</Text>
-                <Text>Major Carriers Covered</Text>
+                <Text>Key Carriers Included</Text>
               </VStack>
               <VStack>
                 <Text fontWeight="bold" color="red.600">Oceania & Pacific</Text>
                 <Text>4 Countries</Text>
                 <Text>23 Cities</Text>
-                <Text>Major Carriers Covered</Text>
+                <Text>Key Carriers Included</Text>
               </VStack>
             </SimpleGrid>
           </Box>
@@ -345,24 +344,24 @@ function AsiaPacificProxiesPage() {
       <Box py={16} bg="red.600" color="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">
-            Access Any Asia-Pacific Location
+            Explore Any Asia-Pacific Market
           </Heading>
           <Text fontSize="lg" mb={10} maxW="700px" mx="auto" color="white">
-            Get started with our Asia-Pacific proxy network today and experience
-            the web from any location across 25 countries in the world's fastest-growing digital market
+            Begin using our Asia-Pacific proxy network now and navigate the web from any point 
+            across 25 countries in the world’s most dynamic digital landscape.
           </Text>
           
           <Flex justify="center" gap={6} flexWrap="wrap">
-                      <Button
-                          size="lg"
-                          bg="white"
-                          color="red.500"
-                          _hover={{ bg: "gray.100" }}
-                          as="a"
-                          href="/demo-request"
-                        >
-                          Request Demo
-                        </Button>
+            <Button
+              size="lg"
+              bg="white"
+              color="red.500"
+              _hover={{ bg: "gray.100" }}
+              as="a"
+              href="/demo-request"
+            >
+              Request Demo
+            </Button>
             <Button
               size="lg"
               variant="outline"
@@ -377,31 +376,6 @@ function AsiaPacificProxiesPage() {
           </Flex>
         </Box>
       </Box>
-      
-      {/* <Box py={16} bg="white">
-        <Box maxW="1200px" mx="auto" px={4} textAlign="center">
-          <Heading as="h3" size="lg" mb={8} fontWeight="medium">
-            Powered by Advanced Web Technologies
-          </Heading>
-          <Flex justify="center" gap={8} flexWrap="wrap">
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/python.png" alt="Python" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/selenium.png" alt="Selenium" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/aws.png" alt="AWS" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/docker.png" alt="Docker" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/kubernetes.png" alt="Kubernetes" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/redis.png" alt="Redis" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/mongodb.png" alt="MongoDB" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/postgresql.png" alt="PostgreSQL" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/rest.png" alt="REST API" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/javascript.png" alt="JavaScript" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/html.png" alt="HTML" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/css.png" alt="CSS" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/node_js.png" alt="Node.js" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/react.png" alt="React" boxSize="50px" />
-            <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/typescript.png" alt="TypeScript" boxSize="50px" />
-          </Flex>
-        </Box>
-      </Box> */}
       
       {/* Footer */}
       <Footer />
