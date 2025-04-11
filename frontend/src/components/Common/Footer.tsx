@@ -116,28 +116,28 @@ offering limitless scalability and global reach across over 190 countries.
           <Heading as="h4" size="sm" mb={4} color="gray.400">Popular Web Scraping Use Cases</Heading>
           <Flex flexWrap="wrap" gap={4}>
             <Link href="/use-cases/ecommerce-price-monitoring" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>
-              E-commerce Price Monitoring
+            E-commerce Pricing Tracker
             </Link>
             <Link href="/use-cases/product-data-extraction" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>
-              Product Data Extraction
+            Product Data Retrieval
             </Link>
             <Link href="/use-cases/competitor-analysis" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>
               Competitor Analysis
             </Link>
             <Link href="/use-cases/real-estate-data-scraping" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>
-              Real Estate Data Scraping
+            Real Estate Data Collection
             </Link>
             <Link href="/use-cases/travel-fare-aggregation" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>
-              Travel Fare Aggregation
+            Travel Pricing Aggregation
             </Link>
             <Link href="/use-cases/financial-data-collection" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>
-              Financial Data Collection
+            Financial Insights Collection
             </Link>
             <Link href="/use-cases/social-media-monitoring" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>
-              Social Media Monitoring
+            Social Media Insights Platform
             </Link>
             <Link href="/use-cases/news-aggregation" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>
-              News Aggregation
+            News Aggregation Solution
             </Link>
           </Flex>
         </Box>
