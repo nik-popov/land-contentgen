@@ -9,33 +9,33 @@ export const Route = createFileRoute("/_layout/tools/rotating-proxy")({
 
 function RotatingProxyService() {
   const industryData = [
-    { industry: "E-commerce", growth: 68, useCases: "Competitive research, inventory tracking, price comparison, product research at scale" },
-    { industry: "Market Intelligence", growth: 64, useCases: "Distributed data gathering, anti-blocking measures, multi-regional market analysis" },
-    { industry: "Digital Marketing", growth: 59, useCases: "Ad verification, SERP monitoring, competitor analysis, cross-regional campaign testing" },
-    { industry: "Brand Protection", growth: 56, useCases: "Counterfeit detection, unauthorized seller monitoring, brand impersonation detection" },
-    { industry: "Real Estate", growth: 52, useCases: "Property listing monitoring, market pricing analysis, rental market intelligence" },
-    { industry: "Financial Research", growth: 61, useCases: "Alternative data collection, price monitoring, cross-exchange analysis, regulatory compliance" }
+    { industry: "E-commerce", growth: 68, useCases: "Competitor benchmarking, stock monitoring, pricing analysis, large-scale product insights" },
+    { industry: "Market Intelligence", growth: 64, useCases: "Widespread data collection, block prevention, regional market evaluation" },
+    { industry: "Digital Marketing", growth: 59, useCases: "Ad validation, search ranking tracking, rival analysis, multi-region campaign testing" },
+    { industry: "Brand Protection", growth: 56, useCases: "Fake product identification, unapproved vendor tracking, brand misuse detection" },
+    { industry: "Real Estate", growth: 52, useCases: "Listing surveillance, pricing trend analysis, rental market insights" },
+    { industry: "Financial Research", growth: 61, useCases: "Non-traditional data gathering, price observation, multi-exchange review, compliance monitoring" }
   ];
 
   const proxyFeatures = [
     { 
-      title: "Intelligent IP Rotation", 
-      description: "Automatic or customizable IP rotation patterns with session management and smart fail-over capabilities", 
+      title: "Smart IP Cycling", 
+      description: "Automated or adjustable IP switching with session control and intelligent failover options", 
       icon: "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/aws.png" 
     },
     { 
-      title: "Multi-Source IP Pool", 
-      description: "Access to residential, datacenter, and mobile IPs from over 195 countries with configurable location targeting", 
+      title: "Varied IP Reservoir", 
+      description: "Tap into residential, datacenter, and mobile IPs across 195+ countries with precise location selection", 
       icon: "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/kubernetes.png" 
     },
     { 
-      title: "Performance Analytics", 
-      description: "Real-time monitoring of success rates, response times, and bandwidth usage with custom alerting capabilities", 
+      title: "Usage Insights", 
+      description: "Live tracking of success metrics, response speeds, and data usage with tailored alert settings", 
       icon: "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/analytics.png" 
     },
     { 
-      title: "Advanced Request Routing", 
-      description: "Request distribution algorithms with machine learning optimization to maximize success rates and minimize detection", 
+      title: "Optimized Request Handling", 
+      description: "Machine learning-driven request allocation to boost success rates and reduce detection risks", 
       icon: "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/grafana.png" 
     }
   ];
@@ -46,28 +46,28 @@ function RotatingProxyService() {
       <Box py={16} bg="red.50" color="gray.800">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h1" size="2xl" textAlign="center" mb={8} fontWeight="medium">
-            Rotating Proxy Services
+            Dynamic Proxy Solutions
           </Heading>
           <Text fontSize="xl" textAlign="center" mb={12} maxW="800px" mx="auto">
-            Enhance web data collection with our intelligent rotating proxy infrastructure. 
-            Prevent IP blocking, distribute requests across multiple sources, and maintain continuous 
-            access to web resources with automated IP rotation.
+            Boost your web data extraction with our smart rotating proxy system. 
+            Avoid IP restrictions, spread requests across diverse sources, and ensure uninterrupted 
+            access to online resources with automated IP cycling.
           </Text>
           
           <Flex justify="space-between" flexWrap="wrap" gap={6}>
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="teal.500">Automated IP Rotation</Heading>
-              <Text>Intelligent IP rotation with configurable patterns based on time intervals, request counts, or response characteristics. Prevent blocking and detection with seamless IP switching across residential, datacenter, and mobile sources.</Text>
+              <Heading as="h3" size="md" color="teal.500">Seamless IP Switching</Heading>
+              <Text>Smart IP cycling with customizable schedules based on time, request volume, or response patterns. Prevent restrictions and detection with smooth transitions across residential, datacenter, and mobile IPs.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="teal.500">Enterprise-Grade Reliability</Heading>
-              <Text>Mission-critical rotating proxy infrastructure built for scale and performance. Our distributed architecture ensures high availability with automatic failover, load balancing, and redundant routing paths across global datacenters.</Text>
+              <Heading as="h3" size="md" color="teal.500">Business-Class Dependability</Heading>
+              <Text>Reliable rotating proxy system designed for scalability and efficiency. Our distributed setup ensures constant uptime with automated recovery, load distribution, and redundant global pathways.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="teal.500">Advanced Session Management</Heading>
-              <Text>Create persistent sessions with sticky IPs or implement dynamic rotation patterns. Our session management capabilities include browser fingerprinting, cookie handling, and sophisticated request fingerprint management.</Text>
+              <Heading as="h3" size="md" color="teal.500">Sophisticated Session Control</Heading>
+              <Text>Establish stable sessions with fixed IPs or flexible rotation options. Our tools support browser fingerprinting, cookie management, and advanced request identity handling.</Text>
             </VStack>
           </Flex>
         </Box>
@@ -77,40 +77,37 @@ function RotatingProxyService() {
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
-            Key Benefits of Our Rotating Proxy Services
+            Core Advantages of Our Rotating Proxy Solutions
           </Heading>
           
           <Grid templateColumns={{ base: "1fr", md: "1fr 1fr", lg: "1fr 1fr 1fr" }} gap={10} mt={10}>
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
                 <StatNumber color="teal.500">99.95%</StatNumber>
-                <StatLabel>Success Rate</StatLabel>
+                <StatLabel>Connection Success</StatLabel>
               </Stat>
               <Text>
-                Our intelligent rotating proxy infrastructure delivers industry-leading 
-                success rates with automated retry logic and smart IP selection algorithms.
+                Our smart rotating proxy system achieves top-tier success rates with automated retries and optimized IP selection logic.
               </Text>
             </VStack>
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
                 <StatNumber color="teal.500">92%</StatNumber>
-                <StatLabel>Reduced Blocking</StatLabel>
+                <StatLabel>Block Reduction</StatLabel>
               </Stat>
               <Text>
-                Organizations using our rotating proxy services experience up to 92% reduction 
-                in IP blocking and CAPTCHAs compared to static IP solutions.
+                Businesses using our rotating proxies see up to 92% fewer IP blocks and CAPTCHAs compared to fixed IP approaches.
               </Text>
             </VStack>
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
                 <StatNumber color="teal.500">71%</StatNumber>
-                <StatLabel>Throughput Increase</StatLabel>
+                <StatLabel>Data Throughput Boost</StatLabel>
               </Stat>
               <Text>
-                Our intelligent request distribution and automated rotation technologies help 
-                enterprises increase data collection throughput by an average of 71%.
+                Our advanced request management and rotation tech enable companies to enhance data retrieval speed by an average of 71%.
               </Text>
             </VStack>
           </Grid>
@@ -121,7 +118,7 @@ function RotatingProxyService() {
       <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={12} fontWeight="medium">
-            Industry-Specific Rotating Proxy Solutions
+            Tailored Rotating Proxy Applications
           </Heading>
           
           <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={8}>
@@ -132,11 +129,11 @@ function RotatingProxyService() {
                   <StatNumber color="teal.500">{industry.growth}%</StatNumber>
                   <StatHelpText>
                     <StatArrow type="increase" />
-                    Collection Efficiency
+                    Efficiency Gain
                   </StatHelpText>
                 </Stat>
                 <Text fontSize="sm" color="gray.600">
-                  <Text as="span" fontWeight="bold">Use Cases:</Text> {industry.useCases}
+                  <Text as="span" fontWeight="bold">Applications:</Text> {industry.useCases}
                 </Text>
               </Box>
             ))}
@@ -148,50 +145,50 @@ function RotatingProxyService() {
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={4} fontWeight="medium">
-            Advanced Rotating Proxy Capabilities
+            Cutting-Edge Proxy Features
           </Heading>
           <Text fontSize="lg" textAlign="center" mb={12} maxW="700px" mx="auto">
-            Our enterprise-grade rotating proxy infrastructure provides unmatched capabilities for continuous web access and data collection
+            Our business-ready rotating proxy system offers exceptional tools for reliable web access and data retrieval
           </Text>
           
           <Grid templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }} gap={8}>
             <Flex p={6} bg="gray.50" borderRadius="md" boxShadow="sm" align="flex-start">
               <Box w="50px" h="50px" mr={4} display="flex" alignItems="center" justifyContent="center">
-              <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/grafana.png" alt="Advanced Analytics" />
+                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/grafana.png" alt="Real-Time Insights" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">Performance Monitoring</Heading>
-                <Text color="gray.600">Comprehensive dashboards tracking rotation patterns, success rates, response times, and bandwidth utilization across your entire proxy infrastructure</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">Real-Time Insights</Heading>
+                <Text color="gray.600">Detailed dashboards showing cycling patterns, success metrics, response times, and data usage across your proxy network</Text>
               </Box>
             </Flex>
             
             <Flex p={6} bg="gray.50" borderRadius="md" boxShadow="sm" align="flex-start">
               <Box w="50px" h="50px" mr={4} display="flex" alignItems="center" justifyContent="center">
-                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/aws.png" alt="Global Network" />
+                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/aws.png" alt="Worldwide IP Pool" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">Diverse IP Sources</Heading>
-                <Text color="gray.600">Access to over 70 million rotating IP addresses from residential, datacenter, and mobile sources with geo-targeting and carrier-specific selection capabilities</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">Worldwide IP Pool</Heading>
+                <Text color="gray.600">Leverage over 70 million rotating IPs from residential, datacenter, and mobile sources, with location and carrier targeting options</Text>
               </Box>
             </Flex>
             
             <Flex p={6} bg="gray.50" borderRadius="md" boxShadow="sm" align="flex-start">
               <Box w="50px" h="50px" mr={4} display="flex" alignItems="center" justifyContent="center">
-                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/prometheus.png" alt="Advanced Monitoring" />
+                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/prometheus.png" alt="Cycle Optimization" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">Rotation Pattern Analysis</Heading>
-                <Text color="gray.600">AI-powered rotation pattern optimization with automated learning from successful and unsuccessful requests to continuously improve success rates</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">Cycle Optimization</Heading>
+                <Text color="gray.600">AI-driven cycling adjustments based on request outcomes, continuously refining performance for higher success rates</Text>
               </Box>
             </Flex>
             
             <Flex p={6} bg="gray.50" borderRadius="md" boxShadow="sm" align="flex-start">
               <Box w="50px" h="50px" mr={4} display="flex" alignItems="center" justifyContent="center">
-                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/rest.png" alt="API Integration" />
+                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/rest.png" alt="Integration Ease" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">Developer-Friendly API</Heading>
-                <Text color="gray.600">RESTful API with SDKs for Python, Node.js, Java, and Go to seamlessly integrate rotating proxy capabilities into your existing applications</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">Integration Ease</Heading>
+                <Text color="gray.600">RESTful API with SDKs for Python, Node.js, Java, and Go, enabling effortless proxy integration into your applications</Text>
               </Box>
             </Flex>
           </Grid>
@@ -202,58 +199,58 @@ function RotatingProxyService() {
       <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
-            Rotating Proxy Technical Specifications
+            Technical Highlights of Rotating Proxies
           </Heading>
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="teal.500">Rotation & Management Features</Heading>
+              <Heading as="h3" size="md" mb={5} color="teal.500">Cycling & Control Options</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="teal.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Configurable Rotation</Text> - Set rotation patterns based on time intervals, request counts, or response triggers</Text>
+                  <Text><Text as="span" fontWeight="bold">Customizable Cycling</Text> - Define cycling patterns by time, request count, or response triggers</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="teal.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">IP Exclusion Rules</Text> - Create custom rules to exclude specific IP ranges, ASNs, or previously blocked IPs</Text>
+                  <Text><Text as="span" fontWeight="bold">IP Filtering</Text> - Set rules to exclude specific IP ranges, ASNs, or previously flagged IPs</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="teal.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Geo-Distribution</Text> - Control geographic distribution of rotating IPs by country, region, or city</Text>
+                  <Text><Text as="span" fontWeight="bold">Location Targeting</Text> - Manage IP distribution by country, region, or city for precise geo-control</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="teal.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Session Management</Text> - Maintain sticky sessions with persistent IPs or implement custom rotation logic</Text>
+                  <Text><Text as="span" fontWeight="bold">Session Flexibility</Text> - Use fixed IPs for stable sessions or apply custom cycling logic</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="teal.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Rotation Analytics</Text> - Performance metrics tracking optimal rotation frequencies and patterns</Text>
+                  <Text><Text as="span" fontWeight="bold">Performance Tracking</Text> - Analyze metrics to optimize cycling frequency and patterns</Text>
                 </ListItem>
               </List>
             </Box>
             
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="teal.500">Enterprise Security & Performance</Heading>
+              <Heading as="h3" size="md" mb={5} color="teal.500">Security & Efficiency Features</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="teal.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Anti-Detection Features</Text> - Advanced browser fingerprinting and request signature randomization</Text>
+                  <Text><Text as="span" fontWeight="bold">Stealth Technology</Text> - Enhanced browser fingerprinting and request randomization for evasion</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="teal.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Automated Verification</Text> - Continuous IP validation and quality scoring to ensure high-performance connections</Text>
+                  <Text><Text as="span" fontWeight="bold">IP Quality Checks</Text> - Ongoing validation and scoring to maintain high-performing connections</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="teal.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Smart Routing</Text> - Intelligent request distribution with automatic connection optimization</Text>
+                  <Text><Text as="span" fontWeight="bold">Adaptive Routing</Text> - Smart request allocation with automatic performance tuning</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="teal.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Usage Optimization</Text> - Bandwidth management and request compression for cost-effective operation</Text>
+                  <Text><Text as="span" fontWeight="bold">Resource Efficiency</Text> - Data usage optimization and request compression for cost savings</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="teal.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Enterprise Support</Text> - SLA-backed technical support with dedicated account management and 24/7 monitoring</Text>
+                  <Text><Text as="span" fontWeight="bold">Premium Support</Text> - SLA-backed assistance with dedicated account support and round-the-clock monitoring</Text>
                 </ListItem>
               </List>
             </Box>
@@ -265,37 +262,31 @@ function RotatingProxyService() {
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={12} fontWeight="medium">
-            Rotating Proxy Success Stories
+            Rotating Proxy Achievements
           </Heading>
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="teal.500">Market Intelligence Firm Scales Data Collection 15x</Heading>
+              <Heading as="h3" size="md" mb={4} color="teal.500">Market Research Firm Boosts Data Retrieval 15x</Heading>
               <Text mb={4}>
-                A leading market intelligence provider implemented our rotating proxy infrastructure to 
-                monitor competitive pricing across 38 countries. Their success rate increased from 65% to 97% 
-                while scaling request volume by 15x and reducing infrastructure costs by 47%.
+                A top market research company adopted our rotating proxy system to track pricing across 38 countries, 
+                raising their success rate from 65% to 97%, scaling requests 15x, and cutting costs by 47%.
               </Text>
               <Text fontStyle="italic" fontSize="sm" color="gray.600">
-                "Your rotating proxy service completely transformed our data acquisition capabilities. 
-                We've eliminated blocking issues that previously plagued our collection process and can now 
-                scale our operations significantly while maintaining high success rates."
+                "Your dynamic proxy solution revolutionized our data collection process. We’ve overcome blocking challenges 
+                and can now scale operations significantly while keeping success rates high."
               </Text>
             </Box>
             
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="teal.500">E-commerce Brand Protection Team Increases Coverage</Heading>
+              <Heading as="h3" size="md" mb={4} color="teal.500">E-commerce Team Enhances Brand Oversight</Heading>
               <Text mb={4}>
-                A global e-commerce company utilized our rotating proxy services to monitor unauthorized 
-                sellers and counterfeit listings across 125+ marketplaces. Their coverage expanded by 380% 
-                while maintaining a 99.2% success rate and identifying 2,700+ previously undetected 
-                brand protection violations.
+                A worldwide e-commerce firm used our rotating proxies to monitor unauthorized sellers and fakes across 125+ 
+                marketplaces, expanding coverage by 380%, achieving a 99.2% success rate, and spotting 2,700+ new violations.
               </Text>
               <Text fontStyle="italic" fontSize="sm" color="gray.600">
-                "After switching to your rotating proxy infrastructure, we've dramatically expanded our 
-                brand protection coverage while virtually eliminating the blocking issues we previously 
-                encountered. Your solution has directly contributed to a 42% reduction in counterfeit 
-                products appearing online."
+                "Since adopting your rotating proxy system, we’ve vastly improved our brand protection reach and nearly 
+                eliminated blocking issues. It’s driven a 42% drop in counterfeit listings online."
               </Text>
             </Box>
           </Grid>
@@ -303,45 +294,44 @@ function RotatingProxyService() {
       </Box>
       
       {/* Integration Partners */}
-     {/* Integration Partners for Rotating Proxy */}
-<Box py={16} bg="red.50">
-  <Box maxW="1200px" mx="auto" px={4} textAlign="center">
-    <Heading as="h2" size="xl" mb={8} fontWeight="medium">
-      Technology Integrations
-    </Heading>
-    <Text fontSize="lg" mb={12} maxW="700px" mx="auto">
-      Our rotating proxy infrastructure integrates seamlessly with all major development frameworks and data collection platforms
-    </Text>
-    
-    <Flex justify="center" flexWrap="wrap" gap={10} mb={12} align="center">
-      <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
-        <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/python.png" alt="Python" maxHeight="80px" maxWidth="160px" objectFit="contain" />
+      <Box py={16} bg="red.50">
+        <Box maxW="1200px" mx="auto" px={4} textAlign="center">
+          <Heading as="h2" size="xl" mb={8} fontWeight="medium">
+            Compatible Technologies
+          </Heading>
+          <Text fontSize="lg" mb={12} maxW="700px" mx="auto">
+            Our rotating proxy system integrates smoothly with leading development frameworks and data platforms
+          </Text>
+          
+          <Flex justify="center" flexWrap="wrap" gap={10} mb={12} align="center">
+            <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
+              <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/python.png" alt="Python" maxHeight="80px" maxWidth="160px" objectFit="contain" />
+            </Box>
+            <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
+              <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/rest.png" alt="REST API" maxHeight="80px" maxWidth="160px" objectFit="contain" />
+            </Box>
+            <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
+              <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/aws.png" alt="AWS" maxHeight="80px" maxWidth="160px" objectFit="contain" />
+            </Box>
+            <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
+              <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/kubernetes.png" alt="Kubernetes" maxHeight="80px" maxWidth="160px" objectFit="contain" />
+            </Box>
+            <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
+              <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/grafana.png" alt="Grafana" maxHeight="80px" maxWidth="160px" objectFit="contain" />
+            </Box>
+          </Flex>
+        </Box>
       </Box>
-      <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
-        <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/rest.png" alt="REST API" maxHeight="80px" maxWidth="160px" objectFit="contain" />
-      </Box>
-      <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
-        <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/aws.png" alt="AWS" maxHeight="80px" maxWidth="160px" objectFit="contain" />
-      </Box>
-      <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
-        <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/kubernetes.png" alt="Kubernetes" maxHeight="80px" maxWidth="160px" objectFit="contain" />
-      </Box>
-      <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
-        <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/grafana.png" alt="Grafana" maxHeight="80px" maxWidth="160px" objectFit="contain" />
-      </Box>
-    </Flex>
-  </Box>
-</Box>
       
       {/* Call to Action */}
       <Box py={16} bg="teal.500" color="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">
-            Ready to Eliminate IP Blocking?
+            Ready to Overcome IP Restrictions?
           </Heading>
           <Text fontSize="lg" mb={10} maxW="700px" mx="auto" color="white">
-            Start collecting web data at scale with our intelligent rotating proxy infrastructure.
-            Schedule a consultation with our solution architects to design your custom implementation.
+            Begin large-scale web data collection with our smart rotating proxy system. 
+            Book a session with our experts to craft your tailored setup.
           </Text>
           
           <Flex justify="center" gap={6} flexWrap="wrap">
@@ -353,7 +343,7 @@ function RotatingProxyService() {
               as="a"
               href="/demo-request"
             >
-              Request Demo
+              Schedule Demo
             </Button>
             
             <Button
@@ -364,14 +354,13 @@ function RotatingProxyService() {
               _hover={{ bg: "teal.600" }}
               as="a"
               href="https://cloud.roamingproxy.com/signup"
-              >
-               Start Free Trial
+            >
+              Try It Free
             </Button>
           </Flex>
         </Box>
       </Box>
       
-    
       {/* Footer */}
       <Footer />
     </>
