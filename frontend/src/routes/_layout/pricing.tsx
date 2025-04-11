@@ -242,7 +242,7 @@ function PricingPage() {
                   {plan.customPricing ? (
                     <Box my={6}>
                       <Text fontSize="3xl" fontWeight="bold" mb={1}>
-                        Personalized Rates
+                        Custom
                       </Text>
                       <Text color="gray.600">
                         Customized for you
