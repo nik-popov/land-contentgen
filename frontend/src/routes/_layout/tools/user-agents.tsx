@@ -9,33 +9,33 @@ export const Route = createFileRoute("/_layout/tools/user-agents")({
 
 function UserAgentsService() {
   const industryData = [
-    { industry: "E-commerce", growth: 72, useCases: "Browser compatibility testing, device-specific content validation, geo-targeted experience testing" },
-    { industry: "Market Intelligence", growth: 68, useCases: "Browser fingerprint analysis, platform-specific user experience research, multi-channel testing" },
-    { industry: "Digital Marketing", growth: 63, useCases: "Ad verification across browsers, device-specific campaign testing, platform compatibility validation" },
-    { industry: "Brand Protection", growth: 58, useCases: "Cross-browser brand experience monitoring, device-specific content validation, mobile experience auditing" },
-    { industry: "Real Estate", growth: 54, useCases: "Cross-platform listing verification, mobile vs desktop experience testing, browser-specific listing validation" },
-    { industry: "Financial Research", growth: 65, useCases: "Multi-browser trading platform testing, device-specific compliance validation, cross-platform data consistency" }
+    { industry: "E-commerce", growth: 72, useCases: "Testing browser compatibility, validating device-specific layouts, checking geo-targeted displays" },
+    { industry: "Market Intelligence", growth: 68, useCases: "Analyzing browser signatures, researching platform experiences, testing across channels" },
+    { industry: "Digital Marketing", growth: 63, useCases: "Verifying ads on different browsers, testing campaigns by device, ensuring platform alignment" },
+    { industry: "Brand Protection", growth: 58, useCases: "Monitoring brand consistency across browsers, validating mobile displays, auditing device experiences" },
+    { industry: "Real Estate", growth: 54, useCases: "Confirming listings across platforms, comparing mobile vs. desktop views, validating browser displays" },
+    { industry: "Financial Research", growth: 65, useCases: "Testing trading platforms on multiple browsers, ensuring device compliance, verifying data uniformity" }
   ];
 
   const userAgentFeatures = [
     { 
-      title: "Custom User Agent Generation", 
-      description: "Generate realistic user-agent strings for any browser, device, and OS combination with version-specific parameters", 
+      title: "Tailored User Agent Creation", 
+      description: "Craft authentic user-agent strings for any browser, device, or OS combo, with precise version details", 
       icon: "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/aws.png" 
     },
     { 
-      title: "Device Fingerprint Management", 
-      description: "Complete browser fingerprint management with user-agent synchronization and consistent device signatures", 
+      title: "Fingerprint Coordination", 
+      description: "Manage full browser fingerprints with synced user agents and uniform device identifiers", 
       icon: "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/kubernetes.png" 
     },
     { 
-      title: "Browser Profile Analytics", 
-      description: "Real-time monitoring of user agent performance, detection rates, and browser compatibility metrics", 
+      title: "Browser Usage Insights", 
+      description: "Live tracking of user agent performance, detection trends, and browser compatibility stats", 
       icon: "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/analytics.png" 
     },
     { 
-      title: "Browser Evolution Tracking", 
-      description: "Continually updated database of browser versions and user agent patterns with market share analytics", 
+      title: "Browser Version Monitoring", 
+      description: "Up-to-date catalog of browser versions and user agent trends, including market share data", 
       icon: "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/grafana.png" 
     }
   ];
@@ -46,28 +46,28 @@ function UserAgentsService() {
       <Box py={16} bg="red.50" color="gray.800">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h1" size="2xl" textAlign="center" mb={8} fontWeight="medium">
-            User Agent Management Services
+            User Agent Control Services
           </Heading>
           <Text fontSize="xl" textAlign="center" mb={12} maxW="800px" mx="auto">
-            Optimize cross-browser and multi-device web data collection with our advanced user agent 
-            management platform. Prevent fingerprinting detection, simulate any browser environment, 
-            and maintain consistent device profiles across all web interactions.
+            Enhance multi-browser and multi-device web data gathering with our cutting-edge user agent 
+            control system. Avoid fingerprint detection, emulate any browser setup, and ensure steady 
+            device profiles for all web activities.
           </Text>
           
           <Flex justify="space-between" flexWrap="wrap" gap={6}>
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="teal.500">Intelligent User Agent Rotation</Heading>
-              <Text>Automatically rotate user agents based on sophisticated patterns with browser version accuracy and OS-specific details. Prevent browser fingerprinting with consistent device signatures across sessions.</Text>
+              <Heading as="h3" size="md" color="teal.500">Smart User Agent Switching</Heading>
+              <Text>Cycle through user agents using advanced patterns, ensuring accurate browser versions and OS details. Block fingerprinting with reliable device consistency across interactions.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="teal.500">Enterprise-Grade Browser Simulation</Heading>
-              <Text>Industry-leading browser fingerprint simulation with JavaScript runtime environment matching. Our technology ensures consistent user agent strings, navigator objects, and browser-specific behavior patterns.</Text>
+              <Heading as="h3" size="md" color="teal.500">Robust Browser Emulation</Heading>
+              <Text>Top-tier fingerprint emulation with matching JavaScript environments. Our tools deliver uniform user agent strings, navigator properties, and browser behavior traits.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="teal.500">Advanced Device Profile Management</Heading>
-              <Text>Create and manage persistent device profiles with consistent browser fingerprints. Our profile management capabilities include screen resolution, plugin details, font fingerprinting, and WebGL rendering signatures.</Text>
+              <Heading as="h3" size="md" color="teal.500">Device Identity Handling</Heading>
+              <Text>Set up and maintain stable device identities with consistent fingerprints. Manage screen sizes, plugins, fonts, and WebGL signatures effortlessly.</Text>
             </VStack>
           </Flex>
         </Box>
@@ -77,40 +77,37 @@ function UserAgentsService() {
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
-            Key Benefits of Our User Agent Management Platform
+            Why Our User Agent System Stands Out
           </Heading>
           
           <Grid templateColumns={{ base: "1fr", md: "1fr 1fr", lg: "1fr 1fr 1fr" }} gap={10} mt={10}>
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
                 <StatNumber color="teal.500">99.8%</StatNumber>
-                <StatLabel>Detection Avoidance</StatLabel>
+                <StatLabel>Stealth Success</StatLabel>
               </Stat>
               <Text>
-                Our intelligent user agent management delivers industry-leading browser fingerprint 
-                consistency with advanced entropy measurement and calibration.
+                Our smart user agent system ensures top-notch fingerprint uniformity with precise entropy tuning and calibration.
               </Text>
             </VStack>
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
                 <StatNumber color="teal.500">95%</StatNumber>
-                <StatLabel>Reduced Fingerprinting</StatLabel>
+                <StatLabel>Fingerprint Evasion</StatLabel>
               </Stat>
               <Text>
-                Organizations using our user agent management platform experience up to 95% reduction 
-                in browser fingerprinting detection compared to basic user agent switching.
+                Users see up to 95% less fingerprint detection compared to simple user agent swaps, thanks to our platform.
               </Text>
             </VStack>
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
                 <StatNumber color="teal.500">76%</StatNumber>
-                <StatLabel>Efficiency Increase</StatLabel>
+                <StatLabel>Productivity Boost</StatLabel>
               </Stat>
               <Text>
-                Our comprehensive browser fingerprint management and user agent technologies help 
-                enterprises increase multi-platform data collection efficiency by an average of 76%.
+                Our fingerprint and user agent tools improve multi-device data collection efficiency by an average of 76%.
               </Text>
             </VStack>
           </Grid>
@@ -121,7 +118,7 @@ function UserAgentsService() {
       <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={12} fontWeight="medium">
-            Industry-Specific User Agent Solutions
+            Tailored User Agent Applications
           </Heading>
           
           <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={8}>
@@ -132,11 +129,11 @@ function UserAgentsService() {
                   <StatNumber color="teal.500">{industry.growth}%</StatNumber>
                   <StatHelpText>
                     <StatArrow type="increase" />
-                    Collection Accuracy
+                    Data Precision
                   </StatHelpText>
                 </Stat>
                 <Text fontSize="sm" color="gray.600">
-                  <Text as="span" fontWeight="bold">Use Cases:</Text> {industry.useCases}
+                  <Text as="span" fontWeight="bold">Applications:</Text> {industry.useCases}
                 </Text>
               </Box>
             ))}
@@ -148,50 +145,50 @@ function UserAgentsService() {
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={4} fontWeight="medium">
-            Advanced User Agent Management Capabilities
+            Cutting-Edge User Agent Tools
           </Heading>
           <Text fontSize="lg" textAlign="center" mb={12} maxW="700px" mx="auto">
-            Our enterprise-grade user agent platform provides unmatched capabilities for browser simulation and device fingerprint management
+            Our advanced platform offers unmatched tools for browser emulation and fingerprint control
           </Text>
           
           <Grid templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }} gap={8}>
             <Flex p={6} bg="gray.50" borderRadius="md" boxShadow="sm" align="flex-start">
               <Box w="50px" h="50px" mr={4} display="flex" alignItems="center" justifyContent="center">
-              <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/grafana.png" alt="Advanced Analytics" />
+                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/grafana.png" alt="Usage Insights" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">Browser Profile Analytics</Heading>
-                <Text color="gray.600">Comprehensive dashboards tracking user agent effectiveness, browser fingerprint consistency, and detection rates across your entire web data collection infrastructure</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">Usage Insights</Heading>
+                <Text color="gray.600">Detailed dashboards showing user agent success, fingerprint stability, and detection stats across your web collection setup</Text>
               </Box>
             </Flex>
             
             <Flex p={6} bg="gray.50" borderRadius="md" boxShadow="sm" align="flex-start">
               <Box w="50px" h="50px" mr={4} display="flex" alignItems="center" justifyContent="center">
-                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/aws.png" alt="Global Network" />
+                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/aws.png" alt="Version Catalog" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">Browser Version Database</Heading>
-                <Text color="gray.600">Access to over 50,000 accurately modeled browser fingerprints across desktop, mobile, and tablet devices with regular updates reflecting market distribution</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">Version Catalog</Heading>
+                <Text color="gray.600">Over 50,000 meticulously crafted browser fingerprints for desktops, mobiles, and tablets, updated regularly with market trends</Text>
               </Box>
             </Flex>
             
             <Flex p={6} bg="gray.50" borderRadius="md" boxShadow="sm" align="flex-start">
               <Box w="50px" h="50px" mr={4} display="flex" alignItems="center" justifyContent="center">
-                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/prometheus.png" alt="Advanced Monitoring" />
+                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/prometheus.png" alt="Fingerprint Tuning" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">Browser Fingerprint Analysis</Heading>
-                <Text color="gray.600">AI-powered browser fingerprint simulation with automated entropy calibration and fingerprint consistency validation to continuously improve detection avoidance</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">Fingerprint Tuning</Heading>
+                <Text color="gray.600">AI-driven fingerprint emulation with automatic entropy adjustments and consistency checks to enhance stealth</Text>
               </Box>
             </Flex>
             
             <Flex p={6} bg="gray.50" borderRadius="md" boxShadow="sm" align="flex-start">
               <Box w="50px" h="50px" mr={4} display="flex" alignItems="center" justifyContent="center">
-                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/rest.png" alt="API Integration" />
+                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/rest.png" alt="API Access" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">Developer-Friendly API</Heading>
-                <Text color="gray.600">RESTful API with SDKs for Python, Node.js, Java, and Go to seamlessly integrate sophisticated user agent management into your existing applications</Text>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">API Access</Heading>
+                <Text color="gray.600">REST API with SDKs in Python, Node.js, Java, and Go for easy integration into your existing tools</Text>
               </Box>
             </Flex>
           </Grid>
@@ -202,58 +199,58 @@ function UserAgentsService() {
       <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
-            User Agent Technical Specifications
+            User Agent System Specs
           </Heading>
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="teal.500">User Agent & Browser Features</Heading>
+              <Heading as="h3" size="md" mb={5} color="teal.500">Browser & Agent Features</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="teal.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Dynamic User Agent Generation</Text> - Create device-specific user agent strings with accurate browser version patterns</Text>
+                  <Text><Text as="span" fontWeight="bold">Custom Agent Building</Text> - Generate device-tailored user agents with accurate versioning</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="teal.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Browser Fingerprint Consistency</Text> - Ensure navigator object properties match user agent across JavaScript environments</Text>
+                  <Text><Text as="span" fontWeight="bold">Fingerprint Syncing</Text> - Match navigator properties to user agents in JavaScript contexts</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="teal.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Device Distribution</Text> - Configure realistic device distribution patterns according to market share</Text>
+                  <Text><Text as="span" fontWeight="bold">Device Mix</Text> - Mimic real-world device distributions based on market data</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="teal.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Profile Management</Text> - Create persistent browser profiles with consistent fingerprints across sessions</Text>
+                  <Text><Text as="span" fontWeight="bold">Identity Control</Text> - Maintain steady browser identities across sessions</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="teal.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Browser Analytics</Text> - Performance metrics tracking user agent effectiveness and detection rates</Text>
+                  <Text><Text as="span" fontWeight="bold">Performance Tracking</Text> - Monitor agent success and detection rates with detailed stats</Text>
                 </ListItem>
               </List>
             </Box>
             
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="teal.500">Enterprise Security & Performance</Heading>
+              <Heading as="h3" size="md" mb={5} color="teal.500">Security & Efficiency</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="teal.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Anti-Fingerprinting Technology</Text> - Advanced canvas, WebGL, and audio fingerprint normalization</Text>
+                  <Text><Text as="span" fontWeight="bold">Stealth Tech</Text> - Normalize canvas, WebGL, and audio fingerprints for evasion</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="teal.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Automated Browser Validation</Text> - Continuous validation against fingerprinting detection algorithms</Text>
+                  <Text><Text as="span" fontWeight="bold">Auto-Validation</Text> - Ongoing checks against fingerprint detection systems</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="teal.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Smart Device Selection</Text> - Intelligent browser and device selection based on target website requirements</Text>
+                  <Text><Text as="span" fontWeight="bold">Device Matching</Text> - Smart selection of browsers and devices for target sites</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="teal.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Entropy Management</Text> - Browser fingerprint entropy calibration for realistic device signatures</Text>
+                  <Text><Text as="span" fontWeight="bold">Entropy Tuning</Text> - Adjust fingerprint entropy for lifelike device profiles</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="teal.500" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Enterprise Support</Text> - SLA-backed technical support with dedicated account management and 24/7 monitoring</Text>
+                  <Text><Text as="span" fontWeight="bold">Premium Support</Text> - SLA-backed assistance with dedicated managers and 24/7 oversight</Text>
                 </ListItem>
               </List>
             </Box>
@@ -265,82 +262,72 @@ function UserAgentsService() {
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={12} fontWeight="medium">
-            User Agent Management Success Stories
+            User Agent Success Tales
           </Heading>
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="teal.500">E-commerce Platform Improves Cross-Browser Testing by 280%</Heading>
+              <Heading as="h3" size="md" mb={4} color="teal.500">E-commerce Boosts Browser Testing by 280%</Heading>
               <Text mb={4}>
-                A major e-commerce platform implemented our user agent management system to verify 
-                product listings across 42 browser/device combinations. Their testing efficiency increased 
-                by 280% while reducing fingerprinting detection by 94% and cutting testing costs by 53%.
+                A leading online retailer adopted our system to check listings across 42 browser and device setups. Testing speed rose by 280%, fingerprint detection dropped by 94%, and costs fell by 53%.
               </Text>
               <Text fontStyle="italic" fontSize="sm" color="gray.600">
-                "Your user agent management platform has transformed our cross-browser validation process. 
-                We can now efficiently test across virtually any device/browser combination without 
-                maintaining a massive device lab, and our detection rates have plummeted."
+                "Your platform revolutionized our browser testing. We now cover any device or browser combo efficiently without a huge lab, and detection issues are nearly gone."
               </Text>
             </Box>
             
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="teal.500">Financial Services Firm Achieves Device-Specific Compliance</Heading>
+              <Heading as="h3" size="md" mb={4} color="teal.500">Finance Firm Ensures Device Compliance</Heading>
               <Text mb={4}>
-                A global financial services firm utilized our user agent management services to validate 
-                regulatory compliance across 67 browser/device combinations. Their testing coverage expanded 
-                by 430% while maintaining a 99.7% fingerprinting avoidance rate and identifying 1,900+ 
-                previously undetected device-specific compliance issues.
+                A global finance company used our service to confirm compliance across 67 browser-device pairs. Coverage grew by 430%, with 99.7% evasion success, spotting 1,900+ device-specific issues.
               </Text>
               <Text fontStyle="italic" fontSize="sm" color="gray.600">
-                "After implementing your user agent management platform, we've dramatically expanded our 
-                compliance testing while virtually eliminating the browser fingerprinting detection we 
-                previously encountered. Your solution has directly contributed to a 58% reduction in 
-                device-specific compliance exceptions."
+                "Since using your platform, we’ve expanded compliance testing massively while dodging fingerprint detection. It’s cut device-related compliance problems by 58%."
               </Text>
             </Box>
           </Grid>
         </Box>
       </Box>
       
-  {/* Integration Partners for User Agents */}
-<Box py={16} bg="red.50">
-  <Box maxW="1200px" mx="auto" px={4} textAlign="center">
-    <Heading as="h2" size="xl" mb={8} fontWeight="medium">
-      Technology Integrations
-    </Heading>
-    <Text fontSize="lg" mb={12} maxW="700px" mx="auto">
-      Our user agent management platform integrates seamlessly with all major development frameworks and testing environments
-    </Text>
-    
-    <Flex justify="center" flexWrap="wrap" gap={10} mb={12} align="center">
-      <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
-        <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/cypress.png" alt="Cypress" maxHeight="80px" maxWidth="160px" objectFit="contain" />
+      {/* Integration Partners for User Agents */}
+      <Box py={16} bg="red.50">
+        <Box maxW="1200px" mx="auto" px={4} textAlign="center">
+          <Heading as="h2" size="xl" mb={8} fontWeight="medium">
+            Tool Integrations
+          </Heading>
+          <Text fontSize="lg" mb={12} maxW="700px" mx="auto">
+            Our user agent system blends effortlessly with top development and testing frameworks
+          </Text>
+          
+          <Flex justify="center" flexWrap="wrap" gap={10} mb={12} align="center">
+            <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
+              <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/cypress.png" alt="Cypress" maxHeight="80px" maxWidth="160px" objectFit="contain" />
+            </Box>
+            <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
+              <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/puppeteer.png" alt="Puppeteer" maxHeight="80px" maxWidth="160px" objectFit="contain" />
+            </Box>
+            <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
+              <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/selenium.png" alt="Selenium" maxHeight="80px" maxWidth="160px" objectFit="contain" />
+            </Box>
+            <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
+              <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/playwright.png" alt="Playwright" maxHeight="80px" maxWidth="160px" objectFit="contain" />
+            </Box>
+            <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
+              <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/chai.png" alt="Chai" maxHeight="80px" maxWidth="160px" objectFit="contain" />
+            </Box>
+          </Flex>
+        </Box>
       </Box>
-      <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
-        <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/puppeteer.png" alt="Puppeteer" maxHeight="80px" maxWidth="160px" objectFit="contain" />
-      </Box>
-      <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
-        <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/selenium.png" alt="Selenium" maxHeight="80px" maxWidth="160px" objectFit="contain" />
-      </Box>
-      <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
-        <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/playwright.png" alt="Playwright" maxHeight="80px" maxWidth="160px" objectFit="contain" />
-      </Box>
-      <Box width="160px" height="80px" display="flex" alignItems="center" justifyContent="center">
-        <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/chai.png" alt="Chai" maxHeight="80px" maxWidth="160px" objectFit="contain" />
-      </Box>
-    </Flex>
-  </Box>
-</Box>
       
       {/* Call to Action */}
       <Box py={16} bg="teal.500" color="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">
-            Ready to Eliminate Browser Fingerprinting?
+            Ready to Master Browser Stealth?
           </Heading>
           <Text fontSize="lg" mb={10} maxW="700px" mx="auto" color="white">
-            Start collecting consistent web data across all browsers and devices with our advanced user agent management platform.
-            Schedule a consultation with our solution architects to design your custom implementation.
+            Begin gathering reliable web data across all devices and browsers with our top-tier user agent control system. 
+            Book a session with our experts to tailor your solution.
           </Text>
           
           <Flex justify="center" gap={6} flexWrap="wrap">
@@ -352,7 +339,7 @@ function UserAgentsService() {
               as="a"
               href="/demo-request"
             >
-              Request Demo
+              Schedule Demo
             </Button>
             
             <Button
@@ -363,14 +350,13 @@ function UserAgentsService() {
               _hover={{ bg: "teal.600" }}
               as="a"
               href="https://cloud.roamingproxy.com/signup"
-              >
-               Start Free Trial
+            >
+              Try Free
             </Button>
           </Flex>
         </Box>
       </Box>
       
-    
       {/* Footer */}
       <Footer />
     </>
