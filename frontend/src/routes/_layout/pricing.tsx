@@ -17,6 +17,8 @@ function PricingPage() {
       description: "Perfect for enthusiasts and modest projects needing smooth data retrieval.",
       monthlyPrice: 49,
       annualPrice: 39,
+      monthlyHref: "https://buy.stripe.com/4gwg1C2by9Cs2Ry6op",
+      annualHref: "https://buy.stripe.com/3cs8za6rO6qggIobII",
       features: [
         "100,000 API requests monthly",
         "20 concurrent connections",
@@ -36,6 +38,8 @@ function PricingPage() {
       description: "Great for teams aiming to deepen their understanding with consistency.",
       monthlyPrice: 149,
       annualPrice: 119,
+      monthlyHref: "https://buy.stripe.com/6oEg1C3fCaGwgIo3cf",
+      annualHref: "https://buy.stripe.com/00g5mY8zW2a08bS9AC",
       popular: true,
       features: [
         "1,000,000 API requests monthly",
@@ -56,6 +60,8 @@ function PricingPage() {
       description: "Designed for data lovers and companies tackling intricate, large-volume tasks.",
       monthlyPrice: 475,
       annualPrice: 380,
+      monthlyHref: "https://buy.stripe.com/eVa02E7vS3e40JqcMQ",
+      annualHref: "https://buy.stripe.com/5kA3eQg2o6qgfEk005",
       features: [
         "5,000,000 API requests monthly",
         "200 concurrent connections",
@@ -259,16 +265,16 @@ function PricingPage() {
                     </Box>
                   )}
                   <Button
-                    colorScheme={plan.popular ? "red" : "gray"}
-                    variant={plan.popular ? "solid" : "outline"}
-                    size="lg"
-                    width="full"
-                    mb={6}
-                    as="a"
-                    href="/contact-sales"
-                  >
-                    {plan.customPricing ? "Reach Out to Sales" : "Choose This Plan"}
-                  </Button>
+  colorScheme={plan.popular ? "red" : "gray"}
+  variant={plan.popular ? "solid" : "outline"}
+  size="lg"
+  width="full"
+  mb={6}
+  as="a"
+  href={plan.customPricing ? "/contact-sales" : isAnnual ? plan.annualHref : plan.monthlyHref}
+>
+  {plan.customPricing ? "Reach Out to Sales" : "Choose This Plan"}
+</Button>
                   <Divider mb={4} />
                   <Text fontWeight="medium" mb={3}>What’s Included:</Text>
                   <List spacing={2} mb={6}>
