@@ -23,7 +23,7 @@ const Footer = () => {
               </Link>
             </Heading>
             <Text color="gray.400" fontSize="sm" mb={2}>
-              <Link href="https://cobaltdata.net" _hover={{ textDecoration: "none", color: "red.400" }}>
+              <Link href="https://cobaltdata.net" _hover={{ textDecoration: "none", color: "blue.400" }}>
                 Cobalt Data Network
               </Link>
             </Text>
@@ -161,7 +161,7 @@ const Footer = () => {
         <Flex justify="space-between" align="center" borderTop="1px solid" borderColor="gray.700" pt={6} flexWrap="wrap" gap={4}>
           <Text color="gray.400" fontSize="sm">
             © 2025 <Link href="https://roamingproxy.com" color="gray.200" _hover={{ color: "red.400" }}>Roaming Proxy</Link>,{" "}
-            <Link href="https://cobaltdata.net" color="gray.200" _hover={{ color: "red.400" }}>Cobalt Data Network</Link>. All rights reserved.
+            <Link href="https://cobaltdata.net" color="gray.200" _hover={{ color: "blue.400" }}>Cobalt Data Network</Link>. All rights reserved.
           </Text>
           <Flex gap={6}>
             <Link href="/privacy" color="gray.400" fontSize="sm" _hover={{ color: "red.600" }}>Privacy Policy</Link>
