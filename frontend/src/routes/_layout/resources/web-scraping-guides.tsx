@@ -9,33 +9,33 @@ export const Route = createFileRoute("/_layout/resources/web-scraping-guides")({
 
 function WebScrapingGuidesPage() {
   const guideCategories = [
-    { category: "Beginner Guides", guides: 12, downloads: "50K+", useCases: "Introduction to web scraping, setup tutorials, basic scraping concepts" },
-    { category: "Programming Languages", guides: 24, downloads: "85K+", useCases: "Python, JavaScript, Ruby, PHP, Java, and Go scraping implementations" },
-    { category: "Site-Specific Guides", guides: 35, downloads: "120K+", useCases: "E-commerce, social media, travel, real estate, and job site scraping" },
-    { category: "Advanced Techniques", guides: 18, downloads: "40K+", useCases: "Dynamic content, AJAX, headless browsers, anti-detection methods" },
-    { category: "Data Processing", guides: 15, downloads: "35K+", useCases: "Cleaning, parsing, structuring, and storing scraped data effectively" },
-    { category: "Legal & Ethical", guides: 8, downloads: "25K+", useCases: "Terms of service compliance, rate limiting, ethical scraping practices" }
+    { category: "Starter Manuals", guides: 12, downloads: "50K+", useCases: "Web scraping basics, initial setup, core extraction principles" },
+    { category: "Coding Languages", guides: 24, downloads: "85K+", useCases: "Scraping with Python, JavaScript, Ruby, PHP, Java, and Go" },
+    { category: "Platform-Specific Tutorials", guides: 35, downloads: "120K+", useCases: "Scraping e-commerce, social platforms, travel sites, real estate, and job boards" },
+    { category: "Expert Methods", guides: 18, downloads: "40K+", useCases: "Handling dynamic pages, AJAX calls, browser automation, evasion tactics" },
+    { category: "Data Handling", guides: 15, downloads: "35K+", useCases: "Refining, analyzing, organizing, and saving extracted data" },
+    { category: "Ethics & Compliance", guides: 8, downloads: "25K+", useCases: "Adhering to terms, managing request rates, responsible scraping" }
   ];
 
   const popularGuides = [
     { 
-      title: "Web Scraping with Python", 
-      description: "Comprehensive guide to building reliable scrapers with Python using libraries like BeautifulSoup, Requests, Scrapy, and Selenium", 
+      title: "Python Web Extraction", 
+      description: "In-depth tutorial on creating dependable scrapers in Python with tools like BeautifulSoup, Requests, Scrapy, and Selenium", 
       icon: "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/python.png" 
     },
     { 
-      title: "JavaScript Scraping Masterclass", 
-      description: "Learn how to scrape dynamic websites using JavaScript with Puppeteer, Cheerio, and other Node.js libraries for efficient data extraction", 
+      title: "JavaScript Extraction Essentials", 
+      description: "Master scraping interactive sites with JavaScript using Puppeteer, Cheerio, and Node.js tools for streamlined data collection", 
       icon: "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/node_js.png" 
     },
     { 
-      title: "Avoiding Blocks & Captchas", 
-      description: "Advanced techniques for maintaining scraper reliability, managing sessions, rotating proxies, and avoiding detection and blocks", 
+      title: "Stealth Scraping Strategies", 
+      description: "Proven methods to keep scrapers running smoothly, including session control, proxy rotation, and anti-block techniques", 
       icon: "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/kubernetes.png" 
     },
     { 
-      title: "Large-Scale Data Extraction", 
-      description: "Enterprise-level scraping architecture for handling distributed scrapers, parallel processing, and managing millions of data points", 
+      title: "Massive Data Harvesting", 
+      description: "Scalable scraping frameworks for managing distributed systems, parallel tasks, and processing vast datasets", 
       icon: "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/analytics.png" 
     }
   ];
@@ -46,27 +46,26 @@ function WebScrapingGuidesPage() {
       <Box py={16} bg="red.50" color="gray.800">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h1" size="2xl" textAlign="center" mb={8} fontWeight="medium">
-            Web Scraping Guides & Tutorials
+            Web Extraction Tutorials & Resources
           </Heading>
           <Text fontSize="xl" textAlign="center" mb={12} maxW="800px" mx="auto">
-            Comprehensive resources to help you master web scraping techniques,
-            from beginner concepts to advanced enterprise-scale implementations.
+            Detailed materials to guide you through web scraping skills, from foundational knowledge to sophisticated large-scale setups.
           </Text>
           
           <Flex justify="space-between" flexWrap="wrap" gap={6}>
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="red.600">Beginner Tutorials</Heading>
-              <Text>Start your web scraping journey with our beginner-friendly guides. Learn the fundamentals of HTML parsing, making HTTP requests, and extracting structured data from websites.</Text>
+              <Heading as="h3" size="md" color="red.600">Introductory Lessons</Heading>
+              <Text>Kick off your scraping adventure with beginner-oriented tutorials covering HTML parsing basics, HTTP requests, and pulling structured data from sites.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="red.600">Programming Recipes</Heading>
-              <Text>Ready-to-use code examples and recipes for web scraping in Python, JavaScript, Ruby, and other popular languages. Copy, paste, and adapt for your specific needs.</Text>
+              <Heading as="h3" size="md" color="red.600">Coding Blueprints</Heading>
+              <Text>Practical, adaptable code snippets for scraping in Python, JavaScript, Ruby, and beyond—ready to tweak for your projects.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="red.600">Advanced Techniques</Heading>
-              <Text>Take your scraping skills to the next level with guides on handling JavaScript-heavy sites, bypassing anti-bot measures, and building resilient enterprise-scale scrapers.</Text>
+              <Heading as="h3" size="md" color="red.600">Pro-Level Skills</Heading>
+              <Text>Elevate your expertise with lessons on tackling JavaScript-driven pages, dodging anti-scraping barriers, and crafting robust large-scale extractors.</Text>
             </VStack>
           </Flex>
         </Box>
@@ -76,40 +75,37 @@ function WebScrapingGuidesPage() {
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
-            Why Our Web Scraping Guides Stand Out
+            What Makes Our Extraction Tutorials Unique
           </Heading>
           
           <Grid templateColumns={{ base: "1fr", md: "1fr 1fr", lg: "1fr 1fr 1fr" }} gap={10} mt={10}>
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
                 <StatNumber color="red.600">100+</StatNumber>
-                <StatLabel>Detailed Tutorials</StatLabel>
+                <StatLabel>In-Depth Lessons</StatLabel>
               </Stat>
               <Text>
-                Access our library of over 100 comprehensive tutorials and guides
-                covering every aspect of web scraping technology and methodology.
+                Explore over 100 thorough lessons and resources tackling every facet of web extraction techniques and tools.
               </Text>
             </VStack>
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
                 <StatNumber color="red.600">95%</StatNumber>
-                <StatLabel>Implementation Success Rate</StatLabel>
+                <StatLabel>Success in Deployment</StatLabel>
               </Stat>
               <Text>
-                Our guides have a 95% success rate for implementation, with
-                step-by-step instructions tested across various environments and scenarios.
+                Our tutorials boast a 95% deployment success rate, with detailed, tested steps for diverse setups and cases.
               </Text>
             </VStack>
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
                 <StatNumber color="red.600">350K+</StatNumber>
-                <StatLabel>Monthly Downloads</StatLabel>
+                <StatLabel>Monthly Accesses</StatLabel>
               </Stat>
               <Text>
-                Join over 350,000 developers who download our guides and
-                code samples each month to power their data extraction projects.
+                Over 350,000 coders grab our tutorials and snippets monthly to fuel their data harvesting efforts.
               </Text>
             </VStack>
           </Grid>
@@ -120,7 +116,7 @@ function WebScrapingGuidesPage() {
       <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={12} fontWeight="medium">
-            Guide Categories
+            Tutorial Topics
           </Heading>
           
           <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={8}>
@@ -130,15 +126,15 @@ function WebScrapingGuidesPage() {
                   <StatLabel fontSize="lg" fontWeight="medium">{category.category}</StatLabel>
                   <Flex justify="space-between" align="center">
                     <StatNumber color="red.600">{category.guides}</StatNumber>
-                    <Text color="gray.500" fontSize="sm" fontWeight="normal">Guides</Text>
+                    <Text color="gray.500" fontSize="sm" fontWeight="normal">Lessons</Text>
                   </Flex>
                   <Flex justify="space-between" align="center" mt={1}>
                     <StatNumber color="red.400">{category.downloads}</StatNumber>
-                    <Text color="gray.500" fontSize="sm" fontWeight="normal">Downloads</Text>
+                    <Text color="gray.500" fontSize="sm" fontWeight="normal">Accesses</Text>
                   </Flex>
                 </Stat>
                 <Text fontSize="sm" color="gray.600">
-                  <Text as="span" fontWeight="bold">Includes:</Text> {category.useCases}
+                  <Text as="span" fontWeight="bold">Covers:</Text> {category.useCases}
                 </Text>
               </Box>
             ))}
@@ -150,54 +146,54 @@ function WebScrapingGuidesPage() {
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={4} fontWeight="medium">
-            Most Popular Guides
+            Top Tutorials
           </Heading>
           <Text fontSize="lg" textAlign="center" mb={12} maxW="700px" mx="auto">
-            Our most downloaded resources, featuring practical code examples and comprehensive tutorials
+            Our most sought-after resources, packed with actionable code and thorough instructions
           </Text>
           
           <Grid templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }} gap={8}>
             <Flex p={6} bg="gray.50" borderRadius="md" boxShadow="sm" align="flex-start">
               <Box w="50px" h="50px" mr={4} display="flex" alignItems="center" justifyContent="center">
-                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/python.png" alt="Python Guide" />
+                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/python.png" alt="Python Tutorial" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">Web Scraping with Python</Heading>
-                <Text color="gray.600" mb={3}>Comprehensive guide to building reliable scrapers with Python using libraries like BeautifulSoup, Requests, Scrapy, and Selenium</Text>
-                <Button leftIcon={<DownloadIcon />} colorScheme="" size="sm" variant="outline">Download Guide</Button>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">Python Web Extraction</Heading>
+                <Text color="gray.600" mb={3}>In-depth tutorial on creating dependable scrapers in Python with tools like BeautifulSoup, Requests, Scrapy, and Selenium</Text>
+                <Button leftIcon={<DownloadIcon />} colorScheme="" size="sm" variant="outline">Get Tutorial</Button>
               </Box>
             </Flex>
             
             <Flex p={6} bg="gray.50" borderRadius="md" boxShadow="sm" align="flex-start">
               <Box w="50px" h="50px" mr={4} display="flex" alignItems="center" justifyContent="center">
-                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/node_js.png" alt="JavaScript Guide" />
+                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/node_js.png" alt="JavaScript Tutorial" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">JavaScript Scraping Masterclass</Heading>
-                <Text color="gray.600" mb={3}>Learn how to scrape dynamic websites using JavaScript with Puppeteer, Cheerio, and other Node.js libraries for efficient data extraction</Text>
-                <Button leftIcon={<DownloadIcon />} colorScheme="" size="sm" variant="outline">Download Guide</Button>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">JavaScript Extraction Essentials</Heading>
+                <Text color="gray.600" mb={3}>Master scraping interactive sites with JavaScript using Puppeteer, Cheerio, and Node.js tools for streamlined data collection</Text>
+                <Button leftIcon={<DownloadIcon />} colorScheme="" size="sm" variant="outline">Get Tutorial</Button>
               </Box>
             </Flex>
             
             <Flex p={6} bg="gray.50" borderRadius="md" boxShadow="sm" align="flex-start">
               <Box w="50px" h="50px" mr={4} display="flex" alignItems="center" justifyContent="center">
-                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/selenium.png" alt="Anti-Detection Guide" />
+                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/selenium.png" alt="Stealth Tutorial" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">Avoiding Blocks & Captchas</Heading>
-                <Text color="gray.600" mb={3}>Advanced techniques for maintaining scraper reliability, managing sessions, rotating proxies, and avoiding detection and blocks</Text>
-                <Button leftIcon={<DownloadIcon />} colorScheme="" size="sm" variant="outline">Download Guide</Button>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">Stealth Scraping Strategies</Heading>
+                <Text color="gray.600" mb={3}>Proven methods to keep scrapers running smoothly, including session control, proxy rotation, and anti-block techniques</Text>
+                <Button leftIcon={<DownloadIcon />} colorScheme="" size="sm" variant="outline">Get Tutorial</Button>
               </Box>
             </Flex>
             
             <Flex p={6} bg="gray.50" borderRadius="md" boxShadow="sm" align="flex-start">
               <Box w="50px" h="50px" mr={4} display="flex" alignItems="center" justifyContent="center">
-                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/aws.png" alt="Enterprise Scraping" />
+                <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/aws.png" alt="Scale Tutorial" />
               </Box>
               <Box>
-                <Heading as="h3" size="md" mb={2} fontWeight="medium">Large-Scale Data Extraction</Heading>
-                <Text color="gray.600" mb={3}>Enterprise-level scraping architecture for handling distributed scrapers, parallel processing, and managing millions of data points</Text>
-                <Button leftIcon={<DownloadIcon />} colorScheme="" size="sm" variant="outline">Download Guide</Button>
+                <Heading as="h3" size="md" mb={2} fontWeight="medium">Massive Data Harvesting</Heading>
+                <Text color="gray.600" mb={3}>Scalable scraping frameworks for managing distributed systems, parallel tasks, and processing vast datasets</Text>
+                <Button leftIcon={<DownloadIcon />} colorScheme="" size="sm" variant="outline">Get Tutorial</Button>
               </Box>
             </Flex>
           </Grid>
@@ -208,58 +204,58 @@ function WebScrapingGuidesPage() {
       <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={8} fontWeight="medium">
-            What's Inside Our Guides
+            What Our Tutorials Offer
           </Heading>
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="red.600">Educational Content</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.600">Learning Materials</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Step-by-Step Tutorials</Text> - Clear instructions with screenshots and explanations for every stage</Text>
+                  <Text><Text as="span" fontWeight="bold">Detailed Walkthroughs</Text> - Clear, illustrated steps for every process</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Production-Ready Code</Text> - Fully tested code examples that you can implement immediately</Text>
+                  <Text><Text as="span" fontWeight="bold">Ready-to-Deploy Code</Text> - Pre-tested snippets for instant use</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Multiple Languages</Text> - Examples in Python, JavaScript, Ruby, PHP, and other popular languages</Text>
+                  <Text><Text as="span" fontWeight="bold">Varied Languages</Text> - Code samples in Python, JavaScript, Ruby, PHP, and more</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Deep Explanations</Text> - Understanding of how web scraping works, not just copy-paste solutions</Text>
+                  <Text><Text as="span" fontWeight="bold">Thorough Insights</Text> - Insight into scraping mechanics beyond just code</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Best Practices</Text> - Industry standards for efficient, ethical, and reliable data extraction</Text>
+                  <Text><Text as="span" fontWeight="bold">Top Practices</Text> - Proven standards for efficient, ethical extraction</Text>
                 </ListItem>
               </List>
             </Box>
             
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="red.600">Technical Coverage</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.600">Tech Coverage</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Library & Framework Tutorials</Text> - Scrapy, BeautifulSoup, Selenium, Puppeteer, and more</Text>
+                  <Text><Text as="span" fontWeight="bold">Toolset Lessons</Text> - Guides on Scrapy, BeautifulSoup, Selenium, Puppeteer, and others</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Anti-Detection Strategies</Text> - Advanced techniques for avoiding blocks and maintaining access</Text>
+                  <Text><Text as="span" fontWeight="bold">Stealth Tactics</Text> - Sophisticated ways to bypass restrictions and stay operational</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Proxy Integration</Text> - How to effectively use residential, datacenter, and rotating proxies</Text>
+                  <Text><Text as="span" fontWeight="bold">Proxy Use</Text> - Effective integration of residential, datacenter, and rotating proxies</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Data Processing</Text> - Techniques for cleaning, structuring, and storing scraped data</Text>
+                  <Text><Text as="span" fontWeight="bold">Data Refinement</Text> - Methods for cleaning, structuring, and storing harvested data</Text>
                 </ListItem>
                 <ListItem display="flex">
                   <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
-                  <Text><Text as="span" fontWeight="bold">Legal Guidelines</Text> - Ethical scraping practices and legal considerations for data collection</Text>
+                  <Text><Text as="span" fontWeight="bold">Compliance Tips</Text> - Responsible practices and legal considerations for scraping</Text>
                 </ListItem>
               </List>
             </Box>
@@ -271,31 +267,27 @@ function WebScrapingGuidesPage() {
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading as="h2" size="xl" textAlign="center" mb={12} fontWeight="medium">
-            Developer Testimonials
+            Coder Feedback
           </Heading>
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="red.600">From Beginner to Production in Two Weeks</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.600">From Novice to Live in Two Weeks</Heading>
               <Text mb={4}>
-                "I had zero scraping experience when I started with the Python web scraping guide. 
-                The step-by-step approach was exactly what I needed. Within two weeks, I had a production-ready 
-                scraper monitoring competitor prices for our e-commerce business, saving us countless hours of manual work."
+                "I started with no scraping knowledge and picked up the Python extraction tutorial. Its clear steps were perfect. In two weeks, I built a live scraper tracking rival prices for our online store, cutting out tons of manual effort."
               </Text>
               <Text fontStyle="italic" fontSize="sm" color="gray.600">
-                — Michael T., E-commerce Developer
+                — Alex R., Online Retail Coder
               </Text>
             </Box>
             
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="red.600">Solved Our Enterprise Scalability Issues</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.600">Fixed Our Scaling Challenges</Heading>
               <Text mb={4}>
-                "The large-scale data extraction guide was instrumental in helping us redesign our scraping 
-                infrastructure. The distributed architecture patterns they outlined helped us scale from 
-                processing thousands to millions of pages daily while maintaining high reliability and low costs."
+                "The massive data harvesting tutorial was key to overhauling our scraping setup. Its distributed system designs let us jump from thousands to millions of pages daily, keeping reliability high and costs low."
               </Text>
               <Text fontStyle="italic" fontSize="sm" color="gray.600">
-                — Sarah K., Lead Data Engineer
+                — Jamie L., Senior Data Specialist
               </Text>
             </Box>
           </Grid>
@@ -306,43 +298,43 @@ function WebScrapingGuidesPage() {
       <Box py={16} bg="red.50">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={8} fontWeight="medium">
-            Resource Library Overview
+            Tutorial Collection Snapshot
           </Heading>
           <Text fontSize="lg" mb={12} maxW="700px" mx="auto">
-            Our comprehensive collection of web scraping resources covers all aspects of modern data extraction
+            Our extensive set of extraction resources spans all modern data collection needs
           </Text>
           
           <Box bg="white" p={6} borderRadius="md" boxShadow="md">
             <SimpleGrid columns={{ base: 2, md: 3, lg: 6 }} spacing={4} mt={8}>
               <VStack>
-                <Text fontWeight="bold" color="red.600">Total Guides</Text>
+                <Text fontWeight="bold" color="red.600">Total Tutorials</Text>
                 <Text>115+</Text>
-                <Text>Comprehensive</Text>
+                <Text>Detailed</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="red.600">Code Examples</Text>
+                <Text fontWeight="bold" color="red.600">Code Snippets</Text>
                 <Text>2,500+</Text>
-                <Text>Ready to Use</Text>
+                <Text>Deployable</Text>
               </VStack>
               <VStack>
                 <Text fontWeight="bold" color="red.600">Languages</Text>
                 <Text>8</Text>
-                <Text>Programming</Text>
+                <Text>Coding Options</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="red.600">Libraries</Text>
+                <Text fontWeight="bold" color="red.600">Tools</Text>
                 <Text>25+</Text>
-                <Text>Covered</Text>
+                <Text>Included</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="red.600">Monthly Updates</Text>
+                <Text fontWeight="bold" color="red.600">Monthly Additions</Text>
                 <Text>12-15</Text>
-                <Text>New Resources</Text>
+                <Text>Fresh Content</Text>
               </VStack>
               <VStack>
-                <Text fontWeight="bold" color="red.600">User Base</Text>
+                <Text fontWeight="bold" color="red.600">Community</Text>
                 <Text>150K+</Text>
-                <Text>Active Developers</Text>
+                <Text>Active Coders</Text>
               </VStack>
             </SimpleGrid>
           </Box>
@@ -353,15 +345,14 @@ function WebScrapingGuidesPage() {
       <Box py={16} bg="red.600" color="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">
-            Master Web Scraping Today
+            Become a Scraping Expert Now
           </Heading>
           <Text fontSize="lg" mb={10} maxW="700px" mx="auto" color="white">
-            Download our free comprehensive guides and start building
-            powerful web scrapers for your data extraction needs
+            Access our free, in-depth tutorials to start crafting effective web extractors for your data needs
           </Text>
           
           <Flex justify="center" gap={6} flexWrap="wrap">
-          <Button
+            <Button
               size="lg"
               bg="white"
               color="red.500"
@@ -369,7 +360,7 @@ function WebScrapingGuidesPage() {
               as="a"
               href="/demo-request"
             >
-              Request Demo
+              Schedule Demo
             </Button>
             
             <Button
@@ -381,7 +372,7 @@ function WebScrapingGuidesPage() {
               as="a"
               href="https://cloud.roamingproxy.com/signup"
             >
-              Start Free Trial
+              Begin Free Trial
             </Button>
           </Flex>
         </Box>
@@ -391,7 +382,7 @@ function WebScrapingGuidesPage() {
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h3" size="lg" mb={8} fontWeight="medium">
-            Essential Web Scraping Tools
+            Key Extraction Tools
           </Heading>
           <Flex justify="center" gap={8} flexWrap="wrap">
             <Image src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/python.png" alt="Python" boxSize="50px" />
