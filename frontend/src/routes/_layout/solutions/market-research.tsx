@@ -54,17 +54,17 @@ function MarketResearchPage() {
           
           <Flex justify="space-between" flexWrap="wrap" gap={6}>
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Reveal Market Potential</Heading>
+              <Heading as="h3" size="md" color="red.600">Reveal Market Potential</Heading>
               <Text>Spot new trends, overlooked niches, and expansion possibilities ahead of rivals by methodically pulling data from diverse industry channels.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Watch Competitors</Heading>
+              <Heading as="h3" size="md" color="red.600">Watch Competitors</Heading>
               <Text>Follow rival activities in product lines, pricing approaches, marketing initiatives, and industry placement with streamlined data retrieval.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Support Strategic Choices</Heading>
+              <Heading as="h3" size="md" color="red.600">Support Strategic Choices</Heading>
               <Text>Ground your business moves in thorough market insights instead of guesses, minimizing uncertainty and boosting trust in your path forward.</Text>
             </VStack>
           </Flex>
@@ -83,7 +83,7 @@ function MarketResearchPage() {
               <Box key={index} p={6} bg="gray.50" borderRadius="md" boxShadow="sm">
                 <Stat mb={4}>
                   <StatLabel fontSize="lg" fontWeight="medium">{industry.industry}</StatLabel>
-                  <StatNumber color="blue.600">{industry.growth}%</StatNumber>
+                  <StatNumber color="red.600">{industry.growth}%</StatNumber>
                   <StatHelpText>
                     <StatArrow type="increase" />
                     Yearly Research Expansion
@@ -160,7 +160,7 @@ function MarketResearchPage() {
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="blue.600">E-Commerce Giant Boosts Sales by 32%</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.600">E-Commerce Giant Boosts Sales by 32%</Heading>
               <Text mb={4}>
                 A top e-commerce firm leveraged our proxy network to study pricing trends across 50+ rival sites. 
                 By refining their pricing tactics with these insights, they saw a 32% rise in sales conversions while 
@@ -173,7 +173,7 @@ function MarketResearchPage() {
             </Box>
             
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="blue.600">Finance Firm Spots Investment Potential</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.600">Finance Firm Spots Investment Potential</Heading>
               <Text mb={4}>
                 A financial investment group used our data extraction tools to track innovation trends in growing tech fields. 
                 This continuous analysis uncovered an early market trend, leading to an investment that yielded 47% returns in 18 months.
@@ -216,9 +216,9 @@ function MarketResearchPage() {
         <Box textAlign="center">
           <Button
             size="lg"
-            bg="blue.600"
+            bg="red.600"
             color="white"
-            _hover={{ bg: "blue.500" }}
+            _hover={{ bg: "red.500" }}
             mb={4}
             as="a"
             href="/demo-request"

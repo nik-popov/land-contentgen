@@ -28,23 +28,23 @@ function LandingPage() {
         </Heading>
         <Flex justify="space-around" flexWrap="wrap" maxW="1200px" mx="auto" px={4}>
           <VStack textAlign="center" p={4} minW="150px" spacing={2}>
-            <Text fontSize="4xl" fontWeight="bold" color="blue.600">200+</Text>
+            <Text fontSize="4xl" fontWeight="bold" color="red.600">200+</Text>
             <Text fontSize="lg">Nations Covered</Text>
           </VStack>
           <VStack textAlign="center" p={4} minW="150px" spacing={2}>
-            <Text fontSize="4xl" fontWeight="bold" color="blue.600">99.8%</Text>
+            <Text fontSize="4xl" fontWeight="bold" color="red.600">99.8%</Text>
             <Text fontSize="lg">Availability</Text>
           </VStack>
           <VStack textAlign="center" p={4} minW="150px" spacing={2}>
-            <Text fontSize="4xl" fontWeight="bold" color="blue.600">24/7</Text>
+            <Text fontSize="4xl" fontWeight="bold" color="red.600">24/7</Text>
             <Text fontSize="lg">Customer Support</Text>
           </VStack>
           <VStack textAlign="center" p={4} minW="150px" spacing={2}>
-            <Text fontSize="4xl" fontWeight="bold" color="blue.600">15M+</Text>
+            <Text fontSize="4xl" fontWeight="bold" color="red.600">15M+</Text>
             <Text fontSize="lg">IP Addresses</Text>
           </VStack>
           <VStack textAlign="center" p={4} minW="150px" spacing={2}>
-            <Text fontSize="4xl" fontWeight="bold" color="blue.600">Unlimited</Text>
+            <Text fontSize="4xl" fontWeight="bold" color="red.600">Unlimited</Text>
             <Text fontSize="lg">Bandwidth</Text>
           </VStack>
         </Flex>
@@ -221,7 +221,7 @@ function LandingPage() {
       </Box>
 
       {/* Call to Action */}
-      <Box py={16} bg="blue.600" color="white">
+      <Box py={16} bg="red.600" color="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">
             Ready to Turn Web Data into Powerful APIs?
@@ -235,7 +235,7 @@ function LandingPage() {
             <Button
               size="lg"
               bg="white"
-              color="blue.600"
+              color="red.600"
               _hover={{ bg: "gray.200" }}
               as="a"
               href="/demo-request"
@@ -248,7 +248,7 @@ function LandingPage() {
               variant="outline"
               borderColor="white"
               color="white"
-              _hover={{ bg: "white", color: "blue.600" }}
+              _hover={{ bg: "white", color: "red.600" }}
               as="a"
               href="/contact-sales"
             >

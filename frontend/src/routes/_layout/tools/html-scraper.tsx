@@ -55,17 +55,17 @@ function HTMLScraperPage() {
           
           <Flex justify="space-between" flexWrap="wrap" gap={6}>
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Dependable Data Retrieval</Heading>
+              <Heading as="h3" size="md" color="red.600">Dependable Data Retrieval</Heading>
               <Text>Collect organized data from any site with adaptive selectors that adjust to layout changes. Our smart scraping manages dynamic content, authentication, and request limits.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Developer-Centric APIs</Heading>
+              <Heading as="h3" size="md" color="red.600">Developer-Centric APIs</Heading>
               <Text>Seamlessly incorporate web data into your apps with RESTful APIs, webhooks, and tailored endpoints, delivered in JSON, CSV, or XML with thorough guides.</Text>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
-              <Heading as="h3" size="md" color="blue.600">Robust Infrastructure</Heading>
+              <Heading as="h3" size="md" color="red.600">Robust Infrastructure</Heading>
               <Text>Expand your data collection with our high-capacity platform built for consistency, availability, and performance, supporting millions of requests with retries and caching.</Text>
             </VStack>
           </Flex>
@@ -82,7 +82,7 @@ function HTMLScraperPage() {
           <Grid templateColumns={{ base: "1fr", md: "1fr 1fr", lg: "1fr 1fr 1fr" }} gap={10} mt={10}>
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="blue.600">85%</StatNumber>
+                <StatNumber color="red.600">85%</StatNumber>
                 <StatLabel>Time Savings in Development</StatLabel>
               </Stat>
               <Text>
@@ -92,7 +92,7 @@ function HTMLScraperPage() {
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="blue.600">99.9%</StatNumber>
+                <StatNumber color="red.600">99.9%</StatNumber>
                 <StatLabel>Service Availability</StatLabel>
               </Stat>
               <Text>
@@ -102,7 +102,7 @@ function HTMLScraperPage() {
             
             <VStack align="flex-start" spacing={4} bg="gray.50" p={6} borderRadius="md">
               <Stat>
-                <StatNumber color="blue.600">3x</StatNumber>
+                <StatNumber color="red.600">3x</StatNumber>
                 <StatLabel>Quicker Data Adoption</StatLabel>
               </Stat>
               <Text>
@@ -125,7 +125,7 @@ function HTMLScraperPage() {
               <Box key={index} p={6} bg="white" borderRadius="md" boxShadow="sm">
                 <Stat mb={4}>
                   <StatLabel fontSize="lg" fontWeight="medium">{industry.industry}</StatLabel>
-                  <StatNumber color="blue.600">{industry.growth}%</StatNumber>
+                  <StatNumber color="red.600">{industry.growth}%</StatNumber>
                   <StatHelpText>
                     <StatArrow type="increase" />
                     Usage Expansion
@@ -203,52 +203,52 @@ function HTMLScraperPage() {
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="blue.600">Data Extraction Tools</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.600">Data Extraction Tools</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">CSS & XPath Targeting</Text> - Select specific elements accurately with standard or custom queries</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Dynamic Rendering</Text> - Retrieve data from interactive sites using headless browser capabilities</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Login Support</Text> - Access restricted content with cookie management, headers, and authentication flows</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Multi-Page Navigation</Text> - Seamlessly crawl paginated content with tailored navigation rules</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Data Formatting</Text> - Refine, standardize, and organize extracted data into your desired structure</Text>
                 </ListItem>
               </List>
             </Box>
             
             <Box p={8} bg="white" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={5} color="blue.600">Developer Tools</Heading>
+              <Heading as="h3" size="md" mb={5} color="red.600">Developer Tools</Heading>
               <List spacing={3}>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">REST API Access</Text> - Connect with any tech stack via our standardized REST API with detailed documentation</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Real-Time Webhooks</Text> - Get instant alerts for new data availability or changes in scraping patterns</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">SDK Support</Text> - Accelerate integration with SDKs for Python, Node.js, PHP, Java, and Ruby</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">No-Code Builder</Text> - Design extraction rules using our intuitive visual tool without complex coding</Text>
                 </ListItem>
                 <ListItem display="flex">
-                  <ListIcon as={CheckCircleIcon} color="blue.600" mt={1} />
+                  <ListIcon as={CheckCircleIcon} color="red.600" mt={1} />
                   <Text><Text as="span" fontWeight="bold">Detailed Guides</Text> - Start quickly with in-depth tutorials, sample code, and API references</Text>
                 </ListItem>
               </List>
@@ -266,7 +266,7 @@ function HTMLScraperPage() {
           
           <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={8}>
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="blue.600">E-commerce Leader Boosts Market Position</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.600">E-commerce Leader Boosts Market Position</Heading>
               <Text mb={4}>
                 A top e-commerce platform adopted our HTML scraper APIs to track pricing for over 12,000 products daily. 
                 Their automated pricing system drove a 23% rise in conversions and an 18% revenue increase in just one quarter.
@@ -277,7 +277,7 @@ function HTMLScraperPage() {
             </Box>
             
             <Box p={8} bg="gray.50" borderRadius="md" boxShadow="sm">
-              <Heading as="h3" size="md" mb={4} color="blue.600">Real Estate Startup Scales Coverage</Heading>
+              <Heading as="h3" size="md" mb={4} color="red.600">Real Estate Startup Scales Coverage</Heading>
               <Text mb={4}>
                 A real estate tech company used our HTML scraper APIs to compile listings from over 200 sources, growing their database by 340% and slashing data collection costs by 67% compared to manual methods.
               </Text>
@@ -320,7 +320,7 @@ function HTMLScraperPage() {
       </Box>
       
       {/* Call to Action */}
-      <Box py={16} bg="blue.600" color="white">
+      <Box py={16} bg="red.600" color="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">
             Ready to Unlock Web Data with APIs?
@@ -334,7 +334,7 @@ function HTMLScraperPage() {
             <Button
               size="lg"
               bg="white"
-              color="blue.600"
+              color="red.600"
               _hover={{ bg: "gray.100" }}
               as="a"
               href="/demo-request"
