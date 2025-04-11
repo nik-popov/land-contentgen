@@ -87,6 +87,10 @@ function CompliancePage() {
               2. Data Protection & Privacy
             </Heading>
             <Text fontSize="md" mb={4}>
+              We retain analytics data for up to 2 years (per Google Analytics cookies), billing information for 7 years per tax laws, 
+              and user credentials until account deletion unless legally required otherwise.
+            </Text>
+            <Text fontSize="md" mb={4}>
               We implement robust security measures to protect user data, ensuring compliance with GDPR, CCPA, 
               and other privacy laws. Our privacy policies detail how we collect, store, and use personal information, 
               and we are committed to transparency in our data handling practices.

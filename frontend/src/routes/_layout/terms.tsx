@@ -67,6 +67,9 @@ function TermsPage() {
               legal age to form a binding contract with us, or that you have the consent of a parent or legal guardian.
             </Text>
             <Text fontSize="md" mb={4}>
+            By using the Website, you consent to data processing as outlined in our Privacy and Cookie Policies, which you can withdraw at any time.
+          </Text>
+            <Text fontSize="md" mb={4}>
               You may only use the Website in accordance with the terms and conditions set out in this agreement. Any use of the 
               Website that violates the terms will result in termination of your access to the Services.
             </Text>

@@ -266,6 +266,10 @@ function PrivacyPolicyPage() {
               5. Your Privacy Rights
             </Heading>
             <Text fontSize="md" mb={4}>
+            California residents can opt out of the sale or sharing of personal information for targeted 
+            advertising via our cookie consent tool or by emailing privacy@roamingproxy.com.
+          </Text>
+            <Text fontSize="md" mb={4}>
               Depending on your location, you may have certain rights regarding your personal information. These may include:
             </Text>
             <VStack align="start" spacing={3} pl={4} mb={4} w="full">
@@ -496,10 +500,14 @@ function PrivacyPolicyPage() {
             <Heading as="h2" size="lg" fontWeight="medium" mb={4}>
               11. Cookies and Similar Technologies
             </Heading>
+
             <Text fontSize="md" mb={4}>
               We use cookies and similar tracking technologies to track activity on our Website and store certain information. 
               Cookies are small text files that are stored on your device when you visit our Website. They help us recognize 
               your browser and capture certain information.
+            </Text>
+            <Text fontSize="md" mb={4}>
+              Non-essential cookies (e.g., analytics, advertising) are disabled by default and only activated upon your explicit consent via our cookie banner.
             </Text>
             <Text fontSize="md" mb={4}>
               We use the following types of cookies:
