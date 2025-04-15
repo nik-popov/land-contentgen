@@ -29,7 +29,7 @@ function LandingPage() {
         <Flex justify="space-around" flexWrap="wrap" maxW="1200px" mx="auto" px={4}>
           <VStack textAlign="center" p={4} minW="150px" spacing={2}>
             <Text fontSize="4xl" fontWeight="bold" color="red.600">200+</Text>
-            <Text fontSize="lg">Nations Covered</Text>
+            <Text fontSize="lg">Locations Covered</Text>
           </VStack>
           <VStack textAlign="center" p={4} minW="150px" spacing={2}>
             <Text fontSize="4xl" fontWeight="bold" color="red.600">99.8%</Text>
