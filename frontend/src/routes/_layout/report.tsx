@@ -423,7 +423,7 @@ function WhistleblowerReportPage() {
               Alternative Reporting Methods
             </Heading>
             <VStack align="start" spacing={2}>
-              <Text><strong>Phone:</strong> +1 (855) 440-2242</Text>
+              <Text><strong>Phone:</strong> +1 ‪(917) 275-7922‬</Text>
               <Text><strong>Email:</strong> privacy@roamingproxy.com</Text>
               <Text><strong>Mail:</strong> 99 Wall St Suite 5660, NY 10005</Text>
             </VStack>

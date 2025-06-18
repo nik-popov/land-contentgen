@@ -19,7 +19,7 @@ function ContactPage() {
     {
       city: "New York",
       address: "500 7th Avenue, 8th Floor, New York, NY 10018",
-      phone: "+1 (855) 440-2242",
+      phone: "+1 ‪(917) 275-7922‬",
       email: "nyc@roamingproxy.com"
     },
     {
@@ -68,7 +68,7 @@ function ContactPage() {
               <PhoneIcon boxSize={6} color="red.600" />
               <Heading as="h3" size="md" color="red.600">Call Us</Heading>
               <Text>Speak directly with our team during business hours.</Text>
-              <Link href="tel:+18554402242" color="red.600">+1 (855) 440-2242</Link>
+              <Link href="tel:+19172757922‬" color="red.600">+1 ‪(917) 275-7922‬</Link>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
@@ -140,7 +140,7 @@ function ContactPage() {
               </Text>
               <Button 
                 as="a"
-                href="tel:+18554402242"
+                href="tel:+19172757922‬"
                 colorScheme="blue" 
                 size="lg"
                 width="full"
@@ -194,7 +194,7 @@ function ContactPage() {
                   </Button>
                   <Button 
                     as="a"
-                    href="tel:+18554402242"
+                    href="tel:+19172757922‬"
                     colorScheme="red" 
                     variant="link" 
                     rightIcon={<PhoneIcon />}
@@ -270,7 +270,7 @@ function ContactPage() {
             
             <Button
               as="a"
-              href="tel:+18554402242"
+              href="tel:+19172757922‬"
               size="lg"
               variant="outline"
               borderColor="white"
