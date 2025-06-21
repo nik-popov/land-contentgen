@@ -381,7 +381,7 @@ function SupportCenterPage() {
                 </Button>
                 <Divider my={2} />
                 <Button leftIcon={<PhoneIcon />} colorScheme="red" variant="outline" size="md">
-                  +1 ‪(917) 275-7922‬
+                  +1 ‪(833) 435-3873‬
                 </Button>
               </VStack>
             </Box>

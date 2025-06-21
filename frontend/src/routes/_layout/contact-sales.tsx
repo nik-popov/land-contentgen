@@ -368,7 +368,7 @@ function SalesContactPage() {
               <Box>
                 <Text fontWeight="medium">Call Us Directly</Text>
                 <Text fontSize="sm" color="gray.600">
-    <a href="tel:+19172757922‬">+1 ‪(917) 275-7922‬</a>
+    <a href="tel:+18334353873‬">+1 ‪(833) 435-3873‬</a>
   </Text>
               </Box>
             </Box>
