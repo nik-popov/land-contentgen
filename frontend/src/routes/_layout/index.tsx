@@ -1,7 +1,7 @@
 import { Box, Flex, Grid, Heading, Image, Text, VStack, Button, Link } from "@chakra-ui/react";
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import HeroSection from '../../components/HeroSection';
-import Footer from '../../components/Common/Footer'; // Import the new Footer component
+import Footer from '../../components/Common/Footer';
 
 export const Route = createFileRoute("/_layout/")({
   component: LandingPage,
@@ -12,46 +12,46 @@ function LandingPage() {
   return (
     <Box>
       <HeroSection
-        title="Your Portal to Effortless Web Connectivity"
-        subtitle="SaaS proxy services crafted for large-scale data handling, web crawling, AI model training, and more."
+        title="Seamless Global Web Access with Roaming Proxy"
+        subtitle="Unlock the web with our HTTPS proxy network, optimized for web scraping, data collection, and AI-driven insights."
         ctas={[
-          { text: "Begin Now", link: "/demo-request" },
-          { text: "Try for Free", link: "https://buy.stripe.com/4gwg1C2by9Cs2Ry6op" },
+          { text: "Get Started", link: "/signup" },
+          { text: "Request Demo", link: "/demo" },
         ]}
         bgImage="https://images.unsplash.com/photo-1625685554528-2a0b517e094c"
       />
       
-      {/* Section 3: Proxy Network Coverage for Web Scraping */}
-      <Box py={16} bg="red.50" color="gray.800">
+      {/* Section 3: Proxy Network Coverage */}
+      <Box py={16} bg="blue.50" color="gray.800">
         <Heading as="h2" size="2xl" textAlign="center" mb={10} fontWeight="medium">
-          Worldwide Proxy Network for Web Crawling
+          Global Roaming Proxy Network
         </Heading>
         <Flex justify="space-around" flexWrap="wrap" maxW="1200px" mx="auto" px={4}>
           <VStack textAlign="center" p={4} minW="150px" spacing={2}>
-            <Text fontSize="4xl" fontWeight="bold" color="red.600">200+</Text>
-            <Text fontSize="lg">Locations Covered</Text>
+            <Text fontSize="4xl" fontWeight="bold" color="blue.600">195+</Text>
+            <Text fontSize="lg">Countries Covered</Text>
           </VStack>
           <VStack textAlign="center" p={4} minW="150px" spacing={2}>
-            <Text fontSize="4xl" fontWeight="bold" color="red.600">99.8%</Text>
-            <Text fontSize="lg">Availability</Text>
+            <Text fontSize="4xl" fontWeight="bold" color="blue.600">99.9%</Text>
+            <Text fontSize="lg">Uptime Guarantee</Text>
           </VStack>
           <VStack textAlign="center" p={4} minW="150px" spacing={2}>
-            <Text fontSize="4xl" fontWeight="bold" color="red.600">24/7</Text>
-            <Text fontSize="lg">Customer Support</Text>
+            <Text fontSize="4xl" fontWeight="bold" color="blue.600">24/7</Text>
+            <Text fontSize="lg">Expert Support</Text>
           </VStack>
           <VStack textAlign="center" p={4} minW="150px" spacing={2}>
-            <Text fontSize="4xl" fontWeight="bold" color="red.600">15M+</Text>
-            <Text fontSize="lg">IP Addresses</Text>
+            <Text fontSize="4xl" fontWeight="bold" color="blue.600">12M+</Text>
+            <Text fontSize="lg">Dynamic IPs</Text>
           </VStack>
           <VStack textAlign="center" p={4} minW="150px" spacing={2}>
-            <Text fontSize="4xl" fontWeight="bold" color="red.600">Unlimited</Text>
-            <Text fontSize="lg">Bandwidth</Text>
+            <Text fontSize="4xl" fontWeight="bold" color="blue.600">Unlimited</Text>
+            <Text fontSize="lg">Data Transfer</Text>
           </VStack>
         </Flex>
       </Box>
       
       {/* Cloud Provider Links */}
-      <Box py={10} bg="red.50">
+      <Box py={10} bg="blue.50">
         <Flex justify="center" gap={8} flexWrap="wrap">
           <Link href="https://aws.amazon.com" isExternal>
             <Image
@@ -91,156 +91,142 @@ function LandingPage() {
         </Flex>
       </Box>
 
-      {/* Section 2: Proxy Features for Web Scraping */}
+      {/* Section 2: Proxy Features */}
       <Box py={16} bg="white" maxW="1200px" mx="auto" px={4}>
         <Heading as="h2" size="2xl" textAlign="center" mb={10} color="gray.800" fontWeight="medium" pb="5">
-          Cutting-Edge Proxy Capabilities for Web Crawling
+          Advanced Features for Effortless Web Scraping
         </Heading>
         <Grid templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }} gap={8}>
           <VStack p={6} bg="gray.50" borderRadius="md" spacing={4} align="start">
             <Heading as="h3" size="md" color="gray.800" fontWeight="medium" textAlign="left">
-              Enhanced Security
+              Robust Security
             </Heading>
             <Text color="gray.600">
-              Advanced encryption paired with secure authentication protocols
+              Military-grade encryption and secure protocols for safe data access
             </Text>
           </VStack>
           <VStack p={6} bg="gray.50" borderRadius="md" spacing={4} align="start">
             <Heading as="h3" size="md" color="gray.800" fontWeight="medium" textAlign="left">
-              Swift Data Delivery
+              Lightning-Fast Speeds
             </Heading>
             <Text color="gray.600">
-              High-performance systems for rapid information retrieval
+              Optimized infrastructure for rapid data extraction
             </Text>
           </VStack>
           <VStack p={6} bg="gray.50" borderRadius="md" spacing={4} align="start">
             <Heading as="h3" size="md" color="gray.800" fontWeight="medium" textAlign="left">
-              Cloud Compatibility
+              Cloud Integration
             </Heading>
             <Text color="gray.600">
-              Smooth integration with leading cloud ecosystems
+              Seamless compatibility with major cloud platforms
             </Text>
           </VStack>
           <VStack p={6} bg="gray.50" borderRadius="md" spacing={4} align="start">
             <Heading as="h3" size="md" color="gray.800" fontWeight="medium" textAlign="left">
-              Smart Traffic Routing
+              Dynamic IP Roaming
             </Heading>
             <Text color="gray.600">
-              Sophisticated algorithms for stable connection handling
+              Intelligent IP rotation to bypass anti-bot defenses
             </Text>
           </VStack>
           <VStack p={6} bg="gray.50" borderRadius="md" spacing={4} align="start">
             <Heading as="h3" size="md" color="gray.800" fontWeight="medium" textAlign="left">
-              Regulatory Compliance
+              Ethical Compliance
             </Heading>
             <Text color="gray.600">
-              Adheres to ISO 27001, SOC 2, and GDPR standards
+              Fully compliant with GDPR, ISO 27001, and SOC 2 standards
             </Text>
           </VStack>
           <VStack p={6} bg="gray.50" borderRadius="md" spacing={4} align="start">
             <Heading as="h3" size="md" color="gray.800" fontWeight="medium" textAlign="center">
-              Flexible Web Crawling
+              Scalable Scraping
             </Heading>
             <Text color="gray.600">
-              Budget-friendly scraping solutions for enterprises of all scales
+              Cost-effective solutions for businesses of all sizes
             </Text>
           </VStack>
         </Grid>
       </Box>
 
-      <Box py={16} bg="red.50" maxW="1200px" mx="auto" px={4}>
+      <Box py={16} bg="blue.50" maxW="1200px" mx="auto" px={4}>
         <Heading as="h2" size="2xl" textAlign="center" mb={10} color="gray.800" fontWeight="medium">
-          Tailored Web Scraping Solutions for Businesses
+          Empower Your Business with Roaming Proxy
         </Heading>
         <Text fontSize="lg" color="gray.600" textAlign="center" mb={8} maxW="800px" mx="auto">
-          Our advanced proxy infrastructure supports a variety of business use cases, 
-          enabling organizations to extract valuable insights for informed decision-making.
+          Our HTTPS proxy network is built to support diverse business needs, delivering reliable data for strategic growth and innovation.
         </Text>
         <Grid templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }} gap={8}>
           <VStack p={6} bg="gray.50" borderRadius="md" spacing={4} align="start">
             <Heading as="h3" size="md" color="gray.800" fontWeight="medium">
-              Competitive Analysis
+              Market Intelligence
             </Heading>
             <Text color="gray.600">
-              Gather extensive market intelligence through automated crawling. Stay ahead by 
-              monitoring industry trends, consumer preferences, and emerging opportunities with 
-              reliable access to global data sources.
+              Extract global market trends and competitor data to drive strategic decisions with reliable proxy access.
             </Text>
           </VStack>
           <VStack p={6} bg="gray.50" borderRadius="md" spacing={4} align="start">
             <Heading as="h3" size="md" color="gray.800" fontWeight="medium">
-              AI Data Collection
+              AI Training Data
             </Heading>
             <Text color="gray.600">
-              Create comprehensive datasets for machine learning with efficient web crawling. 
-              Our proxies enable researchers to ethically collect diverse, high-quality data 
-              from various sources while respecting platform limits.
+              Collect high-quality, ethical datasets for machine learning with our robust proxy infrastructure.
             </Text>
           </VStack>
           <VStack p={6} bg="gray.50" borderRadius="md" spacing={4} align="start">
             <Heading as="h3" size="md" color="gray.800" fontWeight="medium">
-              Pricing Intelligence
+              Price Tracking
             </Heading>
             <Text color="gray.600">
-              Monitor competitor prices across countless products and websites in real time. 
-              Strengthen your market strategy with insights into pricing trends, promotions, 
-              and discounts, scalable to your needs.
+              Monitor real-time pricing across e-commerce platforms to optimize your pricing strategy.
             </Text>
           </VStack>
           <VStack p={6} bg="gray.50" borderRadius="md" spacing={4} align="start">
             <Heading as="h3" size="md" color="gray.800" fontWeight="medium">
-              Data Aggregation
+              Content Aggregation
             </Heading>
             <Text color="gray.600">
-              Compile content from diverse online sources to build knowledge hubs, comparison 
-              tools, or niche search platforms. Our proxies ensure uninterrupted access to 
-              content while preventing IP restrictions.
+              Build powerful data hubs by aggregating content from diverse sources without IP blocks.
             </Text>
           </VStack>
           <VStack p={6} bg="gray.50" borderRadius="md" spacing={4} align="start">
             <Heading as="h3" size="md" color="gray.800" fontWeight="medium">
-              Sales Prospecting
+              Lead Generation
             </Heading>
             <Text color="gray.600">
-              Extract business contacts, job listings, and company information to boost your 
-              sales efforts. Our proxy network ensures dependable access to directories and 
-              professional platforms while upholding compliance.
+              Extract contact data from professional networks to supercharge your sales pipeline.
             </Text>
           </VStack>
           <VStack p={6} bg="gray.50" borderRadius="md" spacing={4} align="start">
             <Heading as="h3" size="md" color="gray.800" fontWeight="medium">
-              SEO Tracking
+              SEO Optimization
             </Heading>
             <Text color="gray.600">
-              Monitor search engine performance, analyze rival SEO tactics, and track backlinks 
-              across multiple regions. Our global proxies deliver accurate localized search 
-              data to optimize your regional campaigns.
+              Track localized search rankings and competitor SEO strategies with global proxy coverage.
             </Text>
           </VStack>
         </Grid>
       </Box>
 
       {/* Call to Action */}
-      <Box py={16} bg="red.600" color="white">
+      <Box py={16} bg="blue.600" color="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">
-            Ready to Turn Web Data into Powerful APIs?
+            Start Scraping with Roaming Proxy Today
           </Heading>
           <Text fontSize="lg" mb={10} maxW="700px" mx="auto" color="white">
-            Start leveraging our HTML scraper APIs to unlock structured web data 
-            for your applications, analytics, and strategic insights.
+            Harness the power of our HTTPS proxy API to extract structured web data for your business needs.
           </Text>
           
           <Flex justify="center" gap={6} flexWrap="wrap">
             <Button
               size="lg"
               bg="white"
-              color="red.600"
+              color="blue.600"
               _hover={{ bg: "gray.200" }}
               as="a"
-              href="/demo-request"
+              href="/signup"
             >
-              Schedule a Demo
+              Get Started Now
             </Button>
             
             <Button
@@ -248,11 +234,11 @@ function LandingPage() {
               variant="outline"
               borderColor="white"
               color="white"
-              _hover={{ bg: "white", color: "red.600" }}
+              _hover={{ bg: "white", color: "blue.600" }}
               as="a"
-              href="/contact-sales"
+              href="/contact"
             >
-              Reach Out to Sales
+              Contact Sales
             </Button>
           </Flex>
         </Box>
