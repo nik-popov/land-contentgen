@@ -12,17 +12,17 @@ const theme = extendTheme({
       "html, body": {
         fontFamily: '"Figtree", sans-serif',
         lineHeight: "1.7",
-        bg: "gray.50", // Hardcoded light gray background for light mode
+        bg: "blue.50", // Light blue background for a calming, safe feel
         color: "gray.800", // Hardcoded dark text for readability in light mode
       },
     }),
   },
   colors: {
     ui: {
-      main: "#8B0000", // Red as the primary accent color
-      secondary: "#FFA500", // Orange for secondary elements (or "#FFFF00" for yellow if preferred)
+      main: "#3B82F6", // Blue as the primary accent color
+      secondary: "#60A5FA", // Light blue for secondary elements
       success: "#38A169", // Green for success states
-      danger: "#E53E3E", // Red for errors (unchanged)
+      danger: "#7C3AED", // Purple for errors/warnings to avoid alarming colors and promote safety
       light: "#FFFFFF", // White for backgrounds
       dark: "#1A202C", // Dark background for dark mode (unchanged)
       darkSlate: "#2D3748", // Darker gray for contrast
@@ -56,10 +56,10 @@ const theme = extendTheme({
       },
       variants: {
         primary: {
-          backgroundColor: "ui.main", // Teal accent
+          backgroundColor: "ui.main", // Blue accent
           color: "ui.light", // White text
           _hover: {
-            backgroundColor: "#234E52", // Darker teal on hover
+            backgroundColor: "#1D4ED8", // Darker blue on hover
           },
           _disabled: {
             backgroundColor: "ui.main",
@@ -67,10 +67,10 @@ const theme = extendTheme({
           },
         },
         danger: {
-          backgroundColor: "ui.danger", // Red (unchanged)
+          backgroundColor: "ui.danger", // Purple
           color: "ui.light", // White text
           _hover: {
-            backgroundColor: "#E32727", // Darker red (unchanged)
+            backgroundColor: "#6D28D9", // Darker purple
           },
         },
       },
@@ -84,13 +84,13 @@ const theme = extendTheme({
           tab: {
             color: "ui.dim",
             _selected: {
-              color: "ui.main", // Teal for selected tab
+              color: "ui.main", // Blue for selected tab
               fontWeight: "bold",
-              borderBottomColor: "ui.main", // Teal underline
+              borderBottomColor: "ui.main", // Blue underline
               borderBottomWidth: "2px",
             },
             _hover: {
-              color: "ui.secondary", // Light teal on hover
+              color: "ui.secondary", // Light blue on hover
             },
           },
         },
@@ -100,7 +100,7 @@ const theme = extendTheme({
       baseStyle: {
         container: {
           bg: "white", // Bright white background (unchanged)
-          color: "gray.100", // Dark text (unchanged)
+          color: "gray.800", // Dark text for better readability
           borderRadius: "md",
           boxShadow: "lg",
           padding: "16px",
@@ -114,10 +114,10 @@ const theme = extendTheme({
       variants: {
         error: {
           container: {
-            bg: "red.100", // Light red for error
-            color: "red.900",
+            bg: "purple.100", // Light purple for error to keep it calm
+            color: "purple.900",
             border: "1px solid",
-            borderColor: "red.300",
+            borderColor: "purple.300",
           },
         },
         success: {
@@ -130,10 +130,10 @@ const theme = extendTheme({
         },
         info: {
           container: {
-            bg: "red.100", // Light red for info
-            color: "red.900",
+            bg: "blue.100", // Light blue for info
+            color: "blue.900",
             border: "1px solid",
-            borderColor: "red.300",
+            borderColor: "blue.300",
           },
         },
         warning: {
