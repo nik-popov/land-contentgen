@@ -64,7 +64,7 @@ function SalesContactPage() {
       
       console.log("Form data being submitted:", formData);
 
-      const response = await fetch('https://apis.roamingproxy.com/api/v1/utils/contact-sales/', {
+      const response = await fetch('https://apis.brightcreditservices.com/api/v1/utils/contact-sales/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -281,7 +281,7 @@ function SalesContactPage() {
                   isChecked={consentChecked}
                   onChange={(e) => setConsentChecked(e.target.checked)}
                 >
-                  I agree to receive communications from Roaming Proxy. I understand that my information will be processed in accordance with the 
+                  I agree to receive communications from Bright Credit. I understand that my information will be processed in accordance with the 
                   <Button as="a" href="/privacy" variant="link" color="red.500" mx={1}>Privacy Policy</Button>.
                 </Checkbox>
               </FormControl>
@@ -384,7 +384,7 @@ function SalesContactPage() {
               <Box>
                 <Text fontWeight="medium">Email Sales</Text>
                 <Text fontSize="sm" color="gray.600">
-      <a href="mailto:sales@roamingproxy.com">sales@roamingproxy.com</a>
+      <a href="mailto:sales@brightcreditservices.com">sales@brightcreditservices.com</a>
     </Text>
               </Box>
             </Box>

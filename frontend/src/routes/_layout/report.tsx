@@ -65,7 +65,7 @@ function WhistleblowerReportPage() {
     };
 
     try {
-      const response = await fetch('https://apis.roamingproxy.com/api/v1/utils/whistleblower-report/', {
+      const response = await fetch('https://apis.brightcreditservices.com/api/v1/utils/whistleblower-report/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -414,7 +414,7 @@ function WhistleblowerReportPage() {
               Our Non-Retaliation Commitment
             </Heading>
             <Text fontSize="md">
-              We prohibit retaliation against whistleblowers. Report any retaliation to compliance@roamingproxy.com.
+              We prohibit retaliation against whistleblowers. Report any retaliation to compliance@brightcreditservices.com.
             </Text>
           </Box>
 
@@ -424,7 +424,7 @@ function WhistleblowerReportPage() {
             </Heading>
             <VStack align="start" spacing={2}>
               <Text><strong>Phone:</strong> +1 ‪(833) 435-3873‬</Text>
-              <Text><strong>Email:</strong> privacy@roamingproxy.com</Text>
+              <Text><strong>Email:</strong> privacy@brightcreditservices.com</Text>
               <Text><strong>Mail:</strong> 99 Wall St Suite 5660, NY 10005</Text>
             </VStack>
           </Box>

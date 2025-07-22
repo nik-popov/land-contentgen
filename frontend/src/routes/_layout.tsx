@@ -12,7 +12,7 @@ export const Route = createFileRoute("/_layout")({
 
 function Layout() {
   const [consentGiven, setConsentGiven] = useState(
-    document.cookie.includes("roamingproxy-consent=true")
+    document.cookie.includes("brightcreditservices-consent=true")
   );
   const [gtagLoaded, setGtagLoaded] = useState(!!window.gtag);
 
@@ -31,7 +31,7 @@ function Layout() {
 
   useEffect(() => {
     const handleConsentChange = () => {
-      const granted = document.cookie.includes("roamingproxy-consent=true");
+      const granted = document.cookie.includes("brightcreditservices-consent=true");
       if (granted !== consentGiven) {
         setConsentGiven(granted);
       }
@@ -57,7 +57,7 @@ function Layout() {
           location="bottom"
           buttonText="Accept All"
           declineButtonText="Decline"
-          cookieName="roamingproxy-consent"
+          cookieName="brightcreditservices-consent"
           enableDeclineButton
           style={{
             background: theme.colors.gray[800] || "#1F2937",

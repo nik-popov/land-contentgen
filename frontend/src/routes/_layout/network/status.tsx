@@ -278,7 +278,7 @@ function NetworkStatusPage() {
               <Image src="https://cdn-icons-png.flaticon.com/512/1932/1932655.png" boxSize="50px" mb={2} />
               <Heading as="h3" size="md" fontWeight="medium">Tech Guides</Heading>
               <Text color="gray.600">Explore guides to understand our system and address technical questions.</Text>
-              <Link color="red.600" href="https://apis.roamingproxy.com/redoc" fontWeight="medium">
+              <Link color="red.600" href="https://apis.brightcreditservices.com/redoc" fontWeight="medium">
                 API Guides →
               </Link>
             </VStack>
@@ -289,7 +289,7 @@ function NetworkStatusPage() {
               <Text color="gray.600">
                 View live proxy performance and uptime stats on our dedicated health page.
               </Text>
-              <Link color="red.600" href="https://cloud.roamingproxy.com/scraping-tools/search-proxies" fontWeight="medium">
+              <Link color="red.600" href="https://cloud.brightcreditservices.com/scraping-tools/search-proxies" fontWeight="medium">
                 Check Dashboard →
               </Link>
             </VStack>

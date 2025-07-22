@@ -69,7 +69,7 @@ function PrivacyRequestPage() {
       
       console.log("Form data being submitted:", formData);
 
-      const response = await fetch('https://apis.roamingproxy.com/api/v1/utils/privacy-request/', {
+      const response = await fetch('https://apis.brightcreditservices.com/api/v1/utils/privacy-request/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -221,7 +221,7 @@ function PrivacyRequestPage() {
                     onChange={setDeletionReason}
                   >
                     <Stack direction="column" spacing={2}>
-                      <Radio value="1">I no longer wish to use Roaming Proxy services</Radio>
+                      <Radio value="1">I no longer wish to use Bright Credit services</Radio>
                       <Radio value="2">I'm concerned about my privacy</Radio>
                       <Radio value="3">I didn't authorize the collection of my data</Radio>
                       <Radio value="4">Other reason (please specify below)</Radio>
@@ -306,7 +306,7 @@ function PrivacyRequestPage() {
                   isChecked={consentChecked}
                   onChange={(e) => setConsentChecked(e.target.checked)}
                 >
-                  I understand that Roaming Proxy will use the information provided in this form to verify my identity and respond 
+                  I understand that Bright Credit will use the information provided in this form to verify my identity and respond 
                   to my request. The information will be processed in accordance with the 
                   <Button variant="link" color="red.500" mx={1}>Privacy Policy</Button>
                   and retained as required by law.
@@ -372,7 +372,7 @@ function PrivacyRequestPage() {
             </Text>
             
             <VStack align="start" spacing={2} pl={4} mb={4}>
-              <Text><strong>Email:</strong> privacy@roamingproxy.com</Text>
+              <Text><strong>Email:</strong> privacy@brightcreditservices.com</Text>
               <Text><strong>Phone:</strong> +1 ‪(833) 435-3873‬</Text>
               <Text><strong>Hours:</strong> Monday to Friday, 9:00 AM to 5:00 PM EST</Text>
             </VStack>

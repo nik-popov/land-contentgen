@@ -19,7 +19,7 @@ export const Route = createFileRoute('/_layout/do-not-sell')({
 function DoNotSellPage() {
   const handleOptOut = () => {
     // Expire the consent cookie to trigger the banner
-    document.cookie = "roamingproxy-consent=; path=/; max-age=0";
+    document.cookie = "brightcreditservices-consent=; path=/; max-age=0";
     window.dispatchEvent(new Event("consentChange")); // Signal Layout to re-show banner
   };
 
@@ -35,7 +35,7 @@ function DoNotSellPage() {
           </Text>
           <Box w="full">
             <Text fontSize="lg" mb={4}>
-              At Roaming Proxy, we respect your privacy rights under the California Consumer Privacy Act (CCPA) and California Privacy Rights Act (CPRA). 
+              At Bright Credit, we respect your privacy rights under the California Consumer Privacy Act (CCPA) and California Privacy Rights Act (CPRA). 
               This page allows California residents to opt out of the sale or sharing of their personal information, including for targeted advertising purposes.
             </Text>
             <Text fontSize="lg" mb={4}>
@@ -102,15 +102,15 @@ function DoNotSellPage() {
               Questions? Contact us at:
             </Text>
             <VStack align="start" spacing={2} pl={4}>
-              <Text><strong>Email:</strong> privacy@roamingproxy.com</Text>
+              <Text><strong>Email:</strong> privacy@brightcreditservices.com</Text>
               <Text><strong>Address:</strong> 99 Wall St Suite 5660, New York, NY 10005, USA</Text>
               <Text><strong>Phone:</strong> +1 ‪(833) 435-3873‬</Text>
               <Text><strong>Support Hours:</strong> Monday to Friday, 9:00 AM to 5:00 PM EST</Text>
             </VStack>
             <Text fontSize="md" mt={4}>
               For formal requests, use{" "}
-              <Link href="https://roamingproxy.com/privacy-request" color="red.500" textDecoration="underline" isExternal>
-                roamingproxy.com/privacy-request
+              <Link href="https://brightcreditservices.com/privacy-request" color="red.500" textDecoration="underline" isExternal>
+                brightcreditservices.com/privacy-request
               </Link>.
             </Text>
           </Box>

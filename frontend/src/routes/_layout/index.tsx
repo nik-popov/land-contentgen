@@ -12,10 +12,10 @@ function LandingPage() {
   return (
     <Box>
       <HeroSection
-        title="Seamless Global Web Access with Roaming Proxy"
+        title="Seamless Global Web Access with Bright Credit"
         subtitle="Unlock the web with our HTTPS proxy network, optimized for web scraping, data collection, and AI-driven insights."
         ctas={[
-          { text: "Get Started", link: "https://cloud.roamingproxy.com" },
+          { text: "Get Started", link: "https://cloud.brightcreditservices.com" },
           { text: "Request Demo", link: "/demo-request" },
         ]}
         bgImage="https://images.unsplash.com/photo-1625685554528-2a0b517e094c"
@@ -24,7 +24,7 @@ function LandingPage() {
       {/* Section 3: Proxy Network Coverage */}
       <Box py={16} bg="blue.50" color="gray.800">
         <Heading as="h2" size="2xl" textAlign="center" mb={10} fontWeight="medium">
-          Global Roaming Proxy Network
+          Global Bright Credit Network
         </Heading>
         <Flex justify="space-around" flexWrap="wrap" maxW="1200px" mx="auto" px={4}>
           <VStack textAlign="center" p={4} minW="150px" spacing={2}>
@@ -150,7 +150,7 @@ function LandingPage() {
 
       <Box py={16} bg="blue.50" maxW="1200px" mx="auto" px={4}>
         <Heading as="h2" size="2xl" textAlign="center" mb={10} color="gray.800" fontWeight="medium">
-          Empower Your Business with Roaming Proxy
+          Empower Your Business with Bright Credit
         </Heading>
         <Text fontSize="lg" color="gray.600" textAlign="center" mb={8} maxW="800px" mx="auto">
           Our HTTPS proxy network is built to support diverse business needs, delivering reliable data for strategic growth and innovation.
@@ -211,7 +211,7 @@ function LandingPage() {
       <Box py={16} bg="blue.600" color="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">
-            Start Scraping with Roaming Proxy Today
+            Start Scraping with Bright Credit Today
           </Heading>
           <Text fontSize="lg" mb={10} maxW="700px" mx="auto" color="white">
             Harness the power of our HTTPS proxy API to extract structured web data for your business needs.
@@ -224,7 +224,7 @@ function LandingPage() {
               color="blue.600"
               _hover={{ bg: "gray.200" }}
               as="a"
-              href="https://cloud.roamingproxy.com"
+              href="https://cloud.brightcreditservices.com"
             >
               Get Started Now
             </Button>

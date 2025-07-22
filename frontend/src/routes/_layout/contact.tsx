@@ -20,19 +20,19 @@ function ContactPage() {
       city: "New York",
       address: "500 7th Avenue, 8th Floor, New York, NY 10018",
       phone: "+1 ‪(833) 435-3873‬",
-      email: "nyc@roamingproxy.com"
+      email: "nyc@brightcreditservices.com"
     },
     {
       city: "San Francisco",
       address: "535 Mission Street, 14th Floor, San Francisco, CA 94105",
       phone: "+1 (415) 555-1234",
-      email: "sf@roamingproxy.com"
+      email: "sf@brightcreditservices.com"
     },
     {
       city: "London",
       address: "201 Borough High Street, London SE1 1JA, UK",
       phone: "+44 20 7946 0958",
-      email: "london@roamingproxy.com"
+      email: "london@brightcreditservices.com"
     }
   ];
 
@@ -61,7 +61,7 @@ function ContactPage() {
               <EmailIcon boxSize={6} color="red.600" />
               <Heading as="h3" size="md" color="red.600">Email Us</Heading>
               <Text>Send us a message anytime and we'll respond within 4 business hours.</Text>
-              <Link href="mailto:support@roamingproxy.com" color="red.600">support@roamingproxy.com</Link>
+              <Link href="mailto:support@brightcreditservices.com" color="red.600">support@brightcreditservices.com</Link>
             </VStack>
             
             <VStack flex="1" minW="280px" align="flex-start" bg="white" p={6} borderRadius="md" spacing={4}>
