@@ -35,7 +35,7 @@ import {
   FiSettings
 } from "react-icons/fi";
 
-import Logo from "/assets/images/bright-credit-logo.png";
+import Logo from "/assets/images/roaming-proxy-network-logo.png";
 import type { UserPublic } from "../../client";
 import useAuth from "../../hooks/useAuth";
 
