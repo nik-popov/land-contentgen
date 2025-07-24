@@ -12,137 +12,96 @@ function LandingPage() {
   return (
     <Box>
       <HeroSection
-        title="Seamless Global Web Access with Bright Credit"
-        subtitle="Unlock the web with our HTTPS proxy network, optimized for web scraping, data collection, and AI-driven insights."
+        title="Transform Your Credit Score with Bright Credit"
+        subtitle="Professional credit repair, dispute management, and credit optimization services to boost your financial future."
         ctas={[
           { text: "Get Started", link: "https://cloud.brightcreditservices.com" },
-          { text: "Request Demo", link: "/demo-request" },
+          { text: "Free Consultation", link: "/demo-request" },
         ]}
         bgImage="https://images.unsplash.com/photo-1625685554528-2a0b517e094c"
       />
       
-      {/* Section 3: Proxy Network Coverage */}
+      {/* Section 3: Credit Repair Results */}
       <Box py={16} bg="blue.50" color="gray.800">
         <Heading as="h2" size="2xl" textAlign="center" mb={10} fontWeight="medium">
-          Global Bright Credit Network
+          Proven Credit Repair Results
         </Heading>
         <Flex justify="space-around" flexWrap="wrap" maxW="1200px" mx="auto" px={4}>
           <VStack textAlign="center" p={4} minW="150px" spacing={2}>
-            <Text fontSize="4xl" fontWeight="bold" color="blue.600">195+</Text>
-            <Text fontSize="lg">Countries Covered</Text>
+            <Text fontSize="4xl" fontWeight="bold" color="blue.600">150+</Text>
+            <Text fontSize="lg">Average Point Increase</Text>
           </VStack>
           <VStack textAlign="center" p={4} minW="150px" spacing={2}>
-            <Text fontSize="4xl" fontWeight="bold" color="blue.600">99.9%</Text>
-            <Text fontSize="lg">Uptime Guarantee</Text>
+            <Text fontSize="4xl" fontWeight="bold" color="blue.600">95%</Text>
+            <Text fontSize="lg">Success Rate</Text>
           </VStack>
           <VStack textAlign="center" p={4} minW="150px" spacing={2}>
             <Text fontSize="4xl" fontWeight="bold" color="blue.600">24/7</Text>
             <Text fontSize="lg">Expert Support</Text>
           </VStack>
           <VStack textAlign="center" p={4} minW="150px" spacing={2}>
-            <Text fontSize="4xl" fontWeight="bold" color="blue.600">12M+</Text>
-            <Text fontSize="lg">Dynamic IPs</Text>
+            <Text fontSize="4xl" fontWeight="bold" color="blue.600">10K+</Text>
+            <Text fontSize="lg">Clients Helped</Text>
           </VStack>
           <VStack textAlign="center" p={4} minW="150px" spacing={2}>
-            <Text fontSize="4xl" fontWeight="bold" color="blue.600">Unlimited</Text>
-            <Text fontSize="lg">Data Transfer</Text>
+            <Text fontSize="4xl" fontWeight="bold" color="blue.600">90 Days</Text>
+            <Text fontSize="lg">Average Timeline</Text>
           </VStack>
-        </Flex>
-      </Box>
-      
-      {/* Cloud Provider Links */}
-      <Box py={10} bg="blue.50">
-        <Flex justify="center" gap={8} flexWrap="wrap">
-          <Link href="https://aws.amazon.com" isExternal>
-            <Image
-              src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/aws.png"
-              alt="AWS Logo"
-              boxSize="50px"
-            />
-          </Link>
-          <Link href="https://cloud.google.com" isExternal>
-            <Image
-              src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/gcp.png"
-              alt="GCP Logo"
-              boxSize="50px"
-            />
-          </Link>
-          <Link href="https://azure.microsoft.com" isExternal>
-            <Image
-              src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/microsoft_azure.png"
-              alt="Microsoft Azure Logo"
-              boxSize="50px"
-            />
-          </Link>
-          <Link href="https://www.ibm.com/cloud" isExternal>
-            <Image
-              src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/ibm_cloud.png"
-              alt="IBM Cloud Logo"
-              boxSize="50px"
-            />
-          </Link>
-          <Link href="https://www.digitalocean.com" isExternal>
-            <Image
-              src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/digital_ocean.png"
-              alt="Digital Ocean Logo"
-              boxSize="50px"
-            />
-          </Link>
         </Flex>
       </Box>
 
-      {/* Section 2: Proxy Features */}
+      {/* Section 2: Credit Repair Features */}
       <Box py={16} bg="white" maxW="1200px" mx="auto" px={4}>
         <Heading as="h2" size="2xl" textAlign="center" mb={10} color="gray.800" fontWeight="medium" pb="5">
-          Advanced Features for Effortless Web Scraping
+          Comprehensive Credit Repair Services
         </Heading>
         <Grid templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }} gap={8}>
           <VStack p={6} bg="gray.50" borderRadius="md" spacing={4} align="start">
             <Heading as="h3" size="md" color="gray.800" fontWeight="medium" textAlign="left">
-              Robust Security
+              Dispute Management
             </Heading>
             <Text color="gray.600">
-              Military-grade encryption and secure protocols for safe data access
+              Professional dispute letters and follow-up with all three credit bureaus
             </Text>
           </VStack>
           <VStack p={6} bg="gray.50" borderRadius="md" spacing={4} align="start">
             <Heading as="h3" size="md" color="gray.800" fontWeight="medium" textAlign="left">
-              Lightning-Fast Speeds
+              Credit Monitoring
             </Heading>
             <Text color="gray.600">
-              Optimized infrastructure for rapid data extraction
+              Real-time credit score tracking and alerts for changes to your report
             </Text>
           </VStack>
           <VStack p={6} bg="gray.50" borderRadius="md" spacing={4} align="start">
             <Heading as="h3" size="md" color="gray.800" fontWeight="medium" textAlign="left">
-              Cloud Integration
+              Point Optimization
             </Heading>
             <Text color="gray.600">
-              Seamless compatibility with major cloud platforms
+              Strategic credit utilization and payment timing to maximize score gains
             </Text>
           </VStack>
           <VStack p={6} bg="gray.50" borderRadius="md" spacing={4} align="start">
             <Heading as="h3" size="md" color="gray.800" fontWeight="medium" textAlign="left">
-              Dynamic IP Roaming
+              Debt Validation
             </Heading>
             <Text color="gray.600">
-              Intelligent IP rotation to bypass anti-bot defenses
+              Challenge questionable debts and ensure all reported items are accurate
             </Text>
           </VStack>
           <VStack p={6} bg="gray.50" borderRadius="md" spacing={4} align="start">
             <Heading as="h3" size="md" color="gray.800" fontWeight="medium" textAlign="left">
-              Ethical Compliance
+              Legal Compliance
             </Heading>
             <Text color="gray.600">
-              Fully compliant with GDPR, ISO 27001, and SOC 2 standards
+              All services follow FCRA, FDCPA, and state credit repair regulations
             </Text>
           </VStack>
           <VStack p={6} bg="gray.50" borderRadius="md" spacing={4} align="start">
             <Heading as="h3" size="md" color="gray.800" fontWeight="medium" textAlign="center">
-              Scalable Scraping
+              Personal Support
             </Heading>
             <Text color="gray.600">
-              Cost-effective solutions for businesses of all sizes
+              Dedicated credit specialists to guide you through every step
             </Text>
           </VStack>
         </Grid>
@@ -150,58 +109,58 @@ function LandingPage() {
 
       <Box py={16} bg="blue.50" maxW="1200px" mx="auto" px={4}>
         <Heading as="h2" size="2xl" textAlign="center" mb={10} color="gray.800" fontWeight="medium">
-          Empower Your Business with Bright Credit
+          Transform Your Financial Future with Bright Credit
         </Heading>
         <Text fontSize="lg" color="gray.600" textAlign="center" mb={8} maxW="800px" mx="auto">
-          Our HTTPS proxy network is built to support diverse business needs, delivering reliable data for strategic growth and innovation.
+          Our comprehensive credit repair services are designed to help you achieve your financial goals and unlock better opportunities.
         </Text>
         <Grid templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }} gap={8}>
           <VStack p={6} bg="gray.50" borderRadius="md" spacing={4} align="start">
             <Heading as="h3" size="md" color="gray.800" fontWeight="medium">
-              Market Intelligence
+              Home Loan Approval
             </Heading>
             <Text color="gray.600">
-              Extract global market trends and competitor data to drive strategic decisions with reliable proxy access.
+              Improve your credit score to qualify for better mortgage rates and increase your buying power.
             </Text>
           </VStack>
           <VStack p={6} bg="gray.50" borderRadius="md" spacing={4} align="start">
             <Heading as="h3" size="md" color="gray.800" fontWeight="medium">
-              AI Training Data
+              Auto Financing
             </Heading>
             <Text color="gray.600">
-              Collect high-quality, ethical datasets for machine learning with our robust proxy infrastructure.
+              Get approved for car loans with lower interest rates and better terms through improved credit.
             </Text>
           </VStack>
           <VStack p={6} bg="gray.50" borderRadius="md" spacing={4} align="start">
             <Heading as="h3" size="md" color="gray.800" fontWeight="medium">
-              Price Tracking
+              Credit Card Rewards
             </Heading>
             <Text color="gray.600">
-              Monitor real-time pricing across e-commerce platforms to optimize your pricing strategy.
+              Qualify for premium credit cards with better rewards, cashback, and travel benefits.
             </Text>
           </VStack>
           <VStack p={6} bg="gray.50" borderRadius="md" spacing={4} align="start">
             <Heading as="h3" size="md" color="gray.800" fontWeight="medium">
-              Content Aggregation
+              Business Funding
             </Heading>
             <Text color="gray.600">
-              Build powerful data hubs by aggregating content from diverse sources without IP blocks.
+              Access business loans and lines of credit to grow your company with improved personal credit.
             </Text>
           </VStack>
           <VStack p={6} bg="gray.50" borderRadius="md" spacing={4} align="start">
             <Heading as="h3" size="md" color="gray.800" fontWeight="medium">
-              Lead Generation
+              Lower Insurance Rates
             </Heading>
             <Text color="gray.600">
-              Extract contact data from professional networks to supercharge your sales pipeline.
+              Reduce insurance premiums as many providers use credit scores in their pricing models.
             </Text>
           </VStack>
           <VStack p={6} bg="gray.50" borderRadius="md" spacing={4} align="start">
             <Heading as="h3" size="md" color="gray.800" fontWeight="medium">
-              SEO Optimization
+              Employment Opportunities
             </Heading>
             <Text color="gray.600">
-              Track localized search rankings and competitor SEO strategies with global proxy coverage.
+              Pass employer credit checks and qualify for positions requiring financial responsibility.
             </Text>
           </VStack>
         </Grid>
@@ -211,10 +170,10 @@ function LandingPage() {
       <Box py={16} bg="blue.600" color="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
           <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">
-            Start Scraping with Bright Credit Today
+            Start Your Credit Repair Journey Today
           </Heading>
           <Text fontSize="lg" mb={10} maxW="700px" mx="auto" color="white">
-            Harness the power of our HTTPS proxy API to extract structured web data for your business needs.
+            Take control of your financial future with our proven credit repair and optimization services.
           </Text>
           
           <Flex justify="center" gap={6} flexWrap="wrap">
@@ -238,7 +197,7 @@ function LandingPage() {
               as="a"
               href="/contact"
             >
-              Contact Sales
+              Free Consultation
             </Button>
           </Flex>
         </Box>

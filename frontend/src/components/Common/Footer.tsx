@@ -28,8 +28,8 @@ const Footer = () => {
               </Link>
             </Text>
             <Text color="gray.300" mb={4}>
-              Enterprise level proxy infrastructure built for web scraping, data collection, and market intelligence, 
-              offering limitless scalability and global reach across over 200 locations.
+              Professional credit repair services designed to help you improve your credit score, dispute inaccuracies, 
+              and optimize your financial future with personalized strategies and expert guidance.
             </Text>
             <Text color="gray.300" mb={4}>
               <strong>Phone:</strong> <a href="tel:+18334353873‬">+1 ‪(833) 435-3873‬</a>
@@ -55,21 +55,21 @@ const Footer = () => {
             </Text>
           </Box>
 
-          {/* Solutions */}
+          {/* Services */}
           <Box>
-            <Heading as="h4" size="md" mb={4} color="white">Solutions</Heading>
+            <Heading as="h4" size="md" mb={4} color="white">Services</Heading>
             <VStack align="flex-start" spacing={2}>
-              <Link href="/solutions/market-research" color="gray.300" _hover={{ color: "red.600" }}>Market Research</Link>
-              <Link href="/tools/https-proxy" color="gray.300" _hover={{ color: "red.600" }}>HTTPs Request Proxy</Link>
-              <Link href="/tools/rotating-proxy" color="gray.300" _hover={{ color: "red.600" }}>Rotating Proxy</Link>
-              <Link href="/tools/user-agents" color="gray.300" _hover={{ color: "red.600" }}>User Agents API</Link>
-              <Link href="/tools/socks5-proxy" color="gray.300" _hover={{ color: "red.600" }}>SOCKS5 Proxy</Link>
-              <Link href="/solutions/price-monitoring" color="gray.300" _hover={{ color: "red.600" }}>Price Monitoring</Link>
-              <Link href="/solutions/training-ai" color="gray.300" _hover={{ color: "red.600" }}>AI Training Datasets</Link>
-              <Link href="/solutions/content-aggregation" color="gray.300" _hover={{ color: "red.600" }}>Content Aggregation</Link>
-              <Link href="/solutions/lead-generation" color="gray.300" _hover={{ color: "red.600" }}>Lead Generation</Link>
-              <Link href="/solutions/seo-monitoring" color="gray.300" _hover={{ color: "red.600" }}>SEO Monitoring</Link>
-              <Link href="/solutions/enterprise" color="gray.300" _hover={{ color: "red.600" }}>Enterprise</Link>
+              <Link href="/services/dispute-management" color="gray.300" _hover={{ color: "red.600" }}>Dispute Management</Link>
+              <Link href="/services/credit-monitoring" color="gray.300" _hover={{ color: "red.600" }}>Credit Monitoring</Link>
+              <Link href="/services/point-optimization" color="gray.300" _hover={{ color: "red.600" }}>Point Optimization</Link>
+              <Link href="/services/debt-validation" color="gray.300" _hover={{ color: "red.600" }}>Debt Validation</Link>
+              <Link href="/services/legal-compliance" color="gray.300" _hover={{ color: "red.600" }}>Legal Compliance</Link>
+              <Link href="/services/personal-support" color="gray.300" _hover={{ color: "red.600" }}>Personal Support</Link>
+              <Link href="/services/credit-analysis" color="gray.300" _hover={{ color: "red.600" }}>Credit Analysis</Link>
+              <Link href="/services/financial-planning" color="gray.300" _hover={{ color: "red.600" }}>Financial Planning</Link>
+              <Link href="/services/credit-education" color="gray.300" _hover={{ color: "red.600" }}>Credit Education</Link>
+              <Link href="/services/score-tracking" color="gray.300" _hover={{ color: "red.600" }}>Score Tracking</Link>
+              <Link href="/services/enterprise" color="gray.300" _hover={{ color: "red.600" }}>Enterprise</Link>
             </VStack>
           </Box>
 
@@ -77,15 +77,15 @@ const Footer = () => {
           <Box>
             <Heading as="h4" size="md" mb={4} color="white">Resources</Heading>
             <VStack align="flex-start" spacing={2}>
-              <Link href="/network/locations" color="gray.300" _hover={{ color: "red.600" }}>Locations</Link>
-              <Link href="/network/status" color="gray.300" _hover={{ color: "red.600" }}>Status</Link>
-              <Link href="/network/security" color="gray.300" _hover={{ color: "red.600" }}>Security</Link>
+              <Link href="/resources/credit-guides" color="gray.300" _hover={{ color: "red.600" }}>Credit Guides</Link>
               <Link href="/resources/blog" color="gray.300" _hover={{ color: "red.600" }}>Articles</Link>
-              <Link href="/resources/code-examples" color="gray.300" _hover={{ color: "red.600" }}>Support</Link>
-              <Link href="/resources/web-scraping-guides" color="gray.300" _hover={{ color: "red.600" }}>Guides</Link>
-              <Link href="/network/proxy-types" color="gray.300" _hover={{ color: "red.600" }}>Proxy Types</Link>
+              <Link href="/resources/support" color="gray.300" _hover={{ color: "red.600" }}>Support</Link>
+              <Link href="/resources/credit-education" color="gray.300" _hover={{ color: "red.600" }}>Credit Education</Link>
+              <Link href="/resources/dispute-templates" color="gray.300" _hover={{ color: "red.600" }}>Dispute Templates</Link>
               <Link href="/resources/faq" color="gray.300" _hover={{ color: "red.600" }}>FAQ</Link>
               <Link href="/resources/support-center" color="gray.300" _hover={{ color: "red.600" }}>Help & Support</Link>
+              <Link href="/resources/credit-calculator" color="gray.300" _hover={{ color: "red.600" }}>Credit Calculator</Link>
+              <Link href="/resources/financial-tools" color="gray.300" _hover={{ color: "red.600" }}>Financial Tools</Link>
               <Link href="https://apis.brightcreditservices.com/redoc" color="gray.300" _hover={{ color: "red.600" }}>API Reference</Link>
             </VStack>
           </Box>
@@ -104,55 +104,55 @@ const Footer = () => {
           </Box>
         </Grid>
 
-        {/* Secondary Footer - Popular Use Cases with Keywords */}
+        {/* Secondary Footer - Popular Credit Repair Use Cases */}
         <Box borderTop="1px solid" borderColor="gray.700" pt={6} mb={6}>
-          <Heading as="h4" size="sm" mb={4} color="gray.400">Popular Web Scraping Use Cases</Heading>
+          <Heading as="h4" size="sm" mb={4} color="gray.400">Popular Credit Repair Solutions</Heading>
           <Flex flexWrap="wrap" gap={4}>
-            <Link href="/use-cases/ecommerce-price-monitoring" color="gray.400" fontSize="sm" _hover={{ color: "red.600" }}>
-              E-commerce Pricing Tracker
+            <Link href="/use-cases/home-loan-approval" color="gray.400" fontSize="sm" _hover={{ color: "red.600" }}>
+              Home Loan Approval
             </Link>
-            <Link href="/use-cases/product-data-extraction" color="gray.400" fontSize="sm" _hover={{ color: "red.600" }}>
-              Product Data Retrieval
+            <Link href="/use-cases/auto-financing" color="gray.400" fontSize="sm" _hover={{ color: "red.600" }}>
+              Auto Financing
             </Link>
-            <Link href="/use-cases/competitor-analysis" color="gray.400" fontSize="sm" _hover={{ color: "red.600" }}>
-              Competitor Analysis
+            <Link href="/use-cases/credit-card-rewards" color="gray.400" fontSize="sm" _hover={{ color: "red.600" }}>
+              Credit Card Rewards
             </Link>
-            <Link href="/use-cases/real-estate-data-scraping" color="gray.400" fontSize="sm" _hover={{ color: "red.600" }}>
-              Real Estate Data Collection
+            <Link href="/use-cases/business-funding" color="gray.400" fontSize="sm" _hover={{ color: "red.600" }}>
+              Business Funding
             </Link>
-            <Link href="/use-cases/travel-fare-aggregation" color="gray.400" fontSize="sm" _hover={{ color: "red.600" }}>
-              Travel Pricing Aggregation
+            <Link href="/use-cases/lower-insurance-rates" color="gray.400" fontSize="sm" _hover={{ color: "red.600" }}>
+              Lower Insurance Rates
             </Link>
-            <Link href="/use-cases/financial-data-collection" color="gray.400" fontSize="sm" _hover={{ color: "red.600" }}>
-              Financial Insights Collection
+            <Link href="/use-cases/employment-opportunities" color="gray.400" fontSize="sm" _hover={{ color: "red.600" }}>
+              Employment Opportunities
             </Link>
-            <Link href="/use-cases/social-media-monitoring" color="gray.400" fontSize="sm" _hover={{ color: "red.600" }}>
-              Social Media Insights Platform
+            <Link href="/use-cases/debt-consolidation" color="gray.400" fontSize="sm" _hover={{ color: "red.600" }}>
+              Debt Consolidation
             </Link>
-            <Link href="/use-cases/news-aggregation" color="gray.400" fontSize="sm" _hover={{ color: "red.600" }}>
-              News Aggregation Solution
+            <Link href="/use-cases/financial-freedom" color="gray.400" fontSize="sm" _hover={{ color: "red.600" }}>
+              Financial Freedom
             </Link>
           </Flex>
         </Box>
 
-        {/* Third Footer - Regions with Keywords */}
+        {/* Third Footer - Credit Repair Benefits */}
         <Box borderTop="1px solid" borderColor="gray.700" pt={6} mb={6}>
-          <Heading as="h4" size="sm" mb={4} color="gray.400">Global Proxy Coverage</Heading>
+          <Heading as="h4" size="sm" mb={4} color="gray.400">Credit Repair Benefits</Heading>
           <Flex flexWrap="wrap" gap={4}>
-            <Link href="/network/north-america" color="gray.400" fontSize="sm" _hover={{ color: "red.600" }}>
-              North America Proxies
+            <Link href="/benefits/improved-credit-score" color="gray.400" fontSize="sm" _hover={{ color: "red.600" }}>
+              Improved Credit Score
             </Link>
-            <Link href="/network/europe" color="gray.400" fontSize="sm" _hover={{ color: "red.600" }}>
-              Europe Proxies
+            <Link href="/benefits/lower-interest-rates" color="gray.400" fontSize="sm" _hover={{ color: "red.600" }}>
+              Lower Interest Rates
             </Link>
-            <Link href="/network/asia-pacific" color="gray.400" fontSize="sm" _hover={{ color: "red.600" }}>
-              Asia-Pacific Proxies
+            <Link href="/benefits/better-loan-terms" color="gray.400" fontSize="sm" _hover={{ color: "red.600" }}>
+              Better Loan Terms
             </Link>
-            <Link href="/network/south-america" color="gray.400" fontSize="sm" _hover={{ color: "red.600" }}>
-              South America Proxies
+            <Link href="/benefits/increased-approval-odds" color="gray.400" fontSize="sm" _hover={{ color: "red.600" }}>
+              Increased Approval Odds
             </Link>
-            <Link href="/network/middle-east" color="gray.400" fontSize="sm" _hover={{ color: "red.600" }}>
-              Middle East Proxies
+            <Link href="/benefits/financial-opportunities" color="gray.400" fontSize="sm" _hover={{ color: "red.600" }}>
+              Financial Opportunities
             </Link>
           </Flex>
         </Box>

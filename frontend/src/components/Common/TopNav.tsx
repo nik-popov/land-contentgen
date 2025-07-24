@@ -62,57 +62,57 @@ interface NavItemsProps {
 
 const navStructure: NavItem[] = [
   {
-    title: "Web Scraping",
+    title: "Services",
     icon: FiTool,
-    description: "Professional web scraping tools and proxies for data collection",
+    description: "Professional credit repair and financial optimization services",
     subItems: [
-      { title: "HTTPs Request Proxy", path: "/tools/https-proxy", description: "Route HTTPS requests globally", icon: FiGlobe },
-      { title: "HTML Scraper", path: "/tools/html-scraper", description: "Extract data from HTML websites with precision", icon:FiCode },
-      { title: "API Scraper", path: "/tools/api-scraper", description: "Collect data from APIs with reliable proxies", icon: FiDatabase },
-      { title: "Scheduler", path: "/tools/scheduler", description: "Automate your web scraping jobs with scheduling", icon: FiTarget },
-      { title: "User-Agents", path: "/tools/user-agents", description: "Customize and rotate user-agent strings to mimic real browsers effortlessly", icon: FiUser},
-      { title: "Rotating Proxy", path: "/tools/rotating-proxy", description: "Cycle through proxies seamlessly to maintain anonymity and avoid blocks", icon: FiRefreshCw },
-      { title: "SOCKS5 Proxy", path: "/tools/socks5-proxy", description: "Leverage SOCKS5 proxies for secure and versatile web traffic routing", icon: FiShield},
-      { title: "Proxy Dashboard", path: "/tools/proxy-dashboard", description: "Monitor and manage your web scraping proxies", icon: FiMonitor },
+      { title: "Dispute Management", path: "/services/dispute-management", description: "Professional dispute letters and follow-up with credit bureaus", icon: FiFileText },
+      { title: "Credit Monitoring", path: "/services/credit-monitoring", description: "Real-time credit score tracking and alerts for changes", icon: FiMonitor },
+      { title: "Point Optimization", path: "/services/point-optimization", description: "Strategic credit utilization and payment timing to maximize score gains", icon: FiTrendingUp },
+      { title: "Debt Validation", path: "/services/debt-validation", description: "Challenge questionable debts and ensure all reported items are accurate", icon: FiShield },
+      { title: "Legal Compliance", path: "/services/legal-compliance", description: "All services follow FCRA, FDCPA, and state credit repair regulations", icon: FiSettings },
+      { title: "Personal Support", path: "/services/personal-support", description: "Dedicated credit specialists to guide you through every step", icon: FiUser },
+      { title: "Credit Analysis", path: "/services/credit-analysis", description: "Comprehensive review of your credit reports and personalized action plan", icon: FiPieChart },
+      { title: "Score Tracking", path: "/services/score-tracking", description: "Monitor and track your credit score improvements over time", icon: FiDatabase },
     ]
   },
   {
     title: "Solutions",
-    icon: FiDatabase,
-    description: "Data extraction and processing solutions for businesses",
+    icon: FiTarget,
+    description: "Credit repair solutions for specific financial goals",
     subItems: [
-      { title: "Market Research", path: "/solutions/market-research", description: "Collect market data through web scraping", icon: FiPieChart },
-      { title: "Price Monitoring", path: "/solutions/price-monitoring", description: "Track competitor pricing across websites", icon: FiTrendingUp },
-      { title: "AI Training Data", path: "/solutions/training-ai", description: "Build machine learning datasets through web scraping", icon: FiDatabase },
-      { title: "Content Aggregation", path: "/solutions/content-aggregation", description: "Gather content from multiple web sources", icon: FiFileText }
+      { title: "Home Loan Approval", path: "/solutions/home-loan-approval", description: "Improve credit score to qualify for better mortgage rates", icon: FiTrendingUp },
+      { title: "Auto Financing", path: "/solutions/auto-financing", description: "Get approved for car loans with lower interest rates", icon: FiTarget },
+      { title: "Credit Card Rewards", path: "/solutions/credit-card-rewards", description: "Qualify for premium credit cards with better rewards and benefits", icon: FiDatabase },
+      { title: "Business Funding", path: "/solutions/business-funding", description: "Access business loans and lines of credit with improved personal credit", icon: FiFileText }
     ]
   },
   {
-    title: "Network",
-    icon: FiGlobe,
-    description: "Worldwide proxy infrastructure for web scraping",
+    title: "Education",
+    icon: FiBook,
+    description: "Credit education and financial literacy resources",
     subItems: [
-      { title: "Proxy Locations", path: "/network/locations", description: "Browse our global proxy server locations", icon: FiGlobe },
-      { title: "Network Status", path: "/network/status", description: "Check real-time proxy performance and availability", icon: FiMonitor },
-      { title: "Security Features", path: "/network/security", description: "Learn about our proxy security protocols", icon: FiShield },
-      { title: "Proxy Types", path: "/network/proxy-types", description: "Different proxy types for various scraping needs", icon: FiSettings }
+      { title: "Credit Guides", path: "/education/credit-guides", description: "Learn how credit scores work and how to improve them", icon: FiBook },
+      { title: "Financial Planning", path: "/education/financial-planning", description: "Strategies for long-term financial health and credit management", icon: FiPieChart },
+      { title: "Dispute Templates", path: "/education/dispute-templates", description: "Sample dispute letters and templates for common credit issues", icon: FiFileText },
+      { title: "Credit Calculator", path: "/education/credit-calculator", description: "Tools to estimate credit score improvements and payment impacts", icon: FiSettings }
     ]
   },
   {
     title: "Resources",
-    icon: FiBook,
-    description: "Documentation and learning resources for web scraping",
+    icon: FiHelpCircle,
+    description: "Support and additional resources for credit repair",
     subItems: [
-      { title: "Useful Articles", path: "/resources/blog", description: "Learn how to use our our scraping APIs", icon: FiCode },
-      { title: "Web Scraping Guides", path: "/resources/web-scraping-guides", description: "Learn how to use our web scraping tools effectively", icon: FiBook },
-      { title: "Code Examples", path: "/resources/code-examples", description: "Sample code for web scraping in multiple languages", icon: FiCode },
-      { title: "Support Center", path: "/resources/support-center", description: "Get help with your web scraping projects", icon: FiHelpCircle }
+      { title: "Support Center", path: "/resources/support-center", description: "Get help with your credit repair journey", icon: FiHelpCircle },
+      { title: "Credit Articles", path: "/resources/blog", description: "Latest articles on credit repair and financial tips", icon: FiFileText },
+      { title: "FAQ", path: "/resources/faq", description: "Frequently asked questions about credit repair", icon: FiBook },
+      { title: "Contact Support", path: "/resources/contact", description: "Reach out to our credit repair specialists", icon: FiUser }
     ]
   },
   {
     title: "Pricing",
     path: "/pricing",
-    description: "View our pricing plans and features"
+    description: "View our credit repair pricing plans and features"
   }
 ];
 
@@ -255,7 +255,7 @@ const TopNav = () => {
   const { logout } = useAuth();
   const currentUser = queryClient.getQueryData<UserPublic>(["currentUser"]);
   const textColor = "gray.800";
-  const hoverColor = "red.5600";
+  const hoverColor = "red.600";
 
   const handleLogout = async () => {
     await logout();
@@ -277,7 +277,7 @@ const TopNav = () => {
         <Container maxW="1200px" px={0}>
           <Flex align="center" justify="space-between" w="100%">
             <Link href="/" as={RouterLink} onClick={onClose}>
-              <Image src={Logo} alt="Web Scraping Proxy Network" h="40px" />
+              <Image src={Logo} alt="Bright Credit Services" h="40px" />
             </Link>
 
             <IconButton
